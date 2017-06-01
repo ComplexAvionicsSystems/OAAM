@@ -1,0 +1,21 @@
+OAAM MODELLING RULES
+-----------------------------------------
+
+* Class names are PascalCase
+* Attribute and reference names are camelCase
+* AbstractClasses have the postfix A
+* Enumerations have the postfix E
+* No opposite references
+* No optional or attributes or such with a multiplicity greater 1 (Except EString attributes, which in most cases should accept the value null)
+* No referencing or containment of super classes, i.e. such that instanceof must be used to check the type.
+* _ElementA: All non-abstract classes must inherit _ElementA to have a name and id
+* _VariantDependentElementA_: All logical and physical elements should be variant dependent, i.e. systems, functions, hardware, anatomy, capabilities, restrictions, and mappings. Basic types, e.g. from the library are not variant dependent
+* _ModeDependentElementA_: All logical and physical elements should be variant dependent, i.e. systems, functions, hardware, anatomy, capabilities, restrictions, and mappings. Basic types, e.g. from the library are not variant dependent
+* As few as possible cross-references between package layers. 
+* Package cross references should if not necessary only go from lower layers (in the direction they appear in the model) to upper layers.
+
+
+
+CHANGELIST:
+--------
+2017-05-30 Initial list of rules (Björn Annighöfer)

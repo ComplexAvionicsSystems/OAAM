@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model_1="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model_2="http://www.oaam.de/oaam/model/v100/library" id="example" name="Example">
+  <library id="library" style="">
+    <sublibraries id="datatypes" name="Data Types">
+      <dataTypes xsi:type="de.oaam.model_1:Boolean"/>
+      <dataTypes xsi:type="de.oaam.model_1:FloatingPoint"/>
+    </sublibraries>
+    <sublibraries id="tasktypes" name="Task Types">
+      <taskTypes id="tasktypeadd" name="Add">
+        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.2" count="20.0"/>
+        <outputs name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
+          <trigger>
+            <logic xsi:type="de.oaam.model_1:BoolOperation">
+              <left xsi:type="de.oaam.model_2:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model_2:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            </logic>
+          </trigger>
+          <faultPropagations>
+            <logic xsi:type="de.oaam.model_1:BoolOperation">
+              <left xsi:type="de.oaam.model_2:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model_2:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            </logic>
+          </faultPropagations>
+          <faultPropagations outputState="FAILED">
+            <logic xsi:type="de.oaam.model_1:BoolOperation" type="OR">
+              <left xsi:type="de.oaam.model_2:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model_2:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            </logic>
+          </faultPropagations>
+          <faultPropagations outputState="UNKNOWN">
+            <logic xsi:type="de.oaam.model_1:BoolOperation" type="OR">
+              <left xsi:type="de.oaam.model_2:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model_2:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            </logic>
+          </faultPropagations>
+        </outputs>
+        <inputs name="a" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <inputs name="b" type="//@library/@sublibraries.0/@dataTypes.1"/>
+      </taskTypes>
+      <taskTypes id="tasktypecockpitswitch" name="CockpitSwitch">
+        <requiredResources name="DSI" style="" type="//@library/@sublibraries.3/@resourceTypes.0"/>
+        <outputs name="on/off" type="//@library/@sublibraries.0/@dataTypes.0">
+          <trigger fixedRate="20.0"/>
+        </outputs>
+      </taskTypes>
+      <signalTypes name="BooleanSignal"/>
+    </sublibraries>
+    <sublibraries id="devicetypes" name="Device Types">
+      <deviceTypes name="CockpitSwitch">
+        <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.0"/>
+        <ios resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
+      </deviceTypes>
+      <deviceTypes name="CPM A" canHaveSubdevices="true">
+        <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.3/@resourceTypes.1" count="4.0"/>
+      </deviceTypes>
+      <deviceTypes name="CPM A CPU CARD" style="" isSubdevice="true">
+        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.2" count="100.0"/>
+      </deviceTypes>
+    </sublibraries>
+    <sublibraries id="resourcestypes" name="Resource Types">
+      <resourceTypes name="DSI GND/OPN" isIo="true"/>
+      <resourceTypes name="CPM SLOT"/>
+      <resourceTypes name="CPU">
+        <requiredResources name="SLOT" type="//@library/@sublibraries.3/@resourceTypes.1"/>
+      </resourceTypes>
+    </sublibraries>
+  </library>
+  <function id="functions">
+    <tasks name="Add" type="tasktypeadd">
+      <inputs name="a" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+      <inputs name="b" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+    </tasks>
+    <tasks id="taskcockpitswitch" name="C/O Switch" style="" modifier="" type="tasktypecockpitswitch" deviceBinding="//@hardware/@devices.0">
+      <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputs.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
+    </tasks>
+    <signals name="on/off to a" source="//@function/@tasks.1/@outputs.0" target="//@function/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
+  </function>
+  <hardware id="hardware">
+    <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.2/@deviceTypes.0">
+      <ios name="C/O on/off DSI" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ios.0"/>
+    </devices>
+    <devices name="CPM A1" type="//@library/@sublibraries.2/@deviceTypes.1">
+      <subDevices name="CPU Card"/>
+    </devices>
+  </hardware>
+  <capabilities id="capabilities">
+    <functionCapabilties taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
+    <subDeviceCapabilities subDeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
+      <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.1"/>
+    </subDeviceCapabilities>
+  </capabilities>
+  <mapping id="mapping">
+    <subDeviceAssignments name="CPU-CARD -> CPM A1" capability="//@capabilities/@subDeviceCapabilities.0" subDevice="//@hardware/@devices.1/@subDevices.0" targetDevice="//@hardware/@devices.1"/>
+    <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@functionCapabilties.0" task="//@function/@tasks.0" device="//@hardware/@devices.1/@subDevices.0"/>
+  </mapping>
+</de.oaam.model:Architecture>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.presentation.OaamModelWizardID"
+            name="%_UI_OaamModelWizard_label"
+            class="de.oaam.model.oaam.presentation.OaamModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OaamModelFile.gif">
+         <description>%_UI_OaamModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.presentation.OaamEditorID"
+            name="%_UI_OaamEditor_label"
+            icon="icons/full/obj16/OaamModelFile.gif"
+            extensions="oaam"
+            class="de.oaam.model.oaam.presentation.OaamEditor"
+            contributorClass="de.oaam.model.oaam.presentation.OaamActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.common.presentation.CommonEditorID"
+            name="%_UI_CommonEditor_label"
+            icon="icons/full/obj16/CommonModelFile.gif"
+            extensions="common"
+            class="de.oaam.model.oaam.common.presentation.CommonEditor"
+            contributorClass="de.oaam.model.oaam.common.presentation.CommonActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.library.presentation.LibraryEditorID"
+            name="%_UI_LibraryEditor_label"
+            icon="icons/full/obj16/LibraryModelFile.gif"
+            extensions="library"
+            class="de.oaam.model.oaam.library.presentation.LibraryEditor"
+            contributorClass="de.oaam.model.oaam.library.presentation.LibraryActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.scenario.presentation.ScenarioEditorID"
+            name="%_UI_ScenarioEditor_label"
+            icon="icons/full/obj16/ScenarioModelFile.gif"
+            extensions="scenario"
+            class="de.oaam.model.oaam.scenario.presentation.ScenarioEditor"
+            contributorClass="de.oaam.model.oaam.scenario.presentation.ScenarioActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.systems.presentation.SystemsEditorID"
+            name="%_UI_SystemsEditor_label"
+            icon="icons/full/obj16/SystemsModelFile.gif"
+            extensions="systems"
+            class="de.oaam.model.oaam.systems.presentation.SystemsEditor"
+            contributorClass="de.oaam.model.oaam.systems.presentation.SystemsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.functions.presentation.FunctionsEditorID"
+            name="%_UI_FunctionsEditor_label"
+            icon="icons/full/obj16/FunctionsModelFile.gif"
+            extensions="functions"
+            class="de.oaam.model.oaam.functions.presentation.FunctionsEditor"
+            contributorClass="de.oaam.model.oaam.functions.presentation.FunctionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.hardware.presentation.HardwareEditorID"
+            name="%_UI_HardwareEditor_label"
+            icon="icons/full/obj16/HardwareModelFile.gif"
+            extensions="hardware"
+            class="de.oaam.model.oaam.hardware.presentation.HardwareEditor"
+            contributorClass="de.oaam.model.oaam.hardware.presentation.HardwareActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.anatomy.presentation.AnatomyEditorID"
+            name="%_UI_AnatomyEditor_label"
+            icon="icons/full/obj16/AnatomyModelFile.gif"
+            extensions="anatomy"
+            class="de.oaam.model.oaam.anatomy.presentation.AnatomyEditor"
+            contributorClass="de.oaam.model.oaam.anatomy.presentation.AnatomyActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.capabilities.presentation.CapabilitiesEditorID"
+            name="%_UI_CapabilitiesEditor_label"
+            icon="icons/full/obj16/CapabilitiesModelFile.gif"
+            extensions="capabilities"
+            class="de.oaam.model.oaam.capabilities.presentation.CapabilitiesEditor"
+            contributorClass="de.oaam.model.oaam.capabilities.presentation.CapabilitiesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.restrictions.presentation.RestrictionsEditorID"
+            name="%_UI_RestrictionsEditor_label"
+            icon="icons/full/obj16/RestrictionsModelFile.gif"
+            extensions="restrictions"
+            class="de.oaam.model.oaam.restrictions.presentation.RestrictionsEditor"
+            contributorClass="de.oaam.model.oaam.restrictions.presentation.RestrictionsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.mapping.presentation.MappingEditorID"
+            name="%_UI_MappingEditor_label"
+            icon="icons/full/obj16/MappingModelFile.gif"
+            extensions="mapping"
+            class="de.oaam.model.oaam.mapping.presentation.MappingEditor"
+            contributorClass="de.oaam.model.oaam.mapping.presentation.MappingActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

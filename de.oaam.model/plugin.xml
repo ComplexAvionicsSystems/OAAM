@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+
+
+
+
+
+
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100"
+            class="de.oaam.model.oaam.OaamPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/common"
+            class="de.oaam.model.oaam.common.CommonPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/library"
+            class="de.oaam.model.oaam.library.LibraryPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/scenario"
+            class="de.oaam.model.oaam.scenario.ScenarioPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/systems"
+            class="de.oaam.model.oaam.systems.SystemsPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/functions"
+            class="de.oaam.model.oaam.functions.FunctionsPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/hardware"
+            class="de.oaam.model.oaam.hardware.HardwarePackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/anatomy"
+            class="de.oaam.model.oaam.anatomy.AnatomyPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/capabilities"
+            class="de.oaam.model.oaam.capabilities.CapabilitiesPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/restrictions"
+            class="de.oaam.model.oaam.restrictions.RestrictionsPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated oaam -->
+      <package
+            uri="http://www.oaam.de/oaam/model/v100/mapping"
+            class="de.oaam.model.oaam.mapping.MappingPackage"
+            genModel="model/oaam.genmodel"/>
+   </extension>
+</plugin>

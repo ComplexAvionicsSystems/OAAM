@@ -1,8 +1,0 @@
-#Mon Jul 05 09:14:08 CEST 2010
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/de.tuhh.fst.ima.architecture/model/imaarchitecture.genmodel
-gmf_dashboard/domainModel=platform\:/resource/de.tuhh.fst.ima.architecture/model/imaarchitecture.ecore
-gmf_dashboard/generationModel=platform\:/resource/de.tuhh.fst.ima.architecture/model/hardware.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/de.tuhh.fst.ima.architecture/diagram.platform/platform.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/de.tuhh.fst.ima.architecture/diagram.platform/platform.gmfmap
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/de.tuhh.fst.ima.architecture/diagram.platform/platform.gmftool

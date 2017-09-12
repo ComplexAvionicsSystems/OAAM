@@ -61,29 +61,19 @@ public interface HardwareContainerA extends _ElementA {
 	EList<DeviceSymmetry> getDeviceSymmetries();
 
 	/**
-	 * Returns the value of the '<em><b>Connections</b></em>' reference.
+	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Connection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All connections in this hardware model
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Connections</em>' reference.
-	 * @see #setConnections(Connection)
+	 * @return the value of the '<em>Connections</em>' containment reference list.
 	 * @see de.oaam.model.oaam.hardware.HardwarePackage#getHardwareContainerA_Connections()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	Connection getConnections();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.hardware.HardwareContainerA#getConnections <em>Connections</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Connections</em>' reference.
-	 * @see #getConnections()
-	 * @generated
-	 */
-	void setConnections(Connection value);
+	EList<Connection> getConnections();
 
 	/**
 	 * Returns the value of the '<em><b>Subhardware</b></em>' containment reference list.

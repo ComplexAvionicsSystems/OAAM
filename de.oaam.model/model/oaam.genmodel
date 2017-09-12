@@ -536,8 +536,7 @@
       <genClasses image="false" ecoreClass="oaam.ecore#//hardware/HardwareContainerA">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/HardwareContainerA/devices"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/HardwareContainerA/deviceSymmetries"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//hardware/HardwareContainerA/connections"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/HardwareContainerA/connections"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/HardwareContainerA/subhardware"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//hardware/Device">

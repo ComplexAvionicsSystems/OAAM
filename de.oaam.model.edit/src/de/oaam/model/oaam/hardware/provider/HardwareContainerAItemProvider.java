@@ -20,8 +20,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -53,31 +51,8 @@ public class HardwareContainerAItemProvider extends _ElementAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addConnectionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Connections feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConnectionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_HardwareContainerA_connections_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_HardwareContainerA_connections_feature", "_UI_HardwareContainerA_type"),
-				 HardwarePackage.Literals.HARDWARE_CONTAINER_A__CONNECTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -94,6 +69,7 @@ public class HardwareContainerAItemProvider extends _ElementAItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__DEVICES);
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES);
+			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__CONNECTIONS);
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__SUBHARDWARE);
 		}
 		return childrenFeatures;
@@ -141,6 +117,7 @@ public class HardwareContainerAItemProvider extends _ElementAItemProvider {
 		switch (notification.getFeatureID(HardwareContainerA.class)) {
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
+			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -168,6 +145,11 @@ public class HardwareContainerAItemProvider extends _ElementAItemProvider {
 			(createChildParameter
 				(HardwarePackage.Literals.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES,
 				 HardwareFactory.eINSTANCE.createDeviceSymmetry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(HardwarePackage.Literals.HARDWARE_CONTAINER_A__CONNECTIONS,
+				 HardwareFactory.eINSTANCE.createConnection()));
 
 		newChildDescriptors.add
 			(createChildParameter

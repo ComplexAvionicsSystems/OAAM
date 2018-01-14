@@ -62,6 +62,7 @@ public class TaskItemProvider extends _ElementAItemProvider {
 			addImplementsPropertyDescriptor(object);
 			addDeviceBindingPropertyDescriptor(object);
 			addNParallelsPropertyDescriptor(object);
+			addFixedRatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -177,6 +178,28 @@ public class TaskItemProvider extends _ElementAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Fixed Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFixedRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Task_fixedRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Task_fixedRate_feature", "_UI_Task_type"),
+				 FunctionsPackage.Literals.TASK__FIXED_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -191,6 +214,7 @@ public class TaskItemProvider extends _ElementAItemProvider {
 			childrenFeatures.add(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(FunctionsPackage.Literals.TASK__INPUTS);
 			childrenFeatures.add(FunctionsPackage.Literals.TASK__OUTPUTS);
+			childrenFeatures.add(FunctionsPackage.Literals.TASK__PARAMETERS);
 		}
 		return childrenFeatures;
 	}
@@ -247,11 +271,13 @@ public class TaskItemProvider extends _ElementAItemProvider {
 
 		switch (notification.getFeatureID(Task.class)) {
 			case FunctionsPackage.TASK__NPARALLELS:
+			case FunctionsPackage.TASK__FIXED_RATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FunctionsPackage.TASK__OPERATION_MODES:
 			case FunctionsPackage.TASK__INPUTS:
 			case FunctionsPackage.TASK__OUTPUTS:
+			case FunctionsPackage.TASK__PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -283,6 +309,11 @@ public class TaskItemProvider extends _ElementAItemProvider {
 			(createChildParameter
 				(FunctionsPackage.Literals.TASK__OUTPUTS,
 				 FunctionsFactory.eINSTANCE.createOutput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FunctionsPackage.Literals.TASK__PARAMETERS,
+				 FunctionsFactory.eINSTANCE.createParameter()));
 	}
 
 	/**

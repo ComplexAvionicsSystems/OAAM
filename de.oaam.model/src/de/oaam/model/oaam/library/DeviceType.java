@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getWeight <em>Weight</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getCost <em>Cost</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getIoGroups <em>Io Groups</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.DeviceType#isIsSelfManaging <em>Is Self Managing</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getDeviceType()
@@ -189,5 +190,31 @@ public interface DeviceType extends ResourceConsumerA, ResourceProviderA, _Eleme
 	 * @generated
 	 */
 	EList<IoGroup> getIoGroups();
+
+	/**
+	 * Returns the value of the '<em><b>Is Self Managing</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Defines for a self-managing avionics platform, if the device type is capable of managing itself, i.e. can assign itself tasks and a shedule
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Is Self Managing</em>' attribute.
+	 * @see #setIsSelfManaging(boolean)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getDeviceType_IsSelfManaging()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isIsSelfManaging();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.DeviceType#isIsSelfManaging <em>Is Self Managing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Self Managing</em>' attribute.
+	 * @see #isIsSelfManaging()
+	 * @generated
+	 */
+	void setIsSelfManaging(boolean value);
 
 } // DeviceType

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * </ul>
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- * The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library,scenarios,systems,functions,hardware,anatomy,capabilities,restrictions,mappings), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files.
+ * The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library, scenarios, systems, functions, hardware, anatomy, capabilities, restrictions, mappings), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files.
  * <!-- end-model-doc -->
  * @see de.oaam.model.oaam.OaamFactory
  * @model kind="package"

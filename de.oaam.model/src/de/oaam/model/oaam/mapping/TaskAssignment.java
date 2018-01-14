@@ -12,6 +12,7 @@ import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario._ModeDependentElementA;
 import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +30,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  *   <li>{@link de.oaam.model.oaam.mapping.TaskAssignment#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.mapping.TaskAssignment#getTask <em>Task</em>}</li>
  *   <li>{@link de.oaam.model.oaam.mapping.TaskAssignment#getDevice <em>Device</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.mapping.TaskAssignment#getSchedule <em>Schedule</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.mapping.MappingPackage#getTaskAssignment()
@@ -110,5 +112,20 @@ public interface TaskAssignment extends _ElementA, _VariantDependentElementA, _M
 	 * @generated
 	 */
 	void setDevice(Device value);
+
+	/**
+	 * Returns the value of the '<em><b>Schedule</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.mapping.Schedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Schedules for the tasks on this device. Multiple schedules are valid.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Schedule</em>' containment reference list.
+	 * @see de.oaam.model.oaam.mapping.MappingPackage#getTaskAssignment_Schedule()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Schedule> getSchedule();
 
 } // TaskAssignment

@@ -159,6 +159,24 @@ public class MappingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MappingPackage.SCHEDULE: {
+				Schedule schedule = (Schedule)theEObject;
+				T result = caseSchedule(schedule);
+				if (result == null) result = case_ElementA(schedule);
+				if (result == null) result = case_ModeDependentElementA(schedule);
+				if (result == null) result = case_VariantDependentElementA(schedule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MappingPackage.SCHEDULED_TIME: {
+				ScheduledTime scheduledTime = (ScheduledTime)theEObject;
+				T result = caseScheduledTime(scheduledTime);
+				if (result == null) result = case_ElementA(scheduledTime);
+				if (result == null) result = case_ModeDependentElementA(scheduledTime);
+				if (result == null) result = case_VariantDependentElementA(scheduledTime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -310,6 +328,36 @@ public class MappingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSupmapping(Supmapping object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Schedule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSchedule(Schedule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Scheduled Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Scheduled Time</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScheduledTime(ScheduledTime object) {
 		return null;
 	}
 

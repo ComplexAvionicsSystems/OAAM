@@ -277,6 +277,8 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			childrenFeatures.add(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__OUTPUTS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUTS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATES);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__PARAMETERS);
 		}
 		return childrenFeatures;
 	}
@@ -346,6 +348,8 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.TASK_TYPE__ATTRIBUTES:
 			case LibraryPackage.TASK_TYPE__OUTPUTS:
 			case LibraryPackage.TASK_TYPE__INPUTS:
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -392,6 +396,16 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createChildParameter
 				(LibraryPackage.Literals.TASK_TYPE__INPUTS,
 				 LibraryFactory.eINSTANCE.createInputDeclaration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATES,
+				 LibraryFactory.eINSTANCE.createInternalStateDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.TASK_TYPE__PARAMETERS,
+				 LibraryFactory.eINSTANCE.createParameterDefinition()));
 	}
 
 }

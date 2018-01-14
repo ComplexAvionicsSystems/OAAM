@@ -1188,13 +1188,31 @@ public interface LibraryPackage extends EPackage {
 	int TASK_TYPE__PREFERRED_EXECUTION_RATE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Internal States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__INTERNAL_STATES = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__PARAMETERS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>Task Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
+	int TASK_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Task Type</em>' class.
@@ -1523,13 +1541,22 @@ public interface LibraryPackage extends EPackage {
 	int DEVICE_TYPE__IO_GROUPS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 18;
 
 	/**
+	 * The feature id for the '<em><b>Is Self Managing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE__IS_SELF_MANAGING = RESOURCE_CONSUMER_A_FEATURE_COUNT + 19;
+
+	/**
 	 * The number of structural features of the '<em>Device Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 19;
+	int DEVICE_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Device Type</em>' class.
@@ -5013,13 +5040,13 @@ public interface LibraryPackage extends EPackage {
 	int OUTPUT_TRIGGER__FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Id Fixed Rate</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Fixed Rate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__ID_FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Output Trigger</em>' class.
@@ -5149,6 +5176,224 @@ public interface LibraryPackage extends EPackage {
 	int FUNCTION_INPUT_TRIGGER_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.InternalStateDefinitionImpl <em>Internal State Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.InternalStateDefinitionImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getInternalStateDefinition()
+	 * @generated
+	 */
+	int INTERNAL_STATE_DEFINITION = 37;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Internal State Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Internal State Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_STATE_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ParameterDefinitionImpl <em>Parameter Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.ParameterDefinitionImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getParameterDefinition()
+	 * @generated
+	 */
+	int PARAMETER_DEFINITION = 38;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Parameter Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5156,7 +5401,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoDirectionE()
 	 * @generated
 	 */
-	int IO_DIRECTION_E = 37;
+	int IO_DIRECTION_E = 39;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTypesE <em>Attribute Types E</em>}' enum.
@@ -5166,7 +5411,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTypesE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPES_E = 38;
+	int ATTRIBUTE_TYPES_E = 40;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTargetsE <em>Attribute Targets E</em>}' enum.
@@ -5176,7 +5421,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTargetsE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TARGETS_E = 39;
+	int ATTRIBUTE_TARGETS_E = 41;
 
 
 	/**
@@ -5765,6 +6010,28 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getTaskType_PreferredExecutionRate();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getInternalStates <em>Internal States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Internal States</em>'.
+	 * @see de.oaam.model.oaam.library.TaskType#getInternalStates()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EReference getTaskType_InternalStates();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see de.oaam.model.oaam.library.TaskType#getParameters()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EReference getTaskType_Parameters();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.SignalType <em>Signal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5860,6 +6127,17 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDeviceType_IoGroups();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.DeviceType#isIsSelfManaging <em>Is Self Managing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Self Managing</em>'.
+	 * @see de.oaam.model.oaam.library.DeviceType#isIsSelfManaging()
+	 * @see #getDeviceType()
+	 * @generated
+	 */
+	EAttribute getDeviceType_IsSelfManaging();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ConnectionType <em>Connection Type</em>}'.
@@ -6772,15 +7050,15 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getOutputTrigger_FixedRate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputTrigger#isIdFixedRate <em>Id Fixed Rate</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Fixed Rate</em>'.
-	 * @see de.oaam.model.oaam.library.OutputTrigger#isIdFixedRate()
+	 * @return the meta object for the attribute '<em>Is Fixed Rate</em>'.
+	 * @see de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate()
 	 * @see #getOutputTrigger()
 	 * @generated
 	 */
-	EAttribute getOutputTrigger_IdFixedRate();
+	EAttribute getOutputTrigger_IsFixedRate();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.FunctionInputTrigger <em>Function Input Trigger</em>}'.
@@ -6802,6 +7080,48 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunctionInputTrigger_Input();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.InternalStateDefinition <em>Internal State Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Internal State Definition</em>'.
+	 * @see de.oaam.model.oaam.library.InternalStateDefinition
+	 * @generated
+	 */
+	EClass getInternalStateDefinition();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.InternalStateDefinition#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.library.InternalStateDefinition#getType()
+	 * @see #getInternalStateDefinition()
+	 * @generated
+	 */
+	EReference getInternalStateDefinition_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ParameterDefinition <em>Parameter Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter Definition</em>'.
+	 * @see de.oaam.model.oaam.library.ParameterDefinition
+	 * @generated
+	 */
+	EClass getParameterDefinition();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ParameterDefinition#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.library.ParameterDefinition#getType()
+	 * @see #getParameterDefinition()
+	 * @generated
+	 */
+	EReference getParameterDefinition_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}'.
@@ -7307,6 +7627,22 @@ public interface LibraryPackage extends EPackage {
 		EAttribute TASK_TYPE__PREFERRED_EXECUTION_RATE = eINSTANCE.getTaskType_PreferredExecutionRate();
 
 		/**
+		 * The meta object literal for the '<em><b>Internal States</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE__INTERNAL_STATES = eINSTANCE.getTaskType_InternalStates();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE__PARAMETERS = eINSTANCE.getTaskType_Parameters();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.SignalTypeImpl <em>Signal Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7381,6 +7717,14 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DEVICE_TYPE__IO_GROUPS = eINSTANCE.getDeviceType_IoGroups();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Self Managing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEVICE_TYPE__IS_SELF_MANAGING = eINSTANCE.getDeviceType_IsSelfManaging();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl <em>Connection Type</em>}' class.
@@ -8113,12 +8457,12 @@ public interface LibraryPackage extends EPackage {
 		EAttribute OUTPUT_TRIGGER__FIXED_RATE = eINSTANCE.getOutputTrigger_FixedRate();
 
 		/**
-		 * The meta object literal for the '<em><b>Id Fixed Rate</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Is Fixed Rate</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OUTPUT_TRIGGER__ID_FIXED_RATE = eINSTANCE.getOutputTrigger_IdFixedRate();
+		EAttribute OUTPUT_TRIGGER__IS_FIXED_RATE = eINSTANCE.getOutputTrigger_IsFixedRate();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl <em>Function Input Trigger</em>}' class.
@@ -8137,6 +8481,42 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTION_INPUT_TRIGGER__INPUT = eINSTANCE.getFunctionInputTrigger_Input();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.InternalStateDefinitionImpl <em>Internal State Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.InternalStateDefinitionImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getInternalStateDefinition()
+		 * @generated
+		 */
+		EClass INTERNAL_STATE_DEFINITION = eINSTANCE.getInternalStateDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERNAL_STATE_DEFINITION__TYPE = eINSTANCE.getInternalStateDefinition_Type();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ParameterDefinitionImpl <em>Parameter Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.ParameterDefinitionImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getParameterDefinition()
+		 * @generated
+		 */
+		EClass PARAMETER_DEFINITION = eINSTANCE.getParameterDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER_DEFINITION__TYPE = eINSTANCE.getParameterDefinition_Type();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

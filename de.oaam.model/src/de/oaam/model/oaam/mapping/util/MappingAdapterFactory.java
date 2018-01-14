@@ -113,6 +113,14 @@ public class MappingAdapterFactory extends AdapterFactoryImpl {
 				return createSupmappingAdapter();
 			}
 			@Override
+			public Adapter caseSchedule(Schedule object) {
+				return createScheduleAdapter();
+			}
+			@Override
+			public Adapter caseScheduledTime(ScheduledTime object) {
+				return createScheduledTimeAdapter();
+			}
+			@Override
 			public Adapter case_ElementA(_ElementA object) {
 				return create_ElementAAdapter();
 			}
@@ -281,6 +289,34 @@ public class MappingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSupmappingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.mapping.Schedule <em>Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.mapping.Schedule
+	 * @generated
+	 */
+	public Adapter createScheduleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.mapping.ScheduledTime <em>Scheduled Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.mapping.ScheduledTime
+	 * @generated
+	 */
+	public Adapter createScheduledTimeAdapter() {
 		return null;
 	}
 

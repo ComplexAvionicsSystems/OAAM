@@ -319,6 +319,24 @@ public interface LibraryFactory extends EFactory {
 	FunctionInputTrigger createFunctionInputTrigger();
 
 	/**
+	 * Returns a new object of class '<em>Internal State Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Internal State Definition</em>'.
+	 * @generated
+	 */
+	InternalStateDefinition createInternalStateDefinition();
+
+	/**
+	 * Returns a new object of class '<em>Parameter Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter Definition</em>'.
+	 * @generated
+	 */
+	ParameterDefinition createParameterDefinition();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

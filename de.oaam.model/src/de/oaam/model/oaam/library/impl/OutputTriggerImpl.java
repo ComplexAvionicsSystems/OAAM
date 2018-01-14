@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl#getLogic <em>Logic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl#getFixedRate <em>Fixed Rate</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl#isIdFixedRate <em>Id Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl#isIsFixedRate <em>Is Fixed Rate</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,24 +64,24 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 	protected float fixedRate = FIXED_RATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIdFixedRate() <em>Id Fixed Rate</em>}' attribute.
+	 * The default value of the '{@link #isIsFixedRate() <em>Is Fixed Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIdFixedRate()
+	 * @see #isIsFixedRate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ID_FIXED_RATE_EDEFAULT = false;
+	protected static final boolean IS_FIXED_RATE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIdFixedRate() <em>Id Fixed Rate</em>}' attribute.
+	 * The cached value of the '{@link #isIsFixedRate() <em>Is Fixed Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIdFixedRate()
+	 * @see #isIsFixedRate()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean idFixedRate = ID_FIXED_RATE_EDEFAULT;
+	protected boolean isFixedRate = IS_FIXED_RATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,8 +171,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIdFixedRate() {
-		return idFixedRate;
+	public boolean isIsFixedRate() {
+		return isFixedRate;
 	}
 
 	/**
@@ -180,11 +180,11 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdFixedRate(boolean newIdFixedRate) {
-		boolean oldIdFixedRate = idFixedRate;
-		idFixedRate = newIdFixedRate;
+	public void setIsFixedRate(boolean newIsFixedRate) {
+		boolean oldIsFixedRate = isFixedRate;
+		isFixedRate = newIsFixedRate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE, oldIdFixedRate, idFixedRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE, oldIsFixedRate, isFixedRate));
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 				return getLogic();
 			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
 				return getFixedRate();
-			case LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE:
-				return isIdFixedRate();
+			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
+				return isIsFixedRate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -233,8 +233,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
 				setFixedRate((Float)newValue);
 				return;
-			case LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE:
-				setIdFixedRate((Boolean)newValue);
+			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
+				setIsFixedRate((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -254,8 +254,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
 				setFixedRate(FIXED_RATE_EDEFAULT);
 				return;
-			case LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE:
-				setIdFixedRate(ID_FIXED_RATE_EDEFAULT);
+			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
+				setIsFixedRate(IS_FIXED_RATE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -273,8 +273,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 				return logic != null;
 			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
 				return fixedRate != FIXED_RATE_EDEFAULT;
-			case LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE:
-				return idFixedRate != ID_FIXED_RATE_EDEFAULT;
+			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
+				return isFixedRate != IS_FIXED_RATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -291,8 +291,8 @@ public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (fixedRate: ");
 		result.append(fixedRate);
-		result.append(", idFixedRate: ");
-		result.append(idFixedRate);
+		result.append(", isFixedRate: ");
+		result.append(isFixedRate);
 		result.append(')');
 		return result.toString();
 	}

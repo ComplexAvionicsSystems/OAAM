@@ -112,12 +112,12 @@ public interface Output extends _ElementA, _VariantDependentElementA, _ModeDepen
 	 * The fixed rate, in which the output shall be calculated, given in Hz. If this is set to other that 0.0, it overrides the rate of the taskType declaration.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fixed Rate</em>' attribute.
-	 * @see #setFixedRate(float)
+	 * @see #setFixedRate(double)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getOutput_FixedRate()
 	 * @model required="true"
 	 * @generated
 	 */
-	float getFixedRate();
+	double getFixedRate();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Output#getFixedRate <em>Fixed Rate</em>}' attribute.
@@ -127,6 +127,6 @@ public interface Output extends _ElementA, _VariantDependentElementA, _ModeDepen
 	 * @see #getFixedRate()
 	 * @generated
 	 */
-	void setFixedRate(float value);
+	void setFixedRate(double value);
 
 } // Output

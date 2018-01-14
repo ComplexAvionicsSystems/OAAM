@@ -117,7 +117,7 @@ public interface _ElementA extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This can be used to append arbitrary additional attributes to every element. The form of additional attributes is always name plus value whereas the value type is different for different attribute types.
+	 * This can be used to append arbitrary additional attributes to every element. The form of additional attributes is always name and value whereas the value type is different for different attribute types.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attributes</em>' containment reference list.
 	 * @see de.oaam.model.oaam.common.CommonPackage#get_ElementA_Attributes()

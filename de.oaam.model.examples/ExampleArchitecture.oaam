@@ -4,6 +4,7 @@
     <sublibraries id="datatypes" name="Data Types">
       <dataTypes xsi:type="de.oaam.model_1:Boolean"/>
       <dataTypes xsi:type="de.oaam.model_1:FloatingPoint"/>
+      <dataTypes xsi:type="de.oaam.model_1:Integer"/>
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
@@ -36,6 +37,8 @@
         </outputs>
         <inputs name="a" type="//@library/@sublibraries.0/@dataTypes.1"/>
         <inputs name="b" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <internalStates name="Sum" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <parameters name="Number of inputs" type="//@library/@sublibraries.0/@dataTypes.2"/>
       </taskTypes>
       <taskTypes id="tasktypecockpitswitch" name="CockpitSwitch">
         <requiredResources name="DSI" style="" type="//@library/@sublibraries.3/@resourceTypes.0"/>
@@ -69,6 +72,7 @@
     <tasks name="Add" type="tasktypeadd">
       <inputs name="a" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
       <inputs name="b" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+      <parameters name="Number of inputs" definition="//@library/@sublibraries.1/@taskTypes.0/@parameters.0" value="2"/>
     </tasks>
     <tasks id="taskcockpitswitch" name="C/O Switch" style="" modifier="" type="tasktypecockpitswitch" deviceBinding="//@hardware/@devices.0">
       <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputs.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
@@ -91,6 +95,11 @@
   </capabilities>
   <mapping id="mapping">
     <subDeviceAssignments name="CPU-CARD -> CPM A1" capability="//@capabilities/@subDeviceCapabilities.0" subDevice="//@hardware/@devices.1/@subDevices.0" targetDevice="//@hardware/@devices.1"/>
-    <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@functionCapabilties.0" task="//@function/@tasks.0" device="//@hardware/@devices.1/@subDevices.0"/>
+    <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@functionCapabilties.0" task="//@function/@tasks.0" device="//@hardware/@devices.1/@subDevices.0">
+      <schedule name="@50Hz" rate="50.0">
+        <scheduledTimes startTime="0.001"/>
+        <scheduledTimes cycle="2" startTime="0.002"/>
+      </schedule>
+    </taskAssignments>
   </mapping>
 </de.oaam.model:Architecture>

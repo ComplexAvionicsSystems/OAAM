@@ -7,6 +7,7 @@ import de.oaam.model.oaam.common.impl._ElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
+import de.oaam.model.oaam.functions.Parameter;
 import de.oaam.model.oaam.functions.Task;
 
 import de.oaam.model.oaam.hardware.Device;
@@ -51,6 +52,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskImpl#getImplements <em>Implements</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskImpl#getDeviceBinding <em>Device Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskImpl#getNParallels <em>NParallels</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.TaskImpl#getFixedRate <em>Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.TaskImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
  * @generated
@@ -145,6 +148,36 @@ public class TaskImpl extends _ElementAImpl implements Task {
 	 * @ordered
 	 */
 	protected int nParallels = NPARALLELS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFixedRate() <em>Fixed Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFixedRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double FIXED_RATE_EDEFAULT = -1.0;
+
+	/**
+	 * The cached value of the '{@link #getFixedRate() <em>Fixed Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFixedRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected double fixedRate = FIXED_RATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Parameter> parameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -353,6 +386,39 @@ public class TaskImpl extends _ElementAImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getFixedRate() {
+		return fixedRate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFixedRate(double newFixedRate) {
+		double oldFixedRate = fixedRate;
+		fixedRate = newFixedRate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.TASK__FIXED_RATE, oldFixedRate, fixedRate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Parameter> getParameters() {
+		if (parameters == null) {
+			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, FunctionsPackage.TASK__PARAMETERS);
+		}
+		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -362,6 +428,8 @@ public class TaskImpl extends _ElementAImpl implements Task {
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
 			case FunctionsPackage.TASK__OUTPUTS:
 				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
+			case FunctionsPackage.TASK__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -393,6 +461,10 @@ public class TaskImpl extends _ElementAImpl implements Task {
 				return basicGetDeviceBinding();
 			case FunctionsPackage.TASK__NPARALLELS:
 				return getNParallels();
+			case FunctionsPackage.TASK__FIXED_RATE:
+				return getFixedRate();
+			case FunctionsPackage.TASK__PARAMETERS:
+				return getParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -434,6 +506,13 @@ public class TaskImpl extends _ElementAImpl implements Task {
 			case FunctionsPackage.TASK__NPARALLELS:
 				setNParallels((Integer)newValue);
 				return;
+			case FunctionsPackage.TASK__FIXED_RATE:
+				setFixedRate((Double)newValue);
+				return;
+			case FunctionsPackage.TASK__PARAMETERS:
+				getParameters().clear();
+				getParameters().addAll((Collection<? extends Parameter>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -470,6 +549,12 @@ public class TaskImpl extends _ElementAImpl implements Task {
 			case FunctionsPackage.TASK__NPARALLELS:
 				setNParallels(NPARALLELS_EDEFAULT);
 				return;
+			case FunctionsPackage.TASK__FIXED_RATE:
+				setFixedRate(FIXED_RATE_EDEFAULT);
+				return;
+			case FunctionsPackage.TASK__PARAMETERS:
+				getParameters().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -498,6 +583,10 @@ public class TaskImpl extends _ElementAImpl implements Task {
 				return deviceBinding != null;
 			case FunctionsPackage.TASK__NPARALLELS:
 				return nParallels != NPARALLELS_EDEFAULT;
+			case FunctionsPackage.TASK__FIXED_RATE:
+				return fixedRate != FIXED_RATE_EDEFAULT;
+			case FunctionsPackage.TASK__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -558,6 +647,8 @@ public class TaskImpl extends _ElementAImpl implements Task {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nParallels: ");
 		result.append(nParallels);
+		result.append(", fixedRate: ");
+		result.append(fixedRate);
 		result.append(')');
 		return result.toString();
 	}

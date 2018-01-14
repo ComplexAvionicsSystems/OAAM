@@ -7,8 +7,10 @@ import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common._ElementA;
 
 import de.oaam.model.oaam.library.InputDeclaration;
+import de.oaam.model.oaam.library.InternalStateDefinition;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
+import de.oaam.model.oaam.library.ParameterDefinition;
 import de.oaam.model.oaam.library.TaskType;
 
 import java.util.Collection;
@@ -47,6 +49,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#isIsDeterministic <em>Is Deterministic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInternalStates <em>Internal States</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
  * @generated
@@ -261,6 +265,26 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * @ordered
 	 */
 	protected float preferredExecutionRate = PREFERRED_EXECUTION_RATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getInternalStates() <em>Internal States</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInternalStates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<InternalStateDefinition> internalStates;
+
+	/**
+	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParameters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ParameterDefinition> parameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -511,6 +535,30 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<InternalStateDefinition> getInternalStates() {
+		if (internalStates == null) {
+			internalStates = new EObjectContainmentEList<InternalStateDefinition>(InternalStateDefinition.class, this, LibraryPackage.TASK_TYPE__INTERNAL_STATES);
+		}
+		return internalStates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ParameterDefinition> getParameters() {
+		if (parameters == null) {
+			parameters = new EObjectContainmentEList<ParameterDefinition>(ParameterDefinition.class, this, LibraryPackage.TASK_TYPE__PARAMETERS);
+		}
+		return parameters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -520,6 +568,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.TASK_TYPE__INPUTS:
 				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+				return ((InternalEList<?>)getInternalStates()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
+				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -556,6 +608,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return isIsDeterministic();
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return getPreferredExecutionRate();
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+				return getInternalStates();
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
+				return getParameters();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -608,6 +664,14 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate((Float)newValue);
 				return;
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+				getInternalStates().clear();
+				getInternalStates().addAll((Collection<? extends InternalStateDefinition>)newValue);
+				return;
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
+				getParameters().clear();
+				getParameters().addAll((Collection<? extends ParameterDefinition>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -656,6 +720,12 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate(PREFERRED_EXECUTION_RATE_EDEFAULT);
 				return;
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+				getInternalStates().clear();
+				return;
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
+				getParameters().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -692,6 +762,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return isDeterministic != IS_DETERMINISTIC_EDEFAULT;
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return preferredExecutionRate != PREFERRED_EXECUTION_RATE_EDEFAULT;
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
+				return internalStates != null && !internalStates.isEmpty();
+			case LibraryPackage.TASK_TYPE__PARAMETERS:
+				return parameters != null && !parameters.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

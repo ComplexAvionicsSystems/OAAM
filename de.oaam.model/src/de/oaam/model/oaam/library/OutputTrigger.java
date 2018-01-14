@@ -20,7 +20,7 @@ import de.oaam.model.oaam.common._ElementA;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.OutputTrigger#getLogic <em>Logic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.OutputTrigger#getFixedRate <em>Fixed Rate</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.OutputTrigger#isIdFixedRate <em>Id Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getOutputTrigger()
@@ -58,7 +58,7 @@ public interface OutputTrigger extends _ElementA {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The fixed rate, in which the output shall be calculated, given in Hz.
+	 * The fixed rate, in which the output shall be calculated, given in Hz. This is only the default rate. The rate can be overwritten with the task instance
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fixed Rate</em>' attribute.
 	 * @see #setFixedRate(float)
@@ -79,28 +79,29 @@ public interface OutputTrigger extends _ElementA {
 	void setFixedRate(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Fixed Rate</b></em>' attribute.
+	 * Returns the value of the '<em><b>Is Fixed Rate</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * If true the output is calculated at a fixed rate and the fixedRate attribute must be set. If false, the output is calculated if a certain combinations of inputs is available. In the latter case logics must be set.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Id Fixed Rate</em>' attribute.
-	 * @see #setIdFixedRate(boolean)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getOutputTrigger_IdFixedRate()
-	 * @model required="true"
+	 * @return the value of the '<em>Is Fixed Rate</em>' attribute.
+	 * @see #setIsFixedRate(boolean)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getOutputTrigger_IsFixedRate()
+	 * @model default="false" required="true"
 	 * @generated
 	 */
-	boolean isIdFixedRate();
+	boolean isIsFixedRate();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.OutputTrigger#isIdFixedRate <em>Id Fixed Rate</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Fixed Rate</em>' attribute.
-	 * @see #isIdFixedRate()
+	 * @param value the new value of the '<em>Is Fixed Rate</em>' attribute.
+	 * @see #isIsFixedRate()
 	 * @generated
 	 */
-	void setIdFixedRate(boolean value);
+	void setIsFixedRate(boolean value);
 
 } // OutputTrigger

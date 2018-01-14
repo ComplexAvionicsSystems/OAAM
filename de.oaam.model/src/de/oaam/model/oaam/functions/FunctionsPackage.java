@@ -632,13 +632,31 @@ public interface FunctionsPackage extends EPackage {
 	int TASK__NPARALLELS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__PARAMETERS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int TASK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -2454,6 +2472,125 @@ public interface FunctionsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.functions.impl.ParameterImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 15;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__ID = CommonPackage._ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = CommonPackage._ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__STYLE = CommonPackage._ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Definition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__DEFINITION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__VALUE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Functions <em>Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2658,6 +2795,28 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTask_NParallels();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.Task#getFixedRate <em>Fixed Rate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fixed Rate</em>'.
+	 * @see de.oaam.model.oaam.functions.Task#getFixedRate()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EAttribute getTask_FixedRate();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.Task#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see de.oaam.model.oaam.functions.Task#getParameters()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EReference getTask_Parameters();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.TaskLink <em>Task Link</em>}'.
@@ -3143,6 +3302,38 @@ public interface FunctionsPackage extends EPackage {
 	EAttribute getSubfunction_MultiplicityMax();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see de.oaam.model.oaam.functions.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.Parameter#getDefinition <em>Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Definition</em>'.
+	 * @see de.oaam.model.oaam.functions.Parameter#getDefinition()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EReference getParameter_Definition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.Parameter#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see de.oaam.model.oaam.functions.Parameter#getValue()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EAttribute getParameter_Value();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3322,6 +3513,22 @@ public interface FunctionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK__NPARALLELS = eINSTANCE.getTask_NParallels();
+
+		/**
+		 * The meta object literal for the '<em><b>Fixed Rate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK__FIXED_RATE = eINSTANCE.getTask_FixedRate();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK__PARAMETERS = eINSTANCE.getTask_Parameters();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.TaskLinkImpl <em>Task Link</em>}' class.
@@ -3706,6 +3913,32 @@ public interface FunctionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SUBFUNCTION__MULTIPLICITY_MAX = eINSTANCE.getSubfunction_MultiplicityMax();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.functions.impl.ParameterImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER__DEFINITION = eINSTANCE.getParameter_Definition();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
 
 	}
 

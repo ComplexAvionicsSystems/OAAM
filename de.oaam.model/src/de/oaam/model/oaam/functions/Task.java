@@ -32,6 +32,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.functions.Task#getImplements <em>Implements</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Task#getDeviceBinding <em>Device Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Task#getNParallels <em>NParallels</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.Task#getFixedRate <em>Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.Task#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getTask()
@@ -169,5 +171,46 @@ public interface Task extends _ElementA, _VariantDependentElementA, _ModeDepende
 	 * @generated
 	 */
 	void setNParallels(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Fixed Rate</b></em>' attribute.
+	 * The default value is <code>"-1.0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The execution rate of a periodic task in Hz. Enter -1 for inheritance. Enter 0 for non-periodic or best effort.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Fixed Rate</em>' attribute.
+	 * @see #setFixedRate(double)
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getTask_FixedRate()
+	 * @model default="-1.0" required="true"
+	 * @generated
+	 */
+	double getFixedRate();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Task#getFixedRate <em>Fixed Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fixed Rate</em>' attribute.
+	 * @see #getFixedRate()
+	 * @generated
+	 */
+	void setFixedRate(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Parameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All parameters of a task.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Parameters</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getTask_Parameters()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Parameter> getParameters();
 
 } // Task

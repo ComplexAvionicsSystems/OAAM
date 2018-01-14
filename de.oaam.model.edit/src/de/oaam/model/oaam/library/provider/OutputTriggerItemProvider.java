@@ -59,7 +59,7 @@ public class OutputTriggerItemProvider extends _ElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addFixedRatePropertyDescriptor(object);
-			addIdFixedRatePropertyDescriptor(object);
+			addIsFixedRatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,19 +87,19 @@ public class OutputTriggerItemProvider extends _ElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Id Fixed Rate feature.
+	 * This adds a property descriptor for the Is Fixed Rate feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdFixedRatePropertyDescriptor(Object object) {
+	protected void addIsFixedRatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OutputTrigger_idFixedRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OutputTrigger_idFixedRate_feature", "_UI_OutputTrigger_type"),
-				 LibraryPackage.Literals.OUTPUT_TRIGGER__ID_FIXED_RATE,
+				 getString("_UI_OutputTrigger_isFixedRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputTrigger_isFixedRate_feature", "_UI_OutputTrigger_type"),
+				 LibraryPackage.Literals.OUTPUT_TRIGGER__IS_FIXED_RATE,
 				 true,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class OutputTriggerItemProvider extends _ElementAItemProvider {
 
 		switch (notification.getFeatureID(OutputTrigger.class)) {
 			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
-			case LibraryPackage.OUTPUT_TRIGGER__ID_FIXED_RATE:
+			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.OUTPUT_TRIGGER__LOGIC:

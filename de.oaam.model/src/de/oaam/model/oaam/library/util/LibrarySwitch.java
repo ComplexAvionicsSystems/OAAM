@@ -340,6 +340,20 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case LibraryPackage.INTERNAL_STATE_DEFINITION: {
+				InternalStateDefinition internalStateDefinition = (InternalStateDefinition)theEObject;
+				T result = caseInternalStateDefinition(internalStateDefinition);
+				if (result == null) result = case_ElementA(internalStateDefinition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LibraryPackage.PARAMETER_DEFINITION: {
+				ParameterDefinition parameterDefinition = (ParameterDefinition)theEObject;
+				T result = caseParameterDefinition(parameterDefinition);
+				if (result == null) result = case_ElementA(parameterDefinition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -896,6 +910,36 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFunctionInputTrigger(FunctionInputTrigger object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Internal State Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Internal State Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInternalStateDefinition(InternalStateDefinition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameterDefinition(ParameterDefinition object) {
 		return null;
 	}
 

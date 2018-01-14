@@ -64,7 +64,7 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	protected EList<DeviceSymmetry> deviceSymmetries;
 
 	/**
-	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' reference.
+	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConnections()
@@ -132,14 +132,6 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	 * @generated
 	 */
 	public Connection getConnections() {
-		if (connections != null && connections.eIsProxy()) {
-			InternalEObject oldConnections = (InternalEObject)connections;
-			connections = (Connection)eResolveProxy(oldConnections);
-			if (connections != oldConnections) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, oldConnections, connections));
-			}
-		}
 		return connections;
 	}
 
@@ -148,8 +140,14 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection basicGetConnections() {
-		return connections;
+	public NotificationChain basicSetConnections(Connection newConnections, NotificationChain msgs) {
+		Connection oldConnections = connections;
+		connections = newConnections;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, oldConnections, newConnections);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -158,10 +156,17 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	 * @generated
 	 */
 	public void setConnections(Connection newConnections) {
-		Connection oldConnections = connections;
-		connections = newConnections;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, oldConnections, connections));
+		if (newConnections != connections) {
+			NotificationChain msgs = null;
+			if (connections != null)
+				msgs = ((InternalEObject)connections).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, null, msgs);
+			if (newConnections != null)
+				msgs = ((InternalEObject)newConnections).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, null, msgs);
+			msgs = basicSetConnections(newConnections, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, newConnections, newConnections));
 	}
 
 	/**
@@ -188,6 +193,8 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 				return ((InternalEList<?>)getDevices()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
 				return ((InternalEList<?>)getDeviceSymmetries()).basicRemove(otherEnd, msgs);
+			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
+				return basicSetConnections(null, msgs);
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return ((InternalEList<?>)getSubhardware()).basicRemove(otherEnd, msgs);
 		}
@@ -207,8 +214,7 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
 				return getDeviceSymmetries();
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
-				if (resolve) return getConnections();
-				return basicGetConnections();
+				return getConnections();
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return getSubhardware();
 		}

@@ -198,6 +198,8 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/inputs"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskType/isDeterministic"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskType/preferredExecutionRate"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/internalStates"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/parameters"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/SignalType"/>
       <genClasses ecoreClass="oaam.ecore#//library/DeviceType">
@@ -208,6 +210,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/weight"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/cost"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ioGroups"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/isSelfManaging"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/ConnectionType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/isInformation"/>
@@ -331,11 +334,19 @@
       <genClasses ecoreClass="oaam.ecore#//library/OutputTrigger">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/OutputTrigger/logic"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/OutputTrigger/fixedRate"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/OutputTrigger/idFixedRate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/OutputTrigger/isFixedRate"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/FunctionInputTrigger">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/FunctionInputTrigger/input"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/InternalStateDefinition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/InternalStateDefinition/type"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/ParameterDefinition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ParameterDefinition/type"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Scenario" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
@@ -455,6 +466,8 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/Task/deviceBinding"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Task/nParallels"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Task/fixedRate"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/Task/parameters"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/TaskLink">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -529,6 +542,11 @@
       <genClasses ecoreClass="oaam.ecore#//functions/Subfunction">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunction/multiplicityMin"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunction/multiplicityMax"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//functions/Parameter">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/Parameter/definition"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Parameter/value"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Hardware" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
@@ -844,6 +862,7 @@
             ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/task"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/device"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/schedule"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//mapping/SignalAssignment">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignment/segments"/>
@@ -889,6 +908,18 @@
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//mapping/Mapping"/>
       <genClasses ecoreClass="oaam.ecore#//mapping/Supmapping"/>
+      <genClasses ecoreClass="oaam.ecore#//mapping/Schedule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/rate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/isPeriodic"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/priority"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/Schedule/scheduledTimes"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//mapping/ScheduledTime">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/cycle"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/duration"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/restart"/>
+      </genClasses>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

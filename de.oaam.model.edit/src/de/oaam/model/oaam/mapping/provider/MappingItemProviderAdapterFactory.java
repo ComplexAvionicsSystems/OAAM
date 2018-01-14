@@ -279,6 +279,52 @@ public class MappingItemProviderAdapterFactory extends MappingAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.mapping.Schedule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ScheduleItemProvider scheduleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.mapping.Schedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createScheduleAdapter() {
+		if (scheduleItemProvider == null) {
+			scheduleItemProvider = new ScheduleItemProvider(this);
+		}
+
+		return scheduleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.mapping.ScheduledTime} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ScheduledTimeItemProvider scheduledTimeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.mapping.ScheduledTime}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createScheduledTimeAdapter() {
+		if (scheduledTimeItemProvider == null) {
+			scheduledTimeItemProvider = new ScheduledTimeItemProvider(this);
+		}
+
+		return scheduledTimeItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -386,6 +432,8 @@ public class MappingItemProviderAdapterFactory extends MappingAdapterFactory imp
 		if (subDeviceAssignmentItemProvider != null) subDeviceAssignmentItemProvider.dispose();
 		if (mappingItemProvider != null) mappingItemProvider.dispose();
 		if (supmappingItemProvider != null) supmappingItemProvider.dispose();
+		if (scheduleItemProvider != null) scheduleItemProvider.dispose();
+		if (scheduledTimeItemProvider != null) scheduledTimeItemProvider.dispose();
 	}
 
 }

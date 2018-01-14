@@ -23,6 +23,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getInputs <em>Inputs</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#isIsDeterministic <em>Is Deterministic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getInternalStates <em>Internal States</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getParameters <em>Parameters</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType()
@@ -110,5 +112,35 @@ public interface TaskType extends ResourceConsumerA, _ElementA {
 	 * @generated
 	 */
 	void setPreferredExecutionRate(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Internal States</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.InternalStateDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All internal state variables of a task type
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Internal States</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_InternalStates()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<InternalStateDefinition> getInternalStates();
+
+	/**
+	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ParameterDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All parameters of a tasks type
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Parameters</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_Parameters()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ParameterDefinition> getParameters();
 
 } // TaskType

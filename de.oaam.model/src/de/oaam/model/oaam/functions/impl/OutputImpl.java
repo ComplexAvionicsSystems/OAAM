@@ -112,7 +112,7 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final float FIXED_RATE_EDEFAULT = 0.0F;
+	protected static final double FIXED_RATE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getFixedRate() <em>Fixed Rate</em>}' attribute.
@@ -122,7 +122,7 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 * @generated
 	 * @ordered
 	 */
-	protected float fixedRate = FIXED_RATE_EDEFAULT;
+	protected double fixedRate = FIXED_RATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,7 +260,7 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getFixedRate() {
+	public double getFixedRate() {
 		return fixedRate;
 	}
 
@@ -269,8 +269,8 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFixedRate(float newFixedRate) {
-		float oldFixedRate = fixedRate;
+	public void setFixedRate(double newFixedRate) {
+		double oldFixedRate = fixedRate;
 		fixedRate = newFixedRate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.OUTPUT__FIXED_RATE, oldFixedRate, fixedRate));
@@ -344,7 +344,7 @@ public class OutputImpl extends _ElementAImpl implements Output {
 				getIoBindings().addAll((Collection<? extends Io>)newValue);
 				return;
 			case FunctionsPackage.OUTPUT__FIXED_RATE:
-				setFixedRate((Float)newValue);
+				setFixedRate((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

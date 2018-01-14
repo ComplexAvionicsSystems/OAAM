@@ -64,6 +64,7 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			addMtbfPropertyDescriptor(object);
 			addWeightPropertyDescriptor(object);
 			addCostPropertyDescriptor(object);
+			addIsSelfManagingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -355,6 +356,28 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Self Managing feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSelfManagingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DeviceType_isSelfManaging_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DeviceType_isSelfManaging_feature", "_UI_DeviceType_type"),
+				 LibraryPackage.Literals.DEVICE_TYPE__IS_SELF_MANAGING,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -439,6 +462,7 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.DEVICE_TYPE__MTBF:
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 			case LibraryPackage.DEVICE_TYPE__COST:
+			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.DEVICE_TYPE__PROVIDED_BUNDLES:

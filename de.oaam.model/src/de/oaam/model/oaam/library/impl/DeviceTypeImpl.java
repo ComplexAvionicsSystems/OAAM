@@ -60,6 +60,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getCost <em>Cost</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getIoGroups <em>Io Groups</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isIsSelfManaging <em>Is Self Managing</em>}</li>
  * </ul>
  *
  * @generated
@@ -374,6 +375,26 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * @ordered
 	 */
 	protected EList<IoGroup> ioGroups;
+
+	/**
+	 * The default value of the '{@link #isIsSelfManaging() <em>Is Self Managing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSelfManaging()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_SELF_MANAGING_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsSelfManaging() <em>Is Self Managing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsSelfManaging()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isSelfManaging = IS_SELF_MANAGING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -735,6 +756,27 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsSelfManaging() {
+		return isSelfManaging;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsSelfManaging(boolean newIsSelfManaging) {
+		boolean oldIsSelfManaging = isSelfManaging;
+		isSelfManaging = newIsSelfManaging;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING, oldIsSelfManaging, isSelfManaging));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -800,6 +842,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return getCost();
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
 				return getIoGroups();
+			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
+				return isIsSelfManaging();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -877,6 +921,9 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				getIoGroups().clear();
 				getIoGroups().addAll((Collection<? extends IoGroup>)newValue);
 				return;
+			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
+				setIsSelfManaging((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -946,6 +993,9 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
 				getIoGroups().clear();
 				return;
+			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
+				setIsSelfManaging(IS_SELF_MANAGING_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -996,6 +1046,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return cost != COST_EDEFAULT;
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
 				return ioGroups != null && !ioGroups.isEmpty();
+			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
+				return isSelfManaging != IS_SELF_MANAGING_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1098,6 +1150,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 		result.append(weight);
 		result.append(", cost: ");
 		result.append(cost);
+		result.append(", isSelfManaging: ");
+		result.append(isSelfManaging);
 		result.append(')');
 		return result.toString();
 	}

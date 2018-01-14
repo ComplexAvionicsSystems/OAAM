@@ -39,7 +39,7 @@ public interface ConnectionRestriction extends SignalRestrictionA, SubFunctionRe
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A textual refernce to the connection to be used or avoided. In case the connection model is not available. This can be resolved later.
+	 * A textual reference to the connection to be used or avoided. In case the connection model is not available. This can be resolved later.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Connection Name</em>' attribute.
 	 * @see #setConnectionName(String)

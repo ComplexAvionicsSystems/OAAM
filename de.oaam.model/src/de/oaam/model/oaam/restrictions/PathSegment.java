@@ -13,7 +13,7 @@ import de.oaam.model.oaam.functions.Task;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A path segment is either a task or a signal. Don't set both in one segment.
+ * A path segment is either a task or a signal. Do not set both in one segment.
  * <!-- end-model-doc -->
  *
  * <p>

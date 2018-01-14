@@ -831,6 +831,52 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.InternalStateDefinition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InternalStateDefinitionItemProvider internalStateDefinitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.InternalStateDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInternalStateDefinitionAdapter() {
+		if (internalStateDefinitionItemProvider == null) {
+			internalStateDefinitionItemProvider = new InternalStateDefinitionItemProvider(this);
+		}
+
+		return internalStateDefinitionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ParameterDefinition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterDefinitionItemProvider parameterDefinitionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ParameterDefinition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createParameterDefinitionAdapter() {
+		if (parameterDefinitionItemProvider == null) {
+			parameterDefinitionItemProvider = new ParameterDefinitionItemProvider(this);
+		}
+
+		return parameterDefinitionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -962,6 +1008,8 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (sublibraryItemProvider != null) sublibraryItemProvider.dispose();
 		if (outputTriggerItemProvider != null) outputTriggerItemProvider.dispose();
 		if (functionInputTriggerItemProvider != null) functionInputTriggerItemProvider.dispose();
+		if (internalStateDefinitionItemProvider != null) internalStateDefinitionItemProvider.dispose();
+		if (parameterDefinitionItemProvider != null) parameterDefinitionItemProvider.dispose();
 	}
 
 }

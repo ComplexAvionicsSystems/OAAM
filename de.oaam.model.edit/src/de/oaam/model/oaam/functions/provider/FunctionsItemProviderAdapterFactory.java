@@ -325,6 +325,29 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Parameter} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterItemProvider parameterItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Parameter}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createParameterAdapter() {
+		if (parameterItemProvider == null) {
+			parameterItemProvider = new ParameterItemProvider(this);
+		}
+
+		return parameterItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskLink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +553,7 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		if (outputItemProvider != null) outputItemProvider.dispose();
 		if (outputLinkItemProvider != null) outputLinkItemProvider.dispose();
 		if (subfunctionItemProvider != null) subfunctionItemProvider.dispose();
+		if (parameterItemProvider != null) parameterItemProvider.dispose();
 	}
 
 }

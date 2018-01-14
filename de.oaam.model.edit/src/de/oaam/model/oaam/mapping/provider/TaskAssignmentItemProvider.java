@@ -5,6 +5,7 @@ package de.oaam.model.oaam.mapping.provider;
 
 import de.oaam.model.oaam.common.provider._ElementAItemProvider;
 
+import de.oaam.model.oaam.mapping.MappingFactory;
 import de.oaam.model.oaam.mapping.MappingPackage;
 import de.oaam.model.oaam.mapping.TaskAssignment;
 
@@ -164,6 +165,7 @@ public class TaskAssignmentItemProvider extends _ElementAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
+			childrenFeatures.add(MappingPackage.Literals.TASK_ASSIGNMENT__SCHEDULE);
 		}
 		return childrenFeatures;
 	}
@@ -220,6 +222,7 @@ public class TaskAssignmentItemProvider extends _ElementAItemProvider {
 
 		switch (notification.getFeatureID(TaskAssignment.class)) {
 			case MappingPackage.TASK_ASSIGNMENT__OPERATION_MODES:
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -241,6 +244,11 @@ public class TaskAssignmentItemProvider extends _ElementAItemProvider {
 			(createChildParameter
 				(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
 				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MappingPackage.Literals.TASK_ASSIGNMENT__SCHEDULE,
+				 MappingFactory.eINSTANCE.createSchedule()));
 	}
 
 	/**

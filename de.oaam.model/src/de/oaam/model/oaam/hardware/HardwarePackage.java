@@ -163,7 +163,7 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference.
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -870,7 +870,7 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE__DEVICE_SYMMETRIES = HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES;
 
 	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference.
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1024,7 +1024,7 @@ public interface HardwarePackage extends EPackage {
 	int SUBHARDWARE__DEVICE_SYMMETRIES = HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES;
 
 	/**
-	 * The feature id for the '<em><b>Connections</b></em>' reference.
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1111,10 +1111,10 @@ public interface HardwarePackage extends EPackage {
 	EReference getHardwareContainerA_DeviceSymmetries();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.hardware.HardwareContainerA#getConnections <em>Connections</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.hardware.HardwareContainerA#getConnections <em>Connections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Connections</em>'.
+	 * @return the meta object for the containment reference '<em>Connections</em>'.
 	 * @see de.oaam.model.oaam.hardware.HardwareContainerA#getConnections()
 	 * @see #getHardwareContainerA()
 	 * @generated
@@ -1341,7 +1341,7 @@ public interface HardwarePackage extends EPackage {
 		EReference HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = eINSTANCE.getHardwareContainerA_DeviceSymmetries();
 
 		/**
-		 * The meta object literal for the '<em><b>Connections</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Connections</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

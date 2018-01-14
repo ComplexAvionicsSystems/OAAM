@@ -39,7 +39,7 @@ public interface LocationRestriction extends TaskRestrictionA, SignalRestriction
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * This is a textual reference to the location which is not allowed in the case that no anatomy model is defined at the time of modeling the functions
+	 * This is a textual reference to the location, which is not allowed in the case that no anatomy model is defined at the time of modeling the functions
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Location Name</em>' attribute.
 	 * @see #setLocationName(String)

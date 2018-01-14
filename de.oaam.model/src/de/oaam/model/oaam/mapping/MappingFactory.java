@@ -103,6 +103,24 @@ public interface MappingFactory extends EFactory {
 	Supmapping createSupmapping();
 
 	/**
+	 * Returns a new object of class '<em>Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Schedule</em>'.
+	 * @generated
+	 */
+	Schedule createSchedule();
+
+	/**
+	 * Returns a new object of class '<em>Scheduled Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Scheduled Time</em>'.
+	 * @generated
+	 */
+	ScheduledTime createScheduledTime();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

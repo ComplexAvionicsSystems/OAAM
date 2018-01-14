@@ -24,6 +24,7 @@ import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
 import de.oaam.model.oaam.functions.OutputLink;
+import de.oaam.model.oaam.functions.Parameter;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunction;
@@ -178,6 +179,13 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	private EClass subfunctionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass parameterEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -441,6 +449,24 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 */
 	public EAttribute getTask_NParallels() {
 		return (EAttribute)taskEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTask_FixedRate() {
+		return (EAttribute)taskEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTask_Parameters() {
+		return (EReference)taskEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -853,6 +879,33 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getParameter() {
+		return parameterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getParameter_Definition() {
+		return (EReference)parameterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getParameter_Value() {
+		return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FunctionsFactory getFunctionsFactory() {
 		return (FunctionsFactory)getEFactoryInstance();
 	}
@@ -897,6 +950,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEReference(taskEClass, TASK__IMPLEMENTS);
 		createEReference(taskEClass, TASK__DEVICE_BINDING);
 		createEAttribute(taskEClass, TASK__NPARALLELS);
+		createEAttribute(taskEClass, TASK__FIXED_RATE);
+		createEReference(taskEClass, TASK__PARAMETERS);
 
 		taskLinkEClass = createEClass(TASK_LINK);
 		createEReference(taskLinkEClass, TASK_LINK__TYPE);
@@ -954,6 +1009,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		subfunctionEClass = createEClass(SUBFUNCTION);
 		createEAttribute(subfunctionEClass, SUBFUNCTION__MULTIPLICITY_MIN);
 		createEAttribute(subfunctionEClass, SUBFUNCTION__MULTIPLICITY_MAX);
+
+		parameterEClass = createEClass(PARAMETER);
+		createEReference(parameterEClass, PARAMETER__DEFINITION);
+		createEAttribute(parameterEClass, PARAMETER__VALUE);
 	}
 
 	/**
@@ -1033,6 +1092,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		outputLinkEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
 		outputLinkEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
 		subfunctionEClass.getESuperTypes().add(this.getFunctionsContainerA());
+		parameterEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionsEClass, Functions.class, "Functions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1056,6 +1116,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getTask_Implements(), theSystemsPackage.getSystem(), null, "implements", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_DeviceBinding(), theHardwarePackage.getDevice(), null, "deviceBinding", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTask_NParallels(), ecorePackage.getEInt(), "nParallels", "1", 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTask_FixedRate(), ecorePackage.getEDouble(), "fixedRate", "-1.0", 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskLinkEClass, TaskLink.class, "TaskLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskLink_Type(), theLibraryPackage.getTaskType(), null, "type", null, 1, 1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1104,7 +1166,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getOutput_Implements(), theSystemsPackage.getProvidedOutputA(), null, "implements", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutput_Declaration(), theLibraryPackage.getOutputDeclaration(), null, "declaration", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutput_IoBindings(), theHardwarePackage.getIo(), null, "ioBindings", null, 0, -1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOutput_FixedRate(), ecorePackage.getEFloat(), "fixedRate", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOutput_FixedRate(), ecorePackage.getEDouble(), "fixedRate", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputLinkEClass, OutputLink.class, "OutputLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutputLink_Output(), this.getOutput(), null, "output", null, 0, 1, OutputLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1113,6 +1175,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEClass(subfunctionEClass, Subfunction.class, "Subfunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubfunction_MultiplicityMin(), ecorePackage.getEInt(), "multiplicityMin", "1", 1, 1, Subfunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubfunction_MultiplicityMax(), ecorePackage.getEInt(), "multiplicityMax", "1", 1, 1, Subfunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameter_Definition(), theLibraryPackage.getParameterDefinition(), null, "definition", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //FunctionsPackageImpl

@@ -65,6 +65,8 @@ public class MappingFactoryImpl extends EFactoryImpl implements MappingFactory {
 			case MappingPackage.SUB_DEVICE_ASSIGNMENT: return createSubDeviceAssignment();
 			case MappingPackage.MAPPING: return createMapping();
 			case MappingPackage.SUPMAPPING: return createSupmapping();
+			case MappingPackage.SCHEDULE: return createSchedule();
+			case MappingPackage.SCHEDULED_TIME: return createScheduledTime();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -158,6 +160,26 @@ public class MappingFactoryImpl extends EFactoryImpl implements MappingFactory {
 	public Supmapping createSupmapping() {
 		SupmappingImpl supmapping = new SupmappingImpl();
 		return supmapping;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Schedule createSchedule() {
+		ScheduleImpl schedule = new ScheduleImpl();
+		return schedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ScheduledTime createScheduledTime() {
+		ScheduledTimeImpl scheduledTime = new ScheduledTimeImpl();
+		return scheduledTime;
 	}
 
 	/**

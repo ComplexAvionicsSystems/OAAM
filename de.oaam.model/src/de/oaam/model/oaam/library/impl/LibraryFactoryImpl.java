@@ -90,6 +90,8 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.SUBLIBRARY: return createSublibrary();
 			case LibraryPackage.OUTPUT_TRIGGER: return createOutputTrigger();
 			case LibraryPackage.FUNCTION_INPUT_TRIGGER: return createFunctionInputTrigger();
+			case LibraryPackage.INTERNAL_STATE_DEFINITION: return createInternalStateDefinition();
+			case LibraryPackage.PARAMETER_DEFINITION: return createParameterDefinition();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -461,6 +463,26 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public FunctionInputTrigger createFunctionInputTrigger() {
 		FunctionInputTriggerImpl functionInputTrigger = new FunctionInputTriggerImpl();
 		return functionInputTrigger;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InternalStateDefinition createInternalStateDefinition() {
+		InternalStateDefinitionImpl internalStateDefinition = new InternalStateDefinitionImpl();
+		return internalStateDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterDefinition createParameterDefinition() {
+		ParameterDefinitionImpl parameterDefinition = new ParameterDefinitionImpl();
+		return parameterDefinition;
 	}
 
 	/**

@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oaam" nsURI="http://www.oaam.de/oaam/model/v100" nsPrefix="de.oaam.model">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library,scenarios,systems,functions,hardware,anatomy,capabilities,restrictions,mappings), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&amp;fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files."/>
+    <details key="documentation" value="The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library, scenarios, systems, functions, hardware, anatomy, capabilities, restrictions, mappings), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&amp;fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files."/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//common/_ElementA">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -112,7 +112,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
           eType="#//common/AttributeA" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="This can be used to append arbitrary additional attributes to every element. The form of additional attributes is always name plus value whereas the value type is different for different attribute types."/>
+          <details key="documentation" value="This can be used to append arbitrary additional attributes to every element. The form of additional attributes is always name and value whereas the value type is different for different attribute types."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -727,6 +727,18 @@
           <details key="documentation" value="The execution rate for which this task was designed in Hz. It might does not work well at other execution rates. 0.0 means no preferred rate."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalStates" upperBound="-1"
+          eType="#//library/InternalStateDefinition" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All internal state variables of a task type"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//library/ParameterDefinition" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All parameters of a tasks type"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SignalType" eSuperTypes="#//library/ResourceConsumerA #//common/_ElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -779,6 +791,13 @@
           eType="#//library/IoGroup" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="I/O groups that exist on this device"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSelfManaging" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines for a self-managing avionics platform, if the device type is capable of managing itself, i.e. can assign itself tasks and a shedule"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1261,11 +1280,12 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedRate" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz."/>
+          <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz. This is only the default rate. The rate can be overwritten with the task instance"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="idFixedRate" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFixedRate" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="If true the output is calculated at a fixed rate and the fixedRate attribute must be set. If false, the output is calculated if a certain combinations of inputs is available. In the latter case logics must be set."/>
         </eAnnotations>
@@ -1279,6 +1299,28 @@
           eType="#//library/InputDeclaration">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The input that must be available that this expression becomes true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalStateDefinition" eSuperTypes="#//common/_ElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The internal state of a task. An internal state is a memory in which results are saved that are persitent between two invocations, i.e. the I of a PID controller."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+          eType="#//common/DataTypeA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The data type of an internal state variable"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinition" eSuperTypes="#//common/_ElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Static parameters that change the behavior of a function, e.g. the P, I, and D scalars of a PID controller "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+          eType="#//common/DataTypeA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The data type of a parameter"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1771,6 +1813,19 @@
           <details key="documentation" value="The number of parallel instances of that task that can be created if more inputs arrive while the task is still executed"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedRate" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="-1.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The execution rate of a periodic task in Hz. Enter -1 for inheritance. Enter 0 for non-periodic or best effort."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+          eType="#//functions/Parameter" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All parameters of a task."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskLink" eSuperTypes="#//common/_ElementA #//scenario/_ModeDependentElementA #//scenario/_VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1987,7 +2042,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedRate" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz. If this is set to other that 0.0, it overrides the rate of the taskType declaration."/>
         </eAnnotations>
@@ -2025,6 +2080,23 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//common/_ElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Instance of a task types parameter definition"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
+          eType="#//library/ParameterDefinition">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Reference to the parameter definition of the referenced tasks type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The value of the parameter as a string, e.g. 3.14 for a double parameter."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v100/hardware"
       nsPrefix="de.oaam.model">
@@ -2048,7 +2120,8 @@
           <details key="documentation" value="All device symmetries in this hardware model"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="connections" eType="#//hardware/Connection">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connections" eType="#//hardware/Connection"
+          containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All connections in this hardware model"/>
         </eAnnotations>
@@ -2681,7 +2754,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PathSegment" eSuperTypes="#//common/_ElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A path segment is either a task or a signal. Don't set both in one segment."/>
+        <details key="documentation" value="A path segment is either a task or a signal. Do not set both in one segment."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//functions/Task">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -2722,7 +2795,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="This is a textual reference to the location which is not allowed in the case that no anatomy model is defined at the time of modeling the functions"/>
+          <details key="documentation" value="This is a textual reference to the location, which is not allowed in the case that no anatomy model is defined at the time of modeling the functions"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
@@ -2854,7 +2927,7 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="connectionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A textual refernce to the connection to be used or avoided. In case the connection model is not available. This can be resolved later."/>
+          <details key="documentation" value="A textual reference to the connection to be used or avoided. In case the connection model is not available. This can be resolved later."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isForbidden" lowerBound="1"
@@ -2996,7 +3069,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxDeviation" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="0.1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The maximum allowed relative deviation in the execution rate in %. Within this percentage the restriction is not violated. Default is 10% = 0.1"/>
+          <details key="documentation" value="The maximum allowed relative deviation in the execution rate in %. Within this percentage, the restriction is not violated. Default is 10% = 0.1"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -3133,6 +3206,12 @@
           <details key="documentation" value="A reference to the device."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="schedule" upperBound="-1"
+          eType="#//mapping/Schedule" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Schedules for the tasks on this device. Multiple schedules are valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SignalAssignment" eSuperTypes="#//common/_ElementA #//scenario/_VariantDependentElementA #//scenario/_ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -3264,6 +3343,71 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="With submapping the assignments can be organized like folders"/>
       </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Schedule" eSuperTypes="#//common/_ElementA #//scenario/_ModeDependentElementA #//scenario/_VariantDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A schedule assigens periodic or non-periodic time slots to a task assignment."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The execution rate of periodic tasks in [Hz]. Non-periodic tasks shall have a rate of 0."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isPeriodic" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Define this task as periodic or not."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Higher values mean higher priority. Higher priority tasks are calculated before others in the same time slot in case of preemptive sheduling."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scheduledTimes" lowerBound="1"
+          upperBound="-1" eType="#//mapping/ScheduledTime" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All active times of this schedule."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ScheduledTime" eSuperTypes="#//common/_ElementA #//scenario/_ModeDependentElementA #//scenario/_VariantDependentElementA">
+      <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
+        <details key="archetype" value="Role"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Single active times within a schedule. In case the schedule is periodic, the active time slots repeat after the end of the period. "/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cycle" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The cycle id of this scheduled time. If several sheduled times for the same schedule exits, they should have consecutive ids. This enables different active times in sequential cycles of periodic tasks. Usually if only one active time is defined, the cycle should be 1."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="startTime" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The start time of the task relative to the period begin (periodic task) or absolute start point (non-periodic task) in [s]."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The duration of the task's active time. Enter 0 for if the task shall not be interrupted."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="restart" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If the task is restarted at the begin of the active time or if a previously interrupted state is recovered."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -394,6 +394,16 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createInternalStateDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createParameterDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 ScenarioFactory.eINSTANCE.createOperationMode()));
 
 		newChildDescriptors.add
@@ -555,6 +565,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 FunctionsFactory.eINSTANCE.createSubfunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FunctionsFactory.eINSTANCE.createParameter()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -790,6 +805,16 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 MappingFactory.eINSTANCE.createSupmapping()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 MappingFactory.eINSTANCE.createSchedule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 MappingFactory.eINSTANCE.createScheduledTime()));
 	}
 
 	/**

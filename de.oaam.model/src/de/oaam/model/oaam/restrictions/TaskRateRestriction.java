@@ -61,7 +61,7 @@ public interface TaskRateRestriction extends TaskRestrictionA, _ElementA, _ModeD
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The maximum allowed relative deviation in the execution rate in %. Within this percentage the restriction is not violated. Default is 10% = 0.1
+	 * The maximum allowed relative deviation in the execution rate in %. Within this percentage, the restriction is not violated. Default is 10% = 0.1
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Deviation</em>' attribute.
 	 * @see #setMaxDeviation(float)

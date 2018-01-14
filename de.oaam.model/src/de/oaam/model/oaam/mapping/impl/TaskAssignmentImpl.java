@@ -11,6 +11,7 @@ import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.mapping.MappingPackage;
+import de.oaam.model.oaam.mapping.Schedule;
 import de.oaam.model.oaam.mapping.TaskAssignment;
 
 import de.oaam.model.oaam.scenario.OperationModeReference;
@@ -48,6 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.mapping.impl.TaskAssignmentImpl#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.mapping.impl.TaskAssignmentImpl#getTask <em>Task</em>}</li>
  *   <li>{@link de.oaam.model.oaam.mapping.impl.TaskAssignmentImpl#getDevice <em>Device</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.mapping.impl.TaskAssignmentImpl#getSchedule <em>Schedule</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,6 +104,16 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 	 * @ordered
 	 */
 	protected Device device;
+
+	/**
+	 * The cached value of the '{@link #getSchedule() <em>Schedule</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSchedule()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Schedule> schedule;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,11 +277,25 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Schedule> getSchedule() {
+		if (schedule == null) {
+			schedule = new EObjectContainmentEList<Schedule>(Schedule.class, this, MappingPackage.TASK_ASSIGNMENT__SCHEDULE);
+		}
+		return schedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case MappingPackage.TASK_ASSIGNMENT__OPERATION_MODES:
 				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
+				return ((InternalEList<?>)getSchedule()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -295,6 +321,8 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 			case MappingPackage.TASK_ASSIGNMENT__DEVICE:
 				if (resolve) return getDevice();
 				return basicGetDevice();
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
+				return getSchedule();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -325,6 +353,10 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 			case MappingPackage.TASK_ASSIGNMENT__DEVICE:
 				setDevice((Device)newValue);
 				return;
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
+				getSchedule().clear();
+				getSchedule().addAll((Collection<? extends Schedule>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -352,6 +384,9 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 			case MappingPackage.TASK_ASSIGNMENT__DEVICE:
 				setDevice((Device)null);
 				return;
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
+				getSchedule().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -374,6 +409,8 @@ public class TaskAssignmentImpl extends _ElementAImpl implements TaskAssignment 
 				return task != null;
 			case MappingPackage.TASK_ASSIGNMENT__DEVICE:
 				return device != null;
+			case MappingPackage.TASK_ASSIGNMENT__SCHEDULE:
+				return schedule != null && !schedule.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

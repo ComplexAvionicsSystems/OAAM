@@ -219,6 +219,14 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionInputTriggerAdapter();
 			}
 			@Override
+			public Adapter caseInternalStateDefinition(InternalStateDefinition object) {
+				return createInternalStateDefinitionAdapter();
+			}
+			@Override
+			public Adapter caseParameterDefinition(ParameterDefinition object) {
+				return createParameterDefinitionAdapter();
+			}
+			@Override
 			public Adapter case_ElementA(_ElementA object) {
 				return create_ElementAAdapter();
 			}
@@ -761,6 +769,34 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFunctionInputTriggerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.InternalStateDefinition <em>Internal State Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.library.InternalStateDefinition
+	 * @generated
+	 */
+	public Adapter createInternalStateDefinitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ParameterDefinition <em>Parameter Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.library.ParameterDefinition
+	 * @generated
+	 */
+	public Adapter createParameterDefinitionAdapter() {
 		return null;
 	}
 

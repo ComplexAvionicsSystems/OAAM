@@ -37,6 +37,8 @@ import de.oaam.model.oaam.mapping.Mapping;
 import de.oaam.model.oaam.mapping.MappingContainerA;
 import de.oaam.model.oaam.mapping.MappingFactory;
 import de.oaam.model.oaam.mapping.MappingPackage;
+import de.oaam.model.oaam.mapping.Schedule;
+import de.oaam.model.oaam.mapping.ScheduledTime;
 import de.oaam.model.oaam.mapping.SignalAssignment;
 import de.oaam.model.oaam.mapping.SignalAssignmentSegment;
 import de.oaam.model.oaam.mapping.SubDeviceAssignment;
@@ -55,6 +57,7 @@ import de.oaam.model.oaam.systems.SystemsPackage;
 
 import de.oaam.model.oaam.systems.impl.SystemsPackageImpl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -137,6 +140,20 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 	 * @generated
 	 */
 	private EClass supmappingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scheduleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scheduledTimeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -328,6 +345,15 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 	 */
 	public EReference getTaskAssignment_Device() {
 		return (EReference)taskAssignmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskAssignment_Schedule() {
+		return (EReference)taskAssignmentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -551,6 +577,96 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSchedule() {
+		return scheduleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_Rate() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_IsPeriodic() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSchedule_Priority() {
+		return (EAttribute)scheduleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedule_ScheduledTimes() {
+		return (EReference)scheduleEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScheduledTime() {
+		return scheduledTimeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScheduledTime_Cycle() {
+		return (EAttribute)scheduledTimeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScheduledTime_StartTime() {
+		return (EAttribute)scheduledTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScheduledTime_Duration() {
+		return (EAttribute)scheduledTimeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScheduledTime_Restart() {
+		return (EAttribute)scheduledTimeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MappingFactory getMappingFactory() {
 		return (MappingFactory)getEFactoryInstance();
 	}
@@ -586,6 +702,7 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__CAPABILITY);
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__TASK);
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__DEVICE);
+		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__SCHEDULE);
 
 		signalAssignmentEClass = createEClass(SIGNAL_ASSIGNMENT);
 		createEReference(signalAssignmentEClass, SIGNAL_ASSIGNMENT__SEGMENTS);
@@ -618,6 +735,18 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		mappingEClass = createEClass(MAPPING);
 
 		supmappingEClass = createEClass(SUPMAPPING);
+
+		scheduleEClass = createEClass(SCHEDULE);
+		createEAttribute(scheduleEClass, SCHEDULE__RATE);
+		createEAttribute(scheduleEClass, SCHEDULE__IS_PERIODIC);
+		createEAttribute(scheduleEClass, SCHEDULE__PRIORITY);
+		createEReference(scheduleEClass, SCHEDULE__SCHEDULED_TIMES);
+
+		scheduledTimeEClass = createEClass(SCHEDULED_TIME);
+		createEAttribute(scheduledTimeEClass, SCHEDULED_TIME__CYCLE);
+		createEAttribute(scheduledTimeEClass, SCHEDULED_TIME__START_TIME);
+		createEAttribute(scheduledTimeEClass, SCHEDULED_TIME__DURATION);
+		createEAttribute(scheduledTimeEClass, SCHEDULED_TIME__RESTART);
 	}
 
 	/**
@@ -682,6 +811,12 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		supmappingEClass.getESuperTypes().add(this.getMappingContainerA());
 		supmappingEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
 		supmappingEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		scheduleEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		scheduleEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		scheduleEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		scheduledTimeEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mappingContainerAEClass, MappingContainerA.class, "MappingContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -696,6 +831,7 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		initEReference(getTaskAssignment_Capability(), theCapabilitiesPackage.getTaskCapability(), null, "capability", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskAssignment_Task(), theFunctionsPackage.getTask(), null, "task", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskAssignment_Device(), theHardwarePackage.getDevice(), null, "device", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskAssignment_Schedule(), this.getSchedule(), null, "schedule", null, 0, -1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalAssignmentEClass, SignalAssignment.class, "SignalAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignalAssignment_Segments(), this.getSignalAssignmentSegment(), null, "segments", null, 0, -1, SignalAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -728,6 +864,38 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(supmappingEClass, Supmapping.class, "Supmapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(scheduleEClass, Schedule.class, "Schedule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSchedule_Rate(), ecorePackage.getEDouble(), "rate", "0.0", 0, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchedule_IsPeriodic(), ecorePackage.getEBoolean(), "isPeriodic", "true", 1, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSchedule_Priority(), ecorePackage.getEInt(), "priority", "0", 1, 1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchedule_ScheduledTimes(), this.getScheduledTime(), null, "scheduledTimes", null, 1, -1, Schedule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scheduledTimeEClass, ScheduledTime.class, "ScheduledTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getScheduledTime_Cycle(), ecorePackage.getEInt(), "cycle", "1", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScheduledTime_StartTime(), ecorePackage.getEDouble(), "startTime", "0.0", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScheduledTime_Duration(), ecorePackage.getEDouble(), "duration", "0.0", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getScheduledTime_Restart(), ecorePackage.getEBoolean(), "restart", "true", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create annotations
+		// http://www.obeo.fr/dsl/dnc/archetype
+		createArchetypeAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.obeo.fr/dsl/dnc/archetype</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createArchetypeAnnotations() {
+		String source = "http://www.obeo.fr/dsl/dnc/archetype";	
+		addAnnotation
+		  (scheduledTimeEClass, 
+		   source, 
+		   new String[] {
+			 "archetype", "Role"
+		   });
 	}
 
 } //MappingPackageImpl

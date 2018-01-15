@@ -948,7 +948,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="minBendingRadius" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The minimum bending radius the wire type can be used for in [deg]"/>
+          <details key="documentation" value="The minimum bending radius the wire type can be used for in [m]"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nShields" lowerBound="1"

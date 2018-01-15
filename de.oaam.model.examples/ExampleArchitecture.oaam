@@ -74,7 +74,7 @@
     </sublibraries>
     <sublibraries name="Connection Types">
       <connectionTypes name="Discrete Line" isUnidirectional="true"/>
-      <wireTypes id="" name="Discrete Wire" specificWeight="1.0" specificPrice="1.0" nShields="0"/>
+      <wireTypes id="" name="Discrete Wire" specificWeight="1.0" specificPrice="1.0" minBendingRadius="0.001" nShields="0"/>
     </sublibraries>
   </library>
   <function id="functions">
@@ -98,7 +98,7 @@
         <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.2/@deviceTypes.3/@ios.0"/>
       </subDevices>
     </devices>
-    <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0 "/>
+    <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0"/>
   </hardware>
   <capabilities id="capabilities">
     <functionCapabilties taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>

@@ -8,7 +8,7 @@
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
-        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.2" count="20.0"/>
+        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
         <outputs name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
           <trigger>
             <logic xsi:type="de.oaam.model_1:BoolOperation">
@@ -50,22 +50,31 @@
     </sublibraries>
     <sublibraries id="devicetypes" name="Device Types">
       <deviceTypes name="CockpitSwitch">
-        <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.0"/>
-        <ios resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
+        <requiredResources name="DSO GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.1"/>
+        <ios name="DSO GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A" canHaveSubdevices="true">
-        <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.3/@resourceTypes.1" count="4.0"/>
+        <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.3/@resourceTypes.2" count="4.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A CPU CARD" style="" isSubdevice="true">
-        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.2" count="100.0"/>
+        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="100.0"/>
+      </deviceTypes>
+      <deviceTypes name="CPM A IO CARD" canHaveSubdevices="true">
+        <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.0"/>
+        <ios name="DSI GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.3/@requiredResources.0"/>
       </deviceTypes>
     </sublibraries>
     <sublibraries id="resourcestypes" name="Resource Types">
       <resourceTypes name="DSI GND/OPN" isIo="true"/>
+      <resourceTypes name="DSO GND/OPN" style="" isIo="true"/>
       <resourceTypes name="CPM SLOT"/>
       <resourceTypes name="CPU">
-        <requiredResources name="SLOT" type="//@library/@sublibraries.3/@resourceTypes.1"/>
+        <requiredResources name="SLOT" type="//@library/@sublibraries.3/@resourceTypes.2"/>
       </resourceTypes>
+    </sublibraries>
+    <sublibraries name="Connection Types">
+      <connectionTypes name="Discrete Line" isUnidirectional="true"/>
+      <wireTypes id="" name="Discrete Wire" specificWeight="1.0" specificPrice="1.0" nShields="0"/>
     </sublibraries>
   </library>
   <function id="functions">
@@ -81,16 +90,20 @@
   </function>
   <hardware id="hardware">
     <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.2/@deviceTypes.0">
-      <ios name="C/O on/off DSI" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ios.0"/>
+      <ios name="C/O on/off DSO" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ios.0"/>
     </devices>
     <devices name="CPM A1" type="//@library/@sublibraries.2/@deviceTypes.1">
       <subDevices name="CPU Card"/>
+      <subDevices name="IO Card" type="//@library/@sublibraries.2/@deviceTypes.3">
+        <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.2/@deviceTypes.3/@ios.0"/>
+      </subDevices>
     </devices>
+    <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0 "/>
   </hardware>
   <capabilities id="capabilities">
     <functionCapabilties taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
     <subDeviceCapabilities subDeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
-      <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.1"/>
+      <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.2"/>
     </subDeviceCapabilities>
   </capabilities>
   <mapping id="mapping">

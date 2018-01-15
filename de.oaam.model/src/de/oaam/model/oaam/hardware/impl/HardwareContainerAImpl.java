@@ -13,15 +13,12 @@ import de.oaam.model.oaam.hardware.Subhardware;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -64,14 +61,14 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	protected EList<DeviceSymmetry> deviceSymmetries;
 
 	/**
-	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference.
+	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConnections()
 	 * @generated
 	 * @ordered
 	 */
-	protected Connection connections;
+	protected EList<Connection> connections;
 
 	/**
 	 * The cached value of the '{@link #getSubhardware() <em>Subhardware</em>}' containment reference list.
@@ -131,42 +128,11 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection getConnections() {
+	public EList<Connection> getConnections() {
+		if (connections == null) {
+			connections = new EObjectContainmentEList<Connection>(Connection.class, this, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS);
+		}
 		return connections;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetConnections(Connection newConnections, NotificationChain msgs) {
-		Connection oldConnections = connections;
-		connections = newConnections;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, oldConnections, newConnections);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConnections(Connection newConnections) {
-		if (newConnections != connections) {
-			NotificationChain msgs = null;
-			if (connections != null)
-				msgs = ((InternalEObject)connections).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, null, msgs);
-			if (newConnections != null)
-				msgs = ((InternalEObject)newConnections).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, null, msgs);
-			msgs = basicSetConnections(newConnections, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS, newConnections, newConnections));
 	}
 
 	/**
@@ -194,7 +160,7 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
 				return ((InternalEList<?>)getDeviceSymmetries()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
-				return basicSetConnections(null, msgs);
+				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return ((InternalEList<?>)getSubhardware()).basicRemove(otherEnd, msgs);
 		}
@@ -239,7 +205,8 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 				getDeviceSymmetries().addAll((Collection<? extends DeviceSymmetry>)newValue);
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
-				setConnections((Connection)newValue);
+				getConnections().clear();
+				getConnections().addAll((Collection<? extends Connection>)newValue);
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				getSubhardware().clear();
@@ -264,7 +231,7 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 				getDeviceSymmetries().clear();
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
-				setConnections((Connection)null);
+				getConnections().clear();
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				getSubhardware().clear();
@@ -286,7 +253,7 @@ public abstract class HardwareContainerAImpl extends _ElementAImpl implements Ha
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
 				return deviceSymmetries != null && !deviceSymmetries.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
-				return connections != null;
+				return connections != null && !connections.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return subhardware != null && !subhardware.isEmpty();
 		}

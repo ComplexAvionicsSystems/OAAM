@@ -13,10 +13,9 @@ import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.DataTypeA;
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.Struct;
-import de.oaam.model.oaam.common._ElementA;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -79,9 +78,9 @@ public class CommonSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case CommonPackage._ELEMENT_A: {
-				_ElementA _ElementA = (_ElementA)theEObject;
-				T result = case_ElementA(_ElementA);
+			case CommonPackage.ELEMENT_A: {
+				ElementA elementA = (ElementA)theEObject;
+				T result = caseElementA(elementA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -94,7 +93,7 @@ public class CommonSwitch<T> extends Switch<T> {
 			case CommonPackage.ATTRIBUTE_A: {
 				AttributeA attributeA = (AttributeA)theEObject;
 				T result = caseAttributeA(attributeA);
-				if (result == null) result = case_ElementA(attributeA);
+				if (result == null) result = caseElementA(attributeA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,7 +101,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				AttributeString attributeString = (AttributeString)theEObject;
 				T result = caseAttributeString(attributeString);
 				if (result == null) result = caseAttributeA(attributeString);
-				if (result == null) result = case_ElementA(attributeString);
+				if (result == null) result = caseElementA(attributeString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,7 +109,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				AttributeNumeric attributeNumeric = (AttributeNumeric)theEObject;
 				T result = caseAttributeNumeric(attributeNumeric);
 				if (result == null) result = caseAttributeA(attributeNumeric);
-				if (result == null) result = case_ElementA(attributeNumeric);
+				if (result == null) result = caseElementA(attributeNumeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,7 +117,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				AttributeContainment attributeContainment = (AttributeContainment)theEObject;
 				T result = caseAttributeContainment(attributeContainment);
 				if (result == null) result = caseAttributeA(attributeContainment);
-				if (result == null) result = case_ElementA(attributeContainment);
+				if (result == null) result = caseElementA(attributeContainment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,7 +125,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				AttributeReference attributeReference = (AttributeReference)theEObject;
 				T result = caseAttributeReference(attributeReference);
 				if (result == null) result = caseAttributeA(attributeReference);
-				if (result == null) result = case_ElementA(attributeReference);
+				if (result == null) result = caseElementA(attributeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,7 +133,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				BoolOperation boolOperation = (BoolOperation)theEObject;
 				T result = caseBoolOperation(boolOperation);
 				if (result == null) result = caseBoolA(boolOperation);
-				if (result == null) result = case_ElementA(boolOperation);
+				if (result == null) result = caseElementA(boolOperation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,14 +141,14 @@ public class CommonSwitch<T> extends Switch<T> {
 				BoolNot boolNot = (BoolNot)theEObject;
 				T result = caseBoolNot(boolNot);
 				if (result == null) result = caseBoolA(boolNot);
-				if (result == null) result = case_ElementA(boolNot);
+				if (result == null) result = caseElementA(boolNot);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CommonPackage.DATA_TYPE_A: {
 				DataTypeA dataTypeA = (DataTypeA)theEObject;
 				T result = caseDataTypeA(dataTypeA);
-				if (result == null) result = case_ElementA(dataTypeA);
+				if (result == null) result = caseElementA(dataTypeA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,7 +156,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				de.oaam.model.oaam.common.Integer integer = (de.oaam.model.oaam.common.Integer)theEObject;
 				T result = caseInteger(integer);
 				if (result == null) result = caseDataTypeA(integer);
-				if (result == null) result = case_ElementA(integer);
+				if (result == null) result = caseElementA(integer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -165,7 +164,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				Array array = (Array)theEObject;
 				T result = caseArray(array);
 				if (result == null) result = caseDataTypeA(array);
-				if (result == null) result = case_ElementA(array);
+				if (result == null) result = caseElementA(array);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -173,7 +172,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				Struct struct = (Struct)theEObject;
 				T result = caseStruct(struct);
 				if (result == null) result = caseDataTypeA(struct);
-				if (result == null) result = case_ElementA(struct);
+				if (result == null) result = caseElementA(struct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -181,7 +180,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				FloatingPoint floatingPoint = (FloatingPoint)theEObject;
 				T result = caseFloatingPoint(floatingPoint);
 				if (result == null) result = caseDataTypeA(floatingPoint);
-				if (result == null) result = case_ElementA(floatingPoint);
+				if (result == null) result = caseElementA(floatingPoint);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -189,7 +188,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				de.oaam.model.oaam.common.Byte byte_ = (de.oaam.model.oaam.common.Byte)theEObject;
 				T result = caseByte(byte_);
 				if (result == null) result = caseDataTypeA(byte_);
-				if (result == null) result = case_ElementA(byte_);
+				if (result == null) result = caseElementA(byte_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -197,7 +196,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				de.oaam.model.oaam.common.Character character = (de.oaam.model.oaam.common.Character)theEObject;
 				T result = caseCharacter(character);
 				if (result == null) result = caseDataTypeA(character);
-				if (result == null) result = case_ElementA(character);
+				if (result == null) result = caseElementA(character);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -205,7 +204,7 @@ public class CommonSwitch<T> extends Switch<T> {
 				de.oaam.model.oaam.common.Boolean boolean_ = (de.oaam.model.oaam.common.Boolean)theEObject;
 				T result = caseBoolean(boolean_);
 				if (result == null) result = caseDataTypeA(boolean_);
-				if (result == null) result = case_ElementA(boolean_);
+				if (result == null) result = caseElementA(boolean_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -224,7 +223,7 @@ public class CommonSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 

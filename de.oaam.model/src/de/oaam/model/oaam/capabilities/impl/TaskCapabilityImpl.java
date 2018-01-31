@@ -7,17 +7,15 @@ import de.oaam.model.oaam.capabilities.TaskCapability;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.TaskType;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -829,28 +827,28 @@ public class TaskCapabilityImpl extends CapabilityAImpl implements TaskCapabilit
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case CapabilitiesPackage.TASK_CAPABILITY__ID: return CommonPackage._ELEMENT_A__ID;
-				case CapabilitiesPackage.TASK_CAPABILITY__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case CapabilitiesPackage.TASK_CAPABILITY__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case CapabilitiesPackage.TASK_CAPABILITY__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case CapabilitiesPackage.TASK_CAPABILITY__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case CapabilitiesPackage.TASK_CAPABILITY__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case CapabilitiesPackage.TASK_CAPABILITY__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case CapabilitiesPackage.TASK_CAPABILITY__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case CapabilitiesPackage.TASK_CAPABILITY__ID: return CommonPackage.ELEMENT_A__ID;
+				case CapabilitiesPackage.TASK_CAPABILITY__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case CapabilitiesPackage.TASK_CAPABILITY__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case CapabilitiesPackage.TASK_CAPABILITY__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case CapabilitiesPackage.TASK_CAPABILITY__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case CapabilitiesPackage.TASK_CAPABILITY__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case CapabilitiesPackage.TASK_CAPABILITY__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case CapabilitiesPackage.TASK_CAPABILITY__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case CapabilitiesPackage.TASK_CAPABILITY__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case CapabilitiesPackage.TASK_CAPABILITY__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case CapabilitiesPackage.TASK_CAPABILITY__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case CapabilitiesPackage.TASK_CAPABILITY__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -864,28 +862,28 @@ public class TaskCapabilityImpl extends CapabilityAImpl implements TaskCapabilit
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return CapabilitiesPackage.TASK_CAPABILITY__ID;
-				case CommonPackage._ELEMENT_A__NAME: return CapabilitiesPackage.TASK_CAPABILITY__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return CapabilitiesPackage.TASK_CAPABILITY__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return CapabilitiesPackage.TASK_CAPABILITY__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return CapabilitiesPackage.TASK_CAPABILITY__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return CapabilitiesPackage.TASK_CAPABILITY__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return CapabilitiesPackage.TASK_CAPABILITY__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return CapabilitiesPackage.TASK_CAPABILITY__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return CapabilitiesPackage.TASK_CAPABILITY__ID;
+				case CommonPackage.ELEMENT_A__NAME: return CapabilitiesPackage.TASK_CAPABILITY__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return CapabilitiesPackage.TASK_CAPABILITY__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return CapabilitiesPackage.TASK_CAPABILITY__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return CapabilitiesPackage.TASK_CAPABILITY__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return CapabilitiesPackage.TASK_CAPABILITY__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return CapabilitiesPackage.TASK_CAPABILITY__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return CapabilitiesPackage.TASK_CAPABILITY__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return CapabilitiesPackage.TASK_CAPABILITY__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return CapabilitiesPackage.TASK_CAPABILITY__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return CapabilitiesPackage.TASK_CAPABILITY__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return CapabilitiesPackage.TASK_CAPABILITY__OPERATION_MODES;
 				default: return -1;
 			}
 		}

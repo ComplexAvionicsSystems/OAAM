@@ -23,7 +23,7 @@ package de.oaam.model.oaam.common;
  * @model
  * @generated
  */
-public interface BoolNot extends BoolA, _ElementA {
+public interface BoolNot extends BoolA, ElementA {
 	/**
 	 * Returns the value of the '<em><b>In</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

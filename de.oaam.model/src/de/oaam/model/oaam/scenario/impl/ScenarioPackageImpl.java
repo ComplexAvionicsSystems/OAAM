@@ -38,6 +38,7 @@ import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ParameterA;
@@ -49,9 +50,7 @@ import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Subscenario;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import de.oaam.model.oaam.systems.impl.SystemsPackageImpl;
@@ -82,14 +81,14 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass _ModeDependentElementAEClass = null;
+	private EClass modeDependentElementAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass _VariantDependentElementAEClass = null;
+	private EClass variantDependentElementAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -254,8 +253,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass get_ModeDependentElementA() {
-		return _ModeDependentElementAEClass;
+	public EClass getModeDependentElementA() {
+		return modeDependentElementAEClass;
 	}
 
 	/**
@@ -263,8 +262,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference get_ModeDependentElementA_OperationModes() {
-		return (EReference)_ModeDependentElementAEClass.getEStructuralFeatures().get(0);
+	public EReference getModeDependentElementA_OperationModes() {
+		return (EReference)modeDependentElementAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -272,8 +271,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass get_VariantDependentElementA() {
-		return _VariantDependentElementAEClass;
+	public EClass getVariantDependentElementA() {
+		return variantDependentElementAEClass;
 	}
 
 	/**
@@ -281,8 +280,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference get_VariantDependentElementA_Variants() {
-		return (EReference)_VariantDependentElementAEClass.getEStructuralFeatures().get(0);
+	public EReference getVariantDependentElementA_Variants() {
+		return (EReference)variantDependentElementAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -459,11 +458,11 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		// Create classes and their features
 		parameterAEClass = createEClass(PARAMETER_A);
 
-		_ModeDependentElementAEClass = createEClass(_MODE_DEPENDENT_ELEMENT_A);
-		createEReference(_ModeDependentElementAEClass, _MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
+		modeDependentElementAEClass = createEClass(MODE_DEPENDENT_ELEMENT_A);
+		createEReference(modeDependentElementAEClass, MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 
-		_VariantDependentElementAEClass = createEClass(_VARIANT_DEPENDENT_ELEMENT_A);
-		createEReference(_VariantDependentElementAEClass, _VARIANT_DEPENDENT_ELEMENT_A__VARIANTS);
+		variantDependentElementAEClass = createEClass(VARIANT_DEPENDENT_ELEMENT_A);
+		createEReference(variantDependentElementAEClass, VARIANT_DEPENDENT_ELEMENT_A__VARIANTS);
 
 		scenarioContainerAEClass = createEClass(SCENARIO_CONTAINER_A);
 		createEReference(scenarioContainerAEClass, SCENARIO_CONTAINER_A__PARAMETERS);
@@ -521,29 +520,29 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		parameterAEClass.getESuperTypes().add(this.get_ModeDependentElementA());
-		parameterAEClass.getESuperTypes().add(this.get_VariantDependentElementA());
-		scenarioContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		operationModeEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		operationModeEClass.getESuperTypes().add(this.get_VariantDependentElementA());
+		parameterAEClass.getESuperTypes().add(this.getModeDependentElementA());
+		parameterAEClass.getESuperTypes().add(this.getVariantDependentElementA());
+		scenarioContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		operationModeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		operationModeEClass.getESuperTypes().add(this.getVariantDependentElementA());
 		parameterNumericEClass.getESuperTypes().add(this.getParameterA());
-		parameterNumericEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		parameterNumericEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		parameterBoolEClass.getESuperTypes().add(this.getParameterA());
-		parameterBoolEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		variantEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		variantEClass.getESuperTypes().add(this.get_ModeDependentElementA());
-		operationModeReferenceEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		parameterBoolEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		variantEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		variantEClass.getESuperTypes().add(this.getModeDependentElementA());
+		operationModeReferenceEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		scenarioEClass.getESuperTypes().add(this.getScenarioContainerA());
 		subscenarioEClass.getESuperTypes().add(this.getScenarioContainerA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(parameterAEClass, ParameterA.class, "ParameterA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(_ModeDependentElementAEClass, _ModeDependentElementA.class, "_ModeDependentElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(get_ModeDependentElementA_OperationModes(), this.getOperationModeReference(), null, "operationModes", null, 0, -1, _ModeDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(modeDependentElementAEClass, ModeDependentElementA.class, "ModeDependentElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModeDependentElementA_OperationModes(), this.getOperationModeReference(), null, "operationModes", null, 0, -1, ModeDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(_VariantDependentElementAEClass, _VariantDependentElementA.class, "_VariantDependentElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(get_VariantDependentElementA_Variants(), this.getVariant(), null, "variants", null, 0, -1, _VariantDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(variantDependentElementAEClass, VariantDependentElementA.class, "VariantDependentElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVariantDependentElementA_Variants(), this.getVariant(), null, "variants", null, 0, -1, VariantDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scenarioContainerAEClass, ScenarioContainerA.class, "ScenarioContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getScenarioContainerA_Parameters(), this.getParameterA(), null, "parameters", null, 0, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

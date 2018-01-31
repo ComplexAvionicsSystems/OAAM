@@ -5,8 +5,7 @@ package de.oaam.model.oaam.capabilities.impl;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
 
@@ -35,7 +34,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ResourceConsumptionImpl extends _ElementAImpl implements ResourceConsumption {
+public class ResourceConsumptionImpl extends ElementAImpl implements ResourceConsumption {
 	/**
 	 * The default value of the '{@link #getCount() <em>Count</em>}' attribute.
 	 * <!-- begin-user-doc -->

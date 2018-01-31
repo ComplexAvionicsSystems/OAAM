@@ -84,9 +84,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_id_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__ID,
+				 getString("_UI_ElementA_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_id_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__ID,
 				 true,
 				 false,
 				 false,
@@ -106,9 +106,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_name_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__NAME,
+				 getString("_UI_ElementA_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_name_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__NAME,
 				 true,
 				 false,
 				 false,
@@ -128,9 +128,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_style_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_style_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__STYLE,
+				 getString("_UI_ElementA_style_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_style_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__STYLE,
 				 true,
 				 false,
 				 false,
@@ -150,9 +150,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_documentation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_documentation_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__DOCUMENTATION,
+				 getString("_UI_ElementA_documentation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_documentation_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__DOCUMENTATION,
 				 true,
 				 false,
 				 false,
@@ -172,9 +172,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_modified_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_modified_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__MODIFIED,
+				 getString("_UI_ElementA_modified_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modified_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__MODIFIED,
 				 true,
 				 false,
 				 false,
@@ -194,9 +194,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_modifier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_modifier_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__MODIFIER,
+				 getString("_UI_ElementA_modifier_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modifier_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__MODIFIER,
 				 true,
 				 false,
 				 false,
@@ -216,9 +216,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_traceLink_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_traceLink_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__TRACE_LINK,
+				 getString("_UI_ElementA_traceLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_traceLink_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__TRACE_LINK,
 				 true,
 				 false,
 				 false,
@@ -238,9 +238,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__VariantDependentElementA_variants_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__VariantDependentElementA_variants_feature", "_UI__VariantDependentElementA_type"),
-				 ScenarioPackage.Literals._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 getString("_UI_VariantDependentElementA_variants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
+				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
 				 true,
 				 false,
 				 true,
@@ -283,8 +283,8 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES);
-			childrenFeatures.add(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
+			childrenFeatures.add(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(AnatomyPackage.Literals.LOCATION__POSITION);
 			childrenFeatures.add(AnatomyPackage.Literals.LOCATION__DUCT_OPENINGS);
 		}
@@ -374,27 +374,27 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeString()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
+				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
 				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
 
 		newChildDescriptors.add

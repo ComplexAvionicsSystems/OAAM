@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model_1="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model_2="http://www.oaam.de/oaam/model/v100/library" id="example" name="Example">
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v100/library" id="example" name="Example">
   <library id="library" style="">
     <sublibraries id="datatypes" name="Data Types">
-      <dataTypes xsi:type="de.oaam.model_1:Boolean"/>
-      <dataTypes xsi:type="de.oaam.model_1:FloatingPoint"/>
-      <dataTypes xsi:type="de.oaam.model_1:Integer"/>
+      <dataTypes xsi:type="de.oaam.model.common:Boolean"/>
+      <dataTypes xsi:type="de.oaam.model.common:FloatingPoint"/>
+      <dataTypes xsi:type="de.oaam.model.common:Integer"/>
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
         <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
         <outputs name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
           <trigger>
-            <logic xsi:type="de.oaam.model_1:BoolOperation">
-              <left xsi:type="de.oaam.model_2:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model_2:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            <logic xsi:type="de.oaam.model.common:BoolOperation">
+              <left xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
             </logic>
           </trigger>
           <faultPropagations>
-            <logic xsi:type="de.oaam.model_1:BoolOperation">
-              <left xsi:type="de.oaam.model_2:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model_2:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            <logic xsi:type="de.oaam.model.common:BoolOperation">
+              <left xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
             </logic>
           </faultPropagations>
           <faultPropagations outputState="FAILED">
-            <logic xsi:type="de.oaam.model_1:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model_2:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model_2:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
+              <left xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
             </logic>
           </faultPropagations>
           <faultPropagations outputState="UNKNOWN">
-            <logic xsi:type="de.oaam.model_1:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model_2:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model_2:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+            <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
+              <left xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
             </logic>
           </faultPropagations>
         </outputs>

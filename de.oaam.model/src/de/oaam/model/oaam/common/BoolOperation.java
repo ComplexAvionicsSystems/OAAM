@@ -25,7 +25,7 @@ package de.oaam.model.oaam.common;
  * @model
  * @generated
  */
-public interface BoolOperation extends BoolA, _ElementA {
+public interface BoolOperation extends BoolA, ElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.common.BoolOperationTypesE}.

@@ -77,7 +77,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__ID = CommonPackage._ELEMENT_A__ID;
+	int ARCHITECTURE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -86,7 +86,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__NAME = CommonPackage._ELEMENT_A__NAME;
+	int ARCHITECTURE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -95,7 +95,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int ARCHITECTURE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -104,7 +104,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int ARCHITECTURE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -113,7 +113,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int ARCHITECTURE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -122,7 +122,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int ARCHITECTURE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -131,7 +131,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int ARCHITECTURE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -140,7 +140,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int ARCHITECTURE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Include</b></em>' reference list.
@@ -149,7 +149,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__INCLUDE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int ARCHITECTURE__INCLUDE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Library</b></em>' containment reference.
@@ -158,7 +158,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__LIBRARY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int ARCHITECTURE__LIBRARY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Scenario</b></em>' containment reference.
@@ -167,7 +167,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__SCENARIO = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int ARCHITECTURE__SCENARIO = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Systems</b></em>' containment reference.
@@ -176,7 +176,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__SYSTEMS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int ARCHITECTURE__SYSTEMS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Function</b></em>' containment reference.
@@ -185,7 +185,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__FUNCTION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int ARCHITECTURE__FUNCTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Hardware</b></em>' containment reference.
@@ -194,7 +194,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__HARDWARE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int ARCHITECTURE__HARDWARE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Anatomy</b></em>' containment reference.
@@ -203,7 +203,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__ANATOMY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int ARCHITECTURE__ANATOMY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference.
@@ -212,7 +212,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__CAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int ARCHITECTURE__CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Restrictions</b></em>' containment reference.
@@ -221,7 +221,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int ARCHITECTURE__RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Mapping</b></em>' containment reference.
@@ -230,7 +230,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE__MAPPING = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int ARCHITECTURE__MAPPING = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Architecture</em>' class.
@@ -239,7 +239,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int ARCHITECTURE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Architecture</em>' class.
@@ -248,7 +248,7 @@ public interface OaamPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int ARCHITECTURE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 
 	/**

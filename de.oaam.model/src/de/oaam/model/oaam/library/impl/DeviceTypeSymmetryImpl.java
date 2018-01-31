@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.DeviceTypeSymmetry;
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class DeviceTypeSymmetryImpl extends _ElementAImpl implements DeviceTypeSymmetry {
+public class DeviceTypeSymmetryImpl extends ElementAImpl implements DeviceTypeSymmetry {
 	/**
 	 * The cached value of the '{@link #getDeviceTypes() <em>Device Types</em>}' reference list.
 	 * <!-- begin-user-doc -->

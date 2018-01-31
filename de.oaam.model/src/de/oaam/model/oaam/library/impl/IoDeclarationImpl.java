@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class IoDeclarationImpl extends _ElementAImpl implements IoDeclaration {
+public class IoDeclarationImpl extends ElementAImpl implements IoDeclaration {
 	/**
 	 * The cached value of the '{@link #getResources() <em>Resources</em>}' reference list.
 	 * <!-- begin-user-doc -->

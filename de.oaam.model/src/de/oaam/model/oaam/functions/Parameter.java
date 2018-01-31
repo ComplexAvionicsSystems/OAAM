@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.ParameterDefinition;
 
 /**
@@ -27,7 +26,7 @@ import de.oaam.model.oaam.library.ParameterDefinition;
  * @model
  * @generated
  */
-public interface Parameter extends _ElementA {
+public interface Parameter extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->

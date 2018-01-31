@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
+import de.oaam.model.oaam.common.ElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,5 +18,5 @@ import de.oaam.model.oaam.common._ElementA;
  * @model
  * @generated
  */
-public interface DuctOpeningDeclaration extends _ElementA {
+public interface DuctOpeningDeclaration extends ElementA {
 } // DuctOpeningDeclaration

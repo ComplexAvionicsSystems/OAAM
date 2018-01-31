@@ -4,8 +4,7 @@ package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.scenario.ParameterNumeric;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -577,16 +576,16 @@ public class ParameterNumericImpl extends ParameterAImpl implements ParameterNum
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case ScenarioPackage.PARAMETER_NUMERIC__ID: return CommonPackage._ELEMENT_A__ID;
-				case ScenarioPackage.PARAMETER_NUMERIC__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case ScenarioPackage.PARAMETER_NUMERIC__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case ScenarioPackage.PARAMETER_NUMERIC__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case ScenarioPackage.PARAMETER_NUMERIC__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case ScenarioPackage.PARAMETER_NUMERIC__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case ScenarioPackage.PARAMETER_NUMERIC__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case ScenarioPackage.PARAMETER_NUMERIC__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case ScenarioPackage.PARAMETER_NUMERIC__ID: return CommonPackage.ELEMENT_A__ID;
+				case ScenarioPackage.PARAMETER_NUMERIC__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case ScenarioPackage.PARAMETER_NUMERIC__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case ScenarioPackage.PARAMETER_NUMERIC__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case ScenarioPackage.PARAMETER_NUMERIC__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case ScenarioPackage.PARAMETER_NUMERIC__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case ScenarioPackage.PARAMETER_NUMERIC__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case ScenarioPackage.PARAMETER_NUMERIC__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -600,16 +599,16 @@ public class ParameterNumericImpl extends ParameterAImpl implements ParameterNum
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return ScenarioPackage.PARAMETER_NUMERIC__ID;
-				case CommonPackage._ELEMENT_A__NAME: return ScenarioPackage.PARAMETER_NUMERIC__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return ScenarioPackage.PARAMETER_NUMERIC__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return ScenarioPackage.PARAMETER_NUMERIC__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return ScenarioPackage.PARAMETER_NUMERIC__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return ScenarioPackage.PARAMETER_NUMERIC__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return ScenarioPackage.PARAMETER_NUMERIC__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return ScenarioPackage.PARAMETER_NUMERIC__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return ScenarioPackage.PARAMETER_NUMERIC__ID;
+				case CommonPackage.ELEMENT_A__NAME: return ScenarioPackage.PARAMETER_NUMERIC__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return ScenarioPackage.PARAMETER_NUMERIC__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return ScenarioPackage.PARAMETER_NUMERIC__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return ScenarioPackage.PARAMETER_NUMERIC__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return ScenarioPackage.PARAMETER_NUMERIC__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return ScenarioPackage.PARAMETER_NUMERIC__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return ScenarioPackage.PARAMETER_NUMERIC__TRACE_LINK;
 				default: return -1;
 			}
 		}

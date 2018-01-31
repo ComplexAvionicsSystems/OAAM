@@ -52,7 +52,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.restrictions";
 
 	/**
 	 * The singleton instance of the package.
@@ -79,7 +79,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int RESTRICTIONS_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -88,7 +88,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESTRICTIONS_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -97,7 +97,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESTRICTIONS_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -106,7 +106,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESTRICTIONS_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -115,7 +115,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESTRICTIONS_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -124,7 +124,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESTRICTIONS_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESTRICTIONS_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -142,7 +142,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESTRICTIONS_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Restrictions</b></em>' containment reference list.
@@ -151,7 +151,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__DEVICE_TYPE_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESTRICTIONS_CONTAINER_A__DEVICE_TYPE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Device Restrictions</b></em>' containment reference list.
@@ -160,7 +160,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__DEVICE_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESTRICTIONS_CONTAINER_A__DEVICE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Location Restrictions</b></em>' containment reference list.
@@ -169,7 +169,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__LOCATION_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int RESTRICTIONS_CONTAINER_A__LOCATION_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Area Restrictions</b></em>' containment reference list.
@@ -178,7 +178,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__AREA_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int RESTRICTIONS_CONTAINER_A__AREA_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Power Source Restrictions</b></em>' containment reference list.
@@ -187,7 +187,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task Atomic Restrictions</b></em>' containment reference list.
@@ -196,7 +196,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Task Symmetry Restrictions</b></em>' containment reference list.
@@ -205,7 +205,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Task Rate Restrictions</b></em>' containment reference list.
@@ -214,7 +214,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
@@ -223,7 +223,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -232,7 +232,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Connection Type Restrictions</b></em>' containment reference list.
@@ -241,7 +241,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Segregations Restrictions</b></em>' containment reference list.
@@ -250,7 +250,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 11;
+	int RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Signal Delay Restriction</b></em>' containment reference list.
@@ -259,7 +259,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 12;
+	int RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Subrestrictions</b></em>' containment reference list.
@@ -268,7 +268,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 13;
+	int RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -277,7 +277,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 14;
+	int RESTRICTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -286,7 +286,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESTRICTIONS_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.RestrictionsImpl <em>Restrictions</em>}' class.
@@ -997,7 +997,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int PATH_SEGMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1006,7 +1006,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int PATH_SEGMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1015,7 +1015,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int PATH_SEGMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1024,7 +1024,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int PATH_SEGMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1033,7 +1033,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int PATH_SEGMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1042,7 +1042,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int PATH_SEGMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1051,7 +1051,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int PATH_SEGMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1060,7 +1060,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int PATH_SEGMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -1069,7 +1069,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__TASK = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int PATH_SEGMENT__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signal</b></em>' reference.
@@ -1078,7 +1078,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT__SIGNAL = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int PATH_SEGMENT__SIGNAL = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Path Segment</em>' class.
@@ -1087,7 +1087,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int PATH_SEGMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Path Segment</em>' class.
@@ -1096,7 +1096,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_SEGMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int PATH_SEGMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TaskGroupRestrictionAImpl <em>Task Group Restriction A</em>}' class.
@@ -2420,7 +2420,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__ID = CommonPackage._ELEMENT_A__ID;
+	int SEGREGATION_RESTRICTION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2429,7 +2429,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SEGREGATION_RESTRICTION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2438,7 +2438,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SEGREGATION_RESTRICTION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2447,7 +2447,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SEGREGATION_RESTRICTION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2456,7 +2456,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SEGREGATION_RESTRICTION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2465,7 +2465,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SEGREGATION_RESTRICTION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2474,7 +2474,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SEGREGATION_RESTRICTION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2483,7 +2483,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SEGREGATION_RESTRICTION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2492,7 +2492,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SEGREGATION_RESTRICTION__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2501,7 +2501,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SEGREGATION_RESTRICTION__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tasks A</b></em>' reference list.
@@ -2510,7 +2510,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__TASKS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SEGREGATION_RESTRICTION__TASKS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Tasks B</b></em>' reference list.
@@ -2519,7 +2519,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__TASKS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SEGREGATION_RESTRICTION__TASKS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Technology</b></em>' attribute.
@@ -2528,7 +2528,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DISSIMILAR_TECHNOLOGY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SEGREGATION_RESTRICTION__DISSIMILAR_TECHNOLOGY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Location</b></em>' attribute.
@@ -2537,7 +2537,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Sub Functions A</b></em>' reference list.
@@ -2546,7 +2546,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Sub Functions B</b></em>' reference list.
@@ -2555,7 +2555,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Area</b></em>' attribute.
@@ -2564,7 +2564,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DISSIMILAR_AREA = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int SEGREGATION_RESTRICTION__DISSIMILAR_AREA = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Power Source</b></em>' attribute.
@@ -2573,7 +2573,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DISSIMILAR_POWER_SOURCE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int SEGREGATION_RESTRICTION__DISSIMILAR_POWER_SOURCE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Signals A</b></em>' reference list.
@@ -2582,7 +2582,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SIGNALS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int SEGREGATION_RESTRICTION__SIGNALS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Signals B</b></em>' reference list.
@@ -2591,7 +2591,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SIGNALS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 11;
+	int SEGREGATION_RESTRICTION__SIGNALS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups A</b></em>' reference list.
@@ -2600,7 +2600,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__TASK_GROUPS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 12;
+	int SEGREGATION_RESTRICTION__TASK_GROUPS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups B</b></em>' reference list.
@@ -2609,7 +2609,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__TASK_GROUPS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 13;
+	int SEGREGATION_RESTRICTION__TASK_GROUPS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Signal Groups B</b></em>' reference list.
@@ -2618,7 +2618,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SIGNAL_GROUPS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 14;
+	int SEGREGATION_RESTRICTION__SIGNAL_GROUPS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Signal Groups A</b></em>' reference list.
@@ -2627,7 +2627,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__SIGNAL_GROUPS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 15;
+	int SEGREGATION_RESTRICTION__SIGNAL_GROUPS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Devices A</b></em>' reference list.
@@ -2636,7 +2636,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DEVICES_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 16;
+	int SEGREGATION_RESTRICTION__DEVICES_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Devices B</b></em>' reference list.
@@ -2645,7 +2645,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__DEVICES_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 17;
+	int SEGREGATION_RESTRICTION__DEVICES_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Connections A</b></em>' reference list.
@@ -2654,7 +2654,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__CONNECTIONS_A = CommonPackage._ELEMENT_A_FEATURE_COUNT + 18;
+	int SEGREGATION_RESTRICTION__CONNECTIONS_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Connections B</b></em>' reference list.
@@ -2663,7 +2663,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION__CONNECTIONS_B = CommonPackage._ELEMENT_A_FEATURE_COUNT + 19;
+	int SEGREGATION_RESTRICTION__CONNECTIONS_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Segregation Restriction</em>' class.
@@ -2672,7 +2672,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 20;
+	int SEGREGATION_RESTRICTION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of operations of the '<em>Segregation Restriction</em>' class.
@@ -2681,7 +2681,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEGREGATION_RESTRICTION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SEGREGATION_RESTRICTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TaskRateRestrictionImpl <em>Task Rate Restriction</em>}' class.

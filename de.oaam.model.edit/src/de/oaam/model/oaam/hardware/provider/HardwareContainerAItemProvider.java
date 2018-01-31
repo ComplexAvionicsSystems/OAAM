@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.hardware.provider;
 
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.hardware.HardwareContainerA;
 import de.oaam.model.oaam.hardware.HardwareFactory;
 import de.oaam.model.oaam.hardware.HardwarePackage;
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HardwareContainerAItemProvider extends _ElementAItemProvider {
+public class HardwareContainerAItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

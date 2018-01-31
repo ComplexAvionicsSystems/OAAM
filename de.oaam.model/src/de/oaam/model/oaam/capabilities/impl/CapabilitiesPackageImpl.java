@@ -644,32 +644,32 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		capabilitiesContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		capabilitiesContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		taskCapabilityEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		taskCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		deviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		deviceCapabilityEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		deviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		connectionCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		connectionCapabilityEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		connectionCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		signalCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		signalCapabilityEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		signalCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		subDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		subDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		capabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
 		subcapabilityEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
-		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(capabilityAEClass, CapabilityA.class, "CapabilityA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

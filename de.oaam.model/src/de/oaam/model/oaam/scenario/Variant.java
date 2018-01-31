@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario;
 
-import de.oaam.model.oaam.common._ElementA;
+import de.oaam.model.oaam.common.ElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,5 +18,5 @@ import de.oaam.model.oaam.common._ElementA;
  * @model
  * @generated
  */
-public interface Variant extends _ElementA, _ModeDependentElementA {
+public interface Variant extends ElementA, ModeDependentElementA {
 } // Variant

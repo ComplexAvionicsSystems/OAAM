@@ -65,9 +65,9 @@ public class HardwareItemProvider extends HardwareContainerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__VariantDependentElementA_variants_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__VariantDependentElementA_variants_feature", "_UI__VariantDependentElementA_type"),
-				 ScenarioPackage.Literals._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 getString("_UI_VariantDependentElementA_variants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
+				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
 				 true,
 				 false,
 				 true,
@@ -88,7 +88,7 @@ public class HardwareItemProvider extends HardwareContainerAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
+			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 		}
 		return childrenFeatures;
 	}
@@ -164,7 +164,7 @@ public class HardwareItemProvider extends HardwareContainerAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ScenarioPackage.Literals._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
+				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
 				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
 	}
 

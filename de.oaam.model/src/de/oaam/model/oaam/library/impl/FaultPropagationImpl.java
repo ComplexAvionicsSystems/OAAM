@@ -5,8 +5,7 @@ package de.oaam.model.oaam.library.impl;
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.IntegretyStateE;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -32,7 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FaultPropagationImpl extends _ElementAImpl implements FaultPropagation {
+public class FaultPropagationImpl extends ElementAImpl implements FaultPropagation {
 	/**
 	 * The default value of the '{@link #getOutputState() <em>Output State</em>}' attribute.
 	 * <!-- begin-user-doc -->

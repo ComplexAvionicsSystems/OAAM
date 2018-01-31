@@ -2,13 +2,11 @@
  */
 package de.oaam.model.oaam.scenario.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -34,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VariantImpl extends _ElementAImpl implements Variant {
+public class VariantImpl extends ElementAImpl implements Variant {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -157,9 +155,9 @@ public class VariantImpl extends _ElementAImpl implements Variant {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case ScenarioPackage.VARIANT__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case ScenarioPackage.VARIANT__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -173,9 +171,9 @@ public class VariantImpl extends _ElementAImpl implements Variant {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return ScenarioPackage.VARIANT__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return ScenarioPackage.VARIANT__OPERATION_MODES;
 				default: return -1;
 			}
 		}

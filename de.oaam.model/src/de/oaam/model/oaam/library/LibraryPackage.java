@@ -52,7 +52,7 @@ public interface LibraryPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.library";
 
 	/**
 	 * The singleton instance of the package.
@@ -226,7 +226,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int LIBRARY_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -235,7 +235,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int LIBRARY_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -244,7 +244,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int LIBRARY_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -253,7 +253,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int LIBRARY_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -262,7 +262,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int LIBRARY_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -271,7 +271,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int LIBRARY_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -280,7 +280,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int LIBRARY_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -289,7 +289,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int LIBRARY_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
@@ -298,7 +298,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DATA_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int LIBRARY_CONTAINER_A__DATA_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
@@ -307,7 +307,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int LIBRARY_CONTAINER_A__RESOURCE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Ressource Bundles</b></em>' containment reference list.
@@ -316,7 +316,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
@@ -325,7 +325,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
@@ -334,7 +334,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
@@ -343,7 +343,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__TASK_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int LIBRARY_CONTAINER_A__TASK_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
@@ -352,7 +352,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
@@ -361,7 +361,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__SIGNAL_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int LIBRARY_CONTAINER_A__SIGNAL_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
@@ -370,7 +370,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
@@ -379,7 +379,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
@@ -388,7 +388,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
@@ -397,7 +397,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__CONNECTION_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 11;
+	int LIBRARY_CONTAINER_A__CONNECTION_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
@@ -406,7 +406,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__WIRE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 12;
+	int LIBRARY_CONTAINER_A__WIRE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
@@ -415,7 +415,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__LOCATION_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 13;
+	int LIBRARY_CONTAINER_A__LOCATION_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Route Types</b></em>' containment reference list.
@@ -424,7 +424,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__ROUTE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 14;
+	int LIBRARY_CONTAINER_A__ROUTE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
@@ -433,7 +433,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 15;
+	int LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
@@ -442,7 +442,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__SUBLIBRARIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 16;
+	int LIBRARY_CONTAINER_A__SUBLIBRARIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -451,7 +451,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 17;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -460,7 +460,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int LIBRARY_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl <em>Resource Type</em>}' class.
@@ -678,7 +678,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -687,7 +687,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -696,7 +696,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -705,7 +705,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -714,7 +714,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -723,7 +723,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -732,7 +732,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -741,7 +741,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -750,7 +750,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Count</b></em>' attribute.
@@ -759,7 +759,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE__COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Modifiers</b></em>' reference list.
@@ -768,7 +768,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__MODIFIERS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE__MODIFIERS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Resource</em>' class.
@@ -777,7 +777,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int RESOURCE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Resource</em>' class.
@@ -786,7 +786,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceAlternativesImpl <em>Resource Alternatives</em>}' class.
@@ -805,7 +805,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_ALTERNATIVES__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -814,7 +814,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_ALTERNATIVES__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -823,7 +823,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_ALTERNATIVES__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -832,7 +832,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_ALTERNATIVES__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -841,7 +841,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_ALTERNATIVES__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -850,7 +850,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_ALTERNATIVES__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -859,7 +859,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_ALTERNATIVES__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -868,7 +868,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_ALTERNATIVES__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
@@ -877,7 +877,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES__RESOURCES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_ALTERNATIVES__RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Alternatives</em>' class.
@@ -886,7 +886,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_ALTERNATIVES_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Resource Alternatives</em>' class.
@@ -895,7 +895,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_ALTERNATIVES_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_ALTERNATIVES_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceBundlesImpl <em>Resource Bundles</em>}' class.
@@ -2163,7 +2163,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__ID = CommonPackage._ELEMENT_A__ID;
+	int WIRE_TYPE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2172,7 +2172,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__NAME = CommonPackage._ELEMENT_A__NAME;
+	int WIRE_TYPE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2181,7 +2181,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int WIRE_TYPE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2190,7 +2190,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int WIRE_TYPE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2199,7 +2199,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int WIRE_TYPE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2208,7 +2208,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int WIRE_TYPE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2217,7 +2217,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int WIRE_TYPE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2226,7 +2226,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int WIRE_TYPE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Specific Weight</b></em>' attribute.
@@ -2235,7 +2235,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__SPECIFIC_WEIGHT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int WIRE_TYPE__SPECIFIC_WEIGHT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Specific Price</b></em>' attribute.
@@ -2244,7 +2244,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__SPECIFIC_PRICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int WIRE_TYPE__SPECIFIC_PRICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>NConductors</b></em>' attribute.
@@ -2253,7 +2253,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__NCONDUCTORS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int WIRE_TYPE__NCONDUCTORS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Min Bending Radius</b></em>' attribute.
@@ -2262,7 +2262,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__MIN_BENDING_RADIUS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int WIRE_TYPE__MIN_BENDING_RADIUS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>NShields</b></em>' attribute.
@@ -2271,7 +2271,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__NSHIELDS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int WIRE_TYPE__NSHIELDS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Wire Type</em>' class.
@@ -2280,7 +2280,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int WIRE_TYPE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Wire Type</em>' class.
@@ -2289,7 +2289,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int WIRE_TYPE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.InputDeclarationImpl <em>Input Declaration</em>}' class.
@@ -2308,7 +2308,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__ID = CommonPackage._ELEMENT_A__ID;
+	int INPUT_DECLARATION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2317,7 +2317,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int INPUT_DECLARATION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2326,7 +2326,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int INPUT_DECLARATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2335,7 +2335,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int INPUT_DECLARATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2344,7 +2344,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int INPUT_DECLARATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2353,7 +2353,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int INPUT_DECLARATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2362,7 +2362,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int INPUT_DECLARATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2371,7 +2371,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int INPUT_DECLARATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2380,7 +2380,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int INPUT_DECLARATION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -2389,7 +2389,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__UNIT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int INPUT_DECLARATION__UNIT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Precondition</b></em>' attribute.
@@ -2398,7 +2398,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__PRECONDITION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int INPUT_DECLARATION__PRECONDITION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Range</b></em>' attribute.
@@ -2407,7 +2407,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__RANGE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int INPUT_DECLARATION__RANGE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
@@ -2416,7 +2416,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__LOWER_BOUND = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int INPUT_DECLARATION__LOWER_BOUND = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
@@ -2425,7 +2425,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION__UPPER_BOUND = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int INPUT_DECLARATION__UPPER_BOUND = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Input Declaration</em>' class.
@@ -2434,7 +2434,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int INPUT_DECLARATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Input Declaration</em>' class.
@@ -2443,7 +2443,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DECLARATION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int INPUT_DECLARATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl <em>Output Declaration</em>}' class.
@@ -2462,7 +2462,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__ID = CommonPackage._ELEMENT_A__ID;
+	int OUTPUT_DECLARATION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2471,7 +2471,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int OUTPUT_DECLARATION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2480,7 +2480,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int OUTPUT_DECLARATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2489,7 +2489,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int OUTPUT_DECLARATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2498,7 +2498,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int OUTPUT_DECLARATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2507,7 +2507,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int OUTPUT_DECLARATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2516,7 +2516,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int OUTPUT_DECLARATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2525,7 +2525,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int OUTPUT_DECLARATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -2534,7 +2534,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__UNIT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int OUTPUT_DECLARATION__UNIT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Postcondition</b></em>' attribute.
@@ -2543,7 +2543,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__POSTCONDITION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int OUTPUT_DECLARATION__POSTCONDITION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -2552,7 +2552,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__TRIGGER = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int OUTPUT_DECLARATION__TRIGGER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Range</b></em>' attribute.
@@ -2561,7 +2561,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__RANGE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int OUTPUT_DECLARATION__RANGE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2570,7 +2570,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int OUTPUT_DECLARATION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
@@ -2579,7 +2579,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__LOWER_BOUND = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int OUTPUT_DECLARATION__LOWER_BOUND = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
@@ -2588,7 +2588,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__UPPER_BOUND = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int OUTPUT_DECLARATION__UPPER_BOUND = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Fault Propagations</b></em>' containment reference list.
@@ -2597,7 +2597,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION__FAULT_PROPAGATIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int OUTPUT_DECLARATION__FAULT_PROPAGATIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Output Declaration</em>' class.
@@ -2606,7 +2606,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int OUTPUT_DECLARATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Output Declaration</em>' class.
@@ -2615,7 +2615,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int OUTPUT_DECLARATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.IoDeclarationImpl <em>Io Declaration</em>}' class.
@@ -2634,7 +2634,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__ID = CommonPackage._ELEMENT_A__ID;
+	int IO_DECLARATION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2643,7 +2643,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int IO_DECLARATION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2652,7 +2652,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int IO_DECLARATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2661,7 +2661,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int IO_DECLARATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2670,7 +2670,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int IO_DECLARATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2679,7 +2679,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int IO_DECLARATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2688,7 +2688,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int IO_DECLARATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2697,7 +2697,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int IO_DECLARATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' reference list.
@@ -2706,7 +2706,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION__RESOURCES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int IO_DECLARATION__RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Io Declaration</em>' class.
@@ -2715,7 +2715,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int IO_DECLARATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Io Declaration</em>' class.
@@ -2724,7 +2724,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int IO_DECLARATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.DuctOpeningDeclarationImpl <em>Duct Opening Declaration</em>}' class.
@@ -2743,7 +2743,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__ID = CommonPackage._ELEMENT_A__ID;
+	int DUCT_OPENING_DECLARATION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2752,7 +2752,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DUCT_OPENING_DECLARATION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2761,7 +2761,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DUCT_OPENING_DECLARATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2770,7 +2770,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DUCT_OPENING_DECLARATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2779,7 +2779,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DUCT_OPENING_DECLARATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2788,7 +2788,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DUCT_OPENING_DECLARATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2797,7 +2797,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DUCT_OPENING_DECLARATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2806,7 +2806,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DUCT_OPENING_DECLARATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The number of structural features of the '<em>Duct Opening Declaration</em>' class.
@@ -2815,7 +2815,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DUCT_OPENING_DECLARATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Duct Opening Declaration</em>' class.
@@ -2824,7 +2824,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_DECLARATION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DUCT_OPENING_DECLARATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceGroupImpl <em>Resource Group</em>}' class.
@@ -2843,7 +2843,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_GROUP__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2852,7 +2852,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_GROUP__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2861,7 +2861,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_GROUP__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2870,7 +2870,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_GROUP__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2879,7 +2879,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_GROUP__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2888,7 +2888,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_GROUP__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2897,7 +2897,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_GROUP__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2906,7 +2906,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_GROUP__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' reference list.
@@ -2915,7 +2915,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP__RESOURCES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_GROUP__RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Group</em>' class.
@@ -2924,7 +2924,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_GROUP_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Resource Group</em>' class.
@@ -2933,7 +2933,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_GROUP_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_GROUP_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.DeviceTypeSymmetryImpl <em>Device Type Symmetry</em>}' class.
@@ -2952,7 +2952,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__ID = CommonPackage._ELEMENT_A__ID;
+	int DEVICE_TYPE_SYMMETRY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2961,7 +2961,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DEVICE_TYPE_SYMMETRY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2970,7 +2970,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DEVICE_TYPE_SYMMETRY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2979,7 +2979,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DEVICE_TYPE_SYMMETRY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2988,7 +2988,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DEVICE_TYPE_SYMMETRY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2997,7 +2997,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DEVICE_TYPE_SYMMETRY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3006,7 +3006,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DEVICE_TYPE_SYMMETRY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3015,7 +3015,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DEVICE_TYPE_SYMMETRY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Device Types</b></em>' reference list.
@@ -3024,7 +3024,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY__DEVICE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DEVICE_TYPE_SYMMETRY__DEVICE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Device Type Symmetry</em>' class.
@@ -3033,7 +3033,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int DEVICE_TYPE_SYMMETRY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Device Type Symmetry</em>' class.
@@ -3042,7 +3042,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_SYMMETRY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DEVICE_TYPE_SYMMETRY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.IoGroupImpl <em>Io Group</em>}' class.
@@ -3061,7 +3061,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__ID = CommonPackage._ELEMENT_A__ID;
+	int IO_GROUP__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3070,7 +3070,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__NAME = CommonPackage._ELEMENT_A__NAME;
+	int IO_GROUP__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3079,7 +3079,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int IO_GROUP__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3088,7 +3088,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int IO_GROUP__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3097,7 +3097,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int IO_GROUP__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3106,7 +3106,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int IO_GROUP__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3115,7 +3115,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int IO_GROUP__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3124,7 +3124,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int IO_GROUP__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Ios</b></em>' reference list.
@@ -3133,7 +3133,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP__IOS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int IO_GROUP__IOS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Io Group</em>' class.
@@ -3142,7 +3142,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int IO_GROUP_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Io Group</em>' class.
@@ -3151,7 +3151,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_GROUP_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int IO_GROUP_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.AttributeDefinitionImpl <em>Attribute Definition</em>}' class.
@@ -3170,7 +3170,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+	int ATTRIBUTE_DEFINITION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3179,7 +3179,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int ATTRIBUTE_DEFINITION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3188,7 +3188,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int ATTRIBUTE_DEFINITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3197,7 +3197,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int ATTRIBUTE_DEFINITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3206,7 +3206,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int ATTRIBUTE_DEFINITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3215,7 +3215,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int ATTRIBUTE_DEFINITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3224,7 +3224,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int ATTRIBUTE_DEFINITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3233,7 +3233,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int ATTRIBUTE_DEFINITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
@@ -3242,7 +3242,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__DATA_TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int ATTRIBUTE_DEFINITION__DATA_TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' attribute.
@@ -3251,7 +3251,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION__TARGET = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int ATTRIBUTE_DEFINITION__TARGET = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Attribute Definition</em>' class.
@@ -3260,7 +3260,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int ATTRIBUTE_DEFINITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Attribute Definition</em>' class.
@@ -3269,7 +3269,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int ATTRIBUTE_DEFINITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl <em>Fault Propagation</em>}' class.
@@ -3288,7 +3288,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__ID = CommonPackage._ELEMENT_A__ID;
+	int FAULT_PROPAGATION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3297,7 +3297,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int FAULT_PROPAGATION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3306,7 +3306,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int FAULT_PROPAGATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3315,7 +3315,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int FAULT_PROPAGATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3324,7 +3324,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int FAULT_PROPAGATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3333,7 +3333,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int FAULT_PROPAGATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3342,7 +3342,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int FAULT_PROPAGATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3351,7 +3351,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int FAULT_PROPAGATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Output State</b></em>' attribute.
@@ -3360,7 +3360,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__OUTPUT_STATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int FAULT_PROPAGATION__OUTPUT_STATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
@@ -3369,7 +3369,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__LOGIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int FAULT_PROPAGATION__LOGIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Fault Propagation</em>' class.
@@ -3378,7 +3378,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int FAULT_PROPAGATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Fault Propagation</em>' class.
@@ -3387,7 +3387,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int FAULT_PROPAGATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FunctionInputStateImpl <em>Function Input State</em>}' class.
@@ -3524,7 +3524,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__ID = CommonPackage._ELEMENT_A__ID;
+	int POWER_SOURCE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3533,7 +3533,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__NAME = CommonPackage._ELEMENT_A__NAME;
+	int POWER_SOURCE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3542,7 +3542,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int POWER_SOURCE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3551,7 +3551,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int POWER_SOURCE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3560,7 +3560,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int POWER_SOURCE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3569,7 +3569,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int POWER_SOURCE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3578,7 +3578,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int POWER_SOURCE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3587,7 +3587,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int POWER_SOURCE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The number of structural features of the '<em>Power Source</em>' class.
@@ -3596,7 +3596,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int POWER_SOURCE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Power Source</em>' class.
@@ -3605,7 +3605,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int POWER_SOURCE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceLinkImpl <em>Resource Link</em>}' class.
@@ -3624,7 +3624,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_LINK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3633,7 +3633,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3642,7 +3642,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3651,7 +3651,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3660,7 +3660,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3669,7 +3669,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3678,7 +3678,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3687,7 +3687,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>In</b></em>' reference list.
@@ -3696,7 +3696,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__IN = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_LINK__IN = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Out</b></em>' reference list.
@@ -3705,7 +3705,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK__OUT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_LINK__OUT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Resource Link</em>' class.
@@ -3714,7 +3714,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Resource Link</em>' class.
@@ -3723,7 +3723,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_LINK_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceModifierImpl <em>Resource Modifier</em>}' class.
@@ -3742,7 +3742,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_MODIFIER__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3751,7 +3751,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_MODIFIER__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3760,7 +3760,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_MODIFIER__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3769,7 +3769,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_MODIFIER__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3778,7 +3778,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_MODIFIER__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3787,7 +3787,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_MODIFIER__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3796,7 +3796,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_MODIFIER__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3805,7 +3805,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_MODIFIER__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
@@ -3814,7 +3814,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__LEVELS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_MODIFIER__LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Modifier</em>' class.
@@ -3823,7 +3823,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_MODIFIER_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Resource Modifier</em>' class.
@@ -3832,7 +3832,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_MODIFIER_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ModifierLevelImpl <em>Modifier Level</em>}' class.
@@ -3851,7 +3851,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__ID = CommonPackage._ELEMENT_A__ID;
+	int MODIFIER_LEVEL__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3860,7 +3860,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__NAME = CommonPackage._ELEMENT_A__NAME;
+	int MODIFIER_LEVEL__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3869,7 +3869,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int MODIFIER_LEVEL__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3878,7 +3878,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int MODIFIER_LEVEL__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3887,7 +3887,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int MODIFIER_LEVEL__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3896,7 +3896,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int MODIFIER_LEVEL__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3905,7 +3905,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int MODIFIER_LEVEL__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3914,7 +3914,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int MODIFIER_LEVEL__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Required Resources</b></em>' containment reference list.
@@ -3923,7 +3923,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__REQUIRED_RESOURCES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int MODIFIER_LEVEL__REQUIRED_RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Groups</b></em>' containment reference list.
@@ -3932,7 +3932,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__CONSUMED_GROUPS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int MODIFIER_LEVEL__CONSUMED_GROUPS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Equal Alternatives</b></em>' reference list.
@@ -3941,7 +3941,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__EQUAL_ALTERNATIVES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int MODIFIER_LEVEL__EQUAL_ALTERNATIVES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Better Alternative</b></em>' reference.
@@ -3950,7 +3950,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__BETTER_ALTERNATIVE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int MODIFIER_LEVEL__BETTER_ALTERNATIVE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Modifier Level</em>' class.
@@ -3959,7 +3959,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int MODIFIER_LEVEL_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Modifier Level</em>' class.
@@ -3968,7 +3968,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int MODIFIER_LEVEL_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ModifierDefinitionImpl <em>Modifier Definition</em>}' class.
@@ -3987,7 +3987,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+	int MODIFIER_DEFINITION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3996,7 +3996,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int MODIFIER_DEFINITION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4005,7 +4005,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int MODIFIER_DEFINITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4014,7 +4014,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int MODIFIER_DEFINITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4023,7 +4023,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int MODIFIER_DEFINITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -4032,7 +4032,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int MODIFIER_DEFINITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -4041,7 +4041,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int MODIFIER_DEFINITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -4050,7 +4050,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int MODIFIER_DEFINITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -4059,7 +4059,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int MODIFIER_DEFINITION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Levels</b></em>' reference list.
@@ -4068,7 +4068,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ALLOWED_LEVELS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int MODIFIER_DEFINITION__ALLOWED_LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Modifier Definition</em>' class.
@@ -4077,7 +4077,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int MODIFIER_DEFINITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Modifier Definition</em>' class.
@@ -4086,7 +4086,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int MODIFIER_DEFINITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskTypeDissimilarityImpl <em>Task Type Dissimilarity</em>}' class.
@@ -4105,7 +4105,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_TYPE_DISSIMILARITY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4114,7 +4114,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_TYPE_DISSIMILARITY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4123,7 +4123,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_TYPE_DISSIMILARITY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4132,7 +4132,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4141,7 +4141,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -4150,7 +4150,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_TYPE_DISSIMILARITY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -4159,7 +4159,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_TYPE_DISSIMILARITY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -4168,7 +4168,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -4177,7 +4177,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__TASKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_TYPE_DISSIMILARITY__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Common Code</b></em>' attribute.
@@ -4186,7 +4186,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY__PERCENTAGE_OF_COMMON_CODE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_TYPE_DISSIMILARITY__PERCENTAGE_OF_COMMON_CODE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Task Type Dissimilarity</em>' class.
@@ -4195,7 +4195,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Task Type Dissimilarity</em>' class.
@@ -4204,7 +4204,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.DeviceTypeDissimilarityImpl <em>Device Type Dissimilarity</em>}' class.
@@ -4223,7 +4223,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__ID = CommonPackage._ELEMENT_A__ID;
+	int DEVICE_TYPE_DISSIMILARITY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4232,7 +4232,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DEVICE_TYPE_DISSIMILARITY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4241,7 +4241,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DEVICE_TYPE_DISSIMILARITY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4250,7 +4250,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DEVICE_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4259,7 +4259,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DEVICE_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -4268,7 +4268,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DEVICE_TYPE_DISSIMILARITY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -4277,7 +4277,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DEVICE_TYPE_DISSIMILARITY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -4286,7 +4286,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DEVICE_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference list.
@@ -4295,7 +4295,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__DEVICES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DEVICE_TYPE_DISSIMILARITY__DEVICES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Percentage Of Common Hardware</b></em>' attribute.
@@ -4304,7 +4304,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY__PERCENTAGE_OF_COMMON_HARDWARE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int DEVICE_TYPE_DISSIMILARITY__PERCENTAGE_OF_COMMON_HARDWARE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Device Type Dissimilarity</em>' class.
@@ -4313,7 +4313,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int DEVICE_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Device Type Dissimilarity</em>' class.
@@ -4322,7 +4322,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DEVICE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeDissimilarityImpl <em>Resource Type Dissimilarity</em>}' class.
@@ -4341,7 +4341,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_TYPE_DISSIMILARITY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4350,7 +4350,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_TYPE_DISSIMILARITY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4359,7 +4359,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_TYPE_DISSIMILARITY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4368,7 +4368,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_TYPE_DISSIMILARITY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4377,7 +4377,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_TYPE_DISSIMILARITY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -4386,7 +4386,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_TYPE_DISSIMILARITY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -4395,7 +4395,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_TYPE_DISSIMILARITY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -4404,7 +4404,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_TYPE_DISSIMILARITY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Resource Types</b></em>' reference list.
@@ -4413,7 +4413,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Resource Type Dissimilarity</em>' class.
@@ -4422,7 +4422,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_TYPE_DISSIMILARITY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Resource Type Dissimilarity</em>' class.
@@ -4431,7 +4431,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
@@ -4956,7 +4956,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__ID = CommonPackage._ELEMENT_A__ID;
+	int OUTPUT_TRIGGER__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4965,7 +4965,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__NAME = CommonPackage._ELEMENT_A__NAME;
+	int OUTPUT_TRIGGER__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4974,7 +4974,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int OUTPUT_TRIGGER__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4983,7 +4983,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int OUTPUT_TRIGGER__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4992,7 +4992,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int OUTPUT_TRIGGER__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5001,7 +5001,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int OUTPUT_TRIGGER__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5010,7 +5010,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int OUTPUT_TRIGGER__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5019,7 +5019,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int OUTPUT_TRIGGER__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
@@ -5028,7 +5028,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__LOGIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int OUTPUT_TRIGGER__LOGIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
@@ -5037,7 +5037,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int OUTPUT_TRIGGER__FIXED_RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Fixed Rate</b></em>' attribute.
@@ -5046,7 +5046,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Output Trigger</em>' class.
@@ -5055,7 +5055,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Output Trigger</em>' class.
@@ -5064,7 +5064,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int OUTPUT_TRIGGER_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl <em>Function Input Trigger</em>}' class.
@@ -5192,7 +5192,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+	int INTERNAL_STATE_DEFINITION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5201,7 +5201,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int INTERNAL_STATE_DEFINITION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5210,7 +5210,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int INTERNAL_STATE_DEFINITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5219,7 +5219,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int INTERNAL_STATE_DEFINITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5228,7 +5228,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int INTERNAL_STATE_DEFINITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5237,7 +5237,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int INTERNAL_STATE_DEFINITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5246,7 +5246,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int INTERNAL_STATE_DEFINITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5255,7 +5255,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int INTERNAL_STATE_DEFINITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -5264,7 +5264,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int INTERNAL_STATE_DEFINITION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Internal State Definition</em>' class.
@@ -5273,7 +5273,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int INTERNAL_STATE_DEFINITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Internal State Definition</em>' class.
@@ -5282,7 +5282,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int INTERNAL_STATE_DEFINITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ParameterDefinitionImpl <em>Parameter Definition</em>}' class.
@@ -5301,7 +5301,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__ID = CommonPackage._ELEMENT_A__ID;
+	int PARAMETER_DEFINITION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5310,7 +5310,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int PARAMETER_DEFINITION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5319,7 +5319,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int PARAMETER_DEFINITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5328,7 +5328,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int PARAMETER_DEFINITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5337,7 +5337,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int PARAMETER_DEFINITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5346,7 +5346,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int PARAMETER_DEFINITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5355,7 +5355,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int PARAMETER_DEFINITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5364,7 +5364,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int PARAMETER_DEFINITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -5373,7 +5373,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int PARAMETER_DEFINITION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Definition</em>' class.
@@ -5382,7 +5382,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int PARAMETER_DEFINITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parameter Definition</em>' class.
@@ -5391,7 +5391,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DEFINITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int PARAMETER_DEFINITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

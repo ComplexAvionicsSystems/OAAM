@@ -351,7 +351,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		architectureEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		architectureEClass.getESuperTypes().add(theCommonPackage.getElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -2,14 +2,13 @@
  */
 package de.oaam.model.oaam.capabilities;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.SignalType;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model
  * @generated
  */
-public interface SignalCapability extends CapabilityA, _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface SignalCapability extends CapabilityA, ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Signal Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

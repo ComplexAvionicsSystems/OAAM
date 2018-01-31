@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -40,7 +39,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, _ElementA {
+public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, ElementA {
 	/**
 	 * Returns the value of the '<em><b>Is Information</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

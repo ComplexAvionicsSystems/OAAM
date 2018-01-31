@@ -4,8 +4,7 @@ package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
@@ -14,12 +13,11 @@ import de.oaam.model.oaam.library.ConnectionType;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -701,28 +699,28 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.CONNECTION__ID: return CommonPackage._ELEMENT_A__ID;
-				case HardwarePackage.CONNECTION__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case HardwarePackage.CONNECTION__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case HardwarePackage.CONNECTION__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case HardwarePackage.CONNECTION__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case HardwarePackage.CONNECTION__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case HardwarePackage.CONNECTION__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case HardwarePackage.CONNECTION__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case HardwarePackage.CONNECTION__ID: return CommonPackage.ELEMENT_A__ID;
+				case HardwarePackage.CONNECTION__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case HardwarePackage.CONNECTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case HardwarePackage.CONNECTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case HardwarePackage.CONNECTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case HardwarePackage.CONNECTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case HardwarePackage.CONNECTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case HardwarePackage.CONNECTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.CONNECTION__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case HardwarePackage.CONNECTION__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.CONNECTION__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case HardwarePackage.CONNECTION__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -736,28 +734,28 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return HardwarePackage.CONNECTION__ID;
-				case CommonPackage._ELEMENT_A__NAME: return HardwarePackage.CONNECTION__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return HardwarePackage.CONNECTION__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return HardwarePackage.CONNECTION__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return HardwarePackage.CONNECTION__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return HardwarePackage.CONNECTION__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return HardwarePackage.CONNECTION__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return HardwarePackage.CONNECTION__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return HardwarePackage.CONNECTION__ID;
+				case CommonPackage.ELEMENT_A__NAME: return HardwarePackage.CONNECTION__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return HardwarePackage.CONNECTION__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return HardwarePackage.CONNECTION__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return HardwarePackage.CONNECTION__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return HardwarePackage.CONNECTION__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return HardwarePackage.CONNECTION__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return HardwarePackage.CONNECTION__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return HardwarePackage.CONNECTION__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return HardwarePackage.CONNECTION__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return HardwarePackage.CONNECTION__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return HardwarePackage.CONNECTION__OPERATION_MODES;
 				default: return -1;
 			}
 		}

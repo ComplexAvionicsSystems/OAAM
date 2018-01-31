@@ -51,7 +51,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.capabilities";
 
 	/**
 	 * The singleton instance of the package.
@@ -115,7 +115,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int CAPABILITIES_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -124,7 +124,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int CAPABILITIES_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int CAPABILITIES_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -142,7 +142,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int CAPABILITIES_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -151,7 +151,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int CAPABILITIES_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -160,7 +160,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int CAPABILITIES_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -169,7 +169,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int CAPABILITIES_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -178,7 +178,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int CAPABILITIES_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Function Capabilties</b></em>' containment reference list.
@@ -187,7 +187,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signal Capabilities</b></em>' containment reference list.
@@ -196,7 +196,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Device Capabilities</b></em>' containment reference list.
@@ -205,7 +205,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Sub Device Capabilities</b></em>' containment reference list.
@@ -214,7 +214,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Connection Capabilities</b></em>' containment reference list.
@@ -223,7 +223,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Subcapabilities</b></em>' containment reference list.
@@ -232,7 +232,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -241,7 +241,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -250,7 +250,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int CAPABILITIES_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.TaskCapabilityImpl <em>Task Capability</em>}' class.
@@ -1030,7 +1030,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ID = CommonPackage._ELEMENT_A__ID;
+	int RESOURCE_CONSUMPTION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1039,7 +1039,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int RESOURCE_CONSUMPTION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1048,7 +1048,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int RESOURCE_CONSUMPTION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1057,7 +1057,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_CONSUMPTION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1066,7 +1066,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_CONSUMPTION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1075,7 +1075,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int RESOURCE_CONSUMPTION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1084,7 +1084,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int RESOURCE_CONSUMPTION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1093,7 +1093,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int RESOURCE_CONSUMPTION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Count</b></em>' attribute.
@@ -1102,7 +1102,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_CONSUMPTION__COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Original Resource</b></em>' reference list.
@@ -1111,7 +1111,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ORIGINAL_RESOURCE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_CONSUMPTION__ORIGINAL_RESOURCE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1120,7 +1120,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE_CONSUMPTION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Resource Consumption</em>' class.
@@ -1129,7 +1129,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int RESOURCE_CONSUMPTION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Resource Consumption</em>' class.
@@ -1138,7 +1138,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_CONSUMPTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.

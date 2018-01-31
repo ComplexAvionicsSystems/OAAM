@@ -51,7 +51,7 @@ public interface MappingPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.mapping";
 
 	/**
 	 * The singleton instance of the package.
@@ -78,7 +78,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int MAPPING_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int MAPPING_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int MAPPING_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -105,7 +105,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int MAPPING_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int MAPPING_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int MAPPING_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int MAPPING_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -141,7 +141,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int MAPPING_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
@@ -150,7 +150,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__DEVICE_ASSIGNMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int MAPPING_CONTAINER_A__DEVICE_ASSIGNMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sub Device Assignments</b></em>' containment reference list.
@@ -159,7 +159,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__SUB_DEVICE_ASSIGNMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int MAPPING_CONTAINER_A__SUB_DEVICE_ASSIGNMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
@@ -168,7 +168,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__CONNECTION_ASSIGNMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int MAPPING_CONTAINER_A__CONNECTION_ASSIGNMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
@@ -177,7 +177,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__TASK_ASSIGNMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int MAPPING_CONTAINER_A__TASK_ASSIGNMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
@@ -186,7 +186,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__SIGNAL_ASSIGNMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int MAPPING_CONTAINER_A__SIGNAL_ASSIGNMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Supmapping</b></em>' containment reference list.
@@ -195,7 +195,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A__SUPMAPPING = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int MAPPING_CONTAINER_A__SUPMAPPING = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -204,7 +204,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int MAPPING_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -213,7 +213,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int MAPPING_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.TaskAssignmentImpl <em>Task Assignment</em>}' class.
@@ -232,7 +232,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_ASSIGNMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -241,7 +241,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_ASSIGNMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -250,7 +250,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_ASSIGNMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -259,7 +259,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_ASSIGNMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -268,7 +268,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_ASSIGNMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -277,7 +277,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_ASSIGNMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -286,7 +286,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_ASSIGNMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -295,7 +295,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_ASSIGNMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -304,7 +304,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_ASSIGNMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -313,7 +313,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_ASSIGNMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -322,7 +322,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__CAPABILITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_ASSIGNMENT__CAPABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -331,7 +331,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__TASK = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_ASSIGNMENT__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Device</b></em>' reference.
@@ -340,7 +340,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__DEVICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int TASK_ASSIGNMENT__DEVICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Schedule</b></em>' containment reference list.
@@ -349,7 +349,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__SCHEDULE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int TASK_ASSIGNMENT__SCHEDULE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Task Assignment</em>' class.
@@ -358,7 +358,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int TASK_ASSIGNMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Task Assignment</em>' class.
@@ -367,7 +367,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_ASSIGNMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.SignalAssignmentImpl <em>Signal Assignment</em>}' class.
@@ -386,7 +386,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int SIGNAL_ASSIGNMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -395,7 +395,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SIGNAL_ASSIGNMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -404,7 +404,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SIGNAL_ASSIGNMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -413,7 +413,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SIGNAL_ASSIGNMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -422,7 +422,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SIGNAL_ASSIGNMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -431,7 +431,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SIGNAL_ASSIGNMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -440,7 +440,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SIGNAL_ASSIGNMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -449,7 +449,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SIGNAL_ASSIGNMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -458,7 +458,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SIGNAL_ASSIGNMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -467,7 +467,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SIGNAL_ASSIGNMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
@@ -476,7 +476,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__SEGMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SIGNAL_ASSIGNMENT__SEGMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Signal</b></em>' reference.
@@ -485,7 +485,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT__SIGNAL = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SIGNAL_ASSIGNMENT__SIGNAL = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Signal Assignment</em>' class.
@@ -494,7 +494,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SIGNAL_ASSIGNMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Signal Assignment</em>' class.
@@ -503,7 +503,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SIGNAL_ASSIGNMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.ConnectionAssignmentImpl <em>Connection Assignment</em>}' class.
@@ -522,7 +522,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int CONNECTION_ASSIGNMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -531,7 +531,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int CONNECTION_ASSIGNMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -540,7 +540,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int CONNECTION_ASSIGNMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -549,7 +549,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int CONNECTION_ASSIGNMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -558,7 +558,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int CONNECTION_ASSIGNMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -567,7 +567,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int CONNECTION_ASSIGNMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -576,7 +576,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int CONNECTION_ASSIGNMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -585,7 +585,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int CONNECTION_ASSIGNMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -594,7 +594,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int CONNECTION_ASSIGNMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -603,7 +603,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int CONNECTION_ASSIGNMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
@@ -612,7 +612,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__SEGMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int CONNECTION_ASSIGNMENT__SEGMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Connection</b></em>' reference.
@@ -621,7 +621,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT__CONNECTION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int CONNECTION_ASSIGNMENT__CONNECTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Connection Assignment</em>' class.
@@ -630,7 +630,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int CONNECTION_ASSIGNMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Connection Assignment</em>' class.
@@ -639,7 +639,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int CONNECTION_ASSIGNMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.SignalAssignmentSegmentImpl <em>Signal Assignment Segment</em>}' class.
@@ -658,7 +658,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int SIGNAL_ASSIGNMENT_SEGMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -667,7 +667,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SIGNAL_ASSIGNMENT_SEGMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -676,7 +676,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SIGNAL_ASSIGNMENT_SEGMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -685,7 +685,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SIGNAL_ASSIGNMENT_SEGMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -694,7 +694,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SIGNAL_ASSIGNMENT_SEGMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -703,7 +703,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -712,7 +712,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -721,7 +721,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SIGNAL_ASSIGNMENT_SEGMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -730,7 +730,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SIGNAL_ASSIGNMENT_SEGMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -739,7 +739,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SIGNAL_ASSIGNMENT_SEGMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -748,7 +748,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Device</b></em>' reference.
@@ -757,7 +757,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__DEVICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SIGNAL_ASSIGNMENT_SEGMENT__DEVICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Connection</b></em>' reference.
@@ -766,7 +766,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Signal Assignment Segment</em>' class.
@@ -775,7 +775,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SIGNAL_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Signal Assignment Segment</em>' class.
@@ -784,7 +784,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SIGNAL_ASSIGNMENT_SEGMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.DeviceAssignmentImpl <em>Device Assignment</em>}' class.
@@ -803,7 +803,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int DEVICE_ASSIGNMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -812,7 +812,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DEVICE_ASSIGNMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -821,7 +821,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DEVICE_ASSIGNMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -830,7 +830,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DEVICE_ASSIGNMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -839,7 +839,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DEVICE_ASSIGNMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -848,7 +848,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DEVICE_ASSIGNMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -857,7 +857,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DEVICE_ASSIGNMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -866,7 +866,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DEVICE_ASSIGNMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -875,7 +875,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DEVICE_ASSIGNMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -884,7 +884,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int DEVICE_ASSIGNMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Device</b></em>' reference.
@@ -893,7 +893,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__DEVICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int DEVICE_ASSIGNMENT__DEVICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -902,7 +902,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__LOCATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int DEVICE_ASSIGNMENT__LOCATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -911,7 +911,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT__CAPABILITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int DEVICE_ASSIGNMENT__CAPABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Device Assignment</em>' class.
@@ -920,7 +920,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int DEVICE_ASSIGNMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Device Assignment</em>' class.
@@ -929,7 +929,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_ASSIGNMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DEVICE_ASSIGNMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.ConnectionAssignmentSegmentImpl <em>Connection Assignment Segment</em>}' class.
@@ -948,7 +948,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int CONNECTION_ASSIGNMENT_SEGMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -957,7 +957,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int CONNECTION_ASSIGNMENT_SEGMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -966,7 +966,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int CONNECTION_ASSIGNMENT_SEGMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -975,7 +975,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int CONNECTION_ASSIGNMENT_SEGMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -984,7 +984,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int CONNECTION_ASSIGNMENT_SEGMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -993,7 +993,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int CONNECTION_ASSIGNMENT_SEGMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1002,7 +1002,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int CONNECTION_ASSIGNMENT_SEGMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1011,7 +1011,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int CONNECTION_ASSIGNMENT_SEGMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1020,7 +1020,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int CONNECTION_ASSIGNMENT_SEGMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1029,7 +1029,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int CONNECTION_ASSIGNMENT_SEGMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -1038,7 +1038,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__CAPABILITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int CONNECTION_ASSIGNMENT_SEGMENT__CAPABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -1047,7 +1047,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__LOCATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int CONNECTION_ASSIGNMENT_SEGMENT__LOCATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Duct</b></em>' reference.
@@ -1056,7 +1056,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT__DUCT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int CONNECTION_ASSIGNMENT_SEGMENT__DUCT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Connection Assignment Segment</em>' class.
@@ -1065,7 +1065,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int CONNECTION_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Connection Assignment Segment</em>' class.
@@ -1074,7 +1074,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_ASSIGNMENT_SEGMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int CONNECTION_ASSIGNMENT_SEGMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.SubDeviceAssignmentImpl <em>Sub Device Assignment</em>}' class.
@@ -1093,7 +1093,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__ID = CommonPackage._ELEMENT_A__ID;
+	int SUB_DEVICE_ASSIGNMENT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1102,7 +1102,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SUB_DEVICE_ASSIGNMENT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1111,7 +1111,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SUB_DEVICE_ASSIGNMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1120,7 +1120,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SUB_DEVICE_ASSIGNMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1129,7 +1129,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SUB_DEVICE_ASSIGNMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1138,7 +1138,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SUB_DEVICE_ASSIGNMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1147,7 +1147,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SUB_DEVICE_ASSIGNMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1156,7 +1156,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SUB_DEVICE_ASSIGNMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1165,7 +1165,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SUB_DEVICE_ASSIGNMENT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1174,7 +1174,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SUB_DEVICE_ASSIGNMENT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -1183,7 +1183,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__CAPABILITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SUB_DEVICE_ASSIGNMENT__CAPABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Sub Device</b></em>' reference.
@@ -1192,7 +1192,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__SUB_DEVICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SUB_DEVICE_ASSIGNMENT__SUB_DEVICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Target Device</b></em>' reference.
@@ -1201,7 +1201,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT__TARGET_DEVICE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SUB_DEVICE_ASSIGNMENT__TARGET_DEVICE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Sub Device Assignment</em>' class.
@@ -1210,7 +1210,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SUB_DEVICE_ASSIGNMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Sub Device Assignment</em>' class.
@@ -1219,7 +1219,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_ASSIGNMENT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SUB_DEVICE_ASSIGNMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.MappingImpl <em>Mapping</em>}' class.
@@ -1565,7 +1565,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__ID = CommonPackage._ELEMENT_A__ID;
+	int SCHEDULE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1574,7 +1574,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SCHEDULE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1583,7 +1583,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SCHEDULE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1592,7 +1592,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SCHEDULE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1601,7 +1601,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SCHEDULE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1610,7 +1610,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SCHEDULE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1619,7 +1619,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SCHEDULE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1628,7 +1628,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SCHEDULE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1637,7 +1637,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SCHEDULE__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1646,7 +1646,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SCHEDULE__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Rate</b></em>' attribute.
@@ -1655,7 +1655,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SCHEDULE__RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Periodic</b></em>' attribute.
@@ -1664,7 +1664,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__IS_PERIODIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SCHEDULE__IS_PERIODIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Priority</b></em>' attribute.
@@ -1673,7 +1673,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__PRIORITY = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SCHEDULE__PRIORITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Scheduled Times</b></em>' containment reference list.
@@ -1682,7 +1682,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE__SCHEDULED_TIMES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SCHEDULE__SCHEDULED_TIMES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Schedule</em>' class.
@@ -1691,7 +1691,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int SCHEDULE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Schedule</em>' class.
@@ -1700,7 +1700,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULE_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SCHEDULE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.mapping.impl.ScheduledTimeImpl <em>Scheduled Time</em>}' class.
@@ -1719,7 +1719,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__ID = CommonPackage._ELEMENT_A__ID;
+	int SCHEDULED_TIME__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1728,7 +1728,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SCHEDULED_TIME__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1737,7 +1737,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SCHEDULED_TIME__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1746,7 +1746,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SCHEDULED_TIME__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1755,7 +1755,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SCHEDULED_TIME__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1764,7 +1764,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SCHEDULED_TIME__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1773,7 +1773,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SCHEDULED_TIME__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1782,7 +1782,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SCHEDULED_TIME__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1791,7 +1791,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SCHEDULED_TIME__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1800,7 +1800,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SCHEDULED_TIME__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Cycle</b></em>' attribute.
@@ -1809,7 +1809,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__CYCLE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SCHEDULED_TIME__CYCLE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -1818,7 +1818,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__START_TIME = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SCHEDULED_TIME__START_TIME = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -1827,7 +1827,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__DURATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SCHEDULED_TIME__DURATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Restart</b></em>' attribute.
@@ -1836,7 +1836,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME__RESTART = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SCHEDULED_TIME__RESTART = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Scheduled Time</em>' class.
@@ -1845,7 +1845,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int SCHEDULED_TIME_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Scheduled Time</em>' class.
@@ -1854,7 +1854,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULED_TIME_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SCHEDULED_TIME_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 
 	/**

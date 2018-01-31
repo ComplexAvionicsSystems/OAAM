@@ -2,13 +2,11 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.PowerSource;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -33,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface PowerSourceRestriction extends TaskRestrictionA, DeviceRestrictionA, SignalRestrictionA, SubFunctionRestrictionA, _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface PowerSourceRestriction extends TaskRestrictionA, DeviceRestrictionA, SignalRestrictionA, SubFunctionRestrictionA, ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Power Source Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

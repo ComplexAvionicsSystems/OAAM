@@ -4,8 +4,7 @@ package de.oaam.model.oaam.util;
 
 import de.oaam.model.oaam.*;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -71,7 +70,7 @@ public class OaamSwitch<T> extends Switch<T> {
 			case OaamPackage.ARCHITECTURE: {
 				Architecture architecture = (Architecture)theEObject;
 				T result = caseArchitecture(architecture);
-				if (result == null) result = case_ElementA(architecture);
+				if (result == null) result = caseElementA(architecture);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -105,7 +104,7 @@ public class OaamSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 

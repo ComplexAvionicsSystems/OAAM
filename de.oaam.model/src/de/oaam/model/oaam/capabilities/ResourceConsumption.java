@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.capabilities;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
 import org.eclipse.emf.common.util.EList;
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ResourceConsumption extends _ElementA {
+public interface ResourceConsumption extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Count</b></em>' attribute.
 	 * <!-- begin-user-doc -->

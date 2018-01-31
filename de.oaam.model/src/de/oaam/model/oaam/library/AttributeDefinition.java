@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
+import de.oaam.model.oaam.common.ElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import de.oaam.model.oaam.common._ElementA;
  * @model
  * @generated
  */
-public interface AttributeDefinition extends _ElementA {
+public interface AttributeDefinition extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Data Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.library.AttributeTypesE}.

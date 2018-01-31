@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.DataTypeA;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.InternalStateDefinition;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InternalStateDefinitionImpl extends _ElementAImpl implements InternalStateDefinition {
+public class InternalStateDefinitionImpl extends ElementAImpl implements InternalStateDefinition {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->

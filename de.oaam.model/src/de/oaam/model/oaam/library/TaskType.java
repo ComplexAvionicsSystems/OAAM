@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TaskType extends ResourceConsumerA, _ElementA {
+public interface TaskType extends ResourceConsumerA, ElementA {
 	/**
 	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.OutputDeclaration}.

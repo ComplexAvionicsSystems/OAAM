@@ -53,7 +53,7 @@ public interface AnatomyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.anatomy";
 
 	/**
 	 * The singleton instance of the package.
@@ -80,7 +80,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int ANATOMY_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -89,7 +89,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int ANATOMY_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -98,7 +98,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int ANATOMY_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -107,7 +107,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int ANATOMY_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -116,7 +116,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int ANATOMY_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -125,7 +125,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int ANATOMY_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -134,7 +134,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int ANATOMY_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -143,7 +143,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int ANATOMY_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
@@ -152,7 +152,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__LOCATIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int ANATOMY_CONTAINER_A__LOCATIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Location Symmetries</b></em>' containment reference list.
@@ -161,7 +161,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__LOCATION_SYMMETRIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int ANATOMY_CONTAINER_A__LOCATION_SYMMETRIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Ducts</b></em>' containment reference list.
@@ -170,7 +170,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__DUCTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int ANATOMY_CONTAINER_A__DUCTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Areas</b></em>' containment reference list.
@@ -179,7 +179,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__AREAS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int ANATOMY_CONTAINER_A__AREAS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Subanatomies</b></em>' containment reference list.
@@ -188,7 +188,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A__SUBANATOMIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int ANATOMY_CONTAINER_A__SUBANATOMIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -197,7 +197,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int ANATOMY_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -206,7 +206,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int ANATOMY_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.LocationImpl <em>Location</em>}' class.
@@ -379,7 +379,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__ID = CommonPackage._ELEMENT_A__ID;
+	int AREA__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -388,7 +388,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__NAME = CommonPackage._ELEMENT_A__NAME;
+	int AREA__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -397,7 +397,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int AREA__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -406,7 +406,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int AREA__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -415,7 +415,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int AREA__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -424,7 +424,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int AREA__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -433,7 +433,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int AREA__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -442,7 +442,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int AREA__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -451,7 +451,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int AREA__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -460,7 +460,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int AREA__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' reference list.
@@ -469,7 +469,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__LOCATIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int AREA__LOCATIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Ducts</b></em>' reference list.
@@ -478,7 +478,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA__DUCTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int AREA__DUCTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Area</em>' class.
@@ -487,7 +487,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int AREA_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Area</em>' class.
@@ -496,7 +496,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int AREA_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.DuctImpl <em>Duct</em>}' class.
@@ -678,7 +678,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__ID = CommonPackage._ELEMENT_A__ID;
+	int DUCT_OPENING__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -687,7 +687,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DUCT_OPENING__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -696,7 +696,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DUCT_OPENING__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -705,7 +705,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DUCT_OPENING__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -714,7 +714,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DUCT_OPENING__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -723,7 +723,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DUCT_OPENING__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -732,7 +732,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DUCT_OPENING__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -741,7 +741,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DUCT_OPENING__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -750,7 +750,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DUCT_OPENING__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -759,7 +759,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int DUCT_OPENING__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Relativ Position</b></em>' containment reference.
@@ -768,7 +768,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__RELATIV_POSITION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int DUCT_OPENING__RELATIV_POSITION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Declaration</b></em>' reference.
@@ -777,7 +777,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING__DECLARATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int DUCT_OPENING__DECLARATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Duct Opening</em>' class.
@@ -786,7 +786,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int DUCT_OPENING_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Duct Opening</em>' class.
@@ -795,7 +795,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DUCT_OPENING_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DUCT_OPENING_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.Position3DImpl <em>Position3 D</em>}' class.
@@ -814,7 +814,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__ID = CommonPackage._ELEMENT_A__ID;
+	int POSITION3_D__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -823,7 +823,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__NAME = CommonPackage._ELEMENT_A__NAME;
+	int POSITION3_D__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -832,7 +832,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int POSITION3_D__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -841,7 +841,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int POSITION3_D__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -850,7 +850,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int POSITION3_D__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -859,7 +859,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int POSITION3_D__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -868,7 +868,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int POSITION3_D__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -877,7 +877,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int POSITION3_D__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -886,7 +886,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int POSITION3_D__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -895,7 +895,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int POSITION3_D__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -904,7 +904,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__X = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int POSITION3_D__X = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -913,7 +913,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__Y = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int POSITION3_D__Y = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Z</b></em>' attribute.
@@ -922,7 +922,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D__Z = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int POSITION3_D__Z = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Position3 D</em>' class.
@@ -931,7 +931,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int POSITION3_D_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Position3 D</em>' class.
@@ -940,7 +940,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION3_D_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int POSITION3_D_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.LocationSymmetryImpl <em>Location Symmetry</em>}' class.
@@ -959,7 +959,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__ID = CommonPackage._ELEMENT_A__ID;
+	int LOCATION_SYMMETRY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -968,7 +968,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int LOCATION_SYMMETRY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -977,7 +977,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int LOCATION_SYMMETRY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -986,7 +986,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int LOCATION_SYMMETRY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -995,7 +995,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int LOCATION_SYMMETRY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1004,7 +1004,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int LOCATION_SYMMETRY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1013,7 +1013,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int LOCATION_SYMMETRY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1022,7 +1022,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int LOCATION_SYMMETRY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1031,7 +1031,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int LOCATION_SYMMETRY__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1040,7 +1040,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int LOCATION_SYMMETRY__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' reference list.
@@ -1049,7 +1049,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY__LOCATIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int LOCATION_SYMMETRY__LOCATIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Location Symmetry</em>' class.
@@ -1058,7 +1058,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int LOCATION_SYMMETRY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Location Symmetry</em>' class.
@@ -1067,7 +1067,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_SYMMETRY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int LOCATION_SYMMETRY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.

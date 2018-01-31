@@ -35,15 +35,15 @@
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/EndianessE/BIG"/>
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/EndianessE/LITTLE"/>
       </genEnums>
-      <genClasses image="false" ecoreClass="oaam.ecore#//common/_ElementA">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/id"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/style"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//common/_ElementA/attributes"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/documentation"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/modified"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/modifier"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/_ElementA/traceLink"/>
+      <genClasses image="false" ecoreClass="oaam.ecore#//common/ElementA">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/style"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//common/ElementA/attributes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/documentation"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/modified"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/modifier"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/traceLink"/>
       </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//common/BoolA"/>
       <genClasses image="false" ecoreClass="oaam.ecore#//common/AttributeA"/>
@@ -352,12 +352,12 @@
     <nestedGenPackages prefix="Scenario" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//scenario">
       <genClasses image="false" ecoreClass="oaam.ecore#//scenario/ParameterA"/>
-      <genClasses image="false" ecoreClass="oaam.ecore#//scenario/_ModeDependentElementA">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//scenario/_ModeDependentElementA/operationModes"/>
+      <genClasses image="false" ecoreClass="oaam.ecore#//scenario/ModeDependentElementA">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//scenario/ModeDependentElementA/operationModes"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="oaam.ecore#//scenario/_VariantDependentElementA">
+      <genClasses image="false" ecoreClass="oaam.ecore#//scenario/VariantDependentElementA">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//scenario/_VariantDependentElementA/variants"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//scenario/VariantDependentElementA/variants"/>
       </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//scenario/ScenarioContainerA">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//scenario/ScenarioContainerA/parameters"/>

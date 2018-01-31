@@ -2,14 +2,12 @@
  */
 package de.oaam.model.oaam.systems.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.ProvidedOutputA;
 import de.oaam.model.oaam.systems.RequiredInputA;
 import de.oaam.model.oaam.systems.SystemsPackage;
@@ -43,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SystemImpl extends _ElementAImpl implements de.oaam.model.oaam.systems.System {
+public class SystemImpl extends ElementAImpl implements de.oaam.model.oaam.systems.System {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -269,15 +267,15 @@ public class SystemImpl extends _ElementAImpl implements de.oaam.model.oaam.syst
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.SYSTEM__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case SystemsPackage.SYSTEM__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.SYSTEM__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case SystemsPackage.SYSTEM__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -291,15 +289,15 @@ public class SystemImpl extends _ElementAImpl implements de.oaam.model.oaam.syst
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return SystemsPackage.SYSTEM__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return SystemsPackage.SYSTEM__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return SystemsPackage.SYSTEM__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return SystemsPackage.SYSTEM__OPERATION_MODES;
 				default: return -1;
 			}
 		}

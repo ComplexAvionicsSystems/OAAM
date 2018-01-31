@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Output;
 
@@ -11,12 +10,11 @@ import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.OutputDeclaration;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.ProvidedOutputA;
 
 import java.util.Collection;
@@ -53,7 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class OutputImpl extends _ElementAImpl implements Output {
+public class OutputImpl extends ElementAImpl implements Output {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -411,15 +409,15 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case FunctionsPackage.OUTPUT__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case FunctionsPackage.OUTPUT__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case FunctionsPackage.OUTPUT__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case FunctionsPackage.OUTPUT__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -433,15 +431,15 @@ public class OutputImpl extends _ElementAImpl implements Output {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return FunctionsPackage.OUTPUT__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return FunctionsPackage.OUTPUT__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return FunctionsPackage.OUTPUT__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return FunctionsPackage.OUTPUT__OPERATION_MODES;
 				default: return -1;
 			}
 		}

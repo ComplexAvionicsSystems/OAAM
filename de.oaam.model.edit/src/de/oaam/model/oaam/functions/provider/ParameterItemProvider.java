@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.functions.provider;
 
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Parameter;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterItemProvider extends _ElementAItemProvider {
+public class ParameterItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

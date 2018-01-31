@@ -5,12 +5,11 @@ package de.oaam.model.oaam.capabilities.impl;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.Subcapability;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -194,15 +193,15 @@ public class SubcapabilityImpl extends CapabilitiesContainerAImpl implements Sub
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case CapabilitiesPackage.SUBCAPABILITY__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case CapabilitiesPackage.SUBCAPABILITY__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case CapabilitiesPackage.SUBCAPABILITY__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case CapabilitiesPackage.SUBCAPABILITY__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
@@ -216,15 +215,15 @@ public class SubcapabilityImpl extends CapabilitiesContainerAImpl implements Sub
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return CapabilitiesPackage.SUBCAPABILITY__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return CapabilitiesPackage.SUBCAPABILITY__OPERATION_MODES;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return CapabilitiesPackage.SUBCAPABILITY__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return CapabilitiesPackage.SUBCAPABILITY__VARIANTS;
 				default: return -1;
 			}
 		}

@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.restrictions.AreaRestriction;
 import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
@@ -59,7 +58,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class RestrictionsContainerAImpl extends _ElementAImpl implements RestrictionsContainerA {
+public abstract class RestrictionsContainerAImpl extends ElementAImpl implements RestrictionsContainerA {
 	/**
 	 * The cached value of the '{@link #getDeviceTypeRestrictions() <em>Device Type Restrictions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -6,8 +6,7 @@ package de.oaam.model.oaam.capabilities.provider;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceConsumptionItemProvider extends _ElementAItemProvider {
+public class ResourceConsumptionItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

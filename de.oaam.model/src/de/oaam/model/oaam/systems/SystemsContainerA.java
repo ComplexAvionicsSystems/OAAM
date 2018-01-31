@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -29,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface SystemsContainerA extends _ElementA {
+public interface SystemsContainerA extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Systems</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.systems.System}.

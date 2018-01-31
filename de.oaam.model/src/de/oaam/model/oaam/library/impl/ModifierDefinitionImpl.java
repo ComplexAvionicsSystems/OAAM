@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ModifierDefinition;
 import de.oaam.model.oaam.library.ModifierLevel;
@@ -36,7 +35,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ModifierDefinitionImpl extends _ElementAImpl implements ModifierDefinition {
+public class ModifierDefinitionImpl extends ElementAImpl implements ModifierDefinition {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->

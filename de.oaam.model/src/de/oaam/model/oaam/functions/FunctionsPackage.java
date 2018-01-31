@@ -51,7 +51,7 @@ public interface FunctionsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.functions";
 
 	/**
 	 * The singleton instance of the package.
@@ -78,7 +78,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int FUNCTIONS_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int FUNCTIONS_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int FUNCTIONS_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -105,7 +105,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int FUNCTIONS_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int FUNCTIONS_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int FUNCTIONS_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int FUNCTIONS_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -141,7 +141,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int FUNCTIONS_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -150,7 +150,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int FUNCTIONS_CONTAINER_A__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -159,7 +159,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int FUNCTIONS_CONTAINER_A__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Atomic</b></em>' attribute.
@@ -168,7 +168,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__IS_ATOMIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int FUNCTIONS_CONTAINER_A__IS_ATOMIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -177,7 +177,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Task Links</b></em>' containment reference list.
@@ -186,7 +186,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups</b></em>' containment reference list.
@@ -195,7 +195,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Task Symmetries</b></em>' containment reference list.
@@ -204,7 +204,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Task Redundancies</b></em>' containment reference list.
@@ -213,7 +213,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
@@ -222,7 +222,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Signal Groups</b></em>' containment reference list.
@@ -231,7 +231,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Failure Events</b></em>' containment reference list.
@@ -240,7 +240,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -249,7 +249,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 11;
+	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -258,7 +258,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 12;
+	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -267,7 +267,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int FUNCTIONS_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.FunctionsImpl <em>Functions</em>}' class.
@@ -494,7 +494,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -503,7 +503,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -512,7 +512,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -521,7 +521,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -530,7 +530,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -539,7 +539,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -548,7 +548,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -557,7 +557,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -566,7 +566,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -575,7 +575,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -584,7 +584,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
@@ -593,7 +593,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__INPUTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK__INPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
@@ -602,7 +602,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__OUTPUTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int TASK__OUTPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -611,7 +611,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__IMPLEMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int TASK__IMPLEMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Device Binding</b></em>' reference.
@@ -620,7 +620,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__DEVICE_BINDING = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int TASK__DEVICE_BINDING = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>NParallels</b></em>' attribute.
@@ -629,7 +629,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__NPARALLELS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int TASK__NPARALLELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
@@ -638,7 +638,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 8;
+	int TASK__FIXED_RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -647,7 +647,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__PARAMETERS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 9;
+	int TASK__PARAMETERS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Task</em>' class.
@@ -656,7 +656,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 10;
+	int TASK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -665,7 +665,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskLinkImpl <em>Task Link</em>}' class.
@@ -684,7 +684,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_LINK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -693,7 +693,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -702,7 +702,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -711,7 +711,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -720,7 +720,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -729,7 +729,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -738,7 +738,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -747,7 +747,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -756,7 +756,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -765,7 +765,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -774,7 +774,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_LINK__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
@@ -783,7 +783,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__INPUTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_LINK__INPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
@@ -792,7 +792,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__OUTPUTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int TASK_LINK__OUTPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -801,7 +801,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TASK = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int TASK_LINK__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' attribute.
@@ -810,7 +810,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__FILTER = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int TASK_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Task Link</em>' class.
@@ -819,7 +819,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int TASK_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Task Link</em>' class.
@@ -828,7 +828,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl <em>Task Group</em>}' class.
@@ -847,7 +847,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_GROUP__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -856,7 +856,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_GROUP__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -865,7 +865,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_GROUP__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -874,7 +874,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_GROUP__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -883,7 +883,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_GROUP__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -892,7 +892,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_GROUP__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -901,7 +901,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_GROUP__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -910,7 +910,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_GROUP__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -919,7 +919,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_GROUP__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -928,7 +928,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_GROUP__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -937,7 +937,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__TASKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_GROUP__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Atomic</b></em>' attribute.
@@ -946,7 +946,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP__IS_ATOMIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_GROUP__IS_ATOMIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Task Group</em>' class.
@@ -955,7 +955,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int TASK_GROUP_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Task Group</em>' class.
@@ -964,7 +964,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_GROUP_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_GROUP_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskSymmetryImpl <em>Task Symmetry</em>}' class.
@@ -983,7 +983,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_SYMMETRY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -992,7 +992,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_SYMMETRY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1001,7 +1001,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_SYMMETRY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1010,7 +1010,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_SYMMETRY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1019,7 +1019,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_SYMMETRY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1028,7 +1028,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_SYMMETRY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1037,7 +1037,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_SYMMETRY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1046,7 +1046,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_SYMMETRY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1055,7 +1055,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_SYMMETRY__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1064,7 +1064,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_SYMMETRY__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1073,7 +1073,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY__TASKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_SYMMETRY__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Task Symmetry</em>' class.
@@ -1082,7 +1082,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_SYMMETRY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Task Symmetry</em>' class.
@@ -1091,7 +1091,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_SYMMETRY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskRedundancyImpl <em>Task Redundancy</em>}' class.
@@ -1110,7 +1110,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__ID = CommonPackage._ELEMENT_A__ID;
+	int TASK_REDUNDANCY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1119,7 +1119,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int TASK_REDUNDANCY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1128,7 +1128,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int TASK_REDUNDANCY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1137,7 +1137,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int TASK_REDUNDANCY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1146,7 +1146,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int TASK_REDUNDANCY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1155,7 +1155,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int TASK_REDUNDANCY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1164,7 +1164,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int TASK_REDUNDANCY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1173,7 +1173,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int TASK_REDUNDANCY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1182,7 +1182,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_REDUNDANCY__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1191,7 +1191,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_REDUNDANCY__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1200,7 +1200,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY__TASKS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_REDUNDANCY__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Task Redundancy</em>' class.
@@ -1209,7 +1209,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_REDUNDANCY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Task Redundancy</em>' class.
@@ -1218,7 +1218,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_REDUNDANCY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_REDUNDANCY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl <em>Failure Condition</em>}' class.
@@ -1237,7 +1237,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__ID = CommonPackage._ELEMENT_A__ID;
+	int FAILURE_CONDITION__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1246,7 +1246,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__NAME = CommonPackage._ELEMENT_A__NAME;
+	int FAILURE_CONDITION__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1255,7 +1255,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int FAILURE_CONDITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1264,7 +1264,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int FAILURE_CONDITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1273,7 +1273,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int FAILURE_CONDITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1282,7 +1282,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int FAILURE_CONDITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1291,7 +1291,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int FAILURE_CONDITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1300,7 +1300,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int FAILURE_CONDITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1309,7 +1309,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int FAILURE_CONDITION__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1318,7 +1318,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int FAILURE_CONDITION__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
@@ -1327,7 +1327,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__LOGIC = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int FAILURE_CONDITION__LOGIC = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Max Occurrence Rate</b></em>' attribute.
@@ -1336,7 +1336,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__MAX_OCCURRENCE_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int FAILURE_CONDITION__MAX_OCCURRENCE_RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>No Single Failure</b></em>' attribute.
@@ -1345,7 +1345,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__NO_SINGLE_FAILURE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int FAILURE_CONDITION__NO_SINGLE_FAILURE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Failure Condition</em>' class.
@@ -1354,7 +1354,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Failure Condition</em>' class.
@@ -1363,7 +1363,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int FAILURE_CONDITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SystemInputStateImpl <em>System Input State</em>}' class.
@@ -1518,7 +1518,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__ID = CommonPackage._ELEMENT_A__ID;
+	int SIGNAL__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1527,7 +1527,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SIGNAL__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1536,7 +1536,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SIGNAL__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1545,7 +1545,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SIGNAL__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1554,7 +1554,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SIGNAL__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1563,7 +1563,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SIGNAL__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1572,7 +1572,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SIGNAL__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1581,7 +1581,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SIGNAL__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1590,7 +1590,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SIGNAL__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1599,7 +1599,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SIGNAL__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -1608,7 +1608,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__SOURCE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SIGNAL__SOURCE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
@@ -1617,7 +1617,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__TARGET = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SIGNAL__TARGET = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1626,7 +1626,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__TYPE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int SIGNAL__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>In Index</b></em>' attribute.
@@ -1635,7 +1635,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__IN_INDEX = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int SIGNAL__IN_INDEX = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Out Index</b></em>' attribute.
@@ -1644,7 +1644,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__OUT_INDEX = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int SIGNAL__OUT_INDEX = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Signal</em>' class.
@@ -1653,7 +1653,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int SIGNAL_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Signal</em>' class.
@@ -1662,7 +1662,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SIGNAL_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SignalGroupImpl <em>Signal Group</em>}' class.
@@ -1681,7 +1681,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__ID = CommonPackage._ELEMENT_A__ID;
+	int SIGNAL_GROUP__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1690,7 +1690,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__NAME = CommonPackage._ELEMENT_A__NAME;
+	int SIGNAL_GROUP__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1699,7 +1699,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int SIGNAL_GROUP__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1708,7 +1708,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int SIGNAL_GROUP__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1717,7 +1717,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int SIGNAL_GROUP__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1726,7 +1726,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int SIGNAL_GROUP__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1735,7 +1735,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int SIGNAL_GROUP__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1744,7 +1744,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int SIGNAL_GROUP__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1753,7 +1753,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int SIGNAL_GROUP__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1762,7 +1762,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int SIGNAL_GROUP__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -1771,7 +1771,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP__SIGNALS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int SIGNAL_GROUP__SIGNALS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Signal Group</em>' class.
@@ -1780,7 +1780,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int SIGNAL_GROUP_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Signal Group</em>' class.
@@ -1789,7 +1789,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_GROUP_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int SIGNAL_GROUP_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.InputImpl <em>Input</em>}' class.
@@ -1808,7 +1808,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__ID = CommonPackage._ELEMENT_A__ID;
+	int INPUT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1817,7 +1817,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int INPUT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1826,7 +1826,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int INPUT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1835,7 +1835,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int INPUT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1844,7 +1844,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int INPUT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1853,7 +1853,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int INPUT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1862,7 +1862,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int INPUT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1871,7 +1871,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int INPUT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1880,7 +1880,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int INPUT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1889,7 +1889,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int INPUT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Declaration</b></em>' reference.
@@ -1898,7 +1898,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__DECLARATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int INPUT__DECLARATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -1907,7 +1907,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__IMPLEMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int INPUT__IMPLEMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Io Bindings</b></em>' reference list.
@@ -1916,7 +1916,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__IO_BINDINGS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int INPUT__IO_BINDINGS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Queue Length</b></em>' attribute.
@@ -1925,7 +1925,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__QUEUE_LENGTH = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int INPUT__QUEUE_LENGTH = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Output Link</b></em>' containment reference.
@@ -1934,7 +1934,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__OUTPUT_LINK = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int INPUT__OUTPUT_LINK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -1943,7 +1943,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 7;
+	int INPUT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Input</em>' class.
@@ -1952,7 +1952,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int INPUT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.OutputImpl <em>Output</em>}' class.
@@ -1971,7 +1971,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__ID = CommonPackage._ELEMENT_A__ID;
+	int OUTPUT__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1980,7 +1980,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__NAME = CommonPackage._ELEMENT_A__NAME;
+	int OUTPUT__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1989,7 +1989,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int OUTPUT__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1998,7 +1998,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int OUTPUT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2007,7 +2007,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int OUTPUT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2016,7 +2016,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int OUTPUT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2025,7 +2025,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int OUTPUT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2034,7 +2034,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int OUTPUT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2043,7 +2043,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int OUTPUT__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2052,7 +2052,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int OUTPUT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -2061,7 +2061,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__IMPLEMENTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int OUTPUT__IMPLEMENTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Declaration</b></em>' reference.
@@ -2070,7 +2070,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__DECLARATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int OUTPUT__DECLARATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Io Bindings</b></em>' reference list.
@@ -2079,7 +2079,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__IO_BINDINGS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int OUTPUT__IO_BINDINGS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
@@ -2088,7 +2088,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__FIXED_RATE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 5;
+	int OUTPUT__FIXED_RATE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Output</em>' class.
@@ -2097,7 +2097,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 6;
+	int OUTPUT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Output</em>' class.
@@ -2106,7 +2106,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int OUTPUT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.OutputLinkImpl <em>Output Link</em>}' class.
@@ -2125,7 +2125,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__ID = CommonPackage._ELEMENT_A__ID;
+	int OUTPUT_LINK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2134,7 +2134,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__NAME = CommonPackage._ELEMENT_A__NAME;
+	int OUTPUT_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2143,7 +2143,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int OUTPUT_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2152,7 +2152,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int OUTPUT_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2161,7 +2161,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int OUTPUT_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2170,7 +2170,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int OUTPUT_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2179,7 +2179,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int OUTPUT_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2188,7 +2188,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int OUTPUT_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2197,7 +2197,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int OUTPUT_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2206,7 +2206,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int OUTPUT_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -2215,7 +2215,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__OUTPUT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int OUTPUT_LINK__OUTPUT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' attribute.
@@ -2224,7 +2224,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__FILTER = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int OUTPUT_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Output Link</em>' class.
@@ -2233,7 +2233,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int OUTPUT_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Output Link</em>' class.
@@ -2242,7 +2242,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int OUTPUT_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SubfunctionImpl <em>Subfunction</em>}' class.
@@ -2488,7 +2488,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__ID = CommonPackage._ELEMENT_A__ID;
+	int PARAMETER__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2497,7 +2497,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__NAME = CommonPackage._ELEMENT_A__NAME;
+	int PARAMETER__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2506,7 +2506,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int PARAMETER__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2515,7 +2515,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int PARAMETER__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2524,7 +2524,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int PARAMETER__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2533,7 +2533,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int PARAMETER__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2542,7 +2542,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int PARAMETER__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2551,7 +2551,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int PARAMETER__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Definition</b></em>' reference.
@@ -2560,7 +2560,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__DEFINITION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int PARAMETER__DEFINITION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2569,7 +2569,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__VALUE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int PARAMETER__VALUE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Parameter</em>' class.
@@ -2578,7 +2578,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int PARAMETER_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Parameter</em>' class.
@@ -2587,7 +2587,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int PARAMETER_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 
 	/**

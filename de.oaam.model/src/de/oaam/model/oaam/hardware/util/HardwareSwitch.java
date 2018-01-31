@@ -2,15 +2,13 @@
  */
 package de.oaam.model.oaam.hardware.util;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -76,7 +74,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 			case HardwarePackage.HARDWARE_CONTAINER_A: {
 				HardwareContainerA hardwareContainerA = (HardwareContainerA)theEObject;
 				T result = caseHardwareContainerA(hardwareContainerA);
-				if (result == null) result = case_ElementA(hardwareContainerA);
+				if (result == null) result = caseElementA(hardwareContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,9 +82,9 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Device device = (Device)theEObject;
 				T result = caseDevice(device);
 				if (result == null) result = caseResourceProviderInstanceA(device);
-				if (result == null) result = case_ElementA(device);
-				if (result == null) result = case_VariantDependentElementA(device);
-				if (result == null) result = case_ModeDependentElementA(device);
+				if (result == null) result = caseElementA(device);
+				if (result == null) result = caseVariantDependentElementA(device);
+				if (result == null) result = caseModeDependentElementA(device);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -94,27 +92,27 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
 				if (result == null) result = caseResourceProviderInstanceA(connection);
-				if (result == null) result = case_ElementA(connection);
-				if (result == null) result = case_VariantDependentElementA(connection);
-				if (result == null) result = case_ModeDependentElementA(connection);
+				if (result == null) result = caseElementA(connection);
+				if (result == null) result = caseVariantDependentElementA(connection);
+				if (result == null) result = caseModeDependentElementA(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case HardwarePackage.IO: {
 				Io io = (Io)theEObject;
 				T result = caseIo(io);
-				if (result == null) result = case_ElementA(io);
-				if (result == null) result = case_VariantDependentElementA(io);
-				if (result == null) result = case_ModeDependentElementA(io);
+				if (result == null) result = caseElementA(io);
+				if (result == null) result = caseVariantDependentElementA(io);
+				if (result == null) result = caseModeDependentElementA(io);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case HardwarePackage.DEVICE_SYMMETRY: {
 				DeviceSymmetry deviceSymmetry = (DeviceSymmetry)theEObject;
 				T result = caseDeviceSymmetry(deviceSymmetry);
-				if (result == null) result = case_ElementA(deviceSymmetry);
-				if (result == null) result = case_VariantDependentElementA(deviceSymmetry);
-				if (result == null) result = case_ModeDependentElementA(deviceSymmetry);
+				if (result == null) result = caseElementA(deviceSymmetry);
+				if (result == null) result = caseVariantDependentElementA(deviceSymmetry);
+				if (result == null) result = caseModeDependentElementA(deviceSymmetry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -122,9 +120,9 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Hardware hardware = (Hardware)theEObject;
 				T result = caseHardware(hardware);
 				if (result == null) result = caseHardwareContainerA(hardware);
-				if (result == null) result = case_VariantDependentElementA(hardware);
-				if (result == null) result = case_ModeDependentElementA(hardware);
-				if (result == null) result = case_ElementA(hardware);
+				if (result == null) result = caseVariantDependentElementA(hardware);
+				if (result == null) result = caseModeDependentElementA(hardware);
+				if (result == null) result = caseElementA(hardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,9 +130,9 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Subhardware subhardware = (Subhardware)theEObject;
 				T result = caseSubhardware(subhardware);
 				if (result == null) result = caseHardwareContainerA(subhardware);
-				if (result == null) result = case_VariantDependentElementA(subhardware);
-				if (result == null) result = case_ModeDependentElementA(subhardware);
-				if (result == null) result = case_ElementA(subhardware);
+				if (result == null) result = caseVariantDependentElementA(subhardware);
+				if (result == null) result = caseModeDependentElementA(subhardware);
+				if (result == null) result = caseElementA(subhardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -258,7 +256,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 
@@ -288,7 +286,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -303,7 +301,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 

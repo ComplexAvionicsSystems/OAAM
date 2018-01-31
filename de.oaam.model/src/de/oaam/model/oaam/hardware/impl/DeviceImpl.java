@@ -6,8 +6,7 @@ import de.oaam.model.oaam.anatomy.Location;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
@@ -17,12 +16,11 @@ import de.oaam.model.oaam.library.PowerSource;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -836,28 +834,28 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.DEVICE__ID: return CommonPackage._ELEMENT_A__ID;
-				case HardwarePackage.DEVICE__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case HardwarePackage.DEVICE__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case HardwarePackage.DEVICE__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case HardwarePackage.DEVICE__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case HardwarePackage.DEVICE__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case HardwarePackage.DEVICE__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case HardwarePackage.DEVICE__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case HardwarePackage.DEVICE__ID: return CommonPackage.ELEMENT_A__ID;
+				case HardwarePackage.DEVICE__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case HardwarePackage.DEVICE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case HardwarePackage.DEVICE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case HardwarePackage.DEVICE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case HardwarePackage.DEVICE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case HardwarePackage.DEVICE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case HardwarePackage.DEVICE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.DEVICE__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case HardwarePackage.DEVICE__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.DEVICE__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case HardwarePackage.DEVICE__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -871,28 +869,28 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return HardwarePackage.DEVICE__ID;
-				case CommonPackage._ELEMENT_A__NAME: return HardwarePackage.DEVICE__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return HardwarePackage.DEVICE__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return HardwarePackage.DEVICE__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return HardwarePackage.DEVICE__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return HardwarePackage.DEVICE__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return HardwarePackage.DEVICE__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return HardwarePackage.DEVICE__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return HardwarePackage.DEVICE__ID;
+				case CommonPackage.ELEMENT_A__NAME: return HardwarePackage.DEVICE__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return HardwarePackage.DEVICE__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return HardwarePackage.DEVICE__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return HardwarePackage.DEVICE__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return HardwarePackage.DEVICE__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return HardwarePackage.DEVICE__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return HardwarePackage.DEVICE__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return HardwarePackage.DEVICE__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return HardwarePackage.DEVICE__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return HardwarePackage.DEVICE__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return HardwarePackage.DEVICE__OPERATION_MODES;
 				default: return -1;
 			}
 		}

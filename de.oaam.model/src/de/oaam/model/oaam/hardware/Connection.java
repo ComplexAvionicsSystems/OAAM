@@ -2,14 +2,12 @@
  */
 package de.oaam.model.oaam.hardware;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -33,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Connection extends ResourceProviderInstanceA, _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface Connection extends ResourceProviderInstanceA, ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

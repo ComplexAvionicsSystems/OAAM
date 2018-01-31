@@ -6,8 +6,7 @@ import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -590,16 +589,16 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case CommonPackage.BOOL_NOT__ID: return CommonPackage._ELEMENT_A__ID;
-				case CommonPackage.BOOL_NOT__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case CommonPackage.BOOL_NOT__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case CommonPackage.BOOL_NOT__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case CommonPackage.BOOL_NOT__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case CommonPackage.BOOL_NOT__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case CommonPackage.BOOL_NOT__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case CommonPackage.BOOL_NOT__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case CommonPackage.BOOL_NOT__ID: return CommonPackage.ELEMENT_A__ID;
+				case CommonPackage.BOOL_NOT__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case CommonPackage.BOOL_NOT__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case CommonPackage.BOOL_NOT__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case CommonPackage.BOOL_NOT__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case CommonPackage.BOOL_NOT__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case CommonPackage.BOOL_NOT__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case CommonPackage.BOOL_NOT__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -613,16 +612,16 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return CommonPackage.BOOL_NOT__ID;
-				case CommonPackage._ELEMENT_A__NAME: return CommonPackage.BOOL_NOT__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return CommonPackage.BOOL_NOT__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return CommonPackage.BOOL_NOT__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return CommonPackage.BOOL_NOT__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return CommonPackage.BOOL_NOT__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return CommonPackage.BOOL_NOT__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return CommonPackage.BOOL_NOT__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return CommonPackage.BOOL_NOT__ID;
+				case CommonPackage.ELEMENT_A__NAME: return CommonPackage.BOOL_NOT__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return CommonPackage.BOOL_NOT__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return CommonPackage.BOOL_NOT__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return CommonPackage.BOOL_NOT__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return CommonPackage.BOOL_NOT__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return CommonPackage.BOOL_NOT__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return CommonPackage.BOOL_NOT__TRACE_LINK;
 				default: return -1;
 			}
 		}

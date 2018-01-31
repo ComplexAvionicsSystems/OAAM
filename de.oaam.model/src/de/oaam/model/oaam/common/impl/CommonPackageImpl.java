@@ -25,12 +25,11 @@ import de.oaam.model.oaam.common.BoolOperationTypesE;
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.DataTypeA;
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.EndianessE;
 import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.IntegretyStateE;
 import de.oaam.model.oaam.common.Struct;
-import de.oaam.model.oaam.common._ElementA;
-
 import de.oaam.model.oaam.functions.FunctionsPackage;
 
 import de.oaam.model.oaam.functions.impl.FunctionsPackageImpl;
@@ -81,7 +80,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass _ElementAEClass = null;
+	private EClass elementAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -314,8 +313,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass get_ElementA() {
-		return _ElementAEClass;
+	public EClass getElementA() {
+		return elementAEClass;
 	}
 
 	/**
@@ -323,8 +322,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Id() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(0);
+	public EAttribute getElementA_Id() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -332,8 +331,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Name() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(1);
+	public EAttribute getElementA_Name() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -341,8 +340,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Style() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(2);
+	public EAttribute getElementA_Style() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -350,8 +349,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference get_ElementA_Attributes() {
-		return (EReference)_ElementAEClass.getEStructuralFeatures().get(3);
+	public EReference getElementA_Attributes() {
+		return (EReference)elementAEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -359,8 +358,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Documentation() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(4);
+	public EAttribute getElementA_Documentation() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -368,8 +367,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Modified() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(5);
+	public EAttribute getElementA_Modified() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -377,8 +376,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_Modifier() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(6);
+	public EAttribute getElementA_Modifier() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -386,8 +385,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute get_ElementA_TraceLink() {
-		return (EAttribute)_ElementAEClass.getEStructuralFeatures().get(7);
+	public EAttribute getElementA_TraceLink() {
+		return (EAttribute)elementAEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -760,15 +759,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		_ElementAEClass = createEClass(_ELEMENT_A);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__ID);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__NAME);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__STYLE);
-		createEReference(_ElementAEClass, _ELEMENT_A__ATTRIBUTES);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__DOCUMENTATION);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__MODIFIED);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__MODIFIER);
-		createEAttribute(_ElementAEClass, _ELEMENT_A__TRACE_LINK);
+		elementAEClass = createEClass(ELEMENT_A);
+		createEAttribute(elementAEClass, ELEMENT_A__ID);
+		createEAttribute(elementAEClass, ELEMENT_A__NAME);
+		createEAttribute(elementAEClass, ELEMENT_A__STYLE);
+		createEReference(elementAEClass, ELEMENT_A__ATTRIBUTES);
+		createEAttribute(elementAEClass, ELEMENT_A__DOCUMENTATION);
+		createEAttribute(elementAEClass, ELEMENT_A__MODIFIED);
+		createEAttribute(elementAEClass, ELEMENT_A__MODIFIER);
+		createEAttribute(elementAEClass, ELEMENT_A__TRACE_LINK);
 
 		boolAEClass = createEClass(BOOL_A);
 
@@ -855,16 +854,16 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		attributeAEClass.getESuperTypes().add(this.get_ElementA());
+		attributeAEClass.getESuperTypes().add(this.getElementA());
 		attributeStringEClass.getESuperTypes().add(this.getAttributeA());
 		attributeNumericEClass.getESuperTypes().add(this.getAttributeA());
 		attributeContainmentEClass.getESuperTypes().add(this.getAttributeA());
 		attributeReferenceEClass.getESuperTypes().add(this.getAttributeA());
 		boolOperationEClass.getESuperTypes().add(this.getBoolA());
-		boolOperationEClass.getESuperTypes().add(this.get_ElementA());
+		boolOperationEClass.getESuperTypes().add(this.getElementA());
 		boolNotEClass.getESuperTypes().add(this.getBoolA());
-		boolNotEClass.getESuperTypes().add(this.get_ElementA());
-		dataTypeAEClass.getESuperTypes().add(this.get_ElementA());
+		boolNotEClass.getESuperTypes().add(this.getElementA());
+		dataTypeAEClass.getESuperTypes().add(this.getElementA());
 		integerEClass.getESuperTypes().add(this.getDataTypeA());
 		arrayEClass.getESuperTypes().add(this.getDataTypeA());
 		structEClass.getESuperTypes().add(this.getDataTypeA());
@@ -874,15 +873,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		booleanEClass.getESuperTypes().add(this.getDataTypeA());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(_ElementAEClass, _ElementA.class, "_ElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(get_ElementA_Id(), ecorePackage.getEString(), "id", null, 1, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_Name(), ecorePackage.getEString(), "name", null, 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_Style(), ecorePackage.getEString(), "style", null, 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(get_ElementA_Attributes(), this.getAttributeA(), null, "attributes", null, 0, -1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_Documentation(), ecorePackage.getEString(), "documentation", "", 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_Modified(), ecorePackage.getEDate(), "modified", null, 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_Modifier(), ecorePackage.getEString(), "modifier", null, 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(get_ElementA_TraceLink(), ecorePackage.getEString(), "traceLink", "", 0, 1, _ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(elementAEClass, ElementA.class, "ElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementA_Id(), ecorePackage.getEString(), "id", null, 1, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_Style(), ecorePackage.getEString(), "style", null, 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementA_Attributes(), this.getAttributeA(), null, "attributes", null, 0, -1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_Documentation(), ecorePackage.getEString(), "documentation", "", 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_Modified(), ecorePackage.getEDate(), "modified", null, 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_Modifier(), ecorePackage.getEString(), "modifier", null, 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementA_TraceLink(), ecorePackage.getEString(), "traceLink", "", 0, 1, ElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(boolAEClass, BoolA.class, "BoolA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -895,10 +894,10 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEAttribute(getAttributeNumeric_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, AttributeNumeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeContainmentEClass, AttributeContainment.class, "AttributeContainment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttributeContainment_Value(), this.get_ElementA(), null, "value", null, 0, -1, AttributeContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeContainment_Value(), this.getElementA(), null, "value", null, 0, -1, AttributeContainment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeReferenceEClass, AttributeReference.class, "AttributeReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttributeReference_Value(), this.get_ElementA(), null, "value", null, 0, -1, AttributeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttributeReference_Value(), this.getElementA(), null, "value", null, 0, -1, AttributeReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(boolOperationEClass, BoolOperation.class, "BoolOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoolOperation_Type(), this.getBoolOperationTypesE(), "type", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

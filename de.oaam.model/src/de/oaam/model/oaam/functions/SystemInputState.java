@@ -3,11 +3,10 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.IntegretyStateE;
-import de.oaam.model.oaam.common._ElementA;
-
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model
  * @generated
  */
-public interface SystemInputState extends BoolA, _ElementA, _ModeDependentElementA, _VariantDependentElementA {
+public interface SystemInputState extends BoolA, ElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>State</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.common.IntegretyStateE}.

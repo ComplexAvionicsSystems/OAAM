@@ -2,15 +2,13 @@
  */
 package de.oaam.model.oaam.hardware.util;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -103,20 +101,20 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 				return createSubhardwareAdapter();
 			}
 			@Override
-			public Adapter case_ElementA(_ElementA object) {
-				return create_ElementAAdapter();
+			public Adapter caseElementA(ElementA object) {
+				return createElementAAdapter();
 			}
 			@Override
 			public Adapter caseResourceProviderInstanceA(ResourceProviderInstanceA object) {
 				return createResourceProviderInstanceAAdapter();
 			}
 			@Override
-			public Adapter case_VariantDependentElementA(_VariantDependentElementA object) {
-				return create_VariantDependentElementAAdapter();
+			public Adapter caseVariantDependentElementA(VariantDependentElementA object) {
+				return createVariantDependentElementAAdapter();
 			}
 			@Override
-			public Adapter case_ModeDependentElementA(_ModeDependentElementA object) {
-				return create_ModeDependentElementAAdapter();
+			public Adapter caseModeDependentElementA(ModeDependentElementA object) {
+				return createModeDependentElementAAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -237,16 +235,16 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common._ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common._ElementA
+	 * @see de.oaam.model.oaam.common.ElementA
 	 * @generated
 	 */
-	public Adapter create_ElementAAdapter() {
+	public Adapter createElementAAdapter() {
 		return null;
 	}
 
@@ -265,30 +263,30 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario._VariantDependentElementA <em>Variant Dependent Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.VariantDependentElementA <em>Variant Dependent Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.scenario._VariantDependentElementA
+	 * @see de.oaam.model.oaam.scenario.VariantDependentElementA
 	 * @generated
 	 */
-	public Adapter create_VariantDependentElementAAdapter() {
+	public Adapter createVariantDependentElementAAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario._ModeDependentElementA <em>Mode Dependent Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ModeDependentElementA <em>Mode Dependent Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.scenario._ModeDependentElementA
+	 * @see de.oaam.model.oaam.scenario.ModeDependentElementA
 	 * @generated
 	 */
-	public Adapter create_ModeDependentElementAAdapter() {
+	public Adapter createModeDependentElementAAdapter() {
 		return null;
 	}
 

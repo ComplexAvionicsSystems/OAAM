@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.mapping.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.mapping.ConnectionAssignment;
 import de.oaam.model.oaam.mapping.DeviceAssignment;
 import de.oaam.model.oaam.mapping.MappingContainerA;
@@ -43,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class MappingContainerAImpl extends _ElementAImpl implements MappingContainerA {
+public abstract class MappingContainerAImpl extends ElementAImpl implements MappingContainerA {
 	/**
 	 * The cached value of the '{@link #getDeviceAssignments() <em>Device Assignments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

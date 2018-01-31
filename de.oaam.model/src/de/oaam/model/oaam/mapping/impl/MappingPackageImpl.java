@@ -785,38 +785,38 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		mappingContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		taskAssignmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		signalAssignmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		signalAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		signalAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		connectionAssignmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		deviceAssignmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		connectionAssignmentSegmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		connectionAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		connectionAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		subDeviceAssignmentEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		subDeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		subDeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		mappingContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskAssignmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		signalAssignmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		signalAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		signalAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		connectionAssignmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		signalAssignmentSegmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		deviceAssignmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		connectionAssignmentSegmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		connectionAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subDeviceAssignmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		subDeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subDeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		mappingEClass.getESuperTypes().add(this.getMappingContainerA());
 		supmappingEClass.getESuperTypes().add(this.getMappingContainerA());
-		supmappingEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		supmappingEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		scheduleEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		scheduleEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		scheduleEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		scheduledTimeEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		supmappingEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		supmappingEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		scheduleEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		scheduleEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		scheduleEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		scheduledTimeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		scheduledTimeEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mappingContainerAEClass, MappingContainerA.class, "MappingContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

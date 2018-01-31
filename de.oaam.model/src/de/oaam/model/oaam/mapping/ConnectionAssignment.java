@@ -2,13 +2,11 @@
  */
 package de.oaam.model.oaam.mapping;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.hardware.Connection;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -32,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConnectionAssignment extends _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface ConnectionAssignment extends ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Segments</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.mapping.ConnectionAssignmentSegment}.

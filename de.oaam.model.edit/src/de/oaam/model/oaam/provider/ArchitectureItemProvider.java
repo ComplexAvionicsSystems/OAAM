@@ -10,8 +10,7 @@ import de.oaam.model.oaam.anatomy.AnatomyFactory;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.hardware.HardwareFactory;
@@ -46,7 +45,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ArchitectureItemProvider extends _ElementAItemProvider {
+public class ArchitectureItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

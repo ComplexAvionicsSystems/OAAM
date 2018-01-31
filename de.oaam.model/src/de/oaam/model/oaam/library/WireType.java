@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
+import de.oaam.model.oaam.common.ElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import de.oaam.model.oaam.common._ElementA;
  * @model
  * @generated
  */
-public interface WireType extends _ElementA {
+public interface WireType extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Specific Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public interface WireType extends _ElementA {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The minimum bending radius the wire type can be used for in [deg]
+	 * The minimum bending radius the wire type can be used for in [m]
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Min Bending Radius</em>' attribute.
 	 * @see #setMinBendingRadius(double)

@@ -8,18 +8,16 @@ import de.oaam.model.oaam.anatomy.DuctOpening;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.DuctType;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -839,28 +837,28 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case AnatomyPackage.DUCT__ID: return CommonPackage._ELEMENT_A__ID;
-				case AnatomyPackage.DUCT__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case AnatomyPackage.DUCT__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case AnatomyPackage.DUCT__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case AnatomyPackage.DUCT__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case AnatomyPackage.DUCT__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case AnatomyPackage.DUCT__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case AnatomyPackage.DUCT__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case AnatomyPackage.DUCT__ID: return CommonPackage.ELEMENT_A__ID;
+				case AnatomyPackage.DUCT__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case AnatomyPackage.DUCT__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case AnatomyPackage.DUCT__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case AnatomyPackage.DUCT__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case AnatomyPackage.DUCT__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case AnatomyPackage.DUCT__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case AnatomyPackage.DUCT__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case AnatomyPackage.DUCT__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case AnatomyPackage.DUCT__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case AnatomyPackage.DUCT__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case AnatomyPackage.DUCT__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -874,28 +872,28 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return AnatomyPackage.DUCT__ID;
-				case CommonPackage._ELEMENT_A__NAME: return AnatomyPackage.DUCT__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return AnatomyPackage.DUCT__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return AnatomyPackage.DUCT__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return AnatomyPackage.DUCT__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return AnatomyPackage.DUCT__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return AnatomyPackage.DUCT__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return AnatomyPackage.DUCT__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return AnatomyPackage.DUCT__ID;
+				case CommonPackage.ELEMENT_A__NAME: return AnatomyPackage.DUCT__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return AnatomyPackage.DUCT__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return AnatomyPackage.DUCT__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return AnatomyPackage.DUCT__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return AnatomyPackage.DUCT__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return AnatomyPackage.DUCT__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return AnatomyPackage.DUCT__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return AnatomyPackage.DUCT__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return AnatomyPackage.DUCT__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return AnatomyPackage.DUCT__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return AnatomyPackage.DUCT__OPERATION_MODES;
 				default: return -1;
 			}
 		}

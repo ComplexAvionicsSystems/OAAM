@@ -4,14 +4,13 @@ package de.oaam.model.oaam.mapping;
 
 import de.oaam.model.oaam.capabilities.TaskCapability;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.Task;
 
 import de.oaam.model.oaam.hardware.Device;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -37,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TaskAssignment extends _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface TaskAssignment extends ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->

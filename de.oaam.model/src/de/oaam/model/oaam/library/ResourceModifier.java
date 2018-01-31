@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -26,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ResourceModifier extends _ElementA {
+public interface ResourceModifier extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Levels</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.ModifierLevel}.

@@ -52,7 +52,7 @@ public interface HardwarePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "de.oaam.model";
+	String eNS_PREFIX = "de.oaam.model.hardware";
 
 	/**
 	 * The singleton instance of the package.
@@ -79,7 +79,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__ID = CommonPackage._ELEMENT_A__ID;
+	int HARDWARE_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -88,7 +88,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__NAME = CommonPackage._ELEMENT_A__NAME;
+	int HARDWARE_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -97,7 +97,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int HARDWARE_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -106,7 +106,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int HARDWARE_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -115,7 +115,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int HARDWARE_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -124,7 +124,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int HARDWARE_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int HARDWARE_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -142,7 +142,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int HARDWARE_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
@@ -151,7 +151,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__DEVICES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int HARDWARE_CONTAINER_A__DEVICES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Device Symmetries</b></em>' containment reference list.
@@ -160,7 +160,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
@@ -169,7 +169,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__CONNECTIONS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int HARDWARE_CONTAINER_A__CONNECTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subhardware</b></em>' containment reference list.
@@ -178,7 +178,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__SUBHARDWARE = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int HARDWARE_CONTAINER_A__SUBHARDWARE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -187,7 +187,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 4;
+	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -196,7 +196,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int HARDWARE_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.hardware.impl.DeviceImpl <em>Device</em>}' class.
@@ -532,7 +532,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__ID = CommonPackage._ELEMENT_A__ID;
+	int IO__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -541,7 +541,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__NAME = CommonPackage._ELEMENT_A__NAME;
+	int IO__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -550,7 +550,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int IO__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -559,7 +559,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int IO__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -568,7 +568,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int IO__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -577,7 +577,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int IO__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -586,7 +586,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int IO__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -595,7 +595,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int IO__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -604,7 +604,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int IO__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -613,7 +613,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int IO__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Declaration</b></em>' reference.
@@ -622,7 +622,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO__DECLARATION = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int IO__DECLARATION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Io</em>' class.
@@ -631,7 +631,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int IO_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Io</em>' class.
@@ -640,7 +640,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int IO_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.hardware.impl.DeviceSymmetryImpl <em>Device Symmetry</em>}' class.
@@ -659,7 +659,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__ID = CommonPackage._ELEMENT_A__ID;
+	int DEVICE_SYMMETRY__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -668,7 +668,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__NAME = CommonPackage._ELEMENT_A__NAME;
+	int DEVICE_SYMMETRY__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -677,7 +677,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__STYLE = CommonPackage._ELEMENT_A__STYLE;
+	int DEVICE_SYMMETRY__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -686,7 +686,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__ATTRIBUTES = CommonPackage._ELEMENT_A__ATTRIBUTES;
+	int DEVICE_SYMMETRY__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -695,7 +695,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__DOCUMENTATION = CommonPackage._ELEMENT_A__DOCUMENTATION;
+	int DEVICE_SYMMETRY__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -704,7 +704,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__MODIFIED = CommonPackage._ELEMENT_A__MODIFIED;
+	int DEVICE_SYMMETRY__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -713,7 +713,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__MODIFIER = CommonPackage._ELEMENT_A__MODIFIER;
+	int DEVICE_SYMMETRY__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -722,7 +722,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__TRACE_LINK = CommonPackage._ELEMENT_A__TRACE_LINK;
+	int DEVICE_SYMMETRY__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -731,7 +731,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__VARIANTS = CommonPackage._ELEMENT_A_FEATURE_COUNT + 0;
+	int DEVICE_SYMMETRY__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -740,7 +740,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__OPERATION_MODES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 1;
+	int DEVICE_SYMMETRY__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference list.
@@ -749,7 +749,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY__DEVICES = CommonPackage._ELEMENT_A_FEATURE_COUNT + 2;
+	int DEVICE_SYMMETRY__DEVICES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Device Symmetry</em>' class.
@@ -758,7 +758,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY_FEATURE_COUNT = CommonPackage._ELEMENT_A_FEATURE_COUNT + 3;
+	int DEVICE_SYMMETRY_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Device Symmetry</em>' class.
@@ -767,7 +767,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_SYMMETRY_OPERATION_COUNT = CommonPackage._ELEMENT_A_OPERATION_COUNT + 0;
+	int DEVICE_SYMMETRY_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.hardware.impl.HardwareImpl <em>Hardware</em>}' class.

@@ -2,10 +2,9 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common._ElementA;
-
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model
  * @generated
  */
-public interface TaskRateRestriction extends TaskRestrictionA, _ElementA, _ModeDependentElementA, _VariantDependentElementA {
+public interface TaskRateRestriction extends TaskRestrictionA, ElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Rate</b></em>' attribute.
 	 * The default value is <code>"10.0"</code>.

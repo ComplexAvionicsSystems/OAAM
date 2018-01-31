@@ -6,8 +6,7 @@ import de.oaam.model.oaam.anatomy.Anatomy;
 
 import de.oaam.model.oaam.capabilities.Capabilities;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.Functions;
 
 import de.oaam.model.oaam.hardware.Hardware;
@@ -53,7 +52,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Architecture extends _ElementA {
+public interface Architecture extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Include</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.Architecture}.

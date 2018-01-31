@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
 public interface AttributeContainment extends AttributeA {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.common._ElementA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.ElementA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -38,6 +38,6 @@ public interface AttributeContainment extends AttributeA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<_ElementA> getValue();
+	EList<ElementA> getValue();
 
 } // AttributeContainment

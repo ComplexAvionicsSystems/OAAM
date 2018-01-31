@@ -3,8 +3,8 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.IntegretyStateE;
-import de.oaam.model.oaam.common._ElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import de.oaam.model.oaam.common._ElementA;
  * @model
  * @generated
  */
-public interface FunctionInputState extends BoolA, _ElementA {
+public interface FunctionInputState extends BoolA, ElementA {
 	/**
 	 * Returns the value of the '<em><b>State</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.common.IntegretyStateE}.

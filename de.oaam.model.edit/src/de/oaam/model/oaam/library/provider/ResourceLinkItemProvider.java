@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ResourceLink;
 
@@ -27,7 +26,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceLinkItemProvider extends _ElementAItemProvider {
+public class ResourceLinkItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

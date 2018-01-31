@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.impl.BoolAImpl;
 
 import de.oaam.model.oaam.library.FunctionInputTrigger;
@@ -588,16 +587,16 @@ public class FunctionInputTriggerImpl extends BoolAImpl implements FunctionInput
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__ID: return CommonPackage._ELEMENT_A__ID;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case LibraryPackage.FUNCTION_INPUT_TRIGGER__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__ID: return CommonPackage.ELEMENT_A__ID;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case LibraryPackage.FUNCTION_INPUT_TRIGGER__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -611,16 +610,16 @@ public class FunctionInputTriggerImpl extends BoolAImpl implements FunctionInput
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return LibraryPackage.FUNCTION_INPUT_TRIGGER__ID;
-				case CommonPackage._ELEMENT_A__NAME: return LibraryPackage.FUNCTION_INPUT_TRIGGER__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return LibraryPackage.FUNCTION_INPUT_TRIGGER__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return LibraryPackage.FUNCTION_INPUT_TRIGGER__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return LibraryPackage.FUNCTION_INPUT_TRIGGER__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return LibraryPackage.FUNCTION_INPUT_TRIGGER__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.FUNCTION_INPUT_TRIGGER__ID;
+				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.FUNCTION_INPUT_TRIGGER__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.FUNCTION_INPUT_TRIGGER__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.FUNCTION_INPUT_TRIGGER__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.FUNCTION_INPUT_TRIGGER__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.FUNCTION_INPUT_TRIGGER__TRACE_LINK;
 				default: return -1;
 			}
 		}

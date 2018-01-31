@@ -4,8 +4,7 @@ package de.oaam.model.oaam.util;
 
 import de.oaam.model.oaam.*;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -74,8 +73,8 @@ public class OaamAdapterFactory extends AdapterFactoryImpl {
 				return createArchitectureAdapter();
 			}
 			@Override
-			public Adapter case_ElementA(_ElementA object) {
-				return create_ElementAAdapter();
+			public Adapter caseElementA(ElementA object) {
+				return createElementAAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -112,16 +111,16 @@ public class OaamAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common._ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common._ElementA
+	 * @see de.oaam.model.oaam.common.ElementA
 	 * @generated
 	 */
-	public Adapter create_ElementAAdapter() {
+	public Adapter createElementAAdapter() {
 		return null;
 	}
 

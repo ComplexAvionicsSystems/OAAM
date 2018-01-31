@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -34,7 +33,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class DeviceTypeDissimilarityImpl extends _ElementAImpl implements DeviceTypeDissimilarity {
+public class DeviceTypeDissimilarityImpl extends ElementAImpl implements DeviceTypeDissimilarity {
 	/**
 	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' reference list.
 	 * <!-- begin-user-doc -->

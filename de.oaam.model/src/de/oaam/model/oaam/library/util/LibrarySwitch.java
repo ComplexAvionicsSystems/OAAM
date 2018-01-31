@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library.util;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -90,7 +89,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 			case LibraryPackage.LIBRARY_CONTAINER_A: {
 				LibraryContainerA libraryContainerA = (LibraryContainerA)theEObject;
 				T result = caseLibraryContainerA(libraryContainerA);
-				if (result == null) result = case_ElementA(libraryContainerA);
+				if (result == null) result = caseElementA(libraryContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,21 +97,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 				ResourceType resourceType = (ResourceType)theEObject;
 				T result = caseResourceType(resourceType);
 				if (result == null) result = caseResourceConsumerA(resourceType);
-				if (result == null) result = case_ElementA(resourceType);
+				if (result == null) result = caseElementA(resourceType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE: {
 				Resource resource = (Resource)theEObject;
 				T result = caseResource(resource);
-				if (result == null) result = case_ElementA(resource);
+				if (result == null) result = caseElementA(resource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE_ALTERNATIVES: {
 				ResourceAlternatives resourceAlternatives = (ResourceAlternatives)theEObject;
 				T result = caseResourceAlternatives(resourceAlternatives);
-				if (result == null) result = case_ElementA(resourceAlternatives);
+				if (result == null) result = caseElementA(resourceAlternatives);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,7 +119,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				ResourceBundles resourceBundles = (ResourceBundles)theEObject;
 				T result = caseResourceBundles(resourceBundles);
 				if (result == null) result = caseResourceConsumerA(resourceBundles);
-				if (result == null) result = case_ElementA(resourceBundles);
+				if (result == null) result = caseElementA(resourceBundles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,7 +127,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				TaskType taskType = (TaskType)theEObject;
 				T result = caseTaskType(taskType);
 				if (result == null) result = caseResourceConsumerA(taskType);
-				if (result == null) result = case_ElementA(taskType);
+				if (result == null) result = caseElementA(taskType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -136,7 +135,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				SignalType signalType = (SignalType)theEObject;
 				T result = caseSignalType(signalType);
 				if (result == null) result = caseResourceConsumerA(signalType);
-				if (result == null) result = case_ElementA(signalType);
+				if (result == null) result = caseElementA(signalType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,7 +144,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				T result = caseDeviceType(deviceType);
 				if (result == null) result = caseResourceConsumerA(deviceType);
 				if (result == null) result = caseResourceProviderA(deviceType);
-				if (result == null) result = case_ElementA(deviceType);
+				if (result == null) result = caseElementA(deviceType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,7 +153,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				T result = caseConnectionType(connectionType);
 				if (result == null) result = caseResourceProviderA(connectionType);
 				if (result == null) result = caseResourceConsumerA(connectionType);
-				if (result == null) result = case_ElementA(connectionType);
+				if (result == null) result = caseElementA(connectionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -162,7 +161,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				LocationType locationType = (LocationType)theEObject;
 				T result = caseLocationType(locationType);
 				if (result == null) result = caseResourceProviderA(locationType);
-				if (result == null) result = case_ElementA(locationType);
+				if (result == null) result = caseElementA(locationType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,77 +169,77 @@ public class LibrarySwitch<T> extends Switch<T> {
 				DuctType ductType = (DuctType)theEObject;
 				T result = caseDuctType(ductType);
 				if (result == null) result = caseResourceProviderA(ductType);
-				if (result == null) result = case_ElementA(ductType);
+				if (result == null) result = caseElementA(ductType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.WIRE_TYPE: {
 				WireType wireType = (WireType)theEObject;
 				T result = caseWireType(wireType);
-				if (result == null) result = case_ElementA(wireType);
+				if (result == null) result = caseElementA(wireType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.INPUT_DECLARATION: {
 				InputDeclaration inputDeclaration = (InputDeclaration)theEObject;
 				T result = caseInputDeclaration(inputDeclaration);
-				if (result == null) result = case_ElementA(inputDeclaration);
+				if (result == null) result = caseElementA(inputDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.OUTPUT_DECLARATION: {
 				OutputDeclaration outputDeclaration = (OutputDeclaration)theEObject;
 				T result = caseOutputDeclaration(outputDeclaration);
-				if (result == null) result = case_ElementA(outputDeclaration);
+				if (result == null) result = caseElementA(outputDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.IO_DECLARATION: {
 				IoDeclaration ioDeclaration = (IoDeclaration)theEObject;
 				T result = caseIoDeclaration(ioDeclaration);
-				if (result == null) result = case_ElementA(ioDeclaration);
+				if (result == null) result = caseElementA(ioDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.DUCT_OPENING_DECLARATION: {
 				DuctOpeningDeclaration ductOpeningDeclaration = (DuctOpeningDeclaration)theEObject;
 				T result = caseDuctOpeningDeclaration(ductOpeningDeclaration);
-				if (result == null) result = case_ElementA(ductOpeningDeclaration);
+				if (result == null) result = caseElementA(ductOpeningDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE_GROUP: {
 				ResourceGroup resourceGroup = (ResourceGroup)theEObject;
 				T result = caseResourceGroup(resourceGroup);
-				if (result == null) result = case_ElementA(resourceGroup);
+				if (result == null) result = caseElementA(resourceGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.DEVICE_TYPE_SYMMETRY: {
 				DeviceTypeSymmetry deviceTypeSymmetry = (DeviceTypeSymmetry)theEObject;
 				T result = caseDeviceTypeSymmetry(deviceTypeSymmetry);
-				if (result == null) result = case_ElementA(deviceTypeSymmetry);
+				if (result == null) result = caseElementA(deviceTypeSymmetry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.IO_GROUP: {
 				IoGroup ioGroup = (IoGroup)theEObject;
 				T result = caseIoGroup(ioGroup);
-				if (result == null) result = case_ElementA(ioGroup);
+				if (result == null) result = caseElementA(ioGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.ATTRIBUTE_DEFINITION: {
 				AttributeDefinition attributeDefinition = (AttributeDefinition)theEObject;
 				T result = caseAttributeDefinition(attributeDefinition);
-				if (result == null) result = case_ElementA(attributeDefinition);
+				if (result == null) result = caseElementA(attributeDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.FAULT_PROPAGATION: {
 				FaultPropagation faultPropagation = (FaultPropagation)theEObject;
 				T result = caseFaultPropagation(faultPropagation);
-				if (result == null) result = case_ElementA(faultPropagation);
+				if (result == null) result = caseElementA(faultPropagation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -248,35 +247,35 @@ public class LibrarySwitch<T> extends Switch<T> {
 				FunctionInputState functionInputState = (FunctionInputState)theEObject;
 				T result = caseFunctionInputState(functionInputState);
 				if (result == null) result = caseBoolA(functionInputState);
-				if (result == null) result = case_ElementA(functionInputState);
+				if (result == null) result = caseElementA(functionInputState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.POWER_SOURCE: {
 				PowerSource powerSource = (PowerSource)theEObject;
 				T result = casePowerSource(powerSource);
-				if (result == null) result = case_ElementA(powerSource);
+				if (result == null) result = caseElementA(powerSource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE_LINK: {
 				ResourceLink resourceLink = (ResourceLink)theEObject;
 				T result = caseResourceLink(resourceLink);
-				if (result == null) result = case_ElementA(resourceLink);
+				if (result == null) result = caseElementA(resourceLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE_MODIFIER: {
 				ResourceModifier resourceModifier = (ResourceModifier)theEObject;
 				T result = caseResourceModifier(resourceModifier);
-				if (result == null) result = case_ElementA(resourceModifier);
+				if (result == null) result = caseElementA(resourceModifier);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.MODIFIER_LEVEL: {
 				ModifierLevel modifierLevel = (ModifierLevel)theEObject;
 				T result = caseModifierLevel(modifierLevel);
-				if (result == null) result = case_ElementA(modifierLevel);
+				if (result == null) result = caseElementA(modifierLevel);
 				if (result == null) result = caseResourceConsumerA(modifierLevel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -284,28 +283,28 @@ public class LibrarySwitch<T> extends Switch<T> {
 			case LibraryPackage.MODIFIER_DEFINITION: {
 				ModifierDefinition modifierDefinition = (ModifierDefinition)theEObject;
 				T result = caseModifierDefinition(modifierDefinition);
-				if (result == null) result = case_ElementA(modifierDefinition);
+				if (result == null) result = caseElementA(modifierDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.TASK_TYPE_DISSIMILARITY: {
 				TaskTypeDissimilarity taskTypeDissimilarity = (TaskTypeDissimilarity)theEObject;
 				T result = caseTaskTypeDissimilarity(taskTypeDissimilarity);
-				if (result == null) result = case_ElementA(taskTypeDissimilarity);
+				if (result == null) result = caseElementA(taskTypeDissimilarity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.DEVICE_TYPE_DISSIMILARITY: {
 				DeviceTypeDissimilarity deviceTypeDissimilarity = (DeviceTypeDissimilarity)theEObject;
 				T result = caseDeviceTypeDissimilarity(deviceTypeDissimilarity);
-				if (result == null) result = case_ElementA(deviceTypeDissimilarity);
+				if (result == null) result = caseElementA(deviceTypeDissimilarity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.RESOURCE_TYPE_DISSIMILARITY: {
 				ResourceTypeDissimilarity resourceTypeDissimilarity = (ResourceTypeDissimilarity)theEObject;
 				T result = caseResourceTypeDissimilarity(resourceTypeDissimilarity);
-				if (result == null) result = case_ElementA(resourceTypeDissimilarity);
+				if (result == null) result = caseElementA(resourceTypeDissimilarity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -313,7 +312,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				Library library = (Library)theEObject;
 				T result = caseLibrary(library);
 				if (result == null) result = caseLibraryContainerA(library);
-				if (result == null) result = case_ElementA(library);
+				if (result == null) result = caseElementA(library);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -321,14 +320,14 @@ public class LibrarySwitch<T> extends Switch<T> {
 				Sublibrary sublibrary = (Sublibrary)theEObject;
 				T result = caseSublibrary(sublibrary);
 				if (result == null) result = caseLibraryContainerA(sublibrary);
-				if (result == null) result = case_ElementA(sublibrary);
+				if (result == null) result = caseElementA(sublibrary);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.OUTPUT_TRIGGER: {
 				OutputTrigger outputTrigger = (OutputTrigger)theEObject;
 				T result = caseOutputTrigger(outputTrigger);
-				if (result == null) result = case_ElementA(outputTrigger);
+				if (result == null) result = caseElementA(outputTrigger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -336,21 +335,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 				FunctionInputTrigger functionInputTrigger = (FunctionInputTrigger)theEObject;
 				T result = caseFunctionInputTrigger(functionInputTrigger);
 				if (result == null) result = caseBoolA(functionInputTrigger);
-				if (result == null) result = case_ElementA(functionInputTrigger);
+				if (result == null) result = caseElementA(functionInputTrigger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.INTERNAL_STATE_DEFINITION: {
 				InternalStateDefinition internalStateDefinition = (InternalStateDefinition)theEObject;
 				T result = caseInternalStateDefinition(internalStateDefinition);
-				if (result == null) result = case_ElementA(internalStateDefinition);
+				if (result == null) result = caseElementA(internalStateDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case LibraryPackage.PARAMETER_DEFINITION: {
 				ParameterDefinition parameterDefinition = (ParameterDefinition)theEObject;
 				T result = caseParameterDefinition(parameterDefinition);
-				if (result == null) result = case_ElementA(parameterDefinition);
+				if (result == null) result = caseElementA(parameterDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -954,7 +953,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 

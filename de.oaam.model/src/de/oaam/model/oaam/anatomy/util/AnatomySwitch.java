@@ -4,13 +4,11 @@ package de.oaam.model.oaam.anatomy.util;
 
 import de.oaam.model.oaam.anatomy.*;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -76,7 +74,7 @@ public class AnatomySwitch<T> extends Switch<T> {
 			case AnatomyPackage.ANATOMY_CONTAINER_A: {
 				AnatomyContainerA anatomyContainerA = (AnatomyContainerA)theEObject;
 				T result = caseAnatomyContainerA(anatomyContainerA);
-				if (result == null) result = case_ElementA(anatomyContainerA);
+				if (result == null) result = caseElementA(anatomyContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,18 +82,18 @@ public class AnatomySwitch<T> extends Switch<T> {
 				Location location = (Location)theEObject;
 				T result = caseLocation(location);
 				if (result == null) result = caseResourceProviderInstanceA(location);
-				if (result == null) result = case_ElementA(location);
-				if (result == null) result = case_VariantDependentElementA(location);
-				if (result == null) result = case_ModeDependentElementA(location);
+				if (result == null) result = caseElementA(location);
+				if (result == null) result = caseVariantDependentElementA(location);
+				if (result == null) result = caseModeDependentElementA(location);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AnatomyPackage.AREA: {
 				Area area = (Area)theEObject;
 				T result = caseArea(area);
-				if (result == null) result = case_ElementA(area);
-				if (result == null) result = case_VariantDependentElementA(area);
-				if (result == null) result = case_ModeDependentElementA(area);
+				if (result == null) result = caseElementA(area);
+				if (result == null) result = caseVariantDependentElementA(area);
+				if (result == null) result = caseModeDependentElementA(area);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,36 +101,36 @@ public class AnatomySwitch<T> extends Switch<T> {
 				Duct duct = (Duct)theEObject;
 				T result = caseDuct(duct);
 				if (result == null) result = caseResourceProviderInstanceA(duct);
-				if (result == null) result = case_ElementA(duct);
-				if (result == null) result = case_VariantDependentElementA(duct);
-				if (result == null) result = case_ModeDependentElementA(duct);
+				if (result == null) result = caseElementA(duct);
+				if (result == null) result = caseVariantDependentElementA(duct);
+				if (result == null) result = caseModeDependentElementA(duct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AnatomyPackage.DUCT_OPENING: {
 				DuctOpening ductOpening = (DuctOpening)theEObject;
 				T result = caseDuctOpening(ductOpening);
-				if (result == null) result = case_ElementA(ductOpening);
-				if (result == null) result = case_VariantDependentElementA(ductOpening);
-				if (result == null) result = case_ModeDependentElementA(ductOpening);
+				if (result == null) result = caseElementA(ductOpening);
+				if (result == null) result = caseVariantDependentElementA(ductOpening);
+				if (result == null) result = caseModeDependentElementA(ductOpening);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AnatomyPackage.POSITION3_D: {
 				Position3D position3D = (Position3D)theEObject;
 				T result = casePosition3D(position3D);
-				if (result == null) result = case_ElementA(position3D);
-				if (result == null) result = case_VariantDependentElementA(position3D);
-				if (result == null) result = case_ModeDependentElementA(position3D);
+				if (result == null) result = caseElementA(position3D);
+				if (result == null) result = caseVariantDependentElementA(position3D);
+				if (result == null) result = caseModeDependentElementA(position3D);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AnatomyPackage.LOCATION_SYMMETRY: {
 				LocationSymmetry locationSymmetry = (LocationSymmetry)theEObject;
 				T result = caseLocationSymmetry(locationSymmetry);
-				if (result == null) result = case_ElementA(locationSymmetry);
-				if (result == null) result = case_ModeDependentElementA(locationSymmetry);
-				if (result == null) result = case_VariantDependentElementA(locationSymmetry);
+				if (result == null) result = caseElementA(locationSymmetry);
+				if (result == null) result = caseModeDependentElementA(locationSymmetry);
+				if (result == null) result = caseVariantDependentElementA(locationSymmetry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -140,7 +138,7 @@ public class AnatomySwitch<T> extends Switch<T> {
 				Anatomy anatomy = (Anatomy)theEObject;
 				T result = caseAnatomy(anatomy);
 				if (result == null) result = caseAnatomyContainerA(anatomy);
-				if (result == null) result = case_ElementA(anatomy);
+				if (result == null) result = caseElementA(anatomy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -148,9 +146,9 @@ public class AnatomySwitch<T> extends Switch<T> {
 				Subanatomy subanatomy = (Subanatomy)theEObject;
 				T result = caseSubanatomy(subanatomy);
 				if (result == null) result = caseAnatomyContainerA(subanatomy);
-				if (result == null) result = case_VariantDependentElementA(subanatomy);
-				if (result == null) result = case_ModeDependentElementA(subanatomy);
-				if (result == null) result = case_ElementA(subanatomy);
+				if (result == null) result = caseVariantDependentElementA(subanatomy);
+				if (result == null) result = caseModeDependentElementA(subanatomy);
+				if (result == null) result = caseElementA(subanatomy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -304,7 +302,7 @@ public class AnatomySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 
@@ -334,7 +332,7 @@ public class AnatomySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -349,7 +347,7 @@ public class AnatomySwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 

@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.Task;
 
@@ -31,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class PathSegmentImpl extends _ElementAImpl implements PathSegment {
+public class PathSegmentImpl extends ElementAImpl implements PathSegment {
 	/**
 	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference.
 	 * <!-- begin-user-doc -->

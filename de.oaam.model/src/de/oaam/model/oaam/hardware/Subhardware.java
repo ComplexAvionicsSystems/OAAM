@@ -2,8 +2,8 @@
  */
 package de.oaam.model.oaam.hardware;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,5 +19,5 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Subhardware extends HardwareContainerA, _VariantDependentElementA, _ModeDependentElementA {
+public interface Subhardware extends HardwareContainerA, VariantDependentElementA, ModeDependentElementA {
 } // Subhardware

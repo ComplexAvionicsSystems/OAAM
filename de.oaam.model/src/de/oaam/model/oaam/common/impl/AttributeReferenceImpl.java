@@ -4,8 +4,7 @@ package de.oaam.model.oaam.common.impl;
 
 import de.oaam.model.oaam.common.AttributeReference;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -36,7 +35,7 @@ public class AttributeReferenceImpl extends AttributeAImpl implements AttributeR
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<_ElementA> value;
+	protected EList<ElementA> value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,9 +61,9 @@ public class AttributeReferenceImpl extends AttributeAImpl implements AttributeR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<_ElementA> getValue() {
+	public EList<ElementA> getValue() {
 		if (value == null) {
-			value = new EObjectResolvingEList<_ElementA>(_ElementA.class, this, CommonPackage.ATTRIBUTE_REFERENCE__VALUE);
+			value = new EObjectResolvingEList<ElementA>(ElementA.class, this, CommonPackage.ATTRIBUTE_REFERENCE__VALUE);
 		}
 		return value;
 	}
@@ -94,7 +93,7 @@ public class AttributeReferenceImpl extends AttributeAImpl implements AttributeR
 		switch (featureID) {
 			case CommonPackage.ATTRIBUTE_REFERENCE__VALUE:
 				getValue().clear();
-				getValue().addAll((Collection<? extends _ElementA>)newValue);
+				getValue().addAll((Collection<? extends ElementA>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

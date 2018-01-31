@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
@@ -14,9 +13,8 @@ import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.library.TaskType;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -56,7 +54,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SegregationRestriction extends _ElementA, _ModeDependentElementA, _VariantDependentElementA {
+public interface SegregationRestriction extends ElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Tasks A</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.TaskType}.

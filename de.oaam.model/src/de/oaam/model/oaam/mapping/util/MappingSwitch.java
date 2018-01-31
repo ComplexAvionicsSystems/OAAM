@@ -2,13 +2,11 @@
  */
 package de.oaam.model.oaam.mapping.util;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.mapping.*;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -74,70 +72,70 @@ public class MappingSwitch<T> extends Switch<T> {
 			case MappingPackage.MAPPING_CONTAINER_A: {
 				MappingContainerA mappingContainerA = (MappingContainerA)theEObject;
 				T result = caseMappingContainerA(mappingContainerA);
-				if (result == null) result = case_ElementA(mappingContainerA);
+				if (result == null) result = caseElementA(mappingContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.TASK_ASSIGNMENT: {
 				TaskAssignment taskAssignment = (TaskAssignment)theEObject;
 				T result = caseTaskAssignment(taskAssignment);
-				if (result == null) result = case_ElementA(taskAssignment);
-				if (result == null) result = case_VariantDependentElementA(taskAssignment);
-				if (result == null) result = case_ModeDependentElementA(taskAssignment);
+				if (result == null) result = caseElementA(taskAssignment);
+				if (result == null) result = caseVariantDependentElementA(taskAssignment);
+				if (result == null) result = caseModeDependentElementA(taskAssignment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.SIGNAL_ASSIGNMENT: {
 				SignalAssignment signalAssignment = (SignalAssignment)theEObject;
 				T result = caseSignalAssignment(signalAssignment);
-				if (result == null) result = case_ElementA(signalAssignment);
-				if (result == null) result = case_VariantDependentElementA(signalAssignment);
-				if (result == null) result = case_ModeDependentElementA(signalAssignment);
+				if (result == null) result = caseElementA(signalAssignment);
+				if (result == null) result = caseVariantDependentElementA(signalAssignment);
+				if (result == null) result = caseModeDependentElementA(signalAssignment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.CONNECTION_ASSIGNMENT: {
 				ConnectionAssignment connectionAssignment = (ConnectionAssignment)theEObject;
 				T result = caseConnectionAssignment(connectionAssignment);
-				if (result == null) result = case_ElementA(connectionAssignment);
-				if (result == null) result = case_VariantDependentElementA(connectionAssignment);
-				if (result == null) result = case_ModeDependentElementA(connectionAssignment);
+				if (result == null) result = caseElementA(connectionAssignment);
+				if (result == null) result = caseVariantDependentElementA(connectionAssignment);
+				if (result == null) result = caseModeDependentElementA(connectionAssignment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.SIGNAL_ASSIGNMENT_SEGMENT: {
 				SignalAssignmentSegment signalAssignmentSegment = (SignalAssignmentSegment)theEObject;
 				T result = caseSignalAssignmentSegment(signalAssignmentSegment);
-				if (result == null) result = case_ElementA(signalAssignmentSegment);
-				if (result == null) result = case_VariantDependentElementA(signalAssignmentSegment);
-				if (result == null) result = case_ModeDependentElementA(signalAssignmentSegment);
+				if (result == null) result = caseElementA(signalAssignmentSegment);
+				if (result == null) result = caseVariantDependentElementA(signalAssignmentSegment);
+				if (result == null) result = caseModeDependentElementA(signalAssignmentSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.DEVICE_ASSIGNMENT: {
 				DeviceAssignment deviceAssignment = (DeviceAssignment)theEObject;
 				T result = caseDeviceAssignment(deviceAssignment);
-				if (result == null) result = case_ElementA(deviceAssignment);
-				if (result == null) result = case_VariantDependentElementA(deviceAssignment);
-				if (result == null) result = case_ModeDependentElementA(deviceAssignment);
+				if (result == null) result = caseElementA(deviceAssignment);
+				if (result == null) result = caseVariantDependentElementA(deviceAssignment);
+				if (result == null) result = caseModeDependentElementA(deviceAssignment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.CONNECTION_ASSIGNMENT_SEGMENT: {
 				ConnectionAssignmentSegment connectionAssignmentSegment = (ConnectionAssignmentSegment)theEObject;
 				T result = caseConnectionAssignmentSegment(connectionAssignmentSegment);
-				if (result == null) result = case_ElementA(connectionAssignmentSegment);
-				if (result == null) result = case_VariantDependentElementA(connectionAssignmentSegment);
-				if (result == null) result = case_ModeDependentElementA(connectionAssignmentSegment);
+				if (result == null) result = caseElementA(connectionAssignmentSegment);
+				if (result == null) result = caseVariantDependentElementA(connectionAssignmentSegment);
+				if (result == null) result = caseModeDependentElementA(connectionAssignmentSegment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.SUB_DEVICE_ASSIGNMENT: {
 				SubDeviceAssignment subDeviceAssignment = (SubDeviceAssignment)theEObject;
 				T result = caseSubDeviceAssignment(subDeviceAssignment);
-				if (result == null) result = case_ElementA(subDeviceAssignment);
-				if (result == null) result = case_VariantDependentElementA(subDeviceAssignment);
-				if (result == null) result = case_ModeDependentElementA(subDeviceAssignment);
+				if (result == null) result = caseElementA(subDeviceAssignment);
+				if (result == null) result = caseVariantDependentElementA(subDeviceAssignment);
+				if (result == null) result = caseModeDependentElementA(subDeviceAssignment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,7 +143,7 @@ public class MappingSwitch<T> extends Switch<T> {
 				Mapping mapping = (Mapping)theEObject;
 				T result = caseMapping(mapping);
 				if (result == null) result = caseMappingContainerA(mapping);
-				if (result == null) result = case_ElementA(mapping);
+				if (result == null) result = caseElementA(mapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -153,27 +151,27 @@ public class MappingSwitch<T> extends Switch<T> {
 				Supmapping supmapping = (Supmapping)theEObject;
 				T result = caseSupmapping(supmapping);
 				if (result == null) result = caseMappingContainerA(supmapping);
-				if (result == null) result = case_ModeDependentElementA(supmapping);
-				if (result == null) result = case_VariantDependentElementA(supmapping);
-				if (result == null) result = case_ElementA(supmapping);
+				if (result == null) result = caseModeDependentElementA(supmapping);
+				if (result == null) result = caseVariantDependentElementA(supmapping);
+				if (result == null) result = caseElementA(supmapping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.SCHEDULE: {
 				Schedule schedule = (Schedule)theEObject;
 				T result = caseSchedule(schedule);
-				if (result == null) result = case_ElementA(schedule);
-				if (result == null) result = case_ModeDependentElementA(schedule);
-				if (result == null) result = case_VariantDependentElementA(schedule);
+				if (result == null) result = caseElementA(schedule);
+				if (result == null) result = caseModeDependentElementA(schedule);
+				if (result == null) result = caseVariantDependentElementA(schedule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case MappingPackage.SCHEDULED_TIME: {
 				ScheduledTime scheduledTime = (ScheduledTime)theEObject;
 				T result = caseScheduledTime(scheduledTime);
-				if (result == null) result = case_ElementA(scheduledTime);
-				if (result == null) result = case_ModeDependentElementA(scheduledTime);
-				if (result == null) result = case_VariantDependentElementA(scheduledTime);
+				if (result == null) result = caseElementA(scheduledTime);
+				if (result == null) result = caseModeDependentElementA(scheduledTime);
+				if (result == null) result = caseVariantDependentElementA(scheduledTime);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -372,7 +370,7 @@ public class MappingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 
@@ -387,7 +385,7 @@ public class MappingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -402,7 +400,7 @@ public class MappingSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 

@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.DataTypeA;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -34,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface OutputDeclaration extends _ElementA {
+public interface OutputDeclaration extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceBundles;
@@ -718,16 +717,16 @@ public class ResourceBundlesImpl extends ResourceConsumerAImpl implements Resour
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.RESOURCE_BUNDLES__ID: return CommonPackage._ELEMENT_A__ID;
-				case LibraryPackage.RESOURCE_BUNDLES__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case LibraryPackage.RESOURCE_BUNDLES__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case LibraryPackage.RESOURCE_BUNDLES__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.RESOURCE_BUNDLES__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.RESOURCE_BUNDLES__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case LibraryPackage.RESOURCE_BUNDLES__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case LibraryPackage.RESOURCE_BUNDLES__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.RESOURCE_BUNDLES__ID: return CommonPackage.ELEMENT_A__ID;
+				case LibraryPackage.RESOURCE_BUNDLES__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case LibraryPackage.RESOURCE_BUNDLES__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case LibraryPackage.RESOURCE_BUNDLES__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.RESOURCE_BUNDLES__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.RESOURCE_BUNDLES__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case LibraryPackage.RESOURCE_BUNDLES__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case LibraryPackage.RESOURCE_BUNDLES__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -741,16 +740,16 @@ public class ResourceBundlesImpl extends ResourceConsumerAImpl implements Resour
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return LibraryPackage.RESOURCE_BUNDLES__ID;
-				case CommonPackage._ELEMENT_A__NAME: return LibraryPackage.RESOURCE_BUNDLES__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return LibraryPackage.RESOURCE_BUNDLES__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return LibraryPackage.RESOURCE_BUNDLES__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return LibraryPackage.RESOURCE_BUNDLES__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return LibraryPackage.RESOURCE_BUNDLES__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return LibraryPackage.RESOURCE_BUNDLES__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return LibraryPackage.RESOURCE_BUNDLES__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.RESOURCE_BUNDLES__ID;
+				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.RESOURCE_BUNDLES__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.RESOURCE_BUNDLES__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.RESOURCE_BUNDLES__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.RESOURCE_BUNDLES__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.RESOURCE_BUNDLES__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.RESOURCE_BUNDLES__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.RESOURCE_BUNDLES__TRACE_LINK;
 				default: return -1;
 			}
 		}

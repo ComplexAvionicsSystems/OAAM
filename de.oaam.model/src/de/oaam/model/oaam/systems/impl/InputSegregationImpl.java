@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.systems.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.RequiredInputA;
 import de.oaam.model.oaam.systems.SystemsPackage;
@@ -37,7 +36,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class InputSegregationImpl extends _ElementAImpl implements InputSegregation {
+public class InputSegregationImpl extends ElementAImpl implements InputSegregation {
 	/**
 	 * The default value of the '{@link #isDissimilarSource() <em>Dissimilar Source</em>}' attribute.
 	 * <!-- begin-user-doc -->

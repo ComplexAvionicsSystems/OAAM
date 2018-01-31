@@ -9,8 +9,7 @@ import de.oaam.model.oaam.anatomy.Anatomy;
 
 import de.oaam.model.oaam.capabilities.Capabilities;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.functions.Functions;
 
 import de.oaam.model.oaam.hardware.Hardware;
@@ -61,7 +60,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ArchitectureImpl extends _ElementAImpl implements Architecture {
+public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	/**
 	 * The cached value of the '{@link #getInclude() <em>Include</em>}' reference list.
 	 * <!-- begin-user-doc -->

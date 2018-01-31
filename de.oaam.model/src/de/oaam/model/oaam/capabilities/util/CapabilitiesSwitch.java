@@ -4,11 +4,9 @@ package de.oaam.model.oaam.capabilities.util;
 
 import de.oaam.model.oaam.capabilities.*;
 
-import de.oaam.model.oaam.common._ElementA;
-
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -80,7 +78,7 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A: {
 				CapabilitiesContainerA capabilitiesContainerA = (CapabilitiesContainerA)theEObject;
 				T result = caseCapabilitiesContainerA(capabilitiesContainerA);
-				if (result == null) result = case_ElementA(capabilitiesContainerA);
+				if (result == null) result = caseElementA(capabilitiesContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,9 +86,9 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				TaskCapability taskCapability = (TaskCapability)theEObject;
 				T result = caseTaskCapability(taskCapability);
 				if (result == null) result = caseCapabilityA(taskCapability);
-				if (result == null) result = case_ElementA(taskCapability);
-				if (result == null) result = case_VariantDependentElementA(taskCapability);
-				if (result == null) result = case_ModeDependentElementA(taskCapability);
+				if (result == null) result = caseElementA(taskCapability);
+				if (result == null) result = caseVariantDependentElementA(taskCapability);
+				if (result == null) result = caseModeDependentElementA(taskCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,9 +96,9 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				DeviceCapability deviceCapability = (DeviceCapability)theEObject;
 				T result = caseDeviceCapability(deviceCapability);
 				if (result == null) result = caseCapabilityA(deviceCapability);
-				if (result == null) result = case_ElementA(deviceCapability);
-				if (result == null) result = case_VariantDependentElementA(deviceCapability);
-				if (result == null) result = case_ModeDependentElementA(deviceCapability);
+				if (result == null) result = caseElementA(deviceCapability);
+				if (result == null) result = caseVariantDependentElementA(deviceCapability);
+				if (result == null) result = caseModeDependentElementA(deviceCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,9 +106,9 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				ConnectionCapability connectionCapability = (ConnectionCapability)theEObject;
 				T result = caseConnectionCapability(connectionCapability);
 				if (result == null) result = caseCapabilityA(connectionCapability);
-				if (result == null) result = case_ElementA(connectionCapability);
-				if (result == null) result = case_VariantDependentElementA(connectionCapability);
-				if (result == null) result = case_ModeDependentElementA(connectionCapability);
+				if (result == null) result = caseElementA(connectionCapability);
+				if (result == null) result = caseVariantDependentElementA(connectionCapability);
+				if (result == null) result = caseModeDependentElementA(connectionCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,9 +116,9 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				SignalCapability signalCapability = (SignalCapability)theEObject;
 				T result = caseSignalCapability(signalCapability);
 				if (result == null) result = caseCapabilityA(signalCapability);
-				if (result == null) result = case_ElementA(signalCapability);
-				if (result == null) result = case_VariantDependentElementA(signalCapability);
-				if (result == null) result = case_ModeDependentElementA(signalCapability);
+				if (result == null) result = caseElementA(signalCapability);
+				if (result == null) result = caseVariantDependentElementA(signalCapability);
+				if (result == null) result = caseModeDependentElementA(signalCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,16 +126,16 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				SubDeviceCapability subDeviceCapability = (SubDeviceCapability)theEObject;
 				T result = caseSubDeviceCapability(subDeviceCapability);
 				if (result == null) result = caseCapabilityA(subDeviceCapability);
-				if (result == null) result = case_ElementA(subDeviceCapability);
-				if (result == null) result = case_VariantDependentElementA(subDeviceCapability);
-				if (result == null) result = case_ModeDependentElementA(subDeviceCapability);
+				if (result == null) result = caseElementA(subDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(subDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(subDeviceCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: {
 				ResourceConsumption resourceConsumption = (ResourceConsumption)theEObject;
 				T result = caseResourceConsumption(resourceConsumption);
-				if (result == null) result = case_ElementA(resourceConsumption);
+				if (result == null) result = caseElementA(resourceConsumption);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,7 +143,7 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				Capabilities capabilities = (Capabilities)theEObject;
 				T result = caseCapabilities(capabilities);
 				if (result == null) result = caseCapabilitiesContainerA(capabilities);
-				if (result == null) result = case_ElementA(capabilities);
+				if (result == null) result = caseElementA(capabilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -153,9 +151,9 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				Subcapability subcapability = (Subcapability)theEObject;
 				T result = caseSubcapability(subcapability);
 				if (result == null) result = caseCapabilitiesContainerA(subcapability);
-				if (result == null) result = case_ModeDependentElementA(subcapability);
-				if (result == null) result = case_VariantDependentElementA(subcapability);
-				if (result == null) result = case_ElementA(subcapability);
+				if (result == null) result = caseModeDependentElementA(subcapability);
+				if (result == null) result = caseVariantDependentElementA(subcapability);
+				if (result == null) result = caseElementA(subcapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -324,7 +322,7 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 
@@ -339,7 +337,7 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -354,7 +352,7 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 

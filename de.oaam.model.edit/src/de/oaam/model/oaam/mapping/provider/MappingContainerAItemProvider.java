@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.mapping.provider;
 
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.mapping.MappingContainerA;
 import de.oaam.model.oaam.mapping.MappingFactory;
 import de.oaam.model.oaam.mapping.MappingPackage;
@@ -30,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MappingContainerAItemProvider extends _ElementAItemProvider {
+public class MappingContainerAItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

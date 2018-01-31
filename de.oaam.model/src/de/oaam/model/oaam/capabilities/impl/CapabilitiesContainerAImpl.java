@@ -11,8 +11,7 @@ import de.oaam.model.oaam.capabilities.SubDeviceCapability;
 import de.oaam.model.oaam.capabilities.Subcapability;
 import de.oaam.model.oaam.capabilities.TaskCapability;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -43,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class CapabilitiesContainerAImpl extends _ElementAImpl implements CapabilitiesContainerA {
+public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements CapabilitiesContainerA {
 	/**
 	 * The cached value of the '{@link #getFunctionCapabilties() <em>Function Capabilties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

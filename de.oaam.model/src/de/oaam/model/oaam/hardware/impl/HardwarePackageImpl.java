@@ -477,27 +477,27 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		deviceEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		deviceEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		deviceEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		deviceEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		deviceEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		deviceEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		connectionEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		connectionEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		connectionEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		connectionEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		ioEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		ioEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		ioEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		deviceSymmetryEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		connectionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		connectionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		ioEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ioEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		ioEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		deviceSymmetryEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		hardwareEClass.getESuperTypes().add(this.getHardwareContainerA());
-		hardwareEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		hardwareEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		hardwareEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		hardwareEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		subhardwareEClass.getESuperTypes().add(this.getHardwareContainerA());
-		subhardwareEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		subhardwareEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		subhardwareEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subhardwareEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(hardwareContainerAEClass, HardwareContainerA.class, "HardwareContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

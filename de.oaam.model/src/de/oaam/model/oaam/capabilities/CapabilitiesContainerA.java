@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.capabilities;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -31,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface CapabilitiesContainerA extends _ElementA {
+public interface CapabilitiesContainerA extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Function Capabilties</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.TaskCapability}.

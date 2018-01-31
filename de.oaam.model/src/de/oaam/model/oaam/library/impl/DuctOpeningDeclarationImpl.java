@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -16,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DuctOpeningDeclarationImpl extends _ElementAImpl implements DuctOpeningDeclaration {
+public class DuctOpeningDeclarationImpl extends ElementAImpl implements DuctOpeningDeclaration {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

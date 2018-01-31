@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ModifierLevel;
 import de.oaam.model.oaam.library.Resource;
@@ -42,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ModifierLevelImpl extends _ElementAImpl implements ModifierLevel {
+public class ModifierLevelImpl extends ElementAImpl implements ModifierLevel {
 	/**
 	 * The cached value of the '{@link #getRequiredResources() <em>Required Resources</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

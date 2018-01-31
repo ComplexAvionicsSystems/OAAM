@@ -829,7 +829,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == CommonPackage.Literals._ELEMENT_A__ATTRIBUTES ||
+			childFeature == CommonPackage.Literals.ELEMENT_A__ATTRIBUTES ||
 			childFeature == CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE;
 
 		if (qualify) {

@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
-import de.oaam.model.oaam.common.provider._ElementAItemProvider;
-
+import de.oaam.model.oaam.common.provider.ElementAItemProvider;
 import de.oaam.model.oaam.library.InputDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputDeclarationItemProvider extends _ElementAItemProvider {
+public class InputDeclarationItemProvider extends ElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

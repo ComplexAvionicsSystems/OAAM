@@ -2,10 +2,9 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.common._ElementA;
-
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Power extends ProvidedOutputA, RequiredInputA, _ElementA, _VariantDependentElementA, _ModeDependentElementA {
+public interface Power extends ProvidedOutputA, RequiredInputA, ElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Power</b></em>' attribute.
 	 * <!-- begin-user-doc -->

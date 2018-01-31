@@ -75,9 +75,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_id_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__ID,
+				 getString("_UI_ElementA_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_id_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__ID,
 				 true,
 				 false,
 				 false,
@@ -97,9 +97,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_name_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__NAME,
+				 getString("_UI_ElementA_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_name_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__NAME,
 				 true,
 				 false,
 				 false,
@@ -119,9 +119,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_style_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_style_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__STYLE,
+				 getString("_UI_ElementA_style_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_style_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__STYLE,
 				 true,
 				 false,
 				 false,
@@ -141,9 +141,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_documentation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_documentation_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__DOCUMENTATION,
+				 getString("_UI_ElementA_documentation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_documentation_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__DOCUMENTATION,
 				 true,
 				 false,
 				 false,
@@ -163,9 +163,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_modified_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_modified_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__MODIFIED,
+				 getString("_UI_ElementA_modified_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modified_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__MODIFIED,
 				 true,
 				 false,
 				 false,
@@ -185,9 +185,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_modifier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_modifier_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__MODIFIER,
+				 getString("_UI_ElementA_modifier_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modifier_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__MODIFIER,
 				 true,
 				 false,
 				 false,
@@ -207,9 +207,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI__ElementA_traceLink_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI__ElementA_traceLink_feature", "_UI__ElementA_type"),
-				 CommonPackage.Literals._ELEMENT_A__TRACE_LINK,
+				 getString("_UI_ElementA_traceLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_traceLink_feature", "_UI_ElementA_type"),
+				 CommonPackage.Literals.ELEMENT_A__TRACE_LINK,
 				 true,
 				 false,
 				 false,
@@ -274,7 +274,7 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__OUTPUTS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUTS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATES);
@@ -369,22 +369,22 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeString()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals._ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
 
 		newChildDescriptors.add

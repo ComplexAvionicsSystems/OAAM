@@ -2,10 +2,9 @@
  */
 package de.oaam.model.oaam.mapping;
 
-import de.oaam.model.oaam.common._ElementA;
-
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
+import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import de.oaam.model.oaam.scenario._VariantDependentElementA;
  * @model annotation="http://www.obeo.fr/dsl/dnc/archetype archetype='Role'"
  * @generated
  */
-public interface ScheduledTime extends _ElementA, _ModeDependentElementA, _VariantDependentElementA {
+public interface ScheduledTime extends ElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Cycle</b></em>' attribute.
 	 * The default value is <code>"1"</code>.

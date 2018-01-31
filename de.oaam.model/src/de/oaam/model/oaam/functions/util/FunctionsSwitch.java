@@ -3,13 +3,11 @@
 package de.oaam.model.oaam.functions.util;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.*;
 
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -76,72 +74,72 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				Functions functions = (Functions)theEObject;
 				T result = caseFunctions(functions);
 				if (result == null) result = caseFunctionsContainerA(functions);
-				if (result == null) result = case_ElementA(functions);
-				if (result == null) result = case_VariantDependentElementA(functions);
-				if (result == null) result = case_ModeDependentElementA(functions);
+				if (result == null) result = caseElementA(functions);
+				if (result == null) result = caseVariantDependentElementA(functions);
+				if (result == null) result = caseModeDependentElementA(functions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A: {
 				FunctionsContainerA functionsContainerA = (FunctionsContainerA)theEObject;
 				T result = caseFunctionsContainerA(functionsContainerA);
-				if (result == null) result = case_ElementA(functionsContainerA);
-				if (result == null) result = case_VariantDependentElementA(functionsContainerA);
-				if (result == null) result = case_ModeDependentElementA(functionsContainerA);
+				if (result == null) result = caseElementA(functionsContainerA);
+				if (result == null) result = caseVariantDependentElementA(functionsContainerA);
+				if (result == null) result = caseModeDependentElementA(functionsContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.TASK: {
 				Task task = (Task)theEObject;
 				T result = caseTask(task);
-				if (result == null) result = case_ElementA(task);
-				if (result == null) result = case_VariantDependentElementA(task);
-				if (result == null) result = case_ModeDependentElementA(task);
+				if (result == null) result = caseElementA(task);
+				if (result == null) result = caseVariantDependentElementA(task);
+				if (result == null) result = caseModeDependentElementA(task);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.TASK_LINK: {
 				TaskLink taskLink = (TaskLink)theEObject;
 				T result = caseTaskLink(taskLink);
-				if (result == null) result = case_ElementA(taskLink);
-				if (result == null) result = case_ModeDependentElementA(taskLink);
-				if (result == null) result = case_VariantDependentElementA(taskLink);
+				if (result == null) result = caseElementA(taskLink);
+				if (result == null) result = caseModeDependentElementA(taskLink);
+				if (result == null) result = caseVariantDependentElementA(taskLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.TASK_GROUP: {
 				TaskGroup taskGroup = (TaskGroup)theEObject;
 				T result = caseTaskGroup(taskGroup);
-				if (result == null) result = case_ElementA(taskGroup);
-				if (result == null) result = case_ModeDependentElementA(taskGroup);
-				if (result == null) result = case_VariantDependentElementA(taskGroup);
+				if (result == null) result = caseElementA(taskGroup);
+				if (result == null) result = caseModeDependentElementA(taskGroup);
+				if (result == null) result = caseVariantDependentElementA(taskGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.TASK_SYMMETRY: {
 				TaskSymmetry taskSymmetry = (TaskSymmetry)theEObject;
 				T result = caseTaskSymmetry(taskSymmetry);
-				if (result == null) result = case_ElementA(taskSymmetry);
-				if (result == null) result = case_ModeDependentElementA(taskSymmetry);
-				if (result == null) result = case_VariantDependentElementA(taskSymmetry);
+				if (result == null) result = caseElementA(taskSymmetry);
+				if (result == null) result = caseModeDependentElementA(taskSymmetry);
+				if (result == null) result = caseVariantDependentElementA(taskSymmetry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.TASK_REDUNDANCY: {
 				TaskRedundancy taskRedundancy = (TaskRedundancy)theEObject;
 				T result = caseTaskRedundancy(taskRedundancy);
-				if (result == null) result = case_ElementA(taskRedundancy);
-				if (result == null) result = case_ModeDependentElementA(taskRedundancy);
-				if (result == null) result = case_VariantDependentElementA(taskRedundancy);
+				if (result == null) result = caseElementA(taskRedundancy);
+				if (result == null) result = caseModeDependentElementA(taskRedundancy);
+				if (result == null) result = caseVariantDependentElementA(taskRedundancy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.FAILURE_CONDITION: {
 				FailureCondition failureCondition = (FailureCondition)theEObject;
 				T result = caseFailureCondition(failureCondition);
-				if (result == null) result = case_ElementA(failureCondition);
-				if (result == null) result = case_ModeDependentElementA(failureCondition);
-				if (result == null) result = case_VariantDependentElementA(failureCondition);
+				if (result == null) result = caseElementA(failureCondition);
+				if (result == null) result = caseModeDependentElementA(failureCondition);
+				if (result == null) result = caseVariantDependentElementA(failureCondition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,54 +147,54 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				SystemInputState systemInputState = (SystemInputState)theEObject;
 				T result = caseSystemInputState(systemInputState);
 				if (result == null) result = caseBoolA(systemInputState);
-				if (result == null) result = case_ElementA(systemInputState);
-				if (result == null) result = case_ModeDependentElementA(systemInputState);
-				if (result == null) result = case_VariantDependentElementA(systemInputState);
+				if (result == null) result = caseElementA(systemInputState);
+				if (result == null) result = caseModeDependentElementA(systemInputState);
+				if (result == null) result = caseVariantDependentElementA(systemInputState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.SIGNAL: {
 				Signal signal = (Signal)theEObject;
 				T result = caseSignal(signal);
-				if (result == null) result = case_ElementA(signal);
-				if (result == null) result = case_VariantDependentElementA(signal);
-				if (result == null) result = case_ModeDependentElementA(signal);
+				if (result == null) result = caseElementA(signal);
+				if (result == null) result = caseVariantDependentElementA(signal);
+				if (result == null) result = caseModeDependentElementA(signal);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.SIGNAL_GROUP: {
 				SignalGroup signalGroup = (SignalGroup)theEObject;
 				T result = caseSignalGroup(signalGroup);
-				if (result == null) result = case_ElementA(signalGroup);
-				if (result == null) result = case_ModeDependentElementA(signalGroup);
-				if (result == null) result = case_VariantDependentElementA(signalGroup);
+				if (result == null) result = caseElementA(signalGroup);
+				if (result == null) result = caseModeDependentElementA(signalGroup);
+				if (result == null) result = caseVariantDependentElementA(signalGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
-				if (result == null) result = case_ElementA(input);
-				if (result == null) result = case_VariantDependentElementA(input);
-				if (result == null) result = case_ModeDependentElementA(input);
+				if (result == null) result = caseElementA(input);
+				if (result == null) result = caseVariantDependentElementA(input);
+				if (result == null) result = caseModeDependentElementA(input);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.OUTPUT: {
 				Output output = (Output)theEObject;
 				T result = caseOutput(output);
-				if (result == null) result = case_ElementA(output);
-				if (result == null) result = case_VariantDependentElementA(output);
-				if (result == null) result = case_ModeDependentElementA(output);
+				if (result == null) result = caseElementA(output);
+				if (result == null) result = caseVariantDependentElementA(output);
+				if (result == null) result = caseModeDependentElementA(output);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.OUTPUT_LINK: {
 				OutputLink outputLink = (OutputLink)theEObject;
 				T result = caseOutputLink(outputLink);
-				if (result == null) result = case_ElementA(outputLink);
-				if (result == null) result = case_ModeDependentElementA(outputLink);
-				if (result == null) result = case_VariantDependentElementA(outputLink);
+				if (result == null) result = caseElementA(outputLink);
+				if (result == null) result = caseModeDependentElementA(outputLink);
+				if (result == null) result = caseVariantDependentElementA(outputLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -204,16 +202,16 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				Subfunction subfunction = (Subfunction)theEObject;
 				T result = caseSubfunction(subfunction);
 				if (result == null) result = caseFunctionsContainerA(subfunction);
-				if (result == null) result = case_ElementA(subfunction);
-				if (result == null) result = case_VariantDependentElementA(subfunction);
-				if (result == null) result = case_ModeDependentElementA(subfunction);
+				if (result == null) result = caseElementA(subfunction);
+				if (result == null) result = caseVariantDependentElementA(subfunction);
+				if (result == null) result = caseModeDependentElementA(subfunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.PARAMETER: {
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
-				if (result == null) result = case_ElementA(parameter);
+				if (result == null) result = caseElementA(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -472,7 +470,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 
@@ -487,7 +485,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -502,7 +500,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 

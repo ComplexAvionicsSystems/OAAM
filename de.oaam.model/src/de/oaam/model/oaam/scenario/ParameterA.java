@@ -17,5 +17,5 @@ package de.oaam.model.oaam.scenario;
  * @model abstract="true"
  * @generated
  */
-public interface ParameterA extends _ModeDependentElementA, _VariantDependentElementA {
+public interface ParameterA extends ModeDependentElementA, VariantDependentElementA {
 } // ParameterA

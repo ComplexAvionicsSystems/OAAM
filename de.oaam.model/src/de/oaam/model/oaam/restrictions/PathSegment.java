@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.Task;
 
@@ -28,7 +27,7 @@ import de.oaam.model.oaam.functions.Task;
  * @model
  * @generated
  */
-public interface PathSegment extends _ElementA {
+public interface PathSegment extends ElementA {
 	/**
 	 * Returns the value of the '<em><b>Task</b></em>' reference.
 	 * <!-- begin-user-doc -->

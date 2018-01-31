@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.BoolA;
 
-import de.oaam.model.oaam.common.impl._ElementAImpl;
-
+import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputTrigger;
 
@@ -32,7 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class OutputTriggerImpl extends _ElementAImpl implements OutputTrigger {
+public class OutputTriggerImpl extends ElementAImpl implements OutputTrigger {
 	/**
 	 * The cached value of the '{@link #getLogic() <em>Logic</em>}' containment reference.
 	 * <!-- begin-user-doc -->

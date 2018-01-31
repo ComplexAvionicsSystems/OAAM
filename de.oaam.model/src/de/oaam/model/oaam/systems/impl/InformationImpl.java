@@ -4,14 +4,12 @@ package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.Information;
 import de.oaam.model.oaam.systems.RequiredInputA;
 import de.oaam.model.oaam.systems.SystemsPackage;
@@ -868,28 +866,28 @@ public class InformationImpl extends ProvidedOutputAImpl implements Information 
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.INFORMATION__ID: return CommonPackage._ELEMENT_A__ID;
-				case SystemsPackage.INFORMATION__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case SystemsPackage.INFORMATION__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case SystemsPackage.INFORMATION__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case SystemsPackage.INFORMATION__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case SystemsPackage.INFORMATION__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case SystemsPackage.INFORMATION__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case SystemsPackage.INFORMATION__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case SystemsPackage.INFORMATION__ID: return CommonPackage.ELEMENT_A__ID;
+				case SystemsPackage.INFORMATION__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case SystemsPackage.INFORMATION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case SystemsPackage.INFORMATION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case SystemsPackage.INFORMATION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case SystemsPackage.INFORMATION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case SystemsPackage.INFORMATION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case SystemsPackage.INFORMATION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.INFORMATION__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case SystemsPackage.INFORMATION__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.INFORMATION__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case SystemsPackage.INFORMATION__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
@@ -908,28 +906,28 @@ public class InformationImpl extends ProvidedOutputAImpl implements Information 
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return SystemsPackage.INFORMATION__ID;
-				case CommonPackage._ELEMENT_A__NAME: return SystemsPackage.INFORMATION__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return SystemsPackage.INFORMATION__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return SystemsPackage.INFORMATION__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return SystemsPackage.INFORMATION__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return SystemsPackage.INFORMATION__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return SystemsPackage.INFORMATION__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return SystemsPackage.INFORMATION__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return SystemsPackage.INFORMATION__ID;
+				case CommonPackage.ELEMENT_A__NAME: return SystemsPackage.INFORMATION__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return SystemsPackage.INFORMATION__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return SystemsPackage.INFORMATION__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return SystemsPackage.INFORMATION__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return SystemsPackage.INFORMATION__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return SystemsPackage.INFORMATION__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return SystemsPackage.INFORMATION__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return SystemsPackage.INFORMATION__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return SystemsPackage.INFORMATION__OPERATION_MODES;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return SystemsPackage.INFORMATION__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return SystemsPackage.INFORMATION__VARIANTS;
 				default: return -1;
 			}
 		}

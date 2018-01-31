@@ -768,32 +768,32 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		systemsContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		systemsContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		systemsEClass.getESuperTypes().add(this.getSystemsContainerA());
 		subsystemEClass.getESuperTypes().add(this.getSystemsContainerA());
-		subsystemEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		subsystemEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		systemEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		systemEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		systemEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		subsystemEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subsystemEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		systemEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		systemEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		systemEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		informationEClass.getESuperTypes().add(this.getProvidedOutputA());
 		informationEClass.getESuperTypes().add(this.getRequiredInputA());
-		informationEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		informationEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		informationEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		informationFlowEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		informationFlowEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		informationFlowEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		informationEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		informationEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		informationEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		informationFlowEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		electricPowerEClass.getESuperTypes().add(this.getPower());
 		powerEClass.getESuperTypes().add(this.getProvidedOutputA());
 		powerEClass.getESuperTypes().add(this.getRequiredInputA());
-		powerEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		powerEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		powerEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		powerEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		powerEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		powerEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		hydraulicPowerEClass.getESuperTypes().add(this.getPower());
 		rotaryPowerEClass.getESuperTypes().add(this.getPower());
 		linearPowerEClass.getESuperTypes().add(this.getPower());
-		inputSegregationEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		inputSegregationEClass.getESuperTypes().add(theCommonPackage.getElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(systemsContainerAEClass, SystemsContainerA.class, "SystemsContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

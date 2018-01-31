@@ -4,8 +4,7 @@ package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.functions.Subfunction;
 
 import de.oaam.model.oaam.hardware.Connection;
@@ -14,12 +13,11 @@ import de.oaam.model.oaam.restrictions.ConnectionRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
-import de.oaam.model.oaam.scenario._ModeDependentElementA;
-import de.oaam.model.oaam.scenario._VariantDependentElementA;
-
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -785,28 +783,28 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.CONNECTION_RESTRICTION__ID: return CommonPackage._ELEMENT_A__ID;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case RestrictionsPackage.CONNECTION_RESTRICTION__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__ID: return CommonPackage.ELEMENT_A__ID;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.CONNECTION_RESTRICTION__VARIANTS: return ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.CONNECTION_RESTRICTION__OPERATION_MODES: return ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				case RestrictionsPackage.CONNECTION_RESTRICTION__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 				default: return -1;
 			}
 		}
@@ -826,28 +824,28 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return RestrictionsPackage.CONNECTION_RESTRICTION__ID;
-				case CommonPackage._ELEMENT_A__NAME: return RestrictionsPackage.CONNECTION_RESTRICTION__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return RestrictionsPackage.CONNECTION_RESTRICTION__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.CONNECTION_RESTRICTION__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.CONNECTION_RESTRICTION__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return RestrictionsPackage.CONNECTION_RESTRICTION__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return RestrictionsPackage.CONNECTION_RESTRICTION__ID;
+				case CommonPackage.ELEMENT_A__NAME: return RestrictionsPackage.CONNECTION_RESTRICTION__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return RestrictionsPackage.CONNECTION_RESTRICTION__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.CONNECTION_RESTRICTION__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.CONNECTION_RESTRICTION__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return RestrictionsPackage.CONNECTION_RESTRICTION__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return RestrictionsPackage.CONNECTION_RESTRICTION__TRACE_LINK;
 				default: return -1;
 			}
 		}
-		if (baseClass == _VariantDependentElementA.class) {
+		if (baseClass == VariantDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return RestrictionsPackage.CONNECTION_RESTRICTION__VARIANTS;
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return RestrictionsPackage.CONNECTION_RESTRICTION__VARIANTS;
 				default: return -1;
 			}
 		}
-		if (baseClass == _ModeDependentElementA.class) {
+		if (baseClass == ModeDependentElementA.class) {
 			switch (baseFeatureID) {
-				case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return RestrictionsPackage.CONNECTION_RESTRICTION__OPERATION_MODES;
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return RestrictionsPackage.CONNECTION_RESTRICTION__OPERATION_MODES;
 				default: return -1;
 			}
 		}

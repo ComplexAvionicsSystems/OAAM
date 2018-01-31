@@ -585,31 +585,31 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		anatomyContainerAEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
+		anatomyContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		locationEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		locationEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		locationEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		locationEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		areaEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		areaEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		areaEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		locationEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		locationEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		areaEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		areaEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		areaEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		ductEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		ductEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		ductEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		ductEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		ductOpeningEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		position3DEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		position3DEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		position3DEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		locationSymmetryEClass.getESuperTypes().add(theCommonPackage.get_ElementA());
-		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
-		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
+		ductEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ductEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		ductEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		ductOpeningEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		position3DEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		position3DEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		position3DEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		locationSymmetryEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		anatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
 		subanatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
-		subanatomyEClass.getESuperTypes().add(theScenarioPackage.get_VariantDependentElementA());
-		subanatomyEClass.getESuperTypes().add(theScenarioPackage.get_ModeDependentElementA());
+		subanatomyEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subanatomyEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(anatomyContainerAEClass, AnatomyContainerA.class, "AnatomyContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -2,8 +2,7 @@
  */
 package de.oaam.model.oaam.scenario.util;
 
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.scenario.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -71,35 +70,35 @@ public class ScenarioSwitch<T> extends Switch<T> {
 			case ScenarioPackage.PARAMETER_A: {
 				ParameterA parameterA = (ParameterA)theEObject;
 				T result = caseParameterA(parameterA);
-				if (result == null) result = case_ModeDependentElementA(parameterA);
-				if (result == null) result = case_VariantDependentElementA(parameterA);
+				if (result == null) result = caseModeDependentElementA(parameterA);
+				if (result == null) result = caseVariantDependentElementA(parameterA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ScenarioPackage._MODE_DEPENDENT_ELEMENT_A: {
-				_ModeDependentElementA _ModeDependentElementA = (_ModeDependentElementA)theEObject;
-				T result = case_ModeDependentElementA(_ModeDependentElementA);
+			case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A: {
+				ModeDependentElementA modeDependentElementA = (ModeDependentElementA)theEObject;
+				T result = caseModeDependentElementA(modeDependentElementA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ScenarioPackage._VARIANT_DEPENDENT_ELEMENT_A: {
-				_VariantDependentElementA _VariantDependentElementA = (_VariantDependentElementA)theEObject;
-				T result = case_VariantDependentElementA(_VariantDependentElementA);
+			case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A: {
+				VariantDependentElementA variantDependentElementA = (VariantDependentElementA)theEObject;
+				T result = caseVariantDependentElementA(variantDependentElementA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ScenarioPackage.SCENARIO_CONTAINER_A: {
 				ScenarioContainerA scenarioContainerA = (ScenarioContainerA)theEObject;
 				T result = caseScenarioContainerA(scenarioContainerA);
-				if (result == null) result = case_ElementA(scenarioContainerA);
+				if (result == null) result = caseElementA(scenarioContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ScenarioPackage.OPERATION_MODE: {
 				OperationMode operationMode = (OperationMode)theEObject;
 				T result = caseOperationMode(operationMode);
-				if (result == null) result = case_ElementA(operationMode);
-				if (result == null) result = case_VariantDependentElementA(operationMode);
+				if (result == null) result = caseElementA(operationMode);
+				if (result == null) result = caseVariantDependentElementA(operationMode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,9 +106,9 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				ParameterNumeric parameterNumeric = (ParameterNumeric)theEObject;
 				T result = caseParameterNumeric(parameterNumeric);
 				if (result == null) result = caseParameterA(parameterNumeric);
-				if (result == null) result = case_ElementA(parameterNumeric);
-				if (result == null) result = case_ModeDependentElementA(parameterNumeric);
-				if (result == null) result = case_VariantDependentElementA(parameterNumeric);
+				if (result == null) result = caseElementA(parameterNumeric);
+				if (result == null) result = caseModeDependentElementA(parameterNumeric);
+				if (result == null) result = caseVariantDependentElementA(parameterNumeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,24 +116,24 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				ParameterBool parameterBool = (ParameterBool)theEObject;
 				T result = caseParameterBool(parameterBool);
 				if (result == null) result = caseParameterA(parameterBool);
-				if (result == null) result = case_ElementA(parameterBool);
-				if (result == null) result = case_ModeDependentElementA(parameterBool);
-				if (result == null) result = case_VariantDependentElementA(parameterBool);
+				if (result == null) result = caseElementA(parameterBool);
+				if (result == null) result = caseModeDependentElementA(parameterBool);
+				if (result == null) result = caseVariantDependentElementA(parameterBool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ScenarioPackage.VARIANT: {
 				Variant variant = (Variant)theEObject;
 				T result = caseVariant(variant);
-				if (result == null) result = case_ElementA(variant);
-				if (result == null) result = case_ModeDependentElementA(variant);
+				if (result == null) result = caseElementA(variant);
+				if (result == null) result = caseModeDependentElementA(variant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ScenarioPackage.OPERATION_MODE_REFERENCE: {
 				OperationModeReference operationModeReference = (OperationModeReference)theEObject;
 				T result = caseOperationModeReference(operationModeReference);
-				if (result == null) result = case_ElementA(operationModeReference);
+				if (result == null) result = caseElementA(operationModeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,7 +141,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				Scenario scenario = (Scenario)theEObject;
 				T result = caseScenario(scenario);
 				if (result == null) result = caseScenarioContainerA(scenario);
-				if (result == null) result = case_ElementA(scenario);
+				if (result == null) result = caseElementA(scenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,7 +149,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				Subscenario subscenario = (Subscenario)theEObject;
 				T result = caseSubscenario(subscenario);
 				if (result == null) result = caseScenarioContainerA(subscenario);
-				if (result == null) result = case_ElementA(subscenario);
+				if (result == null) result = caseElementA(subscenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -184,7 +183,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ModeDependentElementA(_ModeDependentElementA object) {
+	public T caseModeDependentElementA(ModeDependentElementA object) {
 		return null;
 	}
 
@@ -199,7 +198,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_VariantDependentElementA(_VariantDependentElementA object) {
+	public T caseVariantDependentElementA(VariantDependentElementA object) {
 		return null;
 	}
 
@@ -334,7 +333,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T case_ElementA(_ElementA object) {
+	public T caseElementA(ElementA object) {
 		return null;
 	}
 

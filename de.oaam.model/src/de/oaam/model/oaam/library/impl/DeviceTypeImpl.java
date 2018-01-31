@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common._ElementA;
-
+import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoGroup;
@@ -1068,16 +1067,16 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.DEVICE_TYPE__ID: return CommonPackage._ELEMENT_A__ID;
-				case LibraryPackage.DEVICE_TYPE__NAME: return CommonPackage._ELEMENT_A__NAME;
-				case LibraryPackage.DEVICE_TYPE__STYLE: return CommonPackage._ELEMENT_A__STYLE;
-				case LibraryPackage.DEVICE_TYPE__ATTRIBUTES: return CommonPackage._ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.DEVICE_TYPE__DOCUMENTATION: return CommonPackage._ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.DEVICE_TYPE__MODIFIED: return CommonPackage._ELEMENT_A__MODIFIED;
-				case LibraryPackage.DEVICE_TYPE__MODIFIER: return CommonPackage._ELEMENT_A__MODIFIER;
-				case LibraryPackage.DEVICE_TYPE__TRACE_LINK: return CommonPackage._ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.DEVICE_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
+				case LibraryPackage.DEVICE_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
+				case LibraryPackage.DEVICE_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
+				case LibraryPackage.DEVICE_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.DEVICE_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.DEVICE_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
+				case LibraryPackage.DEVICE_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
+				case LibraryPackage.DEVICE_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -1100,16 +1099,16 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
-		if (baseClass == _ElementA.class) {
+		if (baseClass == ElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage._ELEMENT_A__ID: return LibraryPackage.DEVICE_TYPE__ID;
-				case CommonPackage._ELEMENT_A__NAME: return LibraryPackage.DEVICE_TYPE__NAME;
-				case CommonPackage._ELEMENT_A__STYLE: return LibraryPackage.DEVICE_TYPE__STYLE;
-				case CommonPackage._ELEMENT_A__ATTRIBUTES: return LibraryPackage.DEVICE_TYPE__ATTRIBUTES;
-				case CommonPackage._ELEMENT_A__DOCUMENTATION: return LibraryPackage.DEVICE_TYPE__DOCUMENTATION;
-				case CommonPackage._ELEMENT_A__MODIFIED: return LibraryPackage.DEVICE_TYPE__MODIFIED;
-				case CommonPackage._ELEMENT_A__MODIFIER: return LibraryPackage.DEVICE_TYPE__MODIFIER;
-				case CommonPackage._ELEMENT_A__TRACE_LINK: return LibraryPackage.DEVICE_TYPE__TRACE_LINK;
+				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.DEVICE_TYPE__ID;
+				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.DEVICE_TYPE__NAME;
+				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.DEVICE_TYPE__STYLE;
+				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.DEVICE_TYPE__ATTRIBUTES;
+				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.DEVICE_TYPE__DOCUMENTATION;
+				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.DEVICE_TYPE__MODIFIED;
+				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.DEVICE_TYPE__MODIFIER;
+				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.DEVICE_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}

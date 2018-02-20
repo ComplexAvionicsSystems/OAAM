@@ -7,11 +7,11 @@ import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.library.IoDirectionE;
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ModifierDefinition;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceAlternatives;
 import de.oaam.model.oaam.library.ResourceType;
 
+import de.oaam.model.oaam.library.ResourceTypeModifierReference;
 import java.util.Collection;
 import java.util.Date;
 
@@ -347,7 +347,7 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifierDefinition> allowedModifiers;
+	protected EList<ResourceTypeModifierReference> allowedModifiers;
 
 	/**
 	 * The cached value of the '{@link #getAlternatives() <em>Alternatives</em>}' containment reference list.
@@ -680,9 +680,9 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifierDefinition> getAllowedModifiers() {
+	public EList<ResourceTypeModifierReference> getAllowedModifiers() {
 		if (allowedModifiers == null) {
-			allowedModifiers = new EObjectResolvingEList<ModifierDefinition>(ModifierDefinition.class, this, LibraryPackage.RESOURCE_TYPE__ALLOWED_MODIFIERS);
+			allowedModifiers = new EObjectResolvingEList<ResourceTypeModifierReference>(ResourceTypeModifierReference.class, this, LibraryPackage.RESOURCE_TYPE__ALLOWED_MODIFIERS);
 		}
 		return allowedModifiers;
 	}
@@ -821,7 +821,7 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 				return;
 			case LibraryPackage.RESOURCE_TYPE__ALLOWED_MODIFIERS:
 				getAllowedModifiers().clear();
-				getAllowedModifiers().addAll((Collection<? extends ModifierDefinition>)newValue);
+				getAllowedModifiers().addAll((Collection<? extends ResourceTypeModifierReference>)newValue);
 				return;
 			case LibraryPackage.RESOURCE_TYPE__ALTERNATIVES:
 				getAlternatives().clear();

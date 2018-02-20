@@ -344,17 +344,17 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createResourceModifier()));
+				 LibraryFactory.eINSTANCE.createResourceTypeModifier()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createModifierLevel()));
+				 LibraryFactory.eINSTANCE.createResourceTypeModifierLevel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createModifierDefinition()));
+				 LibraryFactory.eINSTANCE.createResourceTypeModifierReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -494,11 +494,6 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 FunctionsFactory.eINSTANCE.createFunctionsContainerA()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 FunctionsFactory.eINSTANCE.createFunctions()));
 
 		newChildDescriptors.add
@@ -509,7 +504,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 FunctionsFactory.eINSTANCE.createTaskLink()));
+				 FunctionsFactory.eINSTANCE.createExternalTaskLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -559,7 +554,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 FunctionsFactory.eINSTANCE.createOutputLink()));
+				 FunctionsFactory.eINSTANCE.createExternalOutputLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -689,16 +684,6 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createSubrestrictions()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createPathSegment()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 RestrictionsFactory.eINSTANCE.createLocationRestriction()));
 
 		newChildDescriptors.add
@@ -739,17 +724,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createTaskRateRestriction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createInputSynchronicityRestriction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createPathDelayRestriction()));
+				 RestrictionsFactory.eINSTANCE.createSynchronicityRestriction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -760,6 +735,16 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 RestrictionsFactory.eINSTANCE.createTaskSymmetryRestriction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 RestrictionsFactory.eINSTANCE.createTimeDelayRestriction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 RestrictionsFactory.eINSTANCE.createSubrestrictions()));
 
 		newChildDescriptors.add
 			(createChildParameter

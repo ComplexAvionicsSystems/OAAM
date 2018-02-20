@@ -208,22 +208,13 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Task Rate Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
+	int RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -232,7 +223,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
+	int RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Connection Type Restrictions</b></em>' containment reference list.
@@ -241,7 +232,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
+	int RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Segregations Restrictions</b></em>' containment reference list.
@@ -250,16 +241,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Signal Delay Restriction</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
+	int RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Subrestrictions</b></em>' containment reference list.
@@ -268,7 +250,16 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 13;
+	int RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -277,7 +268,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 14;
+	int RESTRICTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -434,15 +425,6 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS__TASK_SYMMETRY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Task Rate Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTRICTIONS__TASK_RATE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS;
-
-	/**
 	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -479,15 +461,6 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS__SEGREGATIONS_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Signal Delay Restriction</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESTRICTIONS__SIGNAL_DELAY_RESTRICTION = RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION;
-
-	/**
 	 * The feature id for the '<em><b>Subrestrictions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -495,6 +468,15 @@ public interface RestrictionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESTRICTIONS__SUBRESTRICTIONS = RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESTRICTIONS__TIMEDELAYRESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS;
 
 	/**
 	 * The number of structural features of the '<em>Restrictions</em>' class.
@@ -522,241 +504,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
 	 * @generated
 	 */
-	int SUBRESTRICTIONS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__ID = RESTRICTIONS_CONTAINER_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__NAME = RESTRICTIONS_CONTAINER_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__STYLE = RESTRICTIONS_CONTAINER_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__ATTRIBUTES = RESTRICTIONS_CONTAINER_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__DOCUMENTATION = RESTRICTIONS_CONTAINER_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__MODIFIED = RESTRICTIONS_CONTAINER_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__MODIFIER = RESTRICTIONS_CONTAINER_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__TRACE_LINK = RESTRICTIONS_CONTAINER_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Device Type Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__DEVICE_TYPE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__DEVICE_TYPE_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Device Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__DEVICE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__DEVICE_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Location Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__LOCATION_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__LOCATION_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Area Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__AREA_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__AREA_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Power Source Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__POWER_SOURCE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Task Atomic Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__TASK_ATOMIC_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Task Symmetry Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__TASK_SYMMETRY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Task Rate Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__TASK_RATE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__INPUT_SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION;
-
-	/**
-	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__CONNECTION_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Connection Type Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__CONNECTION_TYPE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Segregations Restrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__SEGREGATIONS_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Signal Delay Restriction</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__SIGNAL_DELAY_RESTRICTION = RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION;
-
-	/**
-	 * The feature id for the '<em><b>Subrestrictions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__SUBRESTRICTIONS = RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__VARIANTS = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS__OPERATION_MODES = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Subrestrictions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS_FEATURE_COUNT = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Subrestrictions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBRESTRICTIONS_OPERATION_COUNT = RESTRICTIONS_CONTAINER_A_OPERATION_COUNT + 0;
+	int SUBRESTRICTIONS = 20;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.DeviceRestrictionAImpl <em>Device Restriction A</em>}' class.
@@ -766,7 +514,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getDeviceRestrictionA()
 	 * @generated
 	 */
-	int DEVICE_RESTRICTION_A = 3;
+	int DEVICE_RESTRICTION_A = 2;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference.
@@ -803,7 +551,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConnectionRestrinctionA()
 	 * @generated
 	 */
-	int CONNECTION_RESTRINCTION_A = 4;
+	int CONNECTION_RESTRINCTION_A = 3;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -840,7 +588,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskRestrictionA()
 	 * @generated
 	 */
-	int TASK_RESTRICTION_A = 5;
+	int TASK_RESTRICTION_A = 4;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -877,7 +625,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSignalRestrictionA()
 	 * @generated
 	 */
-	int SIGNAL_RESTRICTION_A = 6;
+	int SIGNAL_RESTRICTION_A = 5;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -914,7 +662,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubFunctionRestrictionA()
 	 * @generated
 	 */
-	int SUB_FUNCTION_RESTRICTION_A = 7;
+	int SUB_FUNCTION_RESTRICTION_A = 6;
 
 	/**
 	 * The feature id for the '<em><b>Sub Functions</b></em>' reference list.
@@ -944,161 +692,6 @@ public interface RestrictionsPackage extends EPackage {
 	int SUB_FUNCTION_RESTRICTION_A_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.PathRestrictionAImpl <em>Path Restriction A</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.PathRestrictionAImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathRestrictionA()
-	 * @generated
-	 */
-	int PATH_RESTRICTION_A = 8;
-
-	/**
-	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_RESTRICTION_A__SEGMENTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Path Restriction A</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_RESTRICTION_A_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Path Restriction A</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_RESTRICTION_A_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.PathSegmentImpl <em>Path Segment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.PathSegmentImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathSegment()
-	 * @generated
-	 */
-	int PATH_SEGMENT = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__ID = CommonPackage.ELEMENT_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__NAME = CommonPackage.ELEMENT_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__STYLE = CommonPackage.ELEMENT_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Signal</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT__SIGNAL = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Path Segment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Path Segment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_SEGMENT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TaskGroupRestrictionAImpl <em>Task Group Restriction A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1106,7 +699,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskGroupRestrictionA()
 	 * @generated
 	 */
-	int TASK_GROUP_RESTRICTION_A = 10;
+	int TASK_GROUP_RESTRICTION_A = 7;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
@@ -1136,43 +729,6 @@ public interface RestrictionsPackage extends EPackage {
 	int TASK_GROUP_RESTRICTION_A_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.InputRestrictionAImpl <em>Input Restriction A</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.InputRestrictionAImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getInputRestrictionA()
-	 * @generated
-	 */
-	int INPUT_RESTRICTION_A = 11;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RESTRICTION_A__INPUTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Input Restriction A</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RESTRICTION_A_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Input Restriction A</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RESTRICTION_A_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl <em>Location Restriction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1180,7 +736,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getLocationRestriction()
 	 * @generated
 	 */
-	int LOCATION_RESTRICTION = 12;
+	int LOCATION_RESTRICTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1370,7 +926,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getAreaRestriction()
 	 * @generated
 	 */
-	int AREA_RESTRICTION = 13;
+	int AREA_RESTRICTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1560,7 +1116,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPowerSourceRestriction()
 	 * @generated
 	 */
-	int POWER_SOURCE_RESTRICTION = 14;
+	int POWER_SOURCE_RESTRICTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1741,7 +1297,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getDeviceRestriction()
 	 * @generated
 	 */
-	int DEVICE_RESTRICTION = 15;
+	int DEVICE_RESTRICTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1913,7 +1469,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getDeviceTypeRestriction()
 	 * @generated
 	 */
-	int DEVICE_TYPE_RESTRICTION = 16;
+	int DEVICE_TYPE_RESTRICTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -2085,7 +1641,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConectionTypeRestriction()
 	 * @generated
 	 */
-	int CONECTION_TYPE_RESTRICTION = 17;
+	int CONECTION_TYPE_RESTRICTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -2248,7 +1804,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConnectionRestriction()
 	 * @generated
 	 */
-	int CONNECTION_RESTRICTION = 18;
+	int CONNECTION_RESTRICTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -2411,7 +1967,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSegregationRestriction()
 	 * @generated
 	 */
-	int SEGREGATION_RESTRICTION = 19;
+	int SEGREGATION_RESTRICTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2684,14 +2240,104 @@ public interface RestrictionsPackage extends EPackage {
 	int SEGREGATION_RESTRICTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TaskRateRestrictionImpl <em>Task Rate Restriction</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.SynchronicityRestrictionImpl <em>Synchronicity Restriction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.TaskRateRestrictionImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskRateRestriction()
+	 * @see de.oaam.model.oaam.restrictions.impl.SynchronicityRestrictionImpl
+	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSynchronicityRestriction()
 	 * @generated
 	 */
-	int TASK_RATE_RESTRICTION = 20;
+	int SYNCHRONICITY_RESTRICTION = 16;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__ID = CommonPackage.ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__NAME = CommonPackage.ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__STYLE = CommonPackage.ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYNCHRONICITY_RESTRICTION__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -2700,242 +2346,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_RATE_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Rate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__RATE = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Max Deviation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION__MAX_DEVIATION = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
-
-	/**
-	 * The number of structural features of the '<em>Task Rate Restriction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
-
-	/**
-	 * The number of operations of the '<em>Task Rate Restriction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RATE_RESTRICTION_OPERATION_COUNT = TASK_RESTRICTION_A_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.InputSynchronicityRestrictionImpl <em>Input Synchronicity Restriction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.InputSynchronicityRestrictionImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getInputSynchronicityRestriction()
-	 * @generated
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION = 21;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__INPUTS = INPUT_RESTRICTION_A__INPUTS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__ID = INPUT_RESTRICTION_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__NAME = INPUT_RESTRICTION_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__STYLE = INPUT_RESTRICTION_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__ATTRIBUTES = INPUT_RESTRICTION_A_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__DOCUMENTATION = INPUT_RESTRICTION_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__MODIFIED = INPUT_RESTRICTION_A_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__MODIFIER = INPUT_RESTRICTION_A_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__TRACE_LINK = INPUT_RESTRICTION_A_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__OPERATION_MODES = INPUT_RESTRICTION_A_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__VARIANTS = INPUT_RESTRICTION_A_FEATURE_COUNT + 9;
+	int SYNCHRONICITY_RESTRICTION__TASKS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Max Jitter</b></em>' attribute.
@@ -2944,161 +2355,25 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION__MAX_JITTER = INPUT_RESTRICTION_A_FEATURE_COUNT + 10;
+	int SYNCHRONICITY_RESTRICTION__MAX_JITTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Input Synchronicity Restriction</em>' class.
+	 * The number of structural features of the '<em>Synchronicity Restriction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION_FEATURE_COUNT = INPUT_RESTRICTION_A_FEATURE_COUNT + 11;
+	int SYNCHRONICITY_RESTRICTION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of operations of the '<em>Input Synchronicity Restriction</em>' class.
+	 * The number of operations of the '<em>Synchronicity Restriction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SYNCHRONICITY_RESTRICTION_OPERATION_COUNT = INPUT_RESTRICTION_A_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.PathDelayRestrictionImpl <em>Path Delay Restriction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.PathDelayRestrictionImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathDelayRestriction()
-	 * @generated
-	 */
-	int PATH_DELAY_RESTRICTION = 22;
-
-	/**
-	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__SEGMENTS = PATH_RESTRICTION_A__SEGMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__ID = PATH_RESTRICTION_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__NAME = PATH_RESTRICTION_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__STYLE = PATH_RESTRICTION_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__ATTRIBUTES = PATH_RESTRICTION_A_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__DOCUMENTATION = PATH_RESTRICTION_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__MODIFIED = PATH_RESTRICTION_A_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__MODIFIER = PATH_RESTRICTION_A_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__TRACE_LINK = PATH_RESTRICTION_A_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__OPERATION_MODES = PATH_RESTRICTION_A_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__VARIANTS = PATH_RESTRICTION_A_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Delay</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION__DELAY = PATH_RESTRICTION_A_FEATURE_COUNT + 10;
-
-	/**
-	 * The number of structural features of the '<em>Path Delay Restriction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION_FEATURE_COUNT = PATH_RESTRICTION_A_FEATURE_COUNT + 11;
-
-	/**
-	 * The number of operations of the '<em>Path Delay Restriction</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATH_DELAY_RESTRICTION_OPERATION_COUNT = PATH_RESTRICTION_A_OPERATION_COUNT + 0;
+	int SYNCHRONICITY_RESTRICTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl <em>Task Atomic Restriction</em>}' class.
@@ -3108,7 +2383,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskAtomicRestriction()
 	 * @generated
 	 */
-	int TASK_ATOMIC_RESTRICTION = 23;
+	int TASK_ATOMIC_RESTRICTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -3235,7 +2510,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskSymmetryRestriction()
 	 * @generated
 	 */
-	int TASK_SYMMETRY_RESTRICTION = 24;
+	int TASK_SYMMETRY_RESTRICTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -3364,6 +2639,376 @@ public interface RestrictionsPackage extends EPackage {
 	int TASK_SYMMETRY_RESTRICTION_OPERATION_COUNT = TASK_RESTRICTION_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.TimeDelayRestrictionImpl <em>Time Delay Restriction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.restrictions.impl.TimeDelayRestrictionImpl
+	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTimeDelayRestriction()
+	 * @generated
+	 */
+	int TIME_DELAY_RESTRICTION = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__ID = CommonPackage.ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__NAME = CommonPackage.ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__STYLE = CommonPackage.ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Delay</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__DELAY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Start Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__START_TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>End Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION__END_TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Time Delay Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Time Delay Restriction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_DELAY_RESTRICTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__ID = RESTRICTIONS_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__NAME = RESTRICTIONS_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__STYLE = RESTRICTIONS_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__ATTRIBUTES = RESTRICTIONS_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__DOCUMENTATION = RESTRICTIONS_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__MODIFIED = RESTRICTIONS_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__MODIFIER = RESTRICTIONS_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__TRACE_LINK = RESTRICTIONS_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Device Type Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__DEVICE_TYPE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__DEVICE_TYPE_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Device Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__DEVICE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__DEVICE_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Location Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__LOCATION_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__LOCATION_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Area Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__AREA_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__AREA_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Power Source Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__POWER_SOURCE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Task Atomic Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__TASK_ATOMIC_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Task Symmetry Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__TASK_SYMMETRY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__INPUT_SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION;
+
+	/**
+	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__CONNECTION_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Connection Type Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__CONNECTION_TYPE_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Segregations Restrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__SEGREGATIONS_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subrestrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__SUBRESTRICTIONS = RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__TIMEDELAYRESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__VARIANTS = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS__OPERATION_MODES = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Subrestrictions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS_FEATURE_COUNT = RESTRICTIONS_CONTAINER_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Subrestrictions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBRESTRICTIONS_OPERATION_COUNT = RESTRICTIONS_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.SymmetryTypesE <em>Symmetry Types E</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3371,7 +3016,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSymmetryTypesE()
 	 * @generated
 	 */
-	int SYMMETRY_TYPES_E = 25;
+	int SYMMETRY_TYPES_E = 21;
 
 
 	/**
@@ -3462,17 +3107,6 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getRestrictionsContainerA_TaskSymmetryRestrictions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskRateRestrictions <em>Task Rate Restrictions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Task Rate Restrictions</em>'.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskRateRestrictions()
-	 * @see #getRestrictionsContainerA()
-	 * @generated
-	 */
-	EReference getRestrictionsContainerA_TaskRateRestrictions();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3517,17 +3151,6 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getRestrictionsContainerA_SegregationsRestrictions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSignalDelayRestriction <em>Signal Delay Restriction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Signal Delay Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSignalDelayRestriction()
-	 * @see #getRestrictionsContainerA()
-	 * @generated
-	 */
-	EReference getRestrictionsContainerA_SignalDelayRestriction();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSubrestrictions <em>Subrestrictions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3537,6 +3160,17 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRestrictionsContainerA_Subrestrictions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions <em>Timedelayrestrictions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Timedelayrestrictions</em>'.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions()
+	 * @see #getRestrictionsContainerA()
+	 * @generated
+	 */
+	EReference getRestrictionsContainerA_Timedelayrestrictions();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.Restrictions <em>Restrictions</em>}'.
@@ -3664,59 +3298,6 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getSubFunctionRestrictionA_SubFunctions();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.PathRestrictionA <em>Path Restriction A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Path Restriction A</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathRestrictionA
-	 * @generated
-	 */
-	EClass getPathRestrictionA();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.PathRestrictionA#getSegments <em>Segments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segments</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathRestrictionA#getSegments()
-	 * @see #getPathRestrictionA()
-	 * @generated
-	 */
-	EReference getPathRestrictionA_Segments();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.PathSegment <em>Path Segment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Path Segment</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathSegment
-	 * @generated
-	 */
-	EClass getPathSegment();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.restrictions.PathSegment#getTask <em>Task</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Task</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathSegment#getTask()
-	 * @see #getPathSegment()
-	 * @generated
-	 */
-	EReference getPathSegment_Task();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.restrictions.PathSegment#getSignal <em>Signal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signal</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathSegment#getSignal()
-	 * @see #getPathSegment()
-	 * @generated
-	 */
-	EReference getPathSegment_Signal();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.TaskGroupRestrictionA <em>Task Group Restriction A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3736,27 +3317,6 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTaskGroupRestrictionA_TaskGroups();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.InputRestrictionA <em>Input Restriction A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Restriction A</em>'.
-	 * @see de.oaam.model.oaam.restrictions.InputRestrictionA
-	 * @generated
-	 */
-	EClass getInputRestrictionA();
-
-	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.restrictions.InputRestrictionA#getInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
-	 * @see de.oaam.model.oaam.restrictions.InputRestrictionA#getInputs()
-	 * @see #getInputRestrictionA()
-	 * @generated
-	 */
-	EReference getInputRestrictionA_Inputs();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.LocationRestriction <em>Location Restriction</em>}'.
@@ -4268,78 +3828,25 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getSegregationRestriction_ConnectionsB();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.TaskRateRestriction <em>Task Rate Restriction</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.SynchronicityRestriction <em>Synchronicity Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task Rate Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.TaskRateRestriction
+	 * @return the meta object for class '<em>Synchronicity Restriction</em>'.
+	 * @see de.oaam.model.oaam.restrictions.SynchronicityRestriction
 	 * @generated
 	 */
-	EClass getTaskRateRestriction();
+	EClass getSynchronicityRestriction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.TaskRateRestriction#getRate <em>Rate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rate</em>'.
-	 * @see de.oaam.model.oaam.restrictions.TaskRateRestriction#getRate()
-	 * @see #getTaskRateRestriction()
-	 * @generated
-	 */
-	EAttribute getTaskRateRestriction_Rate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.TaskRateRestriction#getMaxDeviation <em>Max Deviation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Deviation</em>'.
-	 * @see de.oaam.model.oaam.restrictions.TaskRateRestriction#getMaxDeviation()
-	 * @see #getTaskRateRestriction()
-	 * @generated
-	 */
-	EAttribute getTaskRateRestriction_MaxDeviation();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Synchronicity Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.InputSynchronicityRestriction
-	 * @generated
-	 */
-	EClass getInputSynchronicityRestriction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction#getMaxJitter <em>Max Jitter</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.SynchronicityRestriction#getMaxJitter <em>Max Jitter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Max Jitter</em>'.
-	 * @see de.oaam.model.oaam.restrictions.InputSynchronicityRestriction#getMaxJitter()
-	 * @see #getInputSynchronicityRestriction()
+	 * @see de.oaam.model.oaam.restrictions.SynchronicityRestriction#getMaxJitter()
+	 * @see #getSynchronicityRestriction()
 	 * @generated
 	 */
-	EAttribute getInputSynchronicityRestriction_MaxJitter();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.PathDelayRestriction <em>Path Delay Restriction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Path Delay Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathDelayRestriction
-	 * @generated
-	 */
-	EClass getPathDelayRestriction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.PathDelayRestriction#getDelay <em>Delay</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Delay</em>'.
-	 * @see de.oaam.model.oaam.restrictions.PathDelayRestriction#getDelay()
-	 * @see #getPathDelayRestriction()
-	 * @generated
-	 */
-	EAttribute getPathDelayRestriction_Delay();
+	EAttribute getSynchronicityRestriction_MaxJitter();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.TaskAtomicRestriction <em>Task Atomic Restriction</em>}'.
@@ -4371,6 +3878,49 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTaskSymmetryRestriction_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.TimeDelayRestriction <em>Time Delay Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time Delay Restriction</em>'.
+	 * @see de.oaam.model.oaam.restrictions.TimeDelayRestriction
+	 * @generated
+	 */
+	EClass getTimeDelayRestriction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.TimeDelayRestriction#getDelay <em>Delay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Delay</em>'.
+	 * @see de.oaam.model.oaam.restrictions.TimeDelayRestriction#getDelay()
+	 * @see #getTimeDelayRestriction()
+	 * @generated
+	 */
+	EAttribute getTimeDelayRestriction_Delay();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.restrictions.TimeDelayRestriction#getStartTask <em>Start Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start Task</em>'.
+	 * @see de.oaam.model.oaam.restrictions.TimeDelayRestriction#getStartTask()
+	 * @see #getTimeDelayRestriction()
+	 * @generated
+	 */
+	EReference getTimeDelayRestriction_StartTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.restrictions.TimeDelayRestriction#getEndTask <em>End Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End Task</em>'.
+	 * @see de.oaam.model.oaam.restrictions.TimeDelayRestriction#getEndTask()
+	 * @see #getTimeDelayRestriction()
+	 * @generated
+	 */
+	EReference getTimeDelayRestriction_EndTask();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.restrictions.SymmetryTypesE <em>Symmetry Types E</em>}'.
@@ -4472,14 +4022,6 @@ public interface RestrictionsPackage extends EPackage {
 		EReference RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = eINSTANCE.getRestrictionsContainerA_TaskSymmetryRestrictions();
 
 		/**
-		 * The meta object literal for the '<em><b>Task Rate Restrictions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS = eINSTANCE.getRestrictionsContainerA_TaskRateRestrictions();
-
-		/**
 		 * The meta object literal for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4512,20 +4054,20 @@ public interface RestrictionsPackage extends EPackage {
 		EReference RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS = eINSTANCE.getRestrictionsContainerA_SegregationsRestrictions();
 
 		/**
-		 * The meta object literal for the '<em><b>Signal Delay Restriction</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION = eINSTANCE.getRestrictionsContainerA_SignalDelayRestriction();
-
-		/**
 		 * The meta object literal for the '<em><b>Subrestrictions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = eINSTANCE.getRestrictionsContainerA_Subrestrictions();
+
+		/**
+		 * The meta object literal for the '<em><b>Timedelayrestrictions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS = eINSTANCE.getRestrictionsContainerA_Timedelayrestrictions();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.RestrictionsImpl <em>Restrictions</em>}' class.
@@ -4638,50 +4180,6 @@ public interface RestrictionsPackage extends EPackage {
 		EReference SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS = eINSTANCE.getSubFunctionRestrictionA_SubFunctions();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.PathRestrictionAImpl <em>Path Restriction A</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.PathRestrictionAImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathRestrictionA()
-		 * @generated
-		 */
-		EClass PATH_RESTRICTION_A = eINSTANCE.getPathRestrictionA();
-
-		/**
-		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PATH_RESTRICTION_A__SEGMENTS = eINSTANCE.getPathRestrictionA_Segments();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.PathSegmentImpl <em>Path Segment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.PathSegmentImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathSegment()
-		 * @generated
-		 */
-		EClass PATH_SEGMENT = eINSTANCE.getPathSegment();
-
-		/**
-		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PATH_SEGMENT__TASK = eINSTANCE.getPathSegment_Task();
-
-		/**
-		 * The meta object literal for the '<em><b>Signal</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PATH_SEGMENT__SIGNAL = eINSTANCE.getPathSegment_Signal();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.TaskGroupRestrictionAImpl <em>Task Group Restriction A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4698,24 +4196,6 @@ public interface RestrictionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK_GROUP_RESTRICTION_A__TASK_GROUPS = eINSTANCE.getTaskGroupRestrictionA_TaskGroups();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.InputRestrictionAImpl <em>Input Restriction A</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.InputRestrictionAImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getInputRestrictionA()
-		 * @generated
-		 */
-		EClass INPUT_RESTRICTION_A = eINSTANCE.getInputRestrictionA();
-
-		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT_RESTRICTION_A__INPUTS = eINSTANCE.getInputRestrictionA_Inputs();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl <em>Location Restriction</em>}' class.
@@ -5110,40 +4590,14 @@ public interface RestrictionsPackage extends EPackage {
 		EReference SEGREGATION_RESTRICTION__CONNECTIONS_B = eINSTANCE.getSegregationRestriction_ConnectionsB();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.TaskRateRestrictionImpl <em>Task Rate Restriction</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.SynchronicityRestrictionImpl <em>Synchronicity Restriction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.TaskRateRestrictionImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskRateRestriction()
+		 * @see de.oaam.model.oaam.restrictions.impl.SynchronicityRestrictionImpl
+		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSynchronicityRestriction()
 		 * @generated
 		 */
-		EClass TASK_RATE_RESTRICTION = eINSTANCE.getTaskRateRestriction();
-
-		/**
-		 * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK_RATE_RESTRICTION__RATE = eINSTANCE.getTaskRateRestriction_Rate();
-
-		/**
-		 * The meta object literal for the '<em><b>Max Deviation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK_RATE_RESTRICTION__MAX_DEVIATION = eINSTANCE.getTaskRateRestriction_MaxDeviation();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.InputSynchronicityRestrictionImpl <em>Input Synchronicity Restriction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.InputSynchronicityRestrictionImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getInputSynchronicityRestriction()
-		 * @generated
-		 */
-		EClass INPUT_SYNCHRONICITY_RESTRICTION = eINSTANCE.getInputSynchronicityRestriction();
+		EClass SYNCHRONICITY_RESTRICTION = eINSTANCE.getSynchronicityRestriction();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Jitter</b></em>' attribute feature.
@@ -5151,25 +4605,7 @@ public interface RestrictionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INPUT_SYNCHRONICITY_RESTRICTION__MAX_JITTER = eINSTANCE.getInputSynchronicityRestriction_MaxJitter();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.PathDelayRestrictionImpl <em>Path Delay Restriction</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.PathDelayRestrictionImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPathDelayRestriction()
-		 * @generated
-		 */
-		EClass PATH_DELAY_RESTRICTION = eINSTANCE.getPathDelayRestriction();
-
-		/**
-		 * The meta object literal for the '<em><b>Delay</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATH_DELAY_RESTRICTION__DELAY = eINSTANCE.getPathDelayRestriction_Delay();
+		EAttribute SYNCHRONICITY_RESTRICTION__MAX_JITTER = eINSTANCE.getSynchronicityRestriction_MaxJitter();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl <em>Task Atomic Restriction</em>}' class.
@@ -5198,6 +4634,40 @@ public interface RestrictionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK_SYMMETRY_RESTRICTION__TYPE = eINSTANCE.getTaskSymmetryRestriction_Type();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.TimeDelayRestrictionImpl <em>Time Delay Restriction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.restrictions.impl.TimeDelayRestrictionImpl
+		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTimeDelayRestriction()
+		 * @generated
+		 */
+		EClass TIME_DELAY_RESTRICTION = eINSTANCE.getTimeDelayRestriction();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_DELAY_RESTRICTION__DELAY = eINSTANCE.getTimeDelayRestriction_Delay();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_DELAY_RESTRICTION__START_TASK = eINSTANCE.getTimeDelayRestriction_StartTask();
+
+		/**
+		 * The meta object literal for the '<em><b>End Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_DELAY_RESTRICTION__END_TASK = eINSTANCE.getTimeDelayRestriction_EndTask();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.SymmetryTypesE <em>Symmetry Types E</em>}' enum.

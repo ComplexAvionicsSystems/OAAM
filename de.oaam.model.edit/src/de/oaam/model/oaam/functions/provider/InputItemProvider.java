@@ -274,7 +274,7 @@ public class InputItemProvider extends ElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.INPUT__OUTPUT_LINK,
-				 FunctionsFactory.eINSTANCE.createOutputLink()));
+				 FunctionsFactory.eINSTANCE.createExternalOutputLink()));
 	}
 
 	/**

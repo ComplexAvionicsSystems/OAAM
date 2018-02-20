@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.functions.ExternalTaskLink;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.FunctionsPackage;
@@ -11,7 +12,6 @@ import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunction;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
-import de.oaam.model.oaam.functions.TaskLink;
 import de.oaam.model.oaam.functions.TaskRedundancy;
 import de.oaam.model.oaam.functions.TaskSymmetry;
 
@@ -60,7 +60,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FunctionsContainerAImpl extends ElementAImpl implements FunctionsContainerA {
+public abstract class FunctionsContainerAImpl extends ElementAImpl implements FunctionsContainerA {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -119,7 +119,7 @@ public class FunctionsContainerAImpl extends ElementAImpl implements FunctionsCo
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaskLink> taskLinks;
+	protected EList<ExternalTaskLink> taskLinks;
 
 	/**
 	 * The cached value of the '{@link #getTaskGroups() <em>Task Groups</em>}' containment reference list.
@@ -272,9 +272,9 @@ public class FunctionsContainerAImpl extends ElementAImpl implements FunctionsCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaskLink> getTaskLinks() {
+	public EList<ExternalTaskLink> getTaskLinks() {
 		if (taskLinks == null) {
-			taskLinks = new EObjectContainmentEList<TaskLink>(TaskLink.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS);
+			taskLinks = new EObjectContainmentEList<ExternalTaskLink>(ExternalTaskLink.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS);
 		}
 		return taskLinks;
 	}
@@ -457,7 +457,7 @@ public class FunctionsContainerAImpl extends ElementAImpl implements FunctionsCo
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS:
 				getTaskLinks().clear();
-				getTaskLinks().addAll((Collection<? extends TaskLink>)newValue);
+				getTaskLinks().addAll((Collection<? extends ExternalTaskLink>)newValue);
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_GROUPS:
 				getTaskGroups().clear();

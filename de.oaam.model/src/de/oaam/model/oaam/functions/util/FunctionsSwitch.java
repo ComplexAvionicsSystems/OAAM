@@ -98,12 +98,12 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FunctionsPackage.TASK_LINK: {
-				TaskLink taskLink = (TaskLink)theEObject;
-				T result = caseTaskLink(taskLink);
-				if (result == null) result = caseElementA(taskLink);
-				if (result == null) result = caseModeDependentElementA(taskLink);
-				if (result == null) result = caseVariantDependentElementA(taskLink);
+			case FunctionsPackage.EXTERNAL_TASK_LINK: {
+				ExternalTaskLink externalTaskLink = (ExternalTaskLink)theEObject;
+				T result = caseExternalTaskLink(externalTaskLink);
+				if (result == null) result = caseElementA(externalTaskLink);
+				if (result == null) result = caseModeDependentElementA(externalTaskLink);
+				if (result == null) result = caseVariantDependentElementA(externalTaskLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -189,12 +189,12 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FunctionsPackage.OUTPUT_LINK: {
-				OutputLink outputLink = (OutputLink)theEObject;
-				T result = caseOutputLink(outputLink);
-				if (result == null) result = caseElementA(outputLink);
-				if (result == null) result = caseModeDependentElementA(outputLink);
-				if (result == null) result = caseVariantDependentElementA(outputLink);
+			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: {
+				ExternalOutputLink externalOutputLink = (ExternalOutputLink)theEObject;
+				T result = caseExternalOutputLink(externalOutputLink);
+				if (result == null) result = caseElementA(externalOutputLink);
+				if (result == null) result = caseModeDependentElementA(externalOutputLink);
+				if (result == null) result = caseVariantDependentElementA(externalOutputLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -265,17 +265,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>External Task Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>External Task Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTaskLink(TaskLink object) {
+	public T caseExternalTaskLink(ExternalTaskLink object) {
 		return null;
 	}
 
@@ -415,17 +415,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Output Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>External Output Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Output Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>External Output Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOutputLink(OutputLink object) {
+	public T caseExternalOutputLink(ExternalOutputLink object) {
 		return null;
 	}
 

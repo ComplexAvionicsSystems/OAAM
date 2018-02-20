@@ -41,12 +41,7 @@ import de.oaam.model.oaam.restrictions.ConnectionRestrinctionA;
 import de.oaam.model.oaam.restrictions.DeviceRestriction;
 import de.oaam.model.oaam.restrictions.DeviceRestrictionA;
 import de.oaam.model.oaam.restrictions.DeviceTypeRestriction;
-import de.oaam.model.oaam.restrictions.InputRestrictionA;
-import de.oaam.model.oaam.restrictions.InputSynchronicityRestriction;
 import de.oaam.model.oaam.restrictions.LocationRestriction;
-import de.oaam.model.oaam.restrictions.PathDelayRestriction;
-import de.oaam.model.oaam.restrictions.PathRestrictionA;
-import de.oaam.model.oaam.restrictions.PathSegment;
 import de.oaam.model.oaam.restrictions.PowerSourceRestriction;
 import de.oaam.model.oaam.restrictions.Restrictions;
 import de.oaam.model.oaam.restrictions.RestrictionsContainerA;
@@ -57,12 +52,13 @@ import de.oaam.model.oaam.restrictions.SignalRestrictionA;
 import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
 import de.oaam.model.oaam.restrictions.Subrestrictions;
 import de.oaam.model.oaam.restrictions.SymmetryTypesE;
+import de.oaam.model.oaam.restrictions.SynchronicityRestriction;
 import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
 import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
-import de.oaam.model.oaam.restrictions.TaskRateRestriction;
 import de.oaam.model.oaam.restrictions.TaskRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskSymmetryRestriction;
 
+import de.oaam.model.oaam.restrictions.TimeDelayRestriction;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
 import de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl;
@@ -147,28 +143,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pathRestrictionAEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pathSegmentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass taskGroupRestrictionAEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass inputRestrictionAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -231,21 +206,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass taskRateRestrictionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass inputSynchronicityRestrictionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pathDelayRestrictionEClass = null;
+	private EClass synchronicityRestrictionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,6 +221,13 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * @generated
 	 */
 	private EClass taskSymmetryRestrictionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeDelayRestrictionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -438,7 +406,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_TaskRateRestrictions() {
+	public EReference getRestrictionsContainerA_InputSynchronicityRestriction() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -447,7 +415,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_InputSynchronicityRestriction() {
+	public EReference getRestrictionsContainerA_ConnectionRestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -456,7 +424,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_ConnectionRestrictions() {
+	public EReference getRestrictionsContainerA_ConnectionTypeRestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -465,7 +433,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_ConnectionTypeRestrictions() {
+	public EReference getRestrictionsContainerA_SegregationsRestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -474,7 +442,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_SegregationsRestrictions() {
+	public EReference getRestrictionsContainerA_Subrestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -483,17 +451,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_SignalDelayRestriction() {
+	public EReference getRestrictionsContainerA_Timedelayrestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRestrictionsContainerA_Subrestrictions() {
-		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -609,51 +568,6 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPathRestrictionA() {
-		return pathRestrictionAEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPathRestrictionA_Segments() {
-		return (EReference)pathRestrictionAEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPathSegment() {
-		return pathSegmentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPathSegment_Task() {
-		return (EReference)pathSegmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPathSegment_Signal() {
-		return (EReference)pathSegmentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskGroupRestrictionA() {
 		return taskGroupRestrictionAEClass;
 	}
@@ -665,24 +579,6 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 */
 	public EReference getTaskGroupRestrictionA_TaskGroups() {
 		return (EReference)taskGroupRestrictionAEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInputRestrictionA() {
-		return inputRestrictionAEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInputRestrictionA_Inputs() {
-		return (EReference)inputRestrictionAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1113,8 +1009,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTaskRateRestriction() {
-		return taskRateRestrictionEClass;
+	public EClass getSynchronicityRestriction() {
+		return synchronicityRestrictionEClass;
 	}
 
 	/**
@@ -1122,53 +1018,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskRateRestriction_Rate() {
-		return (EAttribute)taskRateRestrictionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTaskRateRestriction_MaxDeviation() {
-		return (EAttribute)taskRateRestrictionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInputSynchronicityRestriction() {
-		return inputSynchronicityRestrictionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInputSynchronicityRestriction_MaxJitter() {
-		return (EAttribute)inputSynchronicityRestrictionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPathDelayRestriction() {
-		return pathDelayRestrictionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPathDelayRestriction_Delay() {
-		return (EAttribute)pathDelayRestrictionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSynchronicityRestriction_MaxJitter() {
+		return (EAttribute)synchronicityRestrictionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1196,6 +1047,42 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 */
 	public EAttribute getTaskSymmetryRestriction_Type() {
 		return (EAttribute)taskSymmetryRestrictionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimeDelayRestriction() {
+		return timeDelayRestrictionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTimeDelayRestriction_Delay() {
+		return (EAttribute)timeDelayRestrictionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimeDelayRestriction_StartTask() {
+		return (EReference)timeDelayRestrictionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimeDelayRestriction_EndTask() {
+		return (EReference)timeDelayRestrictionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1243,17 +1130,14 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS);
-		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS);
-		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
+		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
 
 		restrictionsEClass = createEClass(RESTRICTIONS);
-
-		subrestrictionsEClass = createEClass(SUBRESTRICTIONS);
 
 		deviceRestrictionAEClass = createEClass(DEVICE_RESTRICTION_A);
 		createEReference(deviceRestrictionAEClass, DEVICE_RESTRICTION_A__DEVICES);
@@ -1270,18 +1154,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		subFunctionRestrictionAEClass = createEClass(SUB_FUNCTION_RESTRICTION_A);
 		createEReference(subFunctionRestrictionAEClass, SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS);
 
-		pathRestrictionAEClass = createEClass(PATH_RESTRICTION_A);
-		createEReference(pathRestrictionAEClass, PATH_RESTRICTION_A__SEGMENTS);
-
-		pathSegmentEClass = createEClass(PATH_SEGMENT);
-		createEReference(pathSegmentEClass, PATH_SEGMENT__TASK);
-		createEReference(pathSegmentEClass, PATH_SEGMENT__SIGNAL);
-
 		taskGroupRestrictionAEClass = createEClass(TASK_GROUP_RESTRICTION_A);
 		createEReference(taskGroupRestrictionAEClass, TASK_GROUP_RESTRICTION_A__TASK_GROUPS);
-
-		inputRestrictionAEClass = createEClass(INPUT_RESTRICTION_A);
-		createEReference(inputRestrictionAEClass, INPUT_RESTRICTION_A__INPUTS);
 
 		locationRestrictionEClass = createEClass(LOCATION_RESTRICTION);
 		createEAttribute(locationRestrictionEClass, LOCATION_RESTRICTION__LOCATION_NAME);
@@ -1338,20 +1212,20 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__CONNECTIONS_A);
 		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__CONNECTIONS_B);
 
-		taskRateRestrictionEClass = createEClass(TASK_RATE_RESTRICTION);
-		createEAttribute(taskRateRestrictionEClass, TASK_RATE_RESTRICTION__RATE);
-		createEAttribute(taskRateRestrictionEClass, TASK_RATE_RESTRICTION__MAX_DEVIATION);
-
-		inputSynchronicityRestrictionEClass = createEClass(INPUT_SYNCHRONICITY_RESTRICTION);
-		createEAttribute(inputSynchronicityRestrictionEClass, INPUT_SYNCHRONICITY_RESTRICTION__MAX_JITTER);
-
-		pathDelayRestrictionEClass = createEClass(PATH_DELAY_RESTRICTION);
-		createEAttribute(pathDelayRestrictionEClass, PATH_DELAY_RESTRICTION__DELAY);
+		synchronicityRestrictionEClass = createEClass(SYNCHRONICITY_RESTRICTION);
+		createEAttribute(synchronicityRestrictionEClass, SYNCHRONICITY_RESTRICTION__MAX_JITTER);
 
 		taskAtomicRestrictionEClass = createEClass(TASK_ATOMIC_RESTRICTION);
 
 		taskSymmetryRestrictionEClass = createEClass(TASK_SYMMETRY_RESTRICTION);
 		createEAttribute(taskSymmetryRestrictionEClass, TASK_SYMMETRY_RESTRICTION__TYPE);
+
+		timeDelayRestrictionEClass = createEClass(TIME_DELAY_RESTRICTION);
+		createEAttribute(timeDelayRestrictionEClass, TIME_DELAY_RESTRICTION__DELAY);
+		createEReference(timeDelayRestrictionEClass, TIME_DELAY_RESTRICTION__START_TASK);
+		createEReference(timeDelayRestrictionEClass, TIME_DELAY_RESTRICTION__END_TASK);
+
+		subrestrictionsEClass = createEClass(SUBRESTRICTIONS);
 
 		// Create enums
 		symmetryTypesEEEnum = createEEnum(SYMMETRY_TYPES_E);
@@ -1382,9 +1256,9 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 
 		// Obtain other dependent packages
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
-		ScenarioPackage theScenarioPackage = (ScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
 		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
 		FunctionsPackage theFunctionsPackage = (FunctionsPackage)EPackage.Registry.INSTANCE.getEPackage(FunctionsPackage.eNS_URI);
+		ScenarioPackage theScenarioPackage = (ScenarioPackage)EPackage.Registry.INSTANCE.getEPackage(ScenarioPackage.eNS_URI);
 		AnatomyPackage theAnatomyPackage = (AnatomyPackage)EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI);
 		LibraryPackage theLibraryPackage = (LibraryPackage)EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
 
@@ -1395,10 +1269,6 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		// Add supertypes to classes
 		restrictionsContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		restrictionsEClass.getESuperTypes().add(this.getRestrictionsContainerA());
-		subrestrictionsEClass.getESuperTypes().add(this.getRestrictionsContainerA());
-		subrestrictionsEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		subrestrictionsEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		pathSegmentEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		locationRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		locationRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
 		locationRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
@@ -1447,18 +1317,10 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		segregationRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		segregationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		segregationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		taskRateRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
-		taskRateRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		taskRateRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		taskRateRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		inputSynchronicityRestrictionEClass.getESuperTypes().add(this.getInputRestrictionA());
-		inputSynchronicityRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		inputSynchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		inputSynchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		pathDelayRestrictionEClass.getESuperTypes().add(this.getPathRestrictionA());
-		pathDelayRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		pathDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		pathDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		synchronicityRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		synchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		synchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		synchronicityRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
@@ -1467,6 +1329,12 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		taskSymmetryRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskSymmetryRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		taskSymmetryRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		timeDelayRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		timeDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		timeDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subrestrictionsEClass.getESuperTypes().add(this.getRestrictionsContainerA());
+		subrestrictionsEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subrestrictionsEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(restrictionsContainerAEClass, RestrictionsContainerA.class, "RestrictionsContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1477,17 +1345,14 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEReference(getRestrictionsContainerA_PowerSourceRestrictions(), this.getPowerSourceRestriction(), null, "powerSourceRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_TaskAtomicRestrictions(), this.getTaskAtomicRestriction(), null, "taskAtomicRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_TaskSymmetryRestrictions(), this.getTaskSymmetryRestriction(), null, "taskSymmetryRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestrictionsContainerA_TaskRateRestrictions(), this.getTaskRateRestriction(), null, "taskRateRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestrictionsContainerA_InputSynchronicityRestriction(), this.getInputSynchronicityRestriction(), null, "inputSynchronicityRestriction", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestrictionsContainerA_InputSynchronicityRestriction(), this.getSynchronicityRestriction(), null, "inputSynchronicityRestriction", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_ConnectionRestrictions(), this.getConnectionRestriction(), null, "connectionRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_ConnectionTypeRestrictions(), this.getConectionTypeRestriction(), null, "connectionTypeRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_SegregationsRestrictions(), this.getSegregationRestriction(), null, "segregationsRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestrictionsContainerA_SignalDelayRestriction(), this.getPathDelayRestriction(), null, "signalDelayRestriction", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_Subrestrictions(), this.getSubrestrictions(), null, "subrestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestrictionsContainerA_Timedelayrestrictions(), this.getTimeDelayRestriction(), null, "timedelayrestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restrictionsEClass, Restrictions.class, "Restrictions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(subrestrictionsEClass, Subrestrictions.class, "Subrestrictions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(deviceRestrictionAEClass, DeviceRestrictionA.class, "DeviceRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviceRestrictionA_Devices(), theHardwarePackage.getDevice(), null, "devices", null, 0, 1, DeviceRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1504,18 +1369,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEClass(subFunctionRestrictionAEClass, SubFunctionRestrictionA.class, "SubFunctionRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubFunctionRestrictionA_SubFunctions(), theFunctionsPackage.getSubfunction(), null, "subFunctions", null, 0, -1, SubFunctionRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pathRestrictionAEClass, PathRestrictionA.class, "PathRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPathRestrictionA_Segments(), this.getPathSegment(), null, "segments", null, 1, -1, PathRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(pathSegmentEClass, PathSegment.class, "PathSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPathSegment_Task(), theFunctionsPackage.getTask(), null, "task", null, 0, 1, PathSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPathSegment_Signal(), theFunctionsPackage.getSignal(), null, "signal", null, 0, 1, PathSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(taskGroupRestrictionAEClass, TaskGroupRestrictionA.class, "TaskGroupRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskGroupRestrictionA_TaskGroups(), theFunctionsPackage.getTaskGroup(), null, "taskGroups", null, 0, -1, TaskGroupRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(inputRestrictionAEClass, InputRestrictionA.class, "InputRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInputRestrictionA_Inputs(), theFunctionsPackage.getInput(), null, "inputs", null, 0, -1, InputRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationRestrictionEClass, LocationRestriction.class, "LocationRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocationRestriction_LocationName(), ecorePackage.getEString(), "locationName", null, 0, 1, LocationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1572,20 +1427,20 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEReference(getSegregationRestriction_ConnectionsA(), theHardwarePackage.getConnection(), null, "connectionsA", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSegregationRestriction_ConnectionsB(), theHardwarePackage.getConnection(), null, "connectionsB", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(taskRateRestrictionEClass, TaskRateRestriction.class, "TaskRateRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTaskRateRestriction_Rate(), ecorePackage.getEFloat(), "rate", "10.0", 1, 1, TaskRateRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaskRateRestriction_MaxDeviation(), ecorePackage.getEFloat(), "maxDeviation", "0.1", 1, 1, TaskRateRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(inputSynchronicityRestrictionEClass, InputSynchronicityRestriction.class, "InputSynchronicityRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInputSynchronicityRestriction_MaxJitter(), ecorePackage.getEFloat(), "maxJitter", "0.001", 1, 1, InputSynchronicityRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(pathDelayRestrictionEClass, PathDelayRestriction.class, "PathDelayRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPathDelayRestriction_Delay(), ecorePackage.getEFloat(), "delay", "1", 1, 1, PathDelayRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(synchronicityRestrictionEClass, SynchronicityRestriction.class, "SynchronicityRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSynchronicityRestriction_MaxJitter(), ecorePackage.getEFloat(), "maxJitter", "0.001", 1, 1, SynchronicityRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskAtomicRestrictionEClass, TaskAtomicRestriction.class, "TaskAtomicRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(taskSymmetryRestrictionEClass, TaskSymmetryRestriction.class, "TaskSymmetryRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTaskSymmetryRestriction_Type(), this.getSymmetryTypesE(), "type", null, 1, 1, TaskSymmetryRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timeDelayRestrictionEClass, TimeDelayRestriction.class, "TimeDelayRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeDelayRestriction_Delay(), ecorePackage.getEFloat(), "delay", "1", 1, 1, TimeDelayRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimeDelayRestriction_StartTask(), theFunctionsPackage.getTask(), null, "startTask", null, 1, 1, TimeDelayRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimeDelayRestriction_EndTask(), theFunctionsPackage.getTask(), null, "endTask", null, 1, 1, TimeDelayRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(subrestrictionsEClass, Subrestrictions.class, "Subrestrictions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(symmetryTypesEEEnum, SymmetryTypesE.class, "SymmetryTypesE");

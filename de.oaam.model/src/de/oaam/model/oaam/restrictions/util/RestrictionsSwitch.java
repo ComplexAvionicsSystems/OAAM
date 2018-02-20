@@ -84,16 +84,6 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RestrictionsPackage.SUBRESTRICTIONS: {
-				Subrestrictions subrestrictions = (Subrestrictions)theEObject;
-				T result = caseSubrestrictions(subrestrictions);
-				if (result == null) result = caseRestrictionsContainerA(subrestrictions);
-				if (result == null) result = caseVariantDependentElementA(subrestrictions);
-				if (result == null) result = caseModeDependentElementA(subrestrictions);
-				if (result == null) result = caseElementA(subrestrictions);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case RestrictionsPackage.DEVICE_RESTRICTION_A: {
 				DeviceRestrictionA deviceRestrictionA = (DeviceRestrictionA)theEObject;
 				T result = caseDeviceRestrictionA(deviceRestrictionA);
@@ -124,28 +114,9 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RestrictionsPackage.PATH_RESTRICTION_A: {
-				PathRestrictionA pathRestrictionA = (PathRestrictionA)theEObject;
-				T result = casePathRestrictionA(pathRestrictionA);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestrictionsPackage.PATH_SEGMENT: {
-				PathSegment pathSegment = (PathSegment)theEObject;
-				T result = casePathSegment(pathSegment);
-				if (result == null) result = caseElementA(pathSegment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case RestrictionsPackage.TASK_GROUP_RESTRICTION_A: {
 				TaskGroupRestrictionA taskGroupRestrictionA = (TaskGroupRestrictionA)theEObject;
 				T result = caseTaskGroupRestrictionA(taskGroupRestrictionA);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestrictionsPackage.INPUT_RESTRICTION_A: {
-				InputRestrictionA inputRestrictionA = (InputRestrictionA)theEObject;
-				T result = caseInputRestrictionA(inputRestrictionA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -245,33 +216,13 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RestrictionsPackage.TASK_RATE_RESTRICTION: {
-				TaskRateRestriction taskRateRestriction = (TaskRateRestriction)theEObject;
-				T result = caseTaskRateRestriction(taskRateRestriction);
-				if (result == null) result = caseTaskRestrictionA(taskRateRestriction);
-				if (result == null) result = caseElementA(taskRateRestriction);
-				if (result == null) result = caseModeDependentElementA(taskRateRestriction);
-				if (result == null) result = caseVariantDependentElementA(taskRateRestriction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestrictionsPackage.INPUT_SYNCHRONICITY_RESTRICTION: {
-				InputSynchronicityRestriction inputSynchronicityRestriction = (InputSynchronicityRestriction)theEObject;
-				T result = caseInputSynchronicityRestriction(inputSynchronicityRestriction);
-				if (result == null) result = caseInputRestrictionA(inputSynchronicityRestriction);
-				if (result == null) result = caseElementA(inputSynchronicityRestriction);
-				if (result == null) result = caseModeDependentElementA(inputSynchronicityRestriction);
-				if (result == null) result = caseVariantDependentElementA(inputSynchronicityRestriction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RestrictionsPackage.PATH_DELAY_RESTRICTION: {
-				PathDelayRestriction pathDelayRestriction = (PathDelayRestriction)theEObject;
-				T result = casePathDelayRestriction(pathDelayRestriction);
-				if (result == null) result = casePathRestrictionA(pathDelayRestriction);
-				if (result == null) result = caseElementA(pathDelayRestriction);
-				if (result == null) result = caseModeDependentElementA(pathDelayRestriction);
-				if (result == null) result = caseVariantDependentElementA(pathDelayRestriction);
+			case RestrictionsPackage.SYNCHRONICITY_RESTRICTION: {
+				SynchronicityRestriction synchronicityRestriction = (SynchronicityRestriction)theEObject;
+				T result = caseSynchronicityRestriction(synchronicityRestriction);
+				if (result == null) result = caseElementA(synchronicityRestriction);
+				if (result == null) result = caseModeDependentElementA(synchronicityRestriction);
+				if (result == null) result = caseVariantDependentElementA(synchronicityRestriction);
+				if (result == null) result = caseTaskRestrictionA(synchronicityRestriction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -292,6 +243,25 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseElementA(taskSymmetryRestriction);
 				if (result == null) result = caseModeDependentElementA(taskSymmetryRestriction);
 				if (result == null) result = caseVariantDependentElementA(taskSymmetryRestriction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestrictionsPackage.TIME_DELAY_RESTRICTION: {
+				TimeDelayRestriction timeDelayRestriction = (TimeDelayRestriction)theEObject;
+				T result = caseTimeDelayRestriction(timeDelayRestriction);
+				if (result == null) result = caseElementA(timeDelayRestriction);
+				if (result == null) result = caseModeDependentElementA(timeDelayRestriction);
+				if (result == null) result = caseVariantDependentElementA(timeDelayRestriction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RestrictionsPackage.SUBRESTRICTIONS: {
+				Subrestrictions subrestrictions = (Subrestrictions)theEObject;
+				T result = caseSubrestrictions(subrestrictions);
+				if (result == null) result = caseRestrictionsContainerA(subrestrictions);
+				if (result == null) result = caseVariantDependentElementA(subrestrictions);
+				if (result == null) result = caseModeDependentElementA(subrestrictions);
+				if (result == null) result = caseElementA(subrestrictions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -420,36 +390,6 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Restriction A</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Restriction A</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathRestrictionA(PathRestrictionA object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Segment</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Segment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathSegment(PathSegment object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Task Group Restriction A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -461,21 +401,6 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTaskGroupRestrictionA(TaskGroupRestrictionA object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Restriction A</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Restriction A</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputRestrictionA(InputRestrictionA object) {
 		return null;
 	}
 
@@ -600,47 +525,17 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task Rate Restriction</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Synchronicity Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task Rate Restriction</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Synchronicity Restriction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTaskRateRestriction(TaskRateRestriction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Synchronicity Restriction</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Synchronicity Restriction</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputSynchronicityRestriction(InputSynchronicityRestriction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Delay Restriction</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Delay Restriction</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePathDelayRestriction(PathDelayRestriction object) {
+	public T caseSynchronicityRestriction(SynchronicityRestriction object) {
 		return null;
 	}
 
@@ -671,6 +566,21 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTaskSymmetryRestriction(TaskSymmetryRestriction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time Delay Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time Delay Restriction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeDelayRestriction(TimeDelayRestriction object) {
 		return null;
 	}
 

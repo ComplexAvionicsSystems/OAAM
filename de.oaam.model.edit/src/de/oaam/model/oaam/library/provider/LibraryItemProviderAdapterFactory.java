@@ -601,72 +601,72 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceModifier} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceTypeModifier} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResourceModifierItemProvider resourceModifierItemProvider;
+	protected ResourceTypeModifierItemProvider resourceTypeModifierItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceModifier}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceTypeModifier}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResourceModifierAdapter() {
-		if (resourceModifierItemProvider == null) {
-			resourceModifierItemProvider = new ResourceModifierItemProvider(this);
+	public Adapter createResourceTypeModifierAdapter() {
+		if (resourceTypeModifierItemProvider == null) {
+			resourceTypeModifierItemProvider = new ResourceTypeModifierItemProvider(this);
 		}
 
-		return resourceModifierItemProvider;
+		return resourceTypeModifierItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ModifierLevel} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceTypeModifierLevel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifierLevelItemProvider modifierLevelItemProvider;
+	protected ResourceTypeModifierLevelItemProvider resourceTypeModifierLevelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ModifierLevel}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceTypeModifierLevel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createModifierLevelAdapter() {
-		if (modifierLevelItemProvider == null) {
-			modifierLevelItemProvider = new ModifierLevelItemProvider(this);
+	public Adapter createResourceTypeModifierLevelAdapter() {
+		if (resourceTypeModifierLevelItemProvider == null) {
+			resourceTypeModifierLevelItemProvider = new ResourceTypeModifierLevelItemProvider(this);
 		}
 
-		return modifierLevelItemProvider;
+		return resourceTypeModifierLevelItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ModifierDefinition} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceTypeModifierReference} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifierDefinitionItemProvider modifierDefinitionItemProvider;
+	protected ResourceTypeModifierReferenceItemProvider resourceTypeModifierReferenceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ModifierDefinition}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceTypeModifierReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createModifierDefinitionAdapter() {
-		if (modifierDefinitionItemProvider == null) {
-			modifierDefinitionItemProvider = new ModifierDefinitionItemProvider(this);
+	public Adapter createResourceTypeModifierReferenceAdapter() {
+		if (resourceTypeModifierReferenceItemProvider == null) {
+			resourceTypeModifierReferenceItemProvider = new ResourceTypeModifierReferenceItemProvider(this);
 		}
 
-		return modifierDefinitionItemProvider;
+		return resourceTypeModifierReferenceItemProvider;
 	}
 
 	/**
@@ -998,9 +998,9 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (functionInputStateItemProvider != null) functionInputStateItemProvider.dispose();
 		if (powerSourceItemProvider != null) powerSourceItemProvider.dispose();
 		if (resourceLinkItemProvider != null) resourceLinkItemProvider.dispose();
-		if (resourceModifierItemProvider != null) resourceModifierItemProvider.dispose();
-		if (modifierLevelItemProvider != null) modifierLevelItemProvider.dispose();
-		if (modifierDefinitionItemProvider != null) modifierDefinitionItemProvider.dispose();
+		if (resourceTypeModifierItemProvider != null) resourceTypeModifierItemProvider.dispose();
+		if (resourceTypeModifierLevelItemProvider != null) resourceTypeModifierLevelItemProvider.dispose();
+		if (resourceTypeModifierReferenceItemProvider != null) resourceTypeModifierReferenceItemProvider.dispose();
 		if (taskTypeDissimilarityItemProvider != null) taskTypeDissimilarityItemProvider.dispose();
 		if (deviceTypeDissimilarityItemProvider != null) deviceTypeDissimilarityItemProvider.dispose();
 		if (resourceTypeDissimilarityItemProvider != null) resourceTypeDissimilarityItemProvider.dispose();

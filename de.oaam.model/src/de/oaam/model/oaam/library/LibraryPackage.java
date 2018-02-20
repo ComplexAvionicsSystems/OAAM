@@ -3726,14 +3726,14 @@ public interface LibraryPackage extends EPackage {
 	int RESOURCE_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceModifierImpl <em>Resource Modifier</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierImpl <em>Resource Type Modifier</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.ResourceModifierImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceModifier()
+	 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifier()
 	 * @generated
 	 */
-	int RESOURCE_MODIFIER = 27;
+	int RESOURCE_TYPE_MODIFIER = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3742,7 +3742,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__ID = CommonPackage.ELEMENT_A__ID;
+	int RESOURCE_TYPE_MODIFIER__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3751,7 +3751,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__NAME = CommonPackage.ELEMENT_A__NAME;
+	int RESOURCE_TYPE_MODIFIER__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3760,7 +3760,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int RESOURCE_TYPE_MODIFIER__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3769,7 +3769,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_TYPE_MODIFIER__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3778,7 +3778,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_TYPE_MODIFIER__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3787,7 +3787,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int RESOURCE_TYPE_MODIFIER__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3796,7 +3796,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int RESOURCE_TYPE_MODIFIER__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3805,7 +3805,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int RESOURCE_TYPE_MODIFIER__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Levels</b></em>' containment reference list.
@@ -3814,35 +3814,35 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER__LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER__LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Resource Modifier</em>' class.
+	 * The number of structural features of the '<em>Resource Type Modifier</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_TYPE_MODIFIER_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Resource Modifier</em>' class.
+	 * The number of operations of the '<em>Resource Type Modifier</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_MODIFIER_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ModifierLevelImpl <em>Modifier Level</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierLevelImpl <em>Resource Type Modifier Level</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.ModifierLevelImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getModifierLevel()
+	 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierLevelImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierLevel()
 	 * @generated
 	 */
-	int MODIFIER_LEVEL = 28;
+	int RESOURCE_TYPE_MODIFIER_LEVEL = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3851,7 +3851,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__ID = CommonPackage.ELEMENT_A__ID;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3860,7 +3860,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__NAME = CommonPackage.ELEMENT_A__NAME;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3869,7 +3869,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3878,7 +3878,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3887,7 +3887,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3896,7 +3896,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3905,7 +3905,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3914,7 +3914,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Required Resources</b></em>' containment reference list.
@@ -3923,7 +3923,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__REQUIRED_RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__REQUIRED_RESOURCES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Consumed Groups</b></em>' containment reference list.
@@ -3932,7 +3932,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__CONSUMED_GROUPS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__CONSUMED_GROUPS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Equal Alternatives</b></em>' reference list.
@@ -3941,7 +3941,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__EQUAL_ALTERNATIVES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__EQUAL_ALTERNATIVES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Better Alternative</b></em>' reference.
@@ -3950,35 +3950,35 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL__BETTER_ALTERNATIVE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int RESOURCE_TYPE_MODIFIER_LEVEL__BETTER_ALTERNATIVE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Modifier Level</em>' class.
+	 * The number of structural features of the '<em>Resource Type Modifier Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int RESOURCE_TYPE_MODIFIER_LEVEL_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of operations of the '<em>Modifier Level</em>' class.
+	 * The number of operations of the '<em>Resource Type Modifier Level</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_LEVEL_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER_LEVEL_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ModifierDefinitionImpl <em>Modifier Definition</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierReferenceImpl <em>Resource Type Modifier Reference</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.ModifierDefinitionImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getModifierDefinition()
+	 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierReferenceImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierReference()
 	 * @generated
 	 */
-	int MODIFIER_DEFINITION = 29;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3987,7 +3987,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ID = CommonPackage.ELEMENT_A__ID;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3996,7 +3996,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__NAME = CommonPackage.ELEMENT_A__NAME;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -4005,7 +4005,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -4014,7 +4014,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -4023,7 +4023,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -4032,7 +4032,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -4041,7 +4041,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -4050,7 +4050,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -4059,7 +4059,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Levels</b></em>' reference list.
@@ -4068,25 +4068,25 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION__ALLOWED_LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE__ALLOWED_LEVELS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Modifier Definition</em>' class.
+	 * The number of structural features of the '<em>Resource Type Modifier Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Modifier Definition</em>' class.
+	 * The number of operations of the '<em>Resource Type Modifier Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFIER_DEFINITION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskTypeDissimilarityImpl <em>Task Type Dissimilarity</em>}' class.
@@ -6828,89 +6828,89 @@ public interface LibraryPackage extends EPackage {
 	EReference getResourceLink_Out();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceModifier <em>Resource Modifier</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceTypeModifier <em>Resource Type Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource Modifier</em>'.
-	 * @see de.oaam.model.oaam.library.ResourceModifier
+	 * @return the meta object for class '<em>Resource Type Modifier</em>'.
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifier
 	 * @generated
 	 */
-	EClass getResourceModifier();
+	EClass getResourceTypeModifier();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.ResourceModifier#getLevels <em>Levels</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.ResourceTypeModifier#getLevels <em>Levels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Levels</em>'.
-	 * @see de.oaam.model.oaam.library.ResourceModifier#getLevels()
-	 * @see #getResourceModifier()
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifier#getLevels()
+	 * @see #getResourceTypeModifier()
 	 * @generated
 	 */
-	EReference getResourceModifier_Levels();
+	EReference getResourceTypeModifier_Levels();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ModifierLevel <em>Modifier Level</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceTypeModifierLevel <em>Resource Type Modifier Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Modifier Level</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierLevel
+	 * @return the meta object for class '<em>Resource Type Modifier Level</em>'.
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierLevel
 	 * @generated
 	 */
-	EClass getModifierLevel();
+	EClass getResourceTypeModifierLevel();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.ModifierLevel#getEqualAlternatives <em>Equal Alternatives</em>}'.
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.ResourceTypeModifierLevel#getEqualAlternatives <em>Equal Alternatives</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Equal Alternatives</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierLevel#getEqualAlternatives()
-	 * @see #getModifierLevel()
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierLevel#getEqualAlternatives()
+	 * @see #getResourceTypeModifierLevel()
 	 * @generated
 	 */
-	EReference getModifierLevel_EqualAlternatives();
+	EReference getResourceTypeModifierLevel_EqualAlternatives();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ModifierLevel#getBetterAlternative <em>Better Alternative</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ResourceTypeModifierLevel#getBetterAlternative <em>Better Alternative</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Better Alternative</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierLevel#getBetterAlternative()
-	 * @see #getModifierLevel()
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierLevel#getBetterAlternative()
+	 * @see #getResourceTypeModifierLevel()
 	 * @generated
 	 */
-	EReference getModifierLevel_BetterAlternative();
+	EReference getResourceTypeModifierLevel_BetterAlternative();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ModifierDefinition <em>Modifier Definition</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceTypeModifierReference <em>Resource Type Modifier Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Modifier Definition</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierDefinition
+	 * @return the meta object for class '<em>Resource Type Modifier Reference</em>'.
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierReference
 	 * @generated
 	 */
-	EClass getModifierDefinition();
+	EClass getResourceTypeModifierReference();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ModifierDefinition#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ResourceTypeModifierReference#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierDefinition#getType()
-	 * @see #getModifierDefinition()
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierReference#getType()
+	 * @see #getResourceTypeModifierReference()
 	 * @generated
 	 */
-	EReference getModifierDefinition_Type();
+	EReference getResourceTypeModifierReference_Type();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.ModifierDefinition#getAllowedLevels <em>Allowed Levels</em>}'.
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.ResourceTypeModifierReference#getAllowedLevels <em>Allowed Levels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Allowed Levels</em>'.
-	 * @see de.oaam.model.oaam.library.ModifierDefinition#getAllowedLevels()
-	 * @see #getModifierDefinition()
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierReference#getAllowedLevels()
+	 * @see #getResourceTypeModifierReference()
 	 * @generated
 	 */
-	EReference getModifierDefinition_AllowedLevels();
+	EReference getResourceTypeModifierReference_AllowedLevels();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskTypeDissimilarity <em>Task Type Dissimilarity</em>}'.
@@ -8271,14 +8271,14 @@ public interface LibraryPackage extends EPackage {
 		EReference RESOURCE_LINK__OUT = eINSTANCE.getResourceLink_Out();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceModifierImpl <em>Resource Modifier</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierImpl <em>Resource Type Modifier</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.ResourceModifierImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceModifier()
+		 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifier()
 		 * @generated
 		 */
-		EClass RESOURCE_MODIFIER = eINSTANCE.getResourceModifier();
+		EClass RESOURCE_TYPE_MODIFIER = eINSTANCE.getResourceTypeModifier();
 
 		/**
 		 * The meta object literal for the '<em><b>Levels</b></em>' containment reference list feature.
@@ -8286,17 +8286,17 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESOURCE_MODIFIER__LEVELS = eINSTANCE.getResourceModifier_Levels();
+		EReference RESOURCE_TYPE_MODIFIER__LEVELS = eINSTANCE.getResourceTypeModifier_Levels();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ModifierLevelImpl <em>Modifier Level</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierLevelImpl <em>Resource Type Modifier Level</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.ModifierLevelImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getModifierLevel()
+		 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierLevelImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierLevel()
 		 * @generated
 		 */
-		EClass MODIFIER_LEVEL = eINSTANCE.getModifierLevel();
+		EClass RESOURCE_TYPE_MODIFIER_LEVEL = eINSTANCE.getResourceTypeModifierLevel();
 
 		/**
 		 * The meta object literal for the '<em><b>Equal Alternatives</b></em>' reference list feature.
@@ -8304,7 +8304,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MODIFIER_LEVEL__EQUAL_ALTERNATIVES = eINSTANCE.getModifierLevel_EqualAlternatives();
+		EReference RESOURCE_TYPE_MODIFIER_LEVEL__EQUAL_ALTERNATIVES = eINSTANCE.getResourceTypeModifierLevel_EqualAlternatives();
 
 		/**
 		 * The meta object literal for the '<em><b>Better Alternative</b></em>' reference feature.
@@ -8312,17 +8312,17 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MODIFIER_LEVEL__BETTER_ALTERNATIVE = eINSTANCE.getModifierLevel_BetterAlternative();
+		EReference RESOURCE_TYPE_MODIFIER_LEVEL__BETTER_ALTERNATIVE = eINSTANCE.getResourceTypeModifierLevel_BetterAlternative();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ModifierDefinitionImpl <em>Modifier Definition</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeModifierReferenceImpl <em>Resource Type Modifier Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.ModifierDefinitionImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getModifierDefinition()
+		 * @see de.oaam.model.oaam.library.impl.ResourceTypeModifierReferenceImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierReference()
 		 * @generated
 		 */
-		EClass MODIFIER_DEFINITION = eINSTANCE.getModifierDefinition();
+		EClass RESOURCE_TYPE_MODIFIER_REFERENCE = eINSTANCE.getResourceTypeModifierReference();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -8330,7 +8330,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MODIFIER_DEFINITION__TYPE = eINSTANCE.getModifierDefinition_Type();
+		EReference RESOURCE_TYPE_MODIFIER_REFERENCE__TYPE = eINSTANCE.getResourceTypeModifierReference_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Allowed Levels</b></em>' reference list feature.
@@ -8338,7 +8338,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MODIFIER_DEFINITION__ALLOWED_LEVELS = eINSTANCE.getModifierDefinition_AllowedLevels();
+		EReference RESOURCE_TYPE_MODIFIER_REFERENCE__ALLOWED_LEVELS = eINSTANCE.getResourceTypeModifierReference_AllowedLevels();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskTypeDissimilarityImpl <em>Task Type Dissimilarity</em>}' class.

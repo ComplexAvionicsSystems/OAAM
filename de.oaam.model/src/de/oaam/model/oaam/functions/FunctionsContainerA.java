@@ -33,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getFunctionsContainerA()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface FunctionsContainerA extends ElementA, VariantDependentElementA, ModeDependentElementA {
@@ -79,7 +79,7 @@ public interface FunctionsContainerA extends ElementA, VariantDependentElementA,
 
 	/**
 	 * Returns the value of the '<em><b>Task Links</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.functions.TaskLink}.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.ExternalTaskLink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -90,7 +90,7 @@ public interface FunctionsContainerA extends ElementA, VariantDependentElementA,
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TaskLink> getTaskLinks();
+	EList<ExternalTaskLink> getTaskLinks();
 
 	/**
 	 * Returns the value of the '<em><b>Task Groups</b></em>' containment reference list.

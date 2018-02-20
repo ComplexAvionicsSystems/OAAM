@@ -84,8 +84,8 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createTaskAdapter();
 			}
 			@Override
-			public Adapter caseTaskLink(TaskLink object) {
-				return createTaskLinkAdapter();
+			public Adapter caseExternalTaskLink(ExternalTaskLink object) {
+				return createExternalTaskLinkAdapter();
 			}
 			@Override
 			public Adapter caseTaskGroup(TaskGroup object) {
@@ -124,8 +124,8 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createOutputAdapter();
 			}
 			@Override
-			public Adapter caseOutputLink(OutputLink object) {
-				return createOutputLinkAdapter();
+			public Adapter caseExternalOutputLink(ExternalOutputLink object) {
+				return createExternalOutputLinkAdapter();
 			}
 			@Override
 			public Adapter caseSubfunction(Subfunction object) {
@@ -214,16 +214,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.TaskLink <em>Task Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.ExternalTaskLink <em>External Task Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.functions.TaskLink
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink
 	 * @generated
 	 */
-	public Adapter createTaskLinkAdapter() {
+	public Adapter createExternalTaskLinkAdapter() {
 		return null;
 	}
 
@@ -354,16 +354,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.OutputLink <em>Output Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.ExternalOutputLink <em>External Output Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.functions.OutputLink
+	 * @see de.oaam.model.oaam.functions.ExternalOutputLink
 	 * @generated
 	 */
-	public Adapter createOutputLinkAdapter() {
+	public Adapter createExternalOutputLinkAdapter() {
 		return null;
 	}
 

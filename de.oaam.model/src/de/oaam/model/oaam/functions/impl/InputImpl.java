@@ -3,10 +3,9 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.functions.ExternalOutputLink;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
-import de.oaam.model.oaam.functions.OutputLink;
-
 import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.InputDeclaration;
@@ -132,7 +131,7 @@ public class InputImpl extends ElementAImpl implements Input {
 	 * @generated
 	 * @ordered
 	 */
-	protected OutputLink outputLink;
+	protected ExternalOutputLink outputLink;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -291,7 +290,7 @@ public class InputImpl extends ElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputLink getOutputLink() {
+	public ExternalOutputLink getOutputLink() {
 		return outputLink;
 	}
 
@@ -300,8 +299,8 @@ public class InputImpl extends ElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOutputLink(OutputLink newOutputLink, NotificationChain msgs) {
-		OutputLink oldOutputLink = outputLink;
+	public NotificationChain basicSetOutputLink(ExternalOutputLink newOutputLink, NotificationChain msgs) {
+		ExternalOutputLink oldOutputLink = outputLink;
 		outputLink = newOutputLink;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FunctionsPackage.INPUT__OUTPUT_LINK, oldOutputLink, newOutputLink);
@@ -315,7 +314,7 @@ public class InputImpl extends ElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutputLink(OutputLink newOutputLink) {
+	public void setOutputLink(ExternalOutputLink newOutputLink) {
 		if (newOutputLink != outputLink) {
 			NotificationChain msgs = null;
 			if (outputLink != null)
@@ -404,7 +403,7 @@ public class InputImpl extends ElementAImpl implements Input {
 				setQueueLength((Integer)newValue);
 				return;
 			case FunctionsPackage.INPUT__OUTPUT_LINK:
-				setOutputLink((OutputLink)newValue);
+				setOutputLink((ExternalOutputLink)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -437,7 +436,7 @@ public class InputImpl extends ElementAImpl implements Input {
 				setQueueLength(QUEUE_LENGTH_EDEFAULT);
 				return;
 			case FunctionsPackage.INPUT__OUTPUT_LINK:
-				setOutputLink((OutputLink)null);
+				setOutputLink((ExternalOutputLink)null);
 				return;
 		}
 		super.eUnset(featureID);

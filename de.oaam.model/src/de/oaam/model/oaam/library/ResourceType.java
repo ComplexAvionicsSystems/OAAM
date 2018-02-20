@@ -205,7 +205,7 @@ public interface ResourceType extends ResourceConsumerA, ElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Allowed Modifiers</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ModifierDefinition}.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceTypeModifierReference}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -216,7 +216,7 @@ public interface ResourceType extends ResourceConsumerA, ElementA {
 	 * @model
 	 * @generated
 	 */
-	EList<ModifierDefinition> getAllowedModifiers();
+	EList<ResourceTypeModifierReference> getAllowedModifiers();
 
 	/**
 	 * Returns the value of the '<em><b>Alternatives</b></em>' containment reference list.

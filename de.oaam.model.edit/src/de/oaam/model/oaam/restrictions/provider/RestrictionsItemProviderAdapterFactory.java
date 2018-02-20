@@ -118,29 +118,6 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.PathSegment} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PathSegmentItemProvider pathSegmentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.PathSegment}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPathSegmentAdapter() {
-		if (pathSegmentItemProvider == null) {
-			pathSegmentItemProvider = new PathSegmentItemProvider(this);
-		}
-
-		return pathSegmentItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.LocationRestriction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -325,72 +302,26 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.TaskRateRestriction} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.SynchronicityRestriction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TaskRateRestrictionItemProvider taskRateRestrictionItemProvider;
+	protected SynchronicityRestrictionItemProvider synchronicityRestrictionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.TaskRateRestriction}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.SynchronicityRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTaskRateRestrictionAdapter() {
-		if (taskRateRestrictionItemProvider == null) {
-			taskRateRestrictionItemProvider = new TaskRateRestrictionItemProvider(this);
+	public Adapter createSynchronicityRestrictionAdapter() {
+		if (synchronicityRestrictionItemProvider == null) {
+			synchronicityRestrictionItemProvider = new SynchronicityRestrictionItemProvider(this);
 		}
 
-		return taskRateRestrictionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InputSynchronicityRestrictionItemProvider inputSynchronicityRestrictionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInputSynchronicityRestrictionAdapter() {
-		if (inputSynchronicityRestrictionItemProvider == null) {
-			inputSynchronicityRestrictionItemProvider = new InputSynchronicityRestrictionItemProvider(this);
-		}
-
-		return inputSynchronicityRestrictionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.PathDelayRestriction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PathDelayRestrictionItemProvider pathDelayRestrictionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.PathDelayRestriction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPathDelayRestrictionAdapter() {
-		if (pathDelayRestrictionItemProvider == null) {
-			pathDelayRestrictionItemProvider = new PathDelayRestrictionItemProvider(this);
-		}
-
-		return pathDelayRestrictionItemProvider;
+		return synchronicityRestrictionItemProvider;
 	}
 
 	/**
@@ -437,6 +368,29 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 		}
 
 		return taskSymmetryRestrictionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.TimeDelayRestriction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TimeDelayRestrictionItemProvider timeDelayRestrictionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.TimeDelayRestriction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTimeDelayRestrictionAdapter() {
+		if (timeDelayRestrictionItemProvider == null) {
+			timeDelayRestrictionItemProvider = new TimeDelayRestrictionItemProvider(this);
+		}
+
+		return timeDelayRestrictionItemProvider;
 	}
 
 	/**
@@ -539,8 +493,6 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	 */
 	public void dispose() {
 		if (restrictionsItemProvider != null) restrictionsItemProvider.dispose();
-		if (subrestrictionsItemProvider != null) subrestrictionsItemProvider.dispose();
-		if (pathSegmentItemProvider != null) pathSegmentItemProvider.dispose();
 		if (locationRestrictionItemProvider != null) locationRestrictionItemProvider.dispose();
 		if (areaRestrictionItemProvider != null) areaRestrictionItemProvider.dispose();
 		if (powerSourceRestrictionItemProvider != null) powerSourceRestrictionItemProvider.dispose();
@@ -549,11 +501,11 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 		if (conectionTypeRestrictionItemProvider != null) conectionTypeRestrictionItemProvider.dispose();
 		if (connectionRestrictionItemProvider != null) connectionRestrictionItemProvider.dispose();
 		if (segregationRestrictionItemProvider != null) segregationRestrictionItemProvider.dispose();
-		if (taskRateRestrictionItemProvider != null) taskRateRestrictionItemProvider.dispose();
-		if (inputSynchronicityRestrictionItemProvider != null) inputSynchronicityRestrictionItemProvider.dispose();
-		if (pathDelayRestrictionItemProvider != null) pathDelayRestrictionItemProvider.dispose();
+		if (synchronicityRestrictionItemProvider != null) synchronicityRestrictionItemProvider.dispose();
 		if (taskAtomicRestrictionItemProvider != null) taskAtomicRestrictionItemProvider.dispose();
 		if (taskSymmetryRestrictionItemProvider != null) taskSymmetryRestrictionItemProvider.dispose();
+		if (timeDelayRestrictionItemProvider != null) timeDelayRestrictionItemProvider.dispose();
+		if (subrestrictionsItemProvider != null) subrestrictionsItemProvider.dispose();
 	}
 
 }

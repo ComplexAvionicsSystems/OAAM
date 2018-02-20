@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v100/library" id="example" name="Example">
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v100/library" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v100/scenario" id="example" name="Example">
   <library id="library" style="">
     <sublibraries id="datatypes" name="Data Types">
       <dataTypes xsi:type="de.oaam.model.common:Boolean"/>
       <dataTypes xsi:type="de.oaam.model.common:FloatingPoint"/>
       <dataTypes xsi:type="de.oaam.model.common:Integer"/>
+      <dataTypes xsi:type="de.oaam.model.common:Array"/>
+      <dataTypes xsi:type="de.oaam.model.common:Character"/>
+      <dataTypes xsi:type="de.oaam.model.common:Struct"/>
+      <dataTypes xsi:type="de.oaam.model.common:FloatingPoint"/>
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
@@ -76,7 +80,31 @@
       <connectionTypes name="Discrete Line" isUnidirectional="true"/>
       <wireTypes id="" name="Discrete Wire" specificWeight="1.0" specificPrice="1.0" minBendingRadius="0.001" nShields="0"/>
     </sublibraries>
+    <sublibraries>
+      <ressourceBundles/>
+      <resourceModifiers/>
+      <resourceTypeDissimilarities/>
+      <taskTypeDissimilarity/>
+      <deviceTypeSymmetries/>
+      <deviceTypeDissimilarities/>
+      <connectionTypes/>
+      <wireTypes/>
+      <locationTypes>
+        <ductOpenings/>
+      </locationTypes>
+      <routeTypes/>
+      <genericAttributes/>
+    </sublibraries>
   </library>
+  <scenario>
+    <parameters xsi:type="de.oaam.model.scenario:ParameterNumeric"/>
+    <parameters xsi:type="de.oaam.model.scenario:ParameterBool"/>
+    <variants/>
+    <operationModes/>
+  </scenario>
+  <systems>
+    <systems/>
+  </systems>
   <function id="functions">
     <tasks name="Add" type="tasktypeadd">
       <inputs name="a" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
@@ -86,7 +114,14 @@
     <tasks id="taskcockpitswitch" name="C/O Switch" style="" modifier="" type="tasktypecockpitswitch" deviceBinding="//@hardware/@devices.0">
       <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputs.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
     </tasks>
-    <signals name="on/off to a" source="//@function/@tasks.1/@outputs.0" target="//@function/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
+    <subfunctions>
+      <taskLinks/>
+      <taskSymmetries/>
+      <taskRedundancies/>
+      <signals name="on/off to a" source="//@function/@tasks.1/@outputs.0" target="//@function/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
+      <signalGroups/>
+      <failureEvents/>
+    </subfunctions>
   </function>
   <hardware id="hardware">
     <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.2/@deviceTypes.0">
@@ -99,20 +134,58 @@
       </subDevices>
     </devices>
     <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0"/>
+    <subhardware>
+      <deviceSymmetries/>
+    </subhardware>
   </hardware>
+  <anatomy>
+    <locations>
+      <position/>
+      <ductOpenings/>
+    </locations>
+    <subanatomies>
+      <ducts/>
+      <areas/>
+    </subanatomies>
+  </anatomy>
   <capabilities id="capabilities">
     <functionCapabilties taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
+    <signalCapabilities/>
+    <deviceCapabilities/>
     <subDeviceCapabilities subDeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
       <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.2"/>
     </subDeviceCapabilities>
+    <connectionCapabilities/>
+    <subcapabilities/>
   </capabilities>
+  <restrictions>
+    <deviceTypeRestrictions/>
+    <locationRestrictions/>
+    <areaRestrictions/>
+    <powerSourceRestrictions/>
+    <taskAtomicRestrictions/>
+    <taskSymmetryRestrictions/>
+    <connectionRestrictions/>
+    <connectionTypeRestrictions/>
+    <segregationsRestrictions/>
+    <subrestrictions/>
+    <timedelayrestrictions/>
+  </restrictions>
   <mapping id="mapping">
+    <deviceAssignments/>
     <subDeviceAssignments name="CPU-CARD -> CPM A1" capability="//@capabilities/@subDeviceCapabilities.0" subDevice="//@hardware/@devices.1/@subDevices.0" targetDevice="//@hardware/@devices.1"/>
+    <connectionAssignments>
+      <segments/>
+    </connectionAssignments>
     <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@functionCapabilties.0" task="//@function/@tasks.0" device="//@hardware/@devices.1/@subDevices.0">
       <schedule name="@50Hz" rate="50.0">
         <scheduledTimes startTime="0.001"/>
         <scheduledTimes cycle="2" startTime="0.002"/>
       </schedule>
     </taskAssignments>
+    <signalAssignments>
+      <segments/>
+    </signalAssignments>
+    <supmapping/>
   </mapping>
 </de.oaam.model:Architecture>

@@ -40,15 +40,6 @@ public interface RestrictionsFactory extends EFactory {
 	Subrestrictions createSubrestrictions();
 
 	/**
-	 * Returns a new object of class '<em>Path Segment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Segment</em>'.
-	 * @generated
-	 */
-	PathSegment createPathSegment();
-
-	/**
 	 * Returns a new object of class '<em>Location Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,31 +112,13 @@ public interface RestrictionsFactory extends EFactory {
 	SegregationRestriction createSegregationRestriction();
 
 	/**
-	 * Returns a new object of class '<em>Task Rate Restriction</em>'.
+	 * Returns a new object of class '<em>Synchronicity Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Rate Restriction</em>'.
+	 * @return a new object of class '<em>Synchronicity Restriction</em>'.
 	 * @generated
 	 */
-	TaskRateRestriction createTaskRateRestriction();
-
-	/**
-	 * Returns a new object of class '<em>Input Synchronicity Restriction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Synchronicity Restriction</em>'.
-	 * @generated
-	 */
-	InputSynchronicityRestriction createInputSynchronicityRestriction();
-
-	/**
-	 * Returns a new object of class '<em>Path Delay Restriction</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Delay Restriction</em>'.
-	 * @generated
-	 */
-	PathDelayRestriction createPathDelayRestriction();
+	SynchronicityRestriction createSynchronicityRestriction();
 
 	/**
 	 * Returns a new object of class '<em>Task Atomic Restriction</em>'.
@@ -164,6 +137,15 @@ public interface RestrictionsFactory extends EFactory {
 	 * @generated
 	 */
 	TaskSymmetryRestriction createTaskSymmetryRestriction();
+
+	/**
+	 * Returns a new object of class '<em>Time Delay Restriction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Delay Restriction</em>'.
+	 * @generated
+	 */
+	TimeDelayRestriction createTimeDelayRestriction();
 
 	/**
 	 * Returns the package supported by this factory.

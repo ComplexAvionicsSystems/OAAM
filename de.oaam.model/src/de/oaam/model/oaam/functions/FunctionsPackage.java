@@ -668,14 +668,14 @@ public interface FunctionsPackage extends EPackage {
 	int TASK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskLinkImpl <em>Task Link</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.ExternalTaskLinkImpl <em>External Task Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.functions.impl.TaskLinkImpl
-	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskLink()
+	 * @see de.oaam.model.oaam.functions.impl.ExternalTaskLinkImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getExternalTaskLink()
 	 * @generated
 	 */
-	int TASK_LINK = 3;
+	int EXTERNAL_TASK_LINK = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -684,7 +684,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__ID = CommonPackage.ELEMENT_A__ID;
+	int EXTERNAL_TASK_LINK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -693,7 +693,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
+	int EXTERNAL_TASK_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -702,7 +702,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int EXTERNAL_TASK_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -711,7 +711,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int EXTERNAL_TASK_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -720,7 +720,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int EXTERNAL_TASK_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -729,7 +729,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int EXTERNAL_TASK_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -738,7 +738,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int EXTERNAL_TASK_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -747,7 +747,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int EXTERNAL_TASK_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -756,7 +756,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int EXTERNAL_TASK_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -765,7 +765,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int EXTERNAL_TASK_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -774,7 +774,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int EXTERNAL_TASK_LINK__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
@@ -783,7 +783,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__INPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int EXTERNAL_TASK_LINK__INPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
@@ -792,7 +792,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__OUTPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int EXTERNAL_TASK_LINK__OUTPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task</b></em>' reference.
@@ -801,7 +801,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
+	int EXTERNAL_TASK_LINK__TASK = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' attribute.
@@ -810,25 +810,25 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
+	int EXTERNAL_TASK_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
-	 * The number of structural features of the '<em>Task Link</em>' class.
+	 * The number of structural features of the '<em>External Task Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
+	int EXTERNAL_TASK_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
-	 * The number of operations of the '<em>Task Link</em>' class.
+	 * The number of operations of the '<em>External Task Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int EXTERNAL_TASK_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl <em>Task Group</em>}' class.
@@ -2109,14 +2109,14 @@ public interface FunctionsPackage extends EPackage {
 	int OUTPUT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.OutputLinkImpl <em>Output Link</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.ExternalOutputLinkImpl <em>External Output Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.functions.impl.OutputLinkImpl
-	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getOutputLink()
+	 * @see de.oaam.model.oaam.functions.impl.ExternalOutputLinkImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getExternalOutputLink()
 	 * @generated
 	 */
-	int OUTPUT_LINK = 13;
+	int EXTERNAL_OUTPUT_LINK = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2125,7 +2125,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__ID = CommonPackage.ELEMENT_A__ID;
+	int EXTERNAL_OUTPUT_LINK__ID = CommonPackage.ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2134,7 +2134,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
+	int EXTERNAL_OUTPUT_LINK__NAME = CommonPackage.ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2143,7 +2143,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int EXTERNAL_OUTPUT_LINK__STYLE = CommonPackage.ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2152,7 +2152,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int EXTERNAL_OUTPUT_LINK__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2161,7 +2161,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int EXTERNAL_OUTPUT_LINK__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2170,7 +2170,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int EXTERNAL_OUTPUT_LINK__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2179,7 +2179,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int EXTERNAL_OUTPUT_LINK__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2188,7 +2188,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int EXTERNAL_OUTPUT_LINK__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2197,7 +2197,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int EXTERNAL_OUTPUT_LINK__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2206,7 +2206,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int EXTERNAL_OUTPUT_LINK__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -2215,7 +2215,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__OUTPUT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int EXTERNAL_OUTPUT_LINK__OUTPUT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Filter</b></em>' attribute.
@@ -2224,25 +2224,25 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int EXTERNAL_OUTPUT_LINK__FILTER = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Output Link</em>' class.
+	 * The number of structural features of the '<em>External Output Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int EXTERNAL_OUTPUT_LINK_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of operations of the '<em>Output Link</em>' class.
+	 * The number of operations of the '<em>External Output Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int EXTERNAL_OUTPUT_LINK_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SubfunctionImpl <em>Subfunction</em>}' class.
@@ -2819,69 +2819,69 @@ public interface FunctionsPackage extends EPackage {
 	EReference getTask_Parameters();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.TaskLink <em>Task Link</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.ExternalTaskLink <em>External Task Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task Link</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink
+	 * @return the meta object for class '<em>External Task Link</em>'.
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink
 	 * @generated
 	 */
-	EClass getTaskLink();
+	EClass getExternalTaskLink();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.TaskLink#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.ExternalTaskLink#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink#getType()
-	 * @see #getTaskLink()
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink#getType()
+	 * @see #getExternalTaskLink()
 	 * @generated
 	 */
-	EReference getTaskLink_Type();
+	EReference getExternalTaskLink_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.TaskLink#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.ExternalTaskLink#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink#getInputs()
-	 * @see #getTaskLink()
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink#getInputs()
+	 * @see #getExternalTaskLink()
 	 * @generated
 	 */
-	EReference getTaskLink_Inputs();
+	EReference getExternalTaskLink_Inputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.TaskLink#getOutputs <em>Outputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.ExternalTaskLink#getOutputs <em>Outputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Outputs</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink#getOutputs()
-	 * @see #getTaskLink()
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink#getOutputs()
+	 * @see #getExternalTaskLink()
 	 * @generated
 	 */
-	EReference getTaskLink_Outputs();
+	EReference getExternalTaskLink_Outputs();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.TaskLink#getTask <em>Task</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.ExternalTaskLink#getTask <em>Task</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Task</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink#getTask()
-	 * @see #getTaskLink()
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink#getTask()
+	 * @see #getExternalTaskLink()
 	 * @generated
 	 */
-	EReference getTaskLink_Task();
+	EReference getExternalTaskLink_Task();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.TaskLink#getFilter <em>Filter</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.ExternalTaskLink#getFilter <em>Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Filter</em>'.
-	 * @see de.oaam.model.oaam.functions.TaskLink#getFilter()
-	 * @see #getTaskLink()
+	 * @see de.oaam.model.oaam.functions.ExternalTaskLink#getFilter()
+	 * @see #getExternalTaskLink()
 	 * @generated
 	 */
-	EAttribute getTaskLink_Filter();
+	EAttribute getExternalTaskLink_Filter();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.TaskGroup <em>Task Group</em>}'.
@@ -3238,36 +3238,36 @@ public interface FunctionsPackage extends EPackage {
 	EAttribute getOutput_FixedRate();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.OutputLink <em>Output Link</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.ExternalOutputLink <em>External Output Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Output Link</em>'.
-	 * @see de.oaam.model.oaam.functions.OutputLink
+	 * @return the meta object for class '<em>External Output Link</em>'.
+	 * @see de.oaam.model.oaam.functions.ExternalOutputLink
 	 * @generated
 	 */
-	EClass getOutputLink();
+	EClass getExternalOutputLink();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.OutputLink#getOutput <em>Output</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.ExternalOutputLink#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Output</em>'.
-	 * @see de.oaam.model.oaam.functions.OutputLink#getOutput()
-	 * @see #getOutputLink()
+	 * @see de.oaam.model.oaam.functions.ExternalOutputLink#getOutput()
+	 * @see #getExternalOutputLink()
 	 * @generated
 	 */
-	EReference getOutputLink_Output();
+	EReference getExternalOutputLink_Output();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.OutputLink#getFilter <em>Filter</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.ExternalOutputLink#getFilter <em>Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Filter</em>'.
-	 * @see de.oaam.model.oaam.functions.OutputLink#getFilter()
-	 * @see #getOutputLink()
+	 * @see de.oaam.model.oaam.functions.ExternalOutputLink#getFilter()
+	 * @see #getExternalOutputLink()
 	 * @generated
 	 */
-	EAttribute getOutputLink_Filter();
+	EAttribute getExternalOutputLink_Filter();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Subfunction <em>Subfunction</em>}'.
@@ -3531,14 +3531,14 @@ public interface FunctionsPackage extends EPackage {
 		EReference TASK__PARAMETERS = eINSTANCE.getTask_Parameters();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.TaskLinkImpl <em>Task Link</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.ExternalTaskLinkImpl <em>External Task Link</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.functions.impl.TaskLinkImpl
-		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskLink()
+		 * @see de.oaam.model.oaam.functions.impl.ExternalTaskLinkImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getExternalTaskLink()
 		 * @generated
 		 */
-		EClass TASK_LINK = eINSTANCE.getTaskLink();
+		EClass EXTERNAL_TASK_LINK = eINSTANCE.getExternalTaskLink();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -3546,7 +3546,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_LINK__TYPE = eINSTANCE.getTaskLink_Type();
+		EReference EXTERNAL_TASK_LINK__TYPE = eINSTANCE.getExternalTaskLink_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
@@ -3554,7 +3554,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_LINK__INPUTS = eINSTANCE.getTaskLink_Inputs();
+		EReference EXTERNAL_TASK_LINK__INPUTS = eINSTANCE.getExternalTaskLink_Inputs();
 
 		/**
 		 * The meta object literal for the '<em><b>Outputs</b></em>' containment reference list feature.
@@ -3562,7 +3562,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_LINK__OUTPUTS = eINSTANCE.getTaskLink_Outputs();
+		EReference EXTERNAL_TASK_LINK__OUTPUTS = eINSTANCE.getExternalTaskLink_Outputs();
 
 		/**
 		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
@@ -3570,7 +3570,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_LINK__TASK = eINSTANCE.getTaskLink_Task();
+		EReference EXTERNAL_TASK_LINK__TASK = eINSTANCE.getExternalTaskLink_Task();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
@@ -3578,7 +3578,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_LINK__FILTER = eINSTANCE.getTaskLink_Filter();
+		EAttribute EXTERNAL_TASK_LINK__FILTER = eINSTANCE.getExternalTaskLink_Filter();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl <em>Task Group</em>}' class.
@@ -3863,14 +3863,14 @@ public interface FunctionsPackage extends EPackage {
 		EAttribute OUTPUT__FIXED_RATE = eINSTANCE.getOutput_FixedRate();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.OutputLinkImpl <em>Output Link</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.ExternalOutputLinkImpl <em>External Output Link</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.functions.impl.OutputLinkImpl
-		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getOutputLink()
+		 * @see de.oaam.model.oaam.functions.impl.ExternalOutputLinkImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getExternalOutputLink()
 		 * @generated
 		 */
-		EClass OUTPUT_LINK = eINSTANCE.getOutputLink();
+		EClass EXTERNAL_OUTPUT_LINK = eINSTANCE.getExternalOutputLink();
 
 		/**
 		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.
@@ -3878,7 +3878,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_LINK__OUTPUT = eINSTANCE.getOutputLink_Output();
+		EReference EXTERNAL_OUTPUT_LINK__OUTPUT = eINSTANCE.getExternalOutputLink_Output();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
@@ -3886,7 +3886,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OUTPUT_LINK__FILTER = eINSTANCE.getOutputLink_Filter();
+		EAttribute EXTERNAL_OUTPUT_LINK__FILTER = eINSTANCE.getExternalOutputLink_Filter();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.SubfunctionImpl <em>Subfunction</em>}' class.

@@ -57,9 +57,8 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case FunctionsPackage.FUNCTIONS: return createFunctions();
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A: return createFunctionsContainerA();
 			case FunctionsPackage.TASK: return createTask();
-			case FunctionsPackage.TASK_LINK: return createTaskLink();
+			case FunctionsPackage.EXTERNAL_TASK_LINK: return createExternalTaskLink();
 			case FunctionsPackage.TASK_GROUP: return createTaskGroup();
 			case FunctionsPackage.TASK_SYMMETRY: return createTaskSymmetry();
 			case FunctionsPackage.TASK_REDUNDANCY: return createTaskRedundancy();
@@ -69,7 +68,7 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 			case FunctionsPackage.SIGNAL_GROUP: return createSignalGroup();
 			case FunctionsPackage.INPUT: return createInput();
 			case FunctionsPackage.OUTPUT: return createOutput();
-			case FunctionsPackage.OUTPUT_LINK: return createOutputLink();
+			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: return createExternalOutputLink();
 			case FunctionsPackage.SUBFUNCTION: return createSubfunction();
 			case FunctionsPackage.PARAMETER: return createParameter();
 			default:
@@ -92,16 +91,6 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionsContainerA createFunctionsContainerA() {
-		FunctionsContainerAImpl functionsContainerA = new FunctionsContainerAImpl();
-		return functionsContainerA;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Task createTask() {
 		TaskImpl task = new TaskImpl();
 		return task;
@@ -112,9 +101,9 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskLink createTaskLink() {
-		TaskLinkImpl taskLink = new TaskLinkImpl();
-		return taskLink;
+	public ExternalTaskLink createExternalTaskLink() {
+		ExternalTaskLinkImpl externalTaskLink = new ExternalTaskLinkImpl();
+		return externalTaskLink;
 	}
 
 	/**
@@ -212,9 +201,9 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputLink createOutputLink() {
-		OutputLinkImpl outputLink = new OutputLinkImpl();
-		return outputLink;
+	public ExternalOutputLink createExternalOutputLink() {
+		ExternalOutputLinkImpl externalOutputLink = new ExternalOutputLinkImpl();
+		return externalOutputLink;
 	}
 
 	/**

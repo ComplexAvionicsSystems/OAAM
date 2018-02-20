@@ -16,6 +16,8 @@ import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.common.impl.CommonPackageImpl;
 
+import de.oaam.model.oaam.functions.ExternalOutputLink;
+import de.oaam.model.oaam.functions.ExternalTaskLink;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.Functions;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
@@ -23,7 +25,6 @@ import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
-import de.oaam.model.oaam.functions.OutputLink;
 import de.oaam.model.oaam.functions.Parameter;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
@@ -31,7 +32,6 @@ import de.oaam.model.oaam.functions.Subfunction;
 import de.oaam.model.oaam.functions.SystemInputState;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
-import de.oaam.model.oaam.functions.TaskLink;
 import de.oaam.model.oaam.functions.TaskRedundancy;
 import de.oaam.model.oaam.functions.TaskSymmetry;
 
@@ -101,7 +101,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass taskLinkEClass = null;
+	private EClass externalTaskLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,7 +171,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass outputLinkEClass = null;
+	private EClass externalOutputLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -474,8 +474,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTaskLink() {
-		return taskLinkEClass;
+	public EClass getExternalTaskLink() {
+		return externalTaskLinkEClass;
 	}
 
 	/**
@@ -483,8 +483,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskLink_Type() {
-		return (EReference)taskLinkEClass.getEStructuralFeatures().get(0);
+	public EReference getExternalTaskLink_Type() {
+		return (EReference)externalTaskLinkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -492,8 +492,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskLink_Inputs() {
-		return (EReference)taskLinkEClass.getEStructuralFeatures().get(1);
+	public EReference getExternalTaskLink_Inputs() {
+		return (EReference)externalTaskLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -501,8 +501,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskLink_Outputs() {
-		return (EReference)taskLinkEClass.getEStructuralFeatures().get(2);
+	public EReference getExternalTaskLink_Outputs() {
+		return (EReference)externalTaskLinkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -510,8 +510,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskLink_Task() {
-		return (EReference)taskLinkEClass.getEStructuralFeatures().get(3);
+	public EReference getExternalTaskLink_Task() {
+		return (EReference)externalTaskLinkEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -519,8 +519,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskLink_Filter() {
-		return (EAttribute)taskLinkEClass.getEStructuralFeatures().get(4);
+	public EAttribute getExternalTaskLink_Filter() {
+		return (EAttribute)externalTaskLinkEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -825,8 +825,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOutputLink() {
-		return outputLinkEClass;
+	public EClass getExternalOutputLink() {
+		return externalOutputLinkEClass;
 	}
 
 	/**
@@ -834,8 +834,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutputLink_Output() {
-		return (EReference)outputLinkEClass.getEStructuralFeatures().get(0);
+	public EReference getExternalOutputLink_Output() {
+		return (EReference)externalOutputLinkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -843,8 +843,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOutputLink_Filter() {
-		return (EAttribute)outputLinkEClass.getEStructuralFeatures().get(1);
+	public EAttribute getExternalOutputLink_Filter() {
+		return (EAttribute)externalOutputLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -953,12 +953,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEAttribute(taskEClass, TASK__FIXED_RATE);
 		createEReference(taskEClass, TASK__PARAMETERS);
 
-		taskLinkEClass = createEClass(TASK_LINK);
-		createEReference(taskLinkEClass, TASK_LINK__TYPE);
-		createEReference(taskLinkEClass, TASK_LINK__INPUTS);
-		createEReference(taskLinkEClass, TASK_LINK__OUTPUTS);
-		createEReference(taskLinkEClass, TASK_LINK__TASK);
-		createEAttribute(taskLinkEClass, TASK_LINK__FILTER);
+		externalTaskLinkEClass = createEClass(EXTERNAL_TASK_LINK);
+		createEReference(externalTaskLinkEClass, EXTERNAL_TASK_LINK__TYPE);
+		createEReference(externalTaskLinkEClass, EXTERNAL_TASK_LINK__INPUTS);
+		createEReference(externalTaskLinkEClass, EXTERNAL_TASK_LINK__OUTPUTS);
+		createEReference(externalTaskLinkEClass, EXTERNAL_TASK_LINK__TASK);
+		createEAttribute(externalTaskLinkEClass, EXTERNAL_TASK_LINK__FILTER);
 
 		taskGroupEClass = createEClass(TASK_GROUP);
 		createEReference(taskGroupEClass, TASK_GROUP__TASKS);
@@ -1002,9 +1002,9 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEReference(outputEClass, OUTPUT__IO_BINDINGS);
 		createEAttribute(outputEClass, OUTPUT__FIXED_RATE);
 
-		outputLinkEClass = createEClass(OUTPUT_LINK);
-		createEReference(outputLinkEClass, OUTPUT_LINK__OUTPUT);
-		createEAttribute(outputLinkEClass, OUTPUT_LINK__FILTER);
+		externalOutputLinkEClass = createEClass(EXTERNAL_OUTPUT_LINK);
+		createEReference(externalOutputLinkEClass, EXTERNAL_OUTPUT_LINK__OUTPUT);
+		createEAttribute(externalOutputLinkEClass, EXTERNAL_OUTPUT_LINK__FILTER);
 
 		subfunctionEClass = createEClass(SUBFUNCTION);
 		createEAttribute(subfunctionEClass, SUBFUNCTION__MULTIPLICITY_MIN);
@@ -1057,9 +1057,9 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		taskEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		taskEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		taskLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		taskLinkEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		taskLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		externalTaskLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		externalTaskLinkEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		externalTaskLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		taskGroupEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskGroupEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		taskGroupEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
@@ -1088,19 +1088,19 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		outputEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		outputEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		outputEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		outputLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		outputLinkEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		outputLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		externalOutputLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		externalOutputLinkEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		externalOutputLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subfunctionEClass.getESuperTypes().add(this.getFunctionsContainerA());
 		parameterEClass.getESuperTypes().add(theCommonPackage.getElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionsEClass, Functions.class, "Functions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(functionsContainerAEClass, FunctionsContainerA.class, "FunctionsContainerA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(functionsContainerAEClass, FunctionsContainerA.class, "FunctionsContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFunctionsContainerA_IsAtomic(), ecorePackage.getEBoolean(), "isAtomic", null, 1, 1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_Tasks(), this.getTask(), null, "tasks", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionsContainerA_TaskLinks(), this.getTaskLink(), null, "taskLinks", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionsContainerA_TaskLinks(), this.getExternalTaskLink(), null, "taskLinks", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_TaskGroups(), this.getTaskGroup(), null, "taskGroups", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_TaskSymmetries(), this.getTaskSymmetry(), null, "taskSymmetries", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_TaskRedundancies(), this.getTaskRedundancy(), null, "taskRedundancies", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1119,12 +1119,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEAttribute(getTask_FixedRate(), ecorePackage.getEDouble(), "fixedRate", "-1.0", 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTask_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(taskLinkEClass, TaskLink.class, "TaskLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskLink_Type(), theLibraryPackage.getTaskType(), null, "type", null, 1, 1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskLink_Inputs(), this.getInput(), null, "inputs", null, 0, -1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskLink_Outputs(), this.getOutput(), null, "outputs", null, 0, -1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskLink_Task(), this.getTask(), null, "task", null, 0, 1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaskLink_Filter(), ecorePackage.getEString(), "filter", null, 0, 1, TaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(externalTaskLinkEClass, ExternalTaskLink.class, "ExternalTaskLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExternalTaskLink_Type(), theLibraryPackage.getTaskType(), null, "type", null, 1, 1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExternalTaskLink_Inputs(), this.getInput(), null, "inputs", null, 0, -1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExternalTaskLink_Outputs(), this.getOutput(), null, "outputs", null, 0, -1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExternalTaskLink_Task(), this.getTask(), null, "task", null, 0, 1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExternalTaskLink_Filter(), ecorePackage.getEString(), "filter", null, 0, 1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskGroupEClass, TaskGroup.class, "TaskGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskGroup_Tasks(), this.getTask(), null, "tasks", null, 1, -1, TaskGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1160,7 +1160,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getInput_Implements(), theSystemsPackage.getRequiredInputA(), null, "implements", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInput_IoBindings(), theHardwarePackage.getIo(), null, "ioBindings", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_QueueLength(), ecorePackage.getEInt(), "queueLength", "0", 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInput_OutputLink(), this.getOutputLink(), null, "outputLink", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_OutputLink(), this.getExternalOutputLink(), null, "outputLink", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutput_Implements(), theSystemsPackage.getProvidedOutputA(), null, "implements", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1168,9 +1168,9 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getOutput_IoBindings(), theHardwarePackage.getIo(), null, "ioBindings", null, 0, -1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_FixedRate(), ecorePackage.getEDouble(), "fixedRate", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(outputLinkEClass, OutputLink.class, "OutputLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutputLink_Output(), this.getOutput(), null, "output", null, 0, 1, OutputLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOutputLink_Filter(), ecorePackage.getEString(), "filter", null, 0, 1, OutputLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(externalOutputLinkEClass, ExternalOutputLink.class, "ExternalOutputLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExternalOutputLink_Output(), this.getOutput(), null, "output", null, 0, 1, ExternalOutputLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExternalOutputLink_Filter(), ecorePackage.getEString(), "filter", null, 0, 1, ExternalOutputLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subfunctionEClass, Subfunction.class, "Subfunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSubfunction_MultiplicityMin(), ecorePackage.getEInt(), "multiplicityMin", "1", 1, 1, Subfunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

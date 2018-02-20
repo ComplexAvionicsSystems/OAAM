@@ -229,31 +229,31 @@ public interface LibraryFactory extends EFactory {
 	ResourceLink createResourceLink();
 
 	/**
-	 * Returns a new object of class '<em>Resource Modifier</em>'.
+	 * Returns a new object of class '<em>Resource Type Modifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Modifier</em>'.
+	 * @return a new object of class '<em>Resource Type Modifier</em>'.
 	 * @generated
 	 */
-	ResourceModifier createResourceModifier();
+	ResourceTypeModifier createResourceTypeModifier();
 
 	/**
-	 * Returns a new object of class '<em>Modifier Level</em>'.
+	 * Returns a new object of class '<em>Resource Type Modifier Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Modifier Level</em>'.
+	 * @return a new object of class '<em>Resource Type Modifier Level</em>'.
 	 * @generated
 	 */
-	ModifierLevel createModifierLevel();
+	ResourceTypeModifierLevel createResourceTypeModifierLevel();
 
 	/**
-	 * Returns a new object of class '<em>Modifier Definition</em>'.
+	 * Returns a new object of class '<em>Resource Type Modifier Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Modifier Definition</em>'.
+	 * @return a new object of class '<em>Resource Type Modifier Reference</em>'.
 	 * @generated
 	 */
-	ModifierDefinition createModifierDefinition();
+	ResourceTypeModifierReference createResourceTypeModifierReference();
 
 	/**
 	 * Returns a new object of class '<em>Task Type Dissimilarity</em>'.

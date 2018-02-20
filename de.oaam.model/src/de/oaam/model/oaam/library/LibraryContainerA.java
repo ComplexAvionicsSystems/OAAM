@@ -90,7 +90,7 @@ public interface LibraryContainerA extends ElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Resource Modifiers</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceModifier}.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceTypeModifier}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -101,7 +101,7 @@ public interface LibraryContainerA extends ElementA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResourceModifier> getResourceModifiers();
+	EList<ResourceTypeModifier> getResourceModifiers();
 
 	/**
 	 * Returns the value of the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.

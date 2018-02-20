@@ -4,10 +4,10 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.impl.ElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ModifierLevel;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
 
+import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -75,7 +75,7 @@ public class ResourceImpl extends ElementAImpl implements Resource {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifierLevel> modifiers;
+	protected EList<ResourceTypeModifierLevel> modifiers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,9 +160,9 @@ public class ResourceImpl extends ElementAImpl implements Resource {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifierLevel> getModifiers() {
+	public EList<ResourceTypeModifierLevel> getModifiers() {
 		if (modifiers == null) {
-			modifiers = new EObjectResolvingEList<ModifierLevel>(ModifierLevel.class, this, LibraryPackage.RESOURCE__MODIFIERS);
+			modifiers = new EObjectResolvingEList<ResourceTypeModifierLevel>(ResourceTypeModifierLevel.class, this, LibraryPackage.RESOURCE__MODIFIERS);
 		}
 		return modifiers;
 	}
@@ -203,7 +203,7 @@ public class ResourceImpl extends ElementAImpl implements Resource {
 				return;
 			case LibraryPackage.RESOURCE__MODIFIERS:
 				getModifiers().clear();
-				getModifiers().addAll((Collection<? extends ModifierLevel>)newValue);
+				getModifiers().addAll((Collection<? extends ResourceTypeModifierLevel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

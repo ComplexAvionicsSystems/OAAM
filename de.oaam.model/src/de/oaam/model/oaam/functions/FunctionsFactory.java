@@ -31,15 +31,6 @@ public interface FunctionsFactory extends EFactory {
 	Functions createFunctions();
 
 	/**
-	 * Returns a new object of class '<em>Container A</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Container A</em>'.
-	 * @generated
-	 */
-	FunctionsContainerA createFunctionsContainerA();
-
-	/**
 	 * Returns a new object of class '<em>Task</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,13 +40,13 @@ public interface FunctionsFactory extends EFactory {
 	Task createTask();
 
 	/**
-	 * Returns a new object of class '<em>Task Link</em>'.
+	 * Returns a new object of class '<em>External Task Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Link</em>'.
+	 * @return a new object of class '<em>External Task Link</em>'.
 	 * @generated
 	 */
-	TaskLink createTaskLink();
+	ExternalTaskLink createExternalTaskLink();
 
 	/**
 	 * Returns a new object of class '<em>Task Group</em>'.
@@ -139,13 +130,13 @@ public interface FunctionsFactory extends EFactory {
 	Output createOutput();
 
 	/**
-	 * Returns a new object of class '<em>Output Link</em>'.
+	 * Returns a new object of class '<em>External Output Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Output Link</em>'.
+	 * @return a new object of class '<em>External Output Link</em>'.
 	 * @generated
 	 */
-	OutputLink createOutputLink();
+	ExternalOutputLink createExternalOutputLink();
 
 	/**
 	 * Returns a new object of class '<em>Subfunction</em>'.

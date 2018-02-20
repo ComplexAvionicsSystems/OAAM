@@ -80,9 +80,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.FUNCTION_INPUT_STATE: return createFunctionInputState();
 			case LibraryPackage.POWER_SOURCE: return createPowerSource();
 			case LibraryPackage.RESOURCE_LINK: return createResourceLink();
-			case LibraryPackage.RESOURCE_MODIFIER: return createResourceModifier();
-			case LibraryPackage.MODIFIER_LEVEL: return createModifierLevel();
-			case LibraryPackage.MODIFIER_DEFINITION: return createModifierDefinition();
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER: return createResourceTypeModifier();
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER_LEVEL: return createResourceTypeModifierLevel();
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER_REFERENCE: return createResourceTypeModifierReference();
 			case LibraryPackage.TASK_TYPE_DISSIMILARITY: return createTaskTypeDissimilarity();
 			case LibraryPackage.DEVICE_TYPE_DISSIMILARITY: return createDeviceTypeDissimilarity();
 			case LibraryPackage.RESOURCE_TYPE_DISSIMILARITY: return createResourceTypeDissimilarity();
@@ -370,9 +370,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceModifier createResourceModifier() {
-		ResourceModifierImpl resourceModifier = new ResourceModifierImpl();
-		return resourceModifier;
+	public ResourceTypeModifier createResourceTypeModifier() {
+		ResourceTypeModifierImpl resourceTypeModifier = new ResourceTypeModifierImpl();
+		return resourceTypeModifier;
 	}
 
 	/**
@@ -380,9 +380,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModifierLevel createModifierLevel() {
-		ModifierLevelImpl modifierLevel = new ModifierLevelImpl();
-		return modifierLevel;
+	public ResourceTypeModifierLevel createResourceTypeModifierLevel() {
+		ResourceTypeModifierLevelImpl resourceTypeModifierLevel = new ResourceTypeModifierLevelImpl();
+		return resourceTypeModifierLevel;
 	}
 
 	/**
@@ -390,9 +390,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModifierDefinition createModifierDefinition() {
-		ModifierDefinitionImpl modifierDefinition = new ModifierDefinitionImpl();
-		return modifierDefinition;
+	public ResourceTypeModifierReference createResourceTypeModifierReference() {
+		ResourceTypeModifierReferenceImpl resourceTypeModifierReference = new ResourceTypeModifierReferenceImpl();
+		return resourceTypeModifierReference;
 	}
 
 	/**

@@ -460,7 +460,7 @@
         <details key="documentation" value="A super class for all instance of resource providers, e.g. not only device types but also devices or locations"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredModifiers" upperBound="-1"
-          eType="#//library/ModifierLevel">
+          eType="#//library/ResourceTypeModifierLevel">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="This modifier is inherited from resource consumers mapped to this provider"/>
         </eAnnotations>
@@ -490,7 +490,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="resourceModifiers" upperBound="-1"
-          eType="#//library/ResourceModifier" containment="true">
+          eType="#//library/ResourceTypeModifier" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All resource modifiers of this library"/>
         </eAnnotations>
@@ -622,7 +622,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="allowedModifiers" upperBound="-1"
-          eType="#//library/ModifierDefinition">
+          eType="#//library/ResourceTypeModifierReference">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The list of allowed modifiers for this resource type."/>
         </eAnnotations>
@@ -652,7 +652,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="modifiers" upperBound="-1"
-          eType="#//library/ModifierLevel">
+          eType="#//library/ResourceTypeModifierLevel">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The modifiers that are statically bound to this resource"/>
         </eAnnotations>
@@ -1168,45 +1168,45 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceModifier" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifier" eSuperTypes="#//common/ElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A general definition of a resource modifier. For instance a discrete output resource could appear in 100 and 250 mA output current levels. In this case  the modifier is &quot;current level&quot; and the levels are 100 and 250."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="levels" lowerBound="1"
-          upperBound="-1" eType="#//library/ModifierLevel" containment="true">
+          upperBound="-1" eType="#//library/ResourceTypeModifierLevel" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The definition of levels allowed for this modifier type. This can be restricted for a certain resource type in the modifier definition. "/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ModifierLevel" eSuperTypes="#//common/ElementA #//library/ResourceConsumerA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierLevel" eSuperTypes="#//common/ElementA #//library/ResourceConsumerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A possible instance of a modifier, e.g. 250mA for a current level modifier."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="equalAlternatives" upperBound="-1"
-          eType="#//library/ModifierLevel">
+          eType="#//library/ResourceTypeModifierLevel">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="If this modifier is not available is there another modifiere that can be used?"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="betterAlternative" eType="#//library/ModifierLevel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="betterAlternative" eType="#//library/ResourceTypeModifierLevel">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Specifies the next higher modifier"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ModifierDefinition" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierReference" eSuperTypes="#//common/ElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The modifier definition relates modifier types and modifier levels to modifiers that can be assigned to resource types."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
-          eType="#//library/ResourceModifier">
+          eType="#//library/ResourceTypeModifier">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The modifier type. There can be more than one modifier definitions for one type, e.g. if different levels are allowed"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="allowedLevels" lowerBound="1"
-          upperBound="-1" eType="#//library/ModifierLevel">
+          upperBound="-1" eType="#//library/ResourceTypeModifierLevel">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A list of modifier levels allowed for this modifier. For instance a lightning protection modifier could allow L1,L2,L4,L5,L6,L8."/>
         </eAnnotations>
@@ -1666,7 +1666,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InputSegregation" eSuperTypes="#//common/ElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An input segregation defines that two inputs or a system or multiple systems must be from segregated sources. The meaning of segregation can be refined with the attributes. Setting two inputs as segregated is only the information that the inputs needs to be segregated. If segregation is ensured cannot be verified in the systems model. This requires the real implementation."/>
+        <details key="documentation" value="An input segregation defines that two inputs or a system or multiple systems must be from segregated sources. The meaning of segregation can be refined with the attributes. Setting two inputs as segregated is only the information that the inputs needs to be segregated. If segregation is ensured, cannot be verified in the systems model. This requires the real implementation."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dissimilarSource" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
@@ -1710,7 +1710,8 @@
         <details key="documentation" value="The root element for the functions model"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FunctionsContainerA" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionsContainerA" abstract="true"
+        eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class of an element that can hold functions and related elements."/>
       </eAnnotations>
@@ -1727,7 +1728,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="taskLinks" upperBound="-1"
-          eType="#//functions/TaskLink" containment="true">
+          eType="#//functions/ExternalTaskLink" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All task links of the function model"/>
         </eAnnotations>
@@ -1827,7 +1828,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalTaskLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A link to an external task. This task is not part of the function model, but it is just a place holder. It must be linked from another function model.&#xD;&#xA;"/>
       </eAnnotations>
@@ -2013,7 +2014,7 @@
           <details key="documentation" value="The number of inputs remembered while the task processes the first arriving input. 0 = drops all inputs till the task is ready. 1 = stores exactly one input. n > 1 = stores n inputs which are executed afterwards."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outputLink" eType="#//functions/OutputLink"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputLink" eType="#//functions/ExternalOutputLink"
           containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A link to an external (not in this model) output of another task"/>
@@ -2048,7 +2049,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="OutputLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalOutputLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An output that comes from another system."/>
       </eAnnotations>
@@ -2634,14 +2635,8 @@
           <details key="documentation" value="All task symmetry Restrictions"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="taskRateRestrictions"
-          upperBound="-1" eType="#//restrictions/TaskRateRestriction" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All task rate restrictions"/>
-        </eAnnotations>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="inputSynchronicityRestriction"
-          upperBound="-1" eType="#//restrictions/InputSynchronicityRestriction" containment="true">
+          upperBound="-1" eType="#//restrictions/SynchronicityRestriction" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All input synchronicity restrictions"/>
         </eAnnotations>
@@ -2664,27 +2659,22 @@
           <details key="documentation" value="All segregation restrictions."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="signalDelayRestriction"
-          upperBound="-1" eType="#//restrictions/PathDelayRestriction" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All path delay restrictions"/>
-        </eAnnotations>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subrestrictions" upperBound="-1"
           eType="#//restrictions/Subrestrictions" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Subrestrictions enable to organize restrictions like folders."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="timedelayrestrictions"
+          upperBound="-1" eType="#//restrictions/TimeDelayRestriction" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All time delay restrictions"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Restrictions" eSuperTypes="#//restrictions/RestrictionsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root element of the restrictions layer"/>
-      </eAnnotations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Subrestrictions" eSuperTypes="#//restrictions/RestrictionsContainerA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="With subrestrictions the restrictions layer can be organized like folders"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DeviceRestrictionA" abstract="true">
@@ -2741,32 +2731,6 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PathRestrictionA" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An abstract base class for path restrictions. A path is a sequence of tasks and signals."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="segments" lowerBound="1"
-          upperBound="-1" eType="#//restrictions/PathSegment" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A segment of a path is either a task or a signal. The constraint must hold for the sequence of segments given here"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PathSegment" eSuperTypes="#//common/ElementA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A path segment is either a task or a signal. Do not set both in one segment."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="task" eType="#//functions/Task">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The task referenced by this segment"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="signal" eType="#//functions/Signal">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The signal referenced by this segment."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskGroupRestrictionA" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class for task group restrictions."/>
@@ -2775,17 +2739,6 @@
           eType="#//functions/TaskGroup">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The task groups this constraint applies to."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputRestrictionA" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="An abstract base class for task restrictions."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-          eType="#//functions/Input">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The task this constraint applies to."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -3056,42 +3009,14 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskRateRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SynchronicityRestriction" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA #//restrictions/TaskRestrictionA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Restricts a task to be executed in a specified rate. Violations of that rate will be reported."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="10.0">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxDeviation" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="0.1">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The maximum allowed relative deviation in the execution rate in %. Within this percentage, the restriction is not violated. Default is 10% = 0.1"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputSynchronicityRestriction" eSuperTypes="#//restrictions/InputRestrictionA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Forces inputs to arrive within a given time interval. This is necessary for instance for voter tasks."/>
+        <details key="documentation" value="Forces task to be executed in a given time interval. Can used to force synchrounous outputs or sensor reads"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxJitter" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="0.001">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The maximum allowed absolute time difference between all inputs under this constraint in seconds."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PathDelayRestriction" eSuperTypes="#//restrictions/PathRestrictionA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Restricts a path of signal transmissions and task executions to be below a given upper time limit."/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="1">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The maximum allowed delay for the path in seconds"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -3110,6 +3035,34 @@
           <details key="documentation" value="The type of symmetry to enforce."/>
         </eAnnotations>
       </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeDelayRestriction" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Enforces a maximum transprotation delay between the start task and the end task"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat" defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The maximum allowed delay for the path in seconds"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startTask" lowerBound="1"
+          eType="#//functions/Task">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Begin of the time delay: Start of this task"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endTask" lowerBound="1"
+          eType="#//functions/Task">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="End of the time delay: Start of this task"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Subrestrictions" eSuperTypes="#//restrictions/RestrictionsContainerA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="With subrestrictions the restrictions layer can be organized like folders"/>
+      </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="SymmetryTypesE">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

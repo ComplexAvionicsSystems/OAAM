@@ -178,16 +178,16 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createResourceLinkAdapter();
 			}
 			@Override
-			public Adapter caseResourceModifier(ResourceModifier object) {
-				return createResourceModifierAdapter();
+			public Adapter caseResourceTypeModifier(ResourceTypeModifier object) {
+				return createResourceTypeModifierAdapter();
 			}
 			@Override
-			public Adapter caseModifierLevel(ModifierLevel object) {
-				return createModifierLevelAdapter();
+			public Adapter caseResourceTypeModifierLevel(ResourceTypeModifierLevel object) {
+				return createResourceTypeModifierLevelAdapter();
 			}
 			@Override
-			public Adapter caseModifierDefinition(ModifierDefinition object) {
-				return createModifierDefinitionAdapter();
+			public Adapter caseResourceTypeModifierReference(ResourceTypeModifierReference object) {
+				return createResourceTypeModifierReferenceAdapter();
 			}
 			@Override
 			public Adapter caseTaskTypeDissimilarity(TaskTypeDissimilarity object) {
@@ -632,44 +632,44 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceModifier <em>Resource Modifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceTypeModifier <em>Resource Type Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ResourceModifier
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifier
 	 * @generated
 	 */
-	public Adapter createResourceModifierAdapter() {
+	public Adapter createResourceTypeModifierAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ModifierLevel <em>Modifier Level</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceTypeModifierLevel <em>Resource Type Modifier Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ModifierLevel
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierLevel
 	 * @generated
 	 */
-	public Adapter createModifierLevelAdapter() {
+	public Adapter createResourceTypeModifierLevelAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ModifierDefinition <em>Modifier Definition</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceTypeModifierReference <em>Resource Type Modifier Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ModifierDefinition
+	 * @see de.oaam.model.oaam.library.ResourceTypeModifierReference
 	 * @generated
 	 */
-	public Adapter createModifierDefinitionAdapter() {
+	public Adapter createResourceTypeModifierReferenceAdapter() {
 		return null;
 	}
 

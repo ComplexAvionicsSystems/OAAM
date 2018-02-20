@@ -146,17 +146,6 @@ public class FunctionsContainerAItemProvider extends ElementAItemProvider {
 	}
 
 	/**
-	 * This returns FunctionsContainerA.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FunctionsContainerA"));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -226,7 +215,7 @@ public class FunctionsContainerAItemProvider extends ElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__TASK_LINKS,
-				 FunctionsFactory.eINSTANCE.createTaskLink()));
+				 FunctionsFactory.eINSTANCE.createExternalTaskLink()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * An input segregation defines that two inputs or a system or multiple systems must be from segregated sources. The meaning of segregation can be refined with the attributes. Setting two inputs as segregated is only the information that the inputs needs to be segregated. If segregation is ensured cannot be verified in the systems model. This requires the real implementation.
+ * An input segregation defines that two inputs or a system or multiple systems must be from segregated sources. The meaning of segregation can be refined with the attributes. Setting two inputs as segregated is only the information that the inputs needs to be segregated. If segregation is ensured, cannot be verified in the systems model. This requires the real implementation.
  * <!-- end-model-doc -->
  *
  * <p>

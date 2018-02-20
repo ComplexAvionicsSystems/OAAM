@@ -8,18 +8,17 @@ import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
 import de.oaam.model.oaam.restrictions.DeviceRestriction;
 import de.oaam.model.oaam.restrictions.DeviceTypeRestriction;
-import de.oaam.model.oaam.restrictions.InputSynchronicityRestriction;
 import de.oaam.model.oaam.restrictions.LocationRestriction;
-import de.oaam.model.oaam.restrictions.PathDelayRestriction;
 import de.oaam.model.oaam.restrictions.PowerSourceRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsContainerA;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SegregationRestriction;
 import de.oaam.model.oaam.restrictions.Subrestrictions;
+import de.oaam.model.oaam.restrictions.SynchronicityRestriction;
 import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
-import de.oaam.model.oaam.restrictions.TaskRateRestriction;
 import de.oaam.model.oaam.restrictions.TaskSymmetryRestriction;
 
+import de.oaam.model.oaam.restrictions.TimeDelayRestriction;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -47,13 +46,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getPowerSourceRestrictions <em>Power Source Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTaskAtomicRestrictions <em>Task Atomic Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTaskSymmetryRestrictions <em>Task Symmetry Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTaskRateRestrictions <em>Task Rate Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSegregationsRestrictions <em>Segregations Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSignalDelayRestriction <em>Signal Delay Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSubrestrictions <em>Subrestrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,16 +128,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	protected EList<TaskSymmetryRestriction> taskSymmetryRestrictions;
 
 	/**
-	 * The cached value of the '{@link #getTaskRateRestrictions() <em>Task Rate Restrictions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTaskRateRestrictions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TaskRateRestriction> taskRateRestrictions;
-
-	/**
 	 * The cached value of the '{@link #getInputSynchronicityRestriction() <em>Input Synchronicity Restriction</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -147,7 +135,7 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InputSynchronicityRestriction> inputSynchronicityRestriction;
+	protected EList<SynchronicityRestriction> inputSynchronicityRestriction;
 
 	/**
 	 * The cached value of the '{@link #getConnectionRestrictions() <em>Connection Restrictions</em>}' containment reference list.
@@ -180,16 +168,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	protected EList<SegregationRestriction> segregationsRestrictions;
 
 	/**
-	 * The cached value of the '{@link #getSignalDelayRestriction() <em>Signal Delay Restriction</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalDelayRestriction()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PathDelayRestriction> signalDelayRestriction;
-
-	/**
 	 * The cached value of the '{@link #getSubrestrictions() <em>Subrestrictions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -198,6 +176,16 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * @ordered
 	 */
 	protected EList<Subrestrictions> subrestrictions;
+
+	/**
+	 * The cached value of the '{@link #getTimedelayrestrictions() <em>Timedelayrestrictions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimedelayrestrictions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TimeDelayRestriction> timedelayrestrictions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -307,21 +295,9 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaskRateRestriction> getTaskRateRestrictions() {
-		if (taskRateRestrictions == null) {
-			taskRateRestrictions = new EObjectContainmentEList<TaskRateRestriction>(TaskRateRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS);
-		}
-		return taskRateRestrictions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<InputSynchronicityRestriction> getInputSynchronicityRestriction() {
+	public EList<SynchronicityRestriction> getInputSynchronicityRestriction() {
 		if (inputSynchronicityRestriction == null) {
-			inputSynchronicityRestriction = new EObjectContainmentEList<InputSynchronicityRestriction>(InputSynchronicityRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
+			inputSynchronicityRestriction = new EObjectContainmentEList<SynchronicityRestriction>(SynchronicityRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
 		}
 		return inputSynchronicityRestriction;
 	}
@@ -367,11 +343,11 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PathDelayRestriction> getSignalDelayRestriction() {
-		if (signalDelayRestriction == null) {
-			signalDelayRestriction = new EObjectContainmentEList<PathDelayRestriction>(PathDelayRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION);
+	public EList<Subrestrictions> getSubrestrictions() {
+		if (subrestrictions == null) {
+			subrestrictions = new EObjectContainmentEList<Subrestrictions>(Subrestrictions.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
 		}
-		return signalDelayRestriction;
+		return subrestrictions;
 	}
 
 	/**
@@ -379,11 +355,11 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subrestrictions> getSubrestrictions() {
-		if (subrestrictions == null) {
-			subrestrictions = new EObjectContainmentEList<Subrestrictions>(Subrestrictions.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
+	public EList<TimeDelayRestriction> getTimedelayrestrictions() {
+		if (timedelayrestrictions == null) {
+			timedelayrestrictions = new EObjectContainmentEList<TimeDelayRestriction>(TimeDelayRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
 		}
-		return subrestrictions;
+		return timedelayrestrictions;
 	}
 
 	/**
@@ -408,8 +384,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return ((InternalEList<?>)getTaskAtomicRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return ((InternalEList<?>)getTaskSymmetryRestrictions()).basicRemove(otherEnd, msgs);
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
-				return ((InternalEList<?>)getTaskRateRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 				return ((InternalEList<?>)getInputSynchronicityRestriction()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
@@ -418,10 +392,10 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return ((InternalEList<?>)getConnectionTypeRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
 				return ((InternalEList<?>)getSegregationsRestrictions()).basicRemove(otherEnd, msgs);
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
-				return ((InternalEList<?>)getSignalDelayRestriction()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return ((InternalEList<?>)getSubrestrictions()).basicRemove(otherEnd, msgs);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+				return ((InternalEList<?>)getTimedelayrestrictions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -448,8 +422,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return getTaskAtomicRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return getTaskSymmetryRestrictions();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
-				return getTaskRateRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 				return getInputSynchronicityRestriction();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
@@ -458,10 +430,10 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return getConnectionTypeRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
 				return getSegregationsRestrictions();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
-				return getSignalDelayRestriction();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return getSubrestrictions();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+				return getTimedelayrestrictions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -503,13 +475,9 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				getTaskSymmetryRestrictions().clear();
 				getTaskSymmetryRestrictions().addAll((Collection<? extends TaskSymmetryRestriction>)newValue);
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
-				getTaskRateRestrictions().clear();
-				getTaskRateRestrictions().addAll((Collection<? extends TaskRateRestriction>)newValue);
-				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 				getInputSynchronicityRestriction().clear();
-				getInputSynchronicityRestriction().addAll((Collection<? extends InputSynchronicityRestriction>)newValue);
+				getInputSynchronicityRestriction().addAll((Collection<? extends SynchronicityRestriction>)newValue);
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				getConnectionRestrictions().clear();
@@ -523,13 +491,13 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				getSegregationsRestrictions().clear();
 				getSegregationsRestrictions().addAll((Collection<? extends SegregationRestriction>)newValue);
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
-				getSignalDelayRestriction().clear();
-				getSignalDelayRestriction().addAll((Collection<? extends PathDelayRestriction>)newValue);
-				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				getSubrestrictions().clear();
 				getSubrestrictions().addAll((Collection<? extends Subrestrictions>)newValue);
+				return;
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+				getTimedelayrestrictions().clear();
+				getTimedelayrestrictions().addAll((Collection<? extends TimeDelayRestriction>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -564,9 +532,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				getTaskSymmetryRestrictions().clear();
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
-				getTaskRateRestrictions().clear();
-				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 				getInputSynchronicityRestriction().clear();
 				return;
@@ -579,11 +544,11 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
 				getSegregationsRestrictions().clear();
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
-				getSignalDelayRestriction().clear();
-				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				getSubrestrictions().clear();
+				return;
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+				getTimedelayrestrictions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -611,8 +576,6 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return taskAtomicRestrictions != null && !taskAtomicRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return taskSymmetryRestrictions != null && !taskSymmetryRestrictions.isEmpty();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
-				return taskRateRestrictions != null && !taskRateRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 				return inputSynchronicityRestriction != null && !inputSynchronicityRestriction.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
@@ -621,10 +584,10 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return connectionTypeRestrictions != null && !connectionTypeRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
 				return segregationsRestrictions != null && !segregationsRestrictions.isEmpty();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
-				return signalDelayRestriction != null && !signalDelayRestriction.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return subrestrictions != null && !subrestrictions.isEmpty();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+				return timedelayrestrictions != null && !timedelayrestrictions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

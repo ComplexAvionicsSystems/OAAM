@@ -48,8 +48,6 @@ import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
-import de.oaam.model.oaam.library.ModifierDefinition;
-import de.oaam.model.oaam.library.ModifierLevel;
 import de.oaam.model.oaam.library.OutputDeclaration;
 import de.oaam.model.oaam.library.OutputTrigger;
 import de.oaam.model.oaam.library.ParameterDefinition;
@@ -60,11 +58,13 @@ import de.oaam.model.oaam.library.ResourceBundles;
 import de.oaam.model.oaam.library.ResourceConsumerA;
 import de.oaam.model.oaam.library.ResourceGroup;
 import de.oaam.model.oaam.library.ResourceLink;
-import de.oaam.model.oaam.library.ResourceModifier;
 import de.oaam.model.oaam.library.ResourceProviderA;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.ResourceTypeDissimilarity;
+import de.oaam.model.oaam.library.ResourceTypeModifier;
+import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
+import de.oaam.model.oaam.library.ResourceTypeModifierReference;
 import de.oaam.model.oaam.library.SignalType;
 import de.oaam.model.oaam.library.Sublibrary;
 import de.oaam.model.oaam.library.TaskType;
@@ -296,21 +296,21 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourceModifierEClass = null;
+	private EClass resourceTypeModifierEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass modifierLevelEClass = null;
+	private EClass resourceTypeModifierLevelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass modifierDefinitionEClass = null;
+	private EClass resourceTypeModifierReferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1664,8 +1664,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResourceModifier() {
-		return resourceModifierEClass;
+	public EClass getResourceTypeModifier() {
+		return resourceTypeModifierEClass;
 	}
 
 	/**
@@ -1673,8 +1673,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceModifier_Levels() {
-		return (EReference)resourceModifierEClass.getEStructuralFeatures().get(0);
+	public EReference getResourceTypeModifier_Levels() {
+		return (EReference)resourceTypeModifierEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1682,8 +1682,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModifierLevel() {
-		return modifierLevelEClass;
+	public EClass getResourceTypeModifierLevel() {
+		return resourceTypeModifierLevelEClass;
 	}
 
 	/**
@@ -1691,8 +1691,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModifierLevel_EqualAlternatives() {
-		return (EReference)modifierLevelEClass.getEStructuralFeatures().get(0);
+	public EReference getResourceTypeModifierLevel_EqualAlternatives() {
+		return (EReference)resourceTypeModifierLevelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1700,8 +1700,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModifierLevel_BetterAlternative() {
-		return (EReference)modifierLevelEClass.getEStructuralFeatures().get(1);
+	public EReference getResourceTypeModifierLevel_BetterAlternative() {
+		return (EReference)resourceTypeModifierLevelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1709,8 +1709,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModifierDefinition() {
-		return modifierDefinitionEClass;
+	public EClass getResourceTypeModifierReference() {
+		return resourceTypeModifierReferenceEClass;
 	}
 
 	/**
@@ -1718,8 +1718,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModifierDefinition_Type() {
-		return (EReference)modifierDefinitionEClass.getEStructuralFeatures().get(0);
+	public EReference getResourceTypeModifierReference_Type() {
+		return (EReference)resourceTypeModifierReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1727,8 +1727,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModifierDefinition_AllowedLevels() {
-		return (EReference)modifierDefinitionEClass.getEStructuralFeatures().get(1);
+	public EReference getResourceTypeModifierReference_AllowedLevels() {
+		return (EReference)resourceTypeModifierReferenceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2123,16 +2123,16 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(resourceLinkEClass, RESOURCE_LINK__IN);
 		createEReference(resourceLinkEClass, RESOURCE_LINK__OUT);
 
-		resourceModifierEClass = createEClass(RESOURCE_MODIFIER);
-		createEReference(resourceModifierEClass, RESOURCE_MODIFIER__LEVELS);
+		resourceTypeModifierEClass = createEClass(RESOURCE_TYPE_MODIFIER);
+		createEReference(resourceTypeModifierEClass, RESOURCE_TYPE_MODIFIER__LEVELS);
 
-		modifierLevelEClass = createEClass(MODIFIER_LEVEL);
-		createEReference(modifierLevelEClass, MODIFIER_LEVEL__EQUAL_ALTERNATIVES);
-		createEReference(modifierLevelEClass, MODIFIER_LEVEL__BETTER_ALTERNATIVE);
+		resourceTypeModifierLevelEClass = createEClass(RESOURCE_TYPE_MODIFIER_LEVEL);
+		createEReference(resourceTypeModifierLevelEClass, RESOURCE_TYPE_MODIFIER_LEVEL__EQUAL_ALTERNATIVES);
+		createEReference(resourceTypeModifierLevelEClass, RESOURCE_TYPE_MODIFIER_LEVEL__BETTER_ALTERNATIVE);
 
-		modifierDefinitionEClass = createEClass(MODIFIER_DEFINITION);
-		createEReference(modifierDefinitionEClass, MODIFIER_DEFINITION__TYPE);
-		createEReference(modifierDefinitionEClass, MODIFIER_DEFINITION__ALLOWED_LEVELS);
+		resourceTypeModifierReferenceEClass = createEClass(RESOURCE_TYPE_MODIFIER_REFERENCE);
+		createEReference(resourceTypeModifierReferenceEClass, RESOURCE_TYPE_MODIFIER_REFERENCE__TYPE);
+		createEReference(resourceTypeModifierReferenceEClass, RESOURCE_TYPE_MODIFIER_REFERENCE__ALLOWED_LEVELS);
 
 		taskTypeDissimilarityEClass = createEClass(TASK_TYPE_DISSIMILARITY);
 		createEReference(taskTypeDissimilarityEClass, TASK_TYPE_DISSIMILARITY__TASKS);
@@ -2235,10 +2235,10 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		powerSourceEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		resourceLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceModifierEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		modifierLevelEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		modifierLevelEClass.getESuperTypes().add(this.getResourceConsumerA());
-		modifierDefinitionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		resourceTypeModifierEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		resourceTypeModifierLevelEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		resourceTypeModifierLevelEClass.getESuperTypes().add(this.getResourceConsumerA());
+		resourceTypeModifierReferenceEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		taskTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		deviceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
 		resourceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
@@ -2262,13 +2262,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getResourceProviderA_ResourceLinks(), this.getResourceLink(), null, "resourceLinks", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceProviderInstanceAEClass, ResourceProviderInstanceA.class, "ResourceProviderInstanceA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceProviderInstanceA_RequiredModifiers(), this.getModifierLevel(), null, "requiredModifiers", null, 0, -1, ResourceProviderInstanceA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceProviderInstanceA_RequiredModifiers(), this.getResourceTypeModifierLevel(), null, "requiredModifiers", null, 0, -1, ResourceProviderInstanceA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(libraryContainerAEClass, LibraryContainerA.class, "LibraryContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLibraryContainerA_DataTypes(), theCommonPackage.getDataTypeA(), null, "dataTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_ResourceTypes(), this.getResourceType(), null, "resourceTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_RessourceBundles(), this.getResourceBundles(), null, "ressourceBundles", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLibraryContainerA_ResourceModifiers(), this.getResourceModifier(), null, "resourceModifiers", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_ResourceModifiers(), this.getResourceTypeModifier(), null, "resourceModifiers", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_ResourceTypeDissimilarities(), this.getResourceTypeDissimilarity(), null, "resourceTypeDissimilarities", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_TaskTypes(), this.getTaskType(), null, "taskTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_TaskTypeDissimilarity(), this.getTaskTypeDissimilarity(), null, "taskTypeDissimilarity", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2291,13 +2291,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getResourceType_IsIo(), ecorePackage.getEBoolean(), "isIo", null, 1, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceType_IsConfigurable(), ecorePackage.getEBoolean(), "isConfigurable", null, 1, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceType_PropagetedResources(), this.getResource(), null, "propagetedResources", null, 0, -1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResourceType_AllowedModifiers(), this.getModifierDefinition(), null, "allowedModifiers", null, 0, -1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceType_AllowedModifiers(), this.getResourceTypeModifierReference(), null, "allowedModifiers", null, 0, -1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceType_Alternatives(), this.getResourceAlternatives(), null, "alternatives", null, 0, -1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceEClass, Resource.class, "Resource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResource_Type(), this.getResourceType(), null, "type", null, 1, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResource_Count(), ecorePackage.getEDouble(), "count", "1.0", 1, 1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getResource_Modifiers(), this.getModifierLevel(), null, "modifiers", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResource_Modifiers(), this.getResourceTypeModifierLevel(), null, "modifiers", null, 0, -1, Resource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceAlternativesEClass, ResourceAlternatives.class, "ResourceAlternatives", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceAlternatives_Resources(), this.getResource(), null, "resources", null, 1, -1, ResourceAlternatives.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2408,16 +2408,16 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getResourceLink_In(), this.getResource(), null, "in", null, 1, -1, ResourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceLink_Out(), this.getResource(), null, "out", null, 1, -1, ResourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resourceModifierEClass, ResourceModifier.class, "ResourceModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceModifier_Levels(), this.getModifierLevel(), null, "levels", null, 1, -1, ResourceModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resourceTypeModifierEClass, ResourceTypeModifier.class, "ResourceTypeModifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResourceTypeModifier_Levels(), this.getResourceTypeModifierLevel(), null, "levels", null, 1, -1, ResourceTypeModifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(modifierLevelEClass, ModifierLevel.class, "ModifierLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModifierLevel_EqualAlternatives(), this.getModifierLevel(), null, "equalAlternatives", null, 0, -1, ModifierLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModifierLevel_BetterAlternative(), this.getModifierLevel(), null, "betterAlternative", null, 0, 1, ModifierLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resourceTypeModifierLevelEClass, ResourceTypeModifierLevel.class, "ResourceTypeModifierLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResourceTypeModifierLevel_EqualAlternatives(), this.getResourceTypeModifierLevel(), null, "equalAlternatives", null, 0, -1, ResourceTypeModifierLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceTypeModifierLevel_BetterAlternative(), this.getResourceTypeModifierLevel(), null, "betterAlternative", null, 0, 1, ResourceTypeModifierLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(modifierDefinitionEClass, ModifierDefinition.class, "ModifierDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModifierDefinition_Type(), this.getResourceModifier(), null, "type", null, 1, 1, ModifierDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModifierDefinition_AllowedLevels(), this.getModifierLevel(), null, "allowedLevels", null, 1, -1, ModifierDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resourceTypeModifierReferenceEClass, ResourceTypeModifierReference.class, "ResourceTypeModifierReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResourceTypeModifierReference_Type(), this.getResourceTypeModifier(), null, "type", null, 1, 1, ResourceTypeModifierReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceTypeModifierReference_AllowedLevels(), this.getResourceTypeModifierLevel(), null, "allowedLevels", null, 1, -1, ResourceTypeModifierReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskTypeDissimilarityEClass, TaskTypeDissimilarity.class, "TaskTypeDissimilarity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskTypeDissimilarity_Tasks(), this.getTaskType(), null, "tasks", null, 0, -1, TaskTypeDissimilarity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

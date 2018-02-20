@@ -212,7 +212,7 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS,
-				 LibraryFactory.eINSTANCE.createResourceModifier()));
+				 LibraryFactory.eINSTANCE.createResourceTypeModifier()));
 
 		newChildDescriptors.add
 			(createChildParameter

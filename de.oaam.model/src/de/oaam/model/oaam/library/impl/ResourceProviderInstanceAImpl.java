@@ -3,9 +3,9 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ModifierLevel;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
+import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -38,7 +38,7 @@ public abstract class ResourceProviderInstanceAImpl extends MinimalEObjectImpl.C
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifierLevel> requiredModifiers;
+	protected EList<ResourceTypeModifierLevel> requiredModifiers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -64,9 +64,9 @@ public abstract class ResourceProviderInstanceAImpl extends MinimalEObjectImpl.C
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifierLevel> getRequiredModifiers() {
+	public EList<ResourceTypeModifierLevel> getRequiredModifiers() {
 		if (requiredModifiers == null) {
-			requiredModifiers = new EObjectResolvingEList<ModifierLevel>(ModifierLevel.class, this, LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A__REQUIRED_MODIFIERS);
+			requiredModifiers = new EObjectResolvingEList<ResourceTypeModifierLevel>(ResourceTypeModifierLevel.class, this, LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A__REQUIRED_MODIFIERS);
 		}
 		return requiredModifiers;
 	}
@@ -96,7 +96,7 @@ public abstract class ResourceProviderInstanceAImpl extends MinimalEObjectImpl.C
 		switch (featureID) {
 			case LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A__REQUIRED_MODIFIERS:
 				getRequiredModifiers().clear();
-				getRequiredModifiers().addAll((Collection<? extends ModifierLevel>)newValue);
+				getRequiredModifiers().addAll((Collection<? extends ResourceTypeModifierLevel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

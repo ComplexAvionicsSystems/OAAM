@@ -25,13 +25,12 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getPowerSourceRestrictions <em>Power Source Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskAtomicRestrictions <em>Task Atomic Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskSymmetryRestrictions <em>Task Symmetry Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskRateRestrictions <em>Task Rate Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSegregationsRestrictions <em>Segregations Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSignalDelayRestriction <em>Signal Delay Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSubrestrictions <em>Subrestrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA()
@@ -145,23 +144,8 @@ public interface RestrictionsContainerA extends ElementA {
 	EList<TaskSymmetryRestriction> getTaskSymmetryRestrictions();
 
 	/**
-	 * Returns the value of the '<em><b>Task Rate Restrictions</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.TaskRateRestriction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * All task rate restrictions
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Task Rate Restrictions</em>' containment reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_TaskRateRestrictions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<TaskRateRestriction> getTaskRateRestrictions();
-
-	/**
 	 * Returns the value of the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction}.
+	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.SynchronicityRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -172,7 +156,7 @@ public interface RestrictionsContainerA extends ElementA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<InputSynchronicityRestriction> getInputSynchronicityRestriction();
+	EList<SynchronicityRestriction> getInputSynchronicityRestriction();
 
 	/**
 	 * Returns the value of the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -220,21 +204,6 @@ public interface RestrictionsContainerA extends ElementA {
 	EList<SegregationRestriction> getSegregationsRestrictions();
 
 	/**
-	 * Returns the value of the '<em><b>Signal Delay Restriction</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.PathDelayRestriction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * All path delay restrictions
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Signal Delay Restriction</em>' containment reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_SignalDelayRestriction()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PathDelayRestriction> getSignalDelayRestriction();
-
-	/**
 	 * Returns the value of the '<em><b>Subrestrictions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.Subrestrictions}.
 	 * <!-- begin-user-doc -->
@@ -248,5 +217,20 @@ public interface RestrictionsContainerA extends ElementA {
 	 * @generated
 	 */
 	EList<Subrestrictions> getSubrestrictions();
+
+	/**
+	 * Returns the value of the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.TimeDelayRestriction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All time delay restrictions
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Timedelayrestrictions</em>' containment reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_Timedelayrestrictions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TimeDelayRestriction> getTimedelayrestrictions();
 
 } // RestrictionsContainerA

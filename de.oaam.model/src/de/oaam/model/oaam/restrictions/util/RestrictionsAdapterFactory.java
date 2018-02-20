@@ -79,10 +79,6 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createRestrictionsAdapter();
 			}
 			@Override
-			public Adapter caseSubrestrictions(Subrestrictions object) {
-				return createSubrestrictionsAdapter();
-			}
-			@Override
 			public Adapter caseDeviceRestrictionA(DeviceRestrictionA object) {
 				return createDeviceRestrictionAAdapter();
 			}
@@ -103,20 +99,8 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createSubFunctionRestrictionAAdapter();
 			}
 			@Override
-			public Adapter casePathRestrictionA(PathRestrictionA object) {
-				return createPathRestrictionAAdapter();
-			}
-			@Override
-			public Adapter casePathSegment(PathSegment object) {
-				return createPathSegmentAdapter();
-			}
-			@Override
 			public Adapter caseTaskGroupRestrictionA(TaskGroupRestrictionA object) {
 				return createTaskGroupRestrictionAAdapter();
-			}
-			@Override
-			public Adapter caseInputRestrictionA(InputRestrictionA object) {
-				return createInputRestrictionAAdapter();
 			}
 			@Override
 			public Adapter caseLocationRestriction(LocationRestriction object) {
@@ -151,16 +135,8 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createSegregationRestrictionAdapter();
 			}
 			@Override
-			public Adapter caseTaskRateRestriction(TaskRateRestriction object) {
-				return createTaskRateRestrictionAdapter();
-			}
-			@Override
-			public Adapter caseInputSynchronicityRestriction(InputSynchronicityRestriction object) {
-				return createInputSynchronicityRestrictionAdapter();
-			}
-			@Override
-			public Adapter casePathDelayRestriction(PathDelayRestriction object) {
-				return createPathDelayRestrictionAdapter();
+			public Adapter caseSynchronicityRestriction(SynchronicityRestriction object) {
+				return createSynchronicityRestrictionAdapter();
 			}
 			@Override
 			public Adapter caseTaskAtomicRestriction(TaskAtomicRestriction object) {
@@ -169,6 +145,14 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTaskSymmetryRestriction(TaskSymmetryRestriction object) {
 				return createTaskSymmetryRestrictionAdapter();
+			}
+			@Override
+			public Adapter caseTimeDelayRestriction(TimeDelayRestriction object) {
+				return createTimeDelayRestrictionAdapter();
+			}
+			@Override
+			public Adapter caseSubrestrictions(Subrestrictions object) {
+				return createSubrestrictionsAdapter();
 			}
 			@Override
 			public Adapter caseElementA(ElementA object) {
@@ -315,34 +299,6 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.PathRestrictionA <em>Path Restriction A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.PathRestrictionA
-	 * @generated
-	 */
-	public Adapter createPathRestrictionAAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.PathSegment <em>Path Segment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.PathSegment
-	 * @generated
-	 */
-	public Adapter createPathSegmentAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.TaskGroupRestrictionA <em>Task Group Restriction A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -353,20 +309,6 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTaskGroupRestrictionAAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.InputRestrictionA <em>Input Restriction A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.InputRestrictionA
-	 * @generated
-	 */
-	public Adapter createInputRestrictionAAdapter() {
 		return null;
 	}
 
@@ -483,44 +425,16 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.TaskRateRestriction <em>Task Rate Restriction</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.SynchronicityRestriction <em>Synchronicity Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.TaskRateRestriction
+	 * @see de.oaam.model.oaam.restrictions.SynchronicityRestriction
 	 * @generated
 	 */
-	public Adapter createTaskRateRestrictionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.InputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.InputSynchronicityRestriction
-	 * @generated
-	 */
-	public Adapter createInputSynchronicityRestrictionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.PathDelayRestriction <em>Path Delay Restriction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.PathDelayRestriction
-	 * @generated
-	 */
-	public Adapter createPathDelayRestrictionAdapter() {
+	public Adapter createSynchronicityRestrictionAdapter() {
 		return null;
 	}
 
@@ -549,6 +463,20 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTaskSymmetryRestrictionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.TimeDelayRestriction <em>Time Delay Restriction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.restrictions.TimeDelayRestriction
+	 * @generated
+	 */
+	public Adapter createTimeDelayRestrictionAdapter() {
 		return null;
 	}
 

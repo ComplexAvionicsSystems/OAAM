@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ResourceProviderInstanceA extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Required Modifiers</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ModifierLevel}.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceTypeModifierLevel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -40,6 +40,6 @@ public interface ResourceProviderInstanceA extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<ModifierLevel> getRequiredModifiers();
+	EList<ResourceTypeModifierLevel> getRequiredModifiers();
 
 } // ResourceProviderInstanceA

@@ -137,12 +137,12 @@ public interface Input extends ElementA, VariantDependentElementA, ModeDependent
 	 * A link to an external (not in this model) output of another task
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Output Link</em>' containment reference.
-	 * @see #setOutputLink(OutputLink)
+	 * @see #setOutputLink(ExternalOutputLink)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getInput_OutputLink()
 	 * @model containment="true"
 	 * @generated
 	 */
-	OutputLink getOutputLink();
+	ExternalOutputLink getOutputLink();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Input#getOutputLink <em>Output Link</em>}' containment reference.
@@ -152,6 +152,6 @@ public interface Input extends ElementA, VariantDependentElementA, ModeDependent
 	 * @see #getOutputLink()
 	 * @generated
 	 */
-	void setOutputLink(OutputLink value);
+	void setOutputLink(ExternalOutputLink value);
 
 } // Input

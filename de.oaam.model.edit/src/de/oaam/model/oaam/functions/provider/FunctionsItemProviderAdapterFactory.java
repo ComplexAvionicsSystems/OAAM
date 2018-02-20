@@ -95,29 +95,6 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.FunctionsContainerA} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FunctionsContainerAItemProvider functionsContainerAItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.FunctionsContainerA}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFunctionsContainerAAdapter() {
-		if (functionsContainerAItemProvider == null) {
-			functionsContainerAItemProvider = new FunctionsContainerAItemProvider(this);
-		}
-
-		return functionsContainerAItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Task} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -138,6 +115,29 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		}
 
 		return taskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.ExternalTaskLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExternalTaskLinkItemProvider externalTaskLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.ExternalTaskLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExternalTaskLinkAdapter() {
+		if (externalTaskLinkItemProvider == null) {
+			externalTaskLinkItemProvider = new ExternalTaskLinkItemProvider(this);
+		}
+
+		return externalTaskLinkItemProvider;
 	}
 
 	/**
@@ -279,6 +279,29 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.ExternalOutputLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExternalOutputLinkItemProvider externalOutputLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.ExternalOutputLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExternalOutputLinkAdapter() {
+		if (externalOutputLinkItemProvider == null) {
+			externalOutputLinkItemProvider = new ExternalOutputLinkItemProvider(this);
+		}
+
+		return externalOutputLinkItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskRedundancy} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -345,52 +368,6 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		}
 
 		return parameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskLink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TaskLinkItemProvider taskLinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.TaskLink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTaskLinkAdapter() {
-		if (taskLinkItemProvider == null) {
-			taskLinkItemProvider = new TaskLinkItemProvider(this);
-		}
-
-		return taskLinkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.OutputLink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected OutputLinkItemProvider outputLinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.OutputLink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createOutputLinkAdapter() {
-		if (outputLinkItemProvider == null) {
-			outputLinkItemProvider = new OutputLinkItemProvider(this);
-		}
-
-		return outputLinkItemProvider;
 	}
 
 	/**
@@ -539,9 +516,8 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	 */
 	public void dispose() {
 		if (functionsItemProvider != null) functionsItemProvider.dispose();
-		if (functionsContainerAItemProvider != null) functionsContainerAItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
-		if (taskLinkItemProvider != null) taskLinkItemProvider.dispose();
+		if (externalTaskLinkItemProvider != null) externalTaskLinkItemProvider.dispose();
 		if (taskGroupItemProvider != null) taskGroupItemProvider.dispose();
 		if (taskSymmetryItemProvider != null) taskSymmetryItemProvider.dispose();
 		if (taskRedundancyItemProvider != null) taskRedundancyItemProvider.dispose();
@@ -551,7 +527,7 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		if (signalGroupItemProvider != null) signalGroupItemProvider.dispose();
 		if (inputItemProvider != null) inputItemProvider.dispose();
 		if (outputItemProvider != null) outputItemProvider.dispose();
-		if (outputLinkItemProvider != null) outputLinkItemProvider.dispose();
+		if (externalOutputLinkItemProvider != null) externalOutputLinkItemProvider.dispose();
 		if (subfunctionItemProvider != null) subfunctionItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();
 	}

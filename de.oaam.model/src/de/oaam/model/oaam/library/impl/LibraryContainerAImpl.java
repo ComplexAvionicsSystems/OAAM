@@ -15,9 +15,9 @@ import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
 import de.oaam.model.oaam.library.ResourceBundles;
-import de.oaam.model.oaam.library.ResourceModifier;
 import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.ResourceTypeDissimilarity;
+import de.oaam.model.oaam.library.ResourceTypeModifier;
 import de.oaam.model.oaam.library.SignalType;
 import de.oaam.model.oaam.library.Sublibrary;
 import de.oaam.model.oaam.library.TaskType;
@@ -104,7 +104,7 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResourceModifier> resourceModifiers;
+	protected EList<ResourceTypeModifier> resourceModifiers;
 
 	/**
 	 * The cached value of the '{@link #getResourceTypeDissimilarities() <em>Resource Type Dissimilarities</em>}' containment reference list.
@@ -296,9 +296,9 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResourceModifier> getResourceModifiers() {
+	public EList<ResourceTypeModifier> getResourceModifiers() {
 		if (resourceModifiers == null) {
-			resourceModifiers = new EObjectContainmentEList<ResourceModifier>(ResourceModifier.class, this, LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS);
+			resourceModifiers = new EObjectContainmentEList<ResourceTypeModifier>(ResourceTypeModifier.class, this, LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS);
 		}
 		return resourceModifiers;
 	}
@@ -574,7 +574,7 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				getResourceModifiers().clear();
-				getResourceModifiers().addAll((Collection<? extends ResourceModifier>)newValue);
+				getResourceModifiers().addAll((Collection<? extends ResourceTypeModifier>)newValue);
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES:
 				getResourceTypeDissimilarities().clear();

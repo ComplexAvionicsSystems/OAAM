@@ -74,13 +74,12 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS);
-			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS);
-			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
+			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -132,13 +131,12 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -193,13 +191,8 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_RATE_RESTRICTIONS,
-				 RestrictionsFactory.eINSTANCE.createTaskRateRestriction()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION,
-				 RestrictionsFactory.eINSTANCE.createInputSynchronicityRestriction()));
+				 RestrictionsFactory.eINSTANCE.createSynchronicityRestriction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -218,13 +211,13 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SIGNAL_DELAY_RESTRICTION,
-				 RestrictionsFactory.eINSTANCE.createPathDelayRestriction()));
+				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS,
+				 RestrictionsFactory.eINSTANCE.createSubrestrictions()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS,
-				 RestrictionsFactory.eINSTANCE.createSubrestrictions()));
+				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS,
+				 RestrictionsFactory.eINSTANCE.createTimeDelayRestriction()));
 	}
 
 	/**

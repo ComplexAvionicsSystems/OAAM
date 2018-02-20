@@ -300,20 +300,20 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceLink/out"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/ResourceModifier">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceModifier/levels"/>
+      <genClasses ecoreClass="oaam.ecore#//library/ResourceTypeModifier">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceTypeModifier/levels"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/ModifierLevel">
+      <genClasses ecoreClass="oaam.ecore#//library/ResourceTypeModifierLevel">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ModifierLevel/equalAlternatives"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceTypeModifierLevel/equalAlternatives"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ModifierLevel/betterAlternative"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceTypeModifierLevel/betterAlternative"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/ModifierDefinition">
+      <genClasses ecoreClass="oaam.ecore#//library/ResourceTypeModifierReference">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ModifierDefinition/type"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceTypeModifierReference/type"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ModifierDefinition/allowedLevels"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceTypeModifierReference/allowedLevels"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/TaskTypeDissimilarity">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -444,7 +444,7 @@
     <nestedGenPackages prefix="Functions" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//functions">
       <genClasses ecoreClass="oaam.ecore#//functions/Functions"/>
-      <genClasses ecoreClass="oaam.ecore#//functions/FunctionsContainerA">
+      <genClasses image="false" ecoreClass="oaam.ecore#//functions/FunctionsContainerA">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/FunctionsContainerA/isAtomic"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FunctionsContainerA/tasks"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FunctionsContainerA/taskLinks"/>
@@ -469,14 +469,14 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Task/fixedRate"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/Task/parameters"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//functions/TaskLink">
+      <genClasses ecoreClass="oaam.ecore#//functions/ExternalTaskLink">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskLink/type"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskLink/inputs"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskLink/outputs"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalTaskLink/type"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalTaskLink/inputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalTaskLink/outputs"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskLink/task"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/TaskLink/filter"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalTaskLink/task"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/ExternalTaskLink/filter"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/TaskGroup">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -534,10 +534,10 @@
             ecoreFeature="ecore:EReference oaam.ecore#//functions/Output/ioBindings"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Output/fixedRate"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//functions/OutputLink">
+      <genClasses ecoreClass="oaam.ecore#//functions/ExternalOutputLink">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//functions/OutputLink/output"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/OutputLink/filter"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalOutputLink/output"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/ExternalOutputLink/filter"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/Subfunction">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunction/multiplicityMin"/>
@@ -706,16 +706,14 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/powerSourceRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/taskAtomicRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/taskSymmetryRestrictions"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/taskRateRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/inputSynchronicityRestriction"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/connectionRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/connectionTypeRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/segregationsRestrictions"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/signalDelayRestriction"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/subrestrictions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/timedelayrestrictions"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//restrictions/Restrictions"/>
-      <genClasses ecoreClass="oaam.ecore#//restrictions/Subrestrictions"/>
       <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/DeviceRestrictionA">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//restrictions/DeviceRestrictionA/devices"/>
@@ -736,22 +734,9 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SubFunctionRestrictionA/subFunctions"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/PathRestrictionA">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/PathRestrictionA/segments"/>
-      </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//restrictions/PathSegment">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/PathSegment/task"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/PathSegment/signal"/>
-      </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/TaskGroupRestrictionA">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//restrictions/TaskGroupRestrictionA/taskGroups"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/InputRestrictionA">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/InputRestrictionA/inputs"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//restrictions/LocationRestriction">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/LocationRestriction/locationName"/>
@@ -829,20 +814,21 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SegregationRestriction/connectionsB"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//restrictions/TaskRateRestriction">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/TaskRateRestriction/rate"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/TaskRateRestriction/maxDeviation"/>
-      </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//restrictions/InputSynchronicityRestriction">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/InputSynchronicityRestriction/maxJitter"/>
-      </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//restrictions/PathDelayRestriction">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/PathDelayRestriction/delay"/>
+      <genClasses ecoreClass="oaam.ecore#//restrictions/SynchronicityRestriction">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/SynchronicityRestriction/maxJitter"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//restrictions/TaskAtomicRestriction"/>
       <genClasses ecoreClass="oaam.ecore#//restrictions/TaskSymmetryRestriction">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/TaskSymmetryRestriction/type"/>
       </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//restrictions/TimeDelayRestriction">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/TimeDelayRestriction/delay"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/TimeDelayRestriction/startTask"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/TimeDelayRestriction/endTask"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//restrictions/Subrestrictions"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Mapping" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//mapping">

@@ -58,8 +58,6 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case RestrictionsPackage.RESTRICTIONS: return createRestrictions();
-			case RestrictionsPackage.SUBRESTRICTIONS: return createSubrestrictions();
-			case RestrictionsPackage.PATH_SEGMENT: return createPathSegment();
 			case RestrictionsPackage.LOCATION_RESTRICTION: return createLocationRestriction();
 			case RestrictionsPackage.AREA_RESTRICTION: return createAreaRestriction();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION: return createPowerSourceRestriction();
@@ -68,11 +66,11 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION: return createConectionTypeRestriction();
 			case RestrictionsPackage.CONNECTION_RESTRICTION: return createConnectionRestriction();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION: return createSegregationRestriction();
-			case RestrictionsPackage.TASK_RATE_RESTRICTION: return createTaskRateRestriction();
-			case RestrictionsPackage.INPUT_SYNCHRONICITY_RESTRICTION: return createInputSynchronicityRestriction();
-			case RestrictionsPackage.PATH_DELAY_RESTRICTION: return createPathDelayRestriction();
+			case RestrictionsPackage.SYNCHRONICITY_RESTRICTION: return createSynchronicityRestriction();
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION: return createTaskAtomicRestriction();
 			case RestrictionsPackage.TASK_SYMMETRY_RESTRICTION: return createTaskSymmetryRestriction();
+			case RestrictionsPackage.TIME_DELAY_RESTRICTION: return createTimeDelayRestriction();
+			case RestrictionsPackage.SUBRESTRICTIONS: return createSubrestrictions();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -126,16 +124,6 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	public Subrestrictions createSubrestrictions() {
 		SubrestrictionsImpl subrestrictions = new SubrestrictionsImpl();
 		return subrestrictions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PathSegment createPathSegment() {
-		PathSegmentImpl pathSegment = new PathSegmentImpl();
-		return pathSegment;
 	}
 
 	/**
@@ -223,29 +211,9 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskRateRestriction createTaskRateRestriction() {
-		TaskRateRestrictionImpl taskRateRestriction = new TaskRateRestrictionImpl();
-		return taskRateRestriction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputSynchronicityRestriction createInputSynchronicityRestriction() {
-		InputSynchronicityRestrictionImpl inputSynchronicityRestriction = new InputSynchronicityRestrictionImpl();
-		return inputSynchronicityRestriction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PathDelayRestriction createPathDelayRestriction() {
-		PathDelayRestrictionImpl pathDelayRestriction = new PathDelayRestrictionImpl();
-		return pathDelayRestriction;
+	public SynchronicityRestriction createSynchronicityRestriction() {
+		SynchronicityRestrictionImpl synchronicityRestriction = new SynchronicityRestrictionImpl();
+		return synchronicityRestriction;
 	}
 
 	/**
@@ -266,6 +234,16 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	public TaskSymmetryRestriction createTaskSymmetryRestriction() {
 		TaskSymmetryRestrictionImpl taskSymmetryRestriction = new TaskSymmetryRestrictionImpl();
 		return taskSymmetryRestriction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeDelayRestriction createTimeDelayRestriction() {
+		TimeDelayRestrictionImpl timeDelayRestriction = new TimeDelayRestrictionImpl();
+		return timeDelayRestriction;
 	}
 
 	/**

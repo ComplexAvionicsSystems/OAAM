@@ -81,7 +81,7 @@ public interface Resource extends ElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Modifiers</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ModifierLevel}.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceTypeModifierLevel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -92,6 +92,6 @@ public interface Resource extends ElementA {
 	 * @model
 	 * @generated
 	 */
-	EList<ModifierLevel> getModifiers();
+	EList<ResourceTypeModifierLevel> getModifiers();
 
 } // Resource

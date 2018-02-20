@@ -265,25 +265,25 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.RESOURCE_MODIFIER: {
-				ResourceModifier resourceModifier = (ResourceModifier)theEObject;
-				T result = caseResourceModifier(resourceModifier);
-				if (result == null) result = caseElementA(resourceModifier);
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER: {
+				ResourceTypeModifier resourceTypeModifier = (ResourceTypeModifier)theEObject;
+				T result = caseResourceTypeModifier(resourceTypeModifier);
+				if (result == null) result = caseElementA(resourceTypeModifier);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.MODIFIER_LEVEL: {
-				ModifierLevel modifierLevel = (ModifierLevel)theEObject;
-				T result = caseModifierLevel(modifierLevel);
-				if (result == null) result = caseElementA(modifierLevel);
-				if (result == null) result = caseResourceConsumerA(modifierLevel);
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER_LEVEL: {
+				ResourceTypeModifierLevel resourceTypeModifierLevel = (ResourceTypeModifierLevel)theEObject;
+				T result = caseResourceTypeModifierLevel(resourceTypeModifierLevel);
+				if (result == null) result = caseElementA(resourceTypeModifierLevel);
+				if (result == null) result = caseResourceConsumerA(resourceTypeModifierLevel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.MODIFIER_DEFINITION: {
-				ModifierDefinition modifierDefinition = (ModifierDefinition)theEObject;
-				T result = caseModifierDefinition(modifierDefinition);
-				if (result == null) result = caseElementA(modifierDefinition);
+			case LibraryPackage.RESOURCE_TYPE_MODIFIER_REFERENCE: {
+				ResourceTypeModifierReference resourceTypeModifierReference = (ResourceTypeModifierReference)theEObject;
+				T result = caseResourceTypeModifierReference(resourceTypeModifierReference);
+				if (result == null) result = caseElementA(resourceTypeModifierReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -763,47 +763,47 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Modifier</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Type Modifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Modifier</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Type Modifier</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResourceModifier(ResourceModifier object) {
+	public T caseResourceTypeModifier(ResourceTypeModifier object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Modifier Level</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Type Modifier Level</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Modifier Level</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Type Modifier Level</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModifierLevel(ModifierLevel object) {
+	public T caseResourceTypeModifierLevel(ResourceTypeModifierLevel object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Modifier Definition</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Resource Type Modifier Reference</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Modifier Definition</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Resource Type Modifier Reference</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseModifierDefinition(ModifierDefinition object) {
+	public T caseResourceTypeModifierReference(ResourceTypeModifierReference object) {
 		return null;
 	}
 

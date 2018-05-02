@@ -138,11 +138,14 @@ public class ResourceItemProvider extends ElementAItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Resource)object).getName();
+		String label = (null!=(((Resource)object).getName())?((Resource)object).getName()+" ":"")+
+					   (((null!=((Resource)object).getType())&&(null!=((Resource)object).getType().getName()))?((Resource)object).getType().getName()+":":"")+
+				       ((Resource)object).getCount();
+		
 		return label == null || label.length() == 0 ?
 			getString("_UI_Resource_type") :
 			getString("_UI_Resource_type") + " " + label;

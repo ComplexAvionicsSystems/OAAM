@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceSymmetry extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface DeviceSymmetry extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Devices</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Device}.

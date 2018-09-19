@@ -12,12 +12,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/library"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/scenario"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/systems"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/functions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/hardware"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/anatomy"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/capabilities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/restrictions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/mapping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//Architecture/allocations"/>
     </genClasses>
     <nestedGenPackages prefix="Common" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//common">
@@ -35,15 +35,15 @@
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/EndianessE/BIG"/>
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/EndianessE/LITTLE"/>
       </genEnums>
-      <genClasses image="false" ecoreClass="oaam.ecore#//common/ElementA">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/id"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/style"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//common/ElementA/attributes"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/documentation"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/modified"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/modifier"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/ElementA/traceLink"/>
+      <genClasses image="false" ecoreClass="oaam.ecore#//common/OaamBaseElementA">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/id"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/style"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//common/OaamBaseElementA/attributes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/documentation"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/modified"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/modifier"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/OaamBaseElementA/traceLink"/>
       </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//common/BoolA"/>
       <genClasses image="false" ecoreClass="oaam.ecore#//common/AttributeA"/>
@@ -149,7 +149,7 @@
       <genClasses image="false" ecoreClass="oaam.ecore#//library/LibraryContainerA">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/dataTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/resourceTypes"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/ressourceBundles"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/resourceBundles"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/resourceModifiers"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/resourceTypeDissimilarities"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/taskTypes"/>
@@ -161,11 +161,13 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/connectionTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/wireTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/locationTypes"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/routeTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/ductTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/genericAttributes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/powerSources"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/sublibraries"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/ResourceType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/unit"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/isConsumed"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/isDistinguishable"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/isPropagated"/>
@@ -187,23 +189,23 @@
       <genClasses ecoreClass="oaam.ecore#//library/ResourceAlternatives">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceAlternatives/resources"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/ResourceBundles">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceBundles/resources"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundles/mtbf"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundles/cost"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundles/mass"/>
+      <genClasses ecoreClass="oaam.ecore#//library/ResourceBundle">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceBundle/resources"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundle/mtbf"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundle/cost"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceBundle/mass"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/TaskType">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/outputs"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/inputs"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/outputDeclarations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/inputDeclarations"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskType/isDeterministic"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskType/preferredExecutionRate"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/internalStates"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/parameters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/internalStateDeclarations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/parameterDeclarations"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/SignalType"/>
       <genClasses ecoreClass="oaam.ecore#//library/DeviceType">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ios"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ioDeclarations"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/isSubdevice"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/canHaveSubdevices"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/mtbf"/>
@@ -216,11 +218,15 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/isInformation"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/isPower"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ConnectionType/wireType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ConnectionType/wireTypes"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/isWireless"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/allowsCircles"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/nSources"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/nTagets"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/nStartingPoints"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ConnectionType/startingPointResourceTypes"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/nEndPoints"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ConnectionType/endPointResourceTypes"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/nJoints"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/maxJointBranches"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/maxInterfaceToJointDistance"/>
@@ -230,10 +236,11 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/directConnectionsAllowed"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/maxLength"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/isUnidirectional"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ConnectionType/requiresMaster"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/LocationType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/LocationType/isJoint"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LocationType/ductOpenings"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LocationType/ductOpeningDeclarations"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/DuctType"/>
       <genClasses ecoreClass="oaam.ecore#//library/WireType">
@@ -340,13 +347,13 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/FunctionInputTrigger/input"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/InternalStateDefinition">
+      <genClasses ecoreClass="oaam.ecore#//library/InternalStateDeclaration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/InternalStateDefinition/type"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/InternalStateDeclaration/type"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/ParameterDefinition">
+      <genClasses ecoreClass="oaam.ecore#//library/ParameterDeclaration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//library/ParameterDefinition/type"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//library/ParameterDeclaration/type"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Scenario" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
@@ -481,7 +488,6 @@
       <genClasses ecoreClass="oaam.ecore#//functions/TaskGroup">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskGroup/tasks"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/TaskGroup/isAtomic"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/TaskSymmetry">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -510,6 +516,8 @@
             ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/type"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Signal/inIndex"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Signal/outIndex"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/connectionBinding"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/SignalGroup">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -539,9 +547,9 @@
             ecoreFeature="ecore:EReference oaam.ecore#//functions/ExternalOutputLink/output"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/ExternalOutputLink/filter"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//functions/Subfunction">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunction/multiplicityMin"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunction/multiplicityMax"/>
+      <genClasses ecoreClass="oaam.ecore#//functions/Subfunctions">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunctions/multiplicityMin"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Subfunctions/multiplicityMax"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/Parameter">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -561,7 +569,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//hardware/Device/type"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/Device/ios"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/Device/subDevices"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//hardware/Device/subdevices"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//hardware/Device/locationBinding"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -571,7 +579,11 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//hardware/Connection/type"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//hardware/Connection/startingPoints"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//hardware/Connection/endPoints"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//hardware/Connection/masters"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//hardware/Io">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -598,6 +610,7 @@
             ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Location/type"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Location/position"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Location/ductOpenings"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//anatomy/Location/length"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//anatomy/Area">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -610,9 +623,9 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Duct/type"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Duct/ductopeningA"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Duct/startingPoint"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Duct/ductopeningB"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//anatomy/Duct/endPoint"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//anatomy/DuctOpening">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//anatomy/DuctOpening/relativPosition"/>
@@ -637,48 +650,48 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilityA/resourceConsumptions"/>
       </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//capabilities/CapabilitiesContainerA">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/functionCapabilties"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/signalCapabilities"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/deviceCapabilities"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/subDeviceCapabilities"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/connectionCapabilities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/taskOnDeviceCapabilities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/signalOnConnectionOrDeviceCapabilities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/deviceInLocationCapabilities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/subdeviceInDeviceCapabilities"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/connectionInDuctOrLocationCapabilities"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//capabilities/CapabilitiesContainerA/subcapabilities"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/TaskCapability">
+      <genClasses ecoreClass="oaam.ecore#//capabilities/TaskOnDeviceCapability">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/TaskCapability/taskType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/TaskOnDeviceCapability/taskType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/TaskCapability/deviceType"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//capabilities/TaskCapability/worstCaseExecutionTime"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//capabilities/TaskCapability/failureProbability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/TaskOnDeviceCapability/deviceType"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//capabilities/TaskOnDeviceCapability/worstCaseExecutionTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//capabilities/TaskOnDeviceCapability/failureProbability"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/DeviceCapability">
+      <genClasses ecoreClass="oaam.ecore#//capabilities/DeviceInLocationCapability">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/DeviceCapability/deviceType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/DeviceInLocationCapability/deviceType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/DeviceCapability/locationType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/DeviceInLocationCapability/locationType"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/ConnectionCapability">
+      <genClasses ecoreClass="oaam.ecore#//capabilities/ConnectionInDuctOrLocationCapability">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionCapability/connectionType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionInDuctOrLocationCapability/connectionType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionCapability/locationType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionInDuctOrLocationCapability/locationType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionCapability/ductType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ConnectionInDuctOrLocationCapability/ductType"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/SignalCapability">
+      <genClasses ecoreClass="oaam.ecore#//capabilities/SignalOnConnectionOrDeviceCapability">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalCapability/signalType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalOnConnectionOrDeviceCapability/signalType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalCapability/deviceType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalOnConnectionOrDeviceCapability/deviceType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalCapability/connectionType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SignalOnConnectionOrDeviceCapability/connectionType"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/SubDeviceCapability">
+      <genClasses ecoreClass="oaam.ecore#//capabilities/SubdeviceInDeviceCapability">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SubDeviceCapability/subDeviceType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SubdeviceInDeviceCapability/subdeviceType"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SubDeviceCapability/targetDeviceType"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//capabilities/SubdeviceInDeviceCapability/targetDeviceType"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//capabilities/ResourceConsumption">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//capabilities/ResourceConsumption/count"/>
@@ -688,7 +701,7 @@
             ecoreFeature="ecore:EReference oaam.ecore#//capabilities/ResourceConsumption/type"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//capabilities/Capabilities"/>
-      <genClasses ecoreClass="oaam.ecore#//capabilities/Subcapability"/>
+      <genClasses ecoreClass="oaam.ecore#//capabilities/Subcapabilities"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Restrictions" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//restrictions">
@@ -709,7 +722,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/inputSynchronicityRestriction"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/connectionRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/connectionTypeRestrictions"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/segregationsRestrictions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/segregationRestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/subrestrictions"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//restrictions/RestrictionsContainerA/timedelayrestrictions"/>
       </genClasses>
@@ -730,9 +743,9 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SignalRestrictionA/signals"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/SubFunctionRestrictionA">
+      <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/SubfunctionRestrictionA">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SubFunctionRestrictionA/subFunctions"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SubfunctionRestrictionA/subfunctions"/>
       </genClasses>
       <genClasses image="false" ecoreClass="oaam.ecore#//restrictions/TaskGroupRestrictionA">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -788,9 +801,9 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/SegregationRestriction/dissimilarTechnology"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/SegregationRestriction/dissimilarLocation"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SegregationRestriction/subFunctionsA"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SegregationRestriction/subfunctionsA"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SegregationRestriction/subFunctionsB"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//restrictions/SegregationRestriction/subfunctionsB"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/SegregationRestriction/dissimilarArea"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//restrictions/SegregationRestriction/dissimilarPowerSource"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -830,80 +843,80 @@
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//restrictions/Subrestrictions"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Mapping" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
-        multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//mapping">
-      <genClasses image="false" ecoreClass="oaam.ecore#//mapping/MappingContainerA">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/deviceAssignments"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/subDeviceAssignments"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/connectionAssignments"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/taskAssignments"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/signalAssignments"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/MappingContainerA/supmapping"/>
+    <nestedGenPackages prefix="Allocations" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
+        ecorePackage="oaam.ecore#//allocations">
+      <genClasses image="false" ecoreClass="oaam.ecore#//allocations/AllocationsContainerA">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/deviceAssignments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/subdeviceAssignments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/connectionAssignments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/taskAssignments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/signalAssignments"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/AllocationsContainerA/suballocations"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/TaskAssignment">
+      <genClasses ecoreClass="oaam.ecore#//allocations/TaskAssignment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/capability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/TaskAssignment/capability"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/task"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/TaskAssignment/task"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/device"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/TaskAssignment/schedule"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/TaskAssignment/device"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/TaskAssignment/schedule"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/SignalAssignment">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignment/segments"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/SignalAssignment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignment/segments"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignment/signal"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignment/signal"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/ConnectionAssignment">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/ConnectionAssignment/segments"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/ConnectionAssignment">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignment/segments"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/ConnectionAssignment/connection"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignment/connection"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/SignalAssignmentSegment">
+      <genClasses ecoreClass="oaam.ecore#//allocations/SignalAssignmentSegment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignmentSegment/capability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/capability"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignmentSegment/device"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/device"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SignalAssignmentSegment/connection"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/connection"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/DeviceAssignment">
+      <genClasses ecoreClass="oaam.ecore#//allocations/DeviceAssignment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/DeviceAssignment/device"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/DeviceAssignment/device"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/DeviceAssignment/location"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/DeviceAssignment/location"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/DeviceAssignment/capability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/DeviceAssignment/capability"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/ConnectionAssignmentSegment">
+      <genClasses ecoreClass="oaam.ecore#//allocations/ConnectionAssignmentSegment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/ConnectionAssignmentSegment/capability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignmentSegment/capability"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/ConnectionAssignmentSegment/location"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignmentSegment/location"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/ConnectionAssignmentSegment/duct"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignmentSegment/duct"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/SubDeviceAssignment">
+      <genClasses ecoreClass="oaam.ecore#//allocations/SubdeviceAssignment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SubDeviceAssignment/capability"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SubdeviceAssignment/capability"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SubDeviceAssignment/subDevice"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SubdeviceAssignment/subdevice"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//mapping/SubDeviceAssignment/targetDevice"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SubdeviceAssignment/targetDevice"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/Mapping"/>
-      <genClasses ecoreClass="oaam.ecore#//mapping/Supmapping"/>
-      <genClasses ecoreClass="oaam.ecore#//mapping/Schedule">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/rate"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/isPeriodic"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/Schedule/priority"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//mapping/Schedule/scheduledTimes"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/Allocations"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/Suballocations"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/Schedule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/Schedule/rate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/Schedule/isPeriodic"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/Schedule/priority"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/Schedule/scheduledTimes"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//mapping/ScheduledTime">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/cycle"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/startTime"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/duration"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//mapping/ScheduledTime/restart"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/ScheduledTime">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/ScheduledTime/cycle"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/ScheduledTime/startTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/ScheduledTime/duration"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/ScheduledTime/restart"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

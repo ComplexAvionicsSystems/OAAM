@@ -302,6 +302,29 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Subfunctions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubfunctionsItemProvider subfunctionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Subfunctions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubfunctionsAdapter() {
+		if (subfunctionsItemProvider == null) {
+			subfunctionsItemProvider = new SubfunctionsItemProvider(this);
+		}
+
+		return subfunctionsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskRedundancy} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,29 +345,6 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		}
 
 		return taskRedundancyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Subfunction} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubfunctionItemProvider subfunctionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Subfunction}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubfunctionAdapter() {
-		if (subfunctionItemProvider == null) {
-			subfunctionItemProvider = new SubfunctionItemProvider(this);
-		}
-
-		return subfunctionItemProvider;
 	}
 
 	/**
@@ -528,7 +528,7 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		if (inputItemProvider != null) inputItemProvider.dispose();
 		if (outputItemProvider != null) outputItemProvider.dispose();
 		if (externalOutputLinkItemProvider != null) externalOutputLinkItemProvider.dispose();
-		if (subfunctionItemProvider != null) subfunctionItemProvider.dispose();
+		if (subfunctionsItemProvider != null) subfunctionsItemProvider.dispose();
 		if (parameterItemProvider != null) parameterItemProvider.dispose();
 	}
 

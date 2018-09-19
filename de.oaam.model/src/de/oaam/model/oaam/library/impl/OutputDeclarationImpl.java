@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.DataTypeA;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
@@ -45,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class OutputDeclarationImpl extends ElementAImpl implements OutputDeclaration {
+public class OutputDeclarationImpl extends OaamBaseElementAImpl implements OutputDeclaration {
 	/**
 	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->

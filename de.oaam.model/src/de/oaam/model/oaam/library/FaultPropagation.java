@@ -3,8 +3,8 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import de.oaam.model.oaam.common.IntegretyStateE;
  * @model
  * @generated
  */
-public interface FaultPropagation extends ElementA {
+public interface FaultPropagation extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Output State</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.common.IntegretyStateE}.

@@ -4,12 +4,12 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.InputDeclaration;
-import de.oaam.model.oaam.library.InternalStateDefinition;
+import de.oaam.model.oaam.library.InternalStateDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
-import de.oaam.model.oaam.library.ParameterDefinition;
+import de.oaam.model.oaam.library.ParameterDeclaration;
 import de.oaam.model.oaam.library.TaskType;
 
 import java.util.Collection;
@@ -44,12 +44,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getTraceLink <em>Trace Link</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getOutputs <em>Outputs</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getOutputDeclarations <em>Output Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInputDeclarations <em>Input Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#isIsDeterministic <em>Is Deterministic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInternalStates <em>Internal States</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInternalStateDeclarations <em>Internal State Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getParameterDeclarations <em>Parameter Declarations</em>}</li>
  * </ul>
  *
  * @generated
@@ -206,24 +206,24 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	protected String traceLink = TRACE_LINK_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference list.
+	 * The cached value of the '{@link #getOutputDeclarations() <em>Output Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutputs()
+	 * @see #getOutputDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OutputDeclaration> outputs;
+	protected EList<OutputDeclaration> outputDeclarations;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
+	 * The cached value of the '{@link #getInputDeclarations() <em>Input Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputs()
+	 * @see #getInputDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InputDeclaration> inputs;
+	protected EList<InputDeclaration> inputDeclarations;
 
 	/**
 	 * The default value of the '{@link #isIsDeterministic() <em>Is Deterministic</em>}' attribute.
@@ -266,24 +266,24 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	protected float preferredExecutionRate = PREFERRED_EXECUTION_RATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInternalStates() <em>Internal States</em>}' containment reference list.
+	 * The cached value of the '{@link #getInternalStateDeclarations() <em>Internal State Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInternalStates()
+	 * @see #getInternalStateDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InternalStateDefinition> internalStates;
+	protected EList<InternalStateDeclaration> internalStateDeclarations;
 
 	/**
-	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
+	 * The cached value of the '{@link #getParameterDeclarations() <em>Parameter Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParameters()
+	 * @see #getParameterDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ParameterDefinition> parameters;
+	protected EList<ParameterDeclaration> parameterDeclarations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -468,11 +468,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OutputDeclaration> getOutputs() {
-		if (outputs == null) {
-			outputs = new EObjectContainmentEList<OutputDeclaration>(OutputDeclaration.class, this, LibraryPackage.TASK_TYPE__OUTPUTS);
+	public EList<OutputDeclaration> getOutputDeclarations() {
+		if (outputDeclarations == null) {
+			outputDeclarations = new EObjectContainmentEList<OutputDeclaration>(OutputDeclaration.class, this, LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS);
 		}
-		return outputs;
+		return outputDeclarations;
 	}
 
 	/**
@@ -480,11 +480,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InputDeclaration> getInputs() {
-		if (inputs == null) {
-			inputs = new EObjectContainmentEList<InputDeclaration>(InputDeclaration.class, this, LibraryPackage.TASK_TYPE__INPUTS);
+	public EList<InputDeclaration> getInputDeclarations() {
+		if (inputDeclarations == null) {
+			inputDeclarations = new EObjectContainmentEList<InputDeclaration>(InputDeclaration.class, this, LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS);
 		}
-		return inputs;
+		return inputDeclarations;
 	}
 
 	/**
@@ -534,11 +534,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InternalStateDefinition> getInternalStates() {
-		if (internalStates == null) {
-			internalStates = new EObjectContainmentEList<InternalStateDefinition>(InternalStateDefinition.class, this, LibraryPackage.TASK_TYPE__INTERNAL_STATES);
+	public EList<InternalStateDeclaration> getInternalStateDeclarations() {
+		if (internalStateDeclarations == null) {
+			internalStateDeclarations = new EObjectContainmentEList<InternalStateDeclaration>(InternalStateDeclaration.class, this, LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
 		}
-		return internalStates;
+		return internalStateDeclarations;
 	}
 
 	/**
@@ -546,11 +546,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ParameterDefinition> getParameters() {
-		if (parameters == null) {
-			parameters = new EObjectContainmentEList<ParameterDefinition>(ParameterDefinition.class, this, LibraryPackage.TASK_TYPE__PARAMETERS);
+	public EList<ParameterDeclaration> getParameterDeclarations() {
+		if (parameterDeclarations == null) {
+			parameterDeclarations = new EObjectContainmentEList<ParameterDeclaration>(ParameterDeclaration.class, this, LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS);
 		}
-		return parameters;
+		return parameterDeclarations;
 	}
 
 	/**
@@ -563,14 +563,14 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 		switch (featureID) {
 			case LibraryPackage.TASK_TYPE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.TASK_TYPE__INPUTS:
-				return ((InternalEList<?>)getInputs()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-				return ((InternalEList<?>)getInternalStates()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
-				return ((InternalEList<?>)getParameters()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+				return ((InternalEList<?>)getOutputDeclarations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+				return ((InternalEList<?>)getInputDeclarations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+				return ((InternalEList<?>)getInternalStateDeclarations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+				return ((InternalEList<?>)getParameterDeclarations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -599,18 +599,18 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return getModifier();
 			case LibraryPackage.TASK_TYPE__TRACE_LINK:
 				return getTraceLink();
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-				return getOutputs();
-			case LibraryPackage.TASK_TYPE__INPUTS:
-				return getInputs();
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+				return getOutputDeclarations();
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+				return getInputDeclarations();
 			case LibraryPackage.TASK_TYPE__IS_DETERMINISTIC:
 				return isIsDeterministic();
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return getPreferredExecutionRate();
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-				return getInternalStates();
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
-				return getParameters();
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+				return getInternalStateDeclarations();
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+				return getParameterDeclarations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -649,13 +649,13 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
 				return;
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-				getOutputs().clear();
-				getOutputs().addAll((Collection<? extends OutputDeclaration>)newValue);
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+				getOutputDeclarations().clear();
+				getOutputDeclarations().addAll((Collection<? extends OutputDeclaration>)newValue);
 				return;
-			case LibraryPackage.TASK_TYPE__INPUTS:
-				getInputs().clear();
-				getInputs().addAll((Collection<? extends InputDeclaration>)newValue);
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+				getInputDeclarations().clear();
+				getInputDeclarations().addAll((Collection<? extends InputDeclaration>)newValue);
 				return;
 			case LibraryPackage.TASK_TYPE__IS_DETERMINISTIC:
 				setIsDeterministic((Boolean)newValue);
@@ -663,13 +663,13 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate((Float)newValue);
 				return;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-				getInternalStates().clear();
-				getInternalStates().addAll((Collection<? extends InternalStateDefinition>)newValue);
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+				getInternalStateDeclarations().clear();
+				getInternalStateDeclarations().addAll((Collection<? extends InternalStateDeclaration>)newValue);
 				return;
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
-				getParameters().clear();
-				getParameters().addAll((Collection<? extends ParameterDefinition>)newValue);
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+				getParameterDeclarations().clear();
+				getParameterDeclarations().addAll((Collection<? extends ParameterDeclaration>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -707,11 +707,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-				getOutputs().clear();
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+				getOutputDeclarations().clear();
 				return;
-			case LibraryPackage.TASK_TYPE__INPUTS:
-				getInputs().clear();
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+				getInputDeclarations().clear();
 				return;
 			case LibraryPackage.TASK_TYPE__IS_DETERMINISTIC:
 				setIsDeterministic(IS_DETERMINISTIC_EDEFAULT);
@@ -719,11 +719,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate(PREFERRED_EXECUTION_RATE_EDEFAULT);
 				return;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-				getInternalStates().clear();
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+				getInternalStateDeclarations().clear();
 				return;
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
-				getParameters().clear();
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+				getParameterDeclarations().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -753,18 +753,18 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.TASK_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-				return outputs != null && !outputs.isEmpty();
-			case LibraryPackage.TASK_TYPE__INPUTS:
-				return inputs != null && !inputs.isEmpty();
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+				return outputDeclarations != null && !outputDeclarations.isEmpty();
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+				return inputDeclarations != null && !inputDeclarations.isEmpty();
 			case LibraryPackage.TASK_TYPE__IS_DETERMINISTIC:
 				return isDeterministic != IS_DETERMINISTIC_EDEFAULT;
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return preferredExecutionRate != PREFERRED_EXECUTION_RATE_EDEFAULT;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-				return internalStates != null && !internalStates.isEmpty();
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
-				return parameters != null && !parameters.isEmpty();
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+				return internalStateDeclarations != null && !internalStateDeclarations.isEmpty();
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+				return parameterDeclarations != null && !parameterDeclarations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -776,16 +776,16 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.TASK_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
-				case LibraryPackage.TASK_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case LibraryPackage.TASK_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case LibraryPackage.TASK_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.TASK_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.TASK_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case LibraryPackage.TASK_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case LibraryPackage.TASK_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.TASK_TYPE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case LibraryPackage.TASK_TYPE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case LibraryPackage.TASK_TYPE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case LibraryPackage.TASK_TYPE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.TASK_TYPE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.TASK_TYPE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case LibraryPackage.TASK_TYPE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case LibraryPackage.TASK_TYPE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -799,16 +799,16 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.TASK_TYPE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.TASK_TYPE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.TASK_TYPE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.TASK_TYPE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.TASK_TYPE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.TASK_TYPE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.TASK_TYPE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.TASK_TYPE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return LibraryPackage.TASK_TYPE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return LibraryPackage.TASK_TYPE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return LibraryPackage.TASK_TYPE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return LibraryPackage.TASK_TYPE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return LibraryPackage.TASK_TYPE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return LibraryPackage.TASK_TYPE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return LibraryPackage.TASK_TYPE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return LibraryPackage.TASK_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A resource is an instance of a resource type which is provided by resource providers and consumed by resource consumers. It is the mandatory precondition for any mapping.
+ * A resource is an instance of a resource type which is provided by resource providers and consumed by resource consumers. It is the mandatory precondition for any allocations.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Resource extends ElementA {
+public interface Resource extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
@@ -34,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionsContainerAItemProvider extends ElementAItemProvider {
+public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -250,7 +250,7 @@ public class FunctionsContainerAItemProvider extends ElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS,
-				 FunctionsFactory.eINSTANCE.createSubfunction()));
+				 FunctionsFactory.eINSTANCE.createSubfunctions()));
 	}
 
 	/**

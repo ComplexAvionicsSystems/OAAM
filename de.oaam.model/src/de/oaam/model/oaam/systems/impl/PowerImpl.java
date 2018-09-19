@@ -4,7 +4,7 @@ package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -658,16 +658,16 @@ public class PowerImpl extends ProvidedOutputAImpl implements Power {
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.POWER__ID: return CommonPackage.ELEMENT_A__ID;
-				case SystemsPackage.POWER__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case SystemsPackage.POWER__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case SystemsPackage.POWER__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case SystemsPackage.POWER__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case SystemsPackage.POWER__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case SystemsPackage.POWER__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case SystemsPackage.POWER__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case SystemsPackage.POWER__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case SystemsPackage.POWER__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case SystemsPackage.POWER__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case SystemsPackage.POWER__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case SystemsPackage.POWER__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case SystemsPackage.POWER__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case SystemsPackage.POWER__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case SystemsPackage.POWER__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -698,16 +698,16 @@ public class PowerImpl extends ProvidedOutputAImpl implements Power {
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return SystemsPackage.POWER__ID;
-				case CommonPackage.ELEMENT_A__NAME: return SystemsPackage.POWER__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return SystemsPackage.POWER__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return SystemsPackage.POWER__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return SystemsPackage.POWER__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return SystemsPackage.POWER__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return SystemsPackage.POWER__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return SystemsPackage.POWER__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return SystemsPackage.POWER__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return SystemsPackage.POWER__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return SystemsPackage.POWER__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return SystemsPackage.POWER__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return SystemsPackage.POWER__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return SystemsPackage.POWER__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return SystemsPackage.POWER__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return SystemsPackage.POWER__TRACE_LINK;
 				default: return -1;
 			}
 		}

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.OutputDeclaration;
@@ -36,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Output extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Output extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->

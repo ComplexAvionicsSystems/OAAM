@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.anatomy;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.LocationType;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
@@ -26,13 +26,14 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.anatomy.Location#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.Location#getPosition <em>Position</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.Location#getDuctOpenings <em>Duct Openings</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.Location#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getLocation()
  * @model
  * @generated
  */
-public interface Location extends ResourceProviderInstanceA, ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Location extends ResourceProviderInstanceA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -97,5 +98,30 @@ public interface Location extends ResourceProviderInstanceA, ElementA, VariantDe
 	 * @generated
 	 */
 	EList<DuctOpening> getDuctOpenings();
+
+	/**
+	 * Returns the value of the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The default internal length of a installation location in [m] from one duct opening to another. This can be precised by specifying duct opening positions in 3d coordinates. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Length</em>' attribute.
+	 * @see #setLength(double)
+	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getLocation_Length()
+	 * @model required="true"
+	 * @generated
+	 */
+	double getLength();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.anatomy.Location#getLength <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Length</em>' attribute.
+	 * @see #getLength()
+	 * @generated
+	 */
+	void setLength(double value);
 
 } // Location

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
@@ -27,7 +27,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface InformationFlow extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface InformationFlow extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>From</b></em>' reference.
 	 * <!-- begin-user-doc -->

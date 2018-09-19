@@ -4,6 +4,10 @@ package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -30,10 +34,6 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.AreaRestriction;
 import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
@@ -49,7 +49,7 @@ import de.oaam.model.oaam.restrictions.RestrictionsFactory;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SegregationRestriction;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
-import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
+import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 import de.oaam.model.oaam.restrictions.Subrestrictions;
 import de.oaam.model.oaam.restrictions.SymmetryTypesE;
 import de.oaam.model.oaam.restrictions.SynchronicityRestriction;
@@ -57,8 +57,8 @@ import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
 import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskSymmetryRestriction;
-
 import de.oaam.model.oaam.restrictions.TimeDelayRestriction;
+
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
 import de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl;
@@ -101,13 +101,6 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subrestrictionsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass deviceRestrictionAEClass = null;
 
 	/**
@@ -136,7 +129,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subFunctionRestrictionAEClass = null;
+	private EClass subfunctionRestrictionAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -234,6 +227,13 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass subrestrictionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum symmetryTypesEEEnum = null;
 
 	/**
@@ -292,7 +292,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theRestrictionsPackage.createPackageContents();
@@ -305,7 +305,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		theHardwarePackage.createPackageContents();
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theRestrictionsPackage.initializePackageContents();
@@ -318,7 +318,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		theHardwarePackage.initializePackageContents();
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theRestrictionsPackage.freeze();
@@ -433,7 +433,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRestrictionsContainerA_SegregationsRestrictions() {
+	public EReference getRestrictionsContainerA_SegregationRestrictions() {
 		return (EReference)restrictionsContainerAEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -462,15 +462,6 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 */
 	public EClass getRestrictions() {
 		return restrictionsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSubrestrictions() {
-		return subrestrictionsEClass;
 	}
 
 	/**
@@ -550,8 +541,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubFunctionRestrictionA() {
-		return subFunctionRestrictionAEClass;
+	public EClass getSubfunctionRestrictionA() {
+		return subfunctionRestrictionAEClass;
 	}
 
 	/**
@@ -559,8 +550,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSubFunctionRestrictionA_SubFunctions() {
-		return (EReference)subFunctionRestrictionAEClass.getEStructuralFeatures().get(0);
+	public EReference getSubfunctionRestrictionA_Subfunctions() {
+		return (EReference)subfunctionRestrictionAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -883,7 +874,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSegregationRestriction_SubFunctionsA() {
+	public EReference getSegregationRestriction_SubfunctionsA() {
 		return (EReference)segregationRestrictionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -892,7 +883,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSegregationRestriction_SubFunctionsB() {
+	public EReference getSegregationRestriction_SubfunctionsB() {
 		return (EReference)segregationRestrictionEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1090,6 +1081,15 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSubrestrictions() {
+		return subrestrictionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSymmetryTypesE() {
 		return symmetryTypesEEEnum;
 	}
@@ -1133,7 +1133,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
-		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS);
+		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
 		createEReference(restrictionsContainerAEClass, RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
 
@@ -1151,8 +1151,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		signalRestrictionAEClass = createEClass(SIGNAL_RESTRICTION_A);
 		createEReference(signalRestrictionAEClass, SIGNAL_RESTRICTION_A__SIGNALS);
 
-		subFunctionRestrictionAEClass = createEClass(SUB_FUNCTION_RESTRICTION_A);
-		createEReference(subFunctionRestrictionAEClass, SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS);
+		subfunctionRestrictionAEClass = createEClass(SUBFUNCTION_RESTRICTION_A);
+		createEReference(subfunctionRestrictionAEClass, SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS);
 
 		taskGroupRestrictionAEClass = createEClass(TASK_GROUP_RESTRICTION_A);
 		createEReference(taskGroupRestrictionAEClass, TASK_GROUP_RESTRICTION_A__TASK_GROUPS);
@@ -1197,8 +1197,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__TASKS_B);
 		createEAttribute(segregationRestrictionEClass, SEGREGATION_RESTRICTION__DISSIMILAR_TECHNOLOGY);
 		createEAttribute(segregationRestrictionEClass, SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION);
-		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A);
-		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B);
+		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__SUBFUNCTIONS_A);
+		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__SUBFUNCTIONS_B);
 		createEAttribute(segregationRestrictionEClass, SEGREGATION_RESTRICTION__DISSIMILAR_AREA);
 		createEAttribute(segregationRestrictionEClass, SEGREGATION_RESTRICTION__DISSIMILAR_POWER_SOURCE);
 		createEReference(segregationRestrictionEClass, SEGREGATION_RESTRICTION__SIGNALS_A);
@@ -1267,69 +1267,69 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		restrictionsContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		restrictionsContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		restrictionsEClass.getESuperTypes().add(this.getRestrictionsContainerA());
 		locationRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		locationRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		locationRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
+		locationRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
 		locationRestrictionEClass.getESuperTypes().add(this.getDeviceRestrictionA());
 		locationRestrictionEClass.getESuperTypes().add(this.getConnectionRestrinctionA());
-		locationRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		locationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		areaRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		areaRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		areaRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
+		areaRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
 		areaRestrictionEClass.getESuperTypes().add(this.getDeviceRestrictionA());
 		areaRestrictionEClass.getESuperTypes().add(this.getConnectionRestrinctionA());
-		areaRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		areaRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		areaRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		areaRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		powerSourceRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		powerSourceRestrictionEClass.getESuperTypes().add(this.getDeviceRestrictionA());
 		powerSourceRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		powerSourceRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
-		powerSourceRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		powerSourceRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
+		powerSourceRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		powerSourceRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		powerSourceRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		deviceRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		deviceRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		deviceRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
-		deviceRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
+		deviceRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		deviceRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		deviceTypeRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		deviceTypeRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		deviceTypeRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
-		deviceTypeRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceTypeRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
+		deviceTypeRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceTypeRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		deviceTypeRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		conectionTypeRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		conectionTypeRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
-		conectionTypeRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		conectionTypeRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
+		conectionTypeRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		conectionTypeRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		conectionTypeRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		connectionRestrictionEClass.getESuperTypes().add(this.getSignalRestrictionA());
-		connectionRestrictionEClass.getESuperTypes().add(this.getSubFunctionRestrictionA());
-		connectionRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionRestrictionEClass.getESuperTypes().add(this.getSubfunctionRestrictionA());
+		connectionRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		connectionRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		connectionRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		segregationRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		segregationRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		segregationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		segregationRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		synchronicityRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		synchronicityRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		synchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		synchronicityRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		synchronicityRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
-		taskAtomicRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskAtomicRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		taskAtomicRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		taskSymmetryRestrictionEClass.getESuperTypes().add(this.getTaskRestrictionA());
-		taskSymmetryRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskSymmetryRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskSymmetryRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		taskSymmetryRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		timeDelayRestrictionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		timeDelayRestrictionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		timeDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		timeDelayRestrictionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subrestrictionsEClass.getESuperTypes().add(this.getRestrictionsContainerA());
@@ -1348,7 +1348,7 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEReference(getRestrictionsContainerA_InputSynchronicityRestriction(), this.getSynchronicityRestriction(), null, "inputSynchronicityRestriction", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_ConnectionRestrictions(), this.getConnectionRestriction(), null, "connectionRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_ConnectionTypeRestrictions(), this.getConectionTypeRestriction(), null, "connectionTypeRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestrictionsContainerA_SegregationsRestrictions(), this.getSegregationRestriction(), null, "segregationsRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestrictionsContainerA_SegregationRestrictions(), this.getSegregationRestriction(), null, "segregationRestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_Subrestrictions(), this.getSubrestrictions(), null, "subrestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestrictionsContainerA_Timedelayrestrictions(), this.getTimeDelayRestriction(), null, "timedelayrestrictions", null, 0, -1, RestrictionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1366,8 +1366,8 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEClass(signalRestrictionAEClass, SignalRestrictionA.class, "SignalRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignalRestrictionA_Signals(), theFunctionsPackage.getSignal(), null, "signals", null, 0, -1, SignalRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(subFunctionRestrictionAEClass, SubFunctionRestrictionA.class, "SubFunctionRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubFunctionRestrictionA_SubFunctions(), theFunctionsPackage.getSubfunction(), null, "subFunctions", null, 0, -1, SubFunctionRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(subfunctionRestrictionAEClass, SubfunctionRestrictionA.class, "SubfunctionRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubfunctionRestrictionA_Subfunctions(), theFunctionsPackage.getSubfunctions(), null, "subfunctions", null, 0, -1, SubfunctionRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskGroupRestrictionAEClass, TaskGroupRestrictionA.class, "TaskGroupRestrictionA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskGroupRestrictionA_TaskGroups(), theFunctionsPackage.getTaskGroup(), null, "taskGroups", null, 0, -1, TaskGroupRestrictionA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1408,12 +1408,12 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		initEReference(getConnectionRestriction_Connections(), theHardwarePackage.getConnection(), null, "connections", null, 0, -1, ConnectionRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(segregationRestrictionEClass, SegregationRestriction.class, "SegregationRestriction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSegregationRestriction_TasksA(), theLibraryPackage.getTaskType(), null, "tasksA", null, 1, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSegregationRestriction_TasksB(), theLibraryPackage.getTaskType(), null, "tasksB", null, 1, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegregationRestriction_TasksA(), theFunctionsPackage.getTask(), null, "tasksA", null, 1, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegregationRestriction_TasksB(), theFunctionsPackage.getTask(), null, "tasksB", null, 1, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSegregationRestriction_DissimilarTechnology(), ecorePackage.getEBoolean(), "dissimilarTechnology", null, 1, 1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSegregationRestriction_DissimilarLocation(), ecorePackage.getEBoolean(), "dissimilarLocation", null, 1, 1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSegregationRestriction_SubFunctionsA(), theFunctionsPackage.getFunctionsContainerA(), null, "subFunctionsA", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSegregationRestriction_SubFunctionsB(), theFunctionsPackage.getFunctionsContainerA(), null, "subFunctionsB", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegregationRestriction_SubfunctionsA(), theFunctionsPackage.getFunctionsContainerA(), null, "subfunctionsA", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegregationRestriction_SubfunctionsB(), theFunctionsPackage.getFunctionsContainerA(), null, "subfunctionsB", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSegregationRestriction_DissimilarArea(), ecorePackage.getEBoolean(), "dissimilarArea", null, 1, 1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSegregationRestriction_DissimilarPowerSource(), ecorePackage.getEBoolean(), "dissimilarPowerSource", null, 1, 1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSegregationRestriction_SignalsA(), theFunctionsPackage.getSignal(), null, "signalsA", null, 0, -1, SegregationRestriction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

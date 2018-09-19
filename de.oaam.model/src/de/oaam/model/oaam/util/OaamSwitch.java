@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.util;
 
 import de.oaam.model.oaam.*;
-
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -70,7 +69,7 @@ public class OaamSwitch<T> extends Switch<T> {
 			case OaamPackage.ARCHITECTURE: {
 				Architecture architecture = (Architecture)theEObject;
 				T result = caseArchitecture(architecture);
-				if (result == null) result = caseElementA(architecture);
+				if (result == null) result = caseOaamBaseElementA(architecture);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -94,17 +93,17 @@ public class OaamSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

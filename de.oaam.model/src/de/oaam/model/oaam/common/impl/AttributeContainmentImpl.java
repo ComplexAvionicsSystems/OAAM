@@ -4,7 +4,7 @@ package de.oaam.model.oaam.common.impl;
 
 import de.oaam.model.oaam.common.AttributeContainment;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -39,7 +39,7 @@ public class AttributeContainmentImpl extends AttributeAImpl implements Attribut
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ElementA> value;
+	protected EList<OaamBaseElementA> value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,9 +65,9 @@ public class AttributeContainmentImpl extends AttributeAImpl implements Attribut
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ElementA> getValue() {
+	public EList<OaamBaseElementA> getValue() {
 		if (value == null) {
-			value = new EObjectContainmentEList<ElementA>(ElementA.class, this, CommonPackage.ATTRIBUTE_CONTAINMENT__VALUE);
+			value = new EObjectContainmentEList<OaamBaseElementA>(OaamBaseElementA.class, this, CommonPackage.ATTRIBUTE_CONTAINMENT__VALUE);
 		}
 		return value;
 	}
@@ -111,7 +111,7 @@ public class AttributeContainmentImpl extends AttributeAImpl implements Attribut
 		switch (featureID) {
 			case CommonPackage.ATTRIBUTE_CONTAINMENT__VALUE:
 				getValue().clear();
-				getValue().addAll((Collection<? extends ElementA>)newValue);
+				getValue().addAll((Collection<? extends OaamBaseElementA>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

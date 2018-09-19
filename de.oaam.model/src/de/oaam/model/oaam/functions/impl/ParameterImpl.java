@@ -2,12 +2,11 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Parameter;
 
-import de.oaam.model.oaam.library.ParameterDefinition;
-
+import de.oaam.model.oaam.library.ParameterDeclaration;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -29,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ParameterImpl extends ElementAImpl implements Parameter {
+public class ParameterImpl extends OaamBaseElementAImpl implements Parameter {
 	/**
 	 * The cached value of the '{@link #getDefinition() <em>Definition</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -38,7 +37,7 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	 * @generated
 	 * @ordered
 	 */
-	protected ParameterDefinition definition;
+	protected ParameterDeclaration definition;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -84,10 +83,10 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterDefinition getDefinition() {
+	public ParameterDeclaration getDefinition() {
 		if (definition != null && definition.eIsProxy()) {
 			InternalEObject oldDefinition = (InternalEObject)definition;
-			definition = (ParameterDefinition)eResolveProxy(oldDefinition);
+			definition = (ParameterDeclaration)eResolveProxy(oldDefinition);
 			if (definition != oldDefinition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.PARAMETER__DEFINITION, oldDefinition, definition));
@@ -101,7 +100,7 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterDefinition basicGetDefinition() {
+	public ParameterDeclaration basicGetDefinition() {
 		return definition;
 	}
 
@@ -110,8 +109,8 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefinition(ParameterDefinition newDefinition) {
-		ParameterDefinition oldDefinition = definition;
+	public void setDefinition(ParameterDeclaration newDefinition) {
+		ParameterDeclaration oldDefinition = definition;
 		definition = newDefinition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.PARAMETER__DEFINITION, oldDefinition, definition));
@@ -164,7 +163,7 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case FunctionsPackage.PARAMETER__DEFINITION:
-				setDefinition((ParameterDefinition)newValue);
+				setDefinition((ParameterDeclaration)newValue);
 				return;
 			case FunctionsPackage.PARAMETER__VALUE:
 				setValue((String)newValue);
@@ -182,7 +181,7 @@ public class ParameterImpl extends ElementAImpl implements Parameter {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case FunctionsPackage.PARAMETER__DEFINITION:
-				setDefinition((ParameterDefinition)null);
+				setDefinition((ParameterDeclaration)null);
 				return;
 			case FunctionsPackage.PARAMETER__VALUE:
 				setValue(VALUE_EDEFAULT);

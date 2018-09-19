@@ -4,6 +4,8 @@ package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -35,11 +37,6 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -170,7 +167,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theHardwarePackage.createPackageContents();
@@ -183,7 +180,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theHardwarePackage.initializePackageContents();
@@ -196,7 +193,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theHardwarePackage.freeze();
@@ -284,7 +281,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDevice_SubDevices() {
+	public EReference getDevice_Subdevices() {
 		return (EReference)deviceEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -329,8 +326,26 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_EndPoints() {
+	public EReference getConnection_StartingPoints() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_EndPoints() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConnection_Masters() {
+		return (EReference)connectionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -424,13 +439,15 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		deviceEClass = createEClass(DEVICE);
 		createEReference(deviceEClass, DEVICE__TYPE);
 		createEReference(deviceEClass, DEVICE__IOS);
-		createEReference(deviceEClass, DEVICE__SUB_DEVICES);
+		createEReference(deviceEClass, DEVICE__SUBDEVICES);
 		createEReference(deviceEClass, DEVICE__LOCATION_BINDING);
 		createEReference(deviceEClass, DEVICE__POWER_SOURCES);
 
 		connectionEClass = createEClass(CONNECTION);
 		createEReference(connectionEClass, CONNECTION__TYPE);
+		createEReference(connectionEClass, CONNECTION__STARTING_POINTS);
 		createEReference(connectionEClass, CONNECTION__END_POINTS);
+		createEReference(connectionEClass, CONNECTION__MASTERS);
 
 		ioEClass = createEClass(IO);
 		createEReference(ioEClass, IO__DECLARATION);
@@ -477,19 +494,19 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		deviceEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		deviceEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		connectionEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		connectionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		connectionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		connectionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		ioEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ioEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ioEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		ioEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		deviceSymmetryEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		deviceSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		hardwareEClass.getESuperTypes().add(this.getHardwareContainerA());
@@ -509,13 +526,15 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		initEClass(deviceEClass, Device.class, "Device", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDevice_Type(), theLibraryPackage.getDeviceType(), null, "type", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_Ios(), this.getIo(), null, "ios", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDevice_SubDevices(), this.getDevice(), null, "subDevices", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDevice_Subdevices(), this.getDevice(), null, "subdevices", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_LocationBinding(), theAnatomyPackage.getLocation(), null, "locationBinding", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_PowerSources(), theLibraryPackage.getPowerSource(), null, "powerSources", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnection_Type(), theLibraryPackage.getConnectionType(), null, "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_StartingPoints(), this.getIo(), null, "startingPoints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_EndPoints(), this.getIo(), null, "endPoints", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnection_Masters(), this.getIo(), null, "masters", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ioEClass, Io.class, "Io", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIo_Declaration(), theLibraryPackage.getIoDeclaration(), null, "declaration", null, 1, 1, Io.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

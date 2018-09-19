@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions.util;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -128,16 +128,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createExternalOutputLinkAdapter();
 			}
 			@Override
-			public Adapter caseSubfunction(Subfunction object) {
-				return createSubfunctionAdapter();
+			public Adapter caseSubfunctions(Subfunctions object) {
+				return createSubfunctionsAdapter();
 			}
 			@Override
 			public Adapter caseParameter(Parameter object) {
 				return createParameterAdapter();
 			}
 			@Override
-			public Adapter caseElementA(ElementA object) {
-				return createElementAAdapter();
+			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
+				return createOaamBaseElementAAdapter();
 			}
 			@Override
 			public Adapter caseVariantDependentElementA(VariantDependentElementA object) {
@@ -368,16 +368,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.Subfunction <em>Subfunction</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.Subfunctions <em>Subfunctions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.functions.Subfunction
+	 * @see de.oaam.model.oaam.functions.Subfunctions
 	 * @generated
 	 */
-	public Adapter createSubfunctionAdapter() {
+	public Adapter createSubfunctionsAdapter() {
 		return null;
 	}
 
@@ -396,16 +396,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
 	 * @generated
 	 */
-	public Adapter createElementAAdapter() {
+	public Adapter createOaamBaseElementAAdapter() {
 		return null;
 	}
 

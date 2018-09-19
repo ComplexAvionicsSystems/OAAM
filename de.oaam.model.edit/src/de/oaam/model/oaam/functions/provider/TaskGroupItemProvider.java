@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.TaskGroup;
 
@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -33,7 +32,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskGroupItemProvider extends ElementAItemProvider {
+public class TaskGroupItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -57,7 +56,6 @@ public class TaskGroupItemProvider extends ElementAItemProvider {
 
 			addVariantsPropertyDescriptor(object);
 			addTasksPropertyDescriptor(object);
-			addIsAtomicPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,28 +100,6 @@ public class TaskGroupItemProvider extends ElementAItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Atomic feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsAtomicPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TaskGroup_isAtomic_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TaskGroup_isAtomic_feature", "_UI_TaskGroup_type"),
-				 FunctionsPackage.Literals.TASK_GROUP__IS_ATOMIC,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -196,9 +172,6 @@ public class TaskGroupItemProvider extends ElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TaskGroup.class)) {
-			case FunctionsPackage.TASK_GROUP__IS_ATOMIC:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case FunctionsPackage.TASK_GROUP__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.capabilities;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -18,11 +18,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getFunctionCapabilties <em>Function Capabilties</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalCapabilities <em>Signal Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceCapabilities <em>Device Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubDeviceCapabilities <em>Sub Device Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionCapabilities <em>Connection Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getTaskOnDeviceCapabilities <em>Task On Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalOnConnectionOrDeviceCapabilities <em>Signal On Connection Or Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceInLocationCapabilities <em>Device In Location Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubdeviceInDeviceCapabilities <em>Subdevice In Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubcapabilities <em>Subcapabilities</em>}</li>
  * </ul>
  *
@@ -30,85 +30,85 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface CapabilitiesContainerA extends ElementA {
+public interface CapabilitiesContainerA extends OaamBaseElementA {
 	/**
-	 * Returns the value of the '<em><b>Function Capabilties</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.TaskCapability}.
+	 * Returns the value of the '<em><b>Task On Device Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All function capabilities.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Function Capabilties</em>' containment reference list.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_FunctionCapabilties()
+	 * @return the value of the '<em>Task On Device Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_TaskOnDeviceCapabilities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TaskCapability> getFunctionCapabilties();
+	EList<TaskOnDeviceCapability> getTaskOnDeviceCapabilities();
 
 	/**
-	 * Returns the value of the '<em><b>Signal Capabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SignalCapability}.
+	 * Returns the value of the '<em><b>Signal On Connection Or Device Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All signal capabilities.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Signal Capabilities</em>' containment reference list.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SignalCapabilities()
+	 * @return the value of the '<em>Signal On Connection Or Device Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SignalOnConnectionOrDeviceCapabilities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SignalCapability> getSignalCapabilities();
+	EList<SignalOnConnectionOrDeviceCapability> getSignalOnConnectionOrDeviceCapabilities();
 
 	/**
-	 * Returns the value of the '<em><b>Device Capabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.DeviceCapability}.
+	 * Returns the value of the '<em><b>Device In Location Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All device capabilities.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Device Capabilities</em>' containment reference list.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_DeviceCapabilities()
+	 * @return the value of the '<em>Device In Location Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_DeviceInLocationCapabilities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DeviceCapability> getDeviceCapabilities();
+	EList<DeviceInLocationCapability> getDeviceInLocationCapabilities();
 
 	/**
-	 * Returns the value of the '<em><b>Sub Device Capabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SubDeviceCapability}.
+	 * Returns the value of the '<em><b>Subdevice In Device Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All sub device capabilities.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Sub Device Capabilities</em>' containment reference list.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SubDeviceCapabilities()
+	 * @return the value of the '<em>Subdevice In Device Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SubdeviceInDeviceCapabilities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SubDeviceCapability> getSubDeviceCapabilities();
+	EList<SubdeviceInDeviceCapability> getSubdeviceInDeviceCapabilities();
 
 	/**
-	 * Returns the value of the '<em><b>Connection Capabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.ConnectionCapability}.
+	 * Returns the value of the '<em><b>Connection In Duct Or Location Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All connection capabilities.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Connection Capabilities</em>' containment reference list.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_ConnectionCapabilities()
+	 * @return the value of the '<em>Connection In Duct Or Location Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ConnectionCapability> getConnectionCapabilities();
+	EList<ConnectionInDuctOrLocationCapability> getConnectionInDuctOrLocationCapabilities();
 
 	/**
 	 * Returns the value of the '<em><b>Subcapabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.Subcapability}.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.Subcapabilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -119,6 +119,6 @@ public interface CapabilitiesContainerA extends ElementA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Subcapability> getSubcapabilities();
+	EList<Subcapabilities> getSubcapabilities();
 
 } // CapabilitiesContainerA

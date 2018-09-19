@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface ScenarioContainerA extends ElementA {
+public interface ScenarioContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.scenario.ParameterA}.

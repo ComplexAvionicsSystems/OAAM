@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.library.DeviceType#getIos <em>Ios</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.DeviceType#getIoDeclarations <em>Io Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#isIsSubdevice <em>Is Subdevice</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#isCanHaveSubdevices <em>Can Have Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getMtbf <em>Mtbf</em>}</li>
@@ -32,21 +32,21 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceType extends ResourceConsumerA, ResourceProviderA, ElementA {
+public interface DeviceType extends ResourceConsumerA, ResourceProviderA, OaamBaseElementA {
 	/**
-	 * Returns the value of the '<em><b>Ios</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Io Declarations</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.IoDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A device can declare certain resources to be I/Os. I/Os of a device can be used to connect physical connections
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ios</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getDeviceType_Ios()
+	 * @return the value of the '<em>Io Declarations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getDeviceType_IoDeclarations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IoDeclaration> getIos();
+	EList<IoDeclaration> getIoDeclarations();
 
 	/**
 	 * Returns the value of the '<em><b>Is Subdevice</b></em>' attribute.

@@ -2,14 +2,14 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.ExternalTaskLink;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
-import de.oaam.model.oaam.functions.Subfunction;
+import de.oaam.model.oaam.functions.Subfunctions;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
 import de.oaam.model.oaam.functions.TaskRedundancy;
@@ -60,7 +60,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class FunctionsContainerAImpl extends ElementAImpl implements FunctionsContainerA {
+public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl implements FunctionsContainerA {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -189,7 +189,7 @@ public abstract class FunctionsContainerAImpl extends ElementAImpl implements Fu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Subfunction> subfunctions;
+	protected EList<Subfunctions> subfunctions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -356,9 +356,9 @@ public abstract class FunctionsContainerAImpl extends ElementAImpl implements Fu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subfunction> getSubfunctions() {
+	public EList<Subfunctions> getSubfunctions() {
 		if (subfunctions == null) {
-			subfunctions = new EObjectContainmentEList<Subfunction>(Subfunction.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS);
+			subfunctions = new EObjectContainmentEList<Subfunctions>(Subfunctions.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS);
 		}
 		return subfunctions;
 	}
@@ -485,7 +485,7 @@ public abstract class FunctionsContainerAImpl extends ElementAImpl implements Fu
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				getSubfunctions().clear();
-				getSubfunctions().addAll((Collection<? extends Subfunction>)newValue);
+				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -2,8 +2,8 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
-import de.oaam.model.oaam.library.ParameterDefinition;
+import de.oaam.model.oaam.common.OaamBaseElementA;
+import de.oaam.model.oaam.library.ParameterDeclaration;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +26,7 @@ import de.oaam.model.oaam.library.ParameterDefinition;
  * @model
  * @generated
  */
-public interface Parameter extends ElementA {
+public interface Parameter extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Definition</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -35,12 +35,12 @@ public interface Parameter extends ElementA {
 	 * Reference to the parameter definition of the referenced tasks type.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Definition</em>' reference.
-	 * @see #setDefinition(ParameterDefinition)
+	 * @see #setDefinition(ParameterDeclaration)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getParameter_Definition()
 	 * @model required="true"
 	 * @generated
 	 */
-	ParameterDefinition getDefinition();
+	ParameterDeclaration getDefinition();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Parameter#getDefinition <em>Definition</em>}' reference.
@@ -50,7 +50,7 @@ public interface Parameter extends ElementA {
 	 * @see #getDefinition()
 	 * @generated
 	 */
-	void setDefinition(ParameterDefinition value);
+	void setDefinition(ParameterDeclaration value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

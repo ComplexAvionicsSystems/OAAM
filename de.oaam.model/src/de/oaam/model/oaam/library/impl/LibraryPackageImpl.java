@@ -4,6 +4,8 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -39,7 +41,7 @@ import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.FunctionInputState;
 import de.oaam.model.oaam.library.FunctionInputTrigger;
 import de.oaam.model.oaam.library.InputDeclaration;
-import de.oaam.model.oaam.library.InternalStateDefinition;
+import de.oaam.model.oaam.library.InternalStateDeclaration;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoDirectionE;
 import de.oaam.model.oaam.library.IoGroup;
@@ -50,11 +52,11 @@ import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
 import de.oaam.model.oaam.library.OutputDeclaration;
 import de.oaam.model.oaam.library.OutputTrigger;
-import de.oaam.model.oaam.library.ParameterDefinition;
+import de.oaam.model.oaam.library.ParameterDeclaration;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceAlternatives;
-import de.oaam.model.oaam.library.ResourceBundles;
+import de.oaam.model.oaam.library.ResourceBundle;
 import de.oaam.model.oaam.library.ResourceConsumerA;
 import de.oaam.model.oaam.library.ResourceGroup;
 import de.oaam.model.oaam.library.ResourceLink;
@@ -70,11 +72,6 @@ import de.oaam.model.oaam.library.Sublibrary;
 import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -156,7 +153,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resourceBundlesEClass = null;
+	private EClass resourceBundleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -366,14 +363,14 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass internalStateDefinitionEClass = null;
+	private EClass internalStateDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterDefinitionEClass = null;
+	private EClass parameterDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -452,7 +449,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLibraryPackage.createPackageContents();
@@ -465,7 +462,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theLibraryPackage.initializePackageContents();
@@ -478,7 +475,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theLibraryPackage.freeze();
@@ -611,7 +608,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLibraryContainerA_RessourceBundles() {
+	public EReference getLibraryContainerA_ResourceBundles() {
 		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -719,7 +716,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLibraryContainerA_RouteTypes() {
+	public EReference getLibraryContainerA_DuctTypes() {
 		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -737,8 +734,17 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLibraryContainerA_Sublibraries() {
+	public EReference getLibraryContainerA_PowerSources() {
 		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLibraryContainerA_Sublibraries() {
+		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -755,7 +761,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_IsConsumed() {
+	public EAttribute getResourceType_Unit() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -764,7 +770,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_IsDistinguishable() {
+	public EAttribute getResourceType_IsConsumed() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -773,7 +779,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_IsPropagated() {
+	public EAttribute getResourceType_IsDistinguishable() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -782,7 +788,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_Direction() {
+	public EAttribute getResourceType_IsPropagated() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -791,7 +797,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_IsIo() {
+	public EAttribute getResourceType_Direction() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -800,7 +806,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceType_IsConfigurable() {
+	public EAttribute getResourceType_IsIo() {
 		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -809,8 +815,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceType_PropagetedResources() {
-		return (EReference)resourceTypeEClass.getEStructuralFeatures().get(6);
+	public EAttribute getResourceType_IsConfigurable() {
+		return (EAttribute)resourceTypeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -818,7 +824,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceType_AllowedModifiers() {
+	public EReference getResourceType_PropagetedResources() {
 		return (EReference)resourceTypeEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -827,8 +833,17 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceType_Alternatives() {
+	public EReference getResourceType_AllowedModifiers() {
 		return (EReference)resourceTypeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResourceType_Alternatives() {
+		return (EReference)resourceTypeEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -890,8 +905,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResourceBundles() {
-		return resourceBundlesEClass;
+	public EClass getResourceBundle() {
+		return resourceBundleEClass;
 	}
 
 	/**
@@ -899,8 +914,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResourceBundles_Resources() {
-		return (EReference)resourceBundlesEClass.getEStructuralFeatures().get(0);
+	public EReference getResourceBundle_Resources() {
+		return (EReference)resourceBundleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -908,8 +923,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceBundles_Mtbf() {
-		return (EAttribute)resourceBundlesEClass.getEStructuralFeatures().get(1);
+	public EAttribute getResourceBundle_Mtbf() {
+		return (EAttribute)resourceBundleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -917,8 +932,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceBundles_Cost() {
-		return (EAttribute)resourceBundlesEClass.getEStructuralFeatures().get(2);
+	public EAttribute getResourceBundle_Cost() {
+		return (EAttribute)resourceBundleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -926,8 +941,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceBundles_Mass() {
-		return (EAttribute)resourceBundlesEClass.getEStructuralFeatures().get(3);
+	public EAttribute getResourceBundle_Mass() {
+		return (EAttribute)resourceBundleEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -944,7 +959,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskType_Outputs() {
+	public EReference getTaskType_OutputDeclarations() {
 		return (EReference)taskTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -953,7 +968,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskType_Inputs() {
+	public EReference getTaskType_InputDeclarations() {
 		return (EReference)taskTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -980,7 +995,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskType_InternalStates() {
+	public EReference getTaskType_InternalStateDeclarations() {
 		return (EReference)taskTypeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -989,7 +1004,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskType_Parameters() {
+	public EReference getTaskType_ParameterDeclarations() {
 		return (EReference)taskTypeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1016,7 +1031,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeviceType_Ios() {
+	public EReference getDeviceType_IoDeclarations() {
 		return (EReference)deviceTypeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1115,7 +1130,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionType_WireType() {
+	public EReference getConnectionType_WireTypes() {
 		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1142,7 +1157,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_NSources() {
+	public EAttribute getConnectionType_NStartingPoints() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1151,8 +1166,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_NTagets() {
-		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(6);
+	public EReference getConnectionType_StartingPointResourceTypes() {
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1160,7 +1175,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_NJoints() {
+	public EAttribute getConnectionType_NEndPoints() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -1169,8 +1184,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_MaxJointBranches() {
-		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(8);
+	public EReference getConnectionType_EndPointResourceTypes() {
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1178,7 +1193,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_MaxInterfaceToJointDistance() {
+	public EAttribute getConnectionType_NJoints() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -1187,8 +1202,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionType_SwitchTypes() {
-		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(10);
+	public EAttribute getConnectionType_MaxJointBranches() {
+		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1196,7 +1211,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_IsSwitched() {
+	public EAttribute getConnectionType_MaxInterfaceToJointDistance() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1205,8 +1220,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_DirectConnectionsAllowed() {
-		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(12);
+	public EReference getConnectionType_SwitchTypes() {
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1214,7 +1229,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_MaxLength() {
+	public EAttribute getConnectionType_IsSwitched() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -1223,8 +1238,35 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConnectionType_IsUnidirectional() {
+	public EAttribute getConnectionType_DirectConnectionsAllowed() {
 		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConnectionType_MaxLength() {
+		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConnectionType_IsUnidirectional() {
+		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConnectionType_RequiresMaster() {
+		return (EAttribute)connectionTypeEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -1250,7 +1292,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLocationType_DuctOpenings() {
+	public EReference getLocationType_DuctOpeningDeclarations() {
 		return (EReference)locationTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1880,8 +1922,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInternalStateDefinition() {
-		return internalStateDefinitionEClass;
+	public EClass getInternalStateDeclaration() {
+		return internalStateDeclarationEClass;
 	}
 
 	/**
@@ -1889,8 +1931,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInternalStateDefinition_Type() {
-		return (EReference)internalStateDefinitionEClass.getEStructuralFeatures().get(0);
+	public EReference getInternalStateDeclaration_Type() {
+		return (EReference)internalStateDeclarationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1898,8 +1940,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterDefinition() {
-		return parameterDefinitionEClass;
+	public EClass getParameterDeclaration() {
+		return parameterDeclarationEClass;
 	}
 
 	/**
@@ -1907,8 +1949,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterDefinition_Type() {
-		return (EReference)parameterDefinitionEClass.getEStructuralFeatures().get(0);
+	public EReference getParameterDeclaration_Type() {
+		return (EReference)parameterDeclarationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1982,7 +2024,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		libraryContainerAEClass = createEClass(LIBRARY_CONTAINER_A);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__DATA_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__RESOURCE_TYPES);
-		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__RESOURCE_BUNDLES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__TASK_TYPES);
@@ -1994,11 +2036,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__CONNECTION_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__WIRE_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__LOCATION_TYPES);
-		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__ROUTE_TYPES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__DUCT_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__POWER_SOURCES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__SUBLIBRARIES);
 
 		resourceTypeEClass = createEClass(RESOURCE_TYPE);
+		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__UNIT);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__IS_CONSUMED);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__IS_DISTINGUISHABLE);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__IS_PROPAGATED);
@@ -2017,24 +2061,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		resourceAlternativesEClass = createEClass(RESOURCE_ALTERNATIVES);
 		createEReference(resourceAlternativesEClass, RESOURCE_ALTERNATIVES__RESOURCES);
 
-		resourceBundlesEClass = createEClass(RESOURCE_BUNDLES);
-		createEReference(resourceBundlesEClass, RESOURCE_BUNDLES__RESOURCES);
-		createEAttribute(resourceBundlesEClass, RESOURCE_BUNDLES__MTBF);
-		createEAttribute(resourceBundlesEClass, RESOURCE_BUNDLES__COST);
-		createEAttribute(resourceBundlesEClass, RESOURCE_BUNDLES__MASS);
+		resourceBundleEClass = createEClass(RESOURCE_BUNDLE);
+		createEReference(resourceBundleEClass, RESOURCE_BUNDLE__RESOURCES);
+		createEAttribute(resourceBundleEClass, RESOURCE_BUNDLE__MTBF);
+		createEAttribute(resourceBundleEClass, RESOURCE_BUNDLE__COST);
+		createEAttribute(resourceBundleEClass, RESOURCE_BUNDLE__MASS);
 
 		taskTypeEClass = createEClass(TASK_TYPE);
-		createEReference(taskTypeEClass, TASK_TYPE__OUTPUTS);
-		createEReference(taskTypeEClass, TASK_TYPE__INPUTS);
+		createEReference(taskTypeEClass, TASK_TYPE__OUTPUT_DECLARATIONS);
+		createEReference(taskTypeEClass, TASK_TYPE__INPUT_DECLARATIONS);
 		createEAttribute(taskTypeEClass, TASK_TYPE__IS_DETERMINISTIC);
 		createEAttribute(taskTypeEClass, TASK_TYPE__PREFERRED_EXECUTION_RATE);
-		createEReference(taskTypeEClass, TASK_TYPE__INTERNAL_STATES);
-		createEReference(taskTypeEClass, TASK_TYPE__PARAMETERS);
+		createEReference(taskTypeEClass, TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
+		createEReference(taskTypeEClass, TASK_TYPE__PARAMETER_DECLARATIONS);
 
 		signalTypeEClass = createEClass(SIGNAL_TYPE);
 
 		deviceTypeEClass = createEClass(DEVICE_TYPE);
-		createEReference(deviceTypeEClass, DEVICE_TYPE__IOS);
+		createEReference(deviceTypeEClass, DEVICE_TYPE__IO_DECLARATIONS);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__IS_SUBDEVICE);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__CAN_HAVE_SUBDEVICES);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__MTBF);
@@ -2046,11 +2090,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		connectionTypeEClass = createEClass(CONNECTION_TYPE);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__IS_INFORMATION);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__IS_POWER);
-		createEReference(connectionTypeEClass, CONNECTION_TYPE__WIRE_TYPE);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__WIRE_TYPES);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__IS_WIRELESS);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__ALLOWS_CIRCLES);
-		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__NSOURCES);
-		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__NTAGETS);
+		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__NSTARTING_POINTS);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES);
+		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__NEND_POINTS);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__END_POINT_RESOURCE_TYPES);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__NJOINTS);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__MAX_JOINT_BRANCHES);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__MAX_INTERFACE_TO_JOINT_DISTANCE);
@@ -2059,10 +2105,11 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__DIRECT_CONNECTIONS_ALLOWED);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__MAX_LENGTH);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__IS_UNIDIRECTIONAL);
+		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__REQUIRES_MASTER);
 
 		locationTypeEClass = createEClass(LOCATION_TYPE);
 		createEAttribute(locationTypeEClass, LOCATION_TYPE__IS_JOINT);
-		createEReference(locationTypeEClass, LOCATION_TYPE__DUCT_OPENINGS);
+		createEReference(locationTypeEClass, LOCATION_TYPE__DUCT_OPENING_DECLARATIONS);
 
 		ductTypeEClass = createEClass(DUCT_TYPE);
 
@@ -2157,11 +2204,11 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		functionInputTriggerEClass = createEClass(FUNCTION_INPUT_TRIGGER);
 		createEReference(functionInputTriggerEClass, FUNCTION_INPUT_TRIGGER__INPUT);
 
-		internalStateDefinitionEClass = createEClass(INTERNAL_STATE_DEFINITION);
-		createEReference(internalStateDefinitionEClass, INTERNAL_STATE_DEFINITION__TYPE);
+		internalStateDeclarationEClass = createEClass(INTERNAL_STATE_DECLARATION);
+		createEReference(internalStateDeclarationEClass, INTERNAL_STATE_DECLARATION__TYPE);
 
-		parameterDefinitionEClass = createEClass(PARAMETER_DEFINITION);
-		createEReference(parameterDefinitionEClass, PARAMETER_DEFINITION__TYPE);
+		parameterDeclarationEClass = createEClass(PARAMETER_DECLARATION);
+		createEReference(parameterDeclarationEClass, PARAMETER_DECLARATION__TYPE);
 
 		// Create enums
 		ioDirectionEEEnum = createEEnum(IO_DIRECTION_E);
@@ -2200,55 +2247,55 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		libraryContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		libraryContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
-		resourceTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceAlternativesEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceBundlesEClass.getESuperTypes().add(this.getResourceConsumerA());
-		resourceBundlesEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		resourceTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceAlternativesEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceBundleEClass.getESuperTypes().add(this.getResourceConsumerA());
+		resourceBundleEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
-		taskTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		taskTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		signalTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
-		signalTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		signalTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
 		deviceTypeEClass.getESuperTypes().add(this.getResourceProviderA());
-		deviceTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		deviceTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		connectionTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		connectionTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
-		connectionTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		connectionTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationTypeEClass.getESuperTypes().add(this.getResourceProviderA());
-		locationTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ductTypeEClass.getESuperTypes().add(this.getResourceProviderA());
-		ductTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		wireTypeEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		inputDeclarationEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		outputDeclarationEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		ioDeclarationEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		ductOpeningDeclarationEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceGroupEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		deviceTypeSymmetryEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		ioGroupEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		attributeDefinitionEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		faultPropagationEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ductTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		wireTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		inputDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		outputDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		ioDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		ductOpeningDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceGroupEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		deviceTypeSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		ioGroupEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		attributeDefinitionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		faultPropagationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
-		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		powerSourceEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceLinkEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceTypeModifierEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceTypeModifierLevelEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		powerSourceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceLinkEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceTypeModifierEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceTypeModifierLevelEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceTypeModifierLevelEClass.getESuperTypes().add(this.getResourceConsumerA());
-		resourceTypeModifierReferenceEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		taskTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		deviceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		resourceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		resourceTypeModifierReferenceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		deviceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		resourceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		libraryEClass.getESuperTypes().add(this.getLibraryContainerA());
 		sublibraryEClass.getESuperTypes().add(this.getLibraryContainerA());
-		outputTriggerEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		outputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		functionInputTriggerEClass.getESuperTypes().add(theCommonPackage.getBoolA());
-		functionInputTriggerEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		internalStateDefinitionEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		parameterDefinitionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		functionInputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		internalStateDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		parameterDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(resourceConsumerAEClass, ResourceConsumerA.class, "ResourceConsumerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2256,7 +2303,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getResourceConsumerA_ConsumedGroups(), this.getResourceGroup(), null, "consumedGroups", null, 0, -1, ResourceConsumerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceProviderAEClass, ResourceProviderA.class, "ResourceProviderA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceProviderA_ProvidedBundles(), this.getResourceBundles(), null, "providedBundles", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceProviderA_ProvidedBundles(), this.getResourceBundle(), null, "providedBundles", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceProviderA_PossibleResourceProvisions(), this.getResourceType(), null, "possibleResourceProvisions", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceProviderA_ProvidedGroups(), this.getResourceGroup(), null, "providedGroups", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceProviderA_ResourceLinks(), this.getResourceLink(), null, "resourceLinks", null, 0, -1, ResourceProviderA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2267,7 +2314,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(libraryContainerAEClass, LibraryContainerA.class, "LibraryContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLibraryContainerA_DataTypes(), theCommonPackage.getDataTypeA(), null, "dataTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_ResourceTypes(), this.getResourceType(), null, "resourceTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLibraryContainerA_RessourceBundles(), this.getResourceBundles(), null, "ressourceBundles", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_ResourceBundles(), this.getResourceBundle(), null, "resourceBundles", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_ResourceModifiers(), this.getResourceTypeModifier(), null, "resourceModifiers", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_ResourceTypeDissimilarities(), this.getResourceTypeDissimilarity(), null, "resourceTypeDissimilarities", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_TaskTypes(), this.getTaskType(), null, "taskTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2279,11 +2326,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getLibraryContainerA_ConnectionTypes(), this.getConnectionType(), null, "connectionTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_WireTypes(), this.getWireType(), null, "wireTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_LocationTypes(), this.getLocationType(), null, "locationTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLibraryContainerA_RouteTypes(), this.getDuctType(), null, "routeTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_DuctTypes(), this.getDuctType(), null, "ductTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_GenericAttributes(), this.getAttributeDefinition(), null, "genericAttributes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_PowerSources(), this.getPowerSource(), null, "powerSources", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_Sublibraries(), this.getSublibrary(), null, "sublibraries", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceTypeEClass, ResourceType.class, "ResourceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getResourceType_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceType_IsConsumed(), ecorePackage.getEBoolean(), "isConsumed", "true", 1, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceType_IsDistinguishable(), ecorePackage.getEBoolean(), "isDistinguishable", null, 1, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceType_IsPropagated(), ecorePackage.getEBoolean(), "isPropagated", null, 1, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2302,24 +2351,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(resourceAlternativesEClass, ResourceAlternatives.class, "ResourceAlternatives", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceAlternatives_Resources(), this.getResource(), null, "resources", null, 1, -1, ResourceAlternatives.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resourceBundlesEClass, ResourceBundles.class, "ResourceBundles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResourceBundles_Resources(), this.getResource(), null, "resources", null, 0, -1, ResourceBundles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceBundles_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, ResourceBundles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceBundles_Cost(), ecorePackage.getEDouble(), "cost", null, 1, 1, ResourceBundles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceBundles_Mass(), ecorePackage.getEDouble(), "mass", null, 1, 1, ResourceBundles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(resourceBundleEClass, ResourceBundle.class, "ResourceBundle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResourceBundle_Resources(), this.getResource(), null, "resources", null, 0, -1, ResourceBundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResourceBundle_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, ResourceBundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResourceBundle_Cost(), ecorePackage.getEDouble(), "cost", null, 1, 1, ResourceBundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResourceBundle_Mass(), ecorePackage.getEDouble(), "mass", null, 1, 1, ResourceBundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskTypeEClass, TaskType.class, "TaskType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskType_Outputs(), this.getOutputDeclaration(), null, "outputs", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskType_Inputs(), this.getInputDeclaration(), null, "inputs", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_OutputDeclarations(), this.getOutputDeclaration(), null, "outputDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_InputDeclarations(), this.getInputDeclaration(), null, "inputDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskType_IsDeterministic(), ecorePackage.getEBoolean(), "isDeterministic", null, 1, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskType_PreferredExecutionRate(), ecorePackage.getEFloat(), "preferredExecutionRate", "0.0", 1, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskType_InternalStates(), this.getInternalStateDefinition(), null, "internalStates", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskType_Parameters(), this.getParameterDefinition(), null, "parameters", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_InternalStateDeclarations(), this.getInternalStateDeclaration(), null, "internalStateDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_ParameterDeclarations(), this.getParameterDeclaration(), null, "parameterDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalTypeEClass, SignalType.class, "SignalType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(deviceTypeEClass, DeviceType.class, "DeviceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceType_Ios(), this.getIoDeclaration(), null, "ios", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeviceType_IoDeclarations(), this.getIoDeclaration(), null, "ioDeclarations", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_IsSubdevice(), ecorePackage.getEBoolean(), "isSubdevice", "false", 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_CanHaveSubdevices(), ecorePackage.getEBoolean(), "canHaveSubdevices", "false", 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2331,23 +2380,26 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(connectionTypeEClass, ConnectionType.class, "ConnectionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConnectionType_IsInformation(), ecorePackage.getEBoolean(), "isInformation", "true", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_IsPower(), ecorePackage.getEBoolean(), "isPower", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnectionType_WireType(), this.getWireType(), null, "wireType", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_WireTypes(), this.getWireType(), null, "wireTypes", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_IsWireless(), ecorePackage.getEBoolean(), "isWireless", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_AllowsCircles(), ecorePackage.getEBoolean(), "allowsCircles", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnectionType_NSources(), ecorePackage.getEInt(), "nSources", "1", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnectionType_NTagets(), ecorePackage.getEInt(), "nTagets", "1", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnectionType_NStartingPoints(), ecorePackage.getEInt(), "nStartingPoints", "1", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_StartingPointResourceTypes(), this.getResourceType(), null, "startingPointResourceTypes", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnectionType_NEndPoints(), ecorePackage.getEInt(), "nEndPoints", "1", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_EndPointResourceTypes(), this.getResourceType(), null, "endPointResourceTypes", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_NJoints(), ecorePackage.getEInt(), "nJoints", "0", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_MaxJointBranches(), ecorePackage.getEInt(), "maxJointBranches", "0", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_MaxInterfaceToJointDistance(), ecorePackage.getEDouble(), "maxInterfaceToJointDistance", "0", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionType_SwitchTypes(), this.getDeviceType(), null, "switchTypes", null, 0, -1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnectionType_IsSwitched(), ecorePackage.getEBoolean(), "isSwitched", null, 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnectionType_IsSwitched(), ecorePackage.getEBoolean(), "isSwitched", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_DirectConnectionsAllowed(), ecorePackage.getEBoolean(), "directConnectionsAllowed", null, 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_MaxLength(), ecorePackage.getEDouble(), "maxLength", "100", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConnectionType_IsUnidirectional(), ecorePackage.getEBoolean(), "isUnidirectional", null, 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnectionType_IsUnidirectional(), ecorePackage.getEBoolean(), "isUnidirectional", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnectionType_RequiresMaster(), ecorePackage.getEBoolean(), "requiresMaster", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationTypeEClass, LocationType.class, "LocationType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocationType_IsJoint(), ecorePackage.getEBoolean(), "isJoint", null, 1, 1, LocationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLocationType_DuctOpenings(), this.getDuctOpeningDeclaration(), null, "ductOpenings", null, 0, -1, LocationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLocationType_DuctOpeningDeclarations(), this.getDuctOpeningDeclaration(), null, "ductOpeningDeclarations", null, 0, -1, LocationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ductTypeEClass, DuctType.class, "DuctType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2442,11 +2494,11 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(functionInputTriggerEClass, FunctionInputTrigger.class, "FunctionInputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunctionInputTrigger_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, FunctionInputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(internalStateDefinitionEClass, InternalStateDefinition.class, "InternalStateDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInternalStateDefinition_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, InternalStateDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(internalStateDeclarationEClass, InternalStateDeclaration.class, "InternalStateDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInternalStateDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, InternalStateDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parameterDefinitionEClass, ParameterDefinition.class, "ParameterDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getParameterDefinition_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, ParameterDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(parameterDeclarationEClass, ParameterDeclaration.class, "ParameterDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getParameterDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, ParameterDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(ioDirectionEEEnum, IoDirectionE.class, "IoDirectionE");

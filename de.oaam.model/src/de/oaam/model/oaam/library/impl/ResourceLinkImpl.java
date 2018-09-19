@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceLink;
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ResourceLinkImpl extends ElementAImpl implements ResourceLink {
+public class ResourceLinkImpl extends OaamBaseElementAImpl implements ResourceLink {
 	/**
 	 * The cached value of the '{@link #getIn() <em>In</em>}' reference list.
 	 * <!-- begin-user-doc -->

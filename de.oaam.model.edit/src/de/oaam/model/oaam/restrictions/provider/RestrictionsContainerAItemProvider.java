@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.restrictions.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.restrictions.RestrictionsContainerA;
@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
+public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
-			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS);
+			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
 		}
@@ -134,7 +134,7 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -206,7 +206,7 @@ public class RestrictionsContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS,
+				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS,
 				 RestrictionsFactory.eINSTANCE.createSegregationRestriction()));
 
 		newChildDescriptors.add

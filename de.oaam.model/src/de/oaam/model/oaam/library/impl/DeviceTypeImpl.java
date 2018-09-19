@@ -4,12 +4,12 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoGroup;
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ResourceBundles;
+import de.oaam.model.oaam.library.ResourceBundle;
 import de.oaam.model.oaam.library.ResourceGroup;
 import de.oaam.model.oaam.library.ResourceLink;
 import de.oaam.model.oaam.library.ResourceProviderA;
@@ -52,7 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getTraceLink <em>Trace Link</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getIos <em>Ios</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getIoDeclarations <em>Io Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isIsSubdevice <em>Is Subdevice</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isCanHaveSubdevices <em>Can Have Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getMtbf <em>Mtbf</em>}</li>
@@ -73,7 +73,7 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResourceBundles> providedBundles;
+	protected EList<ResourceBundle> providedBundles;
 
 	/**
 	 * The cached value of the '{@link #getPossibleResourceProvisions() <em>Possible Resource Provisions</em>}' reference list.
@@ -256,14 +256,14 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	protected String traceLink = TRACE_LINK_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIos() <em>Ios</em>}' containment reference list.
+	 * The cached value of the '{@link #getIoDeclarations() <em>Io Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIos()
+	 * @see #getIoDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IoDeclaration> ios;
+	protected EList<IoDeclaration> ioDeclarations;
 
 	/**
 	 * The default value of the '{@link #isIsSubdevice() <em>Is Subdevice</em>}' attribute.
@@ -419,9 +419,9 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResourceBundles> getProvidedBundles() {
+	public EList<ResourceBundle> getProvidedBundles() {
 		if (providedBundles == null) {
-			providedBundles = new EObjectContainmentEList<ResourceBundles>(ResourceBundles.class, this, LibraryPackage.DEVICE_TYPE__PROVIDED_BUNDLES);
+			providedBundles = new EObjectContainmentEList<ResourceBundle>(ResourceBundle.class, this, LibraryPackage.DEVICE_TYPE__PROVIDED_BUNDLES);
 		}
 		return providedBundles;
 	}
@@ -626,11 +626,11 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IoDeclaration> getIos() {
-		if (ios == null) {
-			ios = new EObjectContainmentEList<IoDeclaration>(IoDeclaration.class, this, LibraryPackage.DEVICE_TYPE__IOS);
+	public EList<IoDeclaration> getIoDeclarations() {
+		if (ioDeclarations == null) {
+			ioDeclarations = new EObjectContainmentEList<IoDeclaration>(IoDeclaration.class, this, LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS);
 		}
-		return ios;
+		return ioDeclarations;
 	}
 
 	/**
@@ -787,8 +787,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return ((InternalEList<?>)getResourceLinks()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.DEVICE_TYPE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.DEVICE_TYPE__IOS:
-				return ((InternalEList<?>)getIos()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
+				return ((InternalEList<?>)getIoDeclarations()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
 				return ((InternalEList<?>)getIoGroups()).basicRemove(otherEnd, msgs);
 		}
@@ -827,8 +827,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return getModifier();
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				return getTraceLink();
-			case LibraryPackage.DEVICE_TYPE__IOS:
-				return getIos();
+			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
+				return getIoDeclarations();
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				return isIsSubdevice();
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
@@ -858,7 +858,7 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 		switch (featureID) {
 			case LibraryPackage.DEVICE_TYPE__PROVIDED_BUNDLES:
 				getProvidedBundles().clear();
-				getProvidedBundles().addAll((Collection<? extends ResourceBundles>)newValue);
+				getProvidedBundles().addAll((Collection<? extends ResourceBundle>)newValue);
 				return;
 			case LibraryPackage.DEVICE_TYPE__POSSIBLE_RESOURCE_PROVISIONS:
 				getPossibleResourceProvisions().clear();
@@ -897,9 +897,9 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
 				return;
-			case LibraryPackage.DEVICE_TYPE__IOS:
-				getIos().clear();
-				getIos().addAll((Collection<? extends IoDeclaration>)newValue);
+			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
+				getIoDeclarations().clear();
+				getIoDeclarations().addAll((Collection<? extends IoDeclaration>)newValue);
 				return;
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				setIsSubdevice((Boolean)newValue);
@@ -971,8 +971,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
-			case LibraryPackage.DEVICE_TYPE__IOS:
-				getIos().clear();
+			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
+				getIoDeclarations().clear();
 				return;
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				setIsSubdevice(IS_SUBDEVICE_EDEFAULT);
@@ -1031,8 +1031,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
-			case LibraryPackage.DEVICE_TYPE__IOS:
-				return ios != null && !ios.isEmpty();
+			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
+				return ioDeclarations != null && !ioDeclarations.isEmpty();
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				return isSubdevice != IS_SUBDEVICE_EDEFAULT;
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
@@ -1067,16 +1067,16 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.DEVICE_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
-				case LibraryPackage.DEVICE_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case LibraryPackage.DEVICE_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case LibraryPackage.DEVICE_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.DEVICE_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.DEVICE_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case LibraryPackage.DEVICE_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case LibraryPackage.DEVICE_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.DEVICE_TYPE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case LibraryPackage.DEVICE_TYPE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case LibraryPackage.DEVICE_TYPE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case LibraryPackage.DEVICE_TYPE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.DEVICE_TYPE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.DEVICE_TYPE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case LibraryPackage.DEVICE_TYPE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case LibraryPackage.DEVICE_TYPE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -1099,16 +1099,16 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.DEVICE_TYPE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.DEVICE_TYPE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.DEVICE_TYPE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.DEVICE_TYPE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.DEVICE_TYPE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.DEVICE_TYPE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.DEVICE_TYPE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.DEVICE_TYPE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return LibraryPackage.DEVICE_TYPE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return LibraryPackage.DEVICE_TYPE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return LibraryPackage.DEVICE_TYPE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return LibraryPackage.DEVICE_TYPE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return LibraryPackage.DEVICE_TYPE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return LibraryPackage.DEVICE_TYPE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return LibraryPackage.DEVICE_TYPE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return LibraryPackage.DEVICE_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}

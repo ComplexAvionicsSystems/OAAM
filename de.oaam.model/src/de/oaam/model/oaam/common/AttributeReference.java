@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
 public interface AttributeReference extends AttributeA {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.common.ElementA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.OaamBaseElementA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -38,6 +38,6 @@ public interface AttributeReference extends AttributeA {
 	 * @model
 	 * @generated
 	 */
-	EList<ElementA> getValue();
+	EList<OaamBaseElementA> getValue();
 
 } // AttributeReference

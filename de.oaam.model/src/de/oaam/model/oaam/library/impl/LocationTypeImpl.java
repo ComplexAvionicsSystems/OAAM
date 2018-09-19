@@ -4,7 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.LocationTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LocationTypeImpl#getTraceLink <em>Trace Link</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LocationTypeImpl#isIsJoint <em>Is Joint</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LocationTypeImpl#getDuctOpenings <em>Duct Openings</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LocationTypeImpl#getDuctOpeningDeclarations <em>Duct Opening Declarations</em>}</li>
  * </ul>
  *
  * @generated
@@ -219,14 +219,14 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 	protected boolean isJoint = IS_JOINT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDuctOpenings() <em>Duct Openings</em>}' containment reference list.
+	 * The cached value of the '{@link #getDuctOpeningDeclarations() <em>Duct Opening Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDuctOpenings()
+	 * @see #getDuctOpeningDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DuctOpeningDeclaration> ductOpenings;
+	protected EList<DuctOpeningDeclaration> ductOpeningDeclarations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -432,11 +432,11 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DuctOpeningDeclaration> getDuctOpenings() {
-		if (ductOpenings == null) {
-			ductOpenings = new EObjectContainmentEList<DuctOpeningDeclaration>(DuctOpeningDeclaration.class, this, LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS);
+	public EList<DuctOpeningDeclaration> getDuctOpeningDeclarations() {
+		if (ductOpeningDeclarations == null) {
+			ductOpeningDeclarations = new EObjectContainmentEList<DuctOpeningDeclaration>(DuctOpeningDeclaration.class, this, LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS);
 		}
-		return ductOpenings;
+		return ductOpeningDeclarations;
 	}
 
 	/**
@@ -449,8 +449,8 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 		switch (featureID) {
 			case LibraryPackage.LOCATION_TYPE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS:
-				return ((InternalEList<?>)getDuctOpenings()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS:
+				return ((InternalEList<?>)getDuctOpeningDeclarations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -481,8 +481,8 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 				return getTraceLink();
 			case LibraryPackage.LOCATION_TYPE__IS_JOINT:
 				return isIsJoint();
-			case LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS:
-				return getDuctOpenings();
+			case LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS:
+				return getDuctOpeningDeclarations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -524,9 +524,9 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 			case LibraryPackage.LOCATION_TYPE__IS_JOINT:
 				setIsJoint((Boolean)newValue);
 				return;
-			case LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS:
-				getDuctOpenings().clear();
-				getDuctOpenings().addAll((Collection<? extends DuctOpeningDeclaration>)newValue);
+			case LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS:
+				getDuctOpeningDeclarations().clear();
+				getDuctOpeningDeclarations().addAll((Collection<? extends DuctOpeningDeclaration>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -567,8 +567,8 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 			case LibraryPackage.LOCATION_TYPE__IS_JOINT:
 				setIsJoint(IS_JOINT_EDEFAULT);
 				return;
-			case LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS:
-				getDuctOpenings().clear();
+			case LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS:
+				getDuctOpeningDeclarations().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -600,8 +600,8 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
 			case LibraryPackage.LOCATION_TYPE__IS_JOINT:
 				return isJoint != IS_JOINT_EDEFAULT;
-			case LibraryPackage.LOCATION_TYPE__DUCT_OPENINGS:
-				return ductOpenings != null && !ductOpenings.isEmpty();
+			case LibraryPackage.LOCATION_TYPE__DUCT_OPENING_DECLARATIONS:
+				return ductOpeningDeclarations != null && !ductOpeningDeclarations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -613,16 +613,16 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.LOCATION_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
-				case LibraryPackage.LOCATION_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case LibraryPackage.LOCATION_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case LibraryPackage.LOCATION_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.LOCATION_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.LOCATION_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case LibraryPackage.LOCATION_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case LibraryPackage.LOCATION_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.LOCATION_TYPE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case LibraryPackage.LOCATION_TYPE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case LibraryPackage.LOCATION_TYPE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case LibraryPackage.LOCATION_TYPE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.LOCATION_TYPE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.LOCATION_TYPE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case LibraryPackage.LOCATION_TYPE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case LibraryPackage.LOCATION_TYPE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -636,16 +636,16 @@ public class LocationTypeImpl extends ResourceProviderAImpl implements LocationT
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.LOCATION_TYPE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.LOCATION_TYPE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.LOCATION_TYPE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.LOCATION_TYPE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.LOCATION_TYPE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.LOCATION_TYPE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.LOCATION_TYPE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.LOCATION_TYPE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return LibraryPackage.LOCATION_TYPE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return LibraryPackage.LOCATION_TYPE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return LibraryPackage.LOCATION_TYPE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return LibraryPackage.LOCATION_TYPE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return LibraryPackage.LOCATION_TYPE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return LibraryPackage.LOCATION_TYPE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return LibraryPackage.LOCATION_TYPE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return LibraryPackage.LOCATION_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}

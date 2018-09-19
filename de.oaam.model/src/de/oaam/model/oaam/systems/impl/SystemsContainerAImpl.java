@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.systems.InformationFlow;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.Subsystem;
@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class SystemsContainerAImpl extends ElementAImpl implements SystemsContainerA {
+public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl implements SystemsContainerA {
 	/**
 	 * The cached value of the '{@link #getSystems() <em>Systems</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

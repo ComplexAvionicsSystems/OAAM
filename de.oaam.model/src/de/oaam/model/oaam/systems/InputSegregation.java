@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -29,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface InputSegregation extends ElementA {
+public interface InputSegregation extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Dissimilar Source</b></em>' attribute.
 	 * <!-- begin-user-doc -->

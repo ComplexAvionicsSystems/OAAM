@@ -6,8 +6,7 @@ import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.Area;
 import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.Location;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -42,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class AreaImpl extends ElementAImpl implements Area {
+public class AreaImpl extends OaamBaseElementAImpl implements Area {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

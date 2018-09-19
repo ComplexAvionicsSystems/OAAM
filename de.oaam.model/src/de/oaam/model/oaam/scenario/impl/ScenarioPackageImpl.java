@@ -4,6 +4,8 @@ package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -29,11 +31,6 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -202,7 +199,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theScenarioPackage.createPackageContents();
@@ -215,7 +212,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theScenarioPackage.initializePackageContents();
@@ -228,7 +225,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theScenarioPackage.freeze();
@@ -522,16 +519,16 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		// Add supertypes to classes
 		parameterAEClass.getESuperTypes().add(this.getModeDependentElementA());
 		parameterAEClass.getESuperTypes().add(this.getVariantDependentElementA());
-		scenarioContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		operationModeEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		scenarioContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		operationModeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		operationModeEClass.getESuperTypes().add(this.getVariantDependentElementA());
 		parameterNumericEClass.getESuperTypes().add(this.getParameterA());
-		parameterNumericEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		parameterNumericEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		parameterBoolEClass.getESuperTypes().add(this.getParameterA());
-		parameterBoolEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		variantEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		parameterBoolEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		variantEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		variantEClass.getESuperTypes().add(this.getModeDependentElementA());
-		operationModeReferenceEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		operationModeReferenceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		scenarioEClass.getESuperTypes().add(this.getScenarioContainerA());
 		subscenarioEClass.getESuperTypes().add(this.getScenarioContainerA());
 

@@ -139,13 +139,13 @@ public interface FunctionsFactory extends EFactory {
 	ExternalOutputLink createExternalOutputLink();
 
 	/**
-	 * Returns a new object of class '<em>Subfunction</em>'.
+	 * Returns a new object of class '<em>Subfunctions</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subfunction</em>'.
+	 * @return a new object of class '<em>Subfunctions</em>'.
 	 * @generated
 	 */
-	Subfunction createSubfunction();
+	Subfunctions createSubfunctions();
 
 	/**
 	 * Returns a new object of class '<em>Parameter</em>'.

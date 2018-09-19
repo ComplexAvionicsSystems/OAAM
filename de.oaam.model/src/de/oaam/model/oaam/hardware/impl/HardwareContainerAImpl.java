@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;
@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class HardwareContainerAImpl extends ElementAImpl implements HardwareContainerA {
+public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implements HardwareContainerA {
 	/**
 	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

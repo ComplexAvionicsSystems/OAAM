@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class DataTypeAImpl extends ElementAImpl implements DataTypeA {
+public abstract class DataTypeAImpl extends OaamBaseElementAImpl implements DataTypeA {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

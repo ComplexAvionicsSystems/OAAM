@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.anatomy;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -29,7 +29,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface DuctOpening extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface DuctOpening extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Relativ Position</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

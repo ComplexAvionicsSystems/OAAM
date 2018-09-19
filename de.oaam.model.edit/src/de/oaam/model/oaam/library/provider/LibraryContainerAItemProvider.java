@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
-
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -31,7 +30,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LibraryContainerAItemProvider extends ElementAItemProvider {
+public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -71,7 +70,7 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__DATA_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_TYPES);
-			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__TASK_TYPES);
@@ -83,8 +82,9 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__CONNECTION_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__WIRE_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__LOCATION_TYPES);
-			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__ROUTE_TYPES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__DUCT_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__POWER_SOURCES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__SUBLIBRARIES);
 		}
 		return childrenFeatures;
@@ -132,7 +132,7 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 		switch (notification.getFeatureID(LibraryContainerA.class)) {
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__TASK_TYPES:
@@ -144,8 +144,9 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 			case LibraryPackage.LIBRARY_CONTAINER_A__CONNECTION_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__WIRE_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__LOCATION_TYPES:
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -206,8 +207,8 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES,
-				 LibraryFactory.eINSTANCE.createResourceBundles()));
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES,
+				 LibraryFactory.eINSTANCE.createResourceBundle()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -266,13 +267,18 @@ public class LibraryContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__ROUTE_TYPES,
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__DUCT_TYPES,
 				 LibraryFactory.eINSTANCE.createDuctType()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES,
 				 LibraryFactory.eINSTANCE.createAttributeDefinition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__POWER_SOURCES,
+				 LibraryFactory.eINSTANCE.createPowerSource()));
 
 		newChildDescriptors.add
 			(createChildParameter

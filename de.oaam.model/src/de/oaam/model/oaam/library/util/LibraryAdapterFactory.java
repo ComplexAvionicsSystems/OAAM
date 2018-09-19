@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library.util;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -98,8 +98,8 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createResourceAlternativesAdapter();
 			}
 			@Override
-			public Adapter caseResourceBundles(ResourceBundles object) {
-				return createResourceBundlesAdapter();
+			public Adapter caseResourceBundle(ResourceBundle object) {
+				return createResourceBundleAdapter();
 			}
 			@Override
 			public Adapter caseTaskType(TaskType object) {
@@ -218,16 +218,16 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionInputTriggerAdapter();
 			}
 			@Override
-			public Adapter caseInternalStateDefinition(InternalStateDefinition object) {
-				return createInternalStateDefinitionAdapter();
+			public Adapter caseInternalStateDeclaration(InternalStateDeclaration object) {
+				return createInternalStateDeclarationAdapter();
 			}
 			@Override
-			public Adapter caseParameterDefinition(ParameterDefinition object) {
-				return createParameterDefinitionAdapter();
+			public Adapter caseParameterDeclaration(ParameterDeclaration object) {
+				return createParameterDeclarationAdapter();
 			}
 			@Override
-			public Adapter caseElementA(ElementA object) {
-				return createElementAAdapter();
+			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
+				return createOaamBaseElementAAdapter();
 			}
 			@Override
 			public Adapter caseBoolA(BoolA object) {
@@ -352,16 +352,16 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceBundles <em>Resource Bundles</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ResourceBundle <em>Resource Bundle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ResourceBundles
+	 * @see de.oaam.model.oaam.library.ResourceBundle
 	 * @generated
 	 */
-	public Adapter createResourceBundlesAdapter() {
+	public Adapter createResourceBundleAdapter() {
 		return null;
 	}
 
@@ -772,44 +772,44 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.InternalStateDefinition <em>Internal State Definition</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.InternalStateDeclaration <em>Internal State Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.InternalStateDefinition
+	 * @see de.oaam.model.oaam.library.InternalStateDeclaration
 	 * @generated
 	 */
-	public Adapter createInternalStateDefinitionAdapter() {
+	public Adapter createInternalStateDeclarationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ParameterDefinition <em>Parameter Definition</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ParameterDeclaration <em>Parameter Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ParameterDefinition
+	 * @see de.oaam.model.oaam.library.ParameterDeclaration
 	 * @generated
 	 */
-	public Adapter createParameterDefinitionAdapter() {
+	public Adapter createParameterDeclarationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
 	 * @generated
 	 */
-	public Adapter createElementAAdapter() {
+	public Adapter createOaamBaseElementAAdapter() {
 		return null;
 	}
 

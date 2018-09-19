@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.functions.Subfunction;
+import de.oaam.model.oaam.functions.Subfunctions;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Sub Function Restriction A</b></em>'.
+ * A representation of the model object '<em><b>Subfunction Restriction A</b></em>'.
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
@@ -21,27 +21,27 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.restrictions.SubFunctionRestrictionA#getSubFunctions <em>Sub Functions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.SubfunctionRestrictionA#getSubfunctions <em>Subfunctions</em>}</li>
  * </ul>
  *
- * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSubFunctionRestrictionA()
+ * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSubfunctionRestrictionA()
  * @model abstract="true"
  * @generated
  */
-public interface SubFunctionRestrictionA extends EObject {
+public interface SubfunctionRestrictionA extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Sub Functions</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.functions.Subfunction}.
+	 * Returns the value of the '<em><b>Subfunctions</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Subfunctions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The sub functions this constraint applies to.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Sub Functions</em>' reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSubFunctionRestrictionA_SubFunctions()
+	 * @return the value of the '<em>Subfunctions</em>' reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSubfunctionRestrictionA_Subfunctions()
 	 * @model
 	 * @generated
 	 */
-	EList<Subfunction> getSubFunctions();
+	EList<Subfunctions> getSubfunctions();
 
-} // SubFunctionRestrictionA
+} // SubfunctionRestrictionA

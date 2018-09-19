@@ -17,5 +17,5 @@ package de.oaam.model.oaam.common;
  * @model abstract="true"
  * @generated
  */
-public interface AttributeA extends ElementA {
+public interface AttributeA extends OaamBaseElementA {
 } // AttributeA

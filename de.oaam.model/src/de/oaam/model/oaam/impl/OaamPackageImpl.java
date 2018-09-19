@@ -6,6 +6,8 @@ import de.oaam.model.oaam.Architecture;
 import de.oaam.model.oaam.OaamFactory;
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -29,11 +31,6 @@ import de.oaam.model.oaam.hardware.impl.HardwarePackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -122,7 +119,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theOaamPackage.createPackageContents();
@@ -135,7 +132,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theOaamPackage.initializePackageContents();
@@ -148,7 +145,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theOaamPackage.freeze();
@@ -209,7 +206,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getArchitecture_Function() {
+	public EReference getArchitecture_Functions() {
 		return (EReference)architectureEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -254,7 +251,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getArchitecture_Mapping() {
+	public EReference getArchitecture_Allocations() {
 		return (EReference)architectureEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -291,12 +288,12 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		createEReference(architectureEClass, ARCHITECTURE__LIBRARY);
 		createEReference(architectureEClass, ARCHITECTURE__SCENARIO);
 		createEReference(architectureEClass, ARCHITECTURE__SYSTEMS);
-		createEReference(architectureEClass, ARCHITECTURE__FUNCTION);
+		createEReference(architectureEClass, ARCHITECTURE__FUNCTIONS);
 		createEReference(architectureEClass, ARCHITECTURE__HARDWARE);
 		createEReference(architectureEClass, ARCHITECTURE__ANATOMY);
 		createEReference(architectureEClass, ARCHITECTURE__CAPABILITIES);
 		createEReference(architectureEClass, ARCHITECTURE__RESTRICTIONS);
-		createEReference(architectureEClass, ARCHITECTURE__MAPPING);
+		createEReference(architectureEClass, ARCHITECTURE__ALLOCATIONS);
 	}
 
 	/**
@@ -332,7 +329,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		AnatomyPackage theAnatomyPackage = (AnatomyPackage)EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI);
 		CapabilitiesPackage theCapabilitiesPackage = (CapabilitiesPackage)EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI);
 		RestrictionsPackage theRestrictionsPackage = (RestrictionsPackage)EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI);
-		MappingPackage theMappingPackage = (MappingPackage)EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI);
+		AllocationsPackage theAllocationsPackage = (AllocationsPackage)EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theCommonPackage);
@@ -344,14 +341,14 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		getESubpackages().add(theAnatomyPackage);
 		getESubpackages().add(theCapabilitiesPackage);
 		getESubpackages().add(theRestrictionsPackage);
-		getESubpackages().add(theMappingPackage);
+		getESubpackages().add(theAllocationsPackage);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		architectureEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		architectureEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(architectureEClass, Architecture.class, "Architecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -359,12 +356,12 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		initEReference(getArchitecture_Library(), theLibraryPackage.getLibrary(), null, "library", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Scenario(), theScenarioPackage.getScenario(), null, "scenario", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Systems(), theSystemsPackage.getSystems(), null, "systems", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArchitecture_Function(), theFunctionsPackage.getFunctions(), null, "function", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArchitecture_Functions(), theFunctionsPackage.getFunctions(), null, "functions", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Hardware(), theHardwarePackage.getHardware(), null, "hardware", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Anatomy(), theAnatomyPackage.getAnatomy(), null, "anatomy", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Capabilities(), theCapabilitiesPackage.getCapabilities(), null, "capabilities", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Restrictions(), theRestrictionsPackage.getRestrictions(), null, "restrictions", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArchitecture_Mapping(), theMappingPackage.getMapping(), null, "mapping", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArchitecture_Allocations(), theAllocationsPackage.getAllocations(), null, "allocations", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

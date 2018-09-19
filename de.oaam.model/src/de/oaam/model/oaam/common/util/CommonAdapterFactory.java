@@ -13,8 +13,8 @@ import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.DataTypeA;
-import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.FloatingPoint;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -80,8 +80,8 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 	protected CommonSwitch<Adapter> modelSwitch =
 		new CommonSwitch<Adapter>() {
 			@Override
-			public Adapter caseElementA(ElementA object) {
-				return createElementAAdapter();
+			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
+				return createOaamBaseElementAAdapter();
 			}
 			@Override
 			public Adapter caseBoolA(BoolA object) {
@@ -168,16 +168,16 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
 	 * @generated
 	 */
-	public Adapter createElementAAdapter() {
+	public Adapter createOaamBaseElementAAdapter() {
 		return null;
 	}
 

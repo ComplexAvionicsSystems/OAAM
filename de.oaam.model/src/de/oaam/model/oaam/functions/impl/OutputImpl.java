@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Output;
 
@@ -51,7 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class OutputImpl extends ElementAImpl implements Output {
+public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

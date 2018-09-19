@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskRedundancy;
@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TaskRedundancyImpl extends ElementAImpl implements TaskRedundancy {
+public class TaskRedundancyImpl extends OaamBaseElementAImpl implements TaskRedundancy {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

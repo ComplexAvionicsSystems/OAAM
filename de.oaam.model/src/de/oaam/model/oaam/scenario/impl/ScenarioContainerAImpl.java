@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.ParameterA;
 import de.oaam.model.oaam.scenario.ScenarioContainerA;
@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class ScenarioContainerAImpl extends ElementAImpl implements ScenarioContainerA {
+public abstract class ScenarioContainerAImpl extends OaamBaseElementAImpl implements ScenarioContainerA {
 	/**
 	 * The cached value of the '{@link #getParameters() <em>Parameters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -2,10 +2,10 @@
  */
 package de.oaam.model.oaam.restrictions.impl;
 
-import de.oaam.model.oaam.functions.Subfunction;
+import de.oaam.model.oaam.functions.Subfunctions;
 
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
-import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
+import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
 import java.util.Collection;
 
@@ -19,34 +19,34 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Sub Function Restriction A</b></em>'.
+ * An implementation of the model object '<em><b>Subfunction Restriction A</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.SubFunctionRestrictionAImpl#getSubFunctions <em>Sub Functions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.SubfunctionRestrictionAImpl#getSubfunctions <em>Subfunctions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Container implements SubFunctionRestrictionA {
+public abstract class SubfunctionRestrictionAImpl extends MinimalEObjectImpl.Container implements SubfunctionRestrictionA {
 	/**
-	 * The cached value of the '{@link #getSubFunctions() <em>Sub Functions</em>}' reference list.
+	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFunctions()
+	 * @see #getSubfunctions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Subfunction> subFunctions;
+	protected EList<Subfunctions> subfunctions;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubFunctionRestrictionAImpl() {
+	protected SubfunctionRestrictionAImpl() {
 		super();
 	}
 
@@ -57,7 +57,7 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return RestrictionsPackage.Literals.SUB_FUNCTION_RESTRICTION_A;
+		return RestrictionsPackage.Literals.SUBFUNCTION_RESTRICTION_A;
 	}
 
 	/**
@@ -65,11 +65,11 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subfunction> getSubFunctions() {
-		if (subFunctions == null) {
-			subFunctions = new EObjectResolvingEList<Subfunction>(Subfunction.class, this, RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS);
+	public EList<Subfunctions> getSubfunctions() {
+		if (subfunctions == null) {
+			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS);
 		}
-		return subFunctions;
+		return subfunctions;
 	}
 
 	/**
@@ -80,8 +80,8 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS:
-				return getSubFunctions();
+			case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS:
+				return getSubfunctions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -95,9 +95,9 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS:
-				getSubFunctions().clear();
-				getSubFunctions().addAll((Collection<? extends Subfunction>)newValue);
+			case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS:
+				getSubfunctions().clear();
+				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -111,8 +111,8 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS:
-				getSubFunctions().clear();
+			case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS:
+				getSubfunctions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -126,10 +126,10 @@ public abstract class SubFunctionRestrictionAImpl extends MinimalEObjectImpl.Con
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS:
-				return subFunctions != null && !subFunctions.isEmpty();
+			case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS:
+				return subfunctions != null && !subfunctions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //SubFunctionRestrictionAImpl
+} //SubfunctionRestrictionAImpl

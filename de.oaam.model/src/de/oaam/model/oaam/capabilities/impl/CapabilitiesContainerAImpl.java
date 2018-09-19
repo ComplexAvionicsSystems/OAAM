@@ -4,14 +4,13 @@ package de.oaam.model.oaam.capabilities.impl;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesContainerA;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
-import de.oaam.model.oaam.capabilities.ConnectionCapability;
-import de.oaam.model.oaam.capabilities.DeviceCapability;
-import de.oaam.model.oaam.capabilities.SignalCapability;
-import de.oaam.model.oaam.capabilities.SubDeviceCapability;
-import de.oaam.model.oaam.capabilities.Subcapability;
-import de.oaam.model.oaam.capabilities.TaskCapability;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
+import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
+import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
+import de.oaam.model.oaam.capabilities.Subcapabilities;
+import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
+import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -32,66 +31,66 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getFunctionCapabilties <em>Function Capabilties</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSignalCapabilities <em>Signal Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getDeviceCapabilities <em>Device Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubDeviceCapabilities <em>Sub Device Capabilities</em>}</li>
- *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getConnectionCapabilities <em>Connection Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getTaskOnDeviceCapabilities <em>Task On Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSignalOnConnectionOrDeviceCapabilities <em>Signal On Connection Or Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getDeviceInLocationCapabilities <em>Device In Location Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubdeviceInDeviceCapabilities <em>Subdevice In Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubcapabilities <em>Subcapabilities</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements CapabilitiesContainerA {
+public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl implements CapabilitiesContainerA {
 	/**
-	 * The cached value of the '{@link #getFunctionCapabilties() <em>Function Capabilties</em>}' containment reference list.
+	 * The cached value of the '{@link #getTaskOnDeviceCapabilities() <em>Task On Device Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFunctionCapabilties()
+	 * @see #getTaskOnDeviceCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaskCapability> functionCapabilties;
+	protected EList<TaskOnDeviceCapability> taskOnDeviceCapabilities;
 
 	/**
-	 * The cached value of the '{@link #getSignalCapabilities() <em>Signal Capabilities</em>}' containment reference list.
+	 * The cached value of the '{@link #getSignalOnConnectionOrDeviceCapabilities() <em>Signal On Connection Or Device Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSignalCapabilities()
+	 * @see #getSignalOnConnectionOrDeviceCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SignalCapability> signalCapabilities;
+	protected EList<SignalOnConnectionOrDeviceCapability> signalOnConnectionOrDeviceCapabilities;
 
 	/**
-	 * The cached value of the '{@link #getDeviceCapabilities() <em>Device Capabilities</em>}' containment reference list.
+	 * The cached value of the '{@link #getDeviceInLocationCapabilities() <em>Device In Location Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDeviceCapabilities()
+	 * @see #getDeviceInLocationCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DeviceCapability> deviceCapabilities;
+	protected EList<DeviceInLocationCapability> deviceInLocationCapabilities;
 
 	/**
-	 * The cached value of the '{@link #getSubDeviceCapabilities() <em>Sub Device Capabilities</em>}' containment reference list.
+	 * The cached value of the '{@link #getSubdeviceInDeviceCapabilities() <em>Subdevice In Device Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubDeviceCapabilities()
+	 * @see #getSubdeviceInDeviceCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SubDeviceCapability> subDeviceCapabilities;
+	protected EList<SubdeviceInDeviceCapability> subdeviceInDeviceCapabilities;
 
 	/**
-	 * The cached value of the '{@link #getConnectionCapabilities() <em>Connection Capabilities</em>}' containment reference list.
+	 * The cached value of the '{@link #getConnectionInDuctOrLocationCapabilities() <em>Connection In Duct Or Location Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConnectionCapabilities()
+	 * @see #getConnectionInDuctOrLocationCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConnectionCapability> connectionCapabilities;
+	protected EList<ConnectionInDuctOrLocationCapability> connectionInDuctOrLocationCapabilities;
 
 	/**
 	 * The cached value of the '{@link #getSubcapabilities() <em>Subcapabilities</em>}' containment reference list.
@@ -101,7 +100,7 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Subcapability> subcapabilities;
+	protected EList<Subcapabilities> subcapabilities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,11 +126,11 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaskCapability> getFunctionCapabilties() {
-		if (functionCapabilties == null) {
-			functionCapabilties = new EObjectContainmentEList<TaskCapability>(TaskCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES);
+	public EList<TaskOnDeviceCapability> getTaskOnDeviceCapabilities() {
+		if (taskOnDeviceCapabilities == null) {
+			taskOnDeviceCapabilities = new EObjectContainmentEList<TaskOnDeviceCapability>(TaskOnDeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES);
 		}
-		return functionCapabilties;
+		return taskOnDeviceCapabilities;
 	}
 
 	/**
@@ -139,11 +138,11 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SignalCapability> getSignalCapabilities() {
-		if (signalCapabilities == null) {
-			signalCapabilities = new EObjectContainmentEList<SignalCapability>(SignalCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES);
+	public EList<SignalOnConnectionOrDeviceCapability> getSignalOnConnectionOrDeviceCapabilities() {
+		if (signalOnConnectionOrDeviceCapabilities == null) {
+			signalOnConnectionOrDeviceCapabilities = new EObjectContainmentEList<SignalOnConnectionOrDeviceCapability>(SignalOnConnectionOrDeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES);
 		}
-		return signalCapabilities;
+		return signalOnConnectionOrDeviceCapabilities;
 	}
 
 	/**
@@ -151,11 +150,11 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DeviceCapability> getDeviceCapabilities() {
-		if (deviceCapabilities == null) {
-			deviceCapabilities = new EObjectContainmentEList<DeviceCapability>(DeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES);
+	public EList<DeviceInLocationCapability> getDeviceInLocationCapabilities() {
+		if (deviceInLocationCapabilities == null) {
+			deviceInLocationCapabilities = new EObjectContainmentEList<DeviceInLocationCapability>(DeviceInLocationCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES);
 		}
-		return deviceCapabilities;
+		return deviceInLocationCapabilities;
 	}
 
 	/**
@@ -163,11 +162,11 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SubDeviceCapability> getSubDeviceCapabilities() {
-		if (subDeviceCapabilities == null) {
-			subDeviceCapabilities = new EObjectContainmentEList<SubDeviceCapability>(SubDeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES);
+	public EList<SubdeviceInDeviceCapability> getSubdeviceInDeviceCapabilities() {
+		if (subdeviceInDeviceCapabilities == null) {
+			subdeviceInDeviceCapabilities = new EObjectContainmentEList<SubdeviceInDeviceCapability>(SubdeviceInDeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES);
 		}
-		return subDeviceCapabilities;
+		return subdeviceInDeviceCapabilities;
 	}
 
 	/**
@@ -175,11 +174,11 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConnectionCapability> getConnectionCapabilities() {
-		if (connectionCapabilities == null) {
-			connectionCapabilities = new EObjectContainmentEList<ConnectionCapability>(ConnectionCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES);
+	public EList<ConnectionInDuctOrLocationCapability> getConnectionInDuctOrLocationCapabilities() {
+		if (connectionInDuctOrLocationCapabilities == null) {
+			connectionInDuctOrLocationCapabilities = new EObjectContainmentEList<ConnectionInDuctOrLocationCapability>(ConnectionInDuctOrLocationCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 		}
-		return connectionCapabilities;
+		return connectionInDuctOrLocationCapabilities;
 	}
 
 	/**
@@ -187,9 +186,9 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subcapability> getSubcapabilities() {
+	public EList<Subcapabilities> getSubcapabilities() {
 		if (subcapabilities == null) {
-			subcapabilities = new EObjectContainmentEList<Subcapability>(Subcapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
+			subcapabilities = new EObjectContainmentEList<Subcapabilities>(Subcapabilities.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
 		}
 		return subcapabilities;
 	}
@@ -202,16 +201,16 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-				return ((InternalEList<?>)getFunctionCapabilties()).basicRemove(otherEnd, msgs);
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-				return ((InternalEList<?>)getSignalCapabilities()).basicRemove(otherEnd, msgs);
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-				return ((InternalEList<?>)getDeviceCapabilities()).basicRemove(otherEnd, msgs);
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-				return ((InternalEList<?>)getSubDeviceCapabilities()).basicRemove(otherEnd, msgs);
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
-				return ((InternalEList<?>)getConnectionCapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+				return ((InternalEList<?>)getTaskOnDeviceCapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+				return ((InternalEList<?>)getSignalOnConnectionOrDeviceCapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+				return ((InternalEList<?>)getDeviceInLocationCapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+				return ((InternalEList<?>)getSubdeviceInDeviceCapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
+				return ((InternalEList<?>)getConnectionInDuctOrLocationCapabilities()).basicRemove(otherEnd, msgs);
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return ((InternalEList<?>)getSubcapabilities()).basicRemove(otherEnd, msgs);
 		}
@@ -226,16 +225,16 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-				return getFunctionCapabilties();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-				return getSignalCapabilities();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-				return getDeviceCapabilities();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-				return getSubDeviceCapabilities();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
-				return getConnectionCapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+				return getTaskOnDeviceCapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+				return getSignalOnConnectionOrDeviceCapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+				return getDeviceInLocationCapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+				return getSubdeviceInDeviceCapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
+				return getConnectionInDuctOrLocationCapabilities();
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return getSubcapabilities();
 		}
@@ -251,29 +250,29 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-				getFunctionCapabilties().clear();
-				getFunctionCapabilties().addAll((Collection<? extends TaskCapability>)newValue);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+				getTaskOnDeviceCapabilities().clear();
+				getTaskOnDeviceCapabilities().addAll((Collection<? extends TaskOnDeviceCapability>)newValue);
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-				getSignalCapabilities().clear();
-				getSignalCapabilities().addAll((Collection<? extends SignalCapability>)newValue);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+				getSignalOnConnectionOrDeviceCapabilities().clear();
+				getSignalOnConnectionOrDeviceCapabilities().addAll((Collection<? extends SignalOnConnectionOrDeviceCapability>)newValue);
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-				getDeviceCapabilities().clear();
-				getDeviceCapabilities().addAll((Collection<? extends DeviceCapability>)newValue);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+				getDeviceInLocationCapabilities().clear();
+				getDeviceInLocationCapabilities().addAll((Collection<? extends DeviceInLocationCapability>)newValue);
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-				getSubDeviceCapabilities().clear();
-				getSubDeviceCapabilities().addAll((Collection<? extends SubDeviceCapability>)newValue);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+				getSubdeviceInDeviceCapabilities().clear();
+				getSubdeviceInDeviceCapabilities().addAll((Collection<? extends SubdeviceInDeviceCapability>)newValue);
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
-				getConnectionCapabilities().clear();
-				getConnectionCapabilities().addAll((Collection<? extends ConnectionCapability>)newValue);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
+				getConnectionInDuctOrLocationCapabilities().clear();
+				getConnectionInDuctOrLocationCapabilities().addAll((Collection<? extends ConnectionInDuctOrLocationCapability>)newValue);
 				return;
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				getSubcapabilities().clear();
-				getSubcapabilities().addAll((Collection<? extends Subcapability>)newValue);
+				getSubcapabilities().addAll((Collection<? extends Subcapabilities>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -287,20 +286,20 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-				getFunctionCapabilties().clear();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+				getTaskOnDeviceCapabilities().clear();
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-				getSignalCapabilities().clear();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+				getSignalOnConnectionOrDeviceCapabilities().clear();
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-				getDeviceCapabilities().clear();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+				getDeviceInLocationCapabilities().clear();
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-				getSubDeviceCapabilities().clear();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+				getSubdeviceInDeviceCapabilities().clear();
 				return;
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
-				getConnectionCapabilities().clear();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
+				getConnectionInDuctOrLocationCapabilities().clear();
 				return;
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				getSubcapabilities().clear();
@@ -317,16 +316,16 @@ public abstract class CapabilitiesContainerAImpl extends ElementAImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-				return functionCapabilties != null && !functionCapabilties.isEmpty();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-				return signalCapabilities != null && !signalCapabilities.isEmpty();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-				return deviceCapabilities != null && !deviceCapabilities.isEmpty();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-				return subDeviceCapabilities != null && !subDeviceCapabilities.isEmpty();
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
-				return connectionCapabilities != null && !connectionCapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+				return taskOnDeviceCapabilities != null && !taskOnDeviceCapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+				return signalOnConnectionOrDeviceCapabilities != null && !signalOnConnectionOrDeviceCapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+				return deviceInLocationCapabilities != null && !deviceInLocationCapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+				return subdeviceInDeviceCapabilities != null && !subdeviceInDeviceCapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
+				return connectionInDuctOrLocationCapabilities != null && !connectionInDuctOrLocationCapabilities.isEmpty();
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return subcapabilities != null && !subcapabilities.isEmpty();
 		}

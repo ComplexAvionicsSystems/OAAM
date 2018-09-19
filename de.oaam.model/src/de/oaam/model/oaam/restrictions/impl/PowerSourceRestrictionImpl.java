@@ -4,9 +4,9 @@ package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.Signal;
-import de.oaam.model.oaam.functions.Subfunction;
+import de.oaam.model.oaam.functions.Subfunctions;
 
 import de.oaam.model.oaam.hardware.Device;
 
@@ -16,13 +16,14 @@ import de.oaam.model.oaam.restrictions.DeviceRestrictionA;
 import de.oaam.model.oaam.restrictions.PowerSourceRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
-import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
+import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -50,7 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSignals <em>Signals</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSubFunctions <em>Sub Functions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getStyle <em>Style</em>}</li>
@@ -90,14 +91,14 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	protected EList<Signal> signals;
 
 	/**
-	 * The cached value of the '{@link #getSubFunctions() <em>Sub Functions</em>}' reference list.
+	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFunctions()
+	 * @see #getSubfunctions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Subfunction> subFunctions;
+	protected EList<Subfunctions> subfunctions;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -393,11 +394,11 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subfunction> getSubFunctions() {
-		if (subFunctions == null) {
-			subFunctions = new EObjectResolvingEList<Subfunction>(Subfunction.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS);
+	public EList<Subfunctions> getSubfunctions() {
+		if (subfunctions == null) {
+			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS);
 		}
-		return subFunctions;
+		return subfunctions;
 	}
 
 	/**
@@ -666,8 +667,8 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				return basicGetDevices();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				return getSignals();
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS:
-				return getSubFunctions();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
+				return getSubfunctions();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				return getId();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME:
@@ -714,9 +715,9 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				getSignals().clear();
 				getSignals().addAll((Collection<? extends Signal>)newValue);
 				return;
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS:
-				getSubFunctions().clear();
-				getSubFunctions().addAll((Collection<? extends Subfunction>)newValue);
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
+				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				setId((String)newValue);
@@ -779,8 +780,8 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				getSignals().clear();
 				return;
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS:
-				getSubFunctions().clear();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				setId(ID_EDEFAULT);
@@ -837,8 +838,8 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				return devices != null;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				return signals != null && !signals.isEmpty();
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS:
-				return subFunctions != null && !subFunctions.isEmpty();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
+				return subfunctions != null && !subfunctions.isEmpty();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME:
@@ -888,22 +889,22 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				default: return -1;
 			}
 		}
-		if (baseClass == SubFunctionRestrictionA.class) {
+		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS: return RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS: return RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID: return CommonPackage.ELEMENT_A__ID;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -941,22 +942,22 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				default: return -1;
 			}
 		}
-		if (baseClass == SubFunctionRestrictionA.class) {
+		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (baseFeatureID) {
-				case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUB_FUNCTIONS;
+				case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__TRACE_LINK;
 				default: return -1;
 			}
 		}

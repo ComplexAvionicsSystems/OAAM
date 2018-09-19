@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.capabilities.util;
 
 import de.oaam.model.oaam.capabilities.*;
-
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.notify.Adapter;
@@ -79,24 +78,24 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 				return createCapabilitiesContainerAAdapter();
 			}
 			@Override
-			public Adapter caseTaskCapability(TaskCapability object) {
-				return createTaskCapabilityAdapter();
+			public Adapter caseTaskOnDeviceCapability(TaskOnDeviceCapability object) {
+				return createTaskOnDeviceCapabilityAdapter();
 			}
 			@Override
-			public Adapter caseDeviceCapability(DeviceCapability object) {
-				return createDeviceCapabilityAdapter();
+			public Adapter caseDeviceInLocationCapability(DeviceInLocationCapability object) {
+				return createDeviceInLocationCapabilityAdapter();
 			}
 			@Override
-			public Adapter caseConnectionCapability(ConnectionCapability object) {
-				return createConnectionCapabilityAdapter();
+			public Adapter caseConnectionInDuctOrLocationCapability(ConnectionInDuctOrLocationCapability object) {
+				return createConnectionInDuctOrLocationCapabilityAdapter();
 			}
 			@Override
-			public Adapter caseSignalCapability(SignalCapability object) {
-				return createSignalCapabilityAdapter();
+			public Adapter caseSignalOnConnectionOrDeviceCapability(SignalOnConnectionOrDeviceCapability object) {
+				return createSignalOnConnectionOrDeviceCapabilityAdapter();
 			}
 			@Override
-			public Adapter caseSubDeviceCapability(SubDeviceCapability object) {
-				return createSubDeviceCapabilityAdapter();
+			public Adapter caseSubdeviceInDeviceCapability(SubdeviceInDeviceCapability object) {
+				return createSubdeviceInDeviceCapabilityAdapter();
 			}
 			@Override
 			public Adapter caseResourceConsumption(ResourceConsumption object) {
@@ -107,12 +106,12 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 				return createCapabilitiesAdapter();
 			}
 			@Override
-			public Adapter caseSubcapability(Subcapability object) {
-				return createSubcapabilityAdapter();
+			public Adapter caseSubcapabilities(Subcapabilities object) {
+				return createSubcapabilitiesAdapter();
 			}
 			@Override
-			public Adapter caseElementA(ElementA object) {
-				return createElementAAdapter();
+			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
+				return createOaamBaseElementAAdapter();
 			}
 			@Override
 			public Adapter caseVariantDependentElementA(VariantDependentElementA object) {
@@ -171,72 +170,72 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.TaskCapability <em>Task Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability <em>Task On Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability
 	 * @generated
 	 */
-	public Adapter createTaskCapabilityAdapter() {
+	public Adapter createTaskOnDeviceCapabilityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.DeviceCapability <em>Device Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability <em>Device In Location Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.DeviceCapability
+	 * @see de.oaam.model.oaam.capabilities.DeviceInLocationCapability
 	 * @generated
 	 */
-	public Adapter createDeviceCapabilityAdapter() {
+	public Adapter createDeviceInLocationCapabilityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.ConnectionCapability <em>Connection Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability <em>Connection In Duct Or Location Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.ConnectionCapability
+	 * @see de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability
 	 * @generated
 	 */
-	public Adapter createConnectionCapabilityAdapter() {
+	public Adapter createConnectionInDuctOrLocationCapabilityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SignalCapability <em>Signal Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability <em>Signal On Connection Or Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.SignalCapability
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability
 	 * @generated
 	 */
-	public Adapter createSignalCapabilityAdapter() {
+	public Adapter createSignalOnConnectionOrDeviceCapabilityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SubDeviceCapability <em>Sub Device Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability <em>Subdevice In Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.SubDeviceCapability
+	 * @see de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability
 	 * @generated
 	 */
-	public Adapter createSubDeviceCapabilityAdapter() {
+	public Adapter createSubdeviceInDeviceCapabilityAdapter() {
 		return null;
 	}
 
@@ -269,30 +268,30 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Subcapability <em>Subcapability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.Subcapability
+	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
 	 * @generated
 	 */
-	public Adapter createSubcapabilityAdapter() {
+	public Adapter createSubcapabilitiesAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
 	 * @generated
 	 */
-	public Adapter createElementAAdapter() {
+	public Adapter createOaamBaseElementAAdapter() {
 		return null;
 	}
 

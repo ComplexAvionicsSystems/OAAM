@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ResourceAlternatives;
@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceAlternativesItemProvider extends ElementAItemProvider {
+public class ResourceAlternativesItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

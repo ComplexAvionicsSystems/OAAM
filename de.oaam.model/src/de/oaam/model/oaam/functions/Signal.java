@@ -2,7 +2,8 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
+import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.library.SignalType;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -26,13 +27,14 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getInIndex <em>In Index</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getOutIndex <em>Out Index</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.Signal#getConnectionBinding <em>Connection Binding</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getSignal()
  * @model
  * @generated
  */
-public interface Signal extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Signal extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -159,5 +161,30 @@ public interface Signal extends ElementA, VariantDependentElementA, ModeDependen
 	 * @generated
 	 */
 	void setOutIndex(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Connection Binding</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * This references a unique connection if this signal is strictly bound to one a wire i.e. an atomic block of hardware and funtion, e.g a sensor. This is a so called hardware task. If a device is specified. Also the function outputs should be bound to device connectors. Do not specify a device here if this is a freely assignable function.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Connection Binding</em>' reference.
+	 * @see #setConnectionBinding(Connection)
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getSignal_ConnectionBinding()
+	 * @model
+	 * @generated
+	 */
+	Connection getConnectionBinding();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Signal#getConnectionBinding <em>Connection Binding</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Connection Binding</em>' reference.
+	 * @see #getConnectionBinding()
+	 * @generated
+	 */
+	void setConnectionBinding(Connection value);
 
 } // Signal

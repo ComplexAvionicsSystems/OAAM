@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -21,14 +21,13 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.functions.TaskGroup#getTasks <em>Tasks</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.TaskGroup#isIsAtomic <em>Is Atomic</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getTaskGroup()
  * @model
  * @generated
  */
-public interface TaskGroup extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface TaskGroup extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.Task}.
@@ -43,30 +42,5 @@ public interface TaskGroup extends ElementA, ModeDependentElementA, VariantDepen
 	 * @generated
 	 */
 	EList<Task> getTasks();
-
-	/**
-	 * Returns the value of the '<em><b>Is Atomic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Whether Functions of this group can be distributed over multiple modules or not
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Is Atomic</em>' attribute.
-	 * @see #setIsAtomic(boolean)
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getTaskGroup_IsAtomic()
-	 * @model required="true"
-	 * @generated
-	 */
-	boolean isIsAtomic();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.functions.TaskGroup#isIsAtomic <em>Is Atomic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Atomic</em>' attribute.
-	 * @see #isIsAtomic()
-	 * @generated
-	 */
-	void setIsAtomic(boolean value);
 
 } // TaskGroup

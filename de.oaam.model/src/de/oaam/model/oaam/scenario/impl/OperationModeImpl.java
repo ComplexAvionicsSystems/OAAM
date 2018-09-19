@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class OperationModeImpl extends ElementAImpl implements OperationMode {
+public class OperationModeImpl extends OaamBaseElementAImpl implements OperationMode {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware.util;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
@@ -74,7 +74,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 			case HardwarePackage.HARDWARE_CONTAINER_A: {
 				HardwareContainerA hardwareContainerA = (HardwareContainerA)theEObject;
 				T result = caseHardwareContainerA(hardwareContainerA);
-				if (result == null) result = caseElementA(hardwareContainerA);
+				if (result == null) result = caseOaamBaseElementA(hardwareContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -82,7 +82,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Device device = (Device)theEObject;
 				T result = caseDevice(device);
 				if (result == null) result = caseResourceProviderInstanceA(device);
-				if (result == null) result = caseElementA(device);
+				if (result == null) result = caseOaamBaseElementA(device);
 				if (result == null) result = caseVariantDependentElementA(device);
 				if (result == null) result = caseModeDependentElementA(device);
 				if (result == null) result = defaultCase(theEObject);
@@ -92,7 +92,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
 				if (result == null) result = caseResourceProviderInstanceA(connection);
-				if (result == null) result = caseElementA(connection);
+				if (result == null) result = caseOaamBaseElementA(connection);
 				if (result == null) result = caseVariantDependentElementA(connection);
 				if (result == null) result = caseModeDependentElementA(connection);
 				if (result == null) result = defaultCase(theEObject);
@@ -101,7 +101,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 			case HardwarePackage.IO: {
 				Io io = (Io)theEObject;
 				T result = caseIo(io);
-				if (result == null) result = caseElementA(io);
+				if (result == null) result = caseOaamBaseElementA(io);
 				if (result == null) result = caseVariantDependentElementA(io);
 				if (result == null) result = caseModeDependentElementA(io);
 				if (result == null) result = defaultCase(theEObject);
@@ -110,7 +110,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 			case HardwarePackage.DEVICE_SYMMETRY: {
 				DeviceSymmetry deviceSymmetry = (DeviceSymmetry)theEObject;
 				T result = caseDeviceSymmetry(deviceSymmetry);
-				if (result == null) result = caseElementA(deviceSymmetry);
+				if (result == null) result = caseOaamBaseElementA(deviceSymmetry);
 				if (result == null) result = caseVariantDependentElementA(deviceSymmetry);
 				if (result == null) result = caseModeDependentElementA(deviceSymmetry);
 				if (result == null) result = defaultCase(theEObject);
@@ -122,7 +122,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = caseHardwareContainerA(hardware);
 				if (result == null) result = caseVariantDependentElementA(hardware);
 				if (result == null) result = caseModeDependentElementA(hardware);
-				if (result == null) result = caseElementA(hardware);
+				if (result == null) result = caseOaamBaseElementA(hardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,7 +132,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = caseHardwareContainerA(subhardware);
 				if (result == null) result = caseVariantDependentElementA(subhardware);
 				if (result == null) result = caseModeDependentElementA(subhardware);
-				if (result == null) result = caseElementA(subhardware);
+				if (result == null) result = caseOaamBaseElementA(subhardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -246,17 +246,17 @@ public class HardwareSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

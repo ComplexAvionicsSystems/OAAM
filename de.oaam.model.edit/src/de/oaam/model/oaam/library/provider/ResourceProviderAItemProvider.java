@@ -170,7 +170,7 @@ public class ResourceProviderAItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.RESOURCE_PROVIDER_A__PROVIDED_BUNDLES,
-				 LibraryFactory.eINSTANCE.createResourceBundles()));
+				 LibraryFactory.eINSTANCE.createResourceBundle()));
 
 		newChildDescriptors.add
 			(createChildParameter

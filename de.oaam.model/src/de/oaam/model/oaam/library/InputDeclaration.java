@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.DataTypeA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import de.oaam.model.oaam.common.ElementA;
  * @model
  * @generated
  */
-public interface InputDeclaration extends ElementA {
+public interface InputDeclaration extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

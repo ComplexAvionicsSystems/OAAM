@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100"
+            uri="http://www.oaam.de/oaam/model/v140"
             class="de.oaam.model.oaam.provider.OaamItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -22,7 +22,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/common"
+            uri="http://www.oaam.de/oaam/model/v140/common"
             class="de.oaam.model.oaam.common.provider.CommonItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -35,7 +35,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/library"
+            uri="http://www.oaam.de/oaam/model/v140/library"
             class="de.oaam.model.oaam.library.provider.LibraryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -48,7 +48,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/scenario"
+            uri="http://www.oaam.de/oaam/model/v140/scenario"
             class="de.oaam.model.oaam.scenario.provider.ScenarioItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -61,7 +61,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/systems"
+            uri="http://www.oaam.de/oaam/model/v140/systems"
             class="de.oaam.model.oaam.systems.provider.SystemsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -74,7 +74,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/functions"
+            uri="http://www.oaam.de/oaam/model/v140/functions"
             class="de.oaam.model.oaam.functions.provider.FunctionsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -87,7 +87,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/hardware"
+            uri="http://www.oaam.de/oaam/model/v140/hardware"
             class="de.oaam.model.oaam.hardware.provider.HardwareItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -100,7 +100,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/anatomy"
+            uri="http://www.oaam.de/oaam/model/v140/anatomy"
             class="de.oaam.model.oaam.anatomy.provider.AnatomyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -113,7 +113,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/capabilities"
+            uri="http://www.oaam.de/oaam/model/v140/capabilities"
             class="de.oaam.model.oaam.capabilities.provider.CapabilitiesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -126,7 +126,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/restrictions"
+            uri="http://www.oaam.de/oaam/model/v140/restrictions"
             class="de.oaam.model.oaam.restrictions.provider.RestrictionsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
@@ -139,8 +139,8 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated oaam -->
       <factory
-            uri="http://www.oaam.de/oaam/model/v100/mapping"
-            class="de.oaam.model.oaam.mapping.provider.MappingItemProviderAdapterFactory"
+            uri="http://www.oaam.de/oaam/model/v140/allocations"
+            class="de.oaam.model.oaam.allocations.provider.AllocationsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

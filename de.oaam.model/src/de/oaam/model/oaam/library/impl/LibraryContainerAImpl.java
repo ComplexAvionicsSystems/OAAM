@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.DataTypeA;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.AttributeDefinition;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
@@ -14,7 +13,8 @@ import de.oaam.model.oaam.library.DuctType;
 import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
-import de.oaam.model.oaam.library.ResourceBundles;
+import de.oaam.model.oaam.library.PowerSource;
+import de.oaam.model.oaam.library.ResourceBundle;
 import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.ResourceTypeDissimilarity;
 import de.oaam.model.oaam.library.ResourceTypeModifier;
@@ -46,7 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceTypes <em>Resource Types</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getRessourceBundles <em>Ressource Bundles</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceBundles <em>Resource Bundles</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceModifiers <em>Resource Modifiers</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceTypeDissimilarities <em>Resource Type Dissimilarities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getTaskTypes <em>Task Types</em>}</li>
@@ -58,14 +58,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getConnectionTypes <em>Connection Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getWireTypes <em>Wire Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getLocationTypes <em>Location Types</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getRouteTypes <em>Route Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getDuctTypes <em>Duct Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getGenericAttributes <em>Generic Attributes</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getSublibraries <em>Sublibraries</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class LibraryContainerAImpl extends ElementAImpl implements LibraryContainerA {
+public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl implements LibraryContainerA {
 	/**
 	 * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -87,14 +88,14 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	protected EList<ResourceType> resourceTypes;
 
 	/**
-	 * The cached value of the '{@link #getRessourceBundles() <em>Ressource Bundles</em>}' containment reference list.
+	 * The cached value of the '{@link #getResourceBundles() <em>Resource Bundles</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRessourceBundles()
+	 * @see #getResourceBundles()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResourceBundles> ressourceBundles;
+	protected EList<ResourceBundle> resourceBundles;
 
 	/**
 	 * The cached value of the '{@link #getResourceModifiers() <em>Resource Modifiers</em>}' containment reference list.
@@ -207,14 +208,14 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	protected EList<LocationType> locationTypes;
 
 	/**
-	 * The cached value of the '{@link #getRouteTypes() <em>Route Types</em>}' containment reference list.
+	 * The cached value of the '{@link #getDuctTypes() <em>Duct Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRouteTypes()
+	 * @see #getDuctTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DuctType> routeTypes;
+	protected EList<DuctType> ductTypes;
 
 	/**
 	 * The cached value of the '{@link #getGenericAttributes() <em>Generic Attributes</em>}' containment reference list.
@@ -225,6 +226,16 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	 * @ordered
 	 */
 	protected EList<AttributeDefinition> genericAttributes;
+
+	/**
+	 * The cached value of the '{@link #getPowerSources() <em>Power Sources</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPowerSources()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PowerSource> powerSources;
 
 	/**
 	 * The cached value of the '{@link #getSublibraries() <em>Sublibraries</em>}' containment reference list.
@@ -284,11 +295,11 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResourceBundles> getRessourceBundles() {
-		if (ressourceBundles == null) {
-			ressourceBundles = new EObjectContainmentEList<ResourceBundles>(ResourceBundles.class, this, LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES);
+	public EList<ResourceBundle> getResourceBundles() {
+		if (resourceBundles == null) {
+			resourceBundles = new EObjectContainmentEList<ResourceBundle>(ResourceBundle.class, this, LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES);
 		}
-		return ressourceBundles;
+		return resourceBundles;
 	}
 
 	/**
@@ -428,11 +439,11 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DuctType> getRouteTypes() {
-		if (routeTypes == null) {
-			routeTypes = new EObjectContainmentEList<DuctType>(DuctType.class, this, LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES);
+	public EList<DuctType> getDuctTypes() {
+		if (ductTypes == null) {
+			ductTypes = new EObjectContainmentEList<DuctType>(DuctType.class, this, LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES);
 		}
-		return routeTypes;
+		return ductTypes;
 	}
 
 	/**
@@ -445,6 +456,18 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 			genericAttributes = new EObjectContainmentEList<AttributeDefinition>(AttributeDefinition.class, this, LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES);
 		}
 		return genericAttributes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PowerSource> getPowerSources() {
+		if (powerSources == null) {
+			powerSources = new EObjectContainmentEList<PowerSource>(PowerSource.class, this, LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES);
+		}
+		return powerSources;
 	}
 
 	/**
@@ -471,8 +494,8 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return ((InternalEList<?>)getDataTypes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
 				return ((InternalEList<?>)getResourceTypes()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
-				return ((InternalEList<?>)getRessourceBundles()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
+				return ((InternalEList<?>)getResourceBundles()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				return ((InternalEList<?>)getResourceModifiers()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES:
@@ -495,10 +518,12 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return ((InternalEList<?>)getWireTypes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__LOCATION_TYPES:
 				return ((InternalEList<?>)getLocationTypes()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
-				return ((InternalEList<?>)getRouteTypes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
+				return ((InternalEList<?>)getDuctTypes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 				return ((InternalEList<?>)getGenericAttributes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
+				return ((InternalEList<?>)getPowerSources()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return ((InternalEList<?>)getSublibraries()).basicRemove(otherEnd, msgs);
 		}
@@ -517,8 +542,8 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return getDataTypes();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
 				return getResourceTypes();
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
-				return getRessourceBundles();
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
+				return getResourceBundles();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				return getResourceModifiers();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES:
@@ -541,10 +566,12 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return getWireTypes();
 			case LibraryPackage.LIBRARY_CONTAINER_A__LOCATION_TYPES:
 				return getLocationTypes();
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
-				return getRouteTypes();
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
+				return getDuctTypes();
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 				return getGenericAttributes();
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
+				return getPowerSources();
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return getSublibraries();
 		}
@@ -568,9 +595,9 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				getResourceTypes().clear();
 				getResourceTypes().addAll((Collection<? extends ResourceType>)newValue);
 				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
-				getRessourceBundles().clear();
-				getRessourceBundles().addAll((Collection<? extends ResourceBundles>)newValue);
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
+				getResourceBundles().clear();
+				getResourceBundles().addAll((Collection<? extends ResourceBundle>)newValue);
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				getResourceModifiers().clear();
@@ -616,13 +643,17 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				getLocationTypes().clear();
 				getLocationTypes().addAll((Collection<? extends LocationType>)newValue);
 				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
-				getRouteTypes().clear();
-				getRouteTypes().addAll((Collection<? extends DuctType>)newValue);
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
+				getDuctTypes().clear();
+				getDuctTypes().addAll((Collection<? extends DuctType>)newValue);
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 				getGenericAttributes().clear();
 				getGenericAttributes().addAll((Collection<? extends AttributeDefinition>)newValue);
+				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
+				getPowerSources().clear();
+				getPowerSources().addAll((Collection<? extends PowerSource>)newValue);
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				getSublibraries().clear();
@@ -646,8 +677,8 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
 				getResourceTypes().clear();
 				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
-				getRessourceBundles().clear();
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
+				getResourceBundles().clear();
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				getResourceModifiers().clear();
@@ -682,11 +713,14 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 			case LibraryPackage.LIBRARY_CONTAINER_A__LOCATION_TYPES:
 				getLocationTypes().clear();
 				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
-				getRouteTypes().clear();
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
+				getDuctTypes().clear();
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 				getGenericAttributes().clear();
+				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
+				getPowerSources().clear();
 				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				getSublibraries().clear();
@@ -707,8 +741,8 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return dataTypes != null && !dataTypes.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
 				return resourceTypes != null && !resourceTypes.isEmpty();
-			case LibraryPackage.LIBRARY_CONTAINER_A__RESSOURCE_BUNDLES:
-				return ressourceBundles != null && !ressourceBundles.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
+				return resourceBundles != null && !resourceBundles.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS:
 				return resourceModifiers != null && !resourceModifiers.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES:
@@ -731,10 +765,12 @@ public abstract class LibraryContainerAImpl extends ElementAImpl implements Libr
 				return wireTypes != null && !wireTypes.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__LOCATION_TYPES:
 				return locationTypes != null && !locationTypes.isEmpty();
-			case LibraryPackage.LIBRARY_CONTAINER_A__ROUTE_TYPES:
-				return routeTypes != null && !routeTypes.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__DUCT_TYPES:
+				return ductTypes != null && !ductTypes.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 				return genericAttributes != null && !genericAttributes.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
+				return powerSources != null && !powerSources.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return sublibraries != null && !sublibraries.isEmpty();
 		}

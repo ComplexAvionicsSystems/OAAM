@@ -2,11 +2,12 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -31,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceRestriction extends TaskRestrictionA, SignalRestrictionA, SubFunctionRestrictionA, ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface DeviceRestriction extends TaskRestrictionA, SignalRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Device Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -56,14 +56,14 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case CapabilitiesPackage.TASK_CAPABILITY: return createTaskCapability();
-			case CapabilitiesPackage.DEVICE_CAPABILITY: return createDeviceCapability();
-			case CapabilitiesPackage.CONNECTION_CAPABILITY: return createConnectionCapability();
-			case CapabilitiesPackage.SIGNAL_CAPABILITY: return createSignalCapability();
-			case CapabilitiesPackage.SUB_DEVICE_CAPABILITY: return createSubDeviceCapability();
+			case CapabilitiesPackage.TASK_ON_DEVICE_CAPABILITY: return createTaskOnDeviceCapability();
+			case CapabilitiesPackage.DEVICE_IN_LOCATION_CAPABILITY: return createDeviceInLocationCapability();
+			case CapabilitiesPackage.CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY: return createConnectionInDuctOrLocationCapability();
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY: return createSignalOnConnectionOrDeviceCapability();
+			case CapabilitiesPackage.SUBDEVICE_IN_DEVICE_CAPABILITY: return createSubdeviceInDeviceCapability();
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: return createResourceConsumption();
 			case CapabilitiesPackage.CAPABILITIES: return createCapabilities();
-			case CapabilitiesPackage.SUBCAPABILITY: return createSubcapability();
+			case CapabilitiesPackage.SUBCAPABILITIES: return createSubcapabilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -74,9 +74,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TaskCapability createTaskCapability() {
-		TaskCapabilityImpl taskCapability = new TaskCapabilityImpl();
-		return taskCapability;
+	public TaskOnDeviceCapability createTaskOnDeviceCapability() {
+		TaskOnDeviceCapabilityImpl taskOnDeviceCapability = new TaskOnDeviceCapabilityImpl();
+		return taskOnDeviceCapability;
 	}
 
 	/**
@@ -84,9 +84,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeviceCapability createDeviceCapability() {
-		DeviceCapabilityImpl deviceCapability = new DeviceCapabilityImpl();
-		return deviceCapability;
+	public DeviceInLocationCapability createDeviceInLocationCapability() {
+		DeviceInLocationCapabilityImpl deviceInLocationCapability = new DeviceInLocationCapabilityImpl();
+		return deviceInLocationCapability;
 	}
 
 	/**
@@ -94,9 +94,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConnectionCapability createConnectionCapability() {
-		ConnectionCapabilityImpl connectionCapability = new ConnectionCapabilityImpl();
-		return connectionCapability;
+	public ConnectionInDuctOrLocationCapability createConnectionInDuctOrLocationCapability() {
+		ConnectionInDuctOrLocationCapabilityImpl connectionInDuctOrLocationCapability = new ConnectionInDuctOrLocationCapabilityImpl();
+		return connectionInDuctOrLocationCapability;
 	}
 
 	/**
@@ -104,9 +104,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SignalCapability createSignalCapability() {
-		SignalCapabilityImpl signalCapability = new SignalCapabilityImpl();
-		return signalCapability;
+	public SignalOnConnectionOrDeviceCapability createSignalOnConnectionOrDeviceCapability() {
+		SignalOnConnectionOrDeviceCapabilityImpl signalOnConnectionOrDeviceCapability = new SignalOnConnectionOrDeviceCapabilityImpl();
+		return signalOnConnectionOrDeviceCapability;
 	}
 
 	/**
@@ -114,9 +114,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SubDeviceCapability createSubDeviceCapability() {
-		SubDeviceCapabilityImpl subDeviceCapability = new SubDeviceCapabilityImpl();
-		return subDeviceCapability;
+	public SubdeviceInDeviceCapability createSubdeviceInDeviceCapability() {
+		SubdeviceInDeviceCapabilityImpl subdeviceInDeviceCapability = new SubdeviceInDeviceCapabilityImpl();
+		return subdeviceInDeviceCapability;
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Subcapability createSubcapability() {
-		SubcapabilityImpl subcapability = new SubcapabilityImpl();
-		return subcapability;
+	public Subcapabilities createSubcapabilities() {
+		SubcapabilitiesImpl subcapabilities = new SubcapabilitiesImpl();
+		return subcapabilities;
 	}
 
 	/**

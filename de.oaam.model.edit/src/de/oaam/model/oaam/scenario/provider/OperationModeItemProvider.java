@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.scenario.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.OperationMode;
@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OperationModeItemProvider extends ElementAItemProvider {
+public class OperationModeItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

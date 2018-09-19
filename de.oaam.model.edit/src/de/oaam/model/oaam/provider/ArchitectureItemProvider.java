@@ -6,19 +6,16 @@ package de.oaam.model.oaam.provider;
 import de.oaam.model.oaam.Architecture;
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsFactory;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
-
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.hardware.HardwareFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
-
-import de.oaam.model.oaam.mapping.MappingFactory;
-
 import de.oaam.model.oaam.restrictions.RestrictionsFactory;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -45,7 +42,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ArchitectureItemProvider extends ElementAItemProvider {
+public class ArchitectureItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -109,12 +106,12 @@ public class ArchitectureItemProvider extends ElementAItemProvider {
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__LIBRARY);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__SCENARIO);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__SYSTEMS);
-			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__FUNCTION);
+			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__FUNCTIONS);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__HARDWARE);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__ANATOMY);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__CAPABILITIES);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__RESTRICTIONS);
-			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__MAPPING);
+			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__ALLOCATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -173,12 +170,12 @@ public class ArchitectureItemProvider extends ElementAItemProvider {
 			case OaamPackage.ARCHITECTURE__LIBRARY:
 			case OaamPackage.ARCHITECTURE__SCENARIO:
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
-			case OaamPackage.ARCHITECTURE__FUNCTION:
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 			case OaamPackage.ARCHITECTURE__ANATOMY:
 			case OaamPackage.ARCHITECTURE__CAPABILITIES:
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
-			case OaamPackage.ARCHITECTURE__MAPPING:
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -213,7 +210,7 @@ public class ArchitectureItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(OaamPackage.Literals.ARCHITECTURE__FUNCTION,
+				(OaamPackage.Literals.ARCHITECTURE__FUNCTIONS,
 				 FunctionsFactory.eINSTANCE.createFunctions()));
 
 		newChildDescriptors.add
@@ -238,8 +235,8 @@ public class ArchitectureItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(OaamPackage.Literals.ARCHITECTURE__MAPPING,
-				 MappingFactory.eINSTANCE.createMapping()));
+				(OaamPackage.Literals.ARCHITECTURE__ALLOCATIONS,
+				 AllocationsFactory.eINSTANCE.createAllocations()));
 	}
 
 	/**

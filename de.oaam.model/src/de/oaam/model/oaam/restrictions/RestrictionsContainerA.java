@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSegregationsRestrictions <em>Segregations Restrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSegregationRestrictions <em>Segregation Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSubrestrictions <em>Subrestrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
  * </ul>
@@ -37,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface RestrictionsContainerA extends ElementA {
+public interface RestrictionsContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Device Type Restrictions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.DeviceTypeRestriction}.
@@ -189,19 +189,19 @@ public interface RestrictionsContainerA extends ElementA {
 	EList<ConectionTypeRestriction> getConnectionTypeRestrictions();
 
 	/**
-	 * Returns the value of the '<em><b>Segregations Restrictions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Segregation Restrictions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.SegregationRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All segregation restrictions.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Segregations Restrictions</em>' containment reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_SegregationsRestrictions()
+	 * @return the value of the '<em>Segregation Restrictions</em>' containment reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_SegregationRestrictions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SegregationRestriction> getSegregationsRestrictions();
+	EList<SegregationRestriction> getSegregationRestrictions();
 
 	/**
 	 * Returns the value of the '<em><b>Subrestrictions</b></em>' containment reference list.

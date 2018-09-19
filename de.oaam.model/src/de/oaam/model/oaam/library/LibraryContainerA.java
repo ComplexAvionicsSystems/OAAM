@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.DataTypeA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getResourceTypes <em>Resource Types</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getRessourceBundles <em>Ressource Bundles</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getResourceBundles <em>Resource Bundles</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getResourceModifiers <em>Resource Modifiers</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getResourceTypeDissimilarities <em>Resource Type Dissimilarities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getTaskTypes <em>Task Types</em>}</li>
@@ -33,8 +33,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getConnectionTypes <em>Connection Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getWireTypes <em>Wire Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getLocationTypes <em>Location Types</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getRouteTypes <em>Route Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getDuctTypes <em>Duct Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getGenericAttributes <em>Generic Attributes</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getSublibraries <em>Sublibraries</em>}</li>
  * </ul>
  *
@@ -42,7 +43,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface LibraryContainerA extends ElementA {
+public interface LibraryContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Data Types</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.common.DataTypeA}.
@@ -74,19 +75,19 @@ public interface LibraryContainerA extends ElementA {
 	EList<ResourceType> getResourceTypes();
 
 	/**
-	 * Returns the value of the '<em><b>Ressource Bundles</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceBundles}.
+	 * Returns the value of the '<em><b>Resource Bundles</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceBundle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All resource bundles of this library
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ressource Bundles</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_RessourceBundles()
+	 * @return the value of the '<em>Resource Bundles</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_ResourceBundles()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResourceBundles> getRessourceBundles();
+	EList<ResourceBundle> getResourceBundles();
 
 	/**
 	 * Returns the value of the '<em><b>Resource Modifiers</b></em>' containment reference list.
@@ -254,19 +255,19 @@ public interface LibraryContainerA extends ElementA {
 	EList<LocationType> getLocationTypes();
 
 	/**
-	 * Returns the value of the '<em><b>Route Types</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Duct Types</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.DuctType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * All route types of this library
+	 * All duct types of this library
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Route Types</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_RouteTypes()
+	 * @return the value of the '<em>Duct Types</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_DuctTypes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DuctType> getRouteTypes();
+	EList<DuctType> getDuctTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Generic Attributes</b></em>' containment reference list.
@@ -282,6 +283,21 @@ public interface LibraryContainerA extends ElementA {
 	 * @generated
 	 */
 	EList<AttributeDefinition> getGenericAttributes();
+
+	/**
+	 * Returns the value of the '<em><b>Power Sources</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.PowerSource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All power sources
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Power Sources</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_PowerSources()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PowerSource> getPowerSources();
 
 	/**
 	 * Returns the value of the '<em><b>Sublibraries</b></em>' containment reference list.

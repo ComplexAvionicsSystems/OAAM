@@ -4,7 +4,7 @@ package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -866,16 +866,16 @@ public class InformationImpl extends ProvidedOutputAImpl implements Information 
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case SystemsPackage.INFORMATION__ID: return CommonPackage.ELEMENT_A__ID;
-				case SystemsPackage.INFORMATION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case SystemsPackage.INFORMATION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case SystemsPackage.INFORMATION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case SystemsPackage.INFORMATION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case SystemsPackage.INFORMATION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case SystemsPackage.INFORMATION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case SystemsPackage.INFORMATION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case SystemsPackage.INFORMATION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case SystemsPackage.INFORMATION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case SystemsPackage.INFORMATION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case SystemsPackage.INFORMATION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case SystemsPackage.INFORMATION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case SystemsPackage.INFORMATION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case SystemsPackage.INFORMATION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case SystemsPackage.INFORMATION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -906,16 +906,16 @@ public class InformationImpl extends ProvidedOutputAImpl implements Information 
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return SystemsPackage.INFORMATION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return SystemsPackage.INFORMATION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return SystemsPackage.INFORMATION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return SystemsPackage.INFORMATION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return SystemsPackage.INFORMATION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return SystemsPackage.INFORMATION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return SystemsPackage.INFORMATION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return SystemsPackage.INFORMATION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return SystemsPackage.INFORMATION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return SystemsPackage.INFORMATION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return SystemsPackage.INFORMATION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return SystemsPackage.INFORMATION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return SystemsPackage.INFORMATION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return SystemsPackage.INFORMATION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return SystemsPackage.INFORMATION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return SystemsPackage.INFORMATION__TRACE_LINK;
 				default: return -1;
 			}
 		}

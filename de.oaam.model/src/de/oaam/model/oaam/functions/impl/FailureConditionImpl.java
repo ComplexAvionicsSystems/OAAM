@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.BoolA;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 
@@ -46,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FailureConditionImpl extends ElementAImpl implements FailureCondition {
+public class FailureConditionImpl extends OaamBaseElementAImpl implements FailureCondition {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

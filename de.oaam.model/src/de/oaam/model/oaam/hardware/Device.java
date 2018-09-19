@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.hardware;
 
 import de.oaam.model.oaam.anatomy.Location;
-
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
@@ -28,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getIos <em>Ios</em>}</li>
- *   <li>{@link de.oaam.model.oaam.hardware.Device#getSubDevices <em>Sub Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.Device#getSubdevices <em>Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getLocationBinding <em>Location Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getPowerSources <em>Power Sources</em>}</li>
  * </ul>
@@ -37,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Device extends ResourceProviderInstanceA, ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Device extends ResourceProviderInstanceA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -79,19 +78,19 @@ public interface Device extends ResourceProviderInstanceA, ElementA, VariantDepe
 	EList<Io> getIos();
 
 	/**
-	 * Returns the value of the '<em><b>Sub Devices</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Subdevices</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Device}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Subdevices of this device.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Sub Devices</em>' containment reference list.
-	 * @see de.oaam.model.oaam.hardware.HardwarePackage#getDevice_SubDevices()
+	 * @return the value of the '<em>Subdevices</em>' containment reference list.
+	 * @see de.oaam.model.oaam.hardware.HardwarePackage#getDevice_Subdevices()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Device> getSubDevices();
+	EList<Device> getSubdevices();
 
 	/**
 	 * Returns the value of the '<em><b>Location Binding</b></em>' reference.

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class OperationModeReferenceImpl extends ElementAImpl implements OperationModeReference {
+public class OperationModeReferenceImpl extends OaamBaseElementAImpl implements OperationModeReference {
 	/**
 	 * The cached value of the '{@link #getOperationMode() <em>Operation Mode</em>}' reference.
 	 * <!-- begin-user-doc -->

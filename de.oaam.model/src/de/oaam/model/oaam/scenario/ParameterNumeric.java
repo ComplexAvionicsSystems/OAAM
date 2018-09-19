@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import de.oaam.model.oaam.common.ElementA;
  * @model
  * @generated
  */
-public interface ParameterNumeric extends ParameterA, ElementA {
+public interface ParameterNumeric extends ParameterA, OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

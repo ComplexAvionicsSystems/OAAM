@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.scenario.util;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -90,14 +90,14 @@ public class ScenarioSwitch<T> extends Switch<T> {
 			case ScenarioPackage.SCENARIO_CONTAINER_A: {
 				ScenarioContainerA scenarioContainerA = (ScenarioContainerA)theEObject;
 				T result = caseScenarioContainerA(scenarioContainerA);
-				if (result == null) result = caseElementA(scenarioContainerA);
+				if (result == null) result = caseOaamBaseElementA(scenarioContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ScenarioPackage.OPERATION_MODE: {
 				OperationMode operationMode = (OperationMode)theEObject;
 				T result = caseOperationMode(operationMode);
-				if (result == null) result = caseElementA(operationMode);
+				if (result == null) result = caseOaamBaseElementA(operationMode);
 				if (result == null) result = caseVariantDependentElementA(operationMode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -106,7 +106,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				ParameterNumeric parameterNumeric = (ParameterNumeric)theEObject;
 				T result = caseParameterNumeric(parameterNumeric);
 				if (result == null) result = caseParameterA(parameterNumeric);
-				if (result == null) result = caseElementA(parameterNumeric);
+				if (result == null) result = caseOaamBaseElementA(parameterNumeric);
 				if (result == null) result = caseModeDependentElementA(parameterNumeric);
 				if (result == null) result = caseVariantDependentElementA(parameterNumeric);
 				if (result == null) result = defaultCase(theEObject);
@@ -116,7 +116,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				ParameterBool parameterBool = (ParameterBool)theEObject;
 				T result = caseParameterBool(parameterBool);
 				if (result == null) result = caseParameterA(parameterBool);
-				if (result == null) result = caseElementA(parameterBool);
+				if (result == null) result = caseOaamBaseElementA(parameterBool);
 				if (result == null) result = caseModeDependentElementA(parameterBool);
 				if (result == null) result = caseVariantDependentElementA(parameterBool);
 				if (result == null) result = defaultCase(theEObject);
@@ -125,7 +125,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 			case ScenarioPackage.VARIANT: {
 				Variant variant = (Variant)theEObject;
 				T result = caseVariant(variant);
-				if (result == null) result = caseElementA(variant);
+				if (result == null) result = caseOaamBaseElementA(variant);
 				if (result == null) result = caseModeDependentElementA(variant);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -133,7 +133,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 			case ScenarioPackage.OPERATION_MODE_REFERENCE: {
 				OperationModeReference operationModeReference = (OperationModeReference)theEObject;
 				T result = caseOperationModeReference(operationModeReference);
-				if (result == null) result = caseElementA(operationModeReference);
+				if (result == null) result = caseOaamBaseElementA(operationModeReference);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,7 +141,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				Scenario scenario = (Scenario)theEObject;
 				T result = caseScenario(scenario);
 				if (result == null) result = caseScenarioContainerA(scenario);
-				if (result == null) result = caseElementA(scenario);
+				if (result == null) result = caseOaamBaseElementA(scenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,7 +149,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				Subscenario subscenario = (Subscenario)theEObject;
 				T result = caseSubscenario(subscenario);
 				if (result == null) result = caseScenarioContainerA(subscenario);
-				if (result == null) result = caseElementA(subscenario);
+				if (result == null) result = caseOaamBaseElementA(subscenario);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -323,17 +323,17 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

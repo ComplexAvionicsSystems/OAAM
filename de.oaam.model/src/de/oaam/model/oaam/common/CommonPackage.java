@@ -42,7 +42,7 @@ public interface CommonPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v100/common";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v140/common";
 
 	/**
 	 * The package namespace name.
@@ -61,14 +61,14 @@ public interface CommonPackage extends EPackage {
 	CommonPackage eINSTANCE = de.oaam.model.oaam.common.impl.CommonPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.ElementAImpl <em>Element A</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.OaamBaseElementAImpl <em>Oaam Base Element A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.common.impl.ElementAImpl
-	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getElementA()
+	 * @see de.oaam.model.oaam.common.impl.OaamBaseElementAImpl
+	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getOaamBaseElementA()
 	 * @generated
 	 */
-	int ELEMENT_A = 0;
+	int OAAM_BASE_ELEMENT_A = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -77,7 +77,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__ID = 0;
+	int OAAM_BASE_ELEMENT_A__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -86,7 +86,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__NAME = 1;
+	int OAAM_BASE_ELEMENT_A__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -95,7 +95,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__STYLE = 2;
+	int OAAM_BASE_ELEMENT_A__STYLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -104,7 +104,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__ATTRIBUTES = 3;
+	int OAAM_BASE_ELEMENT_A__ATTRIBUTES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -113,7 +113,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__DOCUMENTATION = 4;
+	int OAAM_BASE_ELEMENT_A__DOCUMENTATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -122,7 +122,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__MODIFIED = 5;
+	int OAAM_BASE_ELEMENT_A__MODIFIED = 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -131,7 +131,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__MODIFIER = 6;
+	int OAAM_BASE_ELEMENT_A__MODIFIER = 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -140,25 +140,25 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A__TRACE_LINK = 7;
+	int OAAM_BASE_ELEMENT_A__TRACE_LINK = 7;
 
 	/**
-	 * The number of structural features of the '<em>Element A</em>' class.
+	 * The number of structural features of the '<em>Oaam Base Element A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A_FEATURE_COUNT = 8;
+	int OAAM_BASE_ELEMENT_A_FEATURE_COUNT = 8;
 
 	/**
-	 * The number of operations of the '<em>Element A</em>' class.
+	 * The number of operations of the '<em>Oaam Base Element A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_A_OPERATION_COUNT = 0;
+	int OAAM_BASE_ELEMENT_A_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.BoolAImpl <em>Bool A</em>}' class.
@@ -205,7 +205,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__ID = ELEMENT_A__ID;
+	int ATTRIBUTE_A__ID = OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -214,7 +214,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__NAME = ELEMENT_A__NAME;
+	int ATTRIBUTE_A__NAME = OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -223,7 +223,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__STYLE = ELEMENT_A__STYLE;
+	int ATTRIBUTE_A__STYLE = OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -232,7 +232,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__ATTRIBUTES = ELEMENT_A__ATTRIBUTES;
+	int ATTRIBUTE_A__ATTRIBUTES = OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -241,7 +241,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__DOCUMENTATION = ELEMENT_A__DOCUMENTATION;
+	int ATTRIBUTE_A__DOCUMENTATION = OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -250,7 +250,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__MODIFIED = ELEMENT_A__MODIFIED;
+	int ATTRIBUTE_A__MODIFIED = OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -259,7 +259,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__MODIFIER = ELEMENT_A__MODIFIER;
+	int ATTRIBUTE_A__MODIFIER = OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -268,7 +268,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A__TRACE_LINK = ELEMENT_A__TRACE_LINK;
+	int ATTRIBUTE_A__TRACE_LINK = OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The number of structural features of the '<em>Attribute A</em>' class.
@@ -277,7 +277,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A_FEATURE_COUNT = ELEMENT_A_FEATURE_COUNT + 0;
+	int ATTRIBUTE_A_FEATURE_COUNT = OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Attribute A</em>' class.
@@ -286,7 +286,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_A_OPERATION_COUNT = ELEMENT_A_OPERATION_COUNT + 0;
+	int ATTRIBUTE_A_OPERATION_COUNT = OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.AttributeStringImpl <em>Attribute String</em>}' class.
@@ -977,7 +977,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__ID = ELEMENT_A__ID;
+	int DATA_TYPE_A__ID = OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -986,7 +986,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__NAME = ELEMENT_A__NAME;
+	int DATA_TYPE_A__NAME = OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -995,7 +995,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__STYLE = ELEMENT_A__STYLE;
+	int DATA_TYPE_A__STYLE = OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1004,7 +1004,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__ATTRIBUTES = ELEMENT_A__ATTRIBUTES;
+	int DATA_TYPE_A__ATTRIBUTES = OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1013,7 +1013,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__DOCUMENTATION = ELEMENT_A__DOCUMENTATION;
+	int DATA_TYPE_A__DOCUMENTATION = OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1022,7 +1022,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__MODIFIED = ELEMENT_A__MODIFIED;
+	int DATA_TYPE_A__MODIFIED = OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1031,7 +1031,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__MODIFIER = ELEMENT_A__MODIFIER;
+	int DATA_TYPE_A__MODIFIER = OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1040,7 +1040,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A__TRACE_LINK = ELEMENT_A__TRACE_LINK;
+	int DATA_TYPE_A__TRACE_LINK = OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The number of structural features of the '<em>Data Type A</em>' class.
@@ -1049,7 +1049,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A_FEATURE_COUNT = ELEMENT_A_FEATURE_COUNT + 0;
+	int DATA_TYPE_A_FEATURE_COUNT = OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Data Type A</em>' class.
@@ -1058,7 +1058,7 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_TYPE_A_OPERATION_COUNT = ELEMENT_A_OPERATION_COUNT + 0;
+	int DATA_TYPE_A_OPERATION_COUNT = OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.IntegerImpl <em>Integer</em>}' class.
@@ -1891,102 +1891,102 @@ public interface CommonPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element A</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @return the meta object for class '<em>Oaam Base Element A</em>'.
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
 	 * @generated
 	 */
-	EClass getElementA();
+	EClass getOaamBaseElementA();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getId()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getId()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Id();
+	EAttribute getOaamBaseElementA_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getName()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getName()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Name();
+	EAttribute getOaamBaseElementA_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getStyle <em>Style</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getStyle <em>Style</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Style</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getStyle()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getStyle()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Style();
+	EAttribute getOaamBaseElementA_Style();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.common.ElementA#getAttributes <em>Attributes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.common.OaamBaseElementA#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getAttributes()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getAttributes()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EReference getElementA_Attributes();
+	EReference getOaamBaseElementA_Attributes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getDocumentation <em>Documentation</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getDocumentation <em>Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Documentation</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getDocumentation()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getDocumentation()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Documentation();
+	EAttribute getOaamBaseElementA_Documentation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getModified <em>Modified</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getModified <em>Modified</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Modified</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getModified()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getModified()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Modified();
+	EAttribute getOaamBaseElementA_Modified();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getModifier <em>Modifier</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getModifier <em>Modifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Modifier</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getModifier()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getModifier()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_Modifier();
+	EAttribute getOaamBaseElementA_Modifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.ElementA#getTraceLink <em>Trace Link</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.OaamBaseElementA#getTraceLink <em>Trace Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Trace Link</em>'.
-	 * @see de.oaam.model.oaam.common.ElementA#getTraceLink()
-	 * @see #getElementA()
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA#getTraceLink()
+	 * @see #getOaamBaseElementA()
 	 * @generated
 	 */
-	EAttribute getElementA_TraceLink();
+	EAttribute getOaamBaseElementA_TraceLink();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.BoolA <em>Bool A</em>}'.
@@ -2411,14 +2411,14 @@ public interface CommonPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.ElementAImpl <em>Element A</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.OaamBaseElementAImpl <em>Oaam Base Element A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.common.impl.ElementAImpl
-		 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getElementA()
+		 * @see de.oaam.model.oaam.common.impl.OaamBaseElementAImpl
+		 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getOaamBaseElementA()
 		 * @generated
 		 */
-		EClass ELEMENT_A = eINSTANCE.getElementA();
+		EClass OAAM_BASE_ELEMENT_A = eINSTANCE.getOaamBaseElementA();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -2426,7 +2426,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__ID = eINSTANCE.getElementA_Id();
+		EAttribute OAAM_BASE_ELEMENT_A__ID = eINSTANCE.getOaamBaseElementA_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2434,7 +2434,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__NAME = eINSTANCE.getElementA_Name();
+		EAttribute OAAM_BASE_ELEMENT_A__NAME = eINSTANCE.getOaamBaseElementA_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
@@ -2442,7 +2442,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__STYLE = eINSTANCE.getElementA_Style();
+		EAttribute OAAM_BASE_ELEMENT_A__STYLE = eINSTANCE.getOaamBaseElementA_Style();
 
 		/**
 		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
@@ -2450,7 +2450,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT_A__ATTRIBUTES = eINSTANCE.getElementA_Attributes();
+		EReference OAAM_BASE_ELEMENT_A__ATTRIBUTES = eINSTANCE.getOaamBaseElementA_Attributes();
 
 		/**
 		 * The meta object literal for the '<em><b>Documentation</b></em>' attribute feature.
@@ -2458,7 +2458,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__DOCUMENTATION = eINSTANCE.getElementA_Documentation();
+		EAttribute OAAM_BASE_ELEMENT_A__DOCUMENTATION = eINSTANCE.getOaamBaseElementA_Documentation();
 
 		/**
 		 * The meta object literal for the '<em><b>Modified</b></em>' attribute feature.
@@ -2466,7 +2466,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__MODIFIED = eINSTANCE.getElementA_Modified();
+		EAttribute OAAM_BASE_ELEMENT_A__MODIFIED = eINSTANCE.getOaamBaseElementA_Modified();
 
 		/**
 		 * The meta object literal for the '<em><b>Modifier</b></em>' attribute feature.
@@ -2474,7 +2474,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__MODIFIER = eINSTANCE.getElementA_Modifier();
+		EAttribute OAAM_BASE_ELEMENT_A__MODIFIER = eINSTANCE.getOaamBaseElementA_Modifier();
 
 		/**
 		 * The meta object literal for the '<em><b>Trace Link</b></em>' attribute feature.
@@ -2482,7 +2482,7 @@ public interface CommonPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT_A__TRACE_LINK = eINSTANCE.getElementA_TraceLink();
+		EAttribute OAAM_BASE_ELEMENT_A__TRACE_LINK = eINSTANCE.getOaamBaseElementA_TraceLink();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.BoolAImpl <em>Bool A</em>}' class.

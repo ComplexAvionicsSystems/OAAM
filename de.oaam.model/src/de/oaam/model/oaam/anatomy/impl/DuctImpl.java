@@ -8,7 +8,7 @@ import de.oaam.model.oaam.anatomy.DuctOpening;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DuctType;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
@@ -55,8 +55,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getLength <em>Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getType <em>Type</em>}</li>
- *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getDuctopeningA <em>Ductopening A</em>}</li>
- *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getDuctopeningB <em>Ductopening B</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getStartingPoint <em>Starting Point</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.impl.DuctImpl#getEndPoint <em>End Point</em>}</li>
  * </ul>
  *
  * @generated
@@ -263,24 +263,24 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	protected DuctType type;
 
 	/**
-	 * The cached value of the '{@link #getDuctopeningA() <em>Ductopening A</em>}' reference.
+	 * The cached value of the '{@link #getStartingPoint() <em>Starting Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDuctopeningA()
+	 * @see #getStartingPoint()
 	 * @generated
 	 * @ordered
 	 */
-	protected DuctOpening ductopeningA;
+	protected DuctOpening startingPoint;
 
 	/**
-	 * The cached value of the '{@link #getDuctopeningB() <em>Ductopening B</em>}' reference.
+	 * The cached value of the '{@link #getEndPoint() <em>End Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDuctopeningB()
+	 * @see #getEndPoint()
 	 * @generated
 	 * @ordered
 	 */
-	protected DuctOpening ductopeningB;
+	protected DuctOpening endPoint;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -548,16 +548,16 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DuctOpening getDuctopeningA() {
-		if (ductopeningA != null && ductopeningA.eIsProxy()) {
-			InternalEObject oldDuctopeningA = (InternalEObject)ductopeningA;
-			ductopeningA = (DuctOpening)eResolveProxy(oldDuctopeningA);
-			if (ductopeningA != oldDuctopeningA) {
+	public DuctOpening getStartingPoint() {
+		if (startingPoint != null && startingPoint.eIsProxy()) {
+			InternalEObject oldStartingPoint = (InternalEObject)startingPoint;
+			startingPoint = (DuctOpening)eResolveProxy(oldStartingPoint);
+			if (startingPoint != oldStartingPoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnatomyPackage.DUCT__DUCTOPENING_A, oldDuctopeningA, ductopeningA));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnatomyPackage.DUCT__STARTING_POINT, oldStartingPoint, startingPoint));
 			}
 		}
-		return ductopeningA;
+		return startingPoint;
 	}
 
 	/**
@@ -565,8 +565,8 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DuctOpening basicGetDuctopeningA() {
-		return ductopeningA;
+	public DuctOpening basicGetStartingPoint() {
+		return startingPoint;
 	}
 
 	/**
@@ -574,11 +574,11 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDuctopeningA(DuctOpening newDuctopeningA) {
-		DuctOpening oldDuctopeningA = ductopeningA;
-		ductopeningA = newDuctopeningA;
+	public void setStartingPoint(DuctOpening newStartingPoint) {
+		DuctOpening oldStartingPoint = startingPoint;
+		startingPoint = newStartingPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AnatomyPackage.DUCT__DUCTOPENING_A, oldDuctopeningA, ductopeningA));
+			eNotify(new ENotificationImpl(this, Notification.SET, AnatomyPackage.DUCT__STARTING_POINT, oldStartingPoint, startingPoint));
 	}
 
 	/**
@@ -586,16 +586,16 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DuctOpening getDuctopeningB() {
-		if (ductopeningB != null && ductopeningB.eIsProxy()) {
-			InternalEObject oldDuctopeningB = (InternalEObject)ductopeningB;
-			ductopeningB = (DuctOpening)eResolveProxy(oldDuctopeningB);
-			if (ductopeningB != oldDuctopeningB) {
+	public DuctOpening getEndPoint() {
+		if (endPoint != null && endPoint.eIsProxy()) {
+			InternalEObject oldEndPoint = (InternalEObject)endPoint;
+			endPoint = (DuctOpening)eResolveProxy(oldEndPoint);
+			if (endPoint != oldEndPoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnatomyPackage.DUCT__DUCTOPENING_B, oldDuctopeningB, ductopeningB));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AnatomyPackage.DUCT__END_POINT, oldEndPoint, endPoint));
 			}
 		}
-		return ductopeningB;
+		return endPoint;
 	}
 
 	/**
@@ -603,8 +603,8 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DuctOpening basicGetDuctopeningB() {
-		return ductopeningB;
+	public DuctOpening basicGetEndPoint() {
+		return endPoint;
 	}
 
 	/**
@@ -612,11 +612,11 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDuctopeningB(DuctOpening newDuctopeningB) {
-		DuctOpening oldDuctopeningB = ductopeningB;
-		ductopeningB = newDuctopeningB;
+	public void setEndPoint(DuctOpening newEndPoint) {
+		DuctOpening oldEndPoint = endPoint;
+		endPoint = newEndPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AnatomyPackage.DUCT__DUCTOPENING_B, oldDuctopeningB, ductopeningB));
+			eNotify(new ENotificationImpl(this, Notification.SET, AnatomyPackage.DUCT__END_POINT, oldEndPoint, endPoint));
 	}
 
 	/**
@@ -668,12 +668,12 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 			case AnatomyPackage.DUCT__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
-			case AnatomyPackage.DUCT__DUCTOPENING_A:
-				if (resolve) return getDuctopeningA();
-				return basicGetDuctopeningA();
-			case AnatomyPackage.DUCT__DUCTOPENING_B:
-				if (resolve) return getDuctopeningB();
-				return basicGetDuctopeningB();
+			case AnatomyPackage.DUCT__STARTING_POINT:
+				if (resolve) return getStartingPoint();
+				return basicGetStartingPoint();
+			case AnatomyPackage.DUCT__END_POINT:
+				if (resolve) return getEndPoint();
+				return basicGetEndPoint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -726,11 +726,11 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 			case AnatomyPackage.DUCT__TYPE:
 				setType((DuctType)newValue);
 				return;
-			case AnatomyPackage.DUCT__DUCTOPENING_A:
-				setDuctopeningA((DuctOpening)newValue);
+			case AnatomyPackage.DUCT__STARTING_POINT:
+				setStartingPoint((DuctOpening)newValue);
 				return;
-			case AnatomyPackage.DUCT__DUCTOPENING_B:
-				setDuctopeningB((DuctOpening)newValue);
+			case AnatomyPackage.DUCT__END_POINT:
+				setEndPoint((DuctOpening)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -780,11 +780,11 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 			case AnatomyPackage.DUCT__TYPE:
 				setType((DuctType)null);
 				return;
-			case AnatomyPackage.DUCT__DUCTOPENING_A:
-				setDuctopeningA((DuctOpening)null);
+			case AnatomyPackage.DUCT__STARTING_POINT:
+				setStartingPoint((DuctOpening)null);
 				return;
-			case AnatomyPackage.DUCT__DUCTOPENING_B:
-				setDuctopeningB((DuctOpening)null);
+			case AnatomyPackage.DUCT__END_POINT:
+				setEndPoint((DuctOpening)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -822,10 +822,10 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 				return length != LENGTH_EDEFAULT;
 			case AnatomyPackage.DUCT__TYPE:
 				return type != null;
-			case AnatomyPackage.DUCT__DUCTOPENING_A:
-				return ductopeningA != null;
-			case AnatomyPackage.DUCT__DUCTOPENING_B:
-				return ductopeningB != null;
+			case AnatomyPackage.DUCT__STARTING_POINT:
+				return startingPoint != null;
+			case AnatomyPackage.DUCT__END_POINT:
+				return endPoint != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -837,16 +837,16 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case AnatomyPackage.DUCT__ID: return CommonPackage.ELEMENT_A__ID;
-				case AnatomyPackage.DUCT__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case AnatomyPackage.DUCT__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case AnatomyPackage.DUCT__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case AnatomyPackage.DUCT__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case AnatomyPackage.DUCT__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case AnatomyPackage.DUCT__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case AnatomyPackage.DUCT__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case AnatomyPackage.DUCT__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case AnatomyPackage.DUCT__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case AnatomyPackage.DUCT__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case AnatomyPackage.DUCT__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case AnatomyPackage.DUCT__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case AnatomyPackage.DUCT__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case AnatomyPackage.DUCT__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case AnatomyPackage.DUCT__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -872,16 +872,16 @@ public class DuctImpl extends ResourceProviderInstanceAImpl implements Duct {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return AnatomyPackage.DUCT__ID;
-				case CommonPackage.ELEMENT_A__NAME: return AnatomyPackage.DUCT__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return AnatomyPackage.DUCT__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return AnatomyPackage.DUCT__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return AnatomyPackage.DUCT__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return AnatomyPackage.DUCT__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return AnatomyPackage.DUCT__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return AnatomyPackage.DUCT__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return AnatomyPackage.DUCT__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return AnatomyPackage.DUCT__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return AnatomyPackage.DUCT__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return AnatomyPackage.DUCT__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return AnatomyPackage.DUCT__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return AnatomyPackage.DUCT__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return AnatomyPackage.DUCT__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return AnatomyPackage.DUCT__TRACE_LINK;
 				default: return -1;
 			}
 		}

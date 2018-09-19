@@ -6,9 +6,9 @@ import de.oaam.model.oaam.anatomy.Area;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.Signal;
-import de.oaam.model.oaam.functions.Subfunction;
+import de.oaam.model.oaam.functions.Subfunctions;
 
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
@@ -18,13 +18,14 @@ import de.oaam.model.oaam.restrictions.ConnectionRestrinctionA;
 import de.oaam.model.oaam.restrictions.DeviceRestrictionA;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
-import de.oaam.model.oaam.restrictions.SubFunctionRestrictionA;
+import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -51,7 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getSignals <em>Signals</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getSubFunctions <em>Sub Functions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.AreaRestrictionImpl#getId <em>Id</em>}</li>
@@ -83,14 +84,14 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 	protected EList<Signal> signals;
 
 	/**
-	 * The cached value of the '{@link #getSubFunctions() <em>Sub Functions</em>}' reference list.
+	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFunctions()
+	 * @see #getSubfunctions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Subfunction> subFunctions;
+	protected EList<Subfunctions> subfunctions;
 
 	/**
 	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' reference.
@@ -368,11 +369,11 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Subfunction> getSubFunctions() {
-		if (subFunctions == null) {
-			subFunctions = new EObjectResolvingEList<Subfunction>(Subfunction.class, this, RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS);
+	public EList<Subfunctions> getSubfunctions() {
+		if (subfunctions == null) {
+			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS);
 		}
-		return subFunctions;
+		return subfunctions;
 	}
 
 	/**
@@ -688,8 +689,8 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 		switch (featureID) {
 			case RestrictionsPackage.AREA_RESTRICTION__SIGNALS:
 				return getSignals();
-			case RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS:
-				return getSubFunctions();
+			case RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS:
+				return getSubfunctions();
 			case RestrictionsPackage.AREA_RESTRICTION__DEVICES:
 				if (resolve) return getDevices();
 				return basicGetDevices();
@@ -738,9 +739,9 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 				getSignals().clear();
 				getSignals().addAll((Collection<? extends Signal>)newValue);
 				return;
-			case RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS:
-				getSubFunctions().clear();
-				getSubFunctions().addAll((Collection<? extends Subfunction>)newValue);
+			case RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
+				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
 				return;
 			case RestrictionsPackage.AREA_RESTRICTION__DEVICES:
 				setDevices((Device)newValue);
@@ -807,8 +808,8 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 			case RestrictionsPackage.AREA_RESTRICTION__SIGNALS:
 				getSignals().clear();
 				return;
-			case RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS:
-				getSubFunctions().clear();
+			case RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
 				return;
 			case RestrictionsPackage.AREA_RESTRICTION__DEVICES:
 				setDevices((Device)null);
@@ -869,8 +870,8 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 		switch (featureID) {
 			case RestrictionsPackage.AREA_RESTRICTION__SIGNALS:
 				return signals != null && !signals.isEmpty();
-			case RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS:
-				return subFunctions != null && !subFunctions.isEmpty();
+			case RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS:
+				return subfunctions != null && !subfunctions.isEmpty();
 			case RestrictionsPackage.AREA_RESTRICTION__DEVICES:
 				return devices != null;
 			case RestrictionsPackage.AREA_RESTRICTION__CONNECTIONS:
@@ -918,9 +919,9 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 				default: return -1;
 			}
 		}
-		if (baseClass == SubFunctionRestrictionA.class) {
+		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS: return RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS;
+				case RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS: return RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS;
 				default: return -1;
 			}
 		}
@@ -936,16 +937,16 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.AREA_RESTRICTION__ID: return CommonPackage.ELEMENT_A__ID;
-				case RestrictionsPackage.AREA_RESTRICTION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case RestrictionsPackage.AREA_RESTRICTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case RestrictionsPackage.AREA_RESTRICTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case RestrictionsPackage.AREA_RESTRICTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case RestrictionsPackage.AREA_RESTRICTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case RestrictionsPackage.AREA_RESTRICTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case RestrictionsPackage.AREA_RESTRICTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case RestrictionsPackage.AREA_RESTRICTION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case RestrictionsPackage.AREA_RESTRICTION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case RestrictionsPackage.AREA_RESTRICTION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case RestrictionsPackage.AREA_RESTRICTION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case RestrictionsPackage.AREA_RESTRICTION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case RestrictionsPackage.AREA_RESTRICTION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case RestrictionsPackage.AREA_RESTRICTION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case RestrictionsPackage.AREA_RESTRICTION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -977,9 +978,9 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 				default: return -1;
 			}
 		}
-		if (baseClass == SubFunctionRestrictionA.class) {
+		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (baseFeatureID) {
-				case RestrictionsPackage.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS: return RestrictionsPackage.AREA_RESTRICTION__SUB_FUNCTIONS;
+				case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS: return RestrictionsPackage.AREA_RESTRICTION__SUBFUNCTIONS;
 				default: return -1;
 			}
 		}
@@ -995,16 +996,16 @@ public class AreaRestrictionImpl extends TaskRestrictionAImpl implements AreaRes
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return RestrictionsPackage.AREA_RESTRICTION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return RestrictionsPackage.AREA_RESTRICTION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return RestrictionsPackage.AREA_RESTRICTION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.AREA_RESTRICTION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.AREA_RESTRICTION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return RestrictionsPackage.AREA_RESTRICTION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return RestrictionsPackage.AREA_RESTRICTION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return RestrictionsPackage.AREA_RESTRICTION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return RestrictionsPackage.AREA_RESTRICTION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return RestrictionsPackage.AREA_RESTRICTION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return RestrictionsPackage.AREA_RESTRICTION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.AREA_RESTRICTION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.AREA_RESTRICTION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return RestrictionsPackage.AREA_RESTRICTION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return RestrictionsPackage.AREA_RESTRICTION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return RestrictionsPackage.AREA_RESTRICTION__TRACE_LINK;
 				default: return -1;
 			}
 		}

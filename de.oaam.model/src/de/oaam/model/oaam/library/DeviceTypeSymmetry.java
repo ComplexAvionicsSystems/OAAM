@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Defines two or more device types as symmetric. A symmetric device type is usfull to describe dual-lane devices, because it enables a symmetric mapping of functions to both lanes in the same location.
+ * Defines two or more device types as symmetric. A symmetric device type is usfull to describe dual-lane devices, because it enables a symmetric allocations of functions to both lanes in the same location.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceTypeSymmetry extends ElementA {
+public interface DeviceTypeSymmetry extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Device Types</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.DeviceType}.

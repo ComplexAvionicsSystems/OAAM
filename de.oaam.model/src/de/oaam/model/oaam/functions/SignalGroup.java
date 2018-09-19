@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SignalGroup extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface SignalGroup extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Signals</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.Signal}.

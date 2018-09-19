@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.systems.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.systems.SystemsContainerA;
@@ -29,7 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SystemsContainerAItemProvider extends ElementAItemProvider {
+public class SystemsContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

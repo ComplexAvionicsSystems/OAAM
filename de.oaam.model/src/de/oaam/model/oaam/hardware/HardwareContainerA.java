@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface HardwareContainerA extends ElementA {
+public interface HardwareContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Devices</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Device}.

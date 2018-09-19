@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface System extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface System extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Provided Outputs</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.systems.ProvidedOutputA}.

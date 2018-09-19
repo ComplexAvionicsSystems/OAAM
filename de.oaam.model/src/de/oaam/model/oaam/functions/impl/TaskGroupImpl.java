@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
@@ -13,17 +13,12 @@ import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -39,12 +34,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl#getTasks <em>Tasks</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.TaskGroupImpl#isIsAtomic <em>Is Atomic</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
+public class TaskGroupImpl extends OaamBaseElementAImpl implements TaskGroup {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -74,26 +68,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 	 * @ordered
 	 */
 	protected EList<Task> tasks;
-
-	/**
-	 * The default value of the '{@link #isIsAtomic() <em>Is Atomic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsAtomic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_ATOMIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsAtomic() <em>Is Atomic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsAtomic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isAtomic = IS_ATOMIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,27 +129,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsAtomic() {
-		return isAtomic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsAtomic(boolean newIsAtomic) {
-		boolean oldIsAtomic = isAtomic;
-		isAtomic = newIsAtomic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.TASK_GROUP__IS_ATOMIC, oldIsAtomic, isAtomic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -199,8 +152,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 				return getVariants();
 			case FunctionsPackage.TASK_GROUP__TASKS:
 				return getTasks();
-			case FunctionsPackage.TASK_GROUP__IS_ATOMIC:
-				return isIsAtomic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -226,9 +177,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 				getTasks().clear();
 				getTasks().addAll((Collection<? extends Task>)newValue);
 				return;
-			case FunctionsPackage.TASK_GROUP__IS_ATOMIC:
-				setIsAtomic((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -250,9 +198,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 			case FunctionsPackage.TASK_GROUP__TASKS:
 				getTasks().clear();
 				return;
-			case FunctionsPackage.TASK_GROUP__IS_ATOMIC:
-				setIsAtomic(IS_ATOMIC_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -271,8 +216,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 				return variants != null && !variants.isEmpty();
 			case FunctionsPackage.TASK_GROUP__TASKS:
 				return tasks != null && !tasks.isEmpty();
-			case FunctionsPackage.TASK_GROUP__IS_ATOMIC:
-				return isAtomic != IS_ATOMIC_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,22 +262,6 @@ public class TaskGroupImpl extends ElementAImpl implements TaskGroup {
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (isAtomic: ");
-		result.append(isAtomic);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TaskGroupImpl

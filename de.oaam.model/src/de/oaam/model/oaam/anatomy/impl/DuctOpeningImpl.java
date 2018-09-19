@@ -5,8 +5,7 @@ package de.oaam.model.oaam.anatomy.impl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.DuctOpening;
 import de.oaam.model.oaam.anatomy.Position3D;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -46,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DuctOpeningImpl extends ElementAImpl implements DuctOpening {
+public class DuctOpeningImpl extends OaamBaseElementAImpl implements DuctOpening {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

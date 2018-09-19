@@ -9,7 +9,7 @@ import de.oaam.model.oaam.anatomy.Position3D;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.LocationType;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
@@ -57,6 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.LocationImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.LocationImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.LocationImpl#getDuctOpenings <em>Duct Openings</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.impl.LocationImpl#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -261,6 +262,26 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 	 * @ordered
 	 */
 	protected EList<DuctOpening> ductOpenings;
+
+	/**
+	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LENGTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected double length = LENGTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -562,6 +583,27 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getLength() {
+		return length;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLength(double newLength) {
+		double oldLength = length;
+		length = newLength;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AnatomyPackage.LOCATION__LENGTH, oldLength, length));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -612,6 +654,8 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 				return getPosition();
 			case AnatomyPackage.LOCATION__DUCT_OPENINGS:
 				return getDuctOpenings();
+			case AnatomyPackage.LOCATION__LENGTH:
+				return getLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -668,6 +712,9 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 				getDuctOpenings().clear();
 				getDuctOpenings().addAll((Collection<? extends DuctOpening>)newValue);
 				return;
+			case AnatomyPackage.LOCATION__LENGTH:
+				setLength((Double)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -719,6 +766,9 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 			case AnatomyPackage.LOCATION__DUCT_OPENINGS:
 				getDuctOpenings().clear();
 				return;
+			case AnatomyPackage.LOCATION__LENGTH:
+				setLength(LENGTH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -757,6 +807,8 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 				return position != null;
 			case AnatomyPackage.LOCATION__DUCT_OPENINGS:
 				return ductOpenings != null && !ductOpenings.isEmpty();
+			case AnatomyPackage.LOCATION__LENGTH:
+				return length != LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -768,16 +820,16 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case AnatomyPackage.LOCATION__ID: return CommonPackage.ELEMENT_A__ID;
-				case AnatomyPackage.LOCATION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case AnatomyPackage.LOCATION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case AnatomyPackage.LOCATION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case AnatomyPackage.LOCATION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case AnatomyPackage.LOCATION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case AnatomyPackage.LOCATION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case AnatomyPackage.LOCATION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case AnatomyPackage.LOCATION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case AnatomyPackage.LOCATION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case AnatomyPackage.LOCATION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case AnatomyPackage.LOCATION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case AnatomyPackage.LOCATION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case AnatomyPackage.LOCATION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case AnatomyPackage.LOCATION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case AnatomyPackage.LOCATION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -803,16 +855,16 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return AnatomyPackage.LOCATION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return AnatomyPackage.LOCATION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return AnatomyPackage.LOCATION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return AnatomyPackage.LOCATION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return AnatomyPackage.LOCATION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return AnatomyPackage.LOCATION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return AnatomyPackage.LOCATION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return AnatomyPackage.LOCATION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return AnatomyPackage.LOCATION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return AnatomyPackage.LOCATION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return AnatomyPackage.LOCATION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return AnatomyPackage.LOCATION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return AnatomyPackage.LOCATION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return AnatomyPackage.LOCATION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return AnatomyPackage.LOCATION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return AnatomyPackage.LOCATION__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -855,6 +907,8 @@ public class LocationImpl extends ResourceProviderInstanceAImpl implements Locat
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
+		result.append(", length: ");
+		result.append(length);
 		result.append(')');
 		return result.toString();
 	}

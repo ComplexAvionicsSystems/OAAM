@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoGroup;
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class IoGroupImpl extends ElementAImpl implements IoGroup {
+public class IoGroupImpl extends OaamBaseElementAImpl implements IoGroup {
 	/**
 	 * The cached value of the '{@link #getIos() <em>Ios</em>}' reference list.
 	 * <!-- begin-user-doc -->

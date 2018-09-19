@@ -60,7 +60,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.RESOURCE_TYPE: return createResourceType();
 			case LibraryPackage.RESOURCE: return createResource();
 			case LibraryPackage.RESOURCE_ALTERNATIVES: return createResourceAlternatives();
-			case LibraryPackage.RESOURCE_BUNDLES: return createResourceBundles();
+			case LibraryPackage.RESOURCE_BUNDLE: return createResourceBundle();
 			case LibraryPackage.TASK_TYPE: return createTaskType();
 			case LibraryPackage.SIGNAL_TYPE: return createSignalType();
 			case LibraryPackage.DEVICE_TYPE: return createDeviceType();
@@ -90,8 +90,8 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.SUBLIBRARY: return createSublibrary();
 			case LibraryPackage.OUTPUT_TRIGGER: return createOutputTrigger();
 			case LibraryPackage.FUNCTION_INPUT_TRIGGER: return createFunctionInputTrigger();
-			case LibraryPackage.INTERNAL_STATE_DEFINITION: return createInternalStateDefinition();
-			case LibraryPackage.PARAMETER_DEFINITION: return createParameterDefinition();
+			case LibraryPackage.INTERNAL_STATE_DECLARATION: return createInternalStateDeclaration();
+			case LibraryPackage.PARAMETER_DECLARATION: return createParameterDeclaration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -170,9 +170,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceBundles createResourceBundles() {
-		ResourceBundlesImpl resourceBundles = new ResourceBundlesImpl();
-		return resourceBundles;
+	public ResourceBundle createResourceBundle() {
+		ResourceBundleImpl resourceBundle = new ResourceBundleImpl();
+		return resourceBundle;
 	}
 
 	/**
@@ -470,9 +470,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternalStateDefinition createInternalStateDefinition() {
-		InternalStateDefinitionImpl internalStateDefinition = new InternalStateDefinitionImpl();
-		return internalStateDefinition;
+	public InternalStateDeclaration createInternalStateDeclaration() {
+		InternalStateDeclarationImpl internalStateDeclaration = new InternalStateDeclarationImpl();
+		return internalStateDeclaration;
 	}
 
 	/**
@@ -480,9 +480,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterDefinition createParameterDefinition() {
-		ParameterDefinitionImpl parameterDefinition = new ParameterDefinitionImpl();
-		return parameterDefinition;
+	public ParameterDeclaration createParameterDeclaration() {
+		ParameterDeclarationImpl parameterDeclaration = new ParameterDeclarationImpl();
+		return parameterDeclaration;
 	}
 
 	/**

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.anatomy;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Symmetric location can be used to map symmetric functions symmetrically on devices in both locations. For instance, mapping two redundancies on the left and right hand side of the aircraft.
+ * Symmetric location can be used to map symmetric functions symmetrically on devices in both locations. For instance, allocations two redundancies on the left and right hand side of the aircraft.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface LocationSymmetry extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface LocationSymmetry extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Locations</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.anatomy.Location}.

@@ -75,9 +75,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_id_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__ID,
+				 getString("_UI_OaamBaseElementA_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_id_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ID,
 				 true,
 				 false,
 				 false,
@@ -97,9 +97,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_name_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__NAME,
+				 getString("_UI_OaamBaseElementA_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_name_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__NAME,
 				 true,
 				 false,
 				 false,
@@ -119,9 +119,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_style_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_style_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__STYLE,
+				 getString("_UI_OaamBaseElementA_style_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_style_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__STYLE,
 				 true,
 				 false,
 				 false,
@@ -141,9 +141,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_documentation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_documentation_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__DOCUMENTATION,
+				 getString("_UI_OaamBaseElementA_documentation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_documentation_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__DOCUMENTATION,
 				 true,
 				 false,
 				 false,
@@ -163,9 +163,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modified_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modified_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIED,
+				 getString("_UI_OaamBaseElementA_modified_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modified_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIED,
 				 true,
 				 false,
 				 false,
@@ -185,9 +185,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modifier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modifier_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIER,
+				 getString("_UI_OaamBaseElementA_modifier_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modifier_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIER,
 				 true,
 				 false,
 				 false,
@@ -207,9 +207,9 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_traceLink_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_traceLink_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__TRACE_LINK,
+				 getString("_UI_OaamBaseElementA_traceLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_traceLink_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__TRACE_LINK,
 				 true,
 				 false,
 				 false,
@@ -274,11 +274,11 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__OUTPUTS);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUTS);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATES);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__PARAMETERS);
+			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__OUTPUT_DECLARATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUT_DECLARATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -346,10 +346,10 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.TASK_TYPE__ATTRIBUTES:
-			case LibraryPackage.TASK_TYPE__OUTPUTS:
-			case LibraryPackage.TASK_TYPE__INPUTS:
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATES:
-			case LibraryPackage.TASK_TYPE__PARAMETERS:
+			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
+			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
+			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -369,43 +369,43 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeString()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_TYPE__OUTPUTS,
+				(LibraryPackage.Literals.TASK_TYPE__OUTPUT_DECLARATIONS,
 				 LibraryFactory.eINSTANCE.createOutputDeclaration()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_TYPE__INPUTS,
+				(LibraryPackage.Literals.TASK_TYPE__INPUT_DECLARATIONS,
 				 LibraryFactory.eINSTANCE.createInputDeclaration()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATES,
-				 LibraryFactory.eINSTANCE.createInternalStateDefinition()));
+				(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATE_DECLARATIONS,
+				 LibraryFactory.eINSTANCE.createInternalStateDeclaration()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_TYPE__PARAMETERS,
-				 LibraryFactory.eINSTANCE.createParameterDefinition()));
+				(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS,
+				 LibraryFactory.eINSTANCE.createParameterDeclaration()));
 	}
 
 }

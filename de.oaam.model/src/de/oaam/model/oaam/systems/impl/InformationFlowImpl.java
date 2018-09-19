@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class InformationFlowImpl extends ElementAImpl implements InformationFlow {
+public class InformationFlowImpl extends OaamBaseElementAImpl implements InformationFlow {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Signal;
 
@@ -33,7 +33,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SignalItemProvider extends ElementAItemProvider {
+public class SignalItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -61,6 +61,7 @@ public class SignalItemProvider extends ElementAItemProvider {
 			addTypePropertyDescriptor(object);
 			addInIndexPropertyDescriptor(object);
 			addOutIndexPropertyDescriptor(object);
+			addConnectionBindingPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -193,6 +194,28 @@ public class SignalItemProvider extends ElementAItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Connection Binding feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConnectionBindingPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Signal_connectionBinding_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_connectionBinding_feature", "_UI_Signal_type"),
+				 FunctionsPackage.Literals.SIGNAL__CONNECTION_BINDING,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

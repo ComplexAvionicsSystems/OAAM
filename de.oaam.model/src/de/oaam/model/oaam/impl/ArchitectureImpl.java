@@ -5,19 +5,16 @@ package de.oaam.model.oaam.impl;
 import de.oaam.model.oaam.Architecture;
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.Allocations;
 import de.oaam.model.oaam.anatomy.Anatomy;
 
 import de.oaam.model.oaam.capabilities.Capabilities;
-
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.Functions;
 
 import de.oaam.model.oaam.hardware.Hardware;
 
 import de.oaam.model.oaam.library.Library;
-
-import de.oaam.model.oaam.mapping.Mapping;
-
 import de.oaam.model.oaam.restrictions.Restrictions;
 
 import de.oaam.model.oaam.scenario.Scenario;
@@ -50,17 +47,17 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getLibrary <em>Library</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getSystems <em>Systems</em>}</li>
- *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getFunction <em>Function</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getFunctions <em>Functions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getHardware <em>Hardware</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getAnatomy <em>Anatomy</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getRestrictions <em>Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getMapping <em>Mapping</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getAllocations <em>Allocations</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ArchitectureImpl extends ElementAImpl implements Architecture {
+public class ArchitectureImpl extends OaamBaseElementAImpl implements Architecture {
 	/**
 	 * The cached value of the '{@link #getInclude() <em>Include</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -102,14 +99,14 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	protected Systems systems;
 
 	/**
-	 * The cached value of the '{@link #getFunction() <em>Function</em>}' containment reference.
+	 * The cached value of the '{@link #getFunctions() <em>Functions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFunction()
+	 * @see #getFunctions()
 	 * @generated
 	 * @ordered
 	 */
-	protected Functions function;
+	protected Functions functions;
 
 	/**
 	 * The cached value of the '{@link #getHardware() <em>Hardware</em>}' containment reference.
@@ -152,14 +149,14 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	protected Restrictions restrictions;
 
 	/**
-	 * The cached value of the '{@link #getMapping() <em>Mapping</em>}' containment reference.
+	 * The cached value of the '{@link #getAllocations() <em>Allocations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMapping()
+	 * @see #getAllocations()
 	 * @generated
 	 * @ordered
 	 */
-	protected Mapping mapping;
+	protected Allocations allocations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -326,8 +323,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Functions getFunction() {
-		return function;
+	public Functions getFunctions() {
+		return functions;
 	}
 
 	/**
@@ -335,11 +332,11 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFunction(Functions newFunction, NotificationChain msgs) {
-		Functions oldFunction = function;
-		function = newFunction;
+	public NotificationChain basicSetFunctions(Functions newFunctions, NotificationChain msgs) {
+		Functions oldFunctions = functions;
+		functions = newFunctions;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__FUNCTION, oldFunction, newFunction);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__FUNCTIONS, oldFunctions, newFunctions);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -350,18 +347,18 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFunction(Functions newFunction) {
-		if (newFunction != function) {
+	public void setFunctions(Functions newFunctions) {
+		if (newFunctions != functions) {
 			NotificationChain msgs = null;
-			if (function != null)
-				msgs = ((InternalEObject)function).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__FUNCTION, null, msgs);
-			if (newFunction != null)
-				msgs = ((InternalEObject)newFunction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__FUNCTION, null, msgs);
-			msgs = basicSetFunction(newFunction, msgs);
+			if (functions != null)
+				msgs = ((InternalEObject)functions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__FUNCTIONS, null, msgs);
+			if (newFunctions != null)
+				msgs = ((InternalEObject)newFunctions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__FUNCTIONS, null, msgs);
+			msgs = basicSetFunctions(newFunctions, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__FUNCTION, newFunction, newFunction));
+			eNotify(new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__FUNCTIONS, newFunctions, newFunctions));
 	}
 
 	/**
@@ -541,8 +538,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Mapping getMapping() {
-		return mapping;
+	public Allocations getAllocations() {
+		return allocations;
 	}
 
 	/**
@@ -550,11 +547,11 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMapping(Mapping newMapping, NotificationChain msgs) {
-		Mapping oldMapping = mapping;
-		mapping = newMapping;
+	public NotificationChain basicSetAllocations(Allocations newAllocations, NotificationChain msgs) {
+		Allocations oldAllocations = allocations;
+		allocations = newAllocations;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__MAPPING, oldMapping, newMapping);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__ALLOCATIONS, oldAllocations, newAllocations);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -565,18 +562,18 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMapping(Mapping newMapping) {
-		if (newMapping != mapping) {
+	public void setAllocations(Allocations newAllocations) {
+		if (newAllocations != allocations) {
 			NotificationChain msgs = null;
-			if (mapping != null)
-				msgs = ((InternalEObject)mapping).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__MAPPING, null, msgs);
-			if (newMapping != null)
-				msgs = ((InternalEObject)newMapping).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__MAPPING, null, msgs);
-			msgs = basicSetMapping(newMapping, msgs);
+			if (allocations != null)
+				msgs = ((InternalEObject)allocations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__ALLOCATIONS, null, msgs);
+			if (newAllocations != null)
+				msgs = ((InternalEObject)newAllocations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__ALLOCATIONS, null, msgs);
+			msgs = basicSetAllocations(newAllocations, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__MAPPING, newMapping, newMapping));
+			eNotify(new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__ALLOCATIONS, newAllocations, newAllocations));
 	}
 
 	/**
@@ -593,8 +590,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return basicSetScenario(null, msgs);
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
 				return basicSetSystems(null, msgs);
-			case OaamPackage.ARCHITECTURE__FUNCTION:
-				return basicSetFunction(null, msgs);
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
+				return basicSetFunctions(null, msgs);
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 				return basicSetHardware(null, msgs);
 			case OaamPackage.ARCHITECTURE__ANATOMY:
@@ -603,8 +600,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return basicSetCapabilities(null, msgs);
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 				return basicSetRestrictions(null, msgs);
-			case OaamPackage.ARCHITECTURE__MAPPING:
-				return basicSetMapping(null, msgs);
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+				return basicSetAllocations(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -625,8 +622,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return getScenario();
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
 				return getSystems();
-			case OaamPackage.ARCHITECTURE__FUNCTION:
-				return getFunction();
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
+				return getFunctions();
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 				return getHardware();
 			case OaamPackage.ARCHITECTURE__ANATOMY:
@@ -635,8 +632,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return getCapabilities();
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 				return getRestrictions();
-			case OaamPackage.ARCHITECTURE__MAPPING:
-				return getMapping();
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+				return getAllocations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -663,8 +660,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
 				setSystems((Systems)newValue);
 				return;
-			case OaamPackage.ARCHITECTURE__FUNCTION:
-				setFunction((Functions)newValue);
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
+				setFunctions((Functions)newValue);
 				return;
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 				setHardware((Hardware)newValue);
@@ -678,8 +675,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 				setRestrictions((Restrictions)newValue);
 				return;
-			case OaamPackage.ARCHITECTURE__MAPPING:
-				setMapping((Mapping)newValue);
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+				setAllocations((Allocations)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -705,8 +702,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
 				setSystems((Systems)null);
 				return;
-			case OaamPackage.ARCHITECTURE__FUNCTION:
-				setFunction((Functions)null);
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
+				setFunctions((Functions)null);
 				return;
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 				setHardware((Hardware)null);
@@ -720,8 +717,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 				setRestrictions((Restrictions)null);
 				return;
-			case OaamPackage.ARCHITECTURE__MAPPING:
-				setMapping((Mapping)null);
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+				setAllocations((Allocations)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -743,8 +740,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return scenario != null;
 			case OaamPackage.ARCHITECTURE__SYSTEMS:
 				return systems != null;
-			case OaamPackage.ARCHITECTURE__FUNCTION:
-				return function != null;
+			case OaamPackage.ARCHITECTURE__FUNCTIONS:
+				return functions != null;
 			case OaamPackage.ARCHITECTURE__HARDWARE:
 				return hardware != null;
 			case OaamPackage.ARCHITECTURE__ANATOMY:
@@ -753,8 +750,8 @@ public class ArchitectureImpl extends ElementAImpl implements Architecture {
 				return capabilities != null;
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 				return restrictions != null;
-			case OaamPackage.ARCHITECTURE__MAPPING:
-				return mapping != null;
+			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+				return allocations != null;
 		}
 		return super.eIsSet(featureID);
 	}

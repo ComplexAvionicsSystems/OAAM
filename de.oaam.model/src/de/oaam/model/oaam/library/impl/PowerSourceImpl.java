@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.PowerSource;
 
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PowerSourceImpl extends ElementAImpl implements PowerSource {
+public class PowerSourceImpl extends OaamBaseElementAImpl implements PowerSource {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

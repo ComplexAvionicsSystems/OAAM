@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.IoDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -28,7 +28,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Io extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Io extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Declaration</b></em>' reference.
 	 * <!-- begin-user-doc -->

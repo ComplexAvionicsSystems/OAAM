@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oaam" nsURI="http://www.oaam.de/oaam/model/v100" nsPrefix="de.oaam.model">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oaam" nsURI="http://www.oaam.de/oaam/model/v140" nsPrefix="de.oaam.model">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation" value="The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library, scenarios, systems, functions, hardware, anatomy, capabilities, restrictions, mappings), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&amp;fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files."/>
+    <details key="documentation" value="The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library, scenarios, systems, functions, hardware, anatomy, capabilities, restrictions, allocationss), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&amp;fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files."/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//common/ElementA">
+  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//common/OaamBaseElementA">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Model root element. Only a single instance is allowed. The model content is grouped in sequentially dependent layers for different subdomains. "/>
     </eAnnotations>
@@ -32,7 +32,7 @@
         <details key="documentation" value="A container for a systems model (layer 3)"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//functions/Functions"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" eType="#//functions/Functions"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A container for a function model (layer 4)"/>
@@ -62,14 +62,14 @@
         <details key="documentation" value="A container for a restriction model (layer 8)"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mapping" eType="#//mapping/Mapping"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocations" eType="#//allocations/Allocations"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A container for a mapping model (layer 9)"/>
+        <details key="documentation" value="A container for a allocations model (layer 9)"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eSubpackages name="common" nsURI="http://www.oaam.de/oaam/model/v100/common" nsPrefix="de.oaam.model.common">
+  <eSubpackages name="common" nsURI="http://www.oaam.de/oaam/model/v140/common" nsPrefix="de.oaam.model.common">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The definition of common abstract classes and enumerations. This is not visible in the user model."/>
     </eAnnotations>
@@ -89,7 +89,7 @@
       <eLiterals name="FAILED" value="1"/>
       <eLiterals name="UNKNOWN" value="3"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ElementA" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="OaamBaseElementA" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This is the base class for every instantiable element in the model. Most important it defines that every model element has a name and an id"/>
       </eAnnotations>
@@ -143,7 +143,7 @@
         <details key="documentation" value="An abstract base class of a Boolean value as used in logical expressions"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AttributeA" abstract="true" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="AttributeA" abstract="true" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract interface for additional attribute types"/>
       </eAnnotations>
@@ -175,7 +175,7 @@
         <details key="documentation" value="An attribute which can contain an arbitrary other model element"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
-          eType="#//common/ElementA" containment="true">
+          eType="#//common/OaamBaseElementA" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A containment of an architecture model element"/>
         </eAnnotations>
@@ -186,13 +186,13 @@
         <details key="documentation" value="An attribute which can contain a references to arbitrary other model elements"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="value" upperBound="-1"
-          eType="#//common/ElementA">
+          eType="#//common/OaamBaseElementA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to an architecture model element"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="BoolOperation" eSuperTypes="#//common/BoolA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="BoolOperation" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A Boolean function with two to infinit inputs. "/>
       </eAnnotations>
@@ -215,7 +215,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="BoolNot" eSuperTypes="#//common/BoolA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="BoolNot" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A Boolean not operation. The output is the negated input"/>
       </eAnnotations>
@@ -226,7 +226,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DataTypeA" abstract="true" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DataTypeA" abstract="true" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class for all data types"/>
       </eAnnotations>
@@ -349,7 +349,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v100/library"
+  <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v140/library"
       nsPrefix="de.oaam.model.library">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Common and reusable definitions as data, task, hardware, and signal types."/>
@@ -431,7 +431,7 @@
         <details key="documentation" value="An abstract base class for resource providing elements, e.g. devices, locations, ..."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="providedBundles" upperBound="-1"
-          eType="#//library/ResourceBundles" containment="true">
+          eType="#//library/ResourceBundle" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Resources are provided in bundles. A bundle can contain one or more instance of a resource type"/>
         </eAnnotations>
@@ -467,7 +467,7 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LibraryContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A library holds the definitions of all important basic elements used in the architecture model as for instance function types, device types, or resource types."/>
       </eAnnotations>
@@ -483,8 +483,8 @@
           <details key="documentation" value="All resource types of this library"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ressourceBundles" upperBound="-1"
-          eType="#//library/ResourceBundles" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resourceBundles" upperBound="-1"
+          eType="#//library/ResourceBundle" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All resource bundles of this library"/>
         </eAnnotations>
@@ -555,16 +555,22 @@
           <details key="documentation" value="All location types of this library"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="routeTypes" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ductTypes" upperBound="-1"
           eType="#//library/DuctType" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All route types of this library"/>
+          <details key="documentation" value="All duct types of this library"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="genericAttributes" upperBound="-1"
           eType="#//library/AttributeDefinition" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All generic attributes of this library"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="powerSources" upperBound="-1"
+          eType="#//library/PowerSource" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All power sources"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sublibraries" upperBound="-1"
@@ -574,10 +580,15 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceType" eSuperTypes="#//library/ResourceConsumerA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A resource is a shared and consumed entity. A resource type defines a category of resources, e.g. KBs of memory, MIPS of computational power, or the number of analog input interfaces."/>
       </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The name of the quantity in which the resource type is usually provided, e.g. number of pins, mega byte, ..."/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConsumed" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
           defaultValueLiteral="true">
@@ -630,13 +641,13 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="alternatives" upperBound="-1"
           eType="#//library/ResourceAlternatives" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A list of possible alternatives. Alternative resources could be considered for mappings if the original is not available or is unfavourable."/>
+          <details key="documentation" value="A list of possible alternatives. Alternative resources could be considered for allocationss if the original is not available or is unfavourable."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Resource" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A resource is an instance of a resource type which is provided by resource providers and consumed by resource consumers. It is the mandatory precondition for any mapping."/>
+        <details key="documentation" value="A resource is an instance of a resource type which is provided by resource providers and consumed by resource consumers. It is the mandatory precondition for any allocations."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
           eType="#//library/ResourceType">
@@ -658,7 +669,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceAlternatives" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceAlternatives" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Alternative resources can be used to define resources types and amounts that can be used instead of the current resources."/>
       </eAnnotations>
@@ -669,7 +680,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceBundles" eSuperTypes="#//library/ResourceConsumerA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceBundle" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This are installable portions of resources"/>
       </eAnnotations>
@@ -698,17 +709,17 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskType" eSuperTypes="#//library/ResourceConsumerA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A definition of function types which can be used in the functions model as instances. Most important a function type defines the required resources."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputDeclarations" upperBound="-1"
           eType="#//library/OutputDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All output declarations of this tasks type"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inputDeclarations" upperBound="-1"
           eType="#//library/InputDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All input declarations of this task type"/>
@@ -727,29 +738,29 @@
           <details key="documentation" value="The execution rate for which this task was designed in Hz. It might does not work well at other execution rates. 0.0 means no preferred rate."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="internalStates" upperBound="-1"
-          eType="#//library/InternalStateDefinition" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalStateDeclarations"
+          upperBound="-1" eType="#//library/InternalStateDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All internal state variables of a task type"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-          eType="#//library/ParameterDefinition" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameterDeclarations"
+          upperBound="-1" eType="#//library/ParameterDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All parameters of a tasks type"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalType" eSuperTypes="#//library/ResourceConsumerA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SignalType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A definition of a signal type."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//library/ResourceConsumerA #//library/ResourceProviderA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//library/ResourceConsumerA #//library/ResourceProviderA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A definition of a device type. This holds the properties and resources that are identical for each device of this type"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ios" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ioDeclarations" upperBound="-1"
           eType="#//library/IoDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A device can declare certain resources to be I/Os. I/Os of a device can be used to connect physical connections"/>
@@ -801,7 +812,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//library/ResourceProviderA #//library/ResourceConsumerA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//library/ResourceProviderA #//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A connection is a physical link between two devices. With the connection type the unambiguous properties for a connection type can be set. A connection type can represent various topologies like lines, busses and stars, but also wireless. Moreover, passive and active connections like switched networks can be modeled"/>
       </eAnnotations>
@@ -819,7 +830,8 @@
           <details key="documentation" value="Can this connection type provide or distribute power?"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="wireType" eType="#//library/WireType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="wireTypes" upperBound="-1"
+          eType="#//library/WireType">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Which wire type is used by the connection type?"/>
         </eAnnotations>
@@ -838,16 +850,28 @@
           <details key="documentation" value="Does the wiring topology allow circles?"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nSources" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nStartingPoints" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Considering a single wire without switches, how many speakers are allowed?"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nTagets" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startingPointResourceTypes"
+          upperBound="-1" eType="#//library/ResourceType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Which resource type (usualy an IO type) is required on the starting point side of the connection?"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nEndPoints" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Considering a single cable without switches, how many listeners are allowed?"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endPointResourceTypes"
+          upperBound="-1" eType="#//library/ResourceType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Which resource type (usualy an IO type) is required on the end point side of the connection?"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="nJoints" lowerBound="1"
@@ -876,7 +900,8 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSwitched" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Is this a switched network, which needs active components to connect multiple participants?"/>
         </eAnnotations>
@@ -895,13 +920,21 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUnidirectional" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Does power and information flow in both or only in one direction?"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresMaster" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Is a special bus participant required to control the bus, e.g. SPI? Can also denote a multi-master bus."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LocationType" eSuperTypes="#//library/ResourceProviderA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="LocationType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The definition of common location properties and resources"/>
       </eAnnotations>
@@ -911,19 +944,19 @@
           <details key="documentation" value="If true this stated that this is not a real location for devices, but a cable route joint point only"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ductOpenings" upperBound="-1"
-          eType="#//library/DuctOpeningDeclaration" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ductOpeningDeclarations"
+          upperBound="-1" eType="#//library/DuctOpeningDeclaration" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A duct opening is the point where connection cables can enter or leave a location."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DuctType" eSuperTypes="#//library/ResourceProviderA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DuctType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Definition of the common properties of a cable route or duct"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="WireType" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="WireType" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The properties common to all instance of a wire type"/>
       </eAnnotations>
@@ -958,7 +991,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputDeclaration" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="InputDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The declaration of an input for a function type."/>
       </eAnnotations>
@@ -996,7 +1029,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="OutputDeclaration" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="OutputDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The declaration of an output for a function type."/>
       </eAnnotations>
@@ -1046,7 +1079,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IoDeclaration" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="IoDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The declaration of an I/O. An I/O is a physical communication device"/>
       </eAnnotations>
@@ -1057,12 +1090,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DuctOpeningDeclaration" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DuctOpeningDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The declaration of a duct opening for a location type. A duct opening is a point to enter or leave an installation location."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceGroup" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceGroup" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Grouping of the resources on the providers. For example to assign them to grouped connectors."/>
       </eAnnotations>
@@ -1073,9 +1106,9 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeSymmetry" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeSymmetry" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Defines two or more device types as symmetric. A symmetric device type is usfull to describe dual-lane devices, because it enables a symmetric mapping of functions to both lanes in the same location."/>
+        <details key="documentation" value="Defines two or more device types as symmetric. A symmetric device type is usfull to describe dual-lane devices, because it enables a symmetric allocations of functions to both lanes in the same location."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="deviceTypes" lowerBound="2"
           upperBound="-1" eType="#//library/DeviceType">
@@ -1084,7 +1117,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IoGroup" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="IoGroup" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An I/O group defines a set of I/Os that are in relation. For instance, all I/Os on the same physical connector."/>
       </eAnnotations>
@@ -1095,7 +1128,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinition" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="AttributeDefinition" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Defining an additional attribute for a type of object that is mandatory for each instance of that object in the model. For instance define a serial number attribute for all device types as a string attribute"/>
       </eAnnotations>
@@ -1112,7 +1145,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FaultPropagation" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="FaultPropagation" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Specifies how the state of the inputs transfers to the outputs. An arbitrary Boolean logic can be created."/>
       </eAnnotations>
@@ -1129,7 +1162,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FunctionInputState" eSuperTypes="#//common/BoolA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionInputState" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A link between a Boolean expression and the state of the input. This Boolean is considered to be true if the input has the state defined within."/>
       </eAnnotations>
@@ -1146,12 +1179,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PowerSource" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="PowerSource" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Definition of a power source, e.g. DC1, DC2, DC1_emergency or DC2_emergency."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceLink" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceLink" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Specify how resources of a resources provider are linked. Linking is necessary to forward shared resources. This makes especially sense to express how power is forwarded through the interfaces"/>
       </eAnnotations>
@@ -1168,7 +1201,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifier" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifier" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A general definition of a resource modifier. For instance a discrete output resource could appear in 100 and 250 mA output current levels. In this case  the modifier is &quot;current level&quot; and the levels are 100 and 250."/>
       </eAnnotations>
@@ -1179,7 +1212,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierLevel" eSuperTypes="#//common/ElementA #//library/ResourceConsumerA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierLevel" eSuperTypes="#//common/OaamBaseElementA #//library/ResourceConsumerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A possible instance of a modifier, e.g. 250mA for a current level modifier."/>
       </eAnnotations>
@@ -1195,7 +1228,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierReference" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeModifierReference" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The modifier definition relates modifier types and modifier levels to modifiers that can be assigned to resource types."/>
       </eAnnotations>
@@ -1212,7 +1245,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskTypeDissimilarity" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskTypeDissimilarity" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Declare a set of function types to be dissimilar up to a certain level. Dissimilar functions are those who are developed by an independent team using indipendent methods and tools."/>
       </eAnnotations>
@@ -1229,7 +1262,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeDissimilarity" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeDissimilarity" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Device types are declared dissimilar to all other device types in the same dissimilarity group up to a certain factor. If more accurate dissimilarity modeling is required resource type dissimilarities can be used."/>
       </eAnnotations>
@@ -1246,7 +1279,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeDissimilarity" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceTypeDissimilarity" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A resource type is declared dissimilar to all other resource types in one dissimilarity group."/>
       </eAnnotations>
@@ -1267,7 +1300,7 @@
         <details key="documentation" value="A sublibrary can contain the same elements that a library can contain, but it can exist within a library"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="OutputTrigger" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="OutputTrigger" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The trigger condition for the output. If the trigger condition is true, the output is calculated. A trigger is either a Boolean combination of available inputs or a fixed rate."/>
       </eAnnotations>
@@ -1291,7 +1324,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FunctionInputTrigger" eSuperTypes="#//common/BoolA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="FunctionInputTrigger" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A linking class between inputs and output trigger Boolean expressions"/>
       </eAnnotations>
@@ -1302,7 +1335,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InternalStateDefinition" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="InternalStateDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The internal state of a task. An internal state is a memory in which results are saved that are persitent between two invocations, i.e. the I of a PID controller."/>
       </eAnnotations>
@@ -1313,7 +1346,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ParameterDefinition" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Static parameters that change the behavior of a function, e.g. the P, I, and D scalars of a PID controller "/>
       </eAnnotations>
@@ -1325,7 +1358,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="scenario" nsURI="http://www.oaam.de/oaam/model/v100/scenario"
+  <eSubpackages name="scenario" nsURI="http://www.oaam.de/oaam/model/v140/scenario"
       nsPrefix="de.oaam.model.scenario">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Architecture wide properties, as well as variants and operation mode definitions."/>
@@ -1358,7 +1391,7 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ScenarioContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class for scenarios and subscenarios. A scenario is a global, timely or variant dependent definition of parameters. For instance along a flight mission."/>
       </eAnnotations>
@@ -1387,12 +1420,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="OperationMode" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="OperationMode" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An operation mode is a current state of the vehicle. Only one operation mode can be active at a time. Elements can, however belong to multiple operation modes. An operation mode can also represent temporary states."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ParameterNumeric" eSuperTypes="#//scenario/ParameterA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterNumeric" eSuperTypes="#//scenario/ParameterA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A parameter with a numeric value."/>
       </eAnnotations>
@@ -1403,7 +1436,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ParameterBool" eSuperTypes="#//scenario/ParameterA #//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterBool" eSuperTypes="#//scenario/ParameterA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A parameter with a Boolean value."/>
       </eAnnotations>
@@ -1414,12 +1447,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Variant" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Variant" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A variant of the described vehicle or architecture, e.g optional equipment could be part of a variant. A vehicle can be composed of multiple variants, i.e. multiple variants might be active at the same time."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="OperationModeReference" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="OperationModeReference" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="This is the link between temporary objects and time frames. This allows to define a probability of the element of being active during certain time frames."/>
       </eAnnotations>
@@ -1448,13 +1481,13 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="systems" nsURI="http://www.oaam.de/oaam/model/v100/systems"
+  <eSubpackages name="systems" nsURI="http://www.oaam.de/oaam/model/v140/systems"
       nsPrefix="de.oaam.model.systems">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="High-level and not executable description of systems including physical informations."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="SystemsContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" The systems model contains a high level description of the system components as well as the data and power flow without specifying the implementation."/>
       </eAnnotations>
@@ -1493,7 +1526,7 @@
         <details key="documentation" value="A subsystem can be used like folders to organize the system model"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A system is an encapsuleted functionality that interacts with information and power"/>
       </eAnnotations>
@@ -1520,7 +1553,7 @@
         <details key="documentation" value="A power or information that is provided of a system"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Information" eSuperTypes="#//systems/ProvidedOutputA #//systems/RequiredInputA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Information" eSuperTypes="#//systems/ProvidedOutputA #//systems/RequiredInputA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An information is an abstract definition of any kind of data flow between systems."/>
       </eAnnotations>
@@ -1554,7 +1587,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InformationFlow" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="InformationFlow" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An information flow from a systems input to a systems output"/>
       </eAnnotations>
@@ -1599,7 +1632,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Power" eSuperTypes="#//systems/ProvidedOutputA #//systems/RequiredInputA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Power" eSuperTypes="#//systems/ProvidedOutputA #//systems/RequiredInputA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class to represent the flow of power"/>
       </eAnnotations>
@@ -1664,7 +1697,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="InputSegregation" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="InputSegregation" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An input segregation defines that two inputs or a system or multiple systems must be from segregated sources. The meaning of segregation can be refined with the attributes. Setting two inputs as segregated is only the information that the inputs needs to be segregated. If segregation is ensured, cannot be verified in the systems model. This requires the real implementation."/>
       </eAnnotations>
@@ -1700,7 +1733,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="functions" nsURI="http://www.oaam.de/oaam/model/v100/functions"
+  <eSubpackages name="functions" nsURI="http://www.oaam.de/oaam/model/v140/functions"
       nsPrefix="de.oaam.model.functions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Main part of the executable function description, including tasks and data flows."/>
@@ -1711,7 +1744,7 @@
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FunctionsContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class of an element that can hold functions and related elements."/>
       </eAnnotations>
@@ -1770,13 +1803,13 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subfunctions" upperBound="-1"
-          eType="#//functions/Subfunction" containment="true">
+          eType="#//functions/Subfunctions" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All subfunctions included"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An atomic undividable piece of software that implements some system functionality and must be mapped to hardware. "/>
       </eAnnotations>
@@ -1828,7 +1861,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExternalTaskLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalTaskLink" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A link to an external task. This task is not part of the function model, but it is just a place holder. It must be linked from another function model.&#xD;&#xA;"/>
       </eAnnotations>
@@ -1861,7 +1894,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskGroup" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskGroup" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Grouping of functions for example to prevent their segregation or to assign this functions to certain routes."/>
       </eAnnotations>
@@ -1871,14 +1904,8 @@
           <details key="documentation" value="All functions in this group"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAtomic" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Whether Functions of this group can be distributed over multiple modules or not"/>
-        </eAnnotations>
-      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskSymmetry" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskSymmetry" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A function symmetry defines functions as symmetric. Symmetric functions might be mapped spatially symmetric in the vehicle"/>
       </eAnnotations>
@@ -1889,7 +1916,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskRedundancy" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskRedundancy" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Declares two or more functions to be replace each other"/>
       </eAnnotations>
@@ -1900,7 +1927,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FailureCondition" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureCondition" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A failure condition is a top event that can happen to the system and has effect on the vehicle. It relates the output states of tasks to the occurrence of this failure. The platform shall guarantee that the maximum occurrence rate is not exceeded."/>
       </eAnnotations>
@@ -1924,7 +1951,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SystemInputState" eSuperTypes="#//common/BoolA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SystemInputState" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Relates the Boolean expression of the failure event to the system's input states."/>
       </eAnnotations>
@@ -1941,7 +1968,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Signal" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A signal is information that is exchanged unidirectional from one function to another."/>
       </eAnnotations>
@@ -1975,8 +2002,13 @@
           <details key="documentation" value="If a multiple output is connected with the signal this index gives index of the multi-output."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionBinding" eType="#//hardware/Connection">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This references a unique connection if this signal is strictly bound to one a wire i.e. an atomic block of hardware and funtion, e.g a sensor. This is a so called hardware task. If a device is specified. Also the function outputs should be bound to device connectors. Do not specify a device here if this is a freely assignable function."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalGroup" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SignalGroup" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A signal group can be used to organize signals in groups with some relationship, e.g. the same constraint"/>
       </eAnnotations>
@@ -1987,7 +2019,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An input of a function is the need for data to be operational"/>
       </eAnnotations>
@@ -2021,7 +2053,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An output is data produced by a function and available to other function for input"/>
       </eAnnotations>
@@ -2049,7 +2081,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ExternalOutputLink" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalOutputLink" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An output that comes from another system."/>
       </eAnnotations>
@@ -2064,7 +2096,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Subfunction" eSuperTypes="#//functions/FunctionsContainerA">
+    <eClassifiers xsi:type="ecore:EClass" name="Subfunctions" eSuperTypes="#//functions/FunctionsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A subfunction can be used to logically group tasks and signals. If the multiplicity is used, the subfunction can be instantiated multiple times."/>
       </eAnnotations>
@@ -2081,12 +2113,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Instance of a task types parameter definition"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
-          eType="#//library/ParameterDefinition">
+          eType="#//library/ParameterDeclaration">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Reference to the parameter definition of the referenced tasks type."/>
         </eAnnotations>
@@ -2099,13 +2131,13 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v100/hardware"
+  <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v140/hardware"
       nsPrefix="de.oaam.model.hardware">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The hardware topology of devices and connections. "/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="HardwareContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root container of the hardware model"/>
       </eAnnotations>
@@ -2134,7 +2166,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Device" eSuperTypes="#//library/ResourceProviderInstanceA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Device" eSuperTypes="#//library/ResourceProviderInstanceA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A device is a hardware unit which is a standalone box or a subdevice in another device."/>
       </eAnnotations>
@@ -2149,7 +2181,7 @@
           <details key="documentation" value="All I/Os of this device."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subDevices" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subdevices" upperBound="-1"
           eType="#//hardware/Device" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Subdevices of this device."/>
@@ -2167,7 +2199,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Connection" eSuperTypes="#//library/ResourceProviderInstanceA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Connection" eSuperTypes="#//library/ResourceProviderInstanceA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A connection is a communication line between two devices. It can be a single wire, a bus or even wireless depending on the connection type."/>
       </eAnnotations>
@@ -2176,14 +2208,26 @@
           <details key="documentation" value="A reference to the type of the connection. The type specifies the properties, like topology and provided resources."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startingPoints" upperBound="-1"
+          eType="#//hardware/Io">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All starting points of the connection. The differentiation between starting and endpoints is only relevant for unidirectional connections. In case of a bidirectional connection starts and ends are equal."/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="endPoints" upperBound="-1"
           eType="#//hardware/Io">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All endpoints of the connection."/>
+          <details key="documentation" value="All endpoints of the connection. The differentiation between starting and endpoints is only relevant for unidirectional connections. In case of a bidirectional connection starts and ends are equal."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="masters" upperBound="-1"
+          eType="#//hardware/Io">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All masters of the connection. The IO or IOs that controll the buss. This should only be set if this is a master controlled bus system. See the requiresMaster attribute in the connection type."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Io" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Io" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An I/O is a physical connection point for connections."/>
       </eAnnotations>
@@ -2194,7 +2238,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceSymmetry" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceSymmetry" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Symmetric devices are devices that needs to be allocated symmetrically by symmetric tasks"/>
       </eAnnotations>
@@ -2216,13 +2260,13 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="anatomy" nsURI="http://www.oaam.de/oaam/model/v100/anatomy"
+  <eSubpackages name="anatomy" nsURI="http://www.oaam.de/oaam/model/v140/anatomy"
       nsPrefix="de.oaam.model.anatomy">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The spatial topology of installation locations and cable routes."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="AnatomyContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root class of the anatomy model"/>
       </eAnnotations>
@@ -2257,7 +2301,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//library/ResourceProviderInstanceA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//library/ResourceProviderInstanceA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A location is a place to install devices or cables. "/>
       </eAnnotations>
@@ -2279,8 +2323,14 @@
           <details key="documentation" value="All duct openings of this location"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The default internal length of a installation location in [m] from one duct opening to another. This can be precised by specifying duct opening positions in 3d coordinates. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Area" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Area" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An area is set of location and ducts that have something in common, e.g. they belong to the same structure. Areas are useful to express constraints."/>
       </eAnnotations>
@@ -2297,7 +2347,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Duct" eSuperTypes="#//library/ResourceProviderInstanceA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Duct" eSuperTypes="#//library/ResourceProviderInstanceA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A duct is a route between two installation locations in which cables are placed."/>
       </eAnnotations>
@@ -2313,20 +2363,20 @@
           <details key="documentation" value="A refernce to the duct type which defines provided resources"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ductopeningA" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="startingPoint" lowerBound="1"
           eType="#//anatomy/DuctOpening">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The starting duct opening of a location."/>
+          <details key="documentation" value="The source duct opening of a location."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="ductopeningB" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="endPoint" lowerBound="1"
           eType="#//anatomy/DuctOpening">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The target duct opening of a location."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DuctOpening" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DuctOpening" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A duct opening is the point where cable can leave or enter a location."/>
       </eAnnotations>
@@ -2343,7 +2393,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Position3D" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Position3D" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A physical 3D coordinate"/>
       </eAnnotations>
@@ -2363,9 +2413,9 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LocationSymmetry" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="LocationSymmetry" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Symmetric location can be used to map symmetric functions symmetrically on devices in both locations. For instance, mapping two redundancies on the left and right hand side of the aircraft."/>
+        <details key="documentation" value="Symmetric location can be used to map symmetric functions symmetrically on devices in both locations. For instance, allocations two redundancies on the left and right hand side of the aircraft."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
           eType="#//anatomy/Location">
@@ -2385,7 +2435,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="capabilities" nsURI="http://www.oaam.de/oaam/model/v100/capabilities"
+  <eSubpackages name="capabilities" nsURI="http://www.oaam.de/oaam/model/v140/capabilities"
       nsPrefix="de.oaam.model.capabilities">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Definition of software to hardware to anatomy assignment possibilities and resource consumptions."/>
@@ -2402,50 +2452,52 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CapabilitiesContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root of the capabilities mode. "/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="functionCapabilties"
-          upperBound="-1" eType="#//capabilities/TaskCapability" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskOnDeviceCapabilities"
+          upperBound="-1" eType="#//capabilities/TaskOnDeviceCapability" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All function capabilities."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="signalCapabilities" upperBound="-1"
-          eType="#//capabilities/SignalCapability" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalOnConnectionOrDeviceCapabilities"
+          upperBound="-1" eType="#//capabilities/SignalOnConnectionOrDeviceCapability"
+          containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All signal capabilities."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="deviceCapabilities" upperBound="-1"
-          eType="#//capabilities/DeviceCapability" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="deviceInLocationCapabilities"
+          upperBound="-1" eType="#//capabilities/DeviceInLocationCapability" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All device capabilities."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subDeviceCapabilities"
-          upperBound="-1" eType="#//capabilities/SubDeviceCapability" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subdeviceInDeviceCapabilities"
+          upperBound="-1" eType="#//capabilities/SubdeviceInDeviceCapability" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All sub device capabilities."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionCapabilities"
-          upperBound="-1" eType="#//capabilities/ConnectionCapability" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionInDuctOrLocationCapabilities"
+          upperBound="-1" eType="#//capabilities/ConnectionInDuctOrLocationCapability"
+          containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All connection capabilities."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subcapabilities" upperBound="-1"
-          eType="#//capabilities/Subcapability" containment="true">
+          eType="#//capabilities/Subcapabilities" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All included subcapabilities"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskCapability" eSuperTypes="#//capabilities/CapabilityA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskOnDeviceCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A possible mapping of a task to a device."/>
+        <details key="documentation" value="A possible allocations of a task to a device."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="taskType" lowerBound="1"
           eType="#//library/TaskType">
@@ -2473,9 +2525,9 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceCapability" eSuperTypes="#//capabilities/CapabilityA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceInLocationCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A possible mapping of a device to a location."/>
+        <details key="documentation" value="A possible allocations of a device to a location."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="deviceType" lowerBound="1"
           eType="#//library/DeviceType">
@@ -2490,9 +2542,10 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionCapability" eSuperTypes="#//capabilities/CapabilityA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionInDuctOrLocationCapability"
+        eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A possible mapping of a connection to a location or duct."/>
+        <details key="documentation" value="A possible allocations of a connection to a location or duct."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="connectionType" lowerBound="1"
           eType="#//library/ConnectionType">
@@ -2511,9 +2564,10 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalCapability" eSuperTypes="#//capabilities/CapabilityA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SignalOnConnectionOrDeviceCapability"
+        eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A possible mapping of a signal to a device or connection."/>
+        <details key="documentation" value="A possible allocations of a signal to a device or connection."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="signalType" lowerBound="1"
           eType="#//library/SignalType">
@@ -2532,11 +2586,11 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SubDeviceCapability" eSuperTypes="#//capabilities/CapabilityA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SubdeviceInDeviceCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A possible mapping of a sub device to a device."/>
+        <details key="documentation" value="A possible allocations of a sub device to a device."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subDeviceType" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subdeviceType" lowerBound="1"
           eType="#//library/DeviceType">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The device type that should be mapped to another device type"/>
@@ -2549,7 +2603,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceConsumption" eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceConsumption" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A resource consumption is the definition of how many resource of a single type are required for a capability. In addition, the original resource type can be referenced. "/>
       </eAnnotations>
@@ -2577,19 +2631,19 @@
         <details key="documentation" value="The root element of the capabilities model layer"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Subcapability" eSuperTypes="#//capabilities/CapabilitiesContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Subcapabilities" eSuperTypes="#//capabilities/CapabilitiesContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Sub capabilities can be used to organize the capabilities model like file folders"/>
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="restrictions" nsURI="http://www.oaam.de/oaam/model/v100/restrictions"
+  <eSubpackages name="restrictions" nsURI="http://www.oaam.de/oaam/model/v140/restrictions"
       nsPrefix="de.oaam.model.restrictions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Constraints on system functions including the presented safety and timing restrictions."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="RestrictionsContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root element of the restrictions model."/>
       </eAnnotations>
@@ -2653,7 +2707,7 @@
           <details key="documentation" value="All connection type restrictions."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="segregationsRestrictions"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="segregationRestrictions"
           upperBound="-1" eType="#//restrictions/SegregationRestriction" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All segregation restrictions."/>
@@ -2720,12 +2774,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SubFunctionRestrictionA" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="SubfunctionRestrictionA" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class of sub-function restrictions."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subFunctions" upperBound="-1"
-          eType="#//functions/Subfunction">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subfunctions" upperBound="-1"
+          eType="#//functions/Subfunctions">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The sub functions this constraint applies to."/>
         </eAnnotations>
@@ -2742,7 +2796,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LocationRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/ConnectionRestrinctionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="LocationRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/ConnectionRestrinctionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A location restriction forces devices, connections, tasks or signals to use or avoid certain locations."/>
       </eAnnotations>
@@ -2764,7 +2818,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AreaRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/ConnectionRestrinctionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="AreaRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/ConnectionRestrinctionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An area restriction forces devices, connection, tasks or signals to use or aviod location and ducts of a certain area."/>
       </eAnnotations>
@@ -2786,7 +2840,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PowerSourceRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="PowerSourceRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/DeviceRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A power restriction forces functions or signals to be mapped or not mapped to devices with a certain power supply."/>
       </eAnnotations>
@@ -2808,7 +2862,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A device restriction forces functions and signals to use or not use a certain device."/>
       </eAnnotations>
@@ -2830,7 +2884,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceTypeRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Device type restrictions force functions and device to use or not a certain device type."/>
       </eAnnotations>
@@ -2852,7 +2906,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConectionTypeRestriction" eSuperTypes="#//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConectionTypeRestriction" eSuperTypes="#//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A connetion restriction force signals to use or avoid a certain connction type. "/>
       </eAnnotations>
@@ -2874,7 +2928,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionRestriction" eSuperTypes="#//restrictions/SignalRestrictionA #//restrictions/SubFunctionRestrictionA #//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionRestriction" eSuperTypes="#//restrictions/SignalRestrictionA #//restrictions/SubfunctionRestrictionA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A connection restriction forces signals to use or avaid a certain connection."/>
       </eAnnotations>
@@ -2896,18 +2950,18 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SegregationRestriction" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SegregationRestriction" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Functions and signals can be defined to be segregated. This implies that they have to be mapped to different devices or connections. In the segregation two groups A and B are defined. Elements in group A must be segregated from elements in group B."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="tasksA" lowerBound="1"
-          upperBound="-1" eType="#//library/TaskType">
+          upperBound="-1" eType="#//functions/Task">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All function of group A."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="tasksB" lowerBound="1"
-          upperBound="-1" eType="#//library/TaskType">
+          upperBound="-1" eType="#//functions/Task">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All functions of group B"/>
         </eAnnotations>
@@ -2924,13 +2978,13 @@
           <details key="documentation" value="Elements from group A and B must be mapped to dissimilar locations."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subFunctionsA" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subfunctionsA" upperBound="-1"
           eType="#//functions/FunctionsContainerA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All sub functions of group A."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subFunctionsB" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subfunctionsB" upperBound="-1"
           eType="#//functions/FunctionsContainerA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All sub functions of group B."/>
@@ -3009,7 +3063,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SynchronicityRestriction" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA #//restrictions/TaskRestrictionA">
+    <eClassifiers xsi:type="ecore:EClass" name="SynchronicityRestriction" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA #//restrictions/TaskRestrictionA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Forces task to be executed in a given time interval. Can used to force synchrounous outputs or sensor reads"/>
       </eAnnotations>
@@ -3020,12 +3074,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskAtomicRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskAtomicRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Tasks referenced by this restriction must be hosted on the same hardware."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskSymmetryRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskSymmetryRestriction" eSuperTypes="#//restrictions/TaskRestrictionA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Restricts two tasks to be mapped to symmetric targets. Targets can be locations, devices or areas"/>
       </eAnnotations>
@@ -3036,7 +3090,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TimeDelayRestriction" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TimeDelayRestriction" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Enforces a maximum transprotation delay between the start task and the end task"/>
       </eAnnotations>
@@ -3090,59 +3144,59 @@
       </eLiterals>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="mapping" nsURI="http://www.oaam.de/oaam/model/v100/mapping"
-      nsPrefix="de.oaam.model.mapping">
+  <eSubpackages name="allocations" nsURI="http://www.oaam.de/oaam/model/v140/allocations"
+      nsPrefix="de.oaam.model.allocations">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The assignment of tasks functions to hardware and hardware to anatomy."/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="MappingContainerA" abstract="true"
-        eSuperTypes="#//common/ElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="AllocationsContainerA" abstract="true"
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The root element of the mapping model."/>
+        <details key="documentation" value="The root element of the allocations model."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="deviceAssignments" upperBound="-1"
-          eType="#//mapping/DeviceAssignment" containment="true">
+          eType="#//allocations/DeviceAssignment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All device assignments."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subDeviceAssignments"
-          upperBound="-1" eType="#//mapping/SubDeviceAssignment" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subdeviceAssignments"
+          upperBound="-1" eType="#//allocations/SubdeviceAssignment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All subdevice assignments."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="connectionAssignments"
-          upperBound="-1" eType="#//mapping/ConnectionAssignment" containment="true">
+          upperBound="-1" eType="#//allocations/ConnectionAssignment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All connection assignments."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="taskAssignments" upperBound="-1"
-          eType="#//mapping/TaskAssignment" containment="true">
+          eType="#//allocations/TaskAssignment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All task assignments."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="signalAssignments" upperBound="-1"
-          eType="#//mapping/SignalAssignment" containment="true">
+          eType="#//allocations/SignalAssignment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All signal assignments."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="supmapping" upperBound="-1"
-          eType="#//mapping/Supmapping" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="suballocations" upperBound="-1"
+          eType="#//allocations/Suballocations" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All submappings"/>
+          <details key="documentation" value="All suballocationss"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskAssignment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="TaskAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A mapping of a function to a device."/>
+        <details key="documentation" value="A allocations of a function to a device."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/TaskCapability">
+          eType="#//capabilities/TaskOnDeviceCapability">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the used capability, which specifies the resource consumption."/>
         </eAnnotations>
@@ -3160,20 +3214,20 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="schedule" upperBound="-1"
-          eType="#//mapping/Schedule" containment="true">
+          eType="#//allocations/Schedule" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Schedules for the tasks on this device. Multiple schedules are valid."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalAssignment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SignalAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A mapping of a signal to a chain of devices and connections."/>
+        <details key="documentation" value="A allocations of a signal to a chain of devices and connections."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
-          eType="#//mapping/SignalAssignmentSegment" containment="true">
+          eType="#//allocations/SignalAssignmentSegment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The segment of this mapping."/>
+          <details key="documentation" value="The segment of this allocations."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="signal" lowerBound="1"
@@ -3183,14 +3237,14 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionAssignment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A mapping of a connection to locations and ducts."/>
+        <details key="documentation" value="A allocations of a connection to locations and ducts."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
-          eType="#//mapping/ConnectionAssignmentSegment" containment="true">
+          eType="#//allocations/ConnectionAssignmentSegment" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The segments of this connection mapping."/>
+          <details key="documentation" value="The segments of this connection allocations."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="connection" lowerBound="1"
@@ -3200,12 +3254,12 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalAssignmentSegment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SignalAssignmentSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A signal segment is the mapping of a signal to either one device or one connection. Many consecutive segment define a full signal mapping path"/>
+        <details key="documentation" value="A signal segment is the allocations of a signal to either one device or one connection. Many consecutive segment define a full signal allocations path"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/SignalCapability">
+          eType="#//capabilities/SignalOnConnectionOrDeviceCapability">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the used capabilty, which specifies the resource consumtion."/>
         </eAnnotations>
@@ -3221,9 +3275,9 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceAssignment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A mapping of a device to a location."/>
+        <details key="documentation" value="A allocations of a device to a location."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="device" lowerBound="1"
           eType="#//hardware/Device">
@@ -3237,18 +3291,18 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/DeviceCapability">
+          eType="#//capabilities/DeviceInLocationCapability">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the used capability, which specifies the resource consumtion."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionAssignmentSegment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionAssignmentSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A connection segment is the mapping of a connection to either one location or duct. Many consecutive segment define a full connection mapping path"/>
+        <details key="documentation" value="A connection segment is the allocations of a connection to either one location or duct. Many consecutive segment define a full connection allocations path"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/ConnectionCapability">
+          eType="#//capabilities/ConnectionInDuctOrLocationCapability">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the used capability, which specifies the resource consumtion."/>
         </eAnnotations>
@@ -3264,17 +3318,17 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SubDeviceAssignment" eSuperTypes="#//common/ElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="SubdeviceAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A mapping of a sub device to a device or subdevice."/>
+        <details key="documentation" value="A allocations of a sub device to a device or subdevice."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/SubDeviceCapability">
+          eType="#//capabilities/SubdeviceInDeviceCapability">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the used capability, which specifies the resource consumtion."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="subDevice" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subdevice" lowerBound="1"
           eType="#//hardware/Device">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the sub device."/>
@@ -3287,17 +3341,17 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Mapping" eSuperTypes="#//mapping/MappingContainerA">
+    <eClassifiers xsi:type="ecore:EClass" name="Allocations" eSuperTypes="#//allocations/AllocationsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The root element of the mappings layer"/>
+        <details key="documentation" value="The root element of the allocationss layer"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Supmapping" eSuperTypes="#//mapping/MappingContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Suballocations" eSuperTypes="#//allocations/AllocationsContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="With submapping the assignments can be organized like folders"/>
+        <details key="documentation" value="With suballocations the assignments can be organized like folders"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Schedule" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Schedule" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A schedule assigens periodic or non-periodic time slots to a task assignment."/>
       </eAnnotations>
@@ -3321,13 +3375,13 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="scheduledTimes" lowerBound="1"
-          upperBound="-1" eType="#//mapping/ScheduledTime" containment="true">
+          upperBound="-1" eType="#//allocations/ScheduledTime" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All active times of this schedule."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ScheduledTime" eSuperTypes="#//common/ElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ScheduledTime" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.obeo.fr/dsl/dnc/archetype">
         <details key="archetype" value="Role"/>
       </eAnnotations>

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,11 +20,13 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isIsInformation <em>Is Information</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isIsPower <em>Is Power</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getWireType <em>Wire Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getWireTypes <em>Wire Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isIsWireless <em>Is Wireless</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isAllowsCircles <em>Allows Circles</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getNSources <em>NSources</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getNTagets <em>NTagets</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getNStartingPoints <em>NStarting Points</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getStartingPointResourceTypes <em>Starting Point Resource Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getNEndPoints <em>NEnd Points</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getEndPointResourceTypes <em>End Point Resource Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getNJoints <em>NJoints</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getMaxJointBranches <em>Max Joint Branches</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getMaxInterfaceToJointDistance <em>Max Interface To Joint Distance</em>}</li>
@@ -33,13 +35,14 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isDirectConnectionsAllowed <em>Direct Connections Allowed</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isIsUnidirectional <em>Is Unidirectional</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isRequiresMaster <em>Requires Master</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType()
  * @model
  * @generated
  */
-public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, ElementA {
+public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Is Information</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
@@ -93,29 +96,19 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 	void setIsPower(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Wire Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Wire Types</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.WireType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Which wire type is used by the connection type?
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Wire Type</em>' reference.
-	 * @see #setWireType(WireType)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_WireType()
+	 * @return the value of the '<em>Wire Types</em>' reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_WireTypes()
 	 * @model
 	 * @generated
 	 */
-	WireType getWireType();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getWireType <em>Wire Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Wire Type</em>' reference.
-	 * @see #getWireType()
-	 * @generated
-	 */
-	void setWireType(WireType value);
+	EList<WireType> getWireTypes();
 
 	/**
 	 * Returns the value of the '<em><b>Is Wireless</b></em>' attribute.
@@ -170,56 +163,86 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 	void setAllowsCircles(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>NSources</b></em>' attribute.
+	 * Returns the value of the '<em><b>NStarting Points</b></em>' attribute.
 	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Considering a single wire without switches, how many speakers are allowed?
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>NSources</em>' attribute.
-	 * @see #setNSources(int)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_NSources()
+	 * @return the value of the '<em>NStarting Points</em>' attribute.
+	 * @see #setNStartingPoints(int)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_NStartingPoints()
 	 * @model default="1" required="true"
 	 * @generated
 	 */
-	int getNSources();
+	int getNStartingPoints();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getNSources <em>NSources</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getNStartingPoints <em>NStarting Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>NSources</em>' attribute.
-	 * @see #getNSources()
+	 * @param value the new value of the '<em>NStarting Points</em>' attribute.
+	 * @see #getNStartingPoints()
 	 * @generated
 	 */
-	void setNSources(int value);
+	void setNStartingPoints(int value);
 
 	/**
-	 * Returns the value of the '<em><b>NTagets</b></em>' attribute.
+	 * Returns the value of the '<em><b>Starting Point Resource Types</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Which resource type (usualy an IO type) is required on the starting point side of the connection?
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Starting Point Resource Types</em>' reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_StartingPointResourceTypes()
+	 * @model
+	 * @generated
+	 */
+	EList<ResourceType> getStartingPointResourceTypes();
+
+	/**
+	 * Returns the value of the '<em><b>NEnd Points</b></em>' attribute.
 	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Considering a single cable without switches, how many listeners are allowed?
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>NTagets</em>' attribute.
-	 * @see #setNTagets(int)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_NTagets()
+	 * @return the value of the '<em>NEnd Points</em>' attribute.
+	 * @see #setNEndPoints(int)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_NEndPoints()
 	 * @model default="1" required="true"
 	 * @generated
 	 */
-	int getNTagets();
+	int getNEndPoints();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getNTagets <em>NTagets</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getNEndPoints <em>NEnd Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>NTagets</em>' attribute.
-	 * @see #getNTagets()
+	 * @param value the new value of the '<em>NEnd Points</em>' attribute.
+	 * @see #getNEndPoints()
 	 * @generated
 	 */
-	void setNTagets(int value);
+	void setNEndPoints(int value);
+
+	/**
+	 * Returns the value of the '<em><b>End Point Resource Types</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Which resource type (usualy an IO type) is required on the end point side of the connection?
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>End Point Resource Types</em>' reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_EndPointResourceTypes()
+	 * @model
+	 * @generated
+	 */
+	EList<ResourceType> getEndPointResourceTypes();
 
 	/**
 	 * Returns the value of the '<em><b>NJoints</b></em>' attribute.
@@ -316,6 +339,7 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 
 	/**
 	 * Returns the value of the '<em><b>Is Switched</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -324,7 +348,7 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 	 * @return the value of the '<em>Is Switched</em>' attribute.
 	 * @see #setIsSwitched(boolean)
 	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_IsSwitched()
-	 * @model required="true"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isIsSwitched();
@@ -392,6 +416,7 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 
 	/**
 	 * Returns the value of the '<em><b>Is Unidirectional</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -400,7 +425,7 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 	 * @return the value of the '<em>Is Unidirectional</em>' attribute.
 	 * @see #setIsUnidirectional(boolean)
 	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_IsUnidirectional()
-	 * @model required="true"
+	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isIsUnidirectional();
@@ -414,5 +439,31 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, El
 	 * @generated
 	 */
 	void setIsUnidirectional(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Requires Master</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Is a special bus participant required to control the bus, e.g. SPI? Can also denote a multi-master bus.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Requires Master</em>' attribute.
+	 * @see #setRequiresMaster(boolean)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_RequiresMaster()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isRequiresMaster();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#isRequiresMaster <em>Requires Master</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Requires Master</em>' attribute.
+	 * @see #isRequiresMaster()
+	 * @generated
+	 */
+	void setRequiresMaster(boolean value);
 
 } // ConnectionType

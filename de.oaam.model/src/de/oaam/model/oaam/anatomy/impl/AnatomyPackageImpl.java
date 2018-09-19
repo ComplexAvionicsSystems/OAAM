@@ -4,6 +4,8 @@ package de.oaam.model.oaam.anatomy.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.Anatomy;
 import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
@@ -37,11 +39,6 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -187,7 +184,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) instanceof CapabilitiesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI) : CapabilitiesPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAnatomyPackage.createPackageContents();
@@ -200,7 +197,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		theHardwarePackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theAnatomyPackage.initializePackageContents();
@@ -213,7 +210,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		theHardwarePackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theAnatomyPackage.freeze();
@@ -319,6 +316,15 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLocation_Length() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArea() {
 		return areaEClass;
 	}
@@ -373,7 +379,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDuct_DuctopeningA() {
+	public EReference getDuct_StartingPoint() {
 		return (EReference)ductEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -382,7 +388,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDuct_DuctopeningB() {
+	public EReference getDuct_EndPoint() {
 		return (EReference)ductEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -524,6 +530,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		createEReference(locationEClass, LOCATION__TYPE);
 		createEReference(locationEClass, LOCATION__POSITION);
 		createEReference(locationEClass, LOCATION__DUCT_OPENINGS);
+		createEAttribute(locationEClass, LOCATION__LENGTH);
 
 		areaEClass = createEClass(AREA);
 		createEReference(areaEClass, AREA__LOCATIONS);
@@ -532,8 +539,8 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		ductEClass = createEClass(DUCT);
 		createEAttribute(ductEClass, DUCT__LENGTH);
 		createEReference(ductEClass, DUCT__TYPE);
-		createEReference(ductEClass, DUCT__DUCTOPENING_A);
-		createEReference(ductEClass, DUCT__DUCTOPENING_B);
+		createEReference(ductEClass, DUCT__STARTING_POINT);
+		createEReference(ductEClass, DUCT__END_POINT);
 
 		ductOpeningEClass = createEClass(DUCT_OPENING);
 		createEReference(ductOpeningEClass, DUCT_OPENING__RELATIV_POSITION);
@@ -585,25 +592,25 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		anatomyContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		anatomyContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		locationEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		locationEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		areaEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		areaEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		areaEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		areaEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		ductEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
-		ductEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ductEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ductEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		ductEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		ductOpeningEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		ductOpeningEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		ductOpeningEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		position3DEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		position3DEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		position3DEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		position3DEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		locationSymmetryEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		locationSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		anatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
@@ -623,6 +630,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		initEReference(getLocation_Type(), theLibraryPackage.getLocationType(), null, "type", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_Position(), this.getPosition3D(), null, "position", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_DuctOpenings(), this.getDuctOpening(), null, "ductOpenings", null, 0, -1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_Length(), ecorePackage.getEDouble(), "length", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(areaEClass, Area.class, "Area", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArea_Locations(), this.getLocation(), null, "locations", null, 0, -1, Area.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -631,8 +639,8 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		initEClass(ductEClass, Duct.class, "Duct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDuct_Length(), ecorePackage.getEDouble(), "length", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDuct_Type(), theLibraryPackage.getDuctType(), null, "type", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDuct_DuctopeningA(), this.getDuctOpening(), null, "ductopeningA", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDuct_DuctopeningB(), this.getDuctOpening(), null, "ductopeningB", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDuct_StartingPoint(), this.getDuctOpening(), null, "startingPoint", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDuct_EndPoint(), this.getDuctOpening(), null, "endPoint", null, 1, 1, Duct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ductOpeningEClass, DuctOpening.class, "DuctOpening", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDuctOpening_RelativPosition(), this.getPosition3D(), null, "relativPosition", null, 0, 1, DuctOpening.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

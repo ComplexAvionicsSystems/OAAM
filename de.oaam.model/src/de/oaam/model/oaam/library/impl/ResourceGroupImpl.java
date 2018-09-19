@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceGroup;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ResourceGroupImpl extends ElementAImpl implements ResourceGroup {
+public class ResourceGroupImpl extends OaamBaseElementAImpl implements ResourceGroup {
 	/**
 	 * The cached value of the '{@link #getResources() <em>Resources</em>}' reference list.
 	 * <!-- begin-user-doc -->

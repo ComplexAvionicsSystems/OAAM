@@ -7,7 +7,7 @@ import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.BoolOperationTypesE;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import java.util.Collection;
 import java.util.Date;
 
@@ -708,16 +708,16 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case CommonPackage.BOOL_OPERATION__ID: return CommonPackage.ELEMENT_A__ID;
-				case CommonPackage.BOOL_OPERATION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case CommonPackage.BOOL_OPERATION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case CommonPackage.BOOL_OPERATION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case CommonPackage.BOOL_OPERATION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case CommonPackage.BOOL_OPERATION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case CommonPackage.BOOL_OPERATION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case CommonPackage.BOOL_OPERATION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case CommonPackage.BOOL_OPERATION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case CommonPackage.BOOL_OPERATION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case CommonPackage.BOOL_OPERATION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case CommonPackage.BOOL_OPERATION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case CommonPackage.BOOL_OPERATION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case CommonPackage.BOOL_OPERATION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case CommonPackage.BOOL_OPERATION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case CommonPackage.BOOL_OPERATION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -731,16 +731,16 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return CommonPackage.BOOL_OPERATION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return CommonPackage.BOOL_OPERATION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return CommonPackage.BOOL_OPERATION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return CommonPackage.BOOL_OPERATION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return CommonPackage.BOOL_OPERATION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return CommonPackage.BOOL_OPERATION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return CommonPackage.BOOL_OPERATION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return CommonPackage.BOOL_OPERATION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return CommonPackage.BOOL_OPERATION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return CommonPackage.BOOL_OPERATION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return CommonPackage.BOOL_OPERATION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return CommonPackage.BOOL_OPERATION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return CommonPackage.BOOL_OPERATION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return CommonPackage.BOOL_OPERATION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return CommonPackage.BOOL_OPERATION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return CommonPackage.BOOL_OPERATION__TRACE_LINK;
 				default: return -1;
 			}
 		}

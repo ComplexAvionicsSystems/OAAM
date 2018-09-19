@@ -43,7 +43,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v100/capabilities";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v140/capabilities";
 
 	/**
 	 * The package namespace name.
@@ -115,7 +115,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
+	int CAPABILITIES_CONTAINER_A__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -124,7 +124,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
+	int CAPABILITIES_CONTAINER_A__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -133,7 +133,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int CAPABILITIES_CONTAINER_A__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -142,7 +142,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int CAPABILITIES_CONTAINER_A__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -151,7 +151,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int CAPABILITIES_CONTAINER_A__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -160,7 +160,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int CAPABILITIES_CONTAINER_A__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -169,7 +169,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int CAPABILITIES_CONTAINER_A__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -178,52 +178,52 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int CAPABILITIES_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Function Capabilties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Task On Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Signal Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Signal On Connection Or Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Device In Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Sub Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Subdevice In Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Connection Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Connection In Duct Or Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Subcapabilities</b></em>' containment reference list.
@@ -232,7 +232,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
+	int CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -241,7 +241,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 6;
+	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -250,17 +250,17 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int CAPABILITIES_CONTAINER_A_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.TaskCapabilityImpl <em>Task Capability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl <em>Task On Device Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.TaskCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getTaskCapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getTaskOnDeviceCapability()
 	 * @generated
 	 */
-	int TASK_CAPABILITY = 2;
+	int TASK_ON_DEVICE_CAPABILITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
@@ -269,7 +269,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+	int TASK_ON_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -278,7 +278,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+	int TASK_ON_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -287,7 +287,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+	int TASK_ON_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -296,7 +296,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+	int TASK_ON_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -305,7 +305,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+	int TASK_ON_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -314,7 +314,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+	int TASK_ON_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -323,7 +323,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+	int TASK_ON_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -332,7 +332,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+	int TASK_ON_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -341,7 +341,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+	int TASK_ON_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -350,7 +350,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+	int TASK_ON_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -359,7 +359,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+	int TASK_ON_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Task Type</b></em>' reference.
@@ -368,7 +368,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__TASK_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+	int TASK_ON_DEVICE_CAPABILITY__TASK_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Device Type</b></em>' reference.
@@ -377,7 +377,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+	int TASK_ON_DEVICE_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Worst Case Execution Time</b></em>' attribute.
@@ -386,7 +386,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__WORST_CASE_EXECUTION_TIME = CAPABILITY_A_FEATURE_COUNT + 12;
+	int TASK_ON_DEVICE_CAPABILITY__WORST_CASE_EXECUTION_TIME = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Failure Probability</b></em>' attribute.
@@ -395,35 +395,35 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY__FAILURE_PROBABILITY = CAPABILITY_A_FEATURE_COUNT + 13;
+	int TASK_ON_DEVICE_CAPABILITY__FAILURE_PROBABILITY = CAPABILITY_A_FEATURE_COUNT + 13;
 
 	/**
-	 * The number of structural features of the '<em>Task Capability</em>' class.
+	 * The number of structural features of the '<em>Task On Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 14;
+	int TASK_ON_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 14;
 
 	/**
-	 * The number of operations of the '<em>Task Capability</em>' class.
+	 * The number of operations of the '<em>Task On Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+	int TASK_ON_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.DeviceCapabilityImpl <em>Device Capability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.DeviceInLocationCapabilityImpl <em>Device In Location Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.DeviceCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getDeviceCapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.DeviceInLocationCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getDeviceInLocationCapability()
 	 * @generated
 	 */
-	int DEVICE_CAPABILITY = 3;
+	int DEVICE_IN_LOCATION_CAPABILITY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
@@ -432,7 +432,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+	int DEVICE_IN_LOCATION_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -441,7 +441,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+	int DEVICE_IN_LOCATION_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -450,7 +450,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+	int DEVICE_IN_LOCATION_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -459,7 +459,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+	int DEVICE_IN_LOCATION_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -468,7 +468,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+	int DEVICE_IN_LOCATION_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -477,7 +477,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+	int DEVICE_IN_LOCATION_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -486,7 +486,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+	int DEVICE_IN_LOCATION_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -495,7 +495,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+	int DEVICE_IN_LOCATION_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -504,7 +504,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+	int DEVICE_IN_LOCATION_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -513,7 +513,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+	int DEVICE_IN_LOCATION_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -522,7 +522,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+	int DEVICE_IN_LOCATION_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Device Type</b></em>' reference.
@@ -531,7 +531,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+	int DEVICE_IN_LOCATION_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Location Type</b></em>' reference.
@@ -540,35 +540,35 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY__LOCATION_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+	int DEVICE_IN_LOCATION_CAPABILITY__LOCATION_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The number of structural features of the '<em>Device Capability</em>' class.
+	 * The number of structural features of the '<em>Device In Location Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+	int DEVICE_IN_LOCATION_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of operations of the '<em>Device Capability</em>' class.
+	 * The number of operations of the '<em>Device In Location Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+	int DEVICE_IN_LOCATION_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.ConnectionCapabilityImpl <em>Connection Capability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.ConnectionInDuctOrLocationCapabilityImpl <em>Connection In Duct Or Location Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.ConnectionCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getConnectionCapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.ConnectionInDuctOrLocationCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getConnectionInDuctOrLocationCapability()
 	 * @generated
 	 */
-	int CONNECTION_CAPABILITY = 4;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
@@ -577,7 +577,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -586,7 +586,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -595,7 +595,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -604,7 +604,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -613,7 +613,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -622,7 +622,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -631,7 +631,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -640,7 +640,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -649,7 +649,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -658,7 +658,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -667,7 +667,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Connection Type</b></em>' reference.
@@ -676,7 +676,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Location Type</b></em>' reference.
@@ -685,7 +685,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__LOCATION_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__LOCATION_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Duct Type</b></em>' reference.
@@ -694,35 +694,35 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY__DUCT_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__DUCT_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of structural features of the '<em>Connection Capability</em>' class.
+	 * The number of structural features of the '<em>Connection In Duct Or Location Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 13;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 13;
 
 	/**
-	 * The number of operations of the '<em>Connection Capability</em>' class.
+	 * The number of operations of the '<em>Connection In Duct Or Location Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+	int CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SignalCapabilityImpl <em>Signal Capability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl <em>Signal On Connection Or Device Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SignalCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalCapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalOnConnectionOrDeviceCapability()
 	 * @generated
 	 */
-	int SIGNAL_CAPABILITY = 5;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY = 5;
 
 	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
@@ -731,7 +731,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -740,7 +740,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -749,7 +749,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -758,7 +758,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -767,7 +767,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -776,7 +776,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -785,7 +785,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -794,7 +794,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -803,7 +803,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -812,7 +812,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -821,7 +821,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Signal Type</b></em>' reference.
@@ -830,7 +830,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__SIGNAL_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__SIGNAL_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Device Type</b></em>' reference.
@@ -839,7 +839,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Connection Type</b></em>' reference.
@@ -848,35 +848,35 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of structural features of the '<em>Signal Capability</em>' class.
+	 * The number of structural features of the '<em>Signal On Connection Or Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 13;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 13;
 
 	/**
-	 * The number of operations of the '<em>Signal Capability</em>' class.
+	 * The number of operations of the '<em>Signal On Connection Or Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubDeviceCapabilityImpl <em>Sub Device Capability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubdeviceInDeviceCapabilityImpl <em>Subdevice In Device Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SubDeviceCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubDeviceCapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.SubdeviceInDeviceCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubdeviceInDeviceCapability()
 	 * @generated
 	 */
-	int SUB_DEVICE_CAPABILITY = 6;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY = 6;
 
 	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
@@ -885,7 +885,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -894,7 +894,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -903,7 +903,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -912,7 +912,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -921,7 +921,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -930,7 +930,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -939,7 +939,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -948,7 +948,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -957,7 +957,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -966,7 +966,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -975,16 +975,16 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Sub Device Type</b></em>' reference.
+	 * The feature id for the '<em><b>Subdevice Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__SUB_DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__SUBDEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Target Device Type</b></em>' reference.
@@ -993,25 +993,25 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The number of structural features of the '<em>Sub Device Capability</em>' class.
+	 * The number of structural features of the '<em>Subdevice In Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of operations of the '<em>Sub Device Capability</em>' class.
+	 * The number of operations of the '<em>Subdevice In Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+	int SUBDEVICE_IN_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.ResourceConsumptionImpl <em>Resource Consumption</em>}' class.
@@ -1030,7 +1030,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ID = CommonPackage.ELEMENT_A__ID;
+	int RESOURCE_CONSUMPTION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1039,7 +1039,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__NAME = CommonPackage.ELEMENT_A__NAME;
+	int RESOURCE_CONSUMPTION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1048,7 +1048,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int RESOURCE_CONSUMPTION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1057,7 +1057,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int RESOURCE_CONSUMPTION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1066,7 +1066,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int RESOURCE_CONSUMPTION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1075,7 +1075,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int RESOURCE_CONSUMPTION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1084,7 +1084,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int RESOURCE_CONSUMPTION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1093,7 +1093,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int RESOURCE_CONSUMPTION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Count</b></em>' attribute.
@@ -1102,7 +1102,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int RESOURCE_CONSUMPTION__COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Original Resource</b></em>' reference list.
@@ -1111,7 +1111,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__ORIGINAL_RESOURCE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int RESOURCE_CONSUMPTION__ORIGINAL_RESOURCE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -1120,7 +1120,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION__TYPE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int RESOURCE_CONSUMPTION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Resource Consumption</em>' class.
@@ -1129,7 +1129,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int RESOURCE_CONSUMPTION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Resource Consumption</em>' class.
@@ -1138,7 +1138,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONSUMPTION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int RESOURCE_CONSUMPTION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
@@ -1223,49 +1223,49 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES__TRACE_LINK = CAPABILITIES_CONTAINER_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Function Capabilties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Task On Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES__FUNCTION_CAPABILTIES = CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES;
+	int CAPABILITIES__TASK_ON_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Signal Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Signal On Connection Or Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES__SIGNAL_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES;
+	int CAPABILITIES__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Device In Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES__DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES;
+	int CAPABILITIES__DEVICE_IN_LOCATION_CAPABILITIES = CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Sub Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Subdevice In Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES__SUB_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES;
+	int CAPABILITIES__SUBDEVICE_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Connection Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Connection In Duct Or Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES__CONNECTION_CAPABILITIES = CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES;
+	int CAPABILITIES__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES = CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Subcapabilities</b></em>' containment reference list.
@@ -1295,14 +1295,14 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilityImpl <em>Subcapability</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapability()
+	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
 	 * @generated
 	 */
-	int SUBCAPABILITY = 9;
+	int SUBCAPABILITIES = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1311,7 +1311,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__ID = CAPABILITIES_CONTAINER_A__ID;
+	int SUBCAPABILITIES__ID = CAPABILITIES_CONTAINER_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1320,7 +1320,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__NAME = CAPABILITIES_CONTAINER_A__NAME;
+	int SUBCAPABILITIES__NAME = CAPABILITIES_CONTAINER_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1329,7 +1329,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__STYLE = CAPABILITIES_CONTAINER_A__STYLE;
+	int SUBCAPABILITIES__STYLE = CAPABILITIES_CONTAINER_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1338,7 +1338,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__ATTRIBUTES = CAPABILITIES_CONTAINER_A__ATTRIBUTES;
+	int SUBCAPABILITIES__ATTRIBUTES = CAPABILITIES_CONTAINER_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1347,7 +1347,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__DOCUMENTATION = CAPABILITIES_CONTAINER_A__DOCUMENTATION;
+	int SUBCAPABILITIES__DOCUMENTATION = CAPABILITIES_CONTAINER_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1356,7 +1356,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__MODIFIED = CAPABILITIES_CONTAINER_A__MODIFIED;
+	int SUBCAPABILITIES__MODIFIED = CAPABILITIES_CONTAINER_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1365,7 +1365,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__MODIFIER = CAPABILITIES_CONTAINER_A__MODIFIER;
+	int SUBCAPABILITIES__MODIFIER = CAPABILITIES_CONTAINER_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1374,52 +1374,52 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__TRACE_LINK = CAPABILITIES_CONTAINER_A__TRACE_LINK;
+	int SUBCAPABILITIES__TRACE_LINK = CAPABILITIES_CONTAINER_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Function Capabilties</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Task On Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__FUNCTION_CAPABILTIES = CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES;
+	int SUBCAPABILITIES__TASK_ON_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Signal Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Signal On Connection Or Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__SIGNAL_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES;
+	int SUBCAPABILITIES__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Device In Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES;
+	int SUBCAPABILITIES__DEVICE_IN_LOCATION_CAPABILITIES = CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Sub Device Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Subdevice In Device Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__SUB_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES;
+	int SUBCAPABILITIES__SUBDEVICE_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Connection Capabilities</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Connection In Duct Or Location Capabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__CONNECTION_CAPABILITIES = CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES;
+	int SUBCAPABILITIES__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES = CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Subcapabilities</b></em>' containment reference list.
@@ -1428,7 +1428,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__SUBCAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCAPABILITIES;
+	int SUBCAPABILITIES__SUBCAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCAPABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1437,7 +1437,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__OPERATION_MODES = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 0;
+	int SUBCAPABILITIES__OPERATION_MODES = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1446,26 +1446,25 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY__VARIANTS = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 1;
+	int SUBCAPABILITIES__VARIANTS = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Subcapability</em>' class.
+	 * The number of structural features of the '<em>Subcapabilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY_FEATURE_COUNT = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 2;
+	int SUBCAPABILITIES_FEATURE_COUNT = CAPABILITIES_CONTAINER_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Subcapability</em>' class.
+	 * The number of operations of the '<em>Subcapabilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBCAPABILITY_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
-
+	int SUBCAPABILITIES_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.CapabilityA <em>Capability A</em>}'.
@@ -1499,59 +1498,59 @@ public interface CapabilitiesPackage extends EPackage {
 	EClass getCapabilitiesContainerA();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getFunctionCapabilties <em>Function Capabilties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getTaskOnDeviceCapabilities <em>Task On Device Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Function Capabilties</em>'.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getFunctionCapabilties()
+	 * @return the meta object for the containment reference list '<em>Task On Device Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getTaskOnDeviceCapabilities()
 	 * @see #getCapabilitiesContainerA()
 	 * @generated
 	 */
-	EReference getCapabilitiesContainerA_FunctionCapabilties();
+	EReference getCapabilitiesContainerA_TaskOnDeviceCapabilities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalCapabilities <em>Signal Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalOnConnectionOrDeviceCapabilities <em>Signal On Connection Or Device Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Signal Capabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalCapabilities()
+	 * @return the meta object for the containment reference list '<em>Signal On Connection Or Device Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalOnConnectionOrDeviceCapabilities()
 	 * @see #getCapabilitiesContainerA()
 	 * @generated
 	 */
-	EReference getCapabilitiesContainerA_SignalCapabilities();
+	EReference getCapabilitiesContainerA_SignalOnConnectionOrDeviceCapabilities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceCapabilities <em>Device Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceInLocationCapabilities <em>Device In Location Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Device Capabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceCapabilities()
+	 * @return the meta object for the containment reference list '<em>Device In Location Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getDeviceInLocationCapabilities()
 	 * @see #getCapabilitiesContainerA()
 	 * @generated
 	 */
-	EReference getCapabilitiesContainerA_DeviceCapabilities();
+	EReference getCapabilitiesContainerA_DeviceInLocationCapabilities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubDeviceCapabilities <em>Sub Device Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubdeviceInDeviceCapabilities <em>Subdevice In Device Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Device Capabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubDeviceCapabilities()
+	 * @return the meta object for the containment reference list '<em>Subdevice In Device Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubdeviceInDeviceCapabilities()
 	 * @see #getCapabilitiesContainerA()
 	 * @generated
 	 */
-	EReference getCapabilitiesContainerA_SubDeviceCapabilities();
+	EReference getCapabilitiesContainerA_SubdeviceInDeviceCapabilities();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionCapabilities <em>Connection Capabilities</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Connection Capabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionCapabilities()
+	 * @return the meta object for the containment reference list '<em>Connection In Duct Or Location Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionInDuctOrLocationCapabilities()
 	 * @see #getCapabilitiesContainerA()
 	 * @generated
 	 */
-	EReference getCapabilitiesContainerA_ConnectionCapabilities();
+	EReference getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubcapabilities <em>Subcapabilities</em>}'.
@@ -1565,208 +1564,208 @@ public interface CapabilitiesPackage extends EPackage {
 	EReference getCapabilitiesContainerA_Subcapabilities();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.TaskCapability <em>Task Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability <em>Task On Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Task Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability
+	 * @return the meta object for class '<em>Task On Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability
 	 * @generated
 	 */
-	EClass getTaskCapability();
+	EClass getTaskOnDeviceCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.TaskCapability#getTaskType <em>Task Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getTaskType <em>Task Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Task Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability#getTaskType()
-	 * @see #getTaskCapability()
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getTaskType()
+	 * @see #getTaskOnDeviceCapability()
 	 * @generated
 	 */
-	EReference getTaskCapability_TaskType();
+	EReference getTaskOnDeviceCapability_TaskType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.TaskCapability#getDeviceType <em>Device Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getDeviceType <em>Device Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability#getDeviceType()
-	 * @see #getTaskCapability()
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getDeviceType()
+	 * @see #getTaskOnDeviceCapability()
 	 * @generated
 	 */
-	EReference getTaskCapability_DeviceType();
+	EReference getTaskOnDeviceCapability_DeviceType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.TaskCapability#getWorstCaseExecutionTime <em>Worst Case Execution Time</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getWorstCaseExecutionTime <em>Worst Case Execution Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Worst Case Execution Time</em>'.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability#getWorstCaseExecutionTime()
-	 * @see #getTaskCapability()
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getWorstCaseExecutionTime()
+	 * @see #getTaskOnDeviceCapability()
 	 * @generated
 	 */
-	EAttribute getTaskCapability_WorstCaseExecutionTime();
+	EAttribute getTaskOnDeviceCapability_WorstCaseExecutionTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.TaskCapability#getFailureProbability <em>Failure Probability</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getFailureProbability <em>Failure Probability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Failure Probability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.TaskCapability#getFailureProbability()
-	 * @see #getTaskCapability()
+	 * @see de.oaam.model.oaam.capabilities.TaskOnDeviceCapability#getFailureProbability()
+	 * @see #getTaskOnDeviceCapability()
 	 * @generated
 	 */
-	EAttribute getTaskCapability_FailureProbability();
+	EAttribute getTaskOnDeviceCapability_FailureProbability();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.DeviceCapability <em>Device Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability <em>Device In Location Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Device Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.DeviceCapability
+	 * @return the meta object for class '<em>Device In Location Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.DeviceInLocationCapability
 	 * @generated
 	 */
-	EClass getDeviceCapability();
+	EClass getDeviceInLocationCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.DeviceCapability#getDeviceType <em>Device Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability#getDeviceType <em>Device Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.DeviceCapability#getDeviceType()
-	 * @see #getDeviceCapability()
+	 * @see de.oaam.model.oaam.capabilities.DeviceInLocationCapability#getDeviceType()
+	 * @see #getDeviceInLocationCapability()
 	 * @generated
 	 */
-	EReference getDeviceCapability_DeviceType();
+	EReference getDeviceInLocationCapability_DeviceType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.DeviceCapability#getLocationType <em>Location Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability#getLocationType <em>Location Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Location Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.DeviceCapability#getLocationType()
-	 * @see #getDeviceCapability()
+	 * @see de.oaam.model.oaam.capabilities.DeviceInLocationCapability#getLocationType()
+	 * @see #getDeviceInLocationCapability()
 	 * @generated
 	 */
-	EReference getDeviceCapability_LocationType();
+	EReference getDeviceInLocationCapability_LocationType();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.ConnectionCapability <em>Connection Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability <em>Connection In Duct Or Location Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Connection Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.ConnectionCapability
+	 * @return the meta object for class '<em>Connection In Duct Or Location Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability
 	 * @generated
 	 */
-	EClass getConnectionCapability();
+	EClass getConnectionInDuctOrLocationCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionCapability#getConnectionType <em>Connection Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getConnectionType <em>Connection Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Connection Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.ConnectionCapability#getConnectionType()
-	 * @see #getConnectionCapability()
+	 * @see de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getConnectionType()
+	 * @see #getConnectionInDuctOrLocationCapability()
 	 * @generated
 	 */
-	EReference getConnectionCapability_ConnectionType();
+	EReference getConnectionInDuctOrLocationCapability_ConnectionType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionCapability#getLocationType <em>Location Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getLocationType <em>Location Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Location Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.ConnectionCapability#getLocationType()
-	 * @see #getConnectionCapability()
+	 * @see de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getLocationType()
+	 * @see #getConnectionInDuctOrLocationCapability()
 	 * @generated
 	 */
-	EReference getConnectionCapability_LocationType();
+	EReference getConnectionInDuctOrLocationCapability_LocationType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionCapability#getDuctType <em>Duct Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getDuctType <em>Duct Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Duct Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.ConnectionCapability#getDuctType()
-	 * @see #getConnectionCapability()
+	 * @see de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability#getDuctType()
+	 * @see #getConnectionInDuctOrLocationCapability()
 	 * @generated
 	 */
-	EReference getConnectionCapability_DuctType();
+	EReference getConnectionInDuctOrLocationCapability_DuctType();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SignalCapability <em>Signal Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability <em>Signal On Connection Or Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Signal Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SignalCapability
+	 * @return the meta object for class '<em>Signal On Connection Or Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability
 	 * @generated
 	 */
-	EClass getSignalCapability();
+	EClass getSignalOnConnectionOrDeviceCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalCapability#getSignalType <em>Signal Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getSignalType <em>Signal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Signal Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SignalCapability#getSignalType()
-	 * @see #getSignalCapability()
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getSignalType()
+	 * @see #getSignalOnConnectionOrDeviceCapability()
 	 * @generated
 	 */
-	EReference getSignalCapability_SignalType();
+	EReference getSignalOnConnectionOrDeviceCapability_SignalType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalCapability#getDeviceType <em>Device Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getDeviceType <em>Device Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SignalCapability#getDeviceType()
-	 * @see #getSignalCapability()
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getDeviceType()
+	 * @see #getSignalOnConnectionOrDeviceCapability()
 	 * @generated
 	 */
-	EReference getSignalCapability_DeviceType();
+	EReference getSignalOnConnectionOrDeviceCapability_DeviceType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalCapability#getConnectionType <em>Connection Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getConnectionType <em>Connection Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Connection Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SignalCapability#getConnectionType()
-	 * @see #getSignalCapability()
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getConnectionType()
+	 * @see #getSignalOnConnectionOrDeviceCapability()
 	 * @generated
 	 */
-	EReference getSignalCapability_ConnectionType();
+	EReference getSignalOnConnectionOrDeviceCapability_ConnectionType();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubDeviceCapability <em>Sub Device Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability <em>Subdevice In Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sub Device Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SubDeviceCapability
+	 * @return the meta object for class '<em>Subdevice In Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability
 	 * @generated
 	 */
-	EClass getSubDeviceCapability();
+	EClass getSubdeviceInDeviceCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubDeviceCapability#getSubDeviceType <em>Sub Device Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability#getSubdeviceType <em>Subdevice Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Sub Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SubDeviceCapability#getSubDeviceType()
-	 * @see #getSubDeviceCapability()
+	 * @return the meta object for the reference '<em>Subdevice Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability#getSubdeviceType()
+	 * @see #getSubdeviceInDeviceCapability()
 	 * @generated
 	 */
-	EReference getSubDeviceCapability_SubDeviceType();
+	EReference getSubdeviceInDeviceCapability_SubdeviceType();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubDeviceCapability#getTargetDeviceType <em>Target Device Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability#getTargetDeviceType <em>Target Device Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.SubDeviceCapability#getTargetDeviceType()
-	 * @see #getSubDeviceCapability()
+	 * @see de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability#getTargetDeviceType()
+	 * @see #getSubdeviceInDeviceCapability()
 	 * @generated
 	 */
-	EReference getSubDeviceCapability_TargetDeviceType();
+	EReference getSubdeviceInDeviceCapability_TargetDeviceType();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.ResourceConsumption <em>Resource Consumption</em>}'.
@@ -1822,14 +1821,14 @@ public interface CapabilitiesPackage extends EPackage {
 	EClass getCapabilities();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Subcapability <em>Subcapability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Subcapability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.Subcapability
+	 * @return the meta object for class '<em>Subcapabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
 	 * @generated
 	 */
-	EClass getSubcapability();
+	EClass getSubcapabilities();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1883,44 +1882,44 @@ public interface CapabilitiesPackage extends EPackage {
 		EClass CAPABILITIES_CONTAINER_A = eINSTANCE.getCapabilitiesContainerA();
 
 		/**
-		 * The meta object literal for the '<em><b>Function Capabilties</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Task On Device Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES = eINSTANCE.getCapabilitiesContainerA_FunctionCapabilties();
+		EReference CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_TaskOnDeviceCapabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Signal Capabilities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Signal On Connection Or Device Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SignalCapabilities();
+		EReference CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SignalOnConnectionOrDeviceCapabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Device Capabilities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Device In Location Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_DeviceCapabilities();
+		EReference CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_DeviceInLocationCapabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Device Capabilities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Subdevice In Device Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SubDeviceCapabilities();
+		EReference CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SubdeviceInDeviceCapabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Connection Capabilities</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Connection In Duct Or Location Capabilities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_ConnectionCapabilities();
+		EReference CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities();
 
 		/**
 		 * The meta object literal for the '<em><b>Subcapabilities</b></em>' containment reference list feature.
@@ -1931,14 +1930,14 @@ public interface CapabilitiesPackage extends EPackage {
 		EReference CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = eINSTANCE.getCapabilitiesContainerA_Subcapabilities();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.TaskCapabilityImpl <em>Task Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl <em>Task On Device Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.TaskCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getTaskCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getTaskOnDeviceCapability()
 		 * @generated
 		 */
-		EClass TASK_CAPABILITY = eINSTANCE.getTaskCapability();
+		EClass TASK_ON_DEVICE_CAPABILITY = eINSTANCE.getTaskOnDeviceCapability();
 
 		/**
 		 * The meta object literal for the '<em><b>Task Type</b></em>' reference feature.
@@ -1946,7 +1945,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_CAPABILITY__TASK_TYPE = eINSTANCE.getTaskCapability_TaskType();
+		EReference TASK_ON_DEVICE_CAPABILITY__TASK_TYPE = eINSTANCE.getTaskOnDeviceCapability_TaskType();
 
 		/**
 		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
@@ -1954,7 +1953,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_CAPABILITY__DEVICE_TYPE = eINSTANCE.getTaskCapability_DeviceType();
+		EReference TASK_ON_DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getTaskOnDeviceCapability_DeviceType();
 
 		/**
 		 * The meta object literal for the '<em><b>Worst Case Execution Time</b></em>' attribute feature.
@@ -1962,7 +1961,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_CAPABILITY__WORST_CASE_EXECUTION_TIME = eINSTANCE.getTaskCapability_WorstCaseExecutionTime();
+		EAttribute TASK_ON_DEVICE_CAPABILITY__WORST_CASE_EXECUTION_TIME = eINSTANCE.getTaskOnDeviceCapability_WorstCaseExecutionTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Failure Probability</b></em>' attribute feature.
@@ -1970,17 +1969,17 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_CAPABILITY__FAILURE_PROBABILITY = eINSTANCE.getTaskCapability_FailureProbability();
+		EAttribute TASK_ON_DEVICE_CAPABILITY__FAILURE_PROBABILITY = eINSTANCE.getTaskOnDeviceCapability_FailureProbability();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.DeviceCapabilityImpl <em>Device Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.DeviceInLocationCapabilityImpl <em>Device In Location Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.DeviceCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getDeviceCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.DeviceInLocationCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getDeviceInLocationCapability()
 		 * @generated
 		 */
-		EClass DEVICE_CAPABILITY = eINSTANCE.getDeviceCapability();
+		EClass DEVICE_IN_LOCATION_CAPABILITY = eINSTANCE.getDeviceInLocationCapability();
 
 		/**
 		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
@@ -1988,7 +1987,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getDeviceCapability_DeviceType();
+		EReference DEVICE_IN_LOCATION_CAPABILITY__DEVICE_TYPE = eINSTANCE.getDeviceInLocationCapability_DeviceType();
 
 		/**
 		 * The meta object literal for the '<em><b>Location Type</b></em>' reference feature.
@@ -1996,17 +1995,17 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEVICE_CAPABILITY__LOCATION_TYPE = eINSTANCE.getDeviceCapability_LocationType();
+		EReference DEVICE_IN_LOCATION_CAPABILITY__LOCATION_TYPE = eINSTANCE.getDeviceInLocationCapability_LocationType();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.ConnectionCapabilityImpl <em>Connection Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.ConnectionInDuctOrLocationCapabilityImpl <em>Connection In Duct Or Location Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.ConnectionCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getConnectionCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.ConnectionInDuctOrLocationCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getConnectionInDuctOrLocationCapability()
 		 * @generated
 		 */
-		EClass CONNECTION_CAPABILITY = eINSTANCE.getConnectionCapability();
+		EClass CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY = eINSTANCE.getConnectionInDuctOrLocationCapability();
 
 		/**
 		 * The meta object literal for the '<em><b>Connection Type</b></em>' reference feature.
@@ -2014,7 +2013,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getConnectionCapability_ConnectionType();
+		EReference CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getConnectionInDuctOrLocationCapability_ConnectionType();
 
 		/**
 		 * The meta object literal for the '<em><b>Location Type</b></em>' reference feature.
@@ -2022,7 +2021,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION_CAPABILITY__LOCATION_TYPE = eINSTANCE.getConnectionCapability_LocationType();
+		EReference CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__LOCATION_TYPE = eINSTANCE.getConnectionInDuctOrLocationCapability_LocationType();
 
 		/**
 		 * The meta object literal for the '<em><b>Duct Type</b></em>' reference feature.
@@ -2030,17 +2029,17 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONNECTION_CAPABILITY__DUCT_TYPE = eINSTANCE.getConnectionCapability_DuctType();
+		EReference CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__DUCT_TYPE = eINSTANCE.getConnectionInDuctOrLocationCapability_DuctType();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SignalCapabilityImpl <em>Signal Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl <em>Signal On Connection Or Device Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.SignalCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalOnConnectionOrDeviceCapability()
 		 * @generated
 		 */
-		EClass SIGNAL_CAPABILITY = eINSTANCE.getSignalCapability();
+		EClass SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY = eINSTANCE.getSignalOnConnectionOrDeviceCapability();
 
 		/**
 		 * The meta object literal for the '<em><b>Signal Type</b></em>' reference feature.
@@ -2048,7 +2047,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL_CAPABILITY__SIGNAL_TYPE = eINSTANCE.getSignalCapability_SignalType();
+		EReference SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__SIGNAL_TYPE = eINSTANCE.getSignalOnConnectionOrDeviceCapability_SignalType();
 
 		/**
 		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
@@ -2056,7 +2055,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL_CAPABILITY__DEVICE_TYPE = eINSTANCE.getSignalCapability_DeviceType();
+		EReference SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getSignalOnConnectionOrDeviceCapability_DeviceType();
 
 		/**
 		 * The meta object literal for the '<em><b>Connection Type</b></em>' reference feature.
@@ -2064,25 +2063,25 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getSignalCapability_ConnectionType();
+		EReference SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getSignalOnConnectionOrDeviceCapability_ConnectionType();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubDeviceCapabilityImpl <em>Sub Device Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubdeviceInDeviceCapabilityImpl <em>Subdevice In Device Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.SubDeviceCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubDeviceCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.SubdeviceInDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubdeviceInDeviceCapability()
 		 * @generated
 		 */
-		EClass SUB_DEVICE_CAPABILITY = eINSTANCE.getSubDeviceCapability();
+		EClass SUBDEVICE_IN_DEVICE_CAPABILITY = eINSTANCE.getSubdeviceInDeviceCapability();
 
 		/**
-		 * The meta object literal for the '<em><b>Sub Device Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Subdevice Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUB_DEVICE_CAPABILITY__SUB_DEVICE_TYPE = eINSTANCE.getSubDeviceCapability_SubDeviceType();
+		EReference SUBDEVICE_IN_DEVICE_CAPABILITY__SUBDEVICE_TYPE = eINSTANCE.getSubdeviceInDeviceCapability_SubdeviceType();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Device Type</b></em>' reference feature.
@@ -2090,7 +2089,7 @@ public interface CapabilitiesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUB_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = eINSTANCE.getSubDeviceCapability_TargetDeviceType();
+		EReference SUBDEVICE_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = eINSTANCE.getSubdeviceInDeviceCapability_TargetDeviceType();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.ResourceConsumptionImpl <em>Resource Consumption</em>}' class.
@@ -2137,14 +2136,14 @@ public interface CapabilitiesPackage extends EPackage {
 		EClass CAPABILITIES = eINSTANCE.getCapabilities();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilityImpl <em>Subcapability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
 		 * @generated
 		 */
-		EClass SUBCAPABILITY = eINSTANCE.getSubcapability();
+		EClass SUBCAPABILITIES = eINSTANCE.getSubcapabilities();
 
 	}
 

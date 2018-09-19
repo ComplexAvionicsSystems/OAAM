@@ -6,8 +6,7 @@ package de.oaam.model.oaam.anatomy.provider;
 import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
-
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AnatomyContainerAItemProvider extends ElementAItemProvider {
+public class AnatomyContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;
 import de.oaam.model.oaam.hardware.HardwarePackage;
@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DeviceSymmetryImpl extends ElementAImpl implements DeviceSymmetry {
+public class DeviceSymmetryImpl extends OaamBaseElementAImpl implements DeviceSymmetry {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

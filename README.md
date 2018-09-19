@@ -14,7 +14,7 @@ The model is organized in nine layers.
 * Anatomy: The spatial topology of installation locations and cable routes.
 * Capabilities: Definition of software to hardware to anatomy assignment possibilities and resource consumptions.
 * Restrictions: Constraints on system functions including the presented safety and timing restrictions.
-* Mappings: The assignment of tasks functions to hardware and hardware to anatomy.
+* Allocations: The assignment of tasks functions to hardware and hardware to anatomy.
 
 The model is based on the Eclipse Modeling Project (EMF).
 

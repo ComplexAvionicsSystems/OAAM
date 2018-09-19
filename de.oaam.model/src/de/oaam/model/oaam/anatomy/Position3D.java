@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.anatomy;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
@@ -28,7 +28,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Position3D extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Position3D extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>X</b></em>' attribute.
 	 * <!-- begin-user-doc -->

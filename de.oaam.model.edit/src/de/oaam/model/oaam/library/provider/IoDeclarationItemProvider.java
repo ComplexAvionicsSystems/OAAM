@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IoDeclarationItemProvider extends ElementAItemProvider {
+public class IoDeclarationItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

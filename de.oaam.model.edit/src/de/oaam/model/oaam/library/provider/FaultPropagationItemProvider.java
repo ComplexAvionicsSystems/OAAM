@@ -4,8 +4,7 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
-
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.library.FaultPropagation;
@@ -35,7 +34,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FaultPropagationItemProvider extends ElementAItemProvider {
+public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

@@ -69,6 +69,7 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,9 +85,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_id_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__ID,
+				 getString("_UI_OaamBaseElementA_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_id_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ID,
 				 true,
 				 false,
 				 false,
@@ -106,9 +107,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_name_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__NAME,
+				 getString("_UI_OaamBaseElementA_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_name_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__NAME,
 				 true,
 				 false,
 				 false,
@@ -128,9 +129,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_style_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_style_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__STYLE,
+				 getString("_UI_OaamBaseElementA_style_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_style_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__STYLE,
 				 true,
 				 false,
 				 false,
@@ -150,9 +151,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_documentation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_documentation_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__DOCUMENTATION,
+				 getString("_UI_OaamBaseElementA_documentation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_documentation_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__DOCUMENTATION,
 				 true,
 				 false,
 				 false,
@@ -172,9 +173,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modified_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modified_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIED,
+				 getString("_UI_OaamBaseElementA_modified_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modified_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIED,
 				 true,
 				 false,
 				 false,
@@ -194,9 +195,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modifier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modifier_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIER,
+				 getString("_UI_OaamBaseElementA_modifier_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modifier_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIER,
 				 true,
 				 false,
 				 false,
@@ -216,9 +217,9 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_traceLink_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_traceLink_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__TRACE_LINK,
+				 getString("_UI_OaamBaseElementA_traceLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_traceLink_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__TRACE_LINK,
 				 true,
 				 false,
 				 false,
@@ -272,6 +273,28 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 	}
 
 	/**
+	 * This adds a property descriptor for the Length feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLengthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Location_length_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Location_length_feature", "_UI_Location_type"),
+				 AnatomyPackage.Literals.LOCATION__LENGTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -283,7 +306,7 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
 			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(AnatomyPackage.Literals.LOCATION__POSITION);
 			childrenFeatures.add(AnatomyPackage.Literals.LOCATION__DUCT_OPENINGS);
@@ -349,6 +372,7 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			case AnatomyPackage.LOCATION__MODIFIED:
 			case AnatomyPackage.LOCATION__MODIFIER:
 			case AnatomyPackage.LOCATION__TRACE_LINK:
+			case AnatomyPackage.LOCATION__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AnatomyPackage.LOCATION__ATTRIBUTES:
@@ -374,22 +398,22 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeString()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
 
 		newChildDescriptors.add

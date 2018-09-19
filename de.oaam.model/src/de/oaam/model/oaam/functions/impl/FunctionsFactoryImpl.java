@@ -69,7 +69,7 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 			case FunctionsPackage.INPUT: return createInput();
 			case FunctionsPackage.OUTPUT: return createOutput();
 			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: return createExternalOutputLink();
-			case FunctionsPackage.SUBFUNCTION: return createSubfunction();
+			case FunctionsPackage.SUBFUNCTIONS: return createSubfunctions();
 			case FunctionsPackage.PARAMETER: return createParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -211,9 +211,9 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Subfunction createSubfunction() {
-		SubfunctionImpl subfunction = new SubfunctionImpl();
-		return subfunction;
+	public Subfunctions createSubfunctions() {
+		SubfunctionsImpl subfunctions = new SubfunctionsImpl();
+		return subfunctions;
 	}
 
 	/**

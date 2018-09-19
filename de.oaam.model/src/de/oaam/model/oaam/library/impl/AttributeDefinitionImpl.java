@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.AttributeDefinition;
 import de.oaam.model.oaam.library.AttributeTargetsE;
 import de.oaam.model.oaam.library.AttributeTypesE;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AttributeDefinitionImpl extends ElementAImpl implements AttributeDefinition {
+public class AttributeDefinitionImpl extends OaamBaseElementAImpl implements AttributeDefinition {
 	/**
 	 * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

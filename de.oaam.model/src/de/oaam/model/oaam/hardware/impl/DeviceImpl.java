@@ -6,7 +6,7 @@ import de.oaam.model.oaam.anatomy.Location;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
@@ -58,7 +58,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getIos <em>Ios</em>}</li>
- *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getSubDevices <em>Sub Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getSubdevices <em>Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getLocationBinding <em>Location Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getPowerSources <em>Power Sources</em>}</li>
  * </ul>
@@ -257,14 +257,14 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	protected EList<Io> ios;
 
 	/**
-	 * The cached value of the '{@link #getSubDevices() <em>Sub Devices</em>}' containment reference list.
+	 * The cached value of the '{@link #getSubdevices() <em>Subdevices</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubDevices()
+	 * @see #getSubdevices()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Device> subDevices;
+	protected EList<Device> subdevices;
 
 	/**
 	 * The cached value of the '{@link #getLocationBinding() <em>Location Binding</em>}' reference.
@@ -543,11 +543,11 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Device> getSubDevices() {
-		if (subDevices == null) {
-			subDevices = new EObjectContainmentEList<Device>(Device.class, this, HardwarePackage.DEVICE__SUB_DEVICES);
+	public EList<Device> getSubdevices() {
+		if (subdevices == null) {
+			subdevices = new EObjectContainmentEList<Device>(Device.class, this, HardwarePackage.DEVICE__SUBDEVICES);
 		}
-		return subDevices;
+		return subdevices;
 	}
 
 	/**
@@ -614,8 +614,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.DEVICE__IOS:
 				return ((InternalEList<?>)getIos()).basicRemove(otherEnd, msgs);
-			case HardwarePackage.DEVICE__SUB_DEVICES:
-				return ((InternalEList<?>)getSubDevices()).basicRemove(otherEnd, msgs);
+			case HardwarePackage.DEVICE__SUBDEVICES:
+				return ((InternalEList<?>)getSubdevices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -653,8 +653,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return basicGetType();
 			case HardwarePackage.DEVICE__IOS:
 				return getIos();
-			case HardwarePackage.DEVICE__SUB_DEVICES:
-				return getSubDevices();
+			case HardwarePackage.DEVICE__SUBDEVICES:
+				return getSubdevices();
 			case HardwarePackage.DEVICE__LOCATION_BINDING:
 				if (resolve) return getLocationBinding();
 				return basicGetLocationBinding();
@@ -713,9 +713,9 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				getIos().clear();
 				getIos().addAll((Collection<? extends Io>)newValue);
 				return;
-			case HardwarePackage.DEVICE__SUB_DEVICES:
-				getSubDevices().clear();
-				getSubDevices().addAll((Collection<? extends Device>)newValue);
+			case HardwarePackage.DEVICE__SUBDEVICES:
+				getSubdevices().clear();
+				getSubdevices().addAll((Collection<? extends Device>)newValue);
 				return;
 			case HardwarePackage.DEVICE__LOCATION_BINDING:
 				setLocationBinding((Location)newValue);
@@ -772,8 +772,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 			case HardwarePackage.DEVICE__IOS:
 				getIos().clear();
 				return;
-			case HardwarePackage.DEVICE__SUB_DEVICES:
-				getSubDevices().clear();
+			case HardwarePackage.DEVICE__SUBDEVICES:
+				getSubdevices().clear();
 				return;
 			case HardwarePackage.DEVICE__LOCATION_BINDING:
 				setLocationBinding((Location)null);
@@ -817,8 +817,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return type != null;
 			case HardwarePackage.DEVICE__IOS:
 				return ios != null && !ios.isEmpty();
-			case HardwarePackage.DEVICE__SUB_DEVICES:
-				return subDevices != null && !subDevices.isEmpty();
+			case HardwarePackage.DEVICE__SUBDEVICES:
+				return subdevices != null && !subdevices.isEmpty();
 			case HardwarePackage.DEVICE__LOCATION_BINDING:
 				return locationBinding != null;
 			case HardwarePackage.DEVICE__POWER_SOURCES:
@@ -834,16 +834,16 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.DEVICE__ID: return CommonPackage.ELEMENT_A__ID;
-				case HardwarePackage.DEVICE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case HardwarePackage.DEVICE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case HardwarePackage.DEVICE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case HardwarePackage.DEVICE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case HardwarePackage.DEVICE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case HardwarePackage.DEVICE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case HardwarePackage.DEVICE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case HardwarePackage.DEVICE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case HardwarePackage.DEVICE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case HardwarePackage.DEVICE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case HardwarePackage.DEVICE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case HardwarePackage.DEVICE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case HardwarePackage.DEVICE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case HardwarePackage.DEVICE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case HardwarePackage.DEVICE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -869,16 +869,16 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return HardwarePackage.DEVICE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return HardwarePackage.DEVICE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return HardwarePackage.DEVICE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return HardwarePackage.DEVICE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return HardwarePackage.DEVICE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return HardwarePackage.DEVICE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return HardwarePackage.DEVICE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return HardwarePackage.DEVICE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return HardwarePackage.DEVICE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return HardwarePackage.DEVICE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return HardwarePackage.DEVICE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return HardwarePackage.DEVICE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return HardwarePackage.DEVICE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return HardwarePackage.DEVICE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return HardwarePackage.DEVICE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return HardwarePackage.DEVICE__TRACE_LINK;
 				default: return -1;
 			}
 		}

@@ -4,7 +4,7 @@ package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
 
@@ -600,16 +600,16 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID: return CommonPackage.ELEMENT_A__ID;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -635,16 +635,16 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TRACE_LINK;
 				default: return -1;
 			}
 		}

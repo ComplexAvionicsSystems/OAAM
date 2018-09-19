@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.library.TaskType;
@@ -38,7 +38,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Task extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Task extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

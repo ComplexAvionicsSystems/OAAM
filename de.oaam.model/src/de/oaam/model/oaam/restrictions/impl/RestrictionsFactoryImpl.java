@@ -121,16 +121,6 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Subrestrictions createSubrestrictions() {
-		SubrestrictionsImpl subrestrictions = new SubrestrictionsImpl();
-		return subrestrictions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LocationRestriction createLocationRestriction() {
 		LocationRestrictionImpl locationRestriction = new LocationRestrictionImpl();
 		return locationRestriction;
@@ -244,6 +234,16 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	public TimeDelayRestriction createTimeDelayRestriction() {
 		TimeDelayRestrictionImpl timeDelayRestriction = new TimeDelayRestrictionImpl();
 		return timeDelayRestriction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Subrestrictions createSubrestrictions() {
+		SubrestrictionsImpl subrestrictions = new SubrestrictionsImpl();
+		return subrestrictions;
 	}
 
 	/**

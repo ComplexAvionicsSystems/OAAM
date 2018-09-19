@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions.util;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -74,7 +74,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				Functions functions = (Functions)theEObject;
 				T result = caseFunctions(functions);
 				if (result == null) result = caseFunctionsContainerA(functions);
-				if (result == null) result = caseElementA(functions);
+				if (result == null) result = caseOaamBaseElementA(functions);
 				if (result == null) result = caseVariantDependentElementA(functions);
 				if (result == null) result = caseModeDependentElementA(functions);
 				if (result == null) result = defaultCase(theEObject);
@@ -83,7 +83,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A: {
 				FunctionsContainerA functionsContainerA = (FunctionsContainerA)theEObject;
 				T result = caseFunctionsContainerA(functionsContainerA);
-				if (result == null) result = caseElementA(functionsContainerA);
+				if (result == null) result = caseOaamBaseElementA(functionsContainerA);
 				if (result == null) result = caseVariantDependentElementA(functionsContainerA);
 				if (result == null) result = caseModeDependentElementA(functionsContainerA);
 				if (result == null) result = defaultCase(theEObject);
@@ -92,7 +92,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.TASK: {
 				Task task = (Task)theEObject;
 				T result = caseTask(task);
-				if (result == null) result = caseElementA(task);
+				if (result == null) result = caseOaamBaseElementA(task);
 				if (result == null) result = caseVariantDependentElementA(task);
 				if (result == null) result = caseModeDependentElementA(task);
 				if (result == null) result = defaultCase(theEObject);
@@ -101,7 +101,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.EXTERNAL_TASK_LINK: {
 				ExternalTaskLink externalTaskLink = (ExternalTaskLink)theEObject;
 				T result = caseExternalTaskLink(externalTaskLink);
-				if (result == null) result = caseElementA(externalTaskLink);
+				if (result == null) result = caseOaamBaseElementA(externalTaskLink);
 				if (result == null) result = caseModeDependentElementA(externalTaskLink);
 				if (result == null) result = caseVariantDependentElementA(externalTaskLink);
 				if (result == null) result = defaultCase(theEObject);
@@ -110,7 +110,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.TASK_GROUP: {
 				TaskGroup taskGroup = (TaskGroup)theEObject;
 				T result = caseTaskGroup(taskGroup);
-				if (result == null) result = caseElementA(taskGroup);
+				if (result == null) result = caseOaamBaseElementA(taskGroup);
 				if (result == null) result = caseModeDependentElementA(taskGroup);
 				if (result == null) result = caseVariantDependentElementA(taskGroup);
 				if (result == null) result = defaultCase(theEObject);
@@ -119,7 +119,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.TASK_SYMMETRY: {
 				TaskSymmetry taskSymmetry = (TaskSymmetry)theEObject;
 				T result = caseTaskSymmetry(taskSymmetry);
-				if (result == null) result = caseElementA(taskSymmetry);
+				if (result == null) result = caseOaamBaseElementA(taskSymmetry);
 				if (result == null) result = caseModeDependentElementA(taskSymmetry);
 				if (result == null) result = caseVariantDependentElementA(taskSymmetry);
 				if (result == null) result = defaultCase(theEObject);
@@ -128,7 +128,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.TASK_REDUNDANCY: {
 				TaskRedundancy taskRedundancy = (TaskRedundancy)theEObject;
 				T result = caseTaskRedundancy(taskRedundancy);
-				if (result == null) result = caseElementA(taskRedundancy);
+				if (result == null) result = caseOaamBaseElementA(taskRedundancy);
 				if (result == null) result = caseModeDependentElementA(taskRedundancy);
 				if (result == null) result = caseVariantDependentElementA(taskRedundancy);
 				if (result == null) result = defaultCase(theEObject);
@@ -137,7 +137,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.FAILURE_CONDITION: {
 				FailureCondition failureCondition = (FailureCondition)theEObject;
 				T result = caseFailureCondition(failureCondition);
-				if (result == null) result = caseElementA(failureCondition);
+				if (result == null) result = caseOaamBaseElementA(failureCondition);
 				if (result == null) result = caseModeDependentElementA(failureCondition);
 				if (result == null) result = caseVariantDependentElementA(failureCondition);
 				if (result == null) result = defaultCase(theEObject);
@@ -147,7 +147,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				SystemInputState systemInputState = (SystemInputState)theEObject;
 				T result = caseSystemInputState(systemInputState);
 				if (result == null) result = caseBoolA(systemInputState);
-				if (result == null) result = caseElementA(systemInputState);
+				if (result == null) result = caseOaamBaseElementA(systemInputState);
 				if (result == null) result = caseModeDependentElementA(systemInputState);
 				if (result == null) result = caseVariantDependentElementA(systemInputState);
 				if (result == null) result = defaultCase(theEObject);
@@ -156,7 +156,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.SIGNAL: {
 				Signal signal = (Signal)theEObject;
 				T result = caseSignal(signal);
-				if (result == null) result = caseElementA(signal);
+				if (result == null) result = caseOaamBaseElementA(signal);
 				if (result == null) result = caseVariantDependentElementA(signal);
 				if (result == null) result = caseModeDependentElementA(signal);
 				if (result == null) result = defaultCase(theEObject);
@@ -165,7 +165,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.SIGNAL_GROUP: {
 				SignalGroup signalGroup = (SignalGroup)theEObject;
 				T result = caseSignalGroup(signalGroup);
-				if (result == null) result = caseElementA(signalGroup);
+				if (result == null) result = caseOaamBaseElementA(signalGroup);
 				if (result == null) result = caseModeDependentElementA(signalGroup);
 				if (result == null) result = caseVariantDependentElementA(signalGroup);
 				if (result == null) result = defaultCase(theEObject);
@@ -174,7 +174,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
-				if (result == null) result = caseElementA(input);
+				if (result == null) result = caseOaamBaseElementA(input);
 				if (result == null) result = caseVariantDependentElementA(input);
 				if (result == null) result = caseModeDependentElementA(input);
 				if (result == null) result = defaultCase(theEObject);
@@ -183,7 +183,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.OUTPUT: {
 				Output output = (Output)theEObject;
 				T result = caseOutput(output);
-				if (result == null) result = caseElementA(output);
+				if (result == null) result = caseOaamBaseElementA(output);
 				if (result == null) result = caseVariantDependentElementA(output);
 				if (result == null) result = caseModeDependentElementA(output);
 				if (result == null) result = defaultCase(theEObject);
@@ -192,26 +192,26 @@ public class FunctionsSwitch<T> extends Switch<T> {
 			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: {
 				ExternalOutputLink externalOutputLink = (ExternalOutputLink)theEObject;
 				T result = caseExternalOutputLink(externalOutputLink);
-				if (result == null) result = caseElementA(externalOutputLink);
+				if (result == null) result = caseOaamBaseElementA(externalOutputLink);
 				if (result == null) result = caseModeDependentElementA(externalOutputLink);
 				if (result == null) result = caseVariantDependentElementA(externalOutputLink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FunctionsPackage.SUBFUNCTION: {
-				Subfunction subfunction = (Subfunction)theEObject;
-				T result = caseSubfunction(subfunction);
-				if (result == null) result = caseFunctionsContainerA(subfunction);
-				if (result == null) result = caseElementA(subfunction);
-				if (result == null) result = caseVariantDependentElementA(subfunction);
-				if (result == null) result = caseModeDependentElementA(subfunction);
+			case FunctionsPackage.SUBFUNCTIONS: {
+				Subfunctions subfunctions = (Subfunctions)theEObject;
+				T result = caseSubfunctions(subfunctions);
+				if (result == null) result = caseFunctionsContainerA(subfunctions);
+				if (result == null) result = caseOaamBaseElementA(subfunctions);
+				if (result == null) result = caseVariantDependentElementA(subfunctions);
+				if (result == null) result = caseModeDependentElementA(subfunctions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case FunctionsPackage.PARAMETER: {
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
-				if (result == null) result = caseElementA(parameter);
+				if (result == null) result = caseOaamBaseElementA(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -430,17 +430,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Subfunction</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Subfunctions</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Subfunction</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Subfunctions</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSubfunction(Subfunction object) {
+	public T caseSubfunctions(Subfunctions object) {
 		return null;
 	}
 
@@ -460,17 +460,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

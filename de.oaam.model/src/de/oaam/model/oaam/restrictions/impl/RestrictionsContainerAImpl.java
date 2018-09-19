@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.restrictions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.restrictions.AreaRestriction;
 import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
@@ -17,8 +17,8 @@ import de.oaam.model.oaam.restrictions.Subrestrictions;
 import de.oaam.model.oaam.restrictions.SynchronicityRestriction;
 import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
 import de.oaam.model.oaam.restrictions.TaskSymmetryRestriction;
-
 import de.oaam.model.oaam.restrictions.TimeDelayRestriction;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -49,14 +49,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSegregationsRestrictions <em>Segregations Restrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSegregationRestrictions <em>Segregation Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSubrestrictions <em>Subrestrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class RestrictionsContainerAImpl extends ElementAImpl implements RestrictionsContainerA {
+public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl implements RestrictionsContainerA {
 	/**
 	 * The cached value of the '{@link #getDeviceTypeRestrictions() <em>Device Type Restrictions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -158,14 +158,14 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	protected EList<ConectionTypeRestriction> connectionTypeRestrictions;
 
 	/**
-	 * The cached value of the '{@link #getSegregationsRestrictions() <em>Segregations Restrictions</em>}' containment reference list.
+	 * The cached value of the '{@link #getSegregationRestrictions() <em>Segregation Restrictions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSegregationsRestrictions()
+	 * @see #getSegregationRestrictions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SegregationRestriction> segregationsRestrictions;
+	protected EList<SegregationRestriction> segregationRestrictions;
 
 	/**
 	 * The cached value of the '{@link #getSubrestrictions() <em>Subrestrictions</em>}' containment reference list.
@@ -331,11 +331,11 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SegregationRestriction> getSegregationsRestrictions() {
-		if (segregationsRestrictions == null) {
-			segregationsRestrictions = new EObjectContainmentEList<SegregationRestriction>(SegregationRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS);
+	public EList<SegregationRestriction> getSegregationRestrictions() {
+		if (segregationRestrictions == null) {
+			segregationRestrictions = new EObjectContainmentEList<SegregationRestriction>(SegregationRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS);
 		}
-		return segregationsRestrictions;
+		return segregationRestrictions;
 	}
 
 	/**
@@ -390,8 +390,8 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return ((InternalEList<?>)getConnectionRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 				return ((InternalEList<?>)getConnectionTypeRestrictions()).basicRemove(otherEnd, msgs);
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-				return ((InternalEList<?>)getSegregationsRestrictions()).basicRemove(otherEnd, msgs);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
+				return ((InternalEList<?>)getSegregationRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return ((InternalEList<?>)getSubrestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
@@ -428,8 +428,8 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return getConnectionRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 				return getConnectionTypeRestrictions();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-				return getSegregationsRestrictions();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
+				return getSegregationRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return getSubrestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
@@ -487,9 +487,9 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				getConnectionTypeRestrictions().clear();
 				getConnectionTypeRestrictions().addAll((Collection<? extends ConectionTypeRestriction>)newValue);
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-				getSegregationsRestrictions().clear();
-				getSegregationsRestrictions().addAll((Collection<? extends SegregationRestriction>)newValue);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
+				getSegregationRestrictions().clear();
+				getSegregationRestrictions().addAll((Collection<? extends SegregationRestriction>)newValue);
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				getSubrestrictions().clear();
@@ -541,8 +541,8 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 				getConnectionTypeRestrictions().clear();
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-				getSegregationsRestrictions().clear();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
+				getSegregationRestrictions().clear();
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				getSubrestrictions().clear();
@@ -582,8 +582,8 @@ public abstract class RestrictionsContainerAImpl extends ElementAImpl implements
 				return connectionRestrictions != null && !connectionRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 				return connectionTypeRestrictions != null && !connectionTypeRestrictions.isEmpty();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATIONS_RESTRICTIONS:
-				return segregationsRestrictions != null && !segregationsRestrictions.isEmpty();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
+				return segregationRestrictions != null && !segregationRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return subrestrictions != null && !subrestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:

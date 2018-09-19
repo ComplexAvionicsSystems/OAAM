@@ -142,15 +142,31 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.allocations.presentation.AllocationsModelWizardID"
+            name="%_UI_AllocationsModelWizard_label"
+            class="de.oaam.model.oaam.allocations.presentation.AllocationsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AllocationsModelFile.gif">
+         <description>%_UI_AllocationsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
    <extension point="org.eclipse.ui.editors">
       <!-- @generated oaam -->
       <editor
-            id="de.oaam.model.oaam.mapping.presentation.MappingEditorID"
-            name="%_UI_MappingEditor_label"
-            icon="icons/full/obj16/MappingModelFile.gif"
-            extensions="mapping"
-            class="de.oaam.model.oaam.mapping.presentation.MappingEditor"
-            contributorClass="de.oaam.model.oaam.mapping.presentation.MappingActionBarContributor">
+            id="de.oaam.model.oaam.allocations.presentation.AllocationsEditorID"
+            name="%_UI_AllocationsEditor_label"
+            icon="icons/full/obj16/AllocationsModelFile.gif"
+            extensions="allocations"
+            class="de.oaam.model.oaam.allocations.presentation.AllocationsEditor"
+            contributorClass="de.oaam.model.oaam.allocations.presentation.AllocationsActionBarContributor">
       </editor>
    </extension>
 

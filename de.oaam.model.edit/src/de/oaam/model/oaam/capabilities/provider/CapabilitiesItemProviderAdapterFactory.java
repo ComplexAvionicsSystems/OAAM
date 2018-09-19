@@ -72,118 +72,118 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.TaskCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TaskCapabilityItemProvider taskCapabilityItemProvider;
+	protected TaskOnDeviceCapabilityItemProvider taskOnDeviceCapabilityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.TaskCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTaskCapabilityAdapter() {
-		if (taskCapabilityItemProvider == null) {
-			taskCapabilityItemProvider = new TaskCapabilityItemProvider(this);
+	public Adapter createTaskOnDeviceCapabilityAdapter() {
+		if (taskOnDeviceCapabilityItemProvider == null) {
+			taskOnDeviceCapabilityItemProvider = new TaskOnDeviceCapabilityItemProvider(this);
 		}
 
-		return taskCapabilityItemProvider;
+		return taskOnDeviceCapabilityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.DeviceCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DeviceCapabilityItemProvider deviceCapabilityItemProvider;
+	protected DeviceInLocationCapabilityItemProvider deviceInLocationCapabilityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.DeviceCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.DeviceInLocationCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDeviceCapabilityAdapter() {
-		if (deviceCapabilityItemProvider == null) {
-			deviceCapabilityItemProvider = new DeviceCapabilityItemProvider(this);
+	public Adapter createDeviceInLocationCapabilityAdapter() {
+		if (deviceInLocationCapabilityItemProvider == null) {
+			deviceInLocationCapabilityItemProvider = new DeviceInLocationCapabilityItemProvider(this);
 		}
 
-		return deviceCapabilityItemProvider;
+		return deviceInLocationCapabilityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.ConnectionCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConnectionCapabilityItemProvider connectionCapabilityItemProvider;
+	protected ConnectionInDuctOrLocationCapabilityItemProvider connectionInDuctOrLocationCapabilityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.ConnectionCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConnectionCapabilityAdapter() {
-		if (connectionCapabilityItemProvider == null) {
-			connectionCapabilityItemProvider = new ConnectionCapabilityItemProvider(this);
+	public Adapter createConnectionInDuctOrLocationCapabilityAdapter() {
+		if (connectionInDuctOrLocationCapabilityItemProvider == null) {
+			connectionInDuctOrLocationCapabilityItemProvider = new ConnectionInDuctOrLocationCapabilityItemProvider(this);
 		}
 
-		return connectionCapabilityItemProvider;
+		return connectionInDuctOrLocationCapabilityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SignalCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SignalCapabilityItemProvider signalCapabilityItemProvider;
+	protected SignalOnConnectionOrDeviceCapabilityItemProvider signalOnConnectionOrDeviceCapabilityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SignalCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSignalCapabilityAdapter() {
-		if (signalCapabilityItemProvider == null) {
-			signalCapabilityItemProvider = new SignalCapabilityItemProvider(this);
+	public Adapter createSignalOnConnectionOrDeviceCapabilityAdapter() {
+		if (signalOnConnectionOrDeviceCapabilityItemProvider == null) {
+			signalOnConnectionOrDeviceCapabilityItemProvider = new SignalOnConnectionOrDeviceCapabilityItemProvider(this);
 		}
 
-		return signalCapabilityItemProvider;
+		return signalOnConnectionOrDeviceCapabilityItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SubDeviceCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubDeviceCapabilityItemProvider subDeviceCapabilityItemProvider;
+	protected SubdeviceInDeviceCapabilityItemProvider subdeviceInDeviceCapabilityItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SubDeviceCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSubDeviceCapabilityAdapter() {
-		if (subDeviceCapabilityItemProvider == null) {
-			subDeviceCapabilityItemProvider = new SubDeviceCapabilityItemProvider(this);
+	public Adapter createSubdeviceInDeviceCapabilityAdapter() {
+		if (subdeviceInDeviceCapabilityItemProvider == null) {
+			subdeviceInDeviceCapabilityItemProvider = new SubdeviceInDeviceCapabilityItemProvider(this);
 		}
 
-		return subDeviceCapabilityItemProvider;
+		return subdeviceInDeviceCapabilityItemProvider;
 	}
 
 	/**
@@ -233,26 +233,26 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Subcapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Subcapabilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubcapabilityItemProvider subcapabilityItemProvider;
+	protected SubcapabilitiesItemProvider subcapabilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Subcapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Subcapabilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSubcapabilityAdapter() {
-		if (subcapabilityItemProvider == null) {
-			subcapabilityItemProvider = new SubcapabilityItemProvider(this);
+	public Adapter createSubcapabilitiesAdapter() {
+		if (subcapabilitiesItemProvider == null) {
+			subcapabilitiesItemProvider = new SubcapabilitiesItemProvider(this);
 		}
 
-		return subcapabilityItemProvider;
+		return subcapabilitiesItemProvider;
 	}
 
 	/**
@@ -354,14 +354,14 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	 * @generated
 	 */
 	public void dispose() {
-		if (taskCapabilityItemProvider != null) taskCapabilityItemProvider.dispose();
-		if (deviceCapabilityItemProvider != null) deviceCapabilityItemProvider.dispose();
-		if (connectionCapabilityItemProvider != null) connectionCapabilityItemProvider.dispose();
-		if (signalCapabilityItemProvider != null) signalCapabilityItemProvider.dispose();
-		if (subDeviceCapabilityItemProvider != null) subDeviceCapabilityItemProvider.dispose();
+		if (taskOnDeviceCapabilityItemProvider != null) taskOnDeviceCapabilityItemProvider.dispose();
+		if (deviceInLocationCapabilityItemProvider != null) deviceInLocationCapabilityItemProvider.dispose();
+		if (connectionInDuctOrLocationCapabilityItemProvider != null) connectionInDuctOrLocationCapabilityItemProvider.dispose();
+		if (signalOnConnectionOrDeviceCapabilityItemProvider != null) signalOnConnectionOrDeviceCapabilityItemProvider.dispose();
+		if (subdeviceInDeviceCapabilityItemProvider != null) subdeviceInDeviceCapabilityItemProvider.dispose();
 		if (resourceConsumptionItemProvider != null) resourceConsumptionItemProvider.dispose();
 		if (capabilitiesItemProvider != null) capabilitiesItemProvider.dispose();
-		if (subcapabilityItemProvider != null) subcapabilityItemProvider.dispose();
+		if (subcapabilitiesItemProvider != null) subcapabilitiesItemProvider.dispose();
 	}
 
 }

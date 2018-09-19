@@ -4,7 +4,7 @@ package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ParameterBool;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -576,16 +576,16 @@ public class ParameterBoolImpl extends ParameterAImpl implements ParameterBool {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case ScenarioPackage.PARAMETER_BOOL__ID: return CommonPackage.ELEMENT_A__ID;
-				case ScenarioPackage.PARAMETER_BOOL__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case ScenarioPackage.PARAMETER_BOOL__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case ScenarioPackage.PARAMETER_BOOL__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case ScenarioPackage.PARAMETER_BOOL__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case ScenarioPackage.PARAMETER_BOOL__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case ScenarioPackage.PARAMETER_BOOL__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case ScenarioPackage.PARAMETER_BOOL__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case ScenarioPackage.PARAMETER_BOOL__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case ScenarioPackage.PARAMETER_BOOL__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case ScenarioPackage.PARAMETER_BOOL__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case ScenarioPackage.PARAMETER_BOOL__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case ScenarioPackage.PARAMETER_BOOL__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case ScenarioPackage.PARAMETER_BOOL__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case ScenarioPackage.PARAMETER_BOOL__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case ScenarioPackage.PARAMETER_BOOL__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -599,16 +599,16 @@ public class ParameterBoolImpl extends ParameterAImpl implements ParameterBool {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return ScenarioPackage.PARAMETER_BOOL__ID;
-				case CommonPackage.ELEMENT_A__NAME: return ScenarioPackage.PARAMETER_BOOL__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return ScenarioPackage.PARAMETER_BOOL__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return ScenarioPackage.PARAMETER_BOOL__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return ScenarioPackage.PARAMETER_BOOL__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return ScenarioPackage.PARAMETER_BOOL__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return ScenarioPackage.PARAMETER_BOOL__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return ScenarioPackage.PARAMETER_BOOL__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return ScenarioPackage.PARAMETER_BOOL__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return ScenarioPackage.PARAMETER_BOOL__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return ScenarioPackage.PARAMETER_BOOL__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return ScenarioPackage.PARAMETER_BOOL__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return ScenarioPackage.PARAMETER_BOOL__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return ScenarioPackage.PARAMETER_BOOL__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return ScenarioPackage.PARAMETER_BOOL__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return ScenarioPackage.PARAMETER_BOOL__TRACE_LINK;
 				default: return -1;
 			}
 		}

@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import de.oaam.model.oaam.common.ElementA;
  * @model
  * @generated
  */
-public interface FunctionInputTrigger extends BoolA, ElementA {
+public interface FunctionInputTrigger extends BoolA, OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Input</b></em>' reference.
 	 * <!-- begin-user-doc -->

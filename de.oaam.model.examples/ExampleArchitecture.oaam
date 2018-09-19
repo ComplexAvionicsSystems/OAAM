@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v100" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v100/common" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v100/library" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v100/scenario" id="example" name="Example">
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v140/common" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v140/library" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" id="example" name="Example">
   <library id="library" style="">
     <sublibraries id="datatypes" name="Data Types">
       <dataTypes xsi:type="de.oaam.model.common:Boolean"/>
@@ -13,49 +13,49 @@
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
         <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
-        <outputs name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
+        <outputDeclarations name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
           <trigger>
             <logic xsi:type="de.oaam.model.common:BoolOperation">
-              <left xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+              <left xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
             </logic>
           </trigger>
           <faultPropagations>
             <logic xsi:type="de.oaam.model.common:BoolOperation">
-              <left xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+              <left xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
             </logic>
           </faultPropagations>
           <faultPropagations outputState="FAILED">
             <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+              <left xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
             </logic>
           </faultPropagations>
           <faultPropagations outputState="UNKNOWN">
             <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-              <right xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
+              <left xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+              <right xsi:type="de.oaam.model.library:FunctionInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
             </logic>
           </faultPropagations>
-        </outputs>
-        <inputs name="a" type="//@library/@sublibraries.0/@dataTypes.1"/>
-        <inputs name="b" type="//@library/@sublibraries.0/@dataTypes.1"/>
-        <internalStates name="Sum" type="//@library/@sublibraries.0/@dataTypes.1"/>
-        <parameters name="Number of inputs" type="//@library/@sublibraries.0/@dataTypes.2"/>
+        </outputDeclarations>
+        <inputDeclarations name="a" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <inputDeclarations name="b" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <internalStateDeclarations name="Sum" type="//@library/@sublibraries.0/@dataTypes.1"/>
+        <parameterDeclarations name="Number of inputs" type="//@library/@sublibraries.0/@dataTypes.2"/>
       </taskTypes>
       <taskTypes id="tasktypecockpitswitch" name="CockpitSwitch">
         <requiredResources name="DSI" style="" type="//@library/@sublibraries.3/@resourceTypes.0"/>
-        <outputs name="on/off" type="//@library/@sublibraries.0/@dataTypes.0">
+        <outputDeclarations name="on/off" type="//@library/@sublibraries.0/@dataTypes.0">
           <trigger fixedRate="20.0"/>
-        </outputs>
+        </outputDeclarations>
       </taskTypes>
       <signalTypes name="BooleanSignal"/>
     </sublibraries>
     <sublibraries id="devicetypes" name="Device Types">
       <deviceTypes name="CockpitSwitch">
         <requiredResources name="DSO GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.1"/>
-        <ios name="DSO GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
+        <ioDeclarations name="DSO GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A" canHaveSubdevices="true">
         <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.3/@resourceTypes.2" count="4.0"/>
@@ -65,7 +65,7 @@
       </deviceTypes>
       <deviceTypes name="CPM A IO CARD" canHaveSubdevices="true">
         <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.0"/>
-        <ios name="DSI GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.3/@requiredResources.0"/>
+        <ioDeclarations name="DSI GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.3/@requiredResources.0"/>
       </deviceTypes>
     </sublibraries>
     <sublibraries id="resourcestypes" name="Resource Types">
@@ -81,7 +81,7 @@
       <wireTypes id="" name="Discrete Wire" specificWeight="1.0" specificPrice="1.0" minBendingRadius="0.001" nShields="0"/>
     </sublibraries>
     <sublibraries>
-      <ressourceBundles/>
+      <resourceBundles/>
       <resourceModifiers/>
       <resourceTypeDissimilarities/>
       <taskTypeDissimilarity/>
@@ -90,9 +90,9 @@
       <connectionTypes/>
       <wireTypes/>
       <locationTypes>
-        <ductOpenings/>
+        <ductOpeningDeclarations/>
       </locationTypes>
-      <routeTypes/>
+      <ductTypes/>
       <genericAttributes/>
     </sublibraries>
   </library>
@@ -105,33 +105,33 @@
   <systems>
     <systems/>
   </systems>
-  <function id="functions">
+  <functions id="functions">
     <tasks name="Add" type="tasktypeadd">
-      <inputs name="a" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.0"/>
-      <inputs name="b" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputs.1"/>
-      <parameters name="Number of inputs" definition="//@library/@sublibraries.1/@taskTypes.0/@parameters.0" value="2"/>
+      <inputs name="a" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+      <inputs name="b" declaration="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
+      <parameters name="Number of inputs" definition="//@library/@sublibraries.1/@taskTypes.0/@parameterDeclarations.0" value="2"/>
     </tasks>
     <tasks id="taskcockpitswitch" name="C/O Switch" style="" modifier="" type="tasktypecockpitswitch" deviceBinding="//@hardware/@devices.0">
-      <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputs.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
+      <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputDeclarations.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
     </tasks>
     <subfunctions>
       <taskLinks/>
       <taskSymmetries/>
       <taskRedundancies/>
-      <signals name="on/off to a" source="//@function/@tasks.1/@outputs.0" target="//@function/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
+      <signals name="on/off to a" source="//@functions/@tasks.1/@outputs.0" target="//@functions/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
       <signalGroups/>
       <failureEvents/>
     </subfunctions>
-  </function>
+  </functions>
   <hardware id="hardware">
     <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.2/@deviceTypes.0">
-      <ios name="C/O on/off DSO" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ios.0"/>
+      <ios name="C/O on/off DSO" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ioDeclarations.0"/>
     </devices>
     <devices name="CPM A1" type="//@library/@sublibraries.2/@deviceTypes.1">
-      <subDevices name="CPU Card"/>
-      <subDevices name="IO Card" type="//@library/@sublibraries.2/@deviceTypes.3">
-        <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.2/@deviceTypes.3/@ios.0"/>
-      </subDevices>
+      <subdevices name="CPU Card"/>
+      <subdevices name="IO Card" type="//@library/@sublibraries.2/@deviceTypes.3">
+        <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.2/@deviceTypes.3/@ioDeclarations.0"/>
+      </subdevices>
     </devices>
     <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0"/>
     <subhardware>
@@ -149,13 +149,13 @@
     </subanatomies>
   </anatomy>
   <capabilities id="capabilities">
-    <functionCapabilties taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
-    <signalCapabilities/>
-    <deviceCapabilities/>
-    <subDeviceCapabilities subDeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
+    <taskOnDeviceCapabilities taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
+    <signalOnConnectionOrDeviceCapabilities/>
+    <deviceInLocationCapabilities/>
+    <subdeviceInDeviceCapabilities subdeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
       <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.2"/>
-    </subDeviceCapabilities>
-    <connectionCapabilities/>
+    </subdeviceInDeviceCapabilities>
+    <connectionInDuctOrLocationCapabilities/>
     <subcapabilities/>
   </capabilities>
   <restrictions>
@@ -167,17 +167,17 @@
     <taskSymmetryRestrictions/>
     <connectionRestrictions/>
     <connectionTypeRestrictions/>
-    <segregationsRestrictions/>
+    <segregationRestrictions/>
     <subrestrictions/>
     <timedelayrestrictions/>
   </restrictions>
-  <mapping id="mapping">
+  <allocations id="allocations">
     <deviceAssignments/>
-    <subDeviceAssignments name="CPU-CARD -> CPM A1" capability="//@capabilities/@subDeviceCapabilities.0" subDevice="//@hardware/@devices.1/@subDevices.0" targetDevice="//@hardware/@devices.1"/>
+    <subdeviceAssignments name="CPU-CARD -> CPM A1" capability="//@capabilities/@subdeviceInDeviceCapabilities.0" subdevice="//@hardware/@devices.1/@subdevices.0" targetDevice="//@hardware/@devices.1"/>
     <connectionAssignments>
       <segments/>
     </connectionAssignments>
-    <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@functionCapabilties.0" task="//@function/@tasks.0" device="//@hardware/@devices.1/@subDevices.0">
+    <taskAssignments name="Add --> CPU_CARD" capability="//@capabilities/@taskOnDeviceCapabilities.0" task="//@functions/@tasks.0" device="//@hardware/@devices.1/@subdevices.0">
       <schedule name="@50Hz" rate="50.0">
         <scheduledTimes startTime="0.001"/>
         <scheduledTimes cycle="2" startTime="0.002"/>
@@ -186,6 +186,6 @@
     <signalAssignments>
       <segments/>
     </signalAssignments>
-    <supmapping/>
-  </mapping>
+    <suballocations/>
+  </allocations>
 </de.oaam.model:Architecture>

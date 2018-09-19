@@ -22,49 +22,49 @@ public interface CapabilitiesFactory extends EFactory {
 	CapabilitiesFactory eINSTANCE = de.oaam.model.oaam.capabilities.impl.CapabilitiesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Task Capability</em>'.
+	 * Returns a new object of class '<em>Task On Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Task Capability</em>'.
+	 * @return a new object of class '<em>Task On Device Capability</em>'.
 	 * @generated
 	 */
-	TaskCapability createTaskCapability();
+	TaskOnDeviceCapability createTaskOnDeviceCapability();
 
 	/**
-	 * Returns a new object of class '<em>Device Capability</em>'.
+	 * Returns a new object of class '<em>Device In Location Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Device Capability</em>'.
+	 * @return a new object of class '<em>Device In Location Capability</em>'.
 	 * @generated
 	 */
-	DeviceCapability createDeviceCapability();
+	DeviceInLocationCapability createDeviceInLocationCapability();
 
 	/**
-	 * Returns a new object of class '<em>Connection Capability</em>'.
+	 * Returns a new object of class '<em>Connection In Duct Or Location Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Connection Capability</em>'.
+	 * @return a new object of class '<em>Connection In Duct Or Location Capability</em>'.
 	 * @generated
 	 */
-	ConnectionCapability createConnectionCapability();
+	ConnectionInDuctOrLocationCapability createConnectionInDuctOrLocationCapability();
 
 	/**
-	 * Returns a new object of class '<em>Signal Capability</em>'.
+	 * Returns a new object of class '<em>Signal On Connection Or Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Signal Capability</em>'.
+	 * @return a new object of class '<em>Signal On Connection Or Device Capability</em>'.
 	 * @generated
 	 */
-	SignalCapability createSignalCapability();
+	SignalOnConnectionOrDeviceCapability createSignalOnConnectionOrDeviceCapability();
 
 	/**
-	 * Returns a new object of class '<em>Sub Device Capability</em>'.
+	 * Returns a new object of class '<em>Subdevice In Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sub Device Capability</em>'.
+	 * @return a new object of class '<em>Subdevice In Device Capability</em>'.
 	 * @generated
 	 */
-	SubDeviceCapability createSubDeviceCapability();
+	SubdeviceInDeviceCapability createSubdeviceInDeviceCapability();
 
 	/**
 	 * Returns a new object of class '<em>Resource Consumption</em>'.
@@ -85,13 +85,13 @@ public interface CapabilitiesFactory extends EFactory {
 	Capabilities createCapabilities();
 
 	/**
-	 * Returns a new object of class '<em>Subcapability</em>'.
+	 * Returns a new object of class '<em>Subcapabilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subcapability</em>'.
+	 * @return a new object of class '<em>Subcapabilities</em>'.
 	 * @generated
 	 */
-	Subcapability createSubcapability();
+	Subcapabilities createSubcapabilities();
 
 	/**
 	 * Returns the package supported by this factory.

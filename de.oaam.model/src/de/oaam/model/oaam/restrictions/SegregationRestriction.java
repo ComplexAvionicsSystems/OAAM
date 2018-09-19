@@ -2,17 +2,15 @@
  */
 package de.oaam.model.oaam.restrictions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
+import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
 
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
-
-import de.oaam.model.oaam.library.TaskType;
-
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -34,8 +32,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getTasksB <em>Tasks B</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#isDissimilarTechnology <em>Dissimilar Technology</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#isDissimilarLocation <em>Dissimilar Location</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getSubFunctionsA <em>Sub Functions A</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getSubFunctionsB <em>Sub Functions B</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getSubfunctionsA <em>Subfunctions A</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getSubfunctionsB <em>Subfunctions B</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#isDissimilarArea <em>Dissimilar Area</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#isDissimilarPowerSource <em>Dissimilar Power Source</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.SegregationRestriction#getSignalsA <em>Signals A</em>}</li>
@@ -54,10 +52,10 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SegregationRestriction extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface SegregationRestriction extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Tasks A</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.TaskType}.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Task}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -68,11 +66,11 @@ public interface SegregationRestriction extends ElementA, ModeDependentElementA,
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<TaskType> getTasksA();
+	EList<Task> getTasksA();
 
 	/**
 	 * Returns the value of the '<em><b>Tasks B</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.TaskType}.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Task}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -83,7 +81,7 @@ public interface SegregationRestriction extends ElementA, ModeDependentElementA,
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<TaskType> getTasksB();
+	EList<Task> getTasksB();
 
 	/**
 	 * Returns the value of the '<em><b>Dissimilar Technology</b></em>' attribute.
@@ -136,34 +134,34 @@ public interface SegregationRestriction extends ElementA, ModeDependentElementA,
 	void setDissimilarLocation(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Sub Functions A</b></em>' reference list.
+	 * Returns the value of the '<em><b>Subfunctions A</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.FunctionsContainerA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All sub functions of group A.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Sub Functions A</em>' reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSegregationRestriction_SubFunctionsA()
+	 * @return the value of the '<em>Subfunctions A</em>' reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSegregationRestriction_SubfunctionsA()
 	 * @model
 	 * @generated
 	 */
-	EList<FunctionsContainerA> getSubFunctionsA();
+	EList<FunctionsContainerA> getSubfunctionsA();
 
 	/**
-	 * Returns the value of the '<em><b>Sub Functions B</b></em>' reference list.
+	 * Returns the value of the '<em><b>Subfunctions B</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.FunctionsContainerA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All sub functions of group B.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Sub Functions B</em>' reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSegregationRestriction_SubFunctionsB()
+	 * @return the value of the '<em>Subfunctions B</em>' reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getSegregationRestriction_SubfunctionsB()
 	 * @model
 	 * @generated
 	 */
-	EList<FunctionsContainerA> getSubFunctionsB();
+	EList<FunctionsContainerA> getSubfunctionsB();
 
 	/**
 	 * Returns the value of the '<em><b>Dissimilar Area</b></em>' attribute.

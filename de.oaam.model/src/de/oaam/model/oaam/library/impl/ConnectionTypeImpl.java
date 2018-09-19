@@ -4,13 +4,14 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceConsumerA;
 import de.oaam.model.oaam.library.ResourceGroup;
+import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.WireType;
 
 import java.util.Collection;
@@ -50,11 +51,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getTraceLink <em>Trace Link</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsInformation <em>Is Information</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsPower <em>Is Power</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getWireType <em>Wire Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getWireTypes <em>Wire Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsWireless <em>Is Wireless</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isAllowsCircles <em>Allows Circles</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getNSources <em>NSources</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getNTagets <em>NTagets</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getNStartingPoints <em>NStarting Points</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getStartingPointResourceTypes <em>Starting Point Resource Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getNEndPoints <em>NEnd Points</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getEndPointResourceTypes <em>End Point Resource Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getNJoints <em>NJoints</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getMaxJointBranches <em>Max Joint Branches</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getMaxInterfaceToJointDistance <em>Max Interface To Joint Distance</em>}</li>
@@ -63,6 +66,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isDirectConnectionsAllowed <em>Direct Connections Allowed</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsUnidirectional <em>Is Unidirectional</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isRequiresMaster <em>Requires Master</em>}</li>
  * </ul>
  *
  * @generated
@@ -279,14 +283,14 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	protected boolean isPower = IS_POWER_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getWireType() <em>Wire Type</em>}' reference.
+	 * The cached value of the '{@link #getWireTypes() <em>Wire Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWireType()
+	 * @see #getWireTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected WireType wireType;
+	protected EList<WireType> wireTypes;
 
 	/**
 	 * The default value of the '{@link #isIsWireless() <em>Is Wireless</em>}' attribute.
@@ -329,44 +333,64 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	protected boolean allowsCircles = ALLOWS_CIRCLES_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNSources() <em>NSources</em>}' attribute.
+	 * The default value of the '{@link #getNStartingPoints() <em>NStarting Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNSources()
+	 * @see #getNStartingPoints()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NSOURCES_EDEFAULT = 1;
+	protected static final int NSTARTING_POINTS_EDEFAULT = 1;
 
 	/**
-	 * The cached value of the '{@link #getNSources() <em>NSources</em>}' attribute.
+	 * The cached value of the '{@link #getNStartingPoints() <em>NStarting Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNSources()
+	 * @see #getNStartingPoints()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nSources = NSOURCES_EDEFAULT;
+	protected int nStartingPoints = NSTARTING_POINTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNTagets() <em>NTagets</em>}' attribute.
+	 * The cached value of the '{@link #getStartingPointResourceTypes() <em>Starting Point Resource Types</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNTagets()
+	 * @see #getStartingPointResourceTypes()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NTAGETS_EDEFAULT = 1;
+	protected EList<ResourceType> startingPointResourceTypes;
 
 	/**
-	 * The cached value of the '{@link #getNTagets() <em>NTagets</em>}' attribute.
+	 * The default value of the '{@link #getNEndPoints() <em>NEnd Points</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNTagets()
+	 * @see #getNEndPoints()
 	 * @generated
 	 * @ordered
 	 */
-	protected int nTagets = NTAGETS_EDEFAULT;
+	protected static final int NEND_POINTS_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getNEndPoints() <em>NEnd Points</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNEndPoints()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nEndPoints = NEND_POINTS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEndPointResourceTypes() <em>End Point Resource Types</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndPointResourceTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ResourceType> endPointResourceTypes;
 
 	/**
 	 * The default value of the '{@link #getNJoints() <em>NJoints</em>}' attribute.
@@ -517,6 +541,26 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * @ordered
 	 */
 	protected boolean isUnidirectional = IS_UNIDIRECTIONAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isRequiresMaster() <em>Requires Master</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRequiresMaster()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean REQUIRES_MASTER_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isRequiresMaster() <em>Requires Master</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isRequiresMaster()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean requiresMaster = REQUIRES_MASTER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -767,37 +811,11 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WireType getWireType() {
-		if (wireType != null && wireType.eIsProxy()) {
-			InternalEObject oldWireType = (InternalEObject)wireType;
-			wireType = (WireType)eResolveProxy(oldWireType);
-			if (wireType != oldWireType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.CONNECTION_TYPE__WIRE_TYPE, oldWireType, wireType));
-			}
+	public EList<WireType> getWireTypes() {
+		if (wireTypes == null) {
+			wireTypes = new EObjectResolvingEList<WireType>(WireType.class, this, LibraryPackage.CONNECTION_TYPE__WIRE_TYPES);
 		}
-		return wireType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public WireType basicGetWireType() {
-		return wireType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWireType(WireType newWireType) {
-		WireType oldWireType = wireType;
-		wireType = newWireType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__WIRE_TYPE, oldWireType, wireType));
+		return wireTypes;
 	}
 
 	/**
@@ -847,8 +865,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNSources() {
-		return nSources;
+	public int getNStartingPoints() {
+		return nStartingPoints;
 	}
 
 	/**
@@ -856,11 +874,11 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNSources(int newNSources) {
-		int oldNSources = nSources;
-		nSources = newNSources;
+	public void setNStartingPoints(int newNStartingPoints) {
+		int oldNStartingPoints = nStartingPoints;
+		nStartingPoints = newNStartingPoints;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__NSOURCES, oldNSources, nSources));
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS, oldNStartingPoints, nStartingPoints));
 	}
 
 	/**
@@ -868,8 +886,11 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNTagets() {
-		return nTagets;
+	public EList<ResourceType> getStartingPointResourceTypes() {
+		if (startingPointResourceTypes == null) {
+			startingPointResourceTypes = new EObjectResolvingEList<ResourceType>(ResourceType.class, this, LibraryPackage.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES);
+		}
+		return startingPointResourceTypes;
 	}
 
 	/**
@@ -877,11 +898,32 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNTagets(int newNTagets) {
-		int oldNTagets = nTagets;
-		nTagets = newNTagets;
+	public int getNEndPoints() {
+		return nEndPoints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNEndPoints(int newNEndPoints) {
+		int oldNEndPoints = nEndPoints;
+		nEndPoints = newNEndPoints;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__NTAGETS, oldNTagets, nTagets));
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__NEND_POINTS, oldNEndPoints, nEndPoints));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ResourceType> getEndPointResourceTypes() {
+		if (endPointResourceTypes == null) {
+			endPointResourceTypes = new EObjectResolvingEList<ResourceType>(ResourceType.class, this, LibraryPackage.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES);
+		}
+		return endPointResourceTypes;
 	}
 
 	/**
@@ -1048,6 +1090,27 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isRequiresMaster() {
+		return requiresMaster;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequiresMaster(boolean newRequiresMaster) {
+		boolean oldRequiresMaster = requiresMaster;
+		requiresMaster = newRequiresMaster;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER, oldRequiresMaster, requiresMaster));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -1093,17 +1156,20 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return isIsInformation();
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 				return isIsPower();
-			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPE:
-				if (resolve) return getWireType();
-				return basicGetWireType();
+			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPES:
+				return getWireTypes();
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
 				return isIsWireless();
 			case LibraryPackage.CONNECTION_TYPE__ALLOWS_CIRCLES:
 				return isAllowsCircles();
-			case LibraryPackage.CONNECTION_TYPE__NSOURCES:
-				return getNSources();
-			case LibraryPackage.CONNECTION_TYPE__NTAGETS:
-				return getNTagets();
+			case LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS:
+				return getNStartingPoints();
+			case LibraryPackage.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES:
+				return getStartingPointResourceTypes();
+			case LibraryPackage.CONNECTION_TYPE__NEND_POINTS:
+				return getNEndPoints();
+			case LibraryPackage.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES:
+				return getEndPointResourceTypes();
 			case LibraryPackage.CONNECTION_TYPE__NJOINTS:
 				return getNJoints();
 			case LibraryPackage.CONNECTION_TYPE__MAX_JOINT_BRANCHES:
@@ -1120,6 +1186,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return getMaxLength();
 			case LibraryPackage.CONNECTION_TYPE__IS_UNIDIRECTIONAL:
 				return isIsUnidirectional();
+			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
+				return isRequiresMaster();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1172,8 +1240,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 				setIsPower((Boolean)newValue);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPE:
-				setWireType((WireType)newValue);
+			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPES:
+				getWireTypes().clear();
+				getWireTypes().addAll((Collection<? extends WireType>)newValue);
 				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
 				setIsWireless((Boolean)newValue);
@@ -1181,11 +1250,19 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__ALLOWS_CIRCLES:
 				setAllowsCircles((Boolean)newValue);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__NSOURCES:
-				setNSources((Integer)newValue);
+			case LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS:
+				setNStartingPoints((Integer)newValue);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__NTAGETS:
-				setNTagets((Integer)newValue);
+			case LibraryPackage.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES:
+				getStartingPointResourceTypes().clear();
+				getStartingPointResourceTypes().addAll((Collection<? extends ResourceType>)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__NEND_POINTS:
+				setNEndPoints((Integer)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES:
+				getEndPointResourceTypes().clear();
+				getEndPointResourceTypes().addAll((Collection<? extends ResourceType>)newValue);
 				return;
 			case LibraryPackage.CONNECTION_TYPE__NJOINTS:
 				setNJoints((Integer)newValue);
@@ -1211,6 +1288,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_UNIDIRECTIONAL:
 				setIsUnidirectional((Boolean)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
+				setRequiresMaster((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1260,8 +1340,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 				setIsPower(IS_POWER_EDEFAULT);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPE:
-				setWireType((WireType)null);
+			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPES:
+				getWireTypes().clear();
 				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
 				setIsWireless(IS_WIRELESS_EDEFAULT);
@@ -1269,11 +1349,17 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__ALLOWS_CIRCLES:
 				setAllowsCircles(ALLOWS_CIRCLES_EDEFAULT);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__NSOURCES:
-				setNSources(NSOURCES_EDEFAULT);
+			case LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS:
+				setNStartingPoints(NSTARTING_POINTS_EDEFAULT);
 				return;
-			case LibraryPackage.CONNECTION_TYPE__NTAGETS:
-				setNTagets(NTAGETS_EDEFAULT);
+			case LibraryPackage.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES:
+				getStartingPointResourceTypes().clear();
+				return;
+			case LibraryPackage.CONNECTION_TYPE__NEND_POINTS:
+				setNEndPoints(NEND_POINTS_EDEFAULT);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES:
+				getEndPointResourceTypes().clear();
 				return;
 			case LibraryPackage.CONNECTION_TYPE__NJOINTS:
 				setNJoints(NJOINTS_EDEFAULT);
@@ -1298,6 +1384,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_UNIDIRECTIONAL:
 				setIsUnidirectional(IS_UNIDIRECTIONAL_EDEFAULT);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
+				setRequiresMaster(REQUIRES_MASTER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -1335,16 +1424,20 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return isInformation != IS_INFORMATION_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 				return isPower != IS_POWER_EDEFAULT;
-			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPE:
-				return wireType != null;
+			case LibraryPackage.CONNECTION_TYPE__WIRE_TYPES:
+				return wireTypes != null && !wireTypes.isEmpty();
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
 				return isWireless != IS_WIRELESS_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__ALLOWS_CIRCLES:
 				return allowsCircles != ALLOWS_CIRCLES_EDEFAULT;
-			case LibraryPackage.CONNECTION_TYPE__NSOURCES:
-				return nSources != NSOURCES_EDEFAULT;
-			case LibraryPackage.CONNECTION_TYPE__NTAGETS:
-				return nTagets != NTAGETS_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS:
+				return nStartingPoints != NSTARTING_POINTS_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES:
+				return startingPointResourceTypes != null && !startingPointResourceTypes.isEmpty();
+			case LibraryPackage.CONNECTION_TYPE__NEND_POINTS:
+				return nEndPoints != NEND_POINTS_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES:
+				return endPointResourceTypes != null && !endPointResourceTypes.isEmpty();
 			case LibraryPackage.CONNECTION_TYPE__NJOINTS:
 				return nJoints != NJOINTS_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__MAX_JOINT_BRANCHES:
@@ -1361,6 +1454,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return maxLength != MAX_LENGTH_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__IS_UNIDIRECTIONAL:
 				return isUnidirectional != IS_UNIDIRECTIONAL_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
+				return requiresMaster != REQUIRES_MASTER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1379,16 +1474,16 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.CONNECTION_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
-				case LibraryPackage.CONNECTION_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case LibraryPackage.CONNECTION_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case LibraryPackage.CONNECTION_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.CONNECTION_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.CONNECTION_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case LibraryPackage.CONNECTION_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case LibraryPackage.CONNECTION_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.CONNECTION_TYPE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case LibraryPackage.CONNECTION_TYPE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case LibraryPackage.CONNECTION_TYPE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case LibraryPackage.CONNECTION_TYPE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.CONNECTION_TYPE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.CONNECTION_TYPE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case LibraryPackage.CONNECTION_TYPE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case LibraryPackage.CONNECTION_TYPE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -1409,16 +1504,16 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				default: return -1;
 			}
 		}
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.CONNECTION_TYPE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.CONNECTION_TYPE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.CONNECTION_TYPE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.CONNECTION_TYPE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.CONNECTION_TYPE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.CONNECTION_TYPE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.CONNECTION_TYPE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.CONNECTION_TYPE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return LibraryPackage.CONNECTION_TYPE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return LibraryPackage.CONNECTION_TYPE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return LibraryPackage.CONNECTION_TYPE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return LibraryPackage.CONNECTION_TYPE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return LibraryPackage.CONNECTION_TYPE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return LibraryPackage.CONNECTION_TYPE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return LibraryPackage.CONNECTION_TYPE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return LibraryPackage.CONNECTION_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -1457,10 +1552,10 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 		result.append(isWireless);
 		result.append(", allowsCircles: ");
 		result.append(allowsCircles);
-		result.append(", nSources: ");
-		result.append(nSources);
-		result.append(", nTagets: ");
-		result.append(nTagets);
+		result.append(", nStartingPoints: ");
+		result.append(nStartingPoints);
+		result.append(", nEndPoints: ");
+		result.append(nEndPoints);
 		result.append(", nJoints: ");
 		result.append(nJoints);
 		result.append(", maxJointBranches: ");
@@ -1475,6 +1570,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 		result.append(maxLength);
 		result.append(", isUnidirectional: ");
 		result.append(isUnidirectional);
+		result.append(", requiresMaster: ");
+		result.append(requiresMaster);
 		result.append(')');
 		return result.toString();
 	}

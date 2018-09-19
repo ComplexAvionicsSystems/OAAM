@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -18,48 +18,48 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.library.TaskType#getOutputs <em>Outputs</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.TaskType#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getOutputDeclarations <em>Output Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getInputDeclarations <em>Input Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#isIsDeterministic <em>Is Deterministic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.TaskType#getInternalStates <em>Internal States</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.TaskType#getParameters <em>Parameters</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getInternalStateDeclarations <em>Internal State Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getParameterDeclarations <em>Parameter Declarations</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType()
  * @model
  * @generated
  */
-public interface TaskType extends ResourceConsumerA, ElementA {
+public interface TaskType extends ResourceConsumerA, OaamBaseElementA {
 	/**
-	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Output Declarations</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.OutputDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All output declarations of this tasks type
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Outputs</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_Outputs()
+	 * @return the value of the '<em>Output Declarations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_OutputDeclarations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<OutputDeclaration> getOutputs();
+	EList<OutputDeclaration> getOutputDeclarations();
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Input Declarations</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.InputDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All input declarations of this task type
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Inputs</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_Inputs()
+	 * @return the value of the '<em>Input Declarations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_InputDeclarations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<InputDeclaration> getInputs();
+	EList<InputDeclaration> getInputDeclarations();
 
 	/**
 	 * Returns the value of the '<em><b>Is Deterministic</b></em>' attribute.
@@ -113,33 +113,33 @@ public interface TaskType extends ResourceConsumerA, ElementA {
 	void setPreferredExecutionRate(float value);
 
 	/**
-	 * Returns the value of the '<em><b>Internal States</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.InternalStateDefinition}.
+	 * Returns the value of the '<em><b>Internal State Declarations</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.InternalStateDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All internal state variables of a task type
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Internal States</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_InternalStates()
+	 * @return the value of the '<em>Internal State Declarations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_InternalStateDeclarations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<InternalStateDefinition> getInternalStates();
+	EList<InternalStateDeclaration> getInternalStateDeclarations();
 
 	/**
-	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ParameterDefinition}.
+	 * Returns the value of the '<em><b>Parameter Declarations</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ParameterDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All parameters of a tasks type
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Parameters</em>' containment reference list.
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_Parameters()
+	 * @return the value of the '<em>Parameter Declarations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_ParameterDeclarations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ParameterDefinition> getParameters();
+	EList<ParameterDeclaration> getParameterDeclarations();
 
 } // TaskType

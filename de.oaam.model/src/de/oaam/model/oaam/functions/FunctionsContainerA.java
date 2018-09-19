@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
@@ -36,7 +36,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface FunctionsContainerA extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface FunctionsContainerA extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Is Atomic</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -184,7 +184,7 @@ public interface FunctionsContainerA extends ElementA, VariantDependentElementA,
 
 	/**
 	 * Returns the value of the '<em><b>Subfunctions</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.functions.Subfunction}.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Subfunctions}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -195,6 +195,6 @@ public interface FunctionsContainerA extends ElementA, VariantDependentElementA,
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Subfunction> getSubfunctions();
+	EList<Subfunctions> getSubfunctions();
 
 } // FunctionsContainerA

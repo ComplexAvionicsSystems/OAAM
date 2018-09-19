@@ -49,13 +49,13 @@ public interface LibraryFactory extends EFactory {
 	ResourceAlternatives createResourceAlternatives();
 
 	/**
-	 * Returns a new object of class '<em>Resource Bundles</em>'.
+	 * Returns a new object of class '<em>Resource Bundle</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Resource Bundles</em>'.
+	 * @return a new object of class '<em>Resource Bundle</em>'.
 	 * @generated
 	 */
-	ResourceBundles createResourceBundles();
+	ResourceBundle createResourceBundle();
 
 	/**
 	 * Returns a new object of class '<em>Task Type</em>'.
@@ -319,22 +319,22 @@ public interface LibraryFactory extends EFactory {
 	FunctionInputTrigger createFunctionInputTrigger();
 
 	/**
-	 * Returns a new object of class '<em>Internal State Definition</em>'.
+	 * Returns a new object of class '<em>Internal State Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Internal State Definition</em>'.
+	 * @return a new object of class '<em>Internal State Declaration</em>'.
 	 * @generated
 	 */
-	InternalStateDefinition createInternalStateDefinition();
+	InternalStateDeclaration createInternalStateDeclaration();
 
 	/**
-	 * Returns a new object of class '<em>Parameter Definition</em>'.
+	 * Returns a new object of class '<em>Parameter Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Definition</em>'.
+	 * @return a new object of class '<em>Parameter Declaration</em>'.
 	 * @generated
 	 */
-	ParameterDefinition createParameterDefinition();
+	ParameterDeclaration createParameterDeclaration();
 
 	/**
 	 * Returns the package supported by this factory.

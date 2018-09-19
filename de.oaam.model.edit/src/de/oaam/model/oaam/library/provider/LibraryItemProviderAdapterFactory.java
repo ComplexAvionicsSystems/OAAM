@@ -141,26 +141,26 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceBundles} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ResourceBundle} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResourceBundlesItemProvider resourceBundlesItemProvider;
+	protected ResourceBundleItemProvider resourceBundleItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceBundles}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ResourceBundle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createResourceBundlesAdapter() {
-		if (resourceBundlesItemProvider == null) {
-			resourceBundlesItemProvider = new ResourceBundlesItemProvider(this);
+	public Adapter createResourceBundleAdapter() {
+		if (resourceBundleItemProvider == null) {
+			resourceBundleItemProvider = new ResourceBundleItemProvider(this);
 		}
 
-		return resourceBundlesItemProvider;
+		return resourceBundleItemProvider;
 	}
 
 	/**
@@ -831,49 +831,49 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.InternalStateDefinition} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.InternalStateDeclaration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InternalStateDefinitionItemProvider internalStateDefinitionItemProvider;
+	protected InternalStateDeclarationItemProvider internalStateDeclarationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.InternalStateDefinition}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.InternalStateDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInternalStateDefinitionAdapter() {
-		if (internalStateDefinitionItemProvider == null) {
-			internalStateDefinitionItemProvider = new InternalStateDefinitionItemProvider(this);
+	public Adapter createInternalStateDeclarationAdapter() {
+		if (internalStateDeclarationItemProvider == null) {
+			internalStateDeclarationItemProvider = new InternalStateDeclarationItemProvider(this);
 		}
 
-		return internalStateDefinitionItemProvider;
+		return internalStateDeclarationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ParameterDefinition} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ParameterDeclaration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterDefinitionItemProvider parameterDefinitionItemProvider;
+	protected ParameterDeclarationItemProvider parameterDeclarationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ParameterDefinition}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ParameterDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterDefinitionAdapter() {
-		if (parameterDefinitionItemProvider == null) {
-			parameterDefinitionItemProvider = new ParameterDefinitionItemProvider(this);
+	public Adapter createParameterDeclarationAdapter() {
+		if (parameterDeclarationItemProvider == null) {
+			parameterDeclarationItemProvider = new ParameterDeclarationItemProvider(this);
 		}
 
-		return parameterDefinitionItemProvider;
+		return parameterDeclarationItemProvider;
 	}
 
 	/**
@@ -978,7 +978,7 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (resourceTypeItemProvider != null) resourceTypeItemProvider.dispose();
 		if (resourceItemProvider != null) resourceItemProvider.dispose();
 		if (resourceAlternativesItemProvider != null) resourceAlternativesItemProvider.dispose();
-		if (resourceBundlesItemProvider != null) resourceBundlesItemProvider.dispose();
+		if (resourceBundleItemProvider != null) resourceBundleItemProvider.dispose();
 		if (taskTypeItemProvider != null) taskTypeItemProvider.dispose();
 		if (signalTypeItemProvider != null) signalTypeItemProvider.dispose();
 		if (deviceTypeItemProvider != null) deviceTypeItemProvider.dispose();
@@ -1008,8 +1008,8 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (sublibraryItemProvider != null) sublibraryItemProvider.dispose();
 		if (outputTriggerItemProvider != null) outputTriggerItemProvider.dispose();
 		if (functionInputTriggerItemProvider != null) functionInputTriggerItemProvider.dispose();
-		if (internalStateDefinitionItemProvider != null) internalStateDefinitionItemProvider.dispose();
-		if (parameterDefinitionItemProvider != null) parameterDefinitionItemProvider.dispose();
+		if (internalStateDeclarationItemProvider != null) internalStateDeclarationItemProvider.dispose();
+		if (parameterDeclarationItemProvider != null) parameterDeclarationItemProvider.dispose();
 	}
 
 }

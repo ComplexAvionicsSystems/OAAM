@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.anatomy;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.DuctType;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
@@ -24,15 +24,15 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getLength <em>Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getType <em>Type</em>}</li>
- *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getDuctopeningA <em>Ductopening A</em>}</li>
- *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getDuctopeningB <em>Ductopening B</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getStartingPoint <em>Starting Point</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.Duct#getEndPoint <em>End Point</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getDuct()
  * @model
  * @generated
  */
-public interface Duct extends ResourceProviderInstanceA, ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Duct extends ResourceProviderInstanceA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,53 +84,53 @@ public interface Duct extends ResourceProviderInstanceA, ElementA, VariantDepend
 	void setType(DuctType value);
 
 	/**
-	 * Returns the value of the '<em><b>Ductopening A</b></em>' reference.
+	 * Returns the value of the '<em><b>Starting Point</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The starting duct opening of a location.
+	 * The source duct opening of a location.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ductopening A</em>' reference.
-	 * @see #setDuctopeningA(DuctOpening)
-	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getDuct_DuctopeningA()
+	 * @return the value of the '<em>Starting Point</em>' reference.
+	 * @see #setStartingPoint(DuctOpening)
+	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getDuct_StartingPoint()
 	 * @model required="true"
 	 * @generated
 	 */
-	DuctOpening getDuctopeningA();
+	DuctOpening getStartingPoint();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.anatomy.Duct#getDuctopeningA <em>Ductopening A</em>}' reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.anatomy.Duct#getStartingPoint <em>Starting Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ductopening A</em>' reference.
-	 * @see #getDuctopeningA()
+	 * @param value the new value of the '<em>Starting Point</em>' reference.
+	 * @see #getStartingPoint()
 	 * @generated
 	 */
-	void setDuctopeningA(DuctOpening value);
+	void setStartingPoint(DuctOpening value);
 
 	/**
-	 * Returns the value of the '<em><b>Ductopening B</b></em>' reference.
+	 * Returns the value of the '<em><b>End Point</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The target duct opening of a location.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Ductopening B</em>' reference.
-	 * @see #setDuctopeningB(DuctOpening)
-	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getDuct_DuctopeningB()
+	 * @return the value of the '<em>End Point</em>' reference.
+	 * @see #setEndPoint(DuctOpening)
+	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getDuct_EndPoint()
 	 * @model required="true"
 	 * @generated
 	 */
-	DuctOpening getDuctopeningB();
+	DuctOpening getEndPoint();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.anatomy.Duct#getDuctopeningB <em>Ductopening B</em>}' reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.anatomy.Duct#getEndPoint <em>End Point</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ductopening B</em>' reference.
-	 * @see #getDuctopeningB()
+	 * @param value the new value of the '<em>End Point</em>' reference.
+	 * @see #getEndPoint()
 	 * @generated
 	 */
-	void setDuctopeningB(DuctOpening value);
+	void setEndPoint(DuctOpening value);
 
 } // Duct

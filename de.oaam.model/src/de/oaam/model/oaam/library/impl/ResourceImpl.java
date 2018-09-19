@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ResourceImpl extends ElementAImpl implements Resource {
+public class ResourceImpl extends OaamBaseElementAImpl implements Resource {
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->

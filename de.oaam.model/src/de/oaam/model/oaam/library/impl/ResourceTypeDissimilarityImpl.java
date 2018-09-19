@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.ResourceTypeDissimilarity;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ResourceTypeDissimilarityImpl extends ElementAImpl implements ResourceTypeDissimilarity {
+public class ResourceTypeDissimilarityImpl extends OaamBaseElementAImpl implements ResourceTypeDissimilarity {
 	/**
 	 * The cached value of the '{@link #getResourceTypes() <em>Resource Types</em>}' reference list.
 	 * <!-- begin-user-doc -->

@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ResourceBundles;
+import de.oaam.model.oaam.library.ResourceBundle;
 import de.oaam.model.oaam.library.ResourceGroup;
 import de.oaam.model.oaam.library.ResourceLink;
 import de.oaam.model.oaam.library.ResourceProviderA;
@@ -49,7 +49,7 @@ public abstract class ResourceProviderAImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResourceBundles> providedBundles;
+	protected EList<ResourceBundle> providedBundles;
 
 	/**
 	 * The cached value of the '{@link #getPossibleResourceProvisions() <em>Possible Resource Provisions</em>}' reference list.
@@ -105,9 +105,9 @@ public abstract class ResourceProviderAImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ResourceBundles> getProvidedBundles() {
+	public EList<ResourceBundle> getProvidedBundles() {
 		if (providedBundles == null) {
-			providedBundles = new EObjectContainmentEList<ResourceBundles>(ResourceBundles.class, this, LibraryPackage.RESOURCE_PROVIDER_A__PROVIDED_BUNDLES);
+			providedBundles = new EObjectContainmentEList<ResourceBundle>(ResourceBundle.class, this, LibraryPackage.RESOURCE_PROVIDER_A__PROVIDED_BUNDLES);
 		}
 		return providedBundles;
 	}
@@ -197,7 +197,7 @@ public abstract class ResourceProviderAImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case LibraryPackage.RESOURCE_PROVIDER_A__PROVIDED_BUNDLES:
 				getProvidedBundles().clear();
-				getProvidedBundles().addAll((Collection<? extends ResourceBundles>)newValue);
+				getProvidedBundles().addAll((Collection<? extends ResourceBundle>)newValue);
 				return;
 			case LibraryPackage.RESOURCE_PROVIDER_A__POSSIBLE_RESOURCE_PROVISIONS:
 				getPossibleResourceProvisions().clear();

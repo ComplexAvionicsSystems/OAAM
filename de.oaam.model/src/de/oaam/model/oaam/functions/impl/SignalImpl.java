@@ -2,12 +2,13 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
 import de.oaam.model.oaam.functions.Signal;
 
+import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.library.SignalType;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -46,11 +47,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getInIndex <em>In Index</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getOutIndex <em>Out Index</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getConnectionBinding <em>Connection Binding</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SignalImpl extends ElementAImpl implements Signal {
+public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -140,6 +142,16 @@ public class SignalImpl extends ElementAImpl implements Signal {
 	 * @ordered
 	 */
 	protected int outIndex = OUT_INDEX_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getConnectionBinding() <em>Connection Binding</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnectionBinding()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connection connectionBinding;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +357,44 @@ public class SignalImpl extends ElementAImpl implements Signal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Connection getConnectionBinding() {
+		if (connectionBinding != null && connectionBinding.eIsProxy()) {
+			InternalEObject oldConnectionBinding = (InternalEObject)connectionBinding;
+			connectionBinding = (Connection)eResolveProxy(oldConnectionBinding);
+			if (connectionBinding != oldConnectionBinding) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.SIGNAL__CONNECTION_BINDING, oldConnectionBinding, connectionBinding));
+			}
+		}
+		return connectionBinding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connection basicGetConnectionBinding() {
+		return connectionBinding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConnectionBinding(Connection newConnectionBinding) {
+		Connection oldConnectionBinding = connectionBinding;
+		connectionBinding = newConnectionBinding;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.SIGNAL__CONNECTION_BINDING, oldConnectionBinding, connectionBinding));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -379,6 +429,9 @@ public class SignalImpl extends ElementAImpl implements Signal {
 				return getInIndex();
 			case FunctionsPackage.SIGNAL__OUT_INDEX:
 				return getOutIndex();
+			case FunctionsPackage.SIGNAL__CONNECTION_BINDING:
+				if (resolve) return getConnectionBinding();
+				return basicGetConnectionBinding();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -415,6 +468,9 @@ public class SignalImpl extends ElementAImpl implements Signal {
 			case FunctionsPackage.SIGNAL__OUT_INDEX:
 				setOutIndex((Integer)newValue);
 				return;
+			case FunctionsPackage.SIGNAL__CONNECTION_BINDING:
+				setConnectionBinding((Connection)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -448,6 +504,9 @@ public class SignalImpl extends ElementAImpl implements Signal {
 			case FunctionsPackage.SIGNAL__OUT_INDEX:
 				setOutIndex(OUT_INDEX_EDEFAULT);
 				return;
+			case FunctionsPackage.SIGNAL__CONNECTION_BINDING:
+				setConnectionBinding((Connection)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -474,6 +533,8 @@ public class SignalImpl extends ElementAImpl implements Signal {
 				return inIndex != IN_INDEX_EDEFAULT;
 			case FunctionsPackage.SIGNAL__OUT_INDEX:
 				return outIndex != OUT_INDEX_EDEFAULT;
+			case FunctionsPackage.SIGNAL__CONNECTION_BINDING:
+				return connectionBinding != null;
 		}
 		return super.eIsSet(featureID);
 	}

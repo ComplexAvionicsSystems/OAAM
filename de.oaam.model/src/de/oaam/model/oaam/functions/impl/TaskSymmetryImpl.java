@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskSymmetry;
@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TaskSymmetryImpl extends ElementAImpl implements TaskSymmetry {
+public class TaskSymmetryImpl extends OaamBaseElementAImpl implements TaskSymmetry {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

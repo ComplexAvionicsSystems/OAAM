@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
 import de.oaam.model.oaam.library.LibraryPackage;
 
@@ -28,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DeviceTypeDissimilarityItemProvider extends ElementAItemProvider {
+public class DeviceTypeDissimilarityItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

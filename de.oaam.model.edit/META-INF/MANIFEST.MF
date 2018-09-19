@@ -2,19 +2,19 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.oaam.model.edit;singleton:=true
-Bundle-Version: 1.2.0.qualifier
+Bundle-Version: 1.4.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.oaam.model.oaam.provider.OaamEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: de.oaam.model.oaam.anatomy.provider,
+Export-Package: de.oaam.model.oaam.allocations.provider,
+ de.oaam.model.oaam.anatomy.provider,
  de.oaam.model.oaam.capabilities.provider,
  de.oaam.model.oaam.common.provider,
  de.oaam.model.oaam.functions.provider,
  de.oaam.model.oaam.hardware.provider,
  de.oaam.model.oaam.library.provider,
- de.oaam.model.oaam.mapping.provider,
  de.oaam.model.oaam.provider,
  de.oaam.model.oaam.restrictions.provider,
  de.oaam.model.oaam.scenario.provider,

@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ResourceProviderA extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Provided Bundles</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceBundles}.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.ResourceBundle}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -43,7 +43,7 @@ public interface ResourceProviderA extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResourceBundles> getProvidedBundles();
+	EList<ResourceBundle> getProvidedBundles();
 
 	/**
 	 * Returns the value of the '<em><b>Possible Resource Provisions</b></em>' reference list.

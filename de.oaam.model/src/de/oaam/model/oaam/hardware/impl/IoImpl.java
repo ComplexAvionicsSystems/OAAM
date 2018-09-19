@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.hardware.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
 
@@ -44,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class IoImpl extends ElementAImpl implements Io {
+public class IoImpl extends OaamBaseElementAImpl implements Io {
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->

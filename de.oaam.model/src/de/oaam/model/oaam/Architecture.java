@@ -2,19 +2,16 @@
  */
 package de.oaam.model.oaam;
 
+import de.oaam.model.oaam.allocations.Allocations;
 import de.oaam.model.oaam.anatomy.Anatomy;
 
 import de.oaam.model.oaam.capabilities.Capabilities;
-
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.Functions;
 
 import de.oaam.model.oaam.hardware.Hardware;
 
 import de.oaam.model.oaam.library.Library;
-
-import de.oaam.model.oaam.mapping.Mapping;
-
 import de.oaam.model.oaam.restrictions.Restrictions;
 
 import de.oaam.model.oaam.scenario.Scenario;
@@ -40,19 +37,19 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.Architecture#getLibrary <em>Library</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getScenario <em>Scenario</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getSystems <em>Systems</em>}</li>
- *   <li>{@link de.oaam.model.oaam.Architecture#getFunction <em>Function</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.Architecture#getFunctions <em>Functions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getHardware <em>Hardware</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getAnatomy <em>Anatomy</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getRestrictions <em>Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.Architecture#getMapping <em>Mapping</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.Architecture#getAllocations <em>Allocations</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.OaamPackage#getArchitecture()
  * @model
  * @generated
  */
-public interface Architecture extends ElementA {
+public interface Architecture extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Include</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.Architecture}.
@@ -144,29 +141,29 @@ public interface Architecture extends ElementA {
 	void setSystems(Systems value);
 
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Functions</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A container for a function model (layer 4)
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Function</em>' containment reference.
-	 * @see #setFunction(Functions)
-	 * @see de.oaam.model.oaam.OaamPackage#getArchitecture_Function()
+	 * @return the value of the '<em>Functions</em>' containment reference.
+	 * @see #setFunctions(Functions)
+	 * @see de.oaam.model.oaam.OaamPackage#getArchitecture_Functions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Functions getFunction();
+	Functions getFunctions();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.Architecture#getFunction <em>Function</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.Architecture#getFunctions <em>Functions</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Function</em>' containment reference.
-	 * @see #getFunction()
+	 * @param value the new value of the '<em>Functions</em>' containment reference.
+	 * @see #getFunctions()
 	 * @generated
 	 */
-	void setFunction(Functions value);
+	void setFunctions(Functions value);
 
 	/**
 	 * Returns the value of the '<em><b>Hardware</b></em>' containment reference.
@@ -269,28 +266,28 @@ public interface Architecture extends ElementA {
 	void setRestrictions(Restrictions value);
 
 	/**
-	 * Returns the value of the '<em><b>Mapping</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Allocations</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A container for a mapping model (layer 9)
+	 * A container for a allocations model (layer 9)
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Mapping</em>' containment reference.
-	 * @see #setMapping(Mapping)
-	 * @see de.oaam.model.oaam.OaamPackage#getArchitecture_Mapping()
+	 * @return the value of the '<em>Allocations</em>' containment reference.
+	 * @see #setAllocations(Allocations)
+	 * @see de.oaam.model.oaam.OaamPackage#getArchitecture_Allocations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Mapping getMapping();
+	Allocations getAllocations();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.Architecture#getMapping <em>Mapping</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.Architecture#getAllocations <em>Allocations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mapping</em>' containment reference.
-	 * @see #getMapping()
+	 * @param value the new value of the '<em>Allocations</em>' containment reference.
+	 * @see #getAllocations()
 	 * @generated
 	 */
-	void setMapping(Mapping value);
+	void setAllocations(Allocations value);
 
 } // Architecture

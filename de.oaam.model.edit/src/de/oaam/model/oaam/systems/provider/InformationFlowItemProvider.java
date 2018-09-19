@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.systems.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -32,7 +32,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InformationFlowItemProvider extends ElementAItemProvider {
+public class InformationFlowItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

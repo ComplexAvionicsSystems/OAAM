@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.restrictions.provider;
 
 
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
@@ -33,7 +33,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SegregationRestrictionItemProvider extends ElementAItemProvider {
+public class SegregationRestrictionItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -60,8 +60,8 @@ public class SegregationRestrictionItemProvider extends ElementAItemProvider {
 			addTasksBPropertyDescriptor(object);
 			addDissimilarTechnologyPropertyDescriptor(object);
 			addDissimilarLocationPropertyDescriptor(object);
-			addSubFunctionsAPropertyDescriptor(object);
-			addSubFunctionsBPropertyDescriptor(object);
+			addSubfunctionsAPropertyDescriptor(object);
+			addSubfunctionsBPropertyDescriptor(object);
 			addDissimilarAreaPropertyDescriptor(object);
 			addDissimilarPowerSourcePropertyDescriptor(object);
 			addSignalsAPropertyDescriptor(object);
@@ -189,19 +189,19 @@ public class SegregationRestrictionItemProvider extends ElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Sub Functions A feature.
+	 * This adds a property descriptor for the Subfunctions A feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubFunctionsAPropertyDescriptor(Object object) {
+	protected void addSubfunctionsAPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SegregationRestriction_subFunctionsA_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SegregationRestriction_subFunctionsA_feature", "_UI_SegregationRestriction_type"),
-				 RestrictionsPackage.Literals.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A,
+				 getString("_UI_SegregationRestriction_subfunctionsA_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SegregationRestriction_subfunctionsA_feature", "_UI_SegregationRestriction_type"),
+				 RestrictionsPackage.Literals.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A,
 				 true,
 				 false,
 				 true,
@@ -211,19 +211,19 @@ public class SegregationRestrictionItemProvider extends ElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Sub Functions B feature.
+	 * This adds a property descriptor for the Subfunctions B feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubFunctionsBPropertyDescriptor(Object object) {
+	protected void addSubfunctionsBPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SegregationRestriction_subFunctionsB_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SegregationRestriction_subFunctionsB_feature", "_UI_SegregationRestriction_type"),
-				 RestrictionsPackage.Literals.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B,
+				 getString("_UI_SegregationRestriction_subfunctionsB_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SegregationRestriction_subfunctionsB_feature", "_UI_SegregationRestriction_type"),
+				 RestrictionsPackage.Literals.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B,
 				 true,
 				 false,
 				 true,

@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.systems.util;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.ElectricPower;
@@ -85,7 +85,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 			case SystemsPackage.SYSTEMS_CONTAINER_A: {
 				SystemsContainerA systemsContainerA = (SystemsContainerA)theEObject;
 				T result = caseSystemsContainerA(systemsContainerA);
-				if (result == null) result = caseElementA(systemsContainerA);
+				if (result == null) result = caseOaamBaseElementA(systemsContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -93,7 +93,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				Systems systems = (Systems)theEObject;
 				T result = caseSystems(systems);
 				if (result == null) result = caseSystemsContainerA(systems);
-				if (result == null) result = caseElementA(systems);
+				if (result == null) result = caseOaamBaseElementA(systems);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,14 +103,14 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseSystemsContainerA(subsystem);
 				if (result == null) result = caseModeDependentElementA(subsystem);
 				if (result == null) result = caseVariantDependentElementA(subsystem);
-				if (result == null) result = caseElementA(subsystem);
+				if (result == null) result = caseOaamBaseElementA(subsystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SystemsPackage.SYSTEM: {
 				de.oaam.model.oaam.systems.System system = (de.oaam.model.oaam.systems.System)theEObject;
 				T result = caseSystem(system);
-				if (result == null) result = caseElementA(system);
+				if (result == null) result = caseOaamBaseElementA(system);
 				if (result == null) result = caseVariantDependentElementA(system);
 				if (result == null) result = caseModeDependentElementA(system);
 				if (result == null) result = defaultCase(theEObject);
@@ -133,7 +133,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				T result = caseInformation(information);
 				if (result == null) result = caseProvidedOutputA(information);
 				if (result == null) result = caseRequiredInputA(information);
-				if (result == null) result = caseElementA(information);
+				if (result == null) result = caseOaamBaseElementA(information);
 				if (result == null) result = caseModeDependentElementA(information);
 				if (result == null) result = caseVariantDependentElementA(information);
 				if (result == null) result = defaultCase(theEObject);
@@ -142,7 +142,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 			case SystemsPackage.INFORMATION_FLOW: {
 				InformationFlow informationFlow = (InformationFlow)theEObject;
 				T result = caseInformationFlow(informationFlow);
-				if (result == null) result = caseElementA(informationFlow);
+				if (result == null) result = caseOaamBaseElementA(informationFlow);
 				if (result == null) result = caseModeDependentElementA(informationFlow);
 				if (result == null) result = caseVariantDependentElementA(informationFlow);
 				if (result == null) result = defaultCase(theEObject);
@@ -154,7 +154,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = casePower(electricPower);
 				if (result == null) result = caseProvidedOutputA(electricPower);
 				if (result == null) result = caseRequiredInputA(electricPower);
-				if (result == null) result = caseElementA(electricPower);
+				if (result == null) result = caseOaamBaseElementA(electricPower);
 				if (result == null) result = caseVariantDependentElementA(electricPower);
 				if (result == null) result = caseModeDependentElementA(electricPower);
 				if (result == null) result = defaultCase(theEObject);
@@ -165,7 +165,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				T result = casePower(power);
 				if (result == null) result = caseProvidedOutputA(power);
 				if (result == null) result = caseRequiredInputA(power);
-				if (result == null) result = caseElementA(power);
+				if (result == null) result = caseOaamBaseElementA(power);
 				if (result == null) result = caseVariantDependentElementA(power);
 				if (result == null) result = caseModeDependentElementA(power);
 				if (result == null) result = defaultCase(theEObject);
@@ -177,7 +177,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = casePower(hydraulicPower);
 				if (result == null) result = caseProvidedOutputA(hydraulicPower);
 				if (result == null) result = caseRequiredInputA(hydraulicPower);
-				if (result == null) result = caseElementA(hydraulicPower);
+				if (result == null) result = caseOaamBaseElementA(hydraulicPower);
 				if (result == null) result = caseVariantDependentElementA(hydraulicPower);
 				if (result == null) result = caseModeDependentElementA(hydraulicPower);
 				if (result == null) result = defaultCase(theEObject);
@@ -189,7 +189,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = casePower(rotaryPower);
 				if (result == null) result = caseProvidedOutputA(rotaryPower);
 				if (result == null) result = caseRequiredInputA(rotaryPower);
-				if (result == null) result = caseElementA(rotaryPower);
+				if (result == null) result = caseOaamBaseElementA(rotaryPower);
 				if (result == null) result = caseVariantDependentElementA(rotaryPower);
 				if (result == null) result = caseModeDependentElementA(rotaryPower);
 				if (result == null) result = defaultCase(theEObject);
@@ -201,7 +201,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = casePower(linearPower);
 				if (result == null) result = caseProvidedOutputA(linearPower);
 				if (result == null) result = caseRequiredInputA(linearPower);
-				if (result == null) result = caseElementA(linearPower);
+				if (result == null) result = caseOaamBaseElementA(linearPower);
 				if (result == null) result = caseVariantDependentElementA(linearPower);
 				if (result == null) result = caseModeDependentElementA(linearPower);
 				if (result == null) result = defaultCase(theEObject);
@@ -210,7 +210,7 @@ public class SystemsSwitch<T> extends Switch<T> {
 			case SystemsPackage.INPUT_SEGREGATION: {
 				InputSegregation inputSegregation = (InputSegregation)theEObject;
 				T result = caseInputSegregation(inputSegregation);
-				if (result == null) result = caseElementA(inputSegregation);
+				if (result == null) result = caseOaamBaseElementA(inputSegregation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -429,17 +429,17 @@ public class SystemsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

@@ -4,7 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.IoDirectionE;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
@@ -45,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#getTraceLink <em>Trace Link</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#isIsConsumed <em>Is Consumed</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#isIsDistinguishable <em>Is Distinguishable</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl#isIsPropagated <em>Is Propagated</em>}</li>
@@ -208,6 +209,26 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 * @ordered
 	 */
 	protected String traceLink = TRACE_LINK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String unit = UNIT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isIsConsumed() <em>Is Consumed</em>}' attribute.
@@ -542,6 +563,27 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnit(String newUnit) {
+		String oldUnit = unit;
+		unit = newUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.RESOURCE_TYPE__UNIT, oldUnit, unit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isIsConsumed() {
 		return isConsumed;
 	}
@@ -741,6 +783,8 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 				return getModifier();
 			case LibraryPackage.RESOURCE_TYPE__TRACE_LINK:
 				return getTraceLink();
+			case LibraryPackage.RESOURCE_TYPE__UNIT:
+				return getUnit();
 			case LibraryPackage.RESOURCE_TYPE__IS_CONSUMED:
 				return isIsConsumed();
 			case LibraryPackage.RESOURCE_TYPE__IS_DISTINGUISHABLE:
@@ -796,6 +840,9 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 				return;
 			case LibraryPackage.RESOURCE_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
+				return;
+			case LibraryPackage.RESOURCE_TYPE__UNIT:
+				setUnit((String)newValue);
 				return;
 			case LibraryPackage.RESOURCE_TYPE__IS_CONSUMED:
 				setIsConsumed((Boolean)newValue);
@@ -863,6 +910,9 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 			case LibraryPackage.RESOURCE_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
+			case LibraryPackage.RESOURCE_TYPE__UNIT:
+				setUnit(UNIT_EDEFAULT);
+				return;
 			case LibraryPackage.RESOURCE_TYPE__IS_CONSUMED:
 				setIsConsumed(IS_CONSUMED_EDEFAULT);
 				return;
@@ -918,6 +968,8 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.RESOURCE_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
+			case LibraryPackage.RESOURCE_TYPE__UNIT:
+				return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 			case LibraryPackage.RESOURCE_TYPE__IS_CONSUMED:
 				return isConsumed != IS_CONSUMED_EDEFAULT;
 			case LibraryPackage.RESOURCE_TYPE__IS_DISTINGUISHABLE:
@@ -947,16 +999,16 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case LibraryPackage.RESOURCE_TYPE__ID: return CommonPackage.ELEMENT_A__ID;
-				case LibraryPackage.RESOURCE_TYPE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case LibraryPackage.RESOURCE_TYPE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case LibraryPackage.RESOURCE_TYPE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case LibraryPackage.RESOURCE_TYPE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case LibraryPackage.RESOURCE_TYPE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case LibraryPackage.RESOURCE_TYPE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case LibraryPackage.RESOURCE_TYPE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case LibraryPackage.RESOURCE_TYPE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case LibraryPackage.RESOURCE_TYPE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case LibraryPackage.RESOURCE_TYPE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case LibraryPackage.RESOURCE_TYPE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case LibraryPackage.RESOURCE_TYPE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case LibraryPackage.RESOURCE_TYPE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case LibraryPackage.RESOURCE_TYPE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case LibraryPackage.RESOURCE_TYPE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -970,16 +1022,16 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return LibraryPackage.RESOURCE_TYPE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return LibraryPackage.RESOURCE_TYPE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return LibraryPackage.RESOURCE_TYPE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return LibraryPackage.RESOURCE_TYPE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return LibraryPackage.RESOURCE_TYPE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return LibraryPackage.RESOURCE_TYPE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return LibraryPackage.RESOURCE_TYPE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return LibraryPackage.RESOURCE_TYPE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return LibraryPackage.RESOURCE_TYPE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return LibraryPackage.RESOURCE_TYPE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return LibraryPackage.RESOURCE_TYPE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return LibraryPackage.RESOURCE_TYPE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return LibraryPackage.RESOURCE_TYPE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return LibraryPackage.RESOURCE_TYPE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return LibraryPackage.RESOURCE_TYPE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return LibraryPackage.RESOURCE_TYPE__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -1010,6 +1062,8 @@ public class ResourceTypeImpl extends ResourceConsumerAImpl implements ResourceT
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
+		result.append(", unit: ");
+		result.append(unit);
 		result.append(", isConsumed: ");
 		result.append(isConsumed);
 		result.append(", isDistinguishable: ");

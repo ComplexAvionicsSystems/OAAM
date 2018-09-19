@@ -6,8 +6,7 @@ package de.oaam.model.oaam.capabilities.provider;
 import de.oaam.model.oaam.capabilities.CapabilitiesContainerA;
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
-
-import de.oaam.model.oaam.common.provider.ElementAItemProvider;
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -29,7 +28,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CapabilitiesContainerAItemProvider extends ElementAItemProvider {
+public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,11 +66,11 @@ public class CapabilitiesContainerAItemProvider extends ElementAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES);
-			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES);
-			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES);
-			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES);
-			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
 		}
 		return childrenFeatures;
@@ -117,11 +116,11 @@ public class CapabilitiesContainerAItemProvider extends ElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CapabilitiesContainerA.class)) {
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES:
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES:
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES:
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES:
-			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -142,33 +141,33 @@ public class CapabilitiesContainerAItemProvider extends ElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES,
-				 CapabilitiesFactory.eINSTANCE.createTaskCapability()));
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createTaskOnDeviceCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES,
-				 CapabilitiesFactory.eINSTANCE.createSignalCapability()));
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createSignalOnConnectionOrDeviceCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES,
-				 CapabilitiesFactory.eINSTANCE.createDeviceCapability()));
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createDeviceInLocationCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES,
-				 CapabilitiesFactory.eINSTANCE.createSubDeviceCapability()));
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createSubdeviceInDeviceCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES,
-				 CapabilitiesFactory.eINSTANCE.createConnectionCapability()));
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createConnectionInDuctOrLocationCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES,
-				 CapabilitiesFactory.eINSTANCE.createSubcapability()));
+				 CapabilitiesFactory.eINSTANCE.createSubcapabilities()));
 	}
 
 	/**

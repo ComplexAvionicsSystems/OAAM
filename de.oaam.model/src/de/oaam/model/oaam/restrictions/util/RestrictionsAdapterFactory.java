@@ -2,11 +2,12 @@
  */
 package de.oaam.model.oaam.restrictions.util;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.restrictions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -95,8 +96,8 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createSignalRestrictionAAdapter();
 			}
 			@Override
-			public Adapter caseSubFunctionRestrictionA(SubFunctionRestrictionA object) {
-				return createSubFunctionRestrictionAAdapter();
+			public Adapter caseSubfunctionRestrictionA(SubfunctionRestrictionA object) {
+				return createSubfunctionRestrictionAAdapter();
 			}
 			@Override
 			public Adapter caseTaskGroupRestrictionA(TaskGroupRestrictionA object) {
@@ -155,8 +156,8 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createSubrestrictionsAdapter();
 			}
 			@Override
-			public Adapter caseElementA(ElementA object) {
-				return createElementAAdapter();
+			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
+				return createOaamBaseElementAAdapter();
 			}
 			@Override
 			public Adapter caseVariantDependentElementA(VariantDependentElementA object) {
@@ -211,20 +212,6 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRestrictionsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.Subrestrictions <em>Subrestrictions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.Subrestrictions
-	 * @generated
-	 */
-	public Adapter createSubrestrictionsAdapter() {
 		return null;
 	}
 
@@ -285,16 +272,16 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.SubFunctionRestrictionA <em>Sub Function Restriction A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.SubfunctionRestrictionA <em>Subfunction Restriction A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.SubFunctionRestrictionA
+	 * @see de.oaam.model.oaam.restrictions.SubfunctionRestrictionA
 	 * @generated
 	 */
-	public Adapter createSubFunctionRestrictionAAdapter() {
+	public Adapter createSubfunctionRestrictionAAdapter() {
 		return null;
 	}
 
@@ -481,16 +468,30 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.ElementA <em>Element A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.Subrestrictions <em>Subrestrictions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.common.ElementA
+	 * @see de.oaam.model.oaam.restrictions.Subrestrictions
 	 * @generated
 	 */
-	public Adapter createElementAAdapter() {
+	public Adapter createSubrestrictionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.OaamBaseElementA <em>Oaam Base Element A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.common.OaamBaseElementA
+	 * @generated
+	 */
+	public Adapter createOaamBaseElementAAdapter() {
 		return null;
 	}
 

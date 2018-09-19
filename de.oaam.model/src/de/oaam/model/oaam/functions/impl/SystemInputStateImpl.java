@@ -4,8 +4,8 @@ package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
 import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.impl.BoolAImpl;
 
 import de.oaam.model.oaam.functions.FunctionsPackage;
@@ -716,16 +716,16 @@ public class SystemInputStateImpl extends BoolAImpl implements SystemInputState 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case FunctionsPackage.SYSTEM_INPUT_STATE__ID: return CommonPackage.ELEMENT_A__ID;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case FunctionsPackage.SYSTEM_INPUT_STATE__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case FunctionsPackage.SYSTEM_INPUT_STATE__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -751,16 +751,16 @@ public class SystemInputStateImpl extends BoolAImpl implements SystemInputState 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return FunctionsPackage.SYSTEM_INPUT_STATE__ID;
-				case CommonPackage.ELEMENT_A__NAME: return FunctionsPackage.SYSTEM_INPUT_STATE__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return FunctionsPackage.SYSTEM_INPUT_STATE__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return FunctionsPackage.SYSTEM_INPUT_STATE__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return FunctionsPackage.SYSTEM_INPUT_STATE__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return FunctionsPackage.SYSTEM_INPUT_STATE__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return FunctionsPackage.SYSTEM_INPUT_STATE__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return FunctionsPackage.SYSTEM_INPUT_STATE__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return FunctionsPackage.SYSTEM_INPUT_STATE__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return FunctionsPackage.SYSTEM_INPUT_STATE__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return FunctionsPackage.SYSTEM_INPUT_STATE__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return FunctionsPackage.SYSTEM_INPUT_STATE__TRACE_LINK;
 				default: return -1;
 			}
 		}

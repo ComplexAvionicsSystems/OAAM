@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.functions;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.InputDeclaration;
@@ -37,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Input extends ElementA, VariantDependentElementA, ModeDependentElementA {
+public interface Input extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Declaration</b></em>' reference.
 	 * <!-- begin-user-doc -->

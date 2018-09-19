@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.WireType;
 
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class WireTypeImpl extends ElementAImpl implements WireType {
+public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 	/**
 	 * The default value of the '{@link #getSpecificWeight() <em>Specific Weight</em>}' attribute.
 	 * <!-- begin-user-doc -->

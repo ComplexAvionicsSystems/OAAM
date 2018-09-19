@@ -3,8 +3,7 @@
 package de.oaam.model.oaam.capabilities.util;
 
 import de.oaam.model.oaam.capabilities.*;
-
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.ecore.EObject;
@@ -78,64 +77,64 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A: {
 				CapabilitiesContainerA capabilitiesContainerA = (CapabilitiesContainerA)theEObject;
 				T result = caseCapabilitiesContainerA(capabilitiesContainerA);
-				if (result == null) result = caseElementA(capabilitiesContainerA);
+				if (result == null) result = caseOaamBaseElementA(capabilitiesContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.TASK_CAPABILITY: {
-				TaskCapability taskCapability = (TaskCapability)theEObject;
-				T result = caseTaskCapability(taskCapability);
-				if (result == null) result = caseCapabilityA(taskCapability);
-				if (result == null) result = caseElementA(taskCapability);
-				if (result == null) result = caseVariantDependentElementA(taskCapability);
-				if (result == null) result = caseModeDependentElementA(taskCapability);
+			case CapabilitiesPackage.TASK_ON_DEVICE_CAPABILITY: {
+				TaskOnDeviceCapability taskOnDeviceCapability = (TaskOnDeviceCapability)theEObject;
+				T result = caseTaskOnDeviceCapability(taskOnDeviceCapability);
+				if (result == null) result = caseCapabilityA(taskOnDeviceCapability);
+				if (result == null) result = caseOaamBaseElementA(taskOnDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(taskOnDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(taskOnDeviceCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.DEVICE_CAPABILITY: {
-				DeviceCapability deviceCapability = (DeviceCapability)theEObject;
-				T result = caseDeviceCapability(deviceCapability);
-				if (result == null) result = caseCapabilityA(deviceCapability);
-				if (result == null) result = caseElementA(deviceCapability);
-				if (result == null) result = caseVariantDependentElementA(deviceCapability);
-				if (result == null) result = caseModeDependentElementA(deviceCapability);
+			case CapabilitiesPackage.DEVICE_IN_LOCATION_CAPABILITY: {
+				DeviceInLocationCapability deviceInLocationCapability = (DeviceInLocationCapability)theEObject;
+				T result = caseDeviceInLocationCapability(deviceInLocationCapability);
+				if (result == null) result = caseCapabilityA(deviceInLocationCapability);
+				if (result == null) result = caseOaamBaseElementA(deviceInLocationCapability);
+				if (result == null) result = caseVariantDependentElementA(deviceInLocationCapability);
+				if (result == null) result = caseModeDependentElementA(deviceInLocationCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.CONNECTION_CAPABILITY: {
-				ConnectionCapability connectionCapability = (ConnectionCapability)theEObject;
-				T result = caseConnectionCapability(connectionCapability);
-				if (result == null) result = caseCapabilityA(connectionCapability);
-				if (result == null) result = caseElementA(connectionCapability);
-				if (result == null) result = caseVariantDependentElementA(connectionCapability);
-				if (result == null) result = caseModeDependentElementA(connectionCapability);
+			case CapabilitiesPackage.CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY: {
+				ConnectionInDuctOrLocationCapability connectionInDuctOrLocationCapability = (ConnectionInDuctOrLocationCapability)theEObject;
+				T result = caseConnectionInDuctOrLocationCapability(connectionInDuctOrLocationCapability);
+				if (result == null) result = caseCapabilityA(connectionInDuctOrLocationCapability);
+				if (result == null) result = caseOaamBaseElementA(connectionInDuctOrLocationCapability);
+				if (result == null) result = caseVariantDependentElementA(connectionInDuctOrLocationCapability);
+				if (result == null) result = caseModeDependentElementA(connectionInDuctOrLocationCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.SIGNAL_CAPABILITY: {
-				SignalCapability signalCapability = (SignalCapability)theEObject;
-				T result = caseSignalCapability(signalCapability);
-				if (result == null) result = caseCapabilityA(signalCapability);
-				if (result == null) result = caseElementA(signalCapability);
-				if (result == null) result = caseVariantDependentElementA(signalCapability);
-				if (result == null) result = caseModeDependentElementA(signalCapability);
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY: {
+				SignalOnConnectionOrDeviceCapability signalOnConnectionOrDeviceCapability = (SignalOnConnectionOrDeviceCapability)theEObject;
+				T result = caseSignalOnConnectionOrDeviceCapability(signalOnConnectionOrDeviceCapability);
+				if (result == null) result = caseCapabilityA(signalOnConnectionOrDeviceCapability);
+				if (result == null) result = caseOaamBaseElementA(signalOnConnectionOrDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(signalOnConnectionOrDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(signalOnConnectionOrDeviceCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.SUB_DEVICE_CAPABILITY: {
-				SubDeviceCapability subDeviceCapability = (SubDeviceCapability)theEObject;
-				T result = caseSubDeviceCapability(subDeviceCapability);
-				if (result == null) result = caseCapabilityA(subDeviceCapability);
-				if (result == null) result = caseElementA(subDeviceCapability);
-				if (result == null) result = caseVariantDependentElementA(subDeviceCapability);
-				if (result == null) result = caseModeDependentElementA(subDeviceCapability);
+			case CapabilitiesPackage.SUBDEVICE_IN_DEVICE_CAPABILITY: {
+				SubdeviceInDeviceCapability subdeviceInDeviceCapability = (SubdeviceInDeviceCapability)theEObject;
+				T result = caseSubdeviceInDeviceCapability(subdeviceInDeviceCapability);
+				if (result == null) result = caseCapabilityA(subdeviceInDeviceCapability);
+				if (result == null) result = caseOaamBaseElementA(subdeviceInDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(subdeviceInDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(subdeviceInDeviceCapability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: {
 				ResourceConsumption resourceConsumption = (ResourceConsumption)theEObject;
 				T result = caseResourceConsumption(resourceConsumption);
-				if (result == null) result = caseElementA(resourceConsumption);
+				if (result == null) result = caseOaamBaseElementA(resourceConsumption);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -143,17 +142,17 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				Capabilities capabilities = (Capabilities)theEObject;
 				T result = caseCapabilities(capabilities);
 				if (result == null) result = caseCapabilitiesContainerA(capabilities);
-				if (result == null) result = caseElementA(capabilities);
+				if (result == null) result = caseOaamBaseElementA(capabilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CapabilitiesPackage.SUBCAPABILITY: {
-				Subcapability subcapability = (Subcapability)theEObject;
-				T result = caseSubcapability(subcapability);
-				if (result == null) result = caseCapabilitiesContainerA(subcapability);
-				if (result == null) result = caseModeDependentElementA(subcapability);
-				if (result == null) result = caseVariantDependentElementA(subcapability);
-				if (result == null) result = caseElementA(subcapability);
+			case CapabilitiesPackage.SUBCAPABILITIES: {
+				Subcapabilities subcapabilities = (Subcapabilities)theEObject;
+				T result = caseSubcapabilities(subcapabilities);
+				if (result == null) result = caseCapabilitiesContainerA(subcapabilities);
+				if (result == null) result = caseModeDependentElementA(subcapabilities);
+				if (result == null) result = caseVariantDependentElementA(subcapabilities);
+				if (result == null) result = caseOaamBaseElementA(subcapabilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -192,77 +191,77 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task On Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task On Device Capability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTaskCapability(TaskCapability object) {
+	public T caseTaskOnDeviceCapability(TaskOnDeviceCapability object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Device Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Device In Location Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Device Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Device In Location Capability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDeviceCapability(DeviceCapability object) {
+	public T caseDeviceInLocationCapability(DeviceInLocationCapability object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Connection Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Connection In Duct Or Location Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Connection Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Connection In Duct Or Location Capability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConnectionCapability(ConnectionCapability object) {
+	public T caseConnectionInDuctOrLocationCapability(ConnectionInDuctOrLocationCapability object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Signal Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Signal On Connection Or Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Signal Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Signal On Connection Or Device Capability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSignalCapability(SignalCapability object) {
+	public T caseSignalOnConnectionOrDeviceCapability(SignalOnConnectionOrDeviceCapability object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sub Device Capability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Subdevice In Device Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sub Device Capability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Subdevice In Device Capability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSubDeviceCapability(SubDeviceCapability object) {
+	public T caseSubdeviceInDeviceCapability(SubdeviceInDeviceCapability object) {
 		return null;
 	}
 
@@ -297,32 +296,32 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Subcapability</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Subcapabilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Subcapability</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Subcapabilities</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSubcapability(Subcapability object) {
+	public T caseSubcapabilities(Subcapabilities object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElementA(ElementA object) {
+	public T caseOaamBaseElementA(OaamBaseElementA object) {
 		return null;
 	}
 

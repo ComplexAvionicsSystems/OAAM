@@ -4,6 +4,8 @@ package de.oaam.model.oaam.capabilities.impl;
 
 import de.oaam.model.oaam.OaamPackage;
 
+import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -13,14 +15,13 @@ import de.oaam.model.oaam.capabilities.CapabilitiesContainerA;
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.CapabilityA;
-import de.oaam.model.oaam.capabilities.ConnectionCapability;
-import de.oaam.model.oaam.capabilities.DeviceCapability;
+import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
+import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
-import de.oaam.model.oaam.capabilities.SignalCapability;
-import de.oaam.model.oaam.capabilities.SubDeviceCapability;
-import de.oaam.model.oaam.capabilities.Subcapability;
-import de.oaam.model.oaam.capabilities.TaskCapability;
-
+import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
+import de.oaam.model.oaam.capabilities.Subcapabilities;
+import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
+import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
 import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.common.impl.CommonPackageImpl;
@@ -38,11 +39,6 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
-
-import de.oaam.model.oaam.mapping.MappingPackage;
-
-import de.oaam.model.oaam.mapping.impl.MappingPackageImpl;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -88,35 +84,35 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass taskCapabilityEClass = null;
+	private EClass taskOnDeviceCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass deviceCapabilityEClass = null;
+	private EClass deviceInLocationCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass connectionCapabilityEClass = null;
+	private EClass connectionInDuctOrLocationCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass signalCapabilityEClass = null;
+	private EClass signalOnConnectionOrDeviceCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subDeviceCapabilityEClass = null;
+	private EClass subdeviceInDeviceCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,7 +133,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subcapabilityEClass = null;
+	private EClass subcapabilitiesEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -195,7 +191,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		AnatomyPackageImpl theAnatomyPackage = (AnatomyPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) instanceof AnatomyPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI) : AnatomyPackage.eINSTANCE);
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) instanceof RestrictionsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI) : RestrictionsPackage.eINSTANCE);
-		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
+		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) instanceof AllocationsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI) : AllocationsPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCapabilitiesPackage.createPackageContents();
@@ -208,7 +204,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		theHardwarePackage.createPackageContents();
 		theAnatomyPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
-		theMappingPackage.createPackageContents();
+		theAllocationsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCapabilitiesPackage.initializePackageContents();
@@ -221,7 +217,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		theHardwarePackage.initializePackageContents();
 		theAnatomyPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
-		theMappingPackage.initializePackageContents();
+		theAllocationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theCapabilitiesPackage.freeze();
@@ -264,7 +260,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapabilitiesContainerA_FunctionCapabilties() {
+	public EReference getCapabilitiesContainerA_TaskOnDeviceCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -273,7 +269,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapabilitiesContainerA_SignalCapabilities() {
+	public EReference getCapabilitiesContainerA_SignalOnConnectionOrDeviceCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -282,7 +278,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapabilitiesContainerA_DeviceCapabilities() {
+	public EReference getCapabilitiesContainerA_DeviceInLocationCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -291,7 +287,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapabilitiesContainerA_SubDeviceCapabilities() {
+	public EReference getCapabilitiesContainerA_SubdeviceInDeviceCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -300,7 +296,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCapabilitiesContainerA_ConnectionCapabilities() {
+	public EReference getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -318,8 +314,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTaskCapability() {
-		return taskCapabilityEClass;
+	public EClass getTaskOnDeviceCapability() {
+		return taskOnDeviceCapabilityEClass;
 	}
 
 	/**
@@ -327,8 +323,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskCapability_TaskType() {
-		return (EReference)taskCapabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskOnDeviceCapability_TaskType() {
+		return (EReference)taskOnDeviceCapabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -336,8 +332,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskCapability_DeviceType() {
-		return (EReference)taskCapabilityEClass.getEStructuralFeatures().get(1);
+	public EReference getTaskOnDeviceCapability_DeviceType() {
+		return (EReference)taskOnDeviceCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -345,8 +341,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskCapability_WorstCaseExecutionTime() {
-		return (EAttribute)taskCapabilityEClass.getEStructuralFeatures().get(2);
+	public EAttribute getTaskOnDeviceCapability_WorstCaseExecutionTime() {
+		return (EAttribute)taskOnDeviceCapabilityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -354,8 +350,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskCapability_FailureProbability() {
-		return (EAttribute)taskCapabilityEClass.getEStructuralFeatures().get(3);
+	public EAttribute getTaskOnDeviceCapability_FailureProbability() {
+		return (EAttribute)taskOnDeviceCapabilityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -363,8 +359,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDeviceCapability() {
-		return deviceCapabilityEClass;
+	public EClass getDeviceInLocationCapability() {
+		return deviceInLocationCapabilityEClass;
 	}
 
 	/**
@@ -372,8 +368,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeviceCapability_DeviceType() {
-		return (EReference)deviceCapabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getDeviceInLocationCapability_DeviceType() {
+		return (EReference)deviceInLocationCapabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -381,8 +377,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeviceCapability_LocationType() {
-		return (EReference)deviceCapabilityEClass.getEStructuralFeatures().get(1);
+	public EReference getDeviceInLocationCapability_LocationType() {
+		return (EReference)deviceInLocationCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -390,8 +386,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConnectionCapability() {
-		return connectionCapabilityEClass;
+	public EClass getConnectionInDuctOrLocationCapability() {
+		return connectionInDuctOrLocationCapabilityEClass;
 	}
 
 	/**
@@ -399,8 +395,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionCapability_ConnectionType() {
-		return (EReference)connectionCapabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getConnectionInDuctOrLocationCapability_ConnectionType() {
+		return (EReference)connectionInDuctOrLocationCapabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -408,8 +404,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionCapability_LocationType() {
-		return (EReference)connectionCapabilityEClass.getEStructuralFeatures().get(1);
+	public EReference getConnectionInDuctOrLocationCapability_LocationType() {
+		return (EReference)connectionInDuctOrLocationCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -417,8 +413,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnectionCapability_DuctType() {
-		return (EReference)connectionCapabilityEClass.getEStructuralFeatures().get(2);
+	public EReference getConnectionInDuctOrLocationCapability_DuctType() {
+		return (EReference)connectionInDuctOrLocationCapabilityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -426,8 +422,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSignalCapability() {
-		return signalCapabilityEClass;
+	public EClass getSignalOnConnectionOrDeviceCapability() {
+		return signalOnConnectionOrDeviceCapabilityEClass;
 	}
 
 	/**
@@ -435,8 +431,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSignalCapability_SignalType() {
-		return (EReference)signalCapabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getSignalOnConnectionOrDeviceCapability_SignalType() {
+		return (EReference)signalOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -444,8 +440,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSignalCapability_DeviceType() {
-		return (EReference)signalCapabilityEClass.getEStructuralFeatures().get(1);
+	public EReference getSignalOnConnectionOrDeviceCapability_DeviceType() {
+		return (EReference)signalOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -453,8 +449,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSignalCapability_ConnectionType() {
-		return (EReference)signalCapabilityEClass.getEStructuralFeatures().get(2);
+	public EReference getSignalOnConnectionOrDeviceCapability_ConnectionType() {
+		return (EReference)signalOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -462,8 +458,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubDeviceCapability() {
-		return subDeviceCapabilityEClass;
+	public EClass getSubdeviceInDeviceCapability() {
+		return subdeviceInDeviceCapabilityEClass;
 	}
 
 	/**
@@ -471,8 +467,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSubDeviceCapability_SubDeviceType() {
-		return (EReference)subDeviceCapabilityEClass.getEStructuralFeatures().get(0);
+	public EReference getSubdeviceInDeviceCapability_SubdeviceType() {
+		return (EReference)subdeviceInDeviceCapabilityEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -480,8 +476,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSubDeviceCapability_TargetDeviceType() {
-		return (EReference)subDeviceCapabilityEClass.getEStructuralFeatures().get(1);
+	public EReference getSubdeviceInDeviceCapability_TargetDeviceType() {
+		return (EReference)subdeviceInDeviceCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -534,8 +530,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubcapability() {
-		return subcapabilityEClass;
+	public EClass getSubcapabilities() {
+		return subcapabilitiesEClass;
 	}
 
 	/**
@@ -570,36 +566,36 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		createEReference(capabilityAEClass, CAPABILITY_A__RESOURCE_CONSUMPTIONS);
 
 		capabilitiesContainerAEClass = createEClass(CAPABILITIES_CONTAINER_A);
-		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__FUNCTION_CAPABILTIES);
-		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SIGNAL_CAPABILITIES);
-		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__DEVICE_CAPABILITIES);
-		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUB_DEVICE_CAPABILITIES);
-		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__CONNECTION_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__TASK_ON_DEVICE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__DEVICE_IN_LOCATION_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
 
-		taskCapabilityEClass = createEClass(TASK_CAPABILITY);
-		createEReference(taskCapabilityEClass, TASK_CAPABILITY__TASK_TYPE);
-		createEReference(taskCapabilityEClass, TASK_CAPABILITY__DEVICE_TYPE);
-		createEAttribute(taskCapabilityEClass, TASK_CAPABILITY__WORST_CASE_EXECUTION_TIME);
-		createEAttribute(taskCapabilityEClass, TASK_CAPABILITY__FAILURE_PROBABILITY);
+		taskOnDeviceCapabilityEClass = createEClass(TASK_ON_DEVICE_CAPABILITY);
+		createEReference(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__TASK_TYPE);
+		createEReference(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__DEVICE_TYPE);
+		createEAttribute(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__WORST_CASE_EXECUTION_TIME);
+		createEAttribute(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__FAILURE_PROBABILITY);
 
-		deviceCapabilityEClass = createEClass(DEVICE_CAPABILITY);
-		createEReference(deviceCapabilityEClass, DEVICE_CAPABILITY__DEVICE_TYPE);
-		createEReference(deviceCapabilityEClass, DEVICE_CAPABILITY__LOCATION_TYPE);
+		deviceInLocationCapabilityEClass = createEClass(DEVICE_IN_LOCATION_CAPABILITY);
+		createEReference(deviceInLocationCapabilityEClass, DEVICE_IN_LOCATION_CAPABILITY__DEVICE_TYPE);
+		createEReference(deviceInLocationCapabilityEClass, DEVICE_IN_LOCATION_CAPABILITY__LOCATION_TYPE);
 
-		connectionCapabilityEClass = createEClass(CONNECTION_CAPABILITY);
-		createEReference(connectionCapabilityEClass, CONNECTION_CAPABILITY__CONNECTION_TYPE);
-		createEReference(connectionCapabilityEClass, CONNECTION_CAPABILITY__LOCATION_TYPE);
-		createEReference(connectionCapabilityEClass, CONNECTION_CAPABILITY__DUCT_TYPE);
+		connectionInDuctOrLocationCapabilityEClass = createEClass(CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY);
+		createEReference(connectionInDuctOrLocationCapabilityEClass, CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__CONNECTION_TYPE);
+		createEReference(connectionInDuctOrLocationCapabilityEClass, CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__LOCATION_TYPE);
+		createEReference(connectionInDuctOrLocationCapabilityEClass, CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY__DUCT_TYPE);
 
-		signalCapabilityEClass = createEClass(SIGNAL_CAPABILITY);
-		createEReference(signalCapabilityEClass, SIGNAL_CAPABILITY__SIGNAL_TYPE);
-		createEReference(signalCapabilityEClass, SIGNAL_CAPABILITY__DEVICE_TYPE);
-		createEReference(signalCapabilityEClass, SIGNAL_CAPABILITY__CONNECTION_TYPE);
+		signalOnConnectionOrDeviceCapabilityEClass = createEClass(SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY);
+		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__SIGNAL_TYPE);
+		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE);
+		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE);
 
-		subDeviceCapabilityEClass = createEClass(SUB_DEVICE_CAPABILITY);
-		createEReference(subDeviceCapabilityEClass, SUB_DEVICE_CAPABILITY__SUB_DEVICE_TYPE);
-		createEReference(subDeviceCapabilityEClass, SUB_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE);
+		subdeviceInDeviceCapabilityEClass = createEClass(SUBDEVICE_IN_DEVICE_CAPABILITY);
+		createEReference(subdeviceInDeviceCapabilityEClass, SUBDEVICE_IN_DEVICE_CAPABILITY__SUBDEVICE_TYPE);
+		createEReference(subdeviceInDeviceCapabilityEClass, SUBDEVICE_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE);
 
 		resourceConsumptionEClass = createEClass(RESOURCE_CONSUMPTION);
 		createEAttribute(resourceConsumptionEClass, RESOURCE_CONSUMPTION__COUNT);
@@ -608,7 +604,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 
 		capabilitiesEClass = createEClass(CAPABILITIES);
 
-		subcapabilityEClass = createEClass(SUBCAPABILITY);
+		subcapabilitiesEClass = createEClass(SUBCAPABILITIES);
 	}
 
 	/**
@@ -644,68 +640,68 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		capabilitiesContainerAEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		taskCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		taskCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		taskCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		deviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		deviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		deviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		connectionCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		connectionCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		connectionCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		signalCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		signalCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		signalCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		subDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getElementA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		subDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.getElementA());
+		capabilitiesContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskOnDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		taskOnDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskOnDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		taskOnDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		deviceInLocationCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		deviceInLocationCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		deviceInLocationCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		deviceInLocationCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		connectionInDuctOrLocationCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		connectionInDuctOrLocationCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		connectionInDuctOrLocationCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		connectionInDuctOrLocationCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		signalOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		signalOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		signalOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		signalOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		capabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
-		subcapabilityEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
-		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		subcapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subcapabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
+		subcapabilitiesEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subcapabilitiesEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(capabilityAEClass, CapabilityA.class, "CapabilityA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCapabilityA_ResourceConsumptions(), this.getResourceConsumption(), null, "resourceConsumptions", null, 0, -1, CapabilityA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capabilitiesContainerAEClass, CapabilitiesContainerA.class, "CapabilitiesContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCapabilitiesContainerA_FunctionCapabilties(), this.getTaskCapability(), null, "functionCapabilties", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilitiesContainerA_SignalCapabilities(), this.getSignalCapability(), null, "signalCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilitiesContainerA_DeviceCapabilities(), this.getDeviceCapability(), null, "deviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilitiesContainerA_SubDeviceCapabilities(), this.getSubDeviceCapability(), null, "subDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilitiesContainerA_ConnectionCapabilities(), this.getConnectionCapability(), null, "connectionCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCapabilitiesContainerA_Subcapabilities(), this.getSubcapability(), null, "subcapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_TaskOnDeviceCapabilities(), this.getTaskOnDeviceCapability(), null, "taskOnDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_SignalOnConnectionOrDeviceCapabilities(), this.getSignalOnConnectionOrDeviceCapability(), null, "signalOnConnectionOrDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_DeviceInLocationCapabilities(), this.getDeviceInLocationCapability(), null, "deviceInLocationCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_SubdeviceInDeviceCapabilities(), this.getSubdeviceInDeviceCapability(), null, "subdeviceInDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities(), this.getConnectionInDuctOrLocationCapability(), null, "connectionInDuctOrLocationCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_Subcapabilities(), this.getSubcapabilities(), null, "subcapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(taskCapabilityEClass, TaskCapability.class, "TaskCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskCapability_TaskType(), theLibraryPackage.getTaskType(), null, "taskType", null, 1, 1, TaskCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 1, 1, TaskCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaskCapability_WorstCaseExecutionTime(), ecorePackage.getEFloat(), "worstCaseExecutionTime", "0.0", 1, 1, TaskCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTaskCapability_FailureProbability(), ecorePackage.getEDouble(), "failureProbability", null, 1, 1, TaskCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskOnDeviceCapabilityEClass, TaskOnDeviceCapability.class, "TaskOnDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskOnDeviceCapability_TaskType(), theLibraryPackage.getTaskType(), null, "taskType", null, 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskOnDeviceCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskOnDeviceCapability_WorstCaseExecutionTime(), ecorePackage.getEFloat(), "worstCaseExecutionTime", "0.0", 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskOnDeviceCapability_FailureProbability(), ecorePackage.getEDouble(), "failureProbability", null, 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(deviceCapabilityEClass, DeviceCapability.class, "DeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeviceCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 1, 1, DeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeviceCapability_LocationType(), theLibraryPackage.getLocationType(), null, "locationType", null, 1, 1, DeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(deviceInLocationCapabilityEClass, DeviceInLocationCapability.class, "DeviceInLocationCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeviceInLocationCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 1, 1, DeviceInLocationCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeviceInLocationCapability_LocationType(), theLibraryPackage.getLocationType(), null, "locationType", null, 1, 1, DeviceInLocationCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(connectionCapabilityEClass, ConnectionCapability.class, "ConnectionCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnectionCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 1, 1, ConnectionCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnectionCapability_LocationType(), theLibraryPackage.getLocationType(), null, "locationType", null, 0, 1, ConnectionCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnectionCapability_DuctType(), theLibraryPackage.getDuctType(), null, "ductType", null, 0, 1, ConnectionCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(connectionInDuctOrLocationCapabilityEClass, ConnectionInDuctOrLocationCapability.class, "ConnectionInDuctOrLocationCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnectionInDuctOrLocationCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 1, 1, ConnectionInDuctOrLocationCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionInDuctOrLocationCapability_LocationType(), theLibraryPackage.getLocationType(), null, "locationType", null, 0, 1, ConnectionInDuctOrLocationCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionInDuctOrLocationCapability_DuctType(), theLibraryPackage.getDuctType(), null, "ductType", null, 0, 1, ConnectionInDuctOrLocationCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(signalCapabilityEClass, SignalCapability.class, "SignalCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSignalCapability_SignalType(), theLibraryPackage.getSignalType(), null, "signalType", null, 1, 1, SignalCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignalCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 0, 1, SignalCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignalCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 0, 1, SignalCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(signalOnConnectionOrDeviceCapabilityEClass, SignalOnConnectionOrDeviceCapability.class, "SignalOnConnectionOrDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSignalOnConnectionOrDeviceCapability_SignalType(), theLibraryPackage.getSignalType(), null, "signalType", null, 1, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalOnConnectionOrDeviceCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 0, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalOnConnectionOrDeviceCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 0, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(subDeviceCapabilityEClass, SubDeviceCapability.class, "SubDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubDeviceCapability_SubDeviceType(), theLibraryPackage.getDeviceType(), null, "subDeviceType", null, 1, 1, SubDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubDeviceCapability_TargetDeviceType(), theLibraryPackage.getDeviceType(), null, "targetDeviceType", null, 1, 1, SubDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(subdeviceInDeviceCapabilityEClass, SubdeviceInDeviceCapability.class, "SubdeviceInDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubdeviceInDeviceCapability_SubdeviceType(), theLibraryPackage.getDeviceType(), null, "subdeviceType", null, 1, 1, SubdeviceInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubdeviceInDeviceCapability_TargetDeviceType(), theLibraryPackage.getDeviceType(), null, "targetDeviceType", null, 1, 1, SubdeviceInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConsumptionEClass, ResourceConsumption.class, "ResourceConsumption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResourceConsumption_Count(), ecorePackage.getEDouble(), "count", null, 1, 1, ResourceConsumption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -714,7 +710,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 
 		initEClass(capabilitiesEClass, Capabilities.class, "Capabilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(subcapabilityEClass, Subcapability.class, "Subcapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(subcapabilitiesEClass, Subcapabilities.class, "Subcapabilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //CapabilitiesPackageImpl

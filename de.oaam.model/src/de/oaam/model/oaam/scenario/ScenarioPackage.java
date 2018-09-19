@@ -43,7 +43,7 @@ public interface ScenarioPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v100/scenario";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v140/scenario";
 
 	/**
 	 * The package namespace name.
@@ -198,7 +198,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
+	int SCENARIO_CONTAINER_A__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -207,7 +207,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
+	int SCENARIO_CONTAINER_A__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -216,7 +216,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int SCENARIO_CONTAINER_A__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -225,7 +225,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int SCENARIO_CONTAINER_A__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -234,7 +234,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int SCENARIO_CONTAINER_A__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -243,7 +243,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int SCENARIO_CONTAINER_A__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -252,7 +252,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int SCENARIO_CONTAINER_A__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -261,7 +261,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int SCENARIO_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -270,7 +270,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__PARAMETERS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int SCENARIO_CONTAINER_A__PARAMETERS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' containment reference list.
@@ -279,7 +279,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int SCENARIO_CONTAINER_A__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -288,7 +288,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int SCENARIO_CONTAINER_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subscenarios</b></em>' containment reference list.
@@ -297,7 +297,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A__SUBSCENARIOS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int SCENARIO_CONTAINER_A__SUBSCENARIOS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -306,7 +306,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int SCENARIO_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -315,7 +315,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SCENARIO_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int SCENARIO_CONTAINER_A_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.OperationModeImpl <em>Operation Mode</em>}' class.
@@ -334,7 +334,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__ID = CommonPackage.ELEMENT_A__ID;
+	int OPERATION_MODE__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -343,7 +343,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__NAME = CommonPackage.ELEMENT_A__NAME;
+	int OPERATION_MODE__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -352,7 +352,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int OPERATION_MODE__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -361,7 +361,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int OPERATION_MODE__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -370,7 +370,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int OPERATION_MODE__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -379,7 +379,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int OPERATION_MODE__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -388,7 +388,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int OPERATION_MODE__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -397,7 +397,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int OPERATION_MODE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -406,7 +406,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int OPERATION_MODE__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Operation Mode</em>' class.
@@ -415,7 +415,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int OPERATION_MODE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Operation Mode</em>' class.
@@ -424,7 +424,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int OPERATION_MODE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ParameterNumericImpl <em>Parameter Numeric</em>}' class.
@@ -697,7 +697,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__ID = CommonPackage.ELEMENT_A__ID;
+	int VARIANT__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -706,7 +706,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__NAME = CommonPackage.ELEMENT_A__NAME;
+	int VARIANT__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -715,7 +715,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int VARIANT__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -724,7 +724,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int VARIANT__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -733,7 +733,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int VARIANT__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -742,7 +742,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int VARIANT__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -751,7 +751,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int VARIANT__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -760,7 +760,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int VARIANT__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -769,7 +769,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int VARIANT__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Variant</em>' class.
@@ -778,7 +778,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int VARIANT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Variant</em>' class.
@@ -787,7 +787,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIANT_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int VARIANT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.OperationModeReferenceImpl <em>Operation Mode Reference</em>}' class.
@@ -806,7 +806,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__ID = CommonPackage.ELEMENT_A__ID;
+	int OPERATION_MODE_REFERENCE__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -815,7 +815,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__NAME = CommonPackage.ELEMENT_A__NAME;
+	int OPERATION_MODE_REFERENCE__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -824,7 +824,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int OPERATION_MODE_REFERENCE__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -833,7 +833,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int OPERATION_MODE_REFERENCE__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -842,7 +842,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int OPERATION_MODE_REFERENCE__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -851,7 +851,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int OPERATION_MODE_REFERENCE__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -860,7 +860,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int OPERATION_MODE_REFERENCE__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -869,7 +869,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int OPERATION_MODE_REFERENCE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Mode</b></em>' reference.
@@ -878,7 +878,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__OPERATION_MODE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int OPERATION_MODE_REFERENCE__OPERATION_MODE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Active Probability</b></em>' attribute.
@@ -887,7 +887,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE__ACTIVE_PROBABILITY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int OPERATION_MODE_REFERENCE__ACTIVE_PROBABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Operation Mode Reference</em>' class.
@@ -896,7 +896,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int OPERATION_MODE_REFERENCE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Operation Mode Reference</em>' class.
@@ -905,7 +905,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_MODE_REFERENCE_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int OPERATION_MODE_REFERENCE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioImpl <em>Scenario</em>}' class.

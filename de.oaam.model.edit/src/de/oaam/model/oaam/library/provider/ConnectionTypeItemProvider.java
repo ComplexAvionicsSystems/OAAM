@@ -60,11 +60,13 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			addTraceLinkPropertyDescriptor(object);
 			addIsInformationPropertyDescriptor(object);
 			addIsPowerPropertyDescriptor(object);
-			addWireTypePropertyDescriptor(object);
+			addWireTypesPropertyDescriptor(object);
 			addIsWirelessPropertyDescriptor(object);
 			addAllowsCirclesPropertyDescriptor(object);
-			addNSourcesPropertyDescriptor(object);
-			addNTagetsPropertyDescriptor(object);
+			addNStartingPointsPropertyDescriptor(object);
+			addStartingPointResourceTypesPropertyDescriptor(object);
+			addNEndPointsPropertyDescriptor(object);
+			addEndPointResourceTypesPropertyDescriptor(object);
 			addNJointsPropertyDescriptor(object);
 			addMaxJointBranchesPropertyDescriptor(object);
 			addMaxInterfaceToJointDistancePropertyDescriptor(object);
@@ -73,6 +75,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			addDirectConnectionsAllowedPropertyDescriptor(object);
 			addMaxLengthPropertyDescriptor(object);
 			addIsUnidirectionalPropertyDescriptor(object);
+			addRequiresMasterPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,9 +91,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_id_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__ID,
+				 getString("_UI_OaamBaseElementA_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_id_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ID,
 				 true,
 				 false,
 				 false,
@@ -110,9 +113,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_name_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__NAME,
+				 getString("_UI_OaamBaseElementA_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_name_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__NAME,
 				 true,
 				 false,
 				 false,
@@ -132,9 +135,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_style_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_style_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__STYLE,
+				 getString("_UI_OaamBaseElementA_style_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_style_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__STYLE,
 				 true,
 				 false,
 				 false,
@@ -154,9 +157,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_documentation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_documentation_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__DOCUMENTATION,
+				 getString("_UI_OaamBaseElementA_documentation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_documentation_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__DOCUMENTATION,
 				 true,
 				 false,
 				 false,
@@ -176,9 +179,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modified_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modified_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIED,
+				 getString("_UI_OaamBaseElementA_modified_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modified_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIED,
 				 true,
 				 false,
 				 false,
@@ -198,9 +201,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_modifier_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_modifier_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__MODIFIER,
+				 getString("_UI_OaamBaseElementA_modifier_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_modifier_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__MODIFIER,
 				 true,
 				 false,
 				 false,
@@ -220,9 +223,9 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ElementA_traceLink_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ElementA_traceLink_feature", "_UI_ElementA_type"),
-				 CommonPackage.Literals.ELEMENT_A__TRACE_LINK,
+				 getString("_UI_OaamBaseElementA_traceLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OaamBaseElementA_traceLink_feature", "_UI_OaamBaseElementA_type"),
+				 CommonPackage.Literals.OAAM_BASE_ELEMENT_A__TRACE_LINK,
 				 true,
 				 false,
 				 false,
@@ -276,19 +279,19 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Wire Type feature.
+	 * This adds a property descriptor for the Wire Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addWireTypePropertyDescriptor(Object object) {
+	protected void addWireTypesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ConnectionType_wireType_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_wireType_feature", "_UI_ConnectionType_type"),
-				 LibraryPackage.Literals.CONNECTION_TYPE__WIRE_TYPE,
+				 getString("_UI_ConnectionType_wireTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_wireTypes_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__WIRE_TYPES,
 				 true,
 				 false,
 				 true,
@@ -342,19 +345,19 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the NSources feature.
+	 * This adds a property descriptor for the NStarting Points feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNSourcesPropertyDescriptor(Object object) {
+	protected void addNStartingPointsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ConnectionType_nSources_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_nSources_feature", "_UI_ConnectionType_type"),
-				 LibraryPackage.Literals.CONNECTION_TYPE__NSOURCES,
+				 getString("_UI_ConnectionType_nStartingPoints_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_nStartingPoints_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__NSTARTING_POINTS,
 				 true,
 				 false,
 				 false,
@@ -364,23 +367,67 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the NTagets feature.
+	 * This adds a property descriptor for the Starting Point Resource Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNTagetsPropertyDescriptor(Object object) {
+	protected void addStartingPointResourceTypesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ConnectionType_nTagets_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_nTagets_feature", "_UI_ConnectionType_type"),
-				 LibraryPackage.Literals.CONNECTION_TYPE__NTAGETS,
+				 getString("_UI_ConnectionType_startingPointResourceTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_startingPointResourceTypes_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the NEnd Points feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNEndPointsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConnectionType_nEndPoints_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_nEndPoints_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__NEND_POINTS,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the End Point Resource Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEndPointResourceTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConnectionType_endPointResourceTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_endPointResourceTypes_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__END_POINT_RESOURCE_TYPES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -562,6 +609,28 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Requires Master feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequiresMasterPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConnectionType_requiresMaster_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_requiresMaster_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__REQUIRES_MASTER,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -575,7 +644,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_CONSUMER_A__REQUIRED_RESOURCES);
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_CONSUMER_A__CONSUMED_GROUPS);
-			childrenFeatures.add(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
 		}
 		return childrenFeatures;
 	}
@@ -642,8 +711,8 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
 			case LibraryPackage.CONNECTION_TYPE__ALLOWS_CIRCLES:
-			case LibraryPackage.CONNECTION_TYPE__NSOURCES:
-			case LibraryPackage.CONNECTION_TYPE__NTAGETS:
+			case LibraryPackage.CONNECTION_TYPE__NSTARTING_POINTS:
+			case LibraryPackage.CONNECTION_TYPE__NEND_POINTS:
 			case LibraryPackage.CONNECTION_TYPE__NJOINTS:
 			case LibraryPackage.CONNECTION_TYPE__MAX_JOINT_BRANCHES:
 			case LibraryPackage.CONNECTION_TYPE__MAX_INTERFACE_TO_JOINT_DISTANCE:
@@ -651,6 +720,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			case LibraryPackage.CONNECTION_TYPE__DIRECT_CONNECTIONS_ALLOWED:
 			case LibraryPackage.CONNECTION_TYPE__MAX_LENGTH:
 			case LibraryPackage.CONNECTION_TYPE__IS_UNIDIRECTIONAL:
+			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.CONNECTION_TYPE__REQUIRED_RESOURCES:
@@ -685,22 +755,22 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeString()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeContainment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CommonPackage.Literals.ELEMENT_A__ATTRIBUTES,
+				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
 	}
 

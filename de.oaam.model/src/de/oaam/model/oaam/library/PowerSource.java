@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,5 +18,5 @@ import de.oaam.model.oaam.common.ElementA;
  * @model
  * @generated
  */
-public interface PowerSource extends ElementA {
+public interface PowerSource extends OaamBaseElementA {
 } // PowerSource

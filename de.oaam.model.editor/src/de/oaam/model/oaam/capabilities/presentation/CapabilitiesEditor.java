@@ -146,6 +146,7 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import de.oaam.model.oaam.capabilities.provider.CapabilitiesItemProviderAdapterFactory;
 
+import de.oaam.model.oaam.allocations.provider.AllocationsItemProviderAdapterFactory;
 import de.oaam.model.oaam.anatomy.provider.AnatomyItemProviderAdapterFactory;
 
 import de.oaam.model.oaam.common.provider.CommonItemProviderAdapterFactory;
@@ -155,9 +156,6 @@ import de.oaam.model.oaam.functions.provider.FunctionsItemProviderAdapterFactory
 import de.oaam.model.oaam.hardware.provider.HardwareItemProviderAdapterFactory;
 
 import de.oaam.model.oaam.library.provider.LibraryItemProviderAdapterFactory;
-
-import de.oaam.model.oaam.mapping.provider.MappingItemProviderAdapterFactory;
-
 import de.oaam.model.oaam.presentation.OaamEditorPlugin;
 
 import de.oaam.model.oaam.provider.OaamItemProviderAdapterFactory;
@@ -670,7 +668,7 @@ public class CapabilitiesEditor
 		adapterFactory.addAdapterFactory(new AnatomyItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CapabilitiesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new RestrictionsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new MappingItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new AllocationsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

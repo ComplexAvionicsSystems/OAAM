@@ -2,17 +2,15 @@
  */
 package de.oaam.model.oaam.restrictions.impl;
 
-import de.oaam.model.oaam.common.impl.ElementAImpl;
+import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
+import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
 
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
-
-import de.oaam.model.oaam.library.TaskType;
-
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SegregationRestriction;
 
@@ -51,8 +49,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getTasksB <em>Tasks B</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#isDissimilarTechnology <em>Dissimilar Technology</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#isDissimilarLocation <em>Dissimilar Location</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getSubFunctionsA <em>Sub Functions A</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getSubFunctionsB <em>Sub Functions B</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getSubfunctionsA <em>Subfunctions A</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getSubfunctionsB <em>Subfunctions B</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#isDissimilarArea <em>Dissimilar Area</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#isDissimilarPowerSource <em>Dissimilar Power Source</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.SegregationRestrictionImpl#getSignalsA <em>Signals A</em>}</li>
@@ -69,7 +67,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class SegregationRestrictionImpl extends ElementAImpl implements SegregationRestriction {
+public class SegregationRestrictionImpl extends OaamBaseElementAImpl implements SegregationRestriction {
 	/**
 	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -98,7 +96,7 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaskType> tasksA;
+	protected EList<Task> tasksA;
 
 	/**
 	 * The cached value of the '{@link #getTasksB() <em>Tasks B</em>}' reference list.
@@ -108,7 +106,7 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TaskType> tasksB;
+	protected EList<Task> tasksB;
 
 	/**
 	 * The default value of the '{@link #isDissimilarTechnology() <em>Dissimilar Technology</em>}' attribute.
@@ -151,24 +149,24 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	protected boolean dissimilarLocation = DISSIMILAR_LOCATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSubFunctionsA() <em>Sub Functions A</em>}' reference list.
+	 * The cached value of the '{@link #getSubfunctionsA() <em>Subfunctions A</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFunctionsA()
+	 * @see #getSubfunctionsA()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FunctionsContainerA> subFunctionsA;
+	protected EList<FunctionsContainerA> subfunctionsA;
 
 	/**
-	 * The cached value of the '{@link #getSubFunctionsB() <em>Sub Functions B</em>}' reference list.
+	 * The cached value of the '{@link #getSubfunctionsB() <em>Subfunctions B</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubFunctionsB()
+	 * @see #getSubfunctionsB()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FunctionsContainerA> subFunctionsB;
+	protected EList<FunctionsContainerA> subfunctionsB;
 
 	/**
 	 * The default value of the '{@link #isDissimilarArea() <em>Dissimilar Area</em>}' attribute.
@@ -358,9 +356,9 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaskType> getTasksA() {
+	public EList<Task> getTasksA() {
 		if (tasksA == null) {
-			tasksA = new EObjectResolvingEList<TaskType>(TaskType.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_A);
+			tasksA = new EObjectResolvingEList<Task>(Task.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_A);
 		}
 		return tasksA;
 	}
@@ -370,9 +368,9 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TaskType> getTasksB() {
+	public EList<Task> getTasksB() {
 		if (tasksB == null) {
-			tasksB = new EObjectResolvingEList<TaskType>(TaskType.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_B);
+			tasksB = new EObjectResolvingEList<Task>(Task.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_B);
 		}
 		return tasksB;
 	}
@@ -424,11 +422,11 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionsContainerA> getSubFunctionsA() {
-		if (subFunctionsA == null) {
-			subFunctionsA = new EObjectResolvingEList<FunctionsContainerA>(FunctionsContainerA.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A);
+	public EList<FunctionsContainerA> getSubfunctionsA() {
+		if (subfunctionsA == null) {
+			subfunctionsA = new EObjectResolvingEList<FunctionsContainerA>(FunctionsContainerA.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A);
 		}
-		return subFunctionsA;
+		return subfunctionsA;
 	}
 
 	/**
@@ -436,11 +434,11 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionsContainerA> getSubFunctionsB() {
-		if (subFunctionsB == null) {
-			subFunctionsB = new EObjectResolvingEList<FunctionsContainerA>(FunctionsContainerA.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B);
+	public EList<FunctionsContainerA> getSubfunctionsB() {
+		if (subfunctionsB == null) {
+			subfunctionsB = new EObjectResolvingEList<FunctionsContainerA>(FunctionsContainerA.class, this, RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B);
 		}
-		return subFunctionsB;
+		return subfunctionsB;
 	}
 
 	/**
@@ -639,10 +637,10 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 				return isDissimilarTechnology();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION:
 				return isDissimilarLocation();
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A:
-				return getSubFunctionsA();
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B:
-				return getSubFunctionsB();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A:
+				return getSubfunctionsA();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B:
+				return getSubfunctionsB();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_AREA:
 				return isDissimilarArea();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_POWER_SOURCE:
@@ -690,11 +688,11 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 				return;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_A:
 				getTasksA().clear();
-				getTasksA().addAll((Collection<? extends TaskType>)newValue);
+				getTasksA().addAll((Collection<? extends Task>)newValue);
 				return;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__TASKS_B:
 				getTasksB().clear();
-				getTasksB().addAll((Collection<? extends TaskType>)newValue);
+				getTasksB().addAll((Collection<? extends Task>)newValue);
 				return;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_TECHNOLOGY:
 				setDissimilarTechnology((Boolean)newValue);
@@ -702,13 +700,13 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION:
 				setDissimilarLocation((Boolean)newValue);
 				return;
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A:
-				getSubFunctionsA().clear();
-				getSubFunctionsA().addAll((Collection<? extends FunctionsContainerA>)newValue);
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A:
+				getSubfunctionsA().clear();
+				getSubfunctionsA().addAll((Collection<? extends FunctionsContainerA>)newValue);
 				return;
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B:
-				getSubFunctionsB().clear();
-				getSubFunctionsB().addAll((Collection<? extends FunctionsContainerA>)newValue);
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B:
+				getSubfunctionsB().clear();
+				getSubfunctionsB().addAll((Collection<? extends FunctionsContainerA>)newValue);
 				return;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_AREA:
 				setDissimilarArea((Boolean)newValue);
@@ -786,11 +784,11 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION:
 				setDissimilarLocation(DISSIMILAR_LOCATION_EDEFAULT);
 				return;
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A:
-				getSubFunctionsA().clear();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A:
+				getSubfunctionsA().clear();
 				return;
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B:
-				getSubFunctionsB().clear();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B:
+				getSubfunctionsB().clear();
 				return;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_AREA:
 				setDissimilarArea(DISSIMILAR_AREA_EDEFAULT);
@@ -852,10 +850,10 @@ public class SegregationRestrictionImpl extends ElementAImpl implements Segregat
 				return dissimilarTechnology != DISSIMILAR_TECHNOLOGY_EDEFAULT;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_LOCATION:
 				return dissimilarLocation != DISSIMILAR_LOCATION_EDEFAULT;
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_A:
-				return subFunctionsA != null && !subFunctionsA.isEmpty();
-			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUB_FUNCTIONS_B:
-				return subFunctionsB != null && !subFunctionsB.isEmpty();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_A:
+				return subfunctionsA != null && !subfunctionsA.isEmpty();
+			case RestrictionsPackage.SEGREGATION_RESTRICTION__SUBFUNCTIONS_B:
+				return subfunctionsB != null && !subfunctionsB.isEmpty();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_AREA:
 				return dissimilarArea != DISSIMILAR_AREA_EDEFAULT;
 			case RestrictionsPackage.SEGREGATION_RESTRICTION__DISSIMILAR_POWER_SOURCE:

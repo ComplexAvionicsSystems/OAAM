@@ -2,7 +2,7 @@
  */
 package de.oaam.model.oaam.library;
 
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.library.ResourceType#getUnit <em>Unit</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ResourceType#isIsConsumed <em>Is Consumed</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ResourceType#isIsDistinguishable <em>Is Distinguishable</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ResourceType#isIsPropagated <em>Is Propagated</em>}</li>
@@ -33,7 +34,32 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ResourceType extends ResourceConsumerA, ElementA {
+public interface ResourceType extends ResourceConsumerA, OaamBaseElementA {
+	/**
+	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The name of the quantity in which the resource type is usually provided, e.g. number of pins, mega byte, ...
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Unit</em>' attribute.
+	 * @see #setUnit(String)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getResourceType_Unit()
+	 * @model
+	 * @generated
+	 */
+	String getUnit();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.ResourceType#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit</em>' attribute.
+	 * @see #getUnit()
+	 * @generated
+	 */
+	void setUnit(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Is Consumed</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
@@ -224,7 +250,7 @@ public interface ResourceType extends ResourceConsumerA, ElementA {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A list of possible alternatives. Alternative resources could be considered for mappings if the original is not available or is unfavourable.
+	 * A list of possible alternatives. Alternative resources could be considered for allocationss if the original is not available or is unfavourable.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Alternatives</em>' containment reference list.
 	 * @see de.oaam.model.oaam.library.LibraryPackage#getResourceType_Alternatives()

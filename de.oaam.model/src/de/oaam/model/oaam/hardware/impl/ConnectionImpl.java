@@ -4,7 +4,7 @@ package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
@@ -54,7 +54,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getStartingPoints <em>Starting Points</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getEndPoints <em>End Points</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl#getMasters <em>Masters</em>}</li>
  * </ul>
  *
  * @generated
@@ -241,6 +243,16 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	protected ConnectionType type;
 
 	/**
+	 * The cached value of the '{@link #getStartingPoints() <em>Starting Points</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStartingPoints()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Io> startingPoints;
+
+	/**
 	 * The cached value of the '{@link #getEndPoints() <em>End Points</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,6 +261,16 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 * @ordered
 	 */
 	protected EList<Io> endPoints;
+
+	/**
+	 * The cached value of the '{@link #getMasters() <em>Masters</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMasters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Io> masters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -495,11 +517,35 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Io> getStartingPoints() {
+		if (startingPoints == null) {
+			startingPoints = new EObjectResolvingEList<Io>(Io.class, this, HardwarePackage.CONNECTION__STARTING_POINTS);
+		}
+		return startingPoints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Io> getEndPoints() {
 		if (endPoints == null) {
 			endPoints = new EObjectResolvingEList<Io>(Io.class, this, HardwarePackage.CONNECTION__END_POINTS);
 		}
 		return endPoints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Io> getMasters() {
+		if (masters == null) {
+			masters = new EObjectResolvingEList<Io>(Io.class, this, HardwarePackage.CONNECTION__MASTERS);
+		}
+		return masters;
 	}
 
 	/**
@@ -549,8 +595,12 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 			case HardwarePackage.CONNECTION__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case HardwarePackage.CONNECTION__STARTING_POINTS:
+				return getStartingPoints();
 			case HardwarePackage.CONNECTION__END_POINTS:
 				return getEndPoints();
+			case HardwarePackage.CONNECTION__MASTERS:
+				return getMasters();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -600,9 +650,17 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 			case HardwarePackage.CONNECTION__TYPE:
 				setType((ConnectionType)newValue);
 				return;
+			case HardwarePackage.CONNECTION__STARTING_POINTS:
+				getStartingPoints().clear();
+				getStartingPoints().addAll((Collection<? extends Io>)newValue);
+				return;
 			case HardwarePackage.CONNECTION__END_POINTS:
 				getEndPoints().clear();
 				getEndPoints().addAll((Collection<? extends Io>)newValue);
+				return;
+			case HardwarePackage.CONNECTION__MASTERS:
+				getMasters().clear();
+				getMasters().addAll((Collection<? extends Io>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -649,8 +707,14 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 			case HardwarePackage.CONNECTION__TYPE:
 				setType((ConnectionType)null);
 				return;
+			case HardwarePackage.CONNECTION__STARTING_POINTS:
+				getStartingPoints().clear();
+				return;
 			case HardwarePackage.CONNECTION__END_POINTS:
 				getEndPoints().clear();
+				return;
+			case HardwarePackage.CONNECTION__MASTERS:
+				getMasters().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -686,8 +750,12 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 				return operationModes != null && !operationModes.isEmpty();
 			case HardwarePackage.CONNECTION__TYPE:
 				return type != null;
+			case HardwarePackage.CONNECTION__STARTING_POINTS:
+				return startingPoints != null && !startingPoints.isEmpty();
 			case HardwarePackage.CONNECTION__END_POINTS:
 				return endPoints != null && !endPoints.isEmpty();
+			case HardwarePackage.CONNECTION__MASTERS:
+				return masters != null && !masters.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -699,16 +767,16 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
-				case HardwarePackage.CONNECTION__ID: return CommonPackage.ELEMENT_A__ID;
-				case HardwarePackage.CONNECTION__NAME: return CommonPackage.ELEMENT_A__NAME;
-				case HardwarePackage.CONNECTION__STYLE: return CommonPackage.ELEMENT_A__STYLE;
-				case HardwarePackage.CONNECTION__ATTRIBUTES: return CommonPackage.ELEMENT_A__ATTRIBUTES;
-				case HardwarePackage.CONNECTION__DOCUMENTATION: return CommonPackage.ELEMENT_A__DOCUMENTATION;
-				case HardwarePackage.CONNECTION__MODIFIED: return CommonPackage.ELEMENT_A__MODIFIED;
-				case HardwarePackage.CONNECTION__MODIFIER: return CommonPackage.ELEMENT_A__MODIFIER;
-				case HardwarePackage.CONNECTION__TRACE_LINK: return CommonPackage.ELEMENT_A__TRACE_LINK;
+				case HardwarePackage.CONNECTION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+				case HardwarePackage.CONNECTION__NAME: return CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+				case HardwarePackage.CONNECTION__STYLE: return CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+				case HardwarePackage.CONNECTION__ATTRIBUTES: return CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+				case HardwarePackage.CONNECTION__DOCUMENTATION: return CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+				case HardwarePackage.CONNECTION__MODIFIED: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+				case HardwarePackage.CONNECTION__MODIFIER: return CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+				case HardwarePackage.CONNECTION__TRACE_LINK: return CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 				default: return -1;
 			}
 		}
@@ -734,16 +802,16 @@ public class ConnectionImpl extends ResourceProviderInstanceAImpl implements Con
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == ElementA.class) {
+		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
-				case CommonPackage.ELEMENT_A__ID: return HardwarePackage.CONNECTION__ID;
-				case CommonPackage.ELEMENT_A__NAME: return HardwarePackage.CONNECTION__NAME;
-				case CommonPackage.ELEMENT_A__STYLE: return HardwarePackage.CONNECTION__STYLE;
-				case CommonPackage.ELEMENT_A__ATTRIBUTES: return HardwarePackage.CONNECTION__ATTRIBUTES;
-				case CommonPackage.ELEMENT_A__DOCUMENTATION: return HardwarePackage.CONNECTION__DOCUMENTATION;
-				case CommonPackage.ELEMENT_A__MODIFIED: return HardwarePackage.CONNECTION__MODIFIED;
-				case CommonPackage.ELEMENT_A__MODIFIER: return HardwarePackage.CONNECTION__MODIFIER;
-				case CommonPackage.ELEMENT_A__TRACE_LINK: return HardwarePackage.CONNECTION__TRACE_LINK;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return HardwarePackage.CONNECTION__ID;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__NAME: return HardwarePackage.CONNECTION__NAME;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__STYLE: return HardwarePackage.CONNECTION__STYLE;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES: return HardwarePackage.CONNECTION__ATTRIBUTES;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION: return HardwarePackage.CONNECTION__DOCUMENTATION;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED: return HardwarePackage.CONNECTION__MODIFIED;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER: return HardwarePackage.CONNECTION__MODIFIER;
+				case CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK: return HardwarePackage.CONNECTION__TRACE_LINK;
 				default: return -1;
 			}
 		}

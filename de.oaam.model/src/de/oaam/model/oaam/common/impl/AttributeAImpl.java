@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class AttributeAImpl extends ElementAImpl implements AttributeA {
+public abstract class AttributeAImpl extends OaamBaseElementAImpl implements AttributeA {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

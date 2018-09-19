@@ -43,7 +43,7 @@ public interface SystemsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v100/systems";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v140/systems";
 
 	/**
 	 * The package namespace name.
@@ -78,7 +78,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__ID = CommonPackage.ELEMENT_A__ID;
+	int SYSTEMS_CONTAINER_A__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -87,7 +87,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__NAME = CommonPackage.ELEMENT_A__NAME;
+	int SYSTEMS_CONTAINER_A__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -96,7 +96,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int SYSTEMS_CONTAINER_A__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -105,7 +105,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int SYSTEMS_CONTAINER_A__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -114,7 +114,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int SYSTEMS_CONTAINER_A__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int SYSTEMS_CONTAINER_A__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int SYSTEMS_CONTAINER_A__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -141,7 +141,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int SYSTEMS_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
@@ -150,7 +150,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__SYSTEMS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int SYSTEMS_CONTAINER_A__SYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
@@ -159,7 +159,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__INFORMATION_FLOWS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int SYSTEMS_CONTAINER_A__INFORMATION_FLOWS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
@@ -168,7 +168,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
@@ -177,7 +177,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__SUBSYSTEMS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int SYSTEMS_CONTAINER_A__SUBSYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -186,7 +186,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int SYSTEMS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -195,7 +195,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int SYSTEMS_CONTAINER_A_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.SystemsImpl <em>Systems</em>}' class.
@@ -504,7 +504,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ID = CommonPackage.ELEMENT_A__ID;
+	int SYSTEM__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -513,7 +513,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__NAME = CommonPackage.ELEMENT_A__NAME;
+	int SYSTEM__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -522,7 +522,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int SYSTEM__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -531,7 +531,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int SYSTEM__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -540,7 +540,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int SYSTEM__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -549,7 +549,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int SYSTEM__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -558,7 +558,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int SYSTEM__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -567,7 +567,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int SYSTEM__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -576,7 +576,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int SYSTEM__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -585,7 +585,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int SYSTEM__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Provided Outputs</b></em>' containment reference list.
@@ -594,7 +594,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__PROVIDED_OUTPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int SYSTEM__PROVIDED_OUTPUTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Required Inputs</b></em>' containment reference list.
@@ -603,7 +603,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__REQUIRED_INPUTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int SYSTEM__REQUIRED_INPUTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>System</em>' class.
@@ -612,7 +612,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int SYSTEM_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>System</em>' class.
@@ -621,7 +621,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int SYSTEM_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.RequiredInputAImpl <em>Required Input A</em>}' class.
@@ -859,7 +859,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__ID = CommonPackage.ELEMENT_A__ID;
+	int INFORMATION_FLOW__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -868,7 +868,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__NAME = CommonPackage.ELEMENT_A__NAME;
+	int INFORMATION_FLOW__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -877,7 +877,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int INFORMATION_FLOW__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -886,7 +886,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int INFORMATION_FLOW__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -895,7 +895,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int INFORMATION_FLOW__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -904,7 +904,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int INFORMATION_FLOW__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -913,7 +913,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int INFORMATION_FLOW__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -922,7 +922,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int INFORMATION_FLOW__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -931,7 +931,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__OPERATION_MODES = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int INFORMATION_FLOW__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -940,7 +940,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__VARIANTS = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int INFORMATION_FLOW__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -949,7 +949,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__FROM = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int INFORMATION_FLOW__FROM = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>To</b></em>' reference.
@@ -958,7 +958,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW__TO = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int INFORMATION_FLOW__TO = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Information Flow</em>' class.
@@ -967,7 +967,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int INFORMATION_FLOW_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Information Flow</em>' class.
@@ -976,7 +976,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FLOW_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int INFORMATION_FLOW_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.PowerImpl <em>Power</em>}' class.
@@ -1720,7 +1720,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__ID = CommonPackage.ELEMENT_A__ID;
+	int INPUT_SEGREGATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1729,7 +1729,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__NAME = CommonPackage.ELEMENT_A__NAME;
+	int INPUT_SEGREGATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1738,7 +1738,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__STYLE = CommonPackage.ELEMENT_A__STYLE;
+	int INPUT_SEGREGATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1747,7 +1747,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__ATTRIBUTES = CommonPackage.ELEMENT_A__ATTRIBUTES;
+	int INPUT_SEGREGATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1756,7 +1756,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__DOCUMENTATION = CommonPackage.ELEMENT_A__DOCUMENTATION;
+	int INPUT_SEGREGATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1765,7 +1765,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__MODIFIED = CommonPackage.ELEMENT_A__MODIFIED;
+	int INPUT_SEGREGATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1774,7 +1774,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__MODIFIER = CommonPackage.ELEMENT_A__MODIFIER;
+	int INPUT_SEGREGATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1783,7 +1783,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__TRACE_LINK = CommonPackage.ELEMENT_A__TRACE_LINK;
+	int INPUT_SEGREGATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Source</b></em>' attribute.
@@ -1792,7 +1792,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__DISSIMILAR_SOURCE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 0;
+	int INPUT_SEGREGATION__DISSIMILAR_SOURCE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Route</b></em>' attribute.
@@ -1801,7 +1801,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__DISSIMILAR_ROUTE = CommonPackage.ELEMENT_A_FEATURE_COUNT + 1;
+	int INPUT_SEGREGATION__DISSIMILAR_ROUTE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Dissimilar Technology</b></em>' attribute.
@@ -1810,7 +1810,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__DISSIMILAR_TECHNOLOGY = CommonPackage.ELEMENT_A_FEATURE_COUNT + 2;
+	int INPUT_SEGREGATION__DISSIMILAR_TECHNOLOGY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Group A</b></em>' reference list.
@@ -1819,7 +1819,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__GROUP_A = CommonPackage.ELEMENT_A_FEATURE_COUNT + 3;
+	int INPUT_SEGREGATION__GROUP_A = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Group B</b></em>' reference list.
@@ -1828,7 +1828,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION__GROUP_B = CommonPackage.ELEMENT_A_FEATURE_COUNT + 4;
+	int INPUT_SEGREGATION__GROUP_B = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Input Segregation</em>' class.
@@ -1837,7 +1837,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION_FEATURE_COUNT = CommonPackage.ELEMENT_A_FEATURE_COUNT + 5;
+	int INPUT_SEGREGATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Input Segregation</em>' class.
@@ -1846,7 +1846,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_SEGREGATION_OPERATION_COUNT = CommonPackage.ELEMENT_A_OPERATION_COUNT + 0;
+	int INPUT_SEGREGATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 
 	/**

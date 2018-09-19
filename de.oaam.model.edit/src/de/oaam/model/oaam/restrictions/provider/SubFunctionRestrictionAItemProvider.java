@@ -25,12 +25,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.restrictions.SubFunctionRestrictionA} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.restrictions.SubfunctionRestrictionA} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SubFunctionRestrictionAItemProvider 
+public class SubfunctionRestrictionAItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -44,7 +44,7 @@ public class SubFunctionRestrictionAItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SubFunctionRestrictionAItemProvider(AdapterFactory adapterFactory) {
+	public SubfunctionRestrictionAItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,25 +59,25 @@ public class SubFunctionRestrictionAItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSubFunctionsPropertyDescriptor(object);
+			addSubfunctionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Sub Functions feature.
+	 * This adds a property descriptor for the Subfunctions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSubFunctionsPropertyDescriptor(Object object) {
+	protected void addSubfunctionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SubFunctionRestrictionA_subFunctions_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SubFunctionRestrictionA_subFunctions_feature", "_UI_SubFunctionRestrictionA_type"),
-				 RestrictionsPackage.Literals.SUB_FUNCTION_RESTRICTION_A__SUB_FUNCTIONS,
+				 getString("_UI_SubfunctionRestrictionA_subfunctions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SubfunctionRestrictionA_subfunctions_feature", "_UI_SubfunctionRestrictionA_type"),
+				 RestrictionsPackage.Literals.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS,
 				 true,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class SubFunctionRestrictionAItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SubFunctionRestrictionA_type");
+		return getString("_UI_SubfunctionRestrictionA_type");
 	}
 	
 

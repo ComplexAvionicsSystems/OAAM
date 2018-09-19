@@ -3,7 +3,7 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.BoolA;
-import de.oaam.model.oaam.common.ElementA;
+import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
@@ -29,7 +29,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface FailureCondition extends ElementA, ModeDependentElementA, VariantDependentElementA {
+public interface FailureCondition extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Logic</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
 public interface ScenarioContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.scenario.ParameterA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.scenario.ScenarioParameterA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -42,7 +42,7 @@ public interface ScenarioContainerA extends OaamBaseElementA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ParameterA> getParameters();
+	EList<ScenarioParameterA> getParameters();
 
 	/**
 	 * Returns the value of the '<em><b>Variants</b></em>' containment reference list.

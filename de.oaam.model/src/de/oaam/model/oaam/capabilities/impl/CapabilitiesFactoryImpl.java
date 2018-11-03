@@ -61,6 +61,7 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 			case CapabilitiesPackage.CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITY: return createConnectionInDuctOrLocationCapability();
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY: return createSignalOnConnectionOrDeviceCapability();
 			case CapabilitiesPackage.SUBDEVICE_IN_DEVICE_CAPABILITY: return createSubdeviceInDeviceCapability();
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY: return createSubconnectionInDeviceCapability();
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: return createResourceConsumption();
 			case CapabilitiesPackage.CAPABILITIES: return createCapabilities();
 			case CapabilitiesPackage.SUBCAPABILITIES: return createSubcapabilities();
@@ -117,6 +118,16 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	public SubdeviceInDeviceCapability createSubdeviceInDeviceCapability() {
 		SubdeviceInDeviceCapabilityImpl subdeviceInDeviceCapability = new SubdeviceInDeviceCapabilityImpl();
 		return subdeviceInDeviceCapability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SubconnectionInDeviceCapability createSubconnectionInDeviceCapability() {
+		SubconnectionInDeviceCapabilityImpl subconnectionInDeviceCapability = new SubconnectionInDeviceCapabilityImpl();
+		return subconnectionInDeviceCapability;
 	}
 
 	/**

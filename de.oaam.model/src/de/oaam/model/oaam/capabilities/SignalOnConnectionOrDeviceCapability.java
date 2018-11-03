@@ -26,6 +26,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  *   <li>{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getSignalType <em>Signal Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getConnectionType <em>Connection Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getSignalOnConnectionOrDeviceCapability()
@@ -107,5 +108,31 @@ public interface SignalOnConnectionOrDeviceCapability extends CapabilityA, OaamB
 	 * @generated
 	 */
 	void setConnectionType(ConnectionType value);
+
+	/**
+	 * Returns the value of the '<em><b>Worst Case Transmission Time</b></em>' attribute.
+	 * The default value is <code>"0.0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The worst case transmission time of the signal in s. It makes only sense, if the transmission is deterministic.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Worst Case Transmission Time</em>' attribute.
+	 * @see #setWorstCaseTransmissionTime(float)
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getSignalOnConnectionOrDeviceCapability_WorstCaseTransmissionTime()
+	 * @model default="0.0" required="true"
+	 * @generated
+	 */
+	float getWorstCaseTransmissionTime();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Worst Case Transmission Time</em>' attribute.
+	 * @see #getWorstCaseTransmissionTime()
+	 * @generated
+	 */
+	void setWorstCaseTransmissionTime(float value);
 
 } // SignalOnConnectionOrDeviceCapability

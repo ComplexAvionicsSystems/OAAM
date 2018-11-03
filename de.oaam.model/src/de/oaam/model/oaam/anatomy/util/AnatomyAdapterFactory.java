@@ -100,12 +100,16 @@ public class AnatomyAdapterFactory extends AdapterFactoryImpl {
 				return createLocationSymmetryAdapter();
 			}
 			@Override
-			public Adapter caseAnatomy(Anatomy object) {
-				return createAnatomyAdapter();
+			public Adapter caseAreaSymmetry(AreaSymmetry object) {
+				return createAreaSymmetryAdapter();
 			}
 			@Override
 			public Adapter caseSubanatomy(Subanatomy object) {
 				return createSubanatomyAdapter();
+			}
+			@Override
+			public Adapter caseAnatomy(Anatomy object) {
+				return createAnatomyAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -238,6 +242,20 @@ public class AnatomyAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationSymmetryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.anatomy.AreaSymmetry <em>Area Symmetry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.anatomy.AreaSymmetry
+	 * @generated
+	 */
+	public Adapter createAreaSymmetryAdapter() {
 		return null;
 	}
 

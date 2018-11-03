@@ -26,7 +26,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface TaskSymmetryRestriction extends TaskRestrictionA, OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
+public interface TaskSymmetryRestriction extends TaskRestrictionA, TaskGroupRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link de.oaam.model.oaam.restrictions.SymmetryTypesE}.

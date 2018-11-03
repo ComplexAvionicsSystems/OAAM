@@ -624,223 +624,60 @@ public interface SystemsPackage extends EPackage {
 	int SYSTEM_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.RequiredInputAImpl <em>Required Input A</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.RequiredInformationAImpl <em>Required Information A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.systems.impl.RequiredInputAImpl
-	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getRequiredInputA()
+	 * @see de.oaam.model.oaam.systems.impl.RequiredInformationAImpl
+	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getRequiredInformationA()
 	 * @generated
 	 */
-	int REQUIRED_INPUT_A = 4;
+	int REQUIRED_INFORMATION_A = 4;
 
 	/**
-	 * The number of structural features of the '<em>Required Input A</em>' class.
+	 * The number of structural features of the '<em>Required Information A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_INPUT_A_FEATURE_COUNT = 0;
+	int REQUIRED_INFORMATION_A_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Required Input A</em>' class.
+	 * The number of operations of the '<em>Required Information A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIRED_INPUT_A_OPERATION_COUNT = 0;
+	int REQUIRED_INFORMATION_A_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.ProvidedOutputAImpl <em>Provided Output A</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.ProvidedInformationAImpl <em>Provided Information A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.systems.impl.ProvidedOutputAImpl
-	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getProvidedOutputA()
+	 * @see de.oaam.model.oaam.systems.impl.ProvidedInformationAImpl
+	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getProvidedInformationA()
 	 * @generated
 	 */
-	int PROVIDED_OUTPUT_A = 5;
+	int PROVIDED_INFORMATION_A = 5;
 
 	/**
-	 * The number of structural features of the '<em>Provided Output A</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROVIDED_OUTPUT_A_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Provided Output A</em>' class.
+	 * The number of structural features of the '<em>Provided Information A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROVIDED_OUTPUT_A_OPERATION_COUNT = 0;
+	int PROVIDED_INFORMATION_A_FEATURE_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InformationImpl <em>Information</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.systems.impl.InformationImpl
-	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformation()
-	 * @generated
-	 */
-	int INFORMATION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The number of operations of the '<em>Provided Information A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__ID = PROVIDED_OUTPUT_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__NAME = PROVIDED_OUTPUT_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__STYLE = PROVIDED_OUTPUT_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__ATTRIBUTES = PROVIDED_OUTPUT_A_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__DOCUMENTATION = PROVIDED_OUTPUT_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__MODIFIED = PROVIDED_OUTPUT_A_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__MODIFIER = PROVIDED_OUTPUT_A_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__TRACE_LINK = PROVIDED_OUTPUT_A_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__OPERATION_MODES = PROVIDED_OUTPUT_A_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__VARIANTS = PROVIDED_OUTPUT_A_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Rate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__RATE = PROVIDED_OUTPUT_A_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Latency</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__LATENCY = PROVIDED_OUTPUT_A_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Accuracy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__ACCURACY = PROVIDED_OUTPUT_A_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__RESOLUTION = PROVIDED_OUTPUT_A_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Unit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__UNIT = PROVIDED_OUTPUT_A_FEATURE_COUNT + 14;
-
-	/**
-	 * The number of structural features of the '<em>Information</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION_FEATURE_COUNT = PROVIDED_OUTPUT_A_FEATURE_COUNT + 15;
-
-	/**
-	 * The number of operations of the '<em>Information</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION_OPERATION_COUNT = PROVIDED_OUTPUT_A_OPERATION_COUNT + 0;
+	int PROVIDED_INFORMATION_A_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InformationFlowImpl <em>Information Flow</em>}' class.
@@ -850,7 +687,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationFlow()
 	 * @generated
 	 */
-	int INFORMATION_FLOW = 7;
+	int INFORMATION_FLOW = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -979,14 +816,14 @@ public interface SystemsPackage extends EPackage {
 	int INFORMATION_FLOW_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.PowerImpl <em>Power</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InformationSignalImpl <em>Information Signal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.systems.impl.PowerImpl
-	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getPower()
+	 * @see de.oaam.model.oaam.systems.impl.InformationSignalImpl
+	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationSignal()
 	 * @generated
 	 */
-	int POWER = 9;
+	int INFORMATION_SIGNAL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -995,7 +832,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__ID = PROVIDED_OUTPUT_A_FEATURE_COUNT + 0;
+	int INFORMATION_SIGNAL__ID = PROVIDED_INFORMATION_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1004,7 +841,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__NAME = PROVIDED_OUTPUT_A_FEATURE_COUNT + 1;
+	int INFORMATION_SIGNAL__NAME = PROVIDED_INFORMATION_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1013,7 +850,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__STYLE = PROVIDED_OUTPUT_A_FEATURE_COUNT + 2;
+	int INFORMATION_SIGNAL__STYLE = PROVIDED_INFORMATION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1022,7 +859,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__ATTRIBUTES = PROVIDED_OUTPUT_A_FEATURE_COUNT + 3;
+	int INFORMATION_SIGNAL__ATTRIBUTES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1031,7 +868,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__DOCUMENTATION = PROVIDED_OUTPUT_A_FEATURE_COUNT + 4;
+	int INFORMATION_SIGNAL__DOCUMENTATION = PROVIDED_INFORMATION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1040,7 +877,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__MODIFIED = PROVIDED_OUTPUT_A_FEATURE_COUNT + 5;
+	int INFORMATION_SIGNAL__MODIFIED = PROVIDED_INFORMATION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1049,7 +886,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__MODIFIER = PROVIDED_OUTPUT_A_FEATURE_COUNT + 6;
+	int INFORMATION_SIGNAL__MODIFIER = PROVIDED_INFORMATION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1058,16 +895,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__TRACE_LINK = PROVIDED_OUTPUT_A_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POWER__VARIANTS = PROVIDED_OUTPUT_A_FEATURE_COUNT + 8;
+	int INFORMATION_SIGNAL__TRACE_LINK = PROVIDED_INFORMATION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1076,7 +904,315 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__OPERATION_MODES = PROVIDED_OUTPUT_A_FEATURE_COUNT + 9;
+	int INFORMATION_SIGNAL__OPERATION_MODES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__VARIANTS = PROVIDED_INFORMATION_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__RATE = PROVIDED_INFORMATION_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Latency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__LATENCY = PROVIDED_INFORMATION_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Accuracy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__ACCURACY = PROVIDED_INFORMATION_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__RESOLUTION = PROVIDED_INFORMATION_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL__UNIT = PROVIDED_INFORMATION_A_FEATURE_COUNT + 14;
+
+	/**
+	 * The number of structural features of the '<em>Information Signal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL_FEATURE_COUNT = PROVIDED_INFORMATION_A_FEATURE_COUNT + 15;
+
+	/**
+	 * The number of operations of the '<em>Information Signal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SIGNAL_OPERATION_COUNT = PROVIDED_INFORMATION_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InformationMaterialImpl <em>Information Material</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.systems.impl.InformationMaterialImpl
+	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationMaterial()
+	 * @generated
+	 */
+	int INFORMATION_MATERIAL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__ID = PROVIDED_INFORMATION_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__NAME = PROVIDED_INFORMATION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__STYLE = PROVIDED_INFORMATION_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__ATTRIBUTES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__DOCUMENTATION = PROVIDED_INFORMATION_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__MODIFIED = PROVIDED_INFORMATION_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__MODIFIER = PROVIDED_INFORMATION_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__TRACE_LINK = PROVIDED_INFORMATION_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__OPERATION_MODES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__VARIANTS = PROVIDED_INFORMATION_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Density</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__DENSITY = PROVIDED_INFORMATION_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Velocity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL__VELOCITY = PROVIDED_INFORMATION_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Information Material</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL_FEATURE_COUNT = PROVIDED_INFORMATION_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Information Material</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_MATERIAL_OPERATION_COUNT = PROVIDED_INFORMATION_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InformationPowerImpl <em>Information Power</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.systems.impl.InformationPowerImpl
+	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationPower()
+	 * @generated
+	 */
+	int INFORMATION_POWER = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__ID = PROVIDED_INFORMATION_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__NAME = PROVIDED_INFORMATION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__STYLE = PROVIDED_INFORMATION_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__ATTRIBUTES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__DOCUMENTATION = PROVIDED_INFORMATION_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__MODIFIED = PROVIDED_INFORMATION_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__MODIFIER = PROVIDED_INFORMATION_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__TRACE_LINK = PROVIDED_INFORMATION_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__VARIANTS = PROVIDED_INFORMATION_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_POWER__OPERATION_MODES = PROVIDED_INFORMATION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -1085,25 +1221,25 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER__POWER = PROVIDED_OUTPUT_A_FEATURE_COUNT + 10;
+	int INFORMATION_POWER__POWER = PROVIDED_INFORMATION_A_FEATURE_COUNT + 10;
 
 	/**
-	 * The number of structural features of the '<em>Power</em>' class.
+	 * The number of structural features of the '<em>Information Power</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_FEATURE_COUNT = PROVIDED_OUTPUT_A_FEATURE_COUNT + 11;
+	int INFORMATION_POWER_FEATURE_COUNT = PROVIDED_INFORMATION_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The number of operations of the '<em>Power</em>' class.
+	 * The number of operations of the '<em>Information Power</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_OPERATION_COUNT = PROVIDED_OUTPUT_A_OPERATION_COUNT + 0;
+	int INFORMATION_POWER_OPERATION_COUNT = PROVIDED_INFORMATION_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.ElectricPowerImpl <em>Electric Power</em>}' class.
@@ -1113,7 +1249,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getElectricPower()
 	 * @generated
 	 */
-	int ELECTRIC_POWER = 8;
+	int ELECTRIC_POWER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1122,7 +1258,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__ID = POWER__ID;
+	int ELECTRIC_POWER__ID = INFORMATION_POWER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1131,7 +1267,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__NAME = POWER__NAME;
+	int ELECTRIC_POWER__NAME = INFORMATION_POWER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1140,7 +1276,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__STYLE = POWER__STYLE;
+	int ELECTRIC_POWER__STYLE = INFORMATION_POWER__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1149,7 +1285,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__ATTRIBUTES = POWER__ATTRIBUTES;
+	int ELECTRIC_POWER__ATTRIBUTES = INFORMATION_POWER__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1158,7 +1294,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__DOCUMENTATION = POWER__DOCUMENTATION;
+	int ELECTRIC_POWER__DOCUMENTATION = INFORMATION_POWER__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1167,7 +1303,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__MODIFIED = POWER__MODIFIED;
+	int ELECTRIC_POWER__MODIFIED = INFORMATION_POWER__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1176,7 +1312,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__MODIFIER = POWER__MODIFIER;
+	int ELECTRIC_POWER__MODIFIER = INFORMATION_POWER__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1185,7 +1321,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__TRACE_LINK = POWER__TRACE_LINK;
+	int ELECTRIC_POWER__TRACE_LINK = INFORMATION_POWER__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1194,7 +1330,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__VARIANTS = POWER__VARIANTS;
+	int ELECTRIC_POWER__VARIANTS = INFORMATION_POWER__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1203,7 +1339,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__OPERATION_MODES = POWER__OPERATION_MODES;
+	int ELECTRIC_POWER__OPERATION_MODES = INFORMATION_POWER__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -1212,7 +1348,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__POWER = POWER__POWER;
+	int ELECTRIC_POWER__POWER = INFORMATION_POWER__POWER;
 
 	/**
 	 * The feature id for the '<em><b>Frequency</b></em>' attribute.
@@ -1221,7 +1357,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__FREQUENCY = POWER_FEATURE_COUNT + 0;
+	int ELECTRIC_POWER__FREQUENCY = INFORMATION_POWER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>NPhases</b></em>' attribute.
@@ -1230,7 +1366,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__NPHASES = POWER_FEATURE_COUNT + 1;
+	int ELECTRIC_POWER__NPHASES = INFORMATION_POWER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Voltage</b></em>' attribute.
@@ -1239,7 +1375,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__VOLTAGE = POWER_FEATURE_COUNT + 2;
+	int ELECTRIC_POWER__VOLTAGE = INFORMATION_POWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Current</b></em>' attribute.
@@ -1248,7 +1384,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER__CURRENT = POWER_FEATURE_COUNT + 3;
+	int ELECTRIC_POWER__CURRENT = INFORMATION_POWER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Electric Power</em>' class.
@@ -1257,7 +1393,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER_FEATURE_COUNT = POWER_FEATURE_COUNT + 4;
+	int ELECTRIC_POWER_FEATURE_COUNT = INFORMATION_POWER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Electric Power</em>' class.
@@ -1266,7 +1402,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELECTRIC_POWER_OPERATION_COUNT = POWER_OPERATION_COUNT + 0;
+	int ELECTRIC_POWER_OPERATION_COUNT = INFORMATION_POWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.HydraulicPowerImpl <em>Hydraulic Power</em>}' class.
@@ -1276,7 +1412,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getHydraulicPower()
 	 * @generated
 	 */
-	int HYDRAULIC_POWER = 10;
+	int HYDRAULIC_POWER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1285,7 +1421,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__ID = POWER__ID;
+	int HYDRAULIC_POWER__ID = INFORMATION_POWER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1294,7 +1430,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__NAME = POWER__NAME;
+	int HYDRAULIC_POWER__NAME = INFORMATION_POWER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1303,7 +1439,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__STYLE = POWER__STYLE;
+	int HYDRAULIC_POWER__STYLE = INFORMATION_POWER__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1312,7 +1448,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__ATTRIBUTES = POWER__ATTRIBUTES;
+	int HYDRAULIC_POWER__ATTRIBUTES = INFORMATION_POWER__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1321,7 +1457,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__DOCUMENTATION = POWER__DOCUMENTATION;
+	int HYDRAULIC_POWER__DOCUMENTATION = INFORMATION_POWER__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1330,7 +1466,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__MODIFIED = POWER__MODIFIED;
+	int HYDRAULIC_POWER__MODIFIED = INFORMATION_POWER__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1339,7 +1475,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__MODIFIER = POWER__MODIFIER;
+	int HYDRAULIC_POWER__MODIFIER = INFORMATION_POWER__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1348,7 +1484,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__TRACE_LINK = POWER__TRACE_LINK;
+	int HYDRAULIC_POWER__TRACE_LINK = INFORMATION_POWER__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1357,7 +1493,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__VARIANTS = POWER__VARIANTS;
+	int HYDRAULIC_POWER__VARIANTS = INFORMATION_POWER__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1366,7 +1502,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__OPERATION_MODES = POWER__OPERATION_MODES;
+	int HYDRAULIC_POWER__OPERATION_MODES = INFORMATION_POWER__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -1375,7 +1511,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__POWER = POWER__POWER;
+	int HYDRAULIC_POWER__POWER = INFORMATION_POWER__POWER;
 
 	/**
 	 * The feature id for the '<em><b>Pressure</b></em>' attribute.
@@ -1384,7 +1520,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__PRESSURE = POWER_FEATURE_COUNT + 0;
+	int HYDRAULIC_POWER__PRESSURE = INFORMATION_POWER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mass Flow Rate</b></em>' attribute.
@@ -1393,7 +1529,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER__MASS_FLOW_RATE = POWER_FEATURE_COUNT + 1;
+	int HYDRAULIC_POWER__MASS_FLOW_RATE = INFORMATION_POWER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Hydraulic Power</em>' class.
@@ -1402,7 +1538,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER_FEATURE_COUNT = POWER_FEATURE_COUNT + 2;
+	int HYDRAULIC_POWER_FEATURE_COUNT = INFORMATION_POWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Hydraulic Power</em>' class.
@@ -1411,7 +1547,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HYDRAULIC_POWER_OPERATION_COUNT = POWER_OPERATION_COUNT + 0;
+	int HYDRAULIC_POWER_OPERATION_COUNT = INFORMATION_POWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.RotaryPowerImpl <em>Rotary Power</em>}' class.
@@ -1421,7 +1557,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getRotaryPower()
 	 * @generated
 	 */
-	int ROTARY_POWER = 11;
+	int ROTARY_POWER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1430,7 +1566,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__ID = POWER__ID;
+	int ROTARY_POWER__ID = INFORMATION_POWER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1439,7 +1575,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__NAME = POWER__NAME;
+	int ROTARY_POWER__NAME = INFORMATION_POWER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1448,7 +1584,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__STYLE = POWER__STYLE;
+	int ROTARY_POWER__STYLE = INFORMATION_POWER__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1457,7 +1593,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__ATTRIBUTES = POWER__ATTRIBUTES;
+	int ROTARY_POWER__ATTRIBUTES = INFORMATION_POWER__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1466,7 +1602,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__DOCUMENTATION = POWER__DOCUMENTATION;
+	int ROTARY_POWER__DOCUMENTATION = INFORMATION_POWER__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1475,7 +1611,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__MODIFIED = POWER__MODIFIED;
+	int ROTARY_POWER__MODIFIED = INFORMATION_POWER__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1484,7 +1620,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__MODIFIER = POWER__MODIFIER;
+	int ROTARY_POWER__MODIFIER = INFORMATION_POWER__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1493,7 +1629,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__TRACE_LINK = POWER__TRACE_LINK;
+	int ROTARY_POWER__TRACE_LINK = INFORMATION_POWER__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1502,7 +1638,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__VARIANTS = POWER__VARIANTS;
+	int ROTARY_POWER__VARIANTS = INFORMATION_POWER__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1511,7 +1647,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__OPERATION_MODES = POWER__OPERATION_MODES;
+	int ROTARY_POWER__OPERATION_MODES = INFORMATION_POWER__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -1520,7 +1656,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__POWER = POWER__POWER;
+	int ROTARY_POWER__POWER = INFORMATION_POWER__POWER;
 
 	/**
 	 * The feature id for the '<em><b>Momentum</b></em>' attribute.
@@ -1529,7 +1665,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__MOMENTUM = POWER_FEATURE_COUNT + 0;
+	int ROTARY_POWER__MOMENTUM = INFORMATION_POWER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Angular Velocity</b></em>' attribute.
@@ -1538,7 +1674,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER__ANGULAR_VELOCITY = POWER_FEATURE_COUNT + 1;
+	int ROTARY_POWER__ANGULAR_VELOCITY = INFORMATION_POWER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Rotary Power</em>' class.
@@ -1547,7 +1683,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER_FEATURE_COUNT = POWER_FEATURE_COUNT + 2;
+	int ROTARY_POWER_FEATURE_COUNT = INFORMATION_POWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Rotary Power</em>' class.
@@ -1556,7 +1692,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROTARY_POWER_OPERATION_COUNT = POWER_OPERATION_COUNT + 0;
+	int ROTARY_POWER_OPERATION_COUNT = INFORMATION_POWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.LinearPowerImpl <em>Linear Power</em>}' class.
@@ -1566,7 +1702,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getLinearPower()
 	 * @generated
 	 */
-	int LINEAR_POWER = 12;
+	int LINEAR_POWER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1575,7 +1711,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__ID = POWER__ID;
+	int LINEAR_POWER__ID = INFORMATION_POWER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1584,7 +1720,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__NAME = POWER__NAME;
+	int LINEAR_POWER__NAME = INFORMATION_POWER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1593,7 +1729,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__STYLE = POWER__STYLE;
+	int LINEAR_POWER__STYLE = INFORMATION_POWER__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1602,7 +1738,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__ATTRIBUTES = POWER__ATTRIBUTES;
+	int LINEAR_POWER__ATTRIBUTES = INFORMATION_POWER__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1611,7 +1747,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__DOCUMENTATION = POWER__DOCUMENTATION;
+	int LINEAR_POWER__DOCUMENTATION = INFORMATION_POWER__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1620,7 +1756,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__MODIFIED = POWER__MODIFIED;
+	int LINEAR_POWER__MODIFIED = INFORMATION_POWER__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1629,7 +1765,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__MODIFIER = POWER__MODIFIER;
+	int LINEAR_POWER__MODIFIER = INFORMATION_POWER__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1638,7 +1774,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__TRACE_LINK = POWER__TRACE_LINK;
+	int LINEAR_POWER__TRACE_LINK = INFORMATION_POWER__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1647,7 +1783,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__VARIANTS = POWER__VARIANTS;
+	int LINEAR_POWER__VARIANTS = INFORMATION_POWER__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1656,7 +1792,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__OPERATION_MODES = POWER__OPERATION_MODES;
+	int LINEAR_POWER__OPERATION_MODES = INFORMATION_POWER__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -1665,7 +1801,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__POWER = POWER__POWER;
+	int LINEAR_POWER__POWER = INFORMATION_POWER__POWER;
 
 	/**
 	 * The feature id for the '<em><b>Force</b></em>' attribute.
@@ -1674,7 +1810,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__FORCE = POWER_FEATURE_COUNT + 0;
+	int LINEAR_POWER__FORCE = INFORMATION_POWER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Velocity</b></em>' attribute.
@@ -1683,7 +1819,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER__VELOCITY = POWER_FEATURE_COUNT + 1;
+	int LINEAR_POWER__VELOCITY = INFORMATION_POWER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Linear Power</em>' class.
@@ -1692,7 +1828,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER_FEATURE_COUNT = POWER_FEATURE_COUNT + 2;
+	int LINEAR_POWER_FEATURE_COUNT = INFORMATION_POWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Linear Power</em>' class.
@@ -1701,7 +1837,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINEAR_POWER_OPERATION_COUNT = POWER_OPERATION_COUNT + 0;
+	int LINEAR_POWER_OPERATION_COUNT = INFORMATION_POWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl <em>Input Segregation</em>}' class.
@@ -1711,7 +1847,7 @@ public interface SystemsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInputSegregation()
 	 * @generated
 	 */
-	int INPUT_SEGREGATION = 13;
+	int INPUT_SEGREGATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1956,89 +2092,24 @@ public interface SystemsPackage extends EPackage {
 	EReference getSystem_RequiredInputs();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.RequiredInputA <em>Required Input A</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.RequiredInformationA <em>Required Information A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Required Input A</em>'.
-	 * @see de.oaam.model.oaam.systems.RequiredInputA
+	 * @return the meta object for class '<em>Required Information A</em>'.
+	 * @see de.oaam.model.oaam.systems.RequiredInformationA
 	 * @generated
 	 */
-	EClass getRequiredInputA();
+	EClass getRequiredInformationA();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.ProvidedOutputA <em>Provided Output A</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.ProvidedInformationA <em>Provided Information A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Provided Output A</em>'.
-	 * @see de.oaam.model.oaam.systems.ProvidedOutputA
+	 * @return the meta object for class '<em>Provided Information A</em>'.
+	 * @see de.oaam.model.oaam.systems.ProvidedInformationA
 	 * @generated
 	 */
-	EClass getProvidedOutputA();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.Information <em>Information</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Information</em>'.
-	 * @see de.oaam.model.oaam.systems.Information
-	 * @generated
-	 */
-	EClass getInformation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Information#getRate <em>Rate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rate</em>'.
-	 * @see de.oaam.model.oaam.systems.Information#getRate()
-	 * @see #getInformation()
-	 * @generated
-	 */
-	EAttribute getInformation_Rate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Information#getLatency <em>Latency</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Latency</em>'.
-	 * @see de.oaam.model.oaam.systems.Information#getLatency()
-	 * @see #getInformation()
-	 * @generated
-	 */
-	EAttribute getInformation_Latency();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Information#getAccuracy <em>Accuracy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Accuracy</em>'.
-	 * @see de.oaam.model.oaam.systems.Information#getAccuracy()
-	 * @see #getInformation()
-	 * @generated
-	 */
-	EAttribute getInformation_Accuracy();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Information#getResolution <em>Resolution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Resolution</em>'.
-	 * @see de.oaam.model.oaam.systems.Information#getResolution()
-	 * @see #getInformation()
-	 * @generated
-	 */
-	EAttribute getInformation_Resolution();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Information#getUnit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see de.oaam.model.oaam.systems.Information#getUnit()
-	 * @see #getInformation()
-	 * @generated
-	 */
-	EAttribute getInformation_Unit();
+	EClass getProvidedInformationA();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.InformationFlow <em>Information Flow</em>}'.
@@ -2071,6 +2142,124 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInformationFlow_To();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.InformationSignal <em>Information Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Information Signal</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal
+	 * @generated
+	 */
+	EClass getInformationSignal();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationSignal#getRate <em>Rate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rate</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal#getRate()
+	 * @see #getInformationSignal()
+	 * @generated
+	 */
+	EAttribute getInformationSignal_Rate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationSignal#getLatency <em>Latency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Latency</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal#getLatency()
+	 * @see #getInformationSignal()
+	 * @generated
+	 */
+	EAttribute getInformationSignal_Latency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationSignal#getAccuracy <em>Accuracy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Accuracy</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal#getAccuracy()
+	 * @see #getInformationSignal()
+	 * @generated
+	 */
+	EAttribute getInformationSignal_Accuracy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationSignal#getResolution <em>Resolution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Resolution</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal#getResolution()
+	 * @see #getInformationSignal()
+	 * @generated
+	 */
+	EAttribute getInformationSignal_Resolution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationSignal#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationSignal#getUnit()
+	 * @see #getInformationSignal()
+	 * @generated
+	 */
+	EAttribute getInformationSignal_Unit();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.InformationMaterial <em>Information Material</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Information Material</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationMaterial
+	 * @generated
+	 */
+	EClass getInformationMaterial();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationMaterial#getDensity <em>Density</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Density</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationMaterial#getDensity()
+	 * @see #getInformationMaterial()
+	 * @generated
+	 */
+	EAttribute getInformationMaterial_Density();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationMaterial#getVelocity <em>Velocity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Velocity</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationMaterial#getVelocity()
+	 * @see #getInformationMaterial()
+	 * @generated
+	 */
+	EAttribute getInformationMaterial_Velocity();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.InformationPower <em>Information Power</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Information Power</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationPower
+	 * @generated
+	 */
+	EClass getInformationPower();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InformationPower#getPower <em>Power</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Power</em>'.
+	 * @see de.oaam.model.oaam.systems.InformationPower#getPower()
+	 * @see #getInformationPower()
+	 * @generated
+	 */
+	EAttribute getInformationPower_Power();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.ElectricPower <em>Electric Power</em>}'.
@@ -2125,27 +2314,6 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getElectricPower_Current();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.Power <em>Power</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Power</em>'.
-	 * @see de.oaam.model.oaam.systems.Power
-	 * @generated
-	 */
-	EClass getPower();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.Power#getPower <em>Power</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Power</em>'.
-	 * @see de.oaam.model.oaam.systems.Power#getPower()
-	 * @see #getPower()
-	 * @generated
-	 */
-	EAttribute getPower_Power();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.systems.HydraulicPower <em>Hydraulic Power</em>}'.
@@ -2420,74 +2588,24 @@ public interface SystemsPackage extends EPackage {
 		EReference SYSTEM__REQUIRED_INPUTS = eINSTANCE.getSystem_RequiredInputs();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.RequiredInputAImpl <em>Required Input A</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.RequiredInformationAImpl <em>Required Information A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.systems.impl.RequiredInputAImpl
-		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getRequiredInputA()
+		 * @see de.oaam.model.oaam.systems.impl.RequiredInformationAImpl
+		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getRequiredInformationA()
 		 * @generated
 		 */
-		EClass REQUIRED_INPUT_A = eINSTANCE.getRequiredInputA();
+		EClass REQUIRED_INFORMATION_A = eINSTANCE.getRequiredInformationA();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.ProvidedOutputAImpl <em>Provided Output A</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.ProvidedInformationAImpl <em>Provided Information A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.systems.impl.ProvidedOutputAImpl
-		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getProvidedOutputA()
+		 * @see de.oaam.model.oaam.systems.impl.ProvidedInformationAImpl
+		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getProvidedInformationA()
 		 * @generated
 		 */
-		EClass PROVIDED_OUTPUT_A = eINSTANCE.getProvidedOutputA();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.InformationImpl <em>Information</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.systems.impl.InformationImpl
-		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformation()
-		 * @generated
-		 */
-		EClass INFORMATION = eINSTANCE.getInformation();
-
-		/**
-		 * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INFORMATION__RATE = eINSTANCE.getInformation_Rate();
-
-		/**
-		 * The meta object literal for the '<em><b>Latency</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INFORMATION__LATENCY = eINSTANCE.getInformation_Latency();
-
-		/**
-		 * The meta object literal for the '<em><b>Accuracy</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INFORMATION__ACCURACY = eINSTANCE.getInformation_Accuracy();
-
-		/**
-		 * The meta object literal for the '<em><b>Resolution</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INFORMATION__RESOLUTION = eINSTANCE.getInformation_Resolution();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INFORMATION__UNIT = eINSTANCE.getInformation_Unit();
+		EClass PROVIDED_INFORMATION_A = eINSTANCE.getProvidedInformationA();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.InformationFlowImpl <em>Information Flow</em>}' class.
@@ -2514,6 +2632,100 @@ public interface SystemsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INFORMATION_FLOW__TO = eINSTANCE.getInformationFlow_To();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.InformationSignalImpl <em>Information Signal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.systems.impl.InformationSignalImpl
+		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationSignal()
+		 * @generated
+		 */
+		EClass INFORMATION_SIGNAL = eINSTANCE.getInformationSignal();
+
+		/**
+		 * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_SIGNAL__RATE = eINSTANCE.getInformationSignal_Rate();
+
+		/**
+		 * The meta object literal for the '<em><b>Latency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_SIGNAL__LATENCY = eINSTANCE.getInformationSignal_Latency();
+
+		/**
+		 * The meta object literal for the '<em><b>Accuracy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_SIGNAL__ACCURACY = eINSTANCE.getInformationSignal_Accuracy();
+
+		/**
+		 * The meta object literal for the '<em><b>Resolution</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_SIGNAL__RESOLUTION = eINSTANCE.getInformationSignal_Resolution();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_SIGNAL__UNIT = eINSTANCE.getInformationSignal_Unit();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.InformationMaterialImpl <em>Information Material</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.systems.impl.InformationMaterialImpl
+		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationMaterial()
+		 * @generated
+		 */
+		EClass INFORMATION_MATERIAL = eINSTANCE.getInformationMaterial();
+
+		/**
+		 * The meta object literal for the '<em><b>Density</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_MATERIAL__DENSITY = eINSTANCE.getInformationMaterial_Density();
+
+		/**
+		 * The meta object literal for the '<em><b>Velocity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_MATERIAL__VELOCITY = eINSTANCE.getInformationMaterial_Velocity();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.InformationPowerImpl <em>Information Power</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.systems.impl.InformationPowerImpl
+		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getInformationPower()
+		 * @generated
+		 */
+		EClass INFORMATION_POWER = eINSTANCE.getInformationPower();
+
+		/**
+		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INFORMATION_POWER__POWER = eINSTANCE.getInformationPower_Power();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.ElectricPowerImpl <em>Electric Power</em>}' class.
@@ -2556,24 +2768,6 @@ public interface SystemsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ELECTRIC_POWER__CURRENT = eINSTANCE.getElectricPower_Current();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.PowerImpl <em>Power</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.systems.impl.PowerImpl
-		 * @see de.oaam.model.oaam.systems.impl.SystemsPackageImpl#getPower()
-		 * @generated
-		 */
-		EClass POWER = eINSTANCE.getPower();
-
-		/**
-		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POWER__POWER = eINSTANCE.getPower_Power();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.systems.impl.HydraulicPowerImpl <em>Hydraulic Power</em>}' class.

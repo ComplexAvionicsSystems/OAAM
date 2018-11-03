@@ -5,9 +5,13 @@ package de.oaam.model.oaam.restrictions.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+import de.oaam.model.oaam.functions.Subfunctions;
+import de.oaam.model.oaam.functions.TaskGroup;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
+import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskAtomicRestriction;
 
+import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -38,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl#getTaskGroups <em>Task Groups</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.TaskAtomicRestrictionImpl#getStyle <em>Style</em>}</li>
@@ -53,6 +59,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements TaskAtomicRestriction {
+	/**
+	 * The cached value of the '{@link #getTaskGroups() <em>Task Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskGroup> taskGroups;
+
+	/**
+	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubfunctions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Subfunctions> subfunctions;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -240,6 +266,30 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	@Override
 	protected EClass eStaticClass() {
 		return RestrictionsPackage.Literals.TASK_ATOMIC_RESTRICTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TaskGroup> getTaskGroups() {
+		if (taskGroups == null) {
+			taskGroups = new EObjectResolvingEList<TaskGroup>(TaskGroup.class, this, RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS);
+		}
+		return taskGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Subfunctions> getSubfunctions() {
+		if (subfunctions == null) {
+			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS);
+		}
+		return subfunctions;
 	}
 
 	/**
@@ -449,6 +499,10 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS:
+				return getTaskGroups();
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS:
+				return getSubfunctions();
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID:
 				return getId();
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME:
@@ -482,6 +536,14 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
+				getTaskGroups().addAll((Collection<? extends TaskGroup>)newValue);
+				return;
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
+				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
+				return;
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID:
 				setId((String)newValue);
 				return;
@@ -527,6 +589,12 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
+				return;
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS:
+				getSubfunctions().clear();
+				return;
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID:
 				setId(ID_EDEFAULT);
 				return;
@@ -569,6 +637,10 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS:
+				return taskGroups != null && !taskGroups.isEmpty();
+			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS:
+				return subfunctions != null && !subfunctions.isEmpty();
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__NAME:
@@ -600,6 +672,18 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskGroupRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS: return RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS;
+				default: return -1;
+			}
+		}
+		if (baseClass == SubfunctionRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS: return RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS;
+				default: return -1;
+			}
+		}
 		if (baseClass == OaamBaseElementA.class) {
 			switch (derivedFeatureID) {
 				case RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID: return CommonPackage.OAAM_BASE_ELEMENT_A__ID;
@@ -635,6 +719,18 @@ public class TaskAtomicRestrictionImpl extends TaskRestrictionAImpl implements T
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskGroupRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__TASK_GROUPS;
+				default: return -1;
+			}
+		}
+		if (baseClass == SubfunctionRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS;
+				default: return -1;
+			}
+		}
 		if (baseClass == OaamBaseElementA.class) {
 			switch (baseFeatureID) {
 				case CommonPackage.OAAM_BASE_ELEMENT_A__ID: return RestrictionsPackage.TASK_ATOMIC_RESTRICTION__ID;

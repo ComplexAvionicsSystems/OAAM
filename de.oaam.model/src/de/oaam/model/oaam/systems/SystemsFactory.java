@@ -49,15 +49,6 @@ public interface SystemsFactory extends EFactory {
 	System createSystem();
 
 	/**
-	 * Returns a new object of class '<em>Information</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Information</em>'.
-	 * @generated
-	 */
-	Information createInformation();
-
-	/**
 	 * Returns a new object of class '<em>Information Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,6 +58,33 @@ public interface SystemsFactory extends EFactory {
 	InformationFlow createInformationFlow();
 
 	/**
+	 * Returns a new object of class '<em>Information Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Information Signal</em>'.
+	 * @generated
+	 */
+	InformationSignal createInformationSignal();
+
+	/**
+	 * Returns a new object of class '<em>Information Material</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Information Material</em>'.
+	 * @generated
+	 */
+	InformationMaterial createInformationMaterial();
+
+	/**
+	 * Returns a new object of class '<em>Information Power</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Information Power</em>'.
+	 * @generated
+	 */
+	InformationPower createInformationPower();
+
+	/**
 	 * Returns a new object of class '<em>Electric Power</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,15 +92,6 @@ public interface SystemsFactory extends EFactory {
 	 * @generated
 	 */
 	ElectricPower createElectricPower();
-
-	/**
-	 * Returns a new object of class '<em>Power</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Power</em>'.
-	 * @generated
-	 */
-	Power createPower();
 
 	/**
 	 * Returns a new object of class '<em>Hydraulic Power</em>'.

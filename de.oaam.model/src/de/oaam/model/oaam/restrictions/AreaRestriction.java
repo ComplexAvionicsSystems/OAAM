@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface AreaRestriction extends TaskRestrictionA, SignalRestrictionA, SubfunctionRestrictionA, DeviceRestrictionA, ConnectionRestrinctionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
+public interface AreaRestriction extends TaskRestrictionA, TaskGroupRestrictionA, SignalRestrictionA, SignalGroupRestrictionA, SubfunctionRestrictionA, DeviceRestrictionA, ConnectionRestrinctionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Area Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

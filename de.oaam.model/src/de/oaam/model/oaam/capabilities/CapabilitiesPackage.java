@@ -235,13 +235,22 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Subconnection In Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -851,13 +860,22 @@ public interface CapabilitiesPackage extends EPackage {
 	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Worst Case Transmission Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = CAPABILITY_A_FEATURE_COUNT + 13;
+
+	/**
 	 * The number of structural features of the '<em>Signal On Connection Or Device Capability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 13;
+	int SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>Signal On Connection Or Device Capability</em>' class.
@@ -1014,6 +1032,151 @@ public interface CapabilitiesPackage extends EPackage {
 	int SUBDEVICE_IN_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubconnectionInDeviceCapabilityImpl <em>Subconnection In Device Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SubconnectionInDeviceCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubconnectionInDeviceCapability()
+	 * @generated
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY = 7;
+
+	/**
+	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Subconnection Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__SUBCONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Target Device Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Subconnection In Device Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Subconnection In Device Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_IN_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.ResourceConsumptionImpl <em>Resource Consumption</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,7 +1184,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getResourceConsumption()
 	 * @generated
 	 */
-	int RESOURCE_CONSUMPTION = 7;
+	int RESOURCE_CONSUMPTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1148,7 +1311,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
 	 * @generated
 	 */
-	int CAPABILITIES = 8;
+	int CAPABILITIES = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1277,6 +1440,15 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES__SUBCAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCAPABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Subconnection In Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES;
+
+	/**
 	 * The number of structural features of the '<em>Capabilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1302,7 +1474,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
 	 * @generated
 	 */
-	int SUBCAPABILITIES = 9;
+	int SUBCAPABILITIES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1429,6 +1601,15 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBCAPABILITIES__SUBCAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Subconnection In Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCAPABILITIES__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1562,6 +1743,17 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCapabilitiesContainerA_Subcapabilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubconnectionInDeviceCapabilities <em>Subconnection In Device Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subconnection In Device Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubconnectionInDeviceCapabilities()
+	 * @see #getCapabilitiesContainerA()
+	 * @generated
+	 */
+	EReference getCapabilitiesContainerA_SubconnectionInDeviceCapabilities();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability <em>Task On Device Capability</em>}'.
@@ -1736,6 +1928,17 @@ public interface CapabilitiesPackage extends EPackage {
 	EReference getSignalOnConnectionOrDeviceCapability_ConnectionType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Worst Case Transmission Time</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime()
+	 * @see #getSignalOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EAttribute getSignalOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability <em>Subdevice In Device Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1766,6 +1969,38 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSubdeviceInDeviceCapability_TargetDeviceType();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability <em>Subconnection In Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Subconnection In Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability
+	 * @generated
+	 */
+	EClass getSubconnectionInDeviceCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability#getSubconnectionType <em>Subconnection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Subconnection Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability#getSubconnectionType()
+	 * @see #getSubconnectionInDeviceCapability()
+	 * @generated
+	 */
+	EReference getSubconnectionInDeviceCapability_SubconnectionType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability#getTargetDeviceType <em>Target Device Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Device Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability#getTargetDeviceType()
+	 * @see #getSubconnectionInDeviceCapability()
+	 * @generated
+	 */
+	EReference getSubconnectionInDeviceCapability_TargetDeviceType();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.ResourceConsumption <em>Resource Consumption</em>}'.
@@ -1930,6 +2165,14 @@ public interface CapabilitiesPackage extends EPackage {
 		EReference CAPABILITIES_CONTAINER_A__SUBCAPABILITIES = eINSTANCE.getCapabilitiesContainerA_Subcapabilities();
 
 		/**
+		 * The meta object literal for the '<em><b>Subconnection In Device Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SubconnectionInDeviceCapabilities();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl <em>Task On Device Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2066,6 +2309,14 @@ public interface CapabilitiesPackage extends EPackage {
 		EReference SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getSignalOnConnectionOrDeviceCapability_ConnectionType();
 
 		/**
+		 * The meta object literal for the '<em><b>Worst Case Transmission Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = eINSTANCE.getSignalOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubdeviceInDeviceCapabilityImpl <em>Subdevice In Device Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2090,6 +2341,32 @@ public interface CapabilitiesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SUBDEVICE_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = eINSTANCE.getSubdeviceInDeviceCapability_TargetDeviceType();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubconnectionInDeviceCapabilityImpl <em>Subconnection In Device Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.SubconnectionInDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubconnectionInDeviceCapability()
+		 * @generated
+		 */
+		EClass SUBCONNECTION_IN_DEVICE_CAPABILITY = eINSTANCE.getSubconnectionInDeviceCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Subconnection Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBCONNECTION_IN_DEVICE_CAPABILITY__SUBCONNECTION_TYPE = eINSTANCE.getSubconnectionInDeviceCapability_SubconnectionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Device Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBCONNECTION_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE = eINSTANCE.getSubconnectionInDeviceCapability_TargetDeviceType();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.ResourceConsumptionImpl <em>Resource Consumption</em>}' class.

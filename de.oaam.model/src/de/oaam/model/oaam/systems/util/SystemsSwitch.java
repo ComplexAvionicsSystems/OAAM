@@ -7,13 +7,14 @@ import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.ElectricPower;
 import de.oaam.model.oaam.systems.HydraulicPower;
-import de.oaam.model.oaam.systems.Information;
 import de.oaam.model.oaam.systems.InformationFlow;
+import de.oaam.model.oaam.systems.InformationMaterial;
+import de.oaam.model.oaam.systems.InformationPower;
+import de.oaam.model.oaam.systems.InformationSignal;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.LinearPower;
-import de.oaam.model.oaam.systems.Power;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.ProvidedInformationA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.RotaryPower;
 import de.oaam.model.oaam.systems.Subsystem;
 import de.oaam.model.oaam.systems.Systems;
@@ -116,26 +117,15 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemsPackage.REQUIRED_INPUT_A: {
-				RequiredInputA requiredInputA = (RequiredInputA)theEObject;
-				T result = caseRequiredInputA(requiredInputA);
+			case SystemsPackage.REQUIRED_INFORMATION_A: {
+				RequiredInformationA requiredInformationA = (RequiredInformationA)theEObject;
+				T result = caseRequiredInformationA(requiredInformationA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemsPackage.PROVIDED_OUTPUT_A: {
-				ProvidedOutputA providedOutputA = (ProvidedOutputA)theEObject;
-				T result = caseProvidedOutputA(providedOutputA);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SystemsPackage.INFORMATION: {
-				Information information = (Information)theEObject;
-				T result = caseInformation(information);
-				if (result == null) result = caseProvidedOutputA(information);
-				if (result == null) result = caseRequiredInputA(information);
-				if (result == null) result = caseOaamBaseElementA(information);
-				if (result == null) result = caseModeDependentElementA(information);
-				if (result == null) result = caseVariantDependentElementA(information);
+			case SystemsPackage.PROVIDED_INFORMATION_A: {
+				ProvidedInformationA providedInformationA = (ProvidedInformationA)theEObject;
+				T result = caseProvidedInformationA(providedInformationA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -148,35 +138,57 @@ public class SystemsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SystemsPackage.INFORMATION_SIGNAL: {
+				InformationSignal informationSignal = (InformationSignal)theEObject;
+				T result = caseInformationSignal(informationSignal);
+				if (result == null) result = caseProvidedInformationA(informationSignal);
+				if (result == null) result = caseRequiredInformationA(informationSignal);
+				if (result == null) result = caseOaamBaseElementA(informationSignal);
+				if (result == null) result = caseModeDependentElementA(informationSignal);
+				if (result == null) result = caseVariantDependentElementA(informationSignal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SystemsPackage.INFORMATION_MATERIAL: {
+				InformationMaterial informationMaterial = (InformationMaterial)theEObject;
+				T result = caseInformationMaterial(informationMaterial);
+				if (result == null) result = caseProvidedInformationA(informationMaterial);
+				if (result == null) result = caseRequiredInformationA(informationMaterial);
+				if (result == null) result = caseOaamBaseElementA(informationMaterial);
+				if (result == null) result = caseModeDependentElementA(informationMaterial);
+				if (result == null) result = caseVariantDependentElementA(informationMaterial);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SystemsPackage.INFORMATION_POWER: {
+				InformationPower informationPower = (InformationPower)theEObject;
+				T result = caseInformationPower(informationPower);
+				if (result == null) result = caseProvidedInformationA(informationPower);
+				if (result == null) result = caseRequiredInformationA(informationPower);
+				if (result == null) result = caseOaamBaseElementA(informationPower);
+				if (result == null) result = caseVariantDependentElementA(informationPower);
+				if (result == null) result = caseModeDependentElementA(informationPower);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SystemsPackage.ELECTRIC_POWER: {
 				ElectricPower electricPower = (ElectricPower)theEObject;
 				T result = caseElectricPower(electricPower);
-				if (result == null) result = casePower(electricPower);
-				if (result == null) result = caseProvidedOutputA(electricPower);
-				if (result == null) result = caseRequiredInputA(electricPower);
+				if (result == null) result = caseInformationPower(electricPower);
+				if (result == null) result = caseProvidedInformationA(electricPower);
+				if (result == null) result = caseRequiredInformationA(electricPower);
 				if (result == null) result = caseOaamBaseElementA(electricPower);
 				if (result == null) result = caseVariantDependentElementA(electricPower);
 				if (result == null) result = caseModeDependentElementA(electricPower);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SystemsPackage.POWER: {
-				Power power = (Power)theEObject;
-				T result = casePower(power);
-				if (result == null) result = caseProvidedOutputA(power);
-				if (result == null) result = caseRequiredInputA(power);
-				if (result == null) result = caseOaamBaseElementA(power);
-				if (result == null) result = caseVariantDependentElementA(power);
-				if (result == null) result = caseModeDependentElementA(power);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SystemsPackage.HYDRAULIC_POWER: {
 				HydraulicPower hydraulicPower = (HydraulicPower)theEObject;
 				T result = caseHydraulicPower(hydraulicPower);
-				if (result == null) result = casePower(hydraulicPower);
-				if (result == null) result = caseProvidedOutputA(hydraulicPower);
-				if (result == null) result = caseRequiredInputA(hydraulicPower);
+				if (result == null) result = caseInformationPower(hydraulicPower);
+				if (result == null) result = caseProvidedInformationA(hydraulicPower);
+				if (result == null) result = caseRequiredInformationA(hydraulicPower);
 				if (result == null) result = caseOaamBaseElementA(hydraulicPower);
 				if (result == null) result = caseVariantDependentElementA(hydraulicPower);
 				if (result == null) result = caseModeDependentElementA(hydraulicPower);
@@ -186,9 +198,9 @@ public class SystemsSwitch<T> extends Switch<T> {
 			case SystemsPackage.ROTARY_POWER: {
 				RotaryPower rotaryPower = (RotaryPower)theEObject;
 				T result = caseRotaryPower(rotaryPower);
-				if (result == null) result = casePower(rotaryPower);
-				if (result == null) result = caseProvidedOutputA(rotaryPower);
-				if (result == null) result = caseRequiredInputA(rotaryPower);
+				if (result == null) result = caseInformationPower(rotaryPower);
+				if (result == null) result = caseProvidedInformationA(rotaryPower);
+				if (result == null) result = caseRequiredInformationA(rotaryPower);
 				if (result == null) result = caseOaamBaseElementA(rotaryPower);
 				if (result == null) result = caseVariantDependentElementA(rotaryPower);
 				if (result == null) result = caseModeDependentElementA(rotaryPower);
@@ -198,9 +210,9 @@ public class SystemsSwitch<T> extends Switch<T> {
 			case SystemsPackage.LINEAR_POWER: {
 				LinearPower linearPower = (LinearPower)theEObject;
 				T result = caseLinearPower(linearPower);
-				if (result == null) result = casePower(linearPower);
-				if (result == null) result = caseProvidedOutputA(linearPower);
-				if (result == null) result = caseRequiredInputA(linearPower);
+				if (result == null) result = caseInformationPower(linearPower);
+				if (result == null) result = caseProvidedInformationA(linearPower);
+				if (result == null) result = caseRequiredInformationA(linearPower);
 				if (result == null) result = caseOaamBaseElementA(linearPower);
 				if (result == null) result = caseVariantDependentElementA(linearPower);
 				if (result == null) result = caseModeDependentElementA(linearPower);
@@ -279,47 +291,32 @@ public class SystemsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Required Input A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Required Information A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Required Input A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Required Information A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRequiredInputA(RequiredInputA object) {
+	public T caseRequiredInformationA(RequiredInformationA object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Provided Output A</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Provided Information A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Provided Output A</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Provided Information A</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProvidedOutputA(ProvidedOutputA object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Information</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Information</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInformation(Information object) {
+	public T caseProvidedInformationA(ProvidedInformationA object) {
 		return null;
 	}
 
@@ -339,6 +336,51 @@ public class SystemsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Information Signal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Information Signal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInformationSignal(InformationSignal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Information Material</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Information Material</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInformationMaterial(InformationMaterial object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Information Power</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Information Power</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInformationPower(InformationPower object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Electric Power</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -350,21 +392,6 @@ public class SystemsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElectricPower(ElectricPower object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Power</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Power</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePower(Power object) {
 		return null;
 	}
 

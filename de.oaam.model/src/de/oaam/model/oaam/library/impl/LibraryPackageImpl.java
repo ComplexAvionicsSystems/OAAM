@@ -38,10 +38,7 @@ import de.oaam.model.oaam.library.DeviceTypeSymmetry;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 import de.oaam.model.oaam.library.DuctType;
 import de.oaam.model.oaam.library.FaultPropagation;
-import de.oaam.model.oaam.library.FunctionInputState;
-import de.oaam.model.oaam.library.FunctionInputTrigger;
 import de.oaam.model.oaam.library.InputDeclaration;
-import de.oaam.model.oaam.library.InternalStateDeclaration;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoDirectionE;
 import de.oaam.model.oaam.library.IoGroup;
@@ -51,8 +48,6 @@ import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
 import de.oaam.model.oaam.library.OutputDeclaration;
-import de.oaam.model.oaam.library.OutputTrigger;
-import de.oaam.model.oaam.library.ParameterDeclaration;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceAlternatives;
@@ -69,6 +64,11 @@ import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
 import de.oaam.model.oaam.library.ResourceTypeModifierReference;
 import de.oaam.model.oaam.library.SignalType;
 import de.oaam.model.oaam.library.Sublibrary;
+import de.oaam.model.oaam.library.TaskInputState;
+import de.oaam.model.oaam.library.TaskInputTrigger;
+import de.oaam.model.oaam.library.TaskOutputTrigger;
+import de.oaam.model.oaam.library.TaskParameterDeclaration;
+import de.oaam.model.oaam.library.TaskStateDeclaration;
 import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
@@ -272,7 +272,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass functionInputStateEClass = null;
+	private EClass taskInputStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,28 +349,28 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass outputTriggerEClass = null;
+	private EClass taskOutputTriggerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass functionInputTriggerEClass = null;
+	private EClass taskInputTriggerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass internalStateDeclarationEClass = null;
+	private EClass taskStateDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterDeclarationEClass = null;
+	private EClass taskParameterDeclarationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -995,7 +995,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskType_InternalStateDeclarations() {
+	public EReference getTaskType_StateDeclarations() {
 		return (EReference)taskTypeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1643,8 +1643,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFunctionInputState() {
-		return functionInputStateEClass;
+	public EClass getTaskInputState() {
+		return taskInputStateEClass;
 	}
 
 	/**
@@ -1652,8 +1652,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionInputState_State() {
-		return (EAttribute)functionInputStateEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTaskInputState_State() {
+		return (EAttribute)taskInputStateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1661,8 +1661,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionInputState_Input() {
-		return (EReference)functionInputStateEClass.getEStructuralFeatures().get(1);
+	public EReference getTaskInputState_Input() {
+		return (EReference)taskInputStateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1868,8 +1868,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOutputTrigger() {
-		return outputTriggerEClass;
+	public EClass getTaskOutputTrigger() {
+		return taskOutputTriggerEClass;
 	}
 
 	/**
@@ -1877,8 +1877,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOutputTrigger_Logic() {
-		return (EReference)outputTriggerEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskOutputTrigger_Logic() {
+		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1886,8 +1886,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOutputTrigger_FixedRate() {
-		return (EAttribute)outputTriggerEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTaskOutputTrigger_FixedRate() {
+		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1895,8 +1895,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOutputTrigger_IsFixedRate() {
-		return (EAttribute)outputTriggerEClass.getEStructuralFeatures().get(2);
+	public EAttribute getTaskOutputTrigger_IsFixedRate() {
+		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1904,8 +1904,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFunctionInputTrigger() {
-		return functionInputTriggerEClass;
+	public EClass getTaskInputTrigger() {
+		return taskInputTriggerEClass;
 	}
 
 	/**
@@ -1913,8 +1913,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionInputTrigger_Input() {
-		return (EReference)functionInputTriggerEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskInputTrigger_Input() {
+		return (EReference)taskInputTriggerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1922,8 +1922,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInternalStateDeclaration() {
-		return internalStateDeclarationEClass;
+	public EClass getTaskStateDeclaration() {
+		return taskStateDeclarationEClass;
 	}
 
 	/**
@@ -1931,8 +1931,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInternalStateDeclaration_Type() {
-		return (EReference)internalStateDeclarationEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskStateDeclaration_Type() {
+		return (EReference)taskStateDeclarationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1940,8 +1940,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterDeclaration() {
-		return parameterDeclarationEClass;
+	public EClass getTaskParameterDeclaration() {
+		return taskParameterDeclarationEClass;
 	}
 
 	/**
@@ -1949,8 +1949,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterDeclaration_Type() {
-		return (EReference)parameterDeclarationEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskParameterDeclaration_Type() {
+		return (EReference)taskParameterDeclarationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2072,7 +2072,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(taskTypeEClass, TASK_TYPE__INPUT_DECLARATIONS);
 		createEAttribute(taskTypeEClass, TASK_TYPE__IS_DETERMINISTIC);
 		createEAttribute(taskTypeEClass, TASK_TYPE__PREFERRED_EXECUTION_RATE);
-		createEReference(taskTypeEClass, TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
+		createEReference(taskTypeEClass, TASK_TYPE__STATE_DECLARATIONS);
 		createEReference(taskTypeEClass, TASK_TYPE__PARAMETER_DECLARATIONS);
 
 		signalTypeEClass = createEClass(SIGNAL_TYPE);
@@ -2160,9 +2160,9 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(faultPropagationEClass, FAULT_PROPAGATION__OUTPUT_STATE);
 		createEReference(faultPropagationEClass, FAULT_PROPAGATION__LOGIC);
 
-		functionInputStateEClass = createEClass(FUNCTION_INPUT_STATE);
-		createEAttribute(functionInputStateEClass, FUNCTION_INPUT_STATE__STATE);
-		createEReference(functionInputStateEClass, FUNCTION_INPUT_STATE__INPUT);
+		taskInputStateEClass = createEClass(TASK_INPUT_STATE);
+		createEAttribute(taskInputStateEClass, TASK_INPUT_STATE__STATE);
+		createEReference(taskInputStateEClass, TASK_INPUT_STATE__INPUT);
 
 		powerSourceEClass = createEClass(POWER_SOURCE);
 
@@ -2192,23 +2192,23 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		resourceTypeDissimilarityEClass = createEClass(RESOURCE_TYPE_DISSIMILARITY);
 		createEReference(resourceTypeDissimilarityEClass, RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES);
 
-		libraryEClass = createEClass(LIBRARY);
-
 		sublibraryEClass = createEClass(SUBLIBRARY);
 
-		outputTriggerEClass = createEClass(OUTPUT_TRIGGER);
-		createEReference(outputTriggerEClass, OUTPUT_TRIGGER__LOGIC);
-		createEAttribute(outputTriggerEClass, OUTPUT_TRIGGER__FIXED_RATE);
-		createEAttribute(outputTriggerEClass, OUTPUT_TRIGGER__IS_FIXED_RATE);
+		taskOutputTriggerEClass = createEClass(TASK_OUTPUT_TRIGGER);
+		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__LOGIC);
+		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__FIXED_RATE);
+		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__IS_FIXED_RATE);
 
-		functionInputTriggerEClass = createEClass(FUNCTION_INPUT_TRIGGER);
-		createEReference(functionInputTriggerEClass, FUNCTION_INPUT_TRIGGER__INPUT);
+		taskInputTriggerEClass = createEClass(TASK_INPUT_TRIGGER);
+		createEReference(taskInputTriggerEClass, TASK_INPUT_TRIGGER__INPUT);
 
-		internalStateDeclarationEClass = createEClass(INTERNAL_STATE_DECLARATION);
-		createEReference(internalStateDeclarationEClass, INTERNAL_STATE_DECLARATION__TYPE);
+		taskStateDeclarationEClass = createEClass(TASK_STATE_DECLARATION);
+		createEReference(taskStateDeclarationEClass, TASK_STATE_DECLARATION__TYPE);
 
-		parameterDeclarationEClass = createEClass(PARAMETER_DECLARATION);
-		createEReference(parameterDeclarationEClass, PARAMETER_DECLARATION__TYPE);
+		taskParameterDeclarationEClass = createEClass(TASK_PARAMETER_DECLARATION);
+		createEReference(taskParameterDeclarationEClass, TASK_PARAMETER_DECLARATION__TYPE);
+
+		libraryEClass = createEClass(LIBRARY);
 
 		// Create enums
 		ioDirectionEEEnum = createEEnum(IO_DIRECTION_E);
@@ -2278,8 +2278,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		ioGroupEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		attributeDefinitionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		faultPropagationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
-		functionInputStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskInputStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
+		taskInputStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		powerSourceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceLinkEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceTypeModifierEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
@@ -2289,13 +2289,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		taskTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		libraryEClass.getESuperTypes().add(this.getLibraryContainerA());
 		sublibraryEClass.getESuperTypes().add(this.getLibraryContainerA());
-		outputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		functionInputTriggerEClass.getESuperTypes().add(theCommonPackage.getBoolA());
-		functionInputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		internalStateDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		parameterDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskOutputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskInputTriggerEClass.getESuperTypes().add(theCommonPackage.getBoolA());
+		taskInputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskStateDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskParameterDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		libraryEClass.getESuperTypes().add(this.getLibraryContainerA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(resourceConsumerAEClass, ResourceConsumerA.class, "ResourceConsumerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2362,8 +2362,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getTaskType_InputDeclarations(), this.getInputDeclaration(), null, "inputDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskType_IsDeterministic(), ecorePackage.getEBoolean(), "isDeterministic", null, 1, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskType_PreferredExecutionRate(), ecorePackage.getEFloat(), "preferredExecutionRate", "0.0", 1, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskType_InternalStateDeclarations(), this.getInternalStateDeclaration(), null, "internalStateDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskType_ParameterDeclarations(), this.getParameterDeclaration(), null, "parameterDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_StateDeclarations(), this.getTaskStateDeclaration(), null, "stateDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_ParameterDeclarations(), this.getTaskParameterDeclaration(), null, "parameterDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalTypeEClass, SignalType.class, "SignalType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2421,7 +2421,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(outputDeclarationEClass, OutputDeclaration.class, "OutputDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutputDeclaration_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutputDeclaration_Postcondition(), ecorePackage.getEString(), "postcondition", null, 0, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutputDeclaration_Trigger(), this.getOutputTrigger(), null, "trigger", null, 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputDeclaration_Trigger(), this.getTaskOutputTrigger(), null, "trigger", null, 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutputDeclaration_Range(), ecorePackage.getEString(), "range", null, 0, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutputDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutputDeclaration_LowerBound(), ecorePackage.getEInt(), "lowerBound", "1", 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2450,9 +2450,9 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getFaultPropagation_OutputState(), theCommonPackage.getIntegretyStateE(), "outputState", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFaultPropagation_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(functionInputStateEClass, FunctionInputState.class, "FunctionInputState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFunctionInputState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, FunctionInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionInputState_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, FunctionInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskInputStateEClass, TaskInputState.class, "TaskInputState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTaskInputState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskInputState_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(powerSourceEClass, PowerSource.class, "PowerSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2482,23 +2482,23 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(resourceTypeDissimilarityEClass, ResourceTypeDissimilarity.class, "ResourceTypeDissimilarity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceTypeDissimilarity_ResourceTypes(), this.getResourceType(), null, "resourceTypes", null, 0, -1, ResourceTypeDissimilarity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(libraryEClass, Library.class, "Library", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(sublibraryEClass, Sublibrary.class, "Sublibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(outputTriggerEClass, OutputTrigger.class, "OutputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutputTrigger_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 0, 1, OutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOutputTrigger_FixedRate(), ecorePackage.getEFloat(), "fixedRate", null, 1, 1, OutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getOutputTrigger_IsFixedRate(), ecorePackage.getEBoolean(), "isFixedRate", "false", 1, 1, OutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskOutputTriggerEClass, TaskOutputTrigger.class, "TaskOutputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskOutputTrigger_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 0, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskOutputTrigger_FixedRate(), ecorePackage.getEFloat(), "fixedRate", null, 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskOutputTrigger_IsFixedRate(), ecorePackage.getEBoolean(), "isFixedRate", "false", 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(functionInputTriggerEClass, FunctionInputTrigger.class, "FunctionInputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFunctionInputTrigger_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, FunctionInputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskInputTriggerEClass, TaskInputTrigger.class, "TaskInputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskInputTrigger_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, TaskInputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(internalStateDeclarationEClass, InternalStateDeclaration.class, "InternalStateDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInternalStateDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, InternalStateDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskStateDeclarationEClass, TaskStateDeclaration.class, "TaskStateDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskStateDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, TaskStateDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parameterDeclarationEClass, ParameterDeclaration.class, "ParameterDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getParameterDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, ParameterDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskParameterDeclarationEClass, TaskParameterDeclaration.class, "TaskParameterDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskParameterDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, TaskParameterDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(libraryEClass, Library.class, "Library", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(ioDirectionEEEnum, IoDirectionE.class, "IoDirectionE");
@@ -2515,8 +2515,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEEnum(attributeTargetsEEEnum, AttributeTargetsE.class, "AttributeTargetsE");
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.DEVICE_TYPE);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.DEVICE);
-		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.FUNCTION_TYPE);
-		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.FUNCTION);
+		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.TASK_TYPE);
+		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.TASK);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.WIRE_TYPE);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.RESOURCE_TYPE);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.RESOURCE);
@@ -2533,7 +2533,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.RESOURCE_GROUP);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.AREA);
 		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.VARIANT);
-		addEEnumLiteral(attributeTargetsEEEnum, AttributeTargetsE.TIMEFRAME);
 	}
 
 } //LibraryPackageImpl

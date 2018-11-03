@@ -38,13 +38,13 @@ import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.OperationModeReference;
-import de.oaam.model.oaam.scenario.ParameterA;
-import de.oaam.model.oaam.scenario.ParameterBool;
-import de.oaam.model.oaam.scenario.ParameterNumeric;
 import de.oaam.model.oaam.scenario.Scenario;
 import de.oaam.model.oaam.scenario.ScenarioContainerA;
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+import de.oaam.model.oaam.scenario.ScenarioParameterA;
+import de.oaam.model.oaam.scenario.ScenarioParameterBool;
+import de.oaam.model.oaam.scenario.ScenarioParameterNumeric;
 import de.oaam.model.oaam.scenario.Subscenario;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
@@ -71,7 +71,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterAEClass = null;
+	private EClass scenarioParameterAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,14 +106,14 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterNumericEClass = null;
+	private EClass scenarioParameterNumericEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterBoolEClass = null;
+	private EClass scenarioParameterBoolEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,8 +241,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterA() {
-		return parameterAEClass;
+	public EClass getScenarioParameterA() {
+		return scenarioParameterAEClass;
 	}
 
 	/**
@@ -340,8 +340,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterNumeric() {
-		return parameterNumericEClass;
+	public EClass getScenarioParameterNumeric() {
+		return scenarioParameterNumericEClass;
 	}
 
 	/**
@@ -349,8 +349,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getParameterNumeric_Value() {
-		return (EAttribute)parameterNumericEClass.getEStructuralFeatures().get(0);
+	public EAttribute getScenarioParameterNumeric_Value() {
+		return (EAttribute)scenarioParameterNumericEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -358,8 +358,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameterBool() {
-		return parameterBoolEClass;
+	public EClass getScenarioParameterBool() {
+		return scenarioParameterBoolEClass;
 	}
 
 	/**
@@ -367,8 +367,8 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getParameterBool_Value() {
-		return (EAttribute)parameterBoolEClass.getEStructuralFeatures().get(0);
+	public EAttribute getScenarioParameterBool_Value() {
+		return (EAttribute)scenarioParameterBoolEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -453,7 +453,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		isCreated = true;
 
 		// Create classes and their features
-		parameterAEClass = createEClass(PARAMETER_A);
+		scenarioParameterAEClass = createEClass(SCENARIO_PARAMETER_A);
 
 		modeDependentElementAEClass = createEClass(MODE_DEPENDENT_ELEMENT_A);
 		createEReference(modeDependentElementAEClass, MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
@@ -469,11 +469,11 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 
 		operationModeEClass = createEClass(OPERATION_MODE);
 
-		parameterNumericEClass = createEClass(PARAMETER_NUMERIC);
-		createEAttribute(parameterNumericEClass, PARAMETER_NUMERIC__VALUE);
+		scenarioParameterNumericEClass = createEClass(SCENARIO_PARAMETER_NUMERIC);
+		createEAttribute(scenarioParameterNumericEClass, SCENARIO_PARAMETER_NUMERIC__VALUE);
 
-		parameterBoolEClass = createEClass(PARAMETER_BOOL);
-		createEAttribute(parameterBoolEClass, PARAMETER_BOOL__VALUE);
+		scenarioParameterBoolEClass = createEClass(SCENARIO_PARAMETER_BOOL);
+		createEAttribute(scenarioParameterBoolEClass, SCENARIO_PARAMETER_BOOL__VALUE);
 
 		variantEClass = createEClass(VARIANT);
 
@@ -517,15 +517,15 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		parameterAEClass.getESuperTypes().add(this.getModeDependentElementA());
-		parameterAEClass.getESuperTypes().add(this.getVariantDependentElementA());
+		scenarioParameterAEClass.getESuperTypes().add(this.getModeDependentElementA());
+		scenarioParameterAEClass.getESuperTypes().add(this.getVariantDependentElementA());
 		scenarioContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		operationModeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		operationModeEClass.getESuperTypes().add(this.getVariantDependentElementA());
-		parameterNumericEClass.getESuperTypes().add(this.getParameterA());
-		parameterNumericEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		parameterBoolEClass.getESuperTypes().add(this.getParameterA());
-		parameterBoolEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		scenarioParameterNumericEClass.getESuperTypes().add(this.getScenarioParameterA());
+		scenarioParameterNumericEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		scenarioParameterBoolEClass.getESuperTypes().add(this.getScenarioParameterA());
+		scenarioParameterBoolEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		variantEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		variantEClass.getESuperTypes().add(this.getModeDependentElementA());
 		operationModeReferenceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
@@ -533,7 +533,7 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		subscenarioEClass.getESuperTypes().add(this.getScenarioContainerA());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(parameterAEClass, ParameterA.class, "ParameterA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(scenarioParameterAEClass, ScenarioParameterA.class, "ScenarioParameterA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modeDependentElementAEClass, ModeDependentElementA.class, "ModeDependentElementA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModeDependentElementA_OperationModes(), this.getOperationModeReference(), null, "operationModes", null, 0, -1, ModeDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -542,18 +542,18 @@ public class ScenarioPackageImpl extends EPackageImpl implements ScenarioPackage
 		initEReference(getVariantDependentElementA_Variants(), this.getVariant(), null, "variants", null, 0, -1, VariantDependentElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scenarioContainerAEClass, ScenarioContainerA.class, "ScenarioContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScenarioContainerA_Parameters(), this.getParameterA(), null, "parameters", null, 0, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScenarioContainerA_Parameters(), this.getScenarioParameterA(), null, "parameters", null, 0, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenarioContainerA_Variants(), this.getVariant(), null, "variants", null, 0, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenarioContainerA_OperationModes(), this.getOperationMode(), null, "operationModes", null, 1, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScenarioContainerA_Subscenarios(), this.getSubscenario(), null, "subscenarios", null, 0, -1, ScenarioContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationModeEClass, OperationMode.class, "OperationMode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(parameterNumericEClass, ParameterNumeric.class, "ParameterNumeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameterNumeric_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, ParameterNumeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(scenarioParameterNumericEClass, ScenarioParameterNumeric.class, "ScenarioParameterNumeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getScenarioParameterNumeric_Value(), ecorePackage.getEDouble(), "value", null, 1, 1, ScenarioParameterNumeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parameterBoolEClass, ParameterBool.class, "ParameterBool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParameterBool_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, ParameterBool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(scenarioParameterBoolEClass, ScenarioParameterBool.class, "ScenarioParameterBool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getScenarioParameterBool_Value(), ecorePackage.getEBoolean(), "value", null, 1, 1, ScenarioParameterBool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variantEClass, Variant.class, "Variant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

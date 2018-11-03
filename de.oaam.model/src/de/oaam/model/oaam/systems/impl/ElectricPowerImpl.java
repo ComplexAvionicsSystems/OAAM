@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ElectricPowerImpl extends PowerImpl implements ElectricPower {
+public class ElectricPowerImpl extends InformationPowerImpl implements ElectricPower {
 	/**
 	 * The default value of the '{@link #getFrequency() <em>Frequency</em>}' attribute.
 	 * <!-- begin-user-doc -->

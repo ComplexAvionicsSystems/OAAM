@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
 public interface System extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Provided Outputs</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.systems.ProvidedOutputA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.systems.ProvidedInformationA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -42,11 +42,11 @@ public interface System extends OaamBaseElementA, VariantDependentElementA, Mode
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ProvidedOutputA> getProvidedOutputs();
+	EList<ProvidedInformationA> getProvidedOutputs();
 
 	/**
 	 * Returns the value of the '<em><b>Required Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInputA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInformationA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -57,6 +57,6 @@ public interface System extends OaamBaseElementA, VariantDependentElementA, Mode
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RequiredInputA> getRequiredInputs();
+	EList<RequiredInformationA> getRequiredInputs();
 
 } // System

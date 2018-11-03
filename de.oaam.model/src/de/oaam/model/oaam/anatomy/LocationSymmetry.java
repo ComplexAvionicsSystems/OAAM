@@ -34,7 +34,7 @@ public interface LocationSymmetry extends OaamBaseElementA, ModeDependentElement
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * All location that are assumed to be symmetric.
+	 * All locations that are assumed to be symmetric.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Locations</em>' reference list.
 	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getLocationSymmetry_Locations()

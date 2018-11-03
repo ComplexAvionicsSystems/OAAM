@@ -59,6 +59,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Set the Boolean operation to AND.
+	 * <!-- end-model-doc -->
 	 * @see #AND
 	 * @model
 	 * @generated
@@ -74,6 +77,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Sets the Boolean operation to OR.
+	 * <!-- end-model-doc -->
 	 * @see #OR
 	 * @model
 	 * @generated
@@ -89,6 +95,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Sets the Boolean opartion to XOR.
+	 * <!-- end-model-doc -->
 	 * @see #XOR
 	 * @model
 	 * @generated

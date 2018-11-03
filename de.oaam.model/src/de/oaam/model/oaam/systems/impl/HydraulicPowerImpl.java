@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class HydraulicPowerImpl extends PowerImpl implements HydraulicPower {
+public class HydraulicPowerImpl extends InformationPowerImpl implements HydraulicPower {
 	/**
 	 * The default value of the '{@link #getPressure() <em>Pressure</em>}' attribute.
 	 * <!-- begin-user-doc -->

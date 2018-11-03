@@ -8,6 +8,7 @@ import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
 import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
 import de.oaam.model.oaam.capabilities.Subcapabilities;
+import de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability;
 import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
 import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubdeviceInDeviceCapabilities <em>Subdevice In Device Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubcapabilities <em>Subcapabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesContainerAImpl#getSubconnectionInDeviceCapabilities <em>Subconnection In Device Capabilities</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +103,16 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 	 * @ordered
 	 */
 	protected EList<Subcapabilities> subcapabilities;
+
+	/**
+	 * The cached value of the '{@link #getSubconnectionInDeviceCapabilities() <em>Subconnection In Device Capabilities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubconnectionInDeviceCapabilities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubconnectionInDeviceCapability> subconnectionInDeviceCapabilities;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,6 +210,18 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SubconnectionInDeviceCapability> getSubconnectionInDeviceCapabilities() {
+		if (subconnectionInDeviceCapabilities == null) {
+			subconnectionInDeviceCapabilities = new EObjectContainmentEList<SubconnectionInDeviceCapability>(SubconnectionInDeviceCapability.class, this, CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES);
+		}
+		return subconnectionInDeviceCapabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -213,6 +237,8 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 				return ((InternalEList<?>)getConnectionInDuctOrLocationCapabilities()).basicRemove(otherEnd, msgs);
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return ((InternalEList<?>)getSubcapabilities()).basicRemove(otherEnd, msgs);
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+				return ((InternalEList<?>)getSubconnectionInDeviceCapabilities()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -237,6 +263,8 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 				return getConnectionInDuctOrLocationCapabilities();
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return getSubcapabilities();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+				return getSubconnectionInDeviceCapabilities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -274,6 +302,10 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 				getSubcapabilities().clear();
 				getSubcapabilities().addAll((Collection<? extends Subcapabilities>)newValue);
 				return;
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+				getSubconnectionInDeviceCapabilities().clear();
+				getSubconnectionInDeviceCapabilities().addAll((Collection<? extends SubconnectionInDeviceCapability>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -304,6 +336,9 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				getSubcapabilities().clear();
 				return;
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+				getSubconnectionInDeviceCapabilities().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -328,6 +363,8 @@ public abstract class CapabilitiesContainerAImpl extends OaamBaseElementAImpl im
 				return connectionInDuctOrLocationCapabilities != null && !connectionInDuctOrLocationCapabilities.isEmpty();
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 				return subcapabilities != null && !subcapabilities.isEmpty();
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+				return subconnectionInDeviceCapabilities != null && !subconnectionInDeviceCapabilities.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

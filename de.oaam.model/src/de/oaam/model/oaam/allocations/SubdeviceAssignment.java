@@ -62,7 +62,7 @@ public interface SubdeviceAssignment extends OaamBaseElementA, VariantDependentE
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * A reference to the sub device.
+	 * A reference to the subdevice.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Subdevice</em>' reference.
 	 * @see #setSubdevice(Device)

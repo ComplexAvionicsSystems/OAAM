@@ -103,6 +103,10 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 				return createSubdeviceAssignmentAdapter();
 			}
 			@Override
+			public Adapter caseSubconnectionAssignment(SubconnectionAssignment object) {
+				return createSubconnectionAssignmentAdapter();
+			}
+			@Override
 			public Adapter caseAllocations(Allocations object) {
 				return createAllocationsAdapter();
 			}
@@ -259,6 +263,20 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubdeviceAssignmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.SubconnectionAssignment <em>Subconnection Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.SubconnectionAssignment
+	 * @generated
+	 */
+	public Adapter createSubconnectionAssignmentAdapter() {
 		return null;
 	}
 

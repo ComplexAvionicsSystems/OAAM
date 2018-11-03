@@ -92,12 +92,12 @@ public interface OutputDeclaration extends OaamBaseElementA {
 	 * The trigger condition which causes the output to be calculated. This can be a Boolean logic of available inputs, or a fixed rate.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trigger</em>' containment reference.
-	 * @see #setTrigger(OutputTrigger)
+	 * @see #setTrigger(TaskOutputTrigger)
 	 * @see de.oaam.model.oaam.library.LibraryPackage#getOutputDeclaration_Trigger()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	OutputTrigger getTrigger();
+	TaskOutputTrigger getTrigger();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.library.OutputDeclaration#getTrigger <em>Trigger</em>}' containment reference.
@@ -107,7 +107,7 @@ public interface OutputDeclaration extends OaamBaseElementA {
 	 * @see #getTrigger()
 	 * @generated
 	 */
-	void setTrigger(OutputTrigger value);
+	void setTrigger(TaskOutputTrigger value);
 
 	/**
 	 * Returns the value of the '<em><b>Range</b></em>' attribute.

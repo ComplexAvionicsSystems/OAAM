@@ -69,6 +69,9 @@ public enum IoDirectionE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * No information flow in no direction.
+	 * <!-- end-model-doc -->
 	 * @see #NONE
 	 * @model
 	 * @generated
@@ -84,6 +87,9 @@ public enum IoDirectionE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow into the device.
+	 * <!-- end-model-doc -->
 	 * @see #IN
 	 * @model
 	 * @generated
@@ -99,6 +105,9 @@ public enum IoDirectionE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow out of the device.
+	 * <!-- end-model-doc -->
 	 * @see #OUT
 	 * @model
 	 * @generated
@@ -114,6 +123,9 @@ public enum IoDirectionE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow in and out of to the device.
+	 * <!-- end-model-doc -->
 	 * @see #BOTH
 	 * @model
 	 * @generated

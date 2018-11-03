@@ -85,6 +85,15 @@ public interface AllocationsFactory extends EFactory {
 	SubdeviceAssignment createSubdeviceAssignment();
 
 	/**
+	 * Returns a new object of class '<em>Subconnection Assignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subconnection Assignment</em>'.
+	 * @generated
+	 */
+	SubconnectionAssignment createSubconnectionAssignment();
+
+	/**
 	 * Returns a new object of class '<em>Allocations</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

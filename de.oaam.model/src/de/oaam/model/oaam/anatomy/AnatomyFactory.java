@@ -76,6 +76,15 @@ public interface AnatomyFactory extends EFactory {
 	LocationSymmetry createLocationSymmetry();
 
 	/**
+	 * Returns a new object of class '<em>Area Symmetry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Area Symmetry</em>'.
+	 * @generated
+	 */
+	AreaSymmetry createAreaSymmetry();
+
+	/**
 	 * Returns a new object of class '<em>Anatomy</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

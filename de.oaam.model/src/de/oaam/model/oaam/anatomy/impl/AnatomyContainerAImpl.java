@@ -5,6 +5,7 @@ package de.oaam.model.oaam.anatomy.impl;
 import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.Area;
+import de.oaam.model.oaam.anatomy.AreaSymmetry;
 import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.Location;
 import de.oaam.model.oaam.anatomy.LocationSymmetry;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.AnatomyContainerAImpl#getDucts <em>Ducts</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.AnatomyContainerAImpl#getAreas <em>Areas</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.impl.AnatomyContainerAImpl#getSubanatomies <em>Subanatomies</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.impl.AnatomyContainerAImpl#getAreaSymmetries <em>Area Symmetries</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,6 +91,16 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 	 * @ordered
 	 */
 	protected EList<Subanatomy> subanatomies;
+
+	/**
+	 * The cached value of the '{@link #getAreaSymmetries() <em>Area Symmetries</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAreaSymmetries()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AreaSymmetry> areaSymmetries;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,6 +186,18 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<AreaSymmetry> getAreaSymmetries() {
+		if (areaSymmetries == null) {
+			areaSymmetries = new EObjectContainmentEList<AreaSymmetry>(AreaSymmetry.class, this, AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES);
+		}
+		return areaSymmetries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -187,6 +211,8 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 				return ((InternalEList<?>)getAreas()).basicRemove(otherEnd, msgs);
 			case AnatomyPackage.ANATOMY_CONTAINER_A__SUBANATOMIES:
 				return ((InternalEList<?>)getSubanatomies()).basicRemove(otherEnd, msgs);
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
+				return ((InternalEList<?>)getAreaSymmetries()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,6 +235,8 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 				return getAreas();
 			case AnatomyPackage.ANATOMY_CONTAINER_A__SUBANATOMIES:
 				return getSubanatomies();
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
+				return getAreaSymmetries();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,6 +270,10 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 				getSubanatomies().clear();
 				getSubanatomies().addAll((Collection<? extends Subanatomy>)newValue);
 				return;
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
+				getAreaSymmetries().clear();
+				getAreaSymmetries().addAll((Collection<? extends AreaSymmetry>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -269,6 +301,9 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 			case AnatomyPackage.ANATOMY_CONTAINER_A__SUBANATOMIES:
 				getSubanatomies().clear();
 				return;
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
+				getAreaSymmetries().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -291,6 +326,8 @@ public abstract class AnatomyContainerAImpl extends OaamBaseElementAImpl impleme
 				return areas != null && !areas.isEmpty();
 			case AnatomyPackage.ANATOMY_CONTAINER_A__SUBANATOMIES:
 				return subanatomies != null && !subanatomies.isEmpty();
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
+				return areaSymmetries != null && !areaSymmetries.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

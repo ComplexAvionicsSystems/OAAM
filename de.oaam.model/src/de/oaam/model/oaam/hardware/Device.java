@@ -30,6 +30,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getSubdevices <em>Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getLocationBinding <em>Location Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.Device#getPowerSources <em>Power Sources</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.Device#getSubconnections <em>Subconnections</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.hardware.HardwarePackage#getDevice()
@@ -131,5 +132,20 @@ public interface Device extends ResourceProviderInstanceA, OaamBaseElementA, Var
 	 * @generated
 	 */
 	EList<PowerSource> getPowerSources();
+
+	/**
+	 * Returns the value of the '<em><b>Subconnections</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Connection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Connections only existing within this device. The go from one subdevice to another.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Subconnections</em>' containment reference list.
+	 * @see de.oaam.model.oaam.hardware.HardwarePackage#getDevice_Subconnections()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Connection> getSubconnections();
 
 } // Device

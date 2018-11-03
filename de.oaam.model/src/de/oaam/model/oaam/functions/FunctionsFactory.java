@@ -85,13 +85,13 @@ public interface FunctionsFactory extends EFactory {
 	FailureCondition createFailureCondition();
 
 	/**
-	 * Returns a new object of class '<em>System Input State</em>'.
+	 * Returns a new object of class '<em>Output Integrity State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>System Input State</em>'.
+	 * @return a new object of class '<em>Output Integrity State</em>'.
 	 * @generated
 	 */
-	SystemInputState createSystemInputState();
+	OutputIntegrityState createOutputIntegrityState();
 
 	/**
 	 * Returns a new object of class '<em>Signal</em>'.
@@ -148,13 +148,13 @@ public interface FunctionsFactory extends EFactory {
 	Subfunctions createSubfunctions();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
+	 * Returns a new object of class '<em>Task Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
+	 * @return a new object of class '<em>Task Parameter</em>'.
 	 * @generated
 	 */
-	Parameter createParameter();
+	TaskParameter createTaskParameter();
 
 	/**
 	 * Returns the package supported by this factory.

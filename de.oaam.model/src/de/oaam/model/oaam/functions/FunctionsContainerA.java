@@ -20,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#isIsAtomic <em>Is Atomic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getTasks <em>Tasks</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getTaskLinks <em>Task Links</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getTaskGroups <em>Task Groups</em>}</li>
@@ -37,31 +36,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface FunctionsContainerA extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
-	/**
-	 * Returns the value of the '<em><b>Is Atomic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Whether functions and signals of this subfunction can be distributed over multiple modules or not
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Is Atomic</em>' attribute.
-	 * @see #setIsAtomic(boolean)
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFunctionsContainerA_IsAtomic()
-	 * @model required="true"
-	 * @generated
-	 */
-	boolean isIsAtomic();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.functions.FunctionsContainerA#isIsAtomic <em>Is Atomic</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Atomic</em>' attribute.
-	 * @see #isIsAtomic()
-	 * @generated
-	 */
-	void setIsAtomic(boolean value);
-
 	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.Task}.

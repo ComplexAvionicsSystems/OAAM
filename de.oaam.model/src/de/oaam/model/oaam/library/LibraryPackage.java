@@ -1206,13 +1206,13 @@ public interface LibraryPackage extends EPackage {
 	int TASK_TYPE__PREFERRED_EXECUTION_RATE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Internal State Declarations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>State Declarations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE__INTERNAL_STATE_DECLARATIONS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
+	int TASK_TYPE__STATE_DECLARATIONS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Declarations</b></em>' containment reference list.
@@ -3435,14 +3435,14 @@ public interface LibraryPackage extends EPackage {
 	int FAULT_PROPAGATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FunctionInputStateImpl <em>Function Input State</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl <em>Task Input State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.FunctionInputStateImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFunctionInputState()
+	 * @see de.oaam.model.oaam.library.impl.TaskInputStateImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputState()
 	 * @generated
 	 */
-	int FUNCTION_INPUT_STATE = 24;
+	int TASK_INPUT_STATE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3451,7 +3451,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
+	int TASK_INPUT_STATE__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3460,7 +3460,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
+	int TASK_INPUT_STATE__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -3469,7 +3469,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
+	int TASK_INPUT_STATE__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -3478,7 +3478,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
+	int TASK_INPUT_STATE__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -3487,7 +3487,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
+	int TASK_INPUT_STATE__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -3496,7 +3496,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
+	int TASK_INPUT_STATE__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -3505,7 +3505,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
+	int TASK_INPUT_STATE__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -3514,7 +3514,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
+	int TASK_INPUT_STATE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -3523,7 +3523,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
+	int TASK_INPUT_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
@@ -3532,25 +3532,25 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE__INPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
+	int TASK_INPUT_STATE__INPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
 
 	/**
-	 * The number of structural features of the '<em>Function Input State</em>' class.
+	 * The number of structural features of the '<em>Task Input State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
+	int TASK_INPUT_STATE_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
 
 	/**
-	 * The number of operations of the '<em>Function Input State</em>' class.
+	 * The number of operations of the '<em>Task Input State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_STATE_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
+	int TASK_INPUT_STATE_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.PowerSourceImpl <em>Power Source</em>}' class.
@@ -4486,259 +4486,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
 	 * @generated
 	 */
-	int LIBRARY = 33;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__ID = LIBRARY_CONTAINER_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__NAME = LIBRARY_CONTAINER_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__STYLE = LIBRARY_CONTAINER_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__ATTRIBUTES = LIBRARY_CONTAINER_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DOCUMENTATION = LIBRARY_CONTAINER_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__MODIFIED = LIBRARY_CONTAINER_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__MODIFIER = LIBRARY_CONTAINER_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DATA_TYPES = LIBRARY_CONTAINER_A__DATA_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__RESOURCE_TYPES = LIBRARY_CONTAINER_A__RESOURCE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Bundles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__RESOURCE_BUNDLES = LIBRARY_CONTAINER_A__RESOURCE_BUNDLES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__RESOURCE_MODIFIERS = LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS;
-
-	/**
-	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__RESOURCE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES;
-
-	/**
-	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__TASK_TYPES = LIBRARY_CONTAINER_A__TASK_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__TASK_TYPE_DISSIMILARITY = LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY;
-
-	/**
-	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__SIGNAL_TYPES = LIBRARY_CONTAINER_A__SIGNAL_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DEVICE_TYPES = LIBRARY_CONTAINER_A__DEVICE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DEVICE_TYPE_SYMMETRIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES;
-
-	/**
-	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DEVICE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES;
-
-	/**
-	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__CONNECTION_TYPES = LIBRARY_CONTAINER_A__CONNECTION_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__WIRE_TYPES = LIBRARY_CONTAINER_A__WIRE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__LOCATION_TYPES = LIBRARY_CONTAINER_A__LOCATION_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Duct Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__DUCT_TYPES = LIBRARY_CONTAINER_A__DUCT_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__GENERIC_ATTRIBUTES = LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Power Sources</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__POWER_SOURCES = LIBRARY_CONTAINER_A__POWER_SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
-
-	/**
-	 * The number of structural features of the '<em>Library</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY_FEATURE_COUNT = LIBRARY_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Library</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
+	int LIBRARY = 38;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
@@ -4748,7 +4496,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
 	 * @generated
 	 */
-	int SUBLIBRARY = 34;
+	int SUBLIBRARY = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5003,14 +4751,14 @@ public interface LibraryPackage extends EPackage {
 	int SUBLIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl <em>Output Trigger</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl <em>Task Output Trigger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.OutputTriggerImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getOutputTrigger()
+	 * @see de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskOutputTrigger()
 	 * @generated
 	 */
-	int OUTPUT_TRIGGER = 35;
+	int TASK_OUTPUT_TRIGGER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5019,7 +4767,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int TASK_OUTPUT_TRIGGER__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5028,7 +4776,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int TASK_OUTPUT_TRIGGER__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5037,7 +4785,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int TASK_OUTPUT_TRIGGER__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5046,7 +4794,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int TASK_OUTPUT_TRIGGER__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5055,7 +4803,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int TASK_OUTPUT_TRIGGER__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5064,7 +4812,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int TASK_OUTPUT_TRIGGER__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5073,7 +4821,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int TASK_OUTPUT_TRIGGER__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5082,7 +4830,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+	int TASK_OUTPUT_TRIGGER__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
@@ -5091,7 +4839,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_OUTPUT_TRIGGER__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
@@ -5100,7 +4848,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_OUTPUT_TRIGGER__FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Fixed Rate</b></em>' attribute.
@@ -5109,35 +4857,35 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Output Trigger</em>' class.
+	 * The number of structural features of the '<em>Task Output Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Output Trigger</em>' class.
+	 * The number of operations of the '<em>Task Output Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_TRIGGER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_OUTPUT_TRIGGER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl <em>Function Input Trigger</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskInputTriggerImpl <em>Task Input Trigger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFunctionInputTrigger()
+	 * @see de.oaam.model.oaam.library.impl.TaskInputTriggerImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputTrigger()
 	 * @generated
 	 */
-	int FUNCTION_INPUT_TRIGGER = 36;
+	int TASK_INPUT_TRIGGER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5146,7 +4894,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
+	int TASK_INPUT_TRIGGER__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5155,7 +4903,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
+	int TASK_INPUT_TRIGGER__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5164,7 +4912,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
+	int TASK_INPUT_TRIGGER__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5173,7 +4921,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
+	int TASK_INPUT_TRIGGER__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5182,7 +4930,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
+	int TASK_INPUT_TRIGGER__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5191,7 +4939,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
+	int TASK_INPUT_TRIGGER__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5200,7 +4948,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
+	int TASK_INPUT_TRIGGER__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5209,7 +4957,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
+	int TASK_INPUT_TRIGGER__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
@@ -5218,35 +4966,35 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER__INPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
+	int TASK_INPUT_TRIGGER__INPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
 
 	/**
-	 * The number of structural features of the '<em>Function Input Trigger</em>' class.
+	 * The number of structural features of the '<em>Task Input Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
+	int TASK_INPUT_TRIGGER_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
 
 	/**
-	 * The number of operations of the '<em>Function Input Trigger</em>' class.
+	 * The number of operations of the '<em>Task Input Trigger</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_INPUT_TRIGGER_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
+	int TASK_INPUT_TRIGGER_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.InternalStateDeclarationImpl <em>Internal State Declaration</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskStateDeclarationImpl <em>Task State Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.InternalStateDeclarationImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getInternalStateDeclaration()
+	 * @see de.oaam.model.oaam.library.impl.TaskStateDeclarationImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskStateDeclaration()
 	 * @generated
 	 */
-	int INTERNAL_STATE_DECLARATION = 37;
+	int TASK_STATE_DECLARATION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5255,7 +5003,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int TASK_STATE_DECLARATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5264,7 +5012,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int TASK_STATE_DECLARATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5273,7 +5021,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int TASK_STATE_DECLARATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5282,7 +5030,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int TASK_STATE_DECLARATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5291,7 +5039,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int TASK_STATE_DECLARATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5300,7 +5048,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int TASK_STATE_DECLARATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5309,7 +5057,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int TASK_STATE_DECLARATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5318,7 +5066,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+	int TASK_STATE_DECLARATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -5327,35 +5075,35 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_STATE_DECLARATION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Internal State Declaration</em>' class.
+	 * The number of structural features of the '<em>Task State Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_STATE_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Internal State Declaration</em>' class.
+	 * The number of operations of the '<em>Task State Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_STATE_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_STATE_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.ParameterDeclarationImpl <em>Parameter Declaration</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskParameterDeclarationImpl <em>Task Parameter Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.ParameterDeclarationImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getParameterDeclaration()
+	 * @see de.oaam.model.oaam.library.impl.TaskParameterDeclarationImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskParameterDeclaration()
 	 * @generated
 	 */
-	int PARAMETER_DECLARATION = 38;
+	int TASK_PARAMETER_DECLARATION = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5364,7 +5112,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int TASK_PARAMETER_DECLARATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5373,7 +5121,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int TASK_PARAMETER_DECLARATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -5382,7 +5130,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int TASK_PARAMETER_DECLARATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -5391,7 +5139,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int TASK_PARAMETER_DECLARATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -5400,7 +5148,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int TASK_PARAMETER_DECLARATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -5409,7 +5157,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int TASK_PARAMETER_DECLARATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -5418,7 +5166,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int TASK_PARAMETER_DECLARATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -5427,7 +5175,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+	int TASK_PARAMETER_DECLARATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -5436,25 +5184,277 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_PARAMETER_DECLARATION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Parameter Declaration</em>' class.
+	 * The number of structural features of the '<em>Task Parameter Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_PARAMETER_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Parameter Declaration</em>' class.
+	 * The number of operations of the '<em>Task Parameter Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int TASK_PARAMETER_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__ID = LIBRARY_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__NAME = LIBRARY_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__STYLE = LIBRARY_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__ATTRIBUTES = LIBRARY_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DOCUMENTATION = LIBRARY_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__MODIFIED = LIBRARY_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__MODIFIER = LIBRARY_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DATA_TYPES = LIBRARY_CONTAINER_A__DATA_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__RESOURCE_TYPES = LIBRARY_CONTAINER_A__RESOURCE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Bundles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__RESOURCE_BUNDLES = LIBRARY_CONTAINER_A__RESOURCE_BUNDLES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__RESOURCE_MODIFIERS = LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__RESOURCE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES;
+
+	/**
+	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__TASK_TYPES = LIBRARY_CONTAINER_A__TASK_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__TASK_TYPE_DISSIMILARITY = LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY;
+
+	/**
+	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__SIGNAL_TYPES = LIBRARY_CONTAINER_A__SIGNAL_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DEVICE_TYPES = LIBRARY_CONTAINER_A__DEVICE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DEVICE_TYPE_SYMMETRIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES;
+
+	/**
+	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DEVICE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES;
+
+	/**
+	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__CONNECTION_TYPES = LIBRARY_CONTAINER_A__CONNECTION_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__WIRE_TYPES = LIBRARY_CONTAINER_A__WIRE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__LOCATION_TYPES = LIBRARY_CONTAINER_A__LOCATION_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Duct Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__DUCT_TYPES = LIBRARY_CONTAINER_A__DUCT_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__GENERIC_ATTRIBUTES = LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Power Sources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__POWER_SOURCES = LIBRARY_CONTAINER_A__POWER_SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
+
+	/**
+	 * The number of structural features of the '<em>Library</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_FEATURE_COUNT = LIBRARY_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Library</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.
@@ -6095,15 +6095,15 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getTaskType_PreferredExecutionRate();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getInternalStateDeclarations <em>Internal State Declarations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getStateDeclarations <em>State Declarations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Internal State Declarations</em>'.
-	 * @see de.oaam.model.oaam.library.TaskType#getInternalStateDeclarations()
+	 * @return the meta object for the containment reference list '<em>State Declarations</em>'.
+	 * @see de.oaam.model.oaam.library.TaskType#getStateDeclarations()
 	 * @see #getTaskType()
 	 * @generated
 	 */
-	EReference getTaskType_InternalStateDeclarations();
+	EReference getTaskType_StateDeclarations();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getParameterDeclarations <em>Parameter Declarations</em>}'.
@@ -6872,36 +6872,36 @@ public interface LibraryPackage extends EPackage {
 	EReference getFaultPropagation_Logic();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.FunctionInputState <em>Function Input State</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskInputState <em>Task Input State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Function Input State</em>'.
-	 * @see de.oaam.model.oaam.library.FunctionInputState
+	 * @return the meta object for class '<em>Task Input State</em>'.
+	 * @see de.oaam.model.oaam.library.TaskInputState
 	 * @generated
 	 */
-	EClass getFunctionInputState();
+	EClass getTaskInputState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.FunctionInputState#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskInputState#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see de.oaam.model.oaam.library.FunctionInputState#getState()
-	 * @see #getFunctionInputState()
+	 * @see de.oaam.model.oaam.library.TaskInputState#getState()
+	 * @see #getTaskInputState()
 	 * @generated
 	 */
-	EAttribute getFunctionInputState_State();
+	EAttribute getTaskInputState_State();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.FunctionInputState#getInput <em>Input</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskInputState#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Input</em>'.
-	 * @see de.oaam.model.oaam.library.FunctionInputState#getInput()
-	 * @see #getFunctionInputState()
+	 * @see de.oaam.model.oaam.library.TaskInputState#getInput()
+	 * @see #getTaskInputState()
 	 * @generated
 	 */
-	EReference getFunctionInputState_Input();
+	EReference getTaskInputState_Input();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.PowerSource <em>Power Source</em>}'.
@@ -7136,110 +7136,110 @@ public interface LibraryPackage extends EPackage {
 	EClass getSublibrary();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.OutputTrigger <em>Output Trigger</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskOutputTrigger <em>Task Output Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Output Trigger</em>'.
-	 * @see de.oaam.model.oaam.library.OutputTrigger
+	 * @return the meta object for class '<em>Task Output Trigger</em>'.
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger
 	 * @generated
 	 */
-	EClass getOutputTrigger();
+	EClass getTaskOutputTrigger();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.OutputTrigger#getLogic <em>Logic</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getLogic <em>Logic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Logic</em>'.
-	 * @see de.oaam.model.oaam.library.OutputTrigger#getLogic()
-	 * @see #getOutputTrigger()
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getLogic()
+	 * @see #getTaskOutputTrigger()
 	 * @generated
 	 */
-	EReference getOutputTrigger_Logic();
+	EReference getTaskOutputTrigger_Logic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputTrigger#getFixedRate <em>Fixed Rate</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getFixedRate <em>Fixed Rate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Fixed Rate</em>'.
-	 * @see de.oaam.model.oaam.library.OutputTrigger#getFixedRate()
-	 * @see #getOutputTrigger()
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getFixedRate()
+	 * @see #getTaskOutputTrigger()
 	 * @generated
 	 */
-	EAttribute getOutputTrigger_FixedRate();
+	EAttribute getTaskOutputTrigger_FixedRate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskOutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Fixed Rate</em>'.
-	 * @see de.oaam.model.oaam.library.OutputTrigger#isIsFixedRate()
-	 * @see #getOutputTrigger()
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#isIsFixedRate()
+	 * @see #getTaskOutputTrigger()
 	 * @generated
 	 */
-	EAttribute getOutputTrigger_IsFixedRate();
+	EAttribute getTaskOutputTrigger_IsFixedRate();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.FunctionInputTrigger <em>Function Input Trigger</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskInputTrigger <em>Task Input Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Function Input Trigger</em>'.
-	 * @see de.oaam.model.oaam.library.FunctionInputTrigger
+	 * @return the meta object for class '<em>Task Input Trigger</em>'.
+	 * @see de.oaam.model.oaam.library.TaskInputTrigger
 	 * @generated
 	 */
-	EClass getFunctionInputTrigger();
+	EClass getTaskInputTrigger();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.FunctionInputTrigger#getInput <em>Input</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskInputTrigger#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Input</em>'.
-	 * @see de.oaam.model.oaam.library.FunctionInputTrigger#getInput()
-	 * @see #getFunctionInputTrigger()
+	 * @see de.oaam.model.oaam.library.TaskInputTrigger#getInput()
+	 * @see #getTaskInputTrigger()
 	 * @generated
 	 */
-	EReference getFunctionInputTrigger_Input();
+	EReference getTaskInputTrigger_Input();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.InternalStateDeclaration <em>Internal State Declaration</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskStateDeclaration <em>Task State Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Internal State Declaration</em>'.
-	 * @see de.oaam.model.oaam.library.InternalStateDeclaration
+	 * @return the meta object for class '<em>Task State Declaration</em>'.
+	 * @see de.oaam.model.oaam.library.TaskStateDeclaration
 	 * @generated
 	 */
-	EClass getInternalStateDeclaration();
+	EClass getTaskStateDeclaration();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.InternalStateDeclaration#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see de.oaam.model.oaam.library.InternalStateDeclaration#getType()
-	 * @see #getInternalStateDeclaration()
-	 * @generated
-	 */
-	EReference getInternalStateDeclaration_Type();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ParameterDeclaration <em>Parameter Declaration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter Declaration</em>'.
-	 * @see de.oaam.model.oaam.library.ParameterDeclaration
-	 * @generated
-	 */
-	EClass getParameterDeclaration();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ParameterDeclaration#getType <em>Type</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskStateDeclaration#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see de.oaam.model.oaam.library.ParameterDeclaration#getType()
-	 * @see #getParameterDeclaration()
+	 * @see de.oaam.model.oaam.library.TaskStateDeclaration#getType()
+	 * @see #getTaskStateDeclaration()
 	 * @generated
 	 */
-	EReference getParameterDeclaration_Type();
+	EReference getTaskStateDeclaration_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskParameterDeclaration <em>Task Parameter Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Parameter Declaration</em>'.
+	 * @see de.oaam.model.oaam.library.TaskParameterDeclaration
+	 * @generated
+	 */
+	EClass getTaskParameterDeclaration();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskParameterDeclaration#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.library.TaskParameterDeclaration#getType()
+	 * @see #getTaskParameterDeclaration()
+	 * @generated
+	 */
+	EReference getTaskParameterDeclaration_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}'.
@@ -7761,12 +7761,12 @@ public interface LibraryPackage extends EPackage {
 		EAttribute TASK_TYPE__PREFERRED_EXECUTION_RATE = eINSTANCE.getTaskType_PreferredExecutionRate();
 
 		/**
-		 * The meta object literal for the '<em><b>Internal State Declarations</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>State Declarations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_TYPE__INTERNAL_STATE_DECLARATIONS = eINSTANCE.getTaskType_InternalStateDeclarations();
+		EReference TASK_TYPE__STATE_DECLARATIONS = eINSTANCE.getTaskType_StateDeclarations();
 
 		/**
 		 * The meta object literal for the '<em><b>Parameter Declarations</b></em>' containment reference list feature.
@@ -8367,14 +8367,14 @@ public interface LibraryPackage extends EPackage {
 		EReference FAULT_PROPAGATION__LOGIC = eINSTANCE.getFaultPropagation_Logic();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.FunctionInputStateImpl <em>Function Input State</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl <em>Task Input State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.FunctionInputStateImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFunctionInputState()
+		 * @see de.oaam.model.oaam.library.impl.TaskInputStateImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputState()
 		 * @generated
 		 */
-		EClass FUNCTION_INPUT_STATE = eINSTANCE.getFunctionInputState();
+		EClass TASK_INPUT_STATE = eINSTANCE.getTaskInputState();
 
 		/**
 		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
@@ -8382,7 +8382,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FUNCTION_INPUT_STATE__STATE = eINSTANCE.getFunctionInputState_State();
+		EAttribute TASK_INPUT_STATE__STATE = eINSTANCE.getTaskInputState_State();
 
 		/**
 		 * The meta object literal for the '<em><b>Input</b></em>' reference feature.
@@ -8390,7 +8390,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION_INPUT_STATE__INPUT = eINSTANCE.getFunctionInputState_Input();
+		EReference TASK_INPUT_STATE__INPUT = eINSTANCE.getTaskInputState_Input();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.PowerSourceImpl <em>Power Source</em>}' class.
@@ -8589,14 +8589,14 @@ public interface LibraryPackage extends EPackage {
 		EClass SUBLIBRARY = eINSTANCE.getSublibrary();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.OutputTriggerImpl <em>Output Trigger</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl <em>Task Output Trigger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.OutputTriggerImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getOutputTrigger()
+		 * @see de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskOutputTrigger()
 		 * @generated
 		 */
-		EClass OUTPUT_TRIGGER = eINSTANCE.getOutputTrigger();
+		EClass TASK_OUTPUT_TRIGGER = eINSTANCE.getTaskOutputTrigger();
 
 		/**
 		 * The meta object literal for the '<em><b>Logic</b></em>' containment reference feature.
@@ -8604,7 +8604,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_TRIGGER__LOGIC = eINSTANCE.getOutputTrigger_Logic();
+		EReference TASK_OUTPUT_TRIGGER__LOGIC = eINSTANCE.getTaskOutputTrigger_Logic();
 
 		/**
 		 * The meta object literal for the '<em><b>Fixed Rate</b></em>' attribute feature.
@@ -8612,7 +8612,7 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OUTPUT_TRIGGER__FIXED_RATE = eINSTANCE.getOutputTrigger_FixedRate();
+		EAttribute TASK_OUTPUT_TRIGGER__FIXED_RATE = eINSTANCE.getTaskOutputTrigger_FixedRate();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Fixed Rate</b></em>' attribute feature.
@@ -8620,17 +8620,17 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OUTPUT_TRIGGER__IS_FIXED_RATE = eINSTANCE.getOutputTrigger_IsFixedRate();
+		EAttribute TASK_OUTPUT_TRIGGER__IS_FIXED_RATE = eINSTANCE.getTaskOutputTrigger_IsFixedRate();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl <em>Function Input Trigger</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskInputTriggerImpl <em>Task Input Trigger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.FunctionInputTriggerImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFunctionInputTrigger()
+		 * @see de.oaam.model.oaam.library.impl.TaskInputTriggerImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputTrigger()
 		 * @generated
 		 */
-		EClass FUNCTION_INPUT_TRIGGER = eINSTANCE.getFunctionInputTrigger();
+		EClass TASK_INPUT_TRIGGER = eINSTANCE.getTaskInputTrigger();
 
 		/**
 		 * The meta object literal for the '<em><b>Input</b></em>' reference feature.
@@ -8638,35 +8638,17 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION_INPUT_TRIGGER__INPUT = eINSTANCE.getFunctionInputTrigger_Input();
+		EReference TASK_INPUT_TRIGGER__INPUT = eINSTANCE.getTaskInputTrigger_Input();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.InternalStateDeclarationImpl <em>Internal State Declaration</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskStateDeclarationImpl <em>Task State Declaration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.InternalStateDeclarationImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getInternalStateDeclaration()
+		 * @see de.oaam.model.oaam.library.impl.TaskStateDeclarationImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskStateDeclaration()
 		 * @generated
 		 */
-		EClass INTERNAL_STATE_DECLARATION = eINSTANCE.getInternalStateDeclaration();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERNAL_STATE_DECLARATION__TYPE = eINSTANCE.getInternalStateDeclaration_Type();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ParameterDeclarationImpl <em>Parameter Declaration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.ParameterDeclarationImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getParameterDeclaration()
-		 * @generated
-		 */
-		EClass PARAMETER_DECLARATION = eINSTANCE.getParameterDeclaration();
+		EClass TASK_STATE_DECLARATION = eINSTANCE.getTaskStateDeclaration();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -8674,7 +8656,25 @@ public interface LibraryPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARAMETER_DECLARATION__TYPE = eINSTANCE.getParameterDeclaration_Type();
+		EReference TASK_STATE_DECLARATION__TYPE = eINSTANCE.getTaskStateDeclaration_Type();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskParameterDeclarationImpl <em>Task Parameter Declaration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.TaskParameterDeclarationImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskParameterDeclaration()
+		 * @generated
+		 */
+		EClass TASK_PARAMETER_DECLARATION = eINSTANCE.getTaskParameterDeclaration();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_PARAMETER_DECLARATION__TYPE = eINSTANCE.getTaskParameterDeclaration_Type();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

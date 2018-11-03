@@ -139,6 +139,15 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AllocationsPackage.SUBCONNECTION_ASSIGNMENT: {
+				SubconnectionAssignment subconnectionAssignment = (SubconnectionAssignment)theEObject;
+				T result = caseSubconnectionAssignment(subconnectionAssignment);
+				if (result == null) result = caseOaamBaseElementA(subconnectionAssignment);
+				if (result == null) result = caseVariantDependentElementA(subconnectionAssignment);
+				if (result == null) result = caseModeDependentElementA(subconnectionAssignment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case AllocationsPackage.ALLOCATIONS: {
 				Allocations allocations = (Allocations)theEObject;
 				T result = caseAllocations(allocations);
@@ -296,6 +305,21 @@ public class AllocationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSubdeviceAssignment(SubdeviceAssignment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Subconnection Assignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subconnection Assignment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubconnectionAssignment(SubconnectionAssignment object) {
 		return null;
 	}
 

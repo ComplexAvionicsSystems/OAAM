@@ -26,7 +26,7 @@ package de.oaam.model.oaam.systems;
  * @model
  * @generated
  */
-public interface ElectricPower extends Power {
+public interface ElectricPower extends InformationPower {
 	/**
 	 * Returns the value of the '<em><b>Frequency</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -5,12 +5,14 @@ package de.oaam.model.oaam.restrictions.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
 
 import de.oaam.model.oaam.hardware.Connection;
 
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
+import de.oaam.model.oaam.restrictions.SignalGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -44,6 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl#getSignalGroups <em>Signal Groups</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl#getName <em>Name</em>}</li>
@@ -63,6 +66,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements ConnectionRestriction {
+	/**
+	 * The cached value of the '{@link #getSignalGroups() <em>Signal Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSignalGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SignalGroup> signalGroups;
+
 	/**
 	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -310,6 +323,18 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	@Override
 	protected EClass eStaticClass() {
 		return RestrictionsPackage.Literals.CONNECTION_RESTRICTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SignalGroup> getSignalGroups() {
+		if (signalGroups == null) {
+			signalGroups = new EObjectResolvingEList<SignalGroup>(SignalGroup.class, this, RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS);
+		}
+		return signalGroups;
 	}
 
 	/**
@@ -585,6 +610,8 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS:
+				return getSignalGroups();
 			case RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS:
 				return getSubfunctions();
 			case RestrictionsPackage.CONNECTION_RESTRICTION__ID:
@@ -626,6 +653,10 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
+				getSignalGroups().addAll((Collection<? extends SignalGroup>)newValue);
+				return;
 			case RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
 				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
@@ -685,6 +716,9 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
+				return;
 			case RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
 				return;
@@ -739,6 +773,8 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS:
+				return signalGroups != null && !signalGroups.isEmpty();
 			case RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS:
 				return subfunctions != null && !subfunctions.isEmpty();
 			case RestrictionsPackage.CONNECTION_RESTRICTION__ID:
@@ -778,6 +814,12 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS: return RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (derivedFeatureID) {
 				case RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS: return RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS;
@@ -819,6 +861,12 @@ public class ConnectionRestrictionImpl extends SignalRestrictionAImpl implements
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS: return RestrictionsPackage.CONNECTION_RESTRICTION__SIGNAL_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (baseFeatureID) {
 				case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS: return RestrictionsPackage.CONNECTION_RESTRICTION__SUBFUNCTIONS;

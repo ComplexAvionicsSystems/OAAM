@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getLogic <em>Logic</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getMaxOccurrenceRate <em>Max Occurrence Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#isNoSingleFailure <em>No Single Failure</em>}</li>
  * </ul>
  *
@@ -77,24 +77,24 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	protected BoolA logic;
 
 	/**
-	 * The default value of the '{@link #getMaxOccurrenceRate() <em>Max Occurrence Rate</em>}' attribute.
+	 * The default value of the '{@link #getMaxOccurrenceProbability() <em>Max Occurrence Probability</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMaxOccurrenceRate()
+	 * @see #getMaxOccurrenceProbability()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MAX_OCCURRENCE_RATE_EDEFAULT = 0.0;
+	protected static final double MAX_OCCURRENCE_PROBABILITY_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #getMaxOccurrenceRate() <em>Max Occurrence Rate</em>}' attribute.
+	 * The cached value of the '{@link #getMaxOccurrenceProbability() <em>Max Occurrence Probability</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMaxOccurrenceRate()
+	 * @see #getMaxOccurrenceProbability()
 	 * @generated
 	 * @ordered
 	 */
-	protected double maxOccurrenceRate = MAX_OCCURRENCE_RATE_EDEFAULT;
+	protected double maxOccurrenceProbability = MAX_OCCURRENCE_PROBABILITY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isNoSingleFailure() <em>No Single Failure</em>}' attribute.
@@ -207,8 +207,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMaxOccurrenceRate() {
-		return maxOccurrenceRate;
+	public double getMaxOccurrenceProbability() {
+		return maxOccurrenceProbability;
 	}
 
 	/**
@@ -216,11 +216,11 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMaxOccurrenceRate(double newMaxOccurrenceRate) {
-		double oldMaxOccurrenceRate = maxOccurrenceRate;
-		maxOccurrenceRate = newMaxOccurrenceRate;
+	public void setMaxOccurrenceProbability(double newMaxOccurrenceProbability) {
+		double oldMaxOccurrenceProbability = maxOccurrenceProbability;
+		maxOccurrenceProbability = newMaxOccurrenceProbability;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE, oldMaxOccurrenceRate, maxOccurrenceRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY, oldMaxOccurrenceProbability, maxOccurrenceProbability));
 	}
 
 	/**
@@ -274,8 +274,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return getVariants();
 			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
 				return getLogic();
-			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE:
-				return getMaxOccurrenceRate();
+			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
+				return getMaxOccurrenceProbability();
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				return isNoSingleFailure();
 		}
@@ -302,8 +302,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
 				setLogic((BoolA)newValue);
 				return;
-			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE:
-				setMaxOccurrenceRate((Double)newValue);
+			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
+				setMaxOccurrenceProbability((Double)newValue);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				setNoSingleFailure((Boolean)newValue);
@@ -329,8 +329,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
 				setLogic((BoolA)null);
 				return;
-			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE:
-				setMaxOccurrenceRate(MAX_OCCURRENCE_RATE_EDEFAULT);
+			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
+				setMaxOccurrenceProbability(MAX_OCCURRENCE_PROBABILITY_EDEFAULT);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				setNoSingleFailure(NO_SINGLE_FAILURE_EDEFAULT);
@@ -353,8 +353,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return variants != null && !variants.isEmpty();
 			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
 				return logic != null;
-			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE:
-				return maxOccurrenceRate != MAX_OCCURRENCE_RATE_EDEFAULT;
+			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
+				return maxOccurrenceProbability != MAX_OCCURRENCE_PROBABILITY_EDEFAULT;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				return noSingleFailure != NO_SINGLE_FAILURE_EDEFAULT;
 		}
@@ -415,8 +415,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (maxOccurrenceRate: ");
-		result.append(maxOccurrenceRate);
+		result.append(" (maxOccurrenceProbability: ");
+		result.append(maxOccurrenceProbability);
 		result.append(", noSingleFailure: ");
 		result.append(noSingleFailure);
 		result.append(')');

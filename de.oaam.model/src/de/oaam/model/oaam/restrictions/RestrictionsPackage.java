@@ -208,13 +208,13 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Synchronicity Restriction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -253,13 +253,13 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Time Delay Restrictions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
+	int RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -425,13 +425,13 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS__TASK_SYMMETRY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Synchronicity Restriction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS__INPUT_SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION;
+	int RESTRICTIONS__SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION;
 
 	/**
 	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -470,13 +470,13 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS__SUBRESTRICTIONS = RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Time Delay Restrictions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESTRICTIONS__TIMEDELAYRESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS;
+	int RESTRICTIONS__TIME_DELAY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS;
 
 	/**
 	 * The number of structural features of the '<em>Restrictions</em>' class.
@@ -504,7 +504,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
 	 * @generated
 	 */
-	int SUBRESTRICTIONS = 20;
+	int SUBRESTRICTIONS = 21;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.DeviceRestrictionAImpl <em>Device Restriction A</em>}' class.
@@ -729,6 +729,43 @@ public interface RestrictionsPackage extends EPackage {
 	int TASK_GROUP_RESTRICTION_A_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.SignalGroupRestrictionAImpl <em>Signal Group Restriction A</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.restrictions.impl.SignalGroupRestrictionAImpl
+	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSignalGroupRestrictionA()
+	 * @generated
+	 */
+	int SIGNAL_GROUP_RESTRICTION_A = 8;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Signal Group Restriction A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_GROUP_RESTRICTION_A_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Signal Group Restriction A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_GROUP_RESTRICTION_A_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl <em>Location Restriction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -736,7 +773,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getLocationRestriction()
 	 * @generated
 	 */
-	int LOCATION_RESTRICTION = 8;
+	int LOCATION_RESTRICTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -748,13 +785,31 @@ public interface RestrictionsPackage extends EPackage {
 	int LOCATION_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int LOCATION_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION_RESTRICTION__SIGNAL_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
@@ -763,7 +818,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int LOCATION_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference.
@@ -772,7 +827,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int LOCATION_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -781,7 +836,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__CONNECTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int LOCATION_RESTRICTION__CONNECTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -790,7 +845,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int LOCATION_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -799,7 +854,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int LOCATION_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -808,7 +863,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int LOCATION_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -817,7 +872,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int LOCATION_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -826,7 +881,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int LOCATION_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -835,7 +890,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int LOCATION_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -844,7 +899,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int LOCATION_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -853,7 +908,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int LOCATION_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -862,7 +917,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
+	int LOCATION_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -871,7 +926,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
+	int LOCATION_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Location Name</b></em>' attribute.
@@ -880,7 +935,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__LOCATION_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
+	int LOCATION_RESTRICTION__LOCATION_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -889,7 +944,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
+	int LOCATION_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Locations</b></em>' reference list.
@@ -898,7 +953,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION__LOCATIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
+	int LOCATION_RESTRICTION__LOCATIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Location Restriction</em>' class.
@@ -907,7 +962,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
+	int LOCATION_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Location Restriction</em>' class.
@@ -926,7 +981,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getAreaRestriction()
 	 * @generated
 	 */
-	int AREA_RESTRICTION = 9;
+	int AREA_RESTRICTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -938,13 +993,31 @@ public interface RestrictionsPackage extends EPackage {
 	int AREA_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AREA_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int AREA_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AREA_RESTRICTION__SIGNAL_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
@@ -953,7 +1026,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int AREA_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference.
@@ -962,7 +1035,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int AREA_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -971,7 +1044,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__CONNECTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int AREA_RESTRICTION__CONNECTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -980,7 +1053,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int AREA_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -989,7 +1062,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int AREA_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -998,7 +1071,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int AREA_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1007,7 +1080,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int AREA_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1016,7 +1089,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int AREA_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1025,7 +1098,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int AREA_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1034,7 +1107,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int AREA_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1043,7 +1116,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int AREA_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1052,7 +1125,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
+	int AREA_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1061,7 +1134,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
+	int AREA_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Area Name</b></em>' attribute.
@@ -1070,7 +1143,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__AREA_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
+	int AREA_RESTRICTION__AREA_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1079,7 +1152,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
+	int AREA_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Areas</b></em>' reference list.
@@ -1088,7 +1161,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION__AREAS = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
+	int AREA_RESTRICTION__AREAS = TASK_RESTRICTION_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of structural features of the '<em>Area Restriction</em>' class.
@@ -1097,7 +1170,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AREA_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
+	int AREA_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Area Restriction</em>' class.
@@ -1116,7 +1189,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getPowerSourceRestriction()
 	 * @generated
 	 */
-	int POWER_SOURCE_RESTRICTION = 10;
+	int POWER_SOURCE_RESTRICTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1128,13 +1201,13 @@ public interface RestrictionsPackage extends EPackage {
 	int POWER_SOURCE_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
-	 * The feature id for the '<em><b>Devices</b></em>' reference.
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int POWER_SOURCE_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -1146,13 +1219,31 @@ public interface RestrictionsPackage extends EPackage {
 	int POWER_SOURCE_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int POWER_SOURCE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Devices</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SOURCE_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1161,7 +1252,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int POWER_SOURCE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1170,7 +1261,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int POWER_SOURCE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1179,7 +1270,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int POWER_SOURCE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1188,7 +1279,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int POWER_SOURCE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1197,7 +1288,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int POWER_SOURCE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1206,7 +1297,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int POWER_SOURCE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1215,7 +1306,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int POWER_SOURCE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1224,7 +1315,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int POWER_SOURCE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1233,7 +1324,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int POWER_SOURCE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1242,7 +1333,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
+	int POWER_SOURCE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Power Source Name</b></em>' attribute.
@@ -1251,7 +1342,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__POWER_SOURCE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
+	int POWER_SOURCE_RESTRICTION__POWER_SOURCE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1260,7 +1351,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
+	int POWER_SOURCE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Power Sources</b></em>' reference list.
@@ -1269,7 +1360,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION__POWER_SOURCES = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
+	int POWER_SOURCE_RESTRICTION__POWER_SOURCES = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Power Source Restriction</em>' class.
@@ -1278,7 +1369,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SOURCE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
+	int POWER_SOURCE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>Power Source Restriction</em>' class.
@@ -1297,7 +1388,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getDeviceRestriction()
 	 * @generated
 	 */
-	int DEVICE_RESTRICTION = 11;
+	int DEVICE_RESTRICTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1309,13 +1400,31 @@ public interface RestrictionsPackage extends EPackage {
 	int DEVICE_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int DEVICE_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_RESTRICTION__SIGNAL_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
@@ -1324,7 +1433,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int DEVICE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1333,7 +1442,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int DEVICE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1342,7 +1451,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int DEVICE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1351,7 +1460,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int DEVICE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1360,7 +1469,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int DEVICE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1369,7 +1478,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int DEVICE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1378,7 +1487,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int DEVICE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1387,7 +1496,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int DEVICE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1396,7 +1505,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int DEVICE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1405,7 +1514,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int DEVICE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1414,7 +1523,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int DEVICE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Device Name</b></em>' attribute.
@@ -1423,7 +1532,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__DEVICE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
+	int DEVICE_RESTRICTION__DEVICE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1432,7 +1541,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
+	int DEVICE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' reference list.
@@ -1441,7 +1550,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
+	int DEVICE_RESTRICTION__DEVICES = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Device Restriction</em>' class.
@@ -1450,7 +1559,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
+	int DEVICE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Device Restriction</em>' class.
@@ -1469,7 +1578,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getDeviceTypeRestriction()
 	 * @generated
 	 */
-	int DEVICE_TYPE_RESTRICTION = 12;
+	int DEVICE_TYPE_RESTRICTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -1481,13 +1590,31 @@ public interface RestrictionsPackage extends EPackage {
 	int DEVICE_TYPE_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int DEVICE_TYPE_RESTRICTION__SIGNALS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE_RESTRICTION__SIGNAL_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
@@ -1496,7 +1623,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int DEVICE_TYPE_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1505,7 +1632,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int DEVICE_TYPE_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1514,7 +1641,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int DEVICE_TYPE_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1523,7 +1650,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int DEVICE_TYPE_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1532,7 +1659,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int DEVICE_TYPE_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1541,7 +1668,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int DEVICE_TYPE_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1550,7 +1677,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int DEVICE_TYPE_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1559,7 +1686,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int DEVICE_TYPE_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1568,7 +1695,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int DEVICE_TYPE_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1577,7 +1704,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int DEVICE_TYPE_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1586,7 +1713,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int DEVICE_TYPE_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Name</b></em>' attribute.
@@ -1595,7 +1722,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__DEVICE_TYPE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
+	int DEVICE_TYPE_RESTRICTION__DEVICE_TYPE_NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1604,7 +1731,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
+	int DEVICE_TYPE_RESTRICTION__IS_FORBIDDEN = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Device Types</b></em>' reference list.
@@ -1613,7 +1740,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION__DEVICE_TYPES = TASK_RESTRICTION_A_FEATURE_COUNT + 14;
+	int DEVICE_TYPE_RESTRICTION__DEVICE_TYPES = TASK_RESTRICTION_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Device Type Restriction</em>' class.
@@ -1622,7 +1749,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 15;
+	int DEVICE_TYPE_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>Device Type Restriction</em>' class.
@@ -1634,14 +1761,14 @@ public interface RestrictionsPackage extends EPackage {
 	int DEVICE_TYPE_RESTRICTION_OPERATION_COUNT = TASK_RESTRICTION_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.ConectionTypeRestrictionImpl <em>Conection Type Restriction</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.ConnectionTypeRestrictionImpl <em>Connection Type Restriction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.ConectionTypeRestrictionImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConectionTypeRestriction()
+	 * @see de.oaam.model.oaam.restrictions.impl.ConnectionTypeRestrictionImpl
+	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConnectionTypeRestriction()
 	 * @generated
 	 */
-	int CONECTION_TYPE_RESTRICTION = 13;
+	int CONNECTION_TYPE_RESTRICTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -1650,7 +1777,16 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__SIGNALS = SIGNAL_RESTRICTION_A__SIGNALS;
+	int CONNECTION_TYPE_RESTRICTION__SIGNALS = SIGNAL_RESTRICTION_A__SIGNALS;
+
+	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE_RESTRICTION__SIGNAL_GROUPS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
@@ -1659,7 +1795,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__SUBFUNCTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 0;
+	int CONNECTION_TYPE_RESTRICTION__SUBFUNCTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1668,7 +1804,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__ID = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 1;
+	int CONNECTION_TYPE_RESTRICTION__ID = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1677,7 +1813,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 2;
+	int CONNECTION_TYPE_RESTRICTION__NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1686,7 +1822,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__STYLE = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 3;
+	int CONNECTION_TYPE_RESTRICTION__STYLE = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1695,7 +1831,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__ATTRIBUTES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 4;
+	int CONNECTION_TYPE_RESTRICTION__ATTRIBUTES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1704,7 +1840,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__DOCUMENTATION = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 5;
+	int CONNECTION_TYPE_RESTRICTION__DOCUMENTATION = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1713,7 +1849,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__MODIFIED = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 6;
+	int CONNECTION_TYPE_RESTRICTION__MODIFIED = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1722,7 +1858,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__MODIFIER = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 7;
+	int CONNECTION_TYPE_RESTRICTION__MODIFIER = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1731,7 +1867,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__TRACE_LINK = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 8;
+	int CONNECTION_TYPE_RESTRICTION__TRACE_LINK = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1740,7 +1876,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__VARIANTS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 9;
+	int CONNECTION_TYPE_RESTRICTION__VARIANTS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1749,7 +1885,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__OPERATION_MODES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 10;
+	int CONNECTION_TYPE_RESTRICTION__OPERATION_MODES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Connection Type Name</b></em>' attribute.
@@ -1758,7 +1894,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 11;
+	int CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1767,7 +1903,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__IS_FORBIDDEN = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 12;
+	int CONNECTION_TYPE_RESTRICTION__IS_FORBIDDEN = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Connection Types</b></em>' reference list.
@@ -1776,25 +1912,25 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION__CONNECTION_TYPES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 13;
+	int CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
-	 * The number of structural features of the '<em>Conection Type Restriction</em>' class.
+	 * The number of structural features of the '<em>Connection Type Restriction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION_FEATURE_COUNT = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 14;
+	int CONNECTION_TYPE_RESTRICTION_FEATURE_COUNT = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
-	 * The number of operations of the '<em>Conection Type Restriction</em>' class.
+	 * The number of operations of the '<em>Connection Type Restriction</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONECTION_TYPE_RESTRICTION_OPERATION_COUNT = SIGNAL_RESTRICTION_A_OPERATION_COUNT + 0;
+	int CONNECTION_TYPE_RESTRICTION_OPERATION_COUNT = SIGNAL_RESTRICTION_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl <em>Connection Restriction</em>}' class.
@@ -1804,7 +1940,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConnectionRestriction()
 	 * @generated
 	 */
-	int CONNECTION_RESTRICTION = 14;
+	int CONNECTION_RESTRICTION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' reference list.
@@ -1816,13 +1952,22 @@ public interface RestrictionsPackage extends EPackage {
 	int CONNECTION_RESTRICTION__SIGNALS = SIGNAL_RESTRICTION_A__SIGNALS;
 
 	/**
+	 * The feature id for the '<em><b>Signal Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_RESTRICTION__SIGNAL_GROUPS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__SUBFUNCTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 0;
+	int CONNECTION_RESTRICTION__SUBFUNCTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1831,7 +1976,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__ID = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 1;
+	int CONNECTION_RESTRICTION__ID = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1840,7 +1985,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 2;
+	int CONNECTION_RESTRICTION__NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1849,7 +1994,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__STYLE = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 3;
+	int CONNECTION_RESTRICTION__STYLE = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1858,7 +2003,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__ATTRIBUTES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 4;
+	int CONNECTION_RESTRICTION__ATTRIBUTES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1867,7 +2012,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__DOCUMENTATION = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 5;
+	int CONNECTION_RESTRICTION__DOCUMENTATION = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1876,7 +2021,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__MODIFIED = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 6;
+	int CONNECTION_RESTRICTION__MODIFIED = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1885,7 +2030,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__MODIFIER = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 7;
+	int CONNECTION_RESTRICTION__MODIFIER = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1894,7 +2039,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__TRACE_LINK = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 8;
+	int CONNECTION_RESTRICTION__TRACE_LINK = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1903,7 +2048,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__VARIANTS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 9;
+	int CONNECTION_RESTRICTION__VARIANTS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1912,7 +2057,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__OPERATION_MODES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 10;
+	int CONNECTION_RESTRICTION__OPERATION_MODES = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Connection Name</b></em>' attribute.
@@ -1921,7 +2066,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__CONNECTION_NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 11;
+	int CONNECTION_RESTRICTION__CONNECTION_NAME = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Is Forbidden</b></em>' attribute.
@@ -1930,7 +2075,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__IS_FORBIDDEN = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 12;
+	int CONNECTION_RESTRICTION__IS_FORBIDDEN = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' reference list.
@@ -1939,7 +2084,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION__CONNECTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 13;
+	int CONNECTION_RESTRICTION__CONNECTIONS = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Connection Restriction</em>' class.
@@ -1948,7 +2093,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_RESTRICTION_FEATURE_COUNT = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 14;
+	int CONNECTION_RESTRICTION_FEATURE_COUNT = SIGNAL_RESTRICTION_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>Connection Restriction</em>' class.
@@ -1967,7 +2112,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSegregationRestriction()
 	 * @generated
 	 */
-	int SEGREGATION_RESTRICTION = 15;
+	int SEGREGATION_RESTRICTION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2247,7 +2392,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSynchronicityRestriction()
 	 * @generated
 	 */
-	int SYNCHRONICITY_RESTRICTION = 16;
+	int SYNCHRONICITY_RESTRICTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2383,7 +2528,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskAtomicRestriction()
 	 * @generated
 	 */
-	int TASK_ATOMIC_RESTRICTION = 17;
+	int TASK_ATOMIC_RESTRICTION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -2395,13 +2540,31 @@ public interface RestrictionsPackage extends EPackage {
 	int TASK_ATOMIC_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_ATOMIC_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_ATOMIC_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int TASK_ATOMIC_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2410,7 +2573,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int TASK_ATOMIC_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2419,7 +2582,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int TASK_ATOMIC_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2428,7 +2591,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int TASK_ATOMIC_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2437,7 +2600,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int TASK_ATOMIC_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2446,7 +2609,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int TASK_ATOMIC_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2455,7 +2618,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int TASK_ATOMIC_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2464,7 +2627,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int TASK_ATOMIC_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2473,7 +2636,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int TASK_ATOMIC_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2482,7 +2645,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int TASK_ATOMIC_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Task Atomic Restriction</em>' class.
@@ -2491,7 +2654,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ATOMIC_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int TASK_ATOMIC_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Task Atomic Restriction</em>' class.
@@ -2510,7 +2673,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTaskSymmetryRestriction()
 	 * @generated
 	 */
-	int TASK_SYMMETRY_RESTRICTION = 18;
+	int TASK_SYMMETRY_RESTRICTION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
@@ -2522,13 +2685,31 @@ public interface RestrictionsPackage extends EPackage {
 	int TASK_SYMMETRY_RESTRICTION__TASKS = TASK_RESTRICTION_A__TASKS;
 
 	/**
+	 * The feature id for the '<em><b>Task Groups</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SYMMETRY_RESTRICTION__TASK_GROUPS = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Subfunctions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SYMMETRY_RESTRICTION__SUBFUNCTIONS = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 0;
+	int TASK_SYMMETRY_RESTRICTION__ID = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2537,7 +2718,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 1;
+	int TASK_SYMMETRY_RESTRICTION__NAME = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2546,7 +2727,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 2;
+	int TASK_SYMMETRY_RESTRICTION__STYLE = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2555,7 +2736,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 3;
+	int TASK_SYMMETRY_RESTRICTION__ATTRIBUTES = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2564,7 +2745,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 4;
+	int TASK_SYMMETRY_RESTRICTION__DOCUMENTATION = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2573,7 +2754,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 5;
+	int TASK_SYMMETRY_RESTRICTION__MODIFIED = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2582,7 +2763,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 6;
+	int TASK_SYMMETRY_RESTRICTION__MODIFIER = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2591,7 +2772,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 7;
+	int TASK_SYMMETRY_RESTRICTION__TRACE_LINK = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2600,7 +2781,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 8;
+	int TASK_SYMMETRY_RESTRICTION__OPERATION_MODES = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2609,7 +2790,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 9;
+	int TASK_SYMMETRY_RESTRICTION__VARIANTS = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -2618,7 +2799,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION__TYPE = TASK_RESTRICTION_A_FEATURE_COUNT + 10;
+	int TASK_SYMMETRY_RESTRICTION__TYPE = TASK_RESTRICTION_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Task Symmetry Restriction</em>' class.
@@ -2627,7 +2808,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_SYMMETRY_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 11;
+	int TASK_SYMMETRY_RESTRICTION_FEATURE_COUNT = TASK_RESTRICTION_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Task Symmetry Restriction</em>' class.
@@ -2646,7 +2827,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getTimeDelayRestriction()
 	 * @generated
 	 */
-	int TIME_DELAY_RESTRICTION = 19;
+	int TIME_DELAY_RESTRICTION = 20;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2919,13 +3100,13 @@ public interface RestrictionsPackage extends EPackage {
 	int SUBRESTRICTIONS__TASK_SYMMETRY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Synchronicity Restriction</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBRESTRICTIONS__INPUT_SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION;
+	int SUBRESTRICTIONS__SYNCHRONICITY_RESTRICTION = RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION;
 
 	/**
 	 * The feature id for the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -2964,13 +3145,13 @@ public interface RestrictionsPackage extends EPackage {
 	int SUBRESTRICTIONS__SUBRESTRICTIONS = RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Time Delay Restrictions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBRESTRICTIONS__TIMEDELAYRESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS;
+	int SUBRESTRICTIONS__TIME_DELAY_RESTRICTIONS = RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -3016,7 +3197,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSymmetryTypesE()
 	 * @generated
 	 */
-	int SYMMETRY_TYPES_E = 21;
+	int SYMMETRY_TYPES_E = 22;
 
 
 	/**
@@ -3107,15 +3288,15 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getRestrictionsContainerA_TaskSymmetryRestrictions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSynchronicityRestriction <em>Synchronicity Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input Synchronicity Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction()
+	 * @return the meta object for the containment reference list '<em>Synchronicity Restriction</em>'.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSynchronicityRestriction()
 	 * @see #getRestrictionsContainerA()
 	 * @generated
 	 */
-	EReference getRestrictionsContainerA_InputSynchronicityRestriction();
+	EReference getRestrictionsContainerA_SynchronicityRestriction();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionRestrictions <em>Connection Restrictions</em>}'.
@@ -3162,15 +3343,15 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getRestrictionsContainerA_Subrestrictions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions <em>Timedelayrestrictions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimeDelayRestrictions <em>Time Delay Restrictions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Timedelayrestrictions</em>'.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions()
+	 * @return the meta object for the containment reference list '<em>Time Delay Restrictions</em>'.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimeDelayRestrictions()
 	 * @see #getRestrictionsContainerA()
 	 * @generated
 	 */
-	EReference getRestrictionsContainerA_Timedelayrestrictions();
+	EReference getRestrictionsContainerA_TimeDelayRestrictions();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.Restrictions <em>Restrictions</em>}'.
@@ -3317,6 +3498,27 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTaskGroupRestrictionA_TaskGroups();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.SignalGroupRestrictionA <em>Signal Group Restriction A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal Group Restriction A</em>'.
+	 * @see de.oaam.model.oaam.restrictions.SignalGroupRestrictionA
+	 * @generated
+	 */
+	EClass getSignalGroupRestrictionA();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.restrictions.SignalGroupRestrictionA#getSignalGroups <em>Signal Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Signal Groups</em>'.
+	 * @see de.oaam.model.oaam.restrictions.SignalGroupRestrictionA#getSignalGroups()
+	 * @see #getSignalGroupRestrictionA()
+	 * @generated
+	 */
+	EReference getSignalGroupRestrictionA_SignalGroups();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.LocationRestriction <em>Location Restriction</em>}'.
@@ -3534,47 +3736,47 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getDeviceTypeRestriction_DeviceTypes();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction <em>Conection Type Restriction</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction <em>Connection Type Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Conection Type Restriction</em>'.
-	 * @see de.oaam.model.oaam.restrictions.ConectionTypeRestriction
+	 * @return the meta object for class '<em>Connection Type Restriction</em>'.
+	 * @see de.oaam.model.oaam.restrictions.ConnectionTypeRestriction
 	 * @generated
 	 */
-	EClass getConectionTypeRestriction();
+	EClass getConnectionTypeRestriction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction#getConnectionTypeName <em>Connection Type Name</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#getConnectionTypeName <em>Connection Type Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Connection Type Name</em>'.
-	 * @see de.oaam.model.oaam.restrictions.ConectionTypeRestriction#getConnectionTypeName()
-	 * @see #getConectionTypeRestriction()
+	 * @see de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#getConnectionTypeName()
+	 * @see #getConnectionTypeRestriction()
 	 * @generated
 	 */
-	EAttribute getConectionTypeRestriction_ConnectionTypeName();
+	EAttribute getConnectionTypeRestriction_ConnectionTypeName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction#isIsForbidden <em>Is Forbidden</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#isIsForbidden <em>Is Forbidden</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Forbidden</em>'.
-	 * @see de.oaam.model.oaam.restrictions.ConectionTypeRestriction#isIsForbidden()
-	 * @see #getConectionTypeRestriction()
+	 * @see de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#isIsForbidden()
+	 * @see #getConnectionTypeRestriction()
 	 * @generated
 	 */
-	EAttribute getConectionTypeRestriction_IsForbidden();
+	EAttribute getConnectionTypeRestriction_IsForbidden();
 
 	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction#getConnectionTypes <em>Connection Types</em>}'.
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#getConnectionTypes <em>Connection Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Connection Types</em>'.
-	 * @see de.oaam.model.oaam.restrictions.ConectionTypeRestriction#getConnectionTypes()
-	 * @see #getConectionTypeRestriction()
+	 * @see de.oaam.model.oaam.restrictions.ConnectionTypeRestriction#getConnectionTypes()
+	 * @see #getConnectionTypeRestriction()
 	 * @generated
 	 */
-	EReference getConectionTypeRestriction_ConnectionTypes();
+	EReference getConnectionTypeRestriction_ConnectionTypes();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.ConnectionRestriction <em>Connection Restriction</em>}'.
@@ -4022,12 +4224,12 @@ public interface RestrictionsPackage extends EPackage {
 		EReference RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS = eINSTANCE.getRestrictionsContainerA_TaskSymmetryRestrictions();
 
 		/**
-		 * The meta object literal for the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Synchronicity Restriction</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION = eINSTANCE.getRestrictionsContainerA_InputSynchronicityRestriction();
+		EReference RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION = eINSTANCE.getRestrictionsContainerA_SynchronicityRestriction();
 
 		/**
 		 * The meta object literal for the '<em><b>Connection Restrictions</b></em>' containment reference list feature.
@@ -4062,12 +4264,12 @@ public interface RestrictionsPackage extends EPackage {
 		EReference RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS = eINSTANCE.getRestrictionsContainerA_Subrestrictions();
 
 		/**
-		 * The meta object literal for the '<em><b>Timedelayrestrictions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Time Delay Restrictions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS = eINSTANCE.getRestrictionsContainerA_Timedelayrestrictions();
+		EReference RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS = eINSTANCE.getRestrictionsContainerA_TimeDelayRestrictions();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.RestrictionsImpl <em>Restrictions</em>}' class.
@@ -4196,6 +4398,24 @@ public interface RestrictionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK_GROUP_RESTRICTION_A__TASK_GROUPS = eINSTANCE.getTaskGroupRestrictionA_TaskGroups();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.SignalGroupRestrictionAImpl <em>Signal Group Restriction A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.restrictions.impl.SignalGroupRestrictionAImpl
+		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSignalGroupRestrictionA()
+		 * @generated
+		 */
+		EClass SIGNAL_GROUP_RESTRICTION_A = eINSTANCE.getSignalGroupRestrictionA();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal Groups</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS = eINSTANCE.getSignalGroupRestrictionA_SignalGroups();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl <em>Location Restriction</em>}' class.
@@ -4368,14 +4588,14 @@ public interface RestrictionsPackage extends EPackage {
 		EReference DEVICE_TYPE_RESTRICTION__DEVICE_TYPES = eINSTANCE.getDeviceTypeRestriction_DeviceTypes();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.ConectionTypeRestrictionImpl <em>Conection Type Restriction</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.ConnectionTypeRestrictionImpl <em>Connection Type Restriction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.ConectionTypeRestrictionImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConectionTypeRestriction()
+		 * @see de.oaam.model.oaam.restrictions.impl.ConnectionTypeRestrictionImpl
+		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getConnectionTypeRestriction()
 		 * @generated
 		 */
-		EClass CONECTION_TYPE_RESTRICTION = eINSTANCE.getConectionTypeRestriction();
+		EClass CONNECTION_TYPE_RESTRICTION = eINSTANCE.getConnectionTypeRestriction();
 
 		/**
 		 * The meta object literal for the '<em><b>Connection Type Name</b></em>' attribute feature.
@@ -4383,7 +4603,7 @@ public interface RestrictionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME = eINSTANCE.getConectionTypeRestriction_ConnectionTypeName();
+		EAttribute CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME = eINSTANCE.getConnectionTypeRestriction_ConnectionTypeName();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Forbidden</b></em>' attribute feature.
@@ -4391,7 +4611,7 @@ public interface RestrictionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONECTION_TYPE_RESTRICTION__IS_FORBIDDEN = eINSTANCE.getConectionTypeRestriction_IsForbidden();
+		EAttribute CONNECTION_TYPE_RESTRICTION__IS_FORBIDDEN = eINSTANCE.getConnectionTypeRestriction_IsForbidden();
 
 		/**
 		 * The meta object literal for the '<em><b>Connection Types</b></em>' reference list feature.
@@ -4399,7 +4619,7 @@ public interface RestrictionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONECTION_TYPE_RESTRICTION__CONNECTION_TYPES = eINSTANCE.getConectionTypeRestriction_ConnectionTypes();
+		EReference CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPES = eINSTANCE.getConnectionTypeRestriction_ConnectionTypes();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.ConnectionRestrictionImpl <em>Connection Restriction</em>}' class.

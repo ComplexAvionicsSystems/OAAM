@@ -32,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConnectionRestriction extends SignalRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
+public interface ConnectionRestriction extends SignalRestrictionA, SignalGroupRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Connection Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

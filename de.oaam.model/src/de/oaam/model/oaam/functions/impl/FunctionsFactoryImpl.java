@@ -63,14 +63,14 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 			case FunctionsPackage.TASK_SYMMETRY: return createTaskSymmetry();
 			case FunctionsPackage.TASK_REDUNDANCY: return createTaskRedundancy();
 			case FunctionsPackage.FAILURE_CONDITION: return createFailureCondition();
-			case FunctionsPackage.SYSTEM_INPUT_STATE: return createSystemInputState();
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE: return createOutputIntegrityState();
 			case FunctionsPackage.SIGNAL: return createSignal();
 			case FunctionsPackage.SIGNAL_GROUP: return createSignalGroup();
 			case FunctionsPackage.INPUT: return createInput();
 			case FunctionsPackage.OUTPUT: return createOutput();
 			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: return createExternalOutputLink();
 			case FunctionsPackage.SUBFUNCTIONS: return createSubfunctions();
-			case FunctionsPackage.PARAMETER: return createParameter();
+			case FunctionsPackage.TASK_PARAMETER: return createTaskParameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -151,9 +151,9 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemInputState createSystemInputState() {
-		SystemInputStateImpl systemInputState = new SystemInputStateImpl();
-		return systemInputState;
+	public OutputIntegrityState createOutputIntegrityState() {
+		OutputIntegrityStateImpl outputIntegrityState = new OutputIntegrityStateImpl();
+		return outputIntegrityState;
 	}
 
 	/**
@@ -221,9 +221,9 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
+	public TaskParameter createTaskParameter() {
+		TaskParameterImpl taskParameter = new TaskParameterImpl();
+		return taskParameter;
 	}
 
 	/**

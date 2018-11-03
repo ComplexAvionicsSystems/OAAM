@@ -15,8 +15,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-
+import de.oaam.model.oaam.systems.ProvidedInformationA;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -80,7 +79,7 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	 * @generated
 	 * @ordered
 	 */
-	protected ProvidedOutputA implements_;
+	protected ProvidedInformationA implements_;
 
 	/**
 	 * The cached value of the '{@link #getDeclaration() <em>Declaration</em>}' reference.
@@ -170,10 +169,10 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedOutputA getImplements() {
+	public ProvidedInformationA getImplements() {
 		if (implements_ != null && implements_.eIsProxy()) {
 			InternalEObject oldImplements = (InternalEObject)implements_;
-			implements_ = (ProvidedOutputA)eResolveProxy(oldImplements);
+			implements_ = (ProvidedInformationA)eResolveProxy(oldImplements);
 			if (implements_ != oldImplements) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.OUTPUT__IMPLEMENTS, oldImplements, implements_));
@@ -187,7 +186,7 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedOutputA basicGetImplements() {
+	public ProvidedInformationA basicGetImplements() {
 		return implements_;
 	}
 
@@ -196,8 +195,8 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImplements(ProvidedOutputA newImplements) {
-		ProvidedOutputA oldImplements = implements_;
+	public void setImplements(ProvidedInformationA newImplements) {
+		ProvidedInformationA oldImplements = implements_;
 		implements_ = newImplements;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.OUTPUT__IMPLEMENTS, oldImplements, implements_));
@@ -332,7 +331,7 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 				getOperationModes().addAll((Collection<? extends OperationModeReference>)newValue);
 				return;
 			case FunctionsPackage.OUTPUT__IMPLEMENTS:
-				setImplements((ProvidedOutputA)newValue);
+				setImplements((ProvidedInformationA)newValue);
 				return;
 			case FunctionsPackage.OUTPUT__DECLARATION:
 				setDeclaration((OutputDeclaration)newValue);
@@ -363,7 +362,7 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 				getOperationModes().clear();
 				return;
 			case FunctionsPackage.OUTPUT__IMPLEMENTS:
-				setImplements((ProvidedOutputA)null);
+				setImplements((ProvidedInformationA)null);
 				return;
 			case FunctionsPackage.OUTPUT__DECLARATION:
 				setDeclaration((OutputDeclaration)null);

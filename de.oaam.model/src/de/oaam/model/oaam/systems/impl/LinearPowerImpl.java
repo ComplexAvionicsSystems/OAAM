@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class LinearPowerImpl extends PowerImpl implements LinearPower {
+public class LinearPowerImpl extends InformationPowerImpl implements LinearPower {
 	/**
 	 * The default value of the '{@link #getForce() <em>Force</em>}' attribute.
 	 * <!-- begin-user-doc -->

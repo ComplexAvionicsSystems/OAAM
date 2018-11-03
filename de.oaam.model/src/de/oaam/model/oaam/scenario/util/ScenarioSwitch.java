@@ -67,11 +67,11 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ScenarioPackage.PARAMETER_A: {
-				ParameterA parameterA = (ParameterA)theEObject;
-				T result = caseParameterA(parameterA);
-				if (result == null) result = caseModeDependentElementA(parameterA);
-				if (result == null) result = caseVariantDependentElementA(parameterA);
+			case ScenarioPackage.SCENARIO_PARAMETER_A: {
+				ScenarioParameterA scenarioParameterA = (ScenarioParameterA)theEObject;
+				T result = caseScenarioParameterA(scenarioParameterA);
+				if (result == null) result = caseModeDependentElementA(scenarioParameterA);
+				if (result == null) result = caseVariantDependentElementA(scenarioParameterA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,23 +102,23 @@ public class ScenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ScenarioPackage.PARAMETER_NUMERIC: {
-				ParameterNumeric parameterNumeric = (ParameterNumeric)theEObject;
-				T result = caseParameterNumeric(parameterNumeric);
-				if (result == null) result = caseParameterA(parameterNumeric);
-				if (result == null) result = caseOaamBaseElementA(parameterNumeric);
-				if (result == null) result = caseModeDependentElementA(parameterNumeric);
-				if (result == null) result = caseVariantDependentElementA(parameterNumeric);
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC: {
+				ScenarioParameterNumeric scenarioParameterNumeric = (ScenarioParameterNumeric)theEObject;
+				T result = caseScenarioParameterNumeric(scenarioParameterNumeric);
+				if (result == null) result = caseScenarioParameterA(scenarioParameterNumeric);
+				if (result == null) result = caseOaamBaseElementA(scenarioParameterNumeric);
+				if (result == null) result = caseModeDependentElementA(scenarioParameterNumeric);
+				if (result == null) result = caseVariantDependentElementA(scenarioParameterNumeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ScenarioPackage.PARAMETER_BOOL: {
-				ParameterBool parameterBool = (ParameterBool)theEObject;
-				T result = caseParameterBool(parameterBool);
-				if (result == null) result = caseParameterA(parameterBool);
-				if (result == null) result = caseOaamBaseElementA(parameterBool);
-				if (result == null) result = caseModeDependentElementA(parameterBool);
-				if (result == null) result = caseVariantDependentElementA(parameterBool);
+			case ScenarioPackage.SCENARIO_PARAMETER_BOOL: {
+				ScenarioParameterBool scenarioParameterBool = (ScenarioParameterBool)theEObject;
+				T result = caseScenarioParameterBool(scenarioParameterBool);
+				if (result == null) result = caseScenarioParameterA(scenarioParameterBool);
+				if (result == null) result = caseOaamBaseElementA(scenarioParameterBool);
+				if (result == null) result = caseModeDependentElementA(scenarioParameterBool);
+				if (result == null) result = caseVariantDependentElementA(scenarioParameterBool);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,7 +168,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterA(ParameterA object) {
+	public T caseScenarioParameterA(ScenarioParameterA object) {
 		return null;
 	}
 
@@ -243,7 +243,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterNumeric(ParameterNumeric object) {
+	public T caseScenarioParameterNumeric(ScenarioParameterNumeric object) {
 		return null;
 	}
 
@@ -258,7 +258,7 @@ public class ScenarioSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBool(ParameterBool object) {
+	public T caseScenarioParameterBool(ScenarioParameterBool object) {
 		return null;
 	}
 

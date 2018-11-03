@@ -104,6 +104,10 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createTaskGroupRestrictionAAdapter();
 			}
 			@Override
+			public Adapter caseSignalGroupRestrictionA(SignalGroupRestrictionA object) {
+				return createSignalGroupRestrictionAAdapter();
+			}
+			@Override
 			public Adapter caseLocationRestriction(LocationRestriction object) {
 				return createLocationRestrictionAdapter();
 			}
@@ -124,8 +128,8 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 				return createDeviceTypeRestrictionAdapter();
 			}
 			@Override
-			public Adapter caseConectionTypeRestriction(ConectionTypeRestriction object) {
-				return createConectionTypeRestrictionAdapter();
+			public Adapter caseConnectionTypeRestriction(ConnectionTypeRestriction object) {
+				return createConnectionTypeRestrictionAdapter();
 			}
 			@Override
 			public Adapter caseConnectionRestriction(ConnectionRestriction object) {
@@ -300,6 +304,20 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.SignalGroupRestrictionA <em>Signal Group Restriction A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.restrictions.SignalGroupRestrictionA
+	 * @generated
+	 */
+	public Adapter createSignalGroupRestrictionAAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.LocationRestriction <em>Location Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -370,16 +388,16 @@ public class RestrictionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction <em>Conection Type Restriction</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction <em>Connection Type Restriction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.restrictions.ConectionTypeRestriction
+	 * @see de.oaam.model.oaam.restrictions.ConnectionTypeRestriction
 	 * @generated
 	 */
-	public Adapter createConectionTypeRestrictionAdapter() {
+	public Adapter createConnectionTypeRestrictionAdapter() {
 		return null;
 	}
 

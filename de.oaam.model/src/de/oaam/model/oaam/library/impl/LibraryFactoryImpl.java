@@ -77,7 +77,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.IO_GROUP: return createIoGroup();
 			case LibraryPackage.ATTRIBUTE_DEFINITION: return createAttributeDefinition();
 			case LibraryPackage.FAULT_PROPAGATION: return createFaultPropagation();
-			case LibraryPackage.FUNCTION_INPUT_STATE: return createFunctionInputState();
+			case LibraryPackage.TASK_INPUT_STATE: return createTaskInputState();
 			case LibraryPackage.POWER_SOURCE: return createPowerSource();
 			case LibraryPackage.RESOURCE_LINK: return createResourceLink();
 			case LibraryPackage.RESOURCE_TYPE_MODIFIER: return createResourceTypeModifier();
@@ -86,12 +86,12 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.TASK_TYPE_DISSIMILARITY: return createTaskTypeDissimilarity();
 			case LibraryPackage.DEVICE_TYPE_DISSIMILARITY: return createDeviceTypeDissimilarity();
 			case LibraryPackage.RESOURCE_TYPE_DISSIMILARITY: return createResourceTypeDissimilarity();
-			case LibraryPackage.LIBRARY: return createLibrary();
 			case LibraryPackage.SUBLIBRARY: return createSublibrary();
-			case LibraryPackage.OUTPUT_TRIGGER: return createOutputTrigger();
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER: return createFunctionInputTrigger();
-			case LibraryPackage.INTERNAL_STATE_DECLARATION: return createInternalStateDeclaration();
-			case LibraryPackage.PARAMETER_DECLARATION: return createParameterDeclaration();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER: return createTaskOutputTrigger();
+			case LibraryPackage.TASK_INPUT_TRIGGER: return createTaskInputTrigger();
+			case LibraryPackage.TASK_STATE_DECLARATION: return createTaskStateDeclaration();
+			case LibraryPackage.TASK_PARAMETER_DECLARATION: return createTaskParameterDeclaration();
+			case LibraryPackage.LIBRARY: return createLibrary();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -340,9 +340,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionInputState createFunctionInputState() {
-		FunctionInputStateImpl functionInputState = new FunctionInputStateImpl();
-		return functionInputState;
+	public TaskInputState createTaskInputState() {
+		TaskInputStateImpl taskInputState = new TaskInputStateImpl();
+		return taskInputState;
 	}
 
 	/**
@@ -450,9 +450,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputTrigger createOutputTrigger() {
-		OutputTriggerImpl outputTrigger = new OutputTriggerImpl();
-		return outputTrigger;
+	public TaskOutputTrigger createTaskOutputTrigger() {
+		TaskOutputTriggerImpl taskOutputTrigger = new TaskOutputTriggerImpl();
+		return taskOutputTrigger;
 	}
 
 	/**
@@ -460,9 +460,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionInputTrigger createFunctionInputTrigger() {
-		FunctionInputTriggerImpl functionInputTrigger = new FunctionInputTriggerImpl();
-		return functionInputTrigger;
+	public TaskInputTrigger createTaskInputTrigger() {
+		TaskInputTriggerImpl taskInputTrigger = new TaskInputTriggerImpl();
+		return taskInputTrigger;
 	}
 
 	/**
@@ -470,9 +470,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternalStateDeclaration createInternalStateDeclaration() {
-		InternalStateDeclarationImpl internalStateDeclaration = new InternalStateDeclarationImpl();
-		return internalStateDeclaration;
+	public TaskStateDeclaration createTaskStateDeclaration() {
+		TaskStateDeclarationImpl taskStateDeclaration = new TaskStateDeclarationImpl();
+		return taskStateDeclaration;
 	}
 
 	/**
@@ -480,9 +480,9 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterDeclaration createParameterDeclaration() {
-		ParameterDeclarationImpl parameterDeclaration = new ParameterDeclarationImpl();
-		return parameterDeclaration;
+	public TaskParameterDeclaration createTaskParameterDeclaration() {
+		TaskParameterDeclarationImpl taskParameterDeclaration = new TaskParameterDeclarationImpl();
+		return taskParameterDeclaration;
 	}
 
 	/**

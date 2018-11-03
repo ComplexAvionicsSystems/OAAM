@@ -133,11 +133,12 @@ public class AnatomySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AnatomyPackage.ANATOMY: {
-				Anatomy anatomy = (Anatomy)theEObject;
-				T result = caseAnatomy(anatomy);
-				if (result == null) result = caseAnatomyContainerA(anatomy);
-				if (result == null) result = caseOaamBaseElementA(anatomy);
+			case AnatomyPackage.AREA_SYMMETRY: {
+				AreaSymmetry areaSymmetry = (AreaSymmetry)theEObject;
+				T result = caseAreaSymmetry(areaSymmetry);
+				if (result == null) result = caseOaamBaseElementA(areaSymmetry);
+				if (result == null) result = caseModeDependentElementA(areaSymmetry);
+				if (result == null) result = caseVariantDependentElementA(areaSymmetry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -148,6 +149,14 @@ public class AnatomySwitch<T> extends Switch<T> {
 				if (result == null) result = caseVariantDependentElementA(subanatomy);
 				if (result == null) result = caseModeDependentElementA(subanatomy);
 				if (result == null) result = caseOaamBaseElementA(subanatomy);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AnatomyPackage.ANATOMY: {
+				Anatomy anatomy = (Anatomy)theEObject;
+				T result = caseAnatomy(anatomy);
+				if (result == null) result = caseAnatomyContainerA(anatomy);
+				if (result == null) result = caseOaamBaseElementA(anatomy);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,6 +266,21 @@ public class AnatomySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLocationSymmetry(LocationSymmetry object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Area Symmetry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Area Symmetry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAreaSymmetry(AreaSymmetry object) {
 		return null;
 	}
 

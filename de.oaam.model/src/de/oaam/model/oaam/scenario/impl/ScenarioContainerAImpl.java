@@ -4,9 +4,9 @@ package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.scenario.OperationMode;
-import de.oaam.model.oaam.scenario.ParameterA;
 import de.oaam.model.oaam.scenario.ScenarioContainerA;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+import de.oaam.model.oaam.scenario.ScenarioParameterA;
 import de.oaam.model.oaam.scenario.Subscenario;
 import de.oaam.model.oaam.scenario.Variant;
 
@@ -47,7 +47,7 @@ public abstract class ScenarioContainerAImpl extends OaamBaseElementAImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ParameterA> parameters;
+	protected EList<ScenarioParameterA> parameters;
 
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' containment reference list.
@@ -103,9 +103,9 @@ public abstract class ScenarioContainerAImpl extends OaamBaseElementAImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ParameterA> getParameters() {
+	public EList<ScenarioParameterA> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentEList<ParameterA>(ParameterA.class, this, ScenarioPackage.SCENARIO_CONTAINER_A__PARAMETERS);
+			parameters = new EObjectContainmentEList<ScenarioParameterA>(ScenarioParameterA.class, this, ScenarioPackage.SCENARIO_CONTAINER_A__PARAMETERS);
 		}
 		return parameters;
 	}
@@ -197,7 +197,7 @@ public abstract class ScenarioContainerAImpl extends OaamBaseElementAImpl implem
 		switch (featureID) {
 			case ScenarioPackage.SCENARIO_CONTAINER_A__PARAMETERS:
 				getParameters().clear();
-				getParameters().addAll((Collection<? extends ParameterA>)newValue);
+				getParameters().addAll((Collection<? extends ScenarioParameterA>)newValue);
 				return;
 			case ScenarioPackage.SCENARIO_CONTAINER_A__VARIANTS:
 				getVariants().clear();

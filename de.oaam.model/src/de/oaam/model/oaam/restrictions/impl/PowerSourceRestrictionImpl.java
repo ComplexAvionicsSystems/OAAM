@@ -6,8 +6,10 @@ import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.Signal;
+import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
 
+import de.oaam.model.oaam.functions.TaskGroup;
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.library.PowerSource;
@@ -15,9 +17,11 @@ import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.restrictions.DeviceRestrictionA;
 import de.oaam.model.oaam.restrictions.PowerSourceRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
+import de.oaam.model.oaam.restrictions.SignalGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
 import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
+import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -49,9 +53,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getDevices <em>Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getTaskGroups <em>Task Groups</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSignals <em>Signals</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSignalGroups <em>Signal Groups</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.PowerSourceRestrictionImpl#getStyle <em>Style</em>}</li>
@@ -71,14 +77,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements PowerSourceRestriction {
 	/**
-	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' reference.
+	 * The cached value of the '{@link #getTaskGroups() <em>Task Groups</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDevices()
+	 * @see #getTaskGroups()
 	 * @generated
 	 * @ordered
 	 */
-	protected Device devices;
+	protected EList<TaskGroup> taskGroups;
 
 	/**
 	 * The cached value of the '{@link #getSignals() <em>Signals</em>}' reference list.
@@ -91,6 +97,16 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	protected EList<Signal> signals;
 
 	/**
+	 * The cached value of the '{@link #getSignalGroups() <em>Signal Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSignalGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SignalGroup> signalGroups;
+
+	/**
 	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,6 +115,16 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 * @ordered
 	 */
 	protected EList<Subfunctions> subfunctions;
+
+	/**
+	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDevices()
+	 * @generated
+	 * @ordered
+	 */
+	protected Device devices;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -344,6 +370,18 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TaskGroup> getTaskGroups() {
+		if (taskGroups == null) {
+			taskGroups = new EObjectResolvingEList<TaskGroup>(TaskGroup.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS);
+		}
+		return taskGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Device getDevices() {
 		if (devices != null && devices.eIsProxy()) {
 			InternalEObject oldDevices = (InternalEObject)devices;
@@ -387,6 +425,18 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 			signals = new EObjectResolvingEList<Signal>(Signal.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS);
 		}
 		return signals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SignalGroup> getSignalGroups() {
+		if (signalGroups == null) {
+			signalGroups = new EObjectResolvingEList<SignalGroup>(SignalGroup.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS);
+		}
+		return signalGroups;
 	}
 
 	/**
@@ -662,13 +712,17 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS:
+				return getTaskGroups();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
+				return getSignals();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS:
+				return getSignalGroups();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
+				return getSubfunctions();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
 				if (resolve) return getDevices();
 				return basicGetDevices();
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
-				return getSignals();
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
-				return getSubfunctions();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				return getId();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME:
@@ -708,16 +762,24 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
-				setDevices((Device)newValue);
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
+				getTaskGroups().addAll((Collection<? extends TaskGroup>)newValue);
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				getSignals().clear();
 				getSignals().addAll((Collection<? extends Signal>)newValue);
 				return;
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
+				getSignalGroups().addAll((Collection<? extends SignalGroup>)newValue);
+				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
 				getSubfunctions().addAll((Collection<? extends Subfunctions>)newValue);
+				return;
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
+				setDevices((Device)newValue);
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				setId((String)newValue);
@@ -774,14 +836,20 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
-				setDevices((Device)null);
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				getSignals().clear();
 				return;
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
+				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
+				return;
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
+				setDevices((Device)null);
 				return;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				setId(ID_EDEFAULT);
@@ -834,12 +902,16 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
-				return devices != null;
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS:
+				return taskGroups != null && !taskGroups.isEmpty();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS:
 				return signals != null && !signals.isEmpty();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS:
+				return signalGroups != null && !signalGroups.isEmpty();
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS:
 				return subfunctions != null && !subfunctions.isEmpty();
+			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES:
+				return devices != null;
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION__NAME:
@@ -877,9 +949,9 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DeviceRestrictionA.class) {
+		if (baseClass == TaskGroupRestrictionA.class) {
 			switch (derivedFeatureID) {
-				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES: return RestrictionsPackage.DEVICE_RESTRICTION_A__DEVICES;
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS: return RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS;
 				default: return -1;
 			}
 		}
@@ -889,9 +961,21 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				default: return -1;
 			}
 		}
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS: return RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (derivedFeatureID) {
 				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS: return RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS;
+				default: return -1;
+			}
+		}
+		if (baseClass == DeviceRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES: return RestrictionsPackage.DEVICE_RESTRICTION_A__DEVICES;
 				default: return -1;
 			}
 		}
@@ -930,9 +1014,9 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DeviceRestrictionA.class) {
+		if (baseClass == TaskGroupRestrictionA.class) {
 			switch (baseFeatureID) {
-				case RestrictionsPackage.DEVICE_RESTRICTION_A__DEVICES: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES;
+				case RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__TASK_GROUPS;
 				default: return -1;
 			}
 		}
@@ -942,9 +1026,21 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 				default: return -1;
 			}
 		}
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SubfunctionRestrictionA.class) {
 			switch (baseFeatureID) {
 				case RestrictionsPackage.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS;
+				default: return -1;
+			}
+		}
+		if (baseClass == DeviceRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.DEVICE_RESTRICTION_A__DEVICES: return RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES;
 				default: return -1;
 			}
 		}

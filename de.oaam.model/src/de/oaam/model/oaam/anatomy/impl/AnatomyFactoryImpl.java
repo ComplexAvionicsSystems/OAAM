@@ -62,8 +62,9 @@ public class AnatomyFactoryImpl extends EFactoryImpl implements AnatomyFactory {
 			case AnatomyPackage.DUCT_OPENING: return createDuctOpening();
 			case AnatomyPackage.POSITION3_D: return createPosition3D();
 			case AnatomyPackage.LOCATION_SYMMETRY: return createLocationSymmetry();
-			case AnatomyPackage.ANATOMY: return createAnatomy();
+			case AnatomyPackage.AREA_SYMMETRY: return createAreaSymmetry();
 			case AnatomyPackage.SUBANATOMY: return createSubanatomy();
+			case AnatomyPackage.ANATOMY: return createAnatomy();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -127,6 +128,16 @@ public class AnatomyFactoryImpl extends EFactoryImpl implements AnatomyFactory {
 	public LocationSymmetry createLocationSymmetry() {
 		LocationSymmetryImpl locationSymmetry = new LocationSymmetryImpl();
 		return locationSymmetry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AreaSymmetry createAreaSymmetry() {
+		AreaSymmetryImpl areaSymmetry = new AreaSymmetryImpl();
+		return areaSymmetry;
 	}
 
 	/**

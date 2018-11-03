@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubdeviceInDeviceCapabilities <em>Subdevice In Device Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubcapabilities <em>Subcapabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubconnectionInDeviceCapabilities <em>Subconnection In Device Capabilities</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA()
@@ -120,5 +121,20 @@ public interface CapabilitiesContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Subcapabilities> getSubcapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Subconnection In Device Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All subconnection capabilities
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Subconnection In Device Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SubconnectionInDeviceCapabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SubconnectionInDeviceCapability> getSubconnectionInDeviceCapabilities();
 
 } // CapabilitiesContainerA

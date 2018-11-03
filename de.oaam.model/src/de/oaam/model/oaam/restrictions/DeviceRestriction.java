@@ -32,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceRestriction extends TaskRestrictionA, SignalRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
+public interface DeviceRestriction extends TaskRestrictionA, TaskGroupRestrictionA, SignalRestrictionA, SignalGroupRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Device Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

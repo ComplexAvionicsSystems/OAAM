@@ -9,8 +9,8 @@ import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.InformationFlow;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.ProvidedInformationA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
@@ -74,7 +74,7 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * @generated
 	 * @ordered
 	 */
-	protected ProvidedOutputA from;
+	protected ProvidedInformationA from;
 
 	/**
 	 * The cached value of the '{@link #getTo() <em>To</em>}' reference.
@@ -84,7 +84,7 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * @generated
 	 * @ordered
 	 */
-	protected RequiredInputA to;
+	protected RequiredInformationA to;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,10 +134,10 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedOutputA getFrom() {
+	public ProvidedInformationA getFrom() {
 		if (from != null && from.eIsProxy()) {
 			InternalEObject oldFrom = (InternalEObject)from;
-			from = (ProvidedOutputA)eResolveProxy(oldFrom);
+			from = (ProvidedInformationA)eResolveProxy(oldFrom);
 			if (from != oldFrom) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemsPackage.INFORMATION_FLOW__FROM, oldFrom, from));
@@ -151,7 +151,7 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedOutputA basicGetFrom() {
+	public ProvidedInformationA basicGetFrom() {
 		return from;
 	}
 
@@ -160,8 +160,8 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(ProvidedOutputA newFrom) {
-		ProvidedOutputA oldFrom = from;
+	public void setFrom(ProvidedInformationA newFrom) {
+		ProvidedInformationA oldFrom = from;
 		from = newFrom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemsPackage.INFORMATION_FLOW__FROM, oldFrom, from));
@@ -172,10 +172,10 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredInputA getTo() {
+	public RequiredInformationA getTo() {
 		if (to != null && to.eIsProxy()) {
 			InternalEObject oldTo = (InternalEObject)to;
-			to = (RequiredInputA)eResolveProxy(oldTo);
+			to = (RequiredInformationA)eResolveProxy(oldTo);
 			if (to != oldTo) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SystemsPackage.INFORMATION_FLOW__TO, oldTo, to));
@@ -189,7 +189,7 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredInputA basicGetTo() {
+	public RequiredInformationA basicGetTo() {
 		return to;
 	}
 
@@ -198,8 +198,8 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(RequiredInputA newTo) {
-		RequiredInputA oldTo = to;
+	public void setTo(RequiredInformationA newTo) {
+		RequiredInformationA oldTo = to;
 		to = newTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemsPackage.INFORMATION_FLOW__TO, oldTo, to));
@@ -259,10 +259,10 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 				getVariants().addAll((Collection<? extends Variant>)newValue);
 				return;
 			case SystemsPackage.INFORMATION_FLOW__FROM:
-				setFrom((ProvidedOutputA)newValue);
+				setFrom((ProvidedInformationA)newValue);
 				return;
 			case SystemsPackage.INFORMATION_FLOW__TO:
-				setTo((RequiredInputA)newValue);
+				setTo((RequiredInformationA)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -283,10 +283,10 @@ public class InformationFlowImpl extends OaamBaseElementAImpl implements Informa
 				getVariants().clear();
 				return;
 			case SystemsPackage.INFORMATION_FLOW__FROM:
-				setFrom((ProvidedOutputA)null);
+				setFrom((ProvidedInformationA)null);
 				return;
 			case SystemsPackage.INFORMATION_FLOW__TO:
-				setTo((RequiredInputA)null);
+				setTo((RequiredInformationA)null);
 				return;
 		}
 		super.eUnset(featureID);

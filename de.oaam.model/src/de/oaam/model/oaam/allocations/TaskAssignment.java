@@ -29,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.TaskAssignment#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.TaskAssignment#getTask <em>Task</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.TaskAssignment#getDevice <em>Device</em>}</li>
- *   <li>{@link de.oaam.model.oaam.allocations.TaskAssignment#getSchedule <em>Schedule</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.TaskAssignment#getSchedules <em>Schedules</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getTaskAssignment()
@@ -113,18 +113,18 @@ public interface TaskAssignment extends OaamBaseElementA, VariantDependentElemen
 	void setDevice(Device value);
 
 	/**
-	 * Returns the value of the '<em><b>Schedule</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Schedules</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.allocations.Schedule}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Schedules for the tasks on this device. Multiple schedules are valid.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Schedule</em>' containment reference list.
-	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getTaskAssignment_Schedule()
+	 * @return the value of the '<em>Schedules</em>' containment reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getTaskAssignment_Schedules()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Schedule> getSchedule();
+	EList<Schedule> getSchedules();
 
 } // TaskAssignment

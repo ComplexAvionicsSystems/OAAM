@@ -4,7 +4,7 @@ package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.systems.InputSegregation;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
@@ -105,7 +105,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RequiredInputA> groupA;
+	protected EList<RequiredInformationA> groupA;
 
 	/**
 	 * The cached value of the '{@link #getGroupB() <em>Group B</em>}' reference list.
@@ -115,7 +115,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RequiredInputA> groupB;
+	protected EList<RequiredInformationA> groupB;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,9 +204,9 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RequiredInputA> getGroupA() {
+	public EList<RequiredInformationA> getGroupA() {
 		if (groupA == null) {
-			groupA = new EObjectResolvingEList<RequiredInputA>(RequiredInputA.class, this, SystemsPackage.INPUT_SEGREGATION__GROUP_A);
+			groupA = new EObjectResolvingEList<RequiredInformationA>(RequiredInformationA.class, this, SystemsPackage.INPUT_SEGREGATION__GROUP_A);
 		}
 		return groupA;
 	}
@@ -216,9 +216,9 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RequiredInputA> getGroupB() {
+	public EList<RequiredInformationA> getGroupB() {
 		if (groupB == null) {
-			groupB = new EObjectResolvingEList<RequiredInputA>(RequiredInputA.class, this, SystemsPackage.INPUT_SEGREGATION__GROUP_B);
+			groupB = new EObjectResolvingEList<RequiredInformationA>(RequiredInformationA.class, this, SystemsPackage.INPUT_SEGREGATION__GROUP_B);
 		}
 		return groupB;
 	}
@@ -265,11 +265,11 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 				return;
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_A:
 				getGroupA().clear();
-				getGroupA().addAll((Collection<? extends RequiredInputA>)newValue);
+				getGroupA().addAll((Collection<? extends RequiredInformationA>)newValue);
 				return;
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_B:
 				getGroupB().clear();
-				getGroupB().addAll((Collection<? extends RequiredInputA>)newValue);
+				getGroupB().addAll((Collection<? extends RequiredInformationA>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

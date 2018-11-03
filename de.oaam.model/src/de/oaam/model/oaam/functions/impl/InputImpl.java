@@ -15,8 +15,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import de.oaam.model.oaam.systems.RequiredInputA;
-
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -91,7 +90,7 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 	 * @generated
 	 * @ordered
 	 */
-	protected RequiredInputA implements_;
+	protected RequiredInformationA implements_;
 
 	/**
 	 * The cached value of the '{@link #getIoBindings() <em>Io Bindings</em>}' reference list.
@@ -219,10 +218,10 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredInputA getImplements() {
+	public RequiredInformationA getImplements() {
 		if (implements_ != null && implements_.eIsProxy()) {
 			InternalEObject oldImplements = (InternalEObject)implements_;
-			implements_ = (RequiredInputA)eResolveProxy(oldImplements);
+			implements_ = (RequiredInformationA)eResolveProxy(oldImplements);
 			if (implements_ != oldImplements) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.INPUT__IMPLEMENTS, oldImplements, implements_));
@@ -236,7 +235,7 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredInputA basicGetImplements() {
+	public RequiredInformationA basicGetImplements() {
 		return implements_;
 	}
 
@@ -245,8 +244,8 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImplements(RequiredInputA newImplements) {
-		RequiredInputA oldImplements = implements_;
+	public void setImplements(RequiredInformationA newImplements) {
+		RequiredInformationA oldImplements = implements_;
 		implements_ = newImplements;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.INPUT__IMPLEMENTS, oldImplements, implements_));
@@ -393,7 +392,7 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 				setDeclaration((InputDeclaration)newValue);
 				return;
 			case FunctionsPackage.INPUT__IMPLEMENTS:
-				setImplements((RequiredInputA)newValue);
+				setImplements((RequiredInformationA)newValue);
 				return;
 			case FunctionsPackage.INPUT__IO_BINDINGS:
 				getIoBindings().clear();
@@ -427,7 +426,7 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 				setDeclaration((InputDeclaration)null);
 				return;
 			case FunctionsPackage.INPUT__IMPLEMENTS:
-				setImplements((RequiredInputA)null);
+				setImplements((RequiredInformationA)null);
 				return;
 			case FunctionsPackage.INPUT__IO_BINDINGS:
 				getIoBindings().clear();

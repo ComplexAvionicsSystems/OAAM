@@ -7,6 +7,7 @@ import de.oaam.model.oaam.anatomy.Location;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Io;
@@ -61,6 +62,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getSubdevices <em>Subdevices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getLocationBinding <em>Location Binding</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getPowerSources <em>Power Sources</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.DeviceImpl#getSubconnections <em>Subconnections</em>}</li>
  * </ul>
  *
  * @generated
@@ -285,6 +287,16 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 * @ordered
 	 */
 	protected EList<PowerSource> powerSources;
+
+	/**
+	 * The cached value of the '{@link #getSubconnections() <em>Subconnections</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubconnections()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Connection> subconnections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -605,6 +617,18 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Connection> getSubconnections() {
+		if (subconnections == null) {
+			subconnections = new EObjectContainmentEList<Connection>(Connection.class, this, HardwarePackage.DEVICE__SUBCONNECTIONS);
+		}
+		return subconnections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -616,6 +640,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return ((InternalEList<?>)getIos()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.DEVICE__SUBDEVICES:
 				return ((InternalEList<?>)getSubdevices()).basicRemove(otherEnd, msgs);
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
+				return ((InternalEList<?>)getSubconnections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -660,6 +686,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return basicGetLocationBinding();
 			case HardwarePackage.DEVICE__POWER_SOURCES:
 				return getPowerSources();
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
+				return getSubconnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -724,6 +752,10 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				getPowerSources().clear();
 				getPowerSources().addAll((Collection<? extends PowerSource>)newValue);
 				return;
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
+				getSubconnections().clear();
+				getSubconnections().addAll((Collection<? extends Connection>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -781,6 +813,9 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 			case HardwarePackage.DEVICE__POWER_SOURCES:
 				getPowerSources().clear();
 				return;
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
+				getSubconnections().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -823,6 +858,8 @@ public class DeviceImpl extends ResourceProviderInstanceAImpl implements Device 
 				return locationBinding != null;
 			case HardwarePackage.DEVICE__POWER_SOURCES:
 				return powerSources != null && !powerSources.isEmpty();
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
+				return subconnections != null && !subconnections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

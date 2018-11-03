@@ -9,6 +9,7 @@ import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +27,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  *   <li>{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getDevice <em>Device</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getConnection <em>Connection</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getSchedules <em>Schedules</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getSignalAssignmentSegment()
@@ -107,5 +109,20 @@ public interface SignalAssignmentSegment extends OaamBaseElementA, VariantDepend
 	 * @generated
 	 */
 	void setConnection(Connection value);
+
+	/**
+	 * Returns the value of the '<em><b>Schedules</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.allocations.Schedule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The schedules for this signal segment
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Schedules</em>' containment reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getSignalAssignmentSegment_Schedules()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Schedule> getSchedules();
 
 } // SignalAssignmentSegment

@@ -41,13 +41,14 @@ import de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl;
 
 import de.oaam.model.oaam.systems.ElectricPower;
 import de.oaam.model.oaam.systems.HydraulicPower;
-import de.oaam.model.oaam.systems.Information;
 import de.oaam.model.oaam.systems.InformationFlow;
+import de.oaam.model.oaam.systems.InformationMaterial;
+import de.oaam.model.oaam.systems.InformationPower;
+import de.oaam.model.oaam.systems.InformationSignal;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.LinearPower;
-import de.oaam.model.oaam.systems.Power;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.ProvidedInformationA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.RotaryPower;
 import de.oaam.model.oaam.systems.Subsystem;
 import de.oaam.model.oaam.systems.Systems;
@@ -102,21 +103,14 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass requiredInputAEClass = null;
+	private EClass requiredInformationAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass providedOutputAEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass informationEClass = null;
+	private EClass providedInformationAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,14 +124,28 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass electricPowerEClass = null;
+	private EClass informationSignalEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass powerEClass = null;
+	private EClass informationMaterialEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass informationPowerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass electricPowerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -355,8 +363,8 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRequiredInputA() {
-		return requiredInputAEClass;
+	public EClass getRequiredInformationA() {
+		return requiredInformationAEClass;
 	}
 
 	/**
@@ -364,62 +372,8 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getProvidedOutputA() {
-		return providedOutputAEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInformation() {
-		return informationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInformation_Rate() {
-		return (EAttribute)informationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInformation_Latency() {
-		return (EAttribute)informationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInformation_Accuracy() {
-		return (EAttribute)informationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInformation_Resolution() {
-		return (EAttribute)informationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInformation_Unit() {
-		return (EAttribute)informationEClass.getEStructuralFeatures().get(4);
+	public EClass getProvidedInformationA() {
+		return providedInformationAEClass;
 	}
 
 	/**
@@ -447,6 +401,105 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 */
 	public EReference getInformationFlow_To() {
 		return (EReference)informationFlowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInformationSignal() {
+		return informationSignalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationSignal_Rate() {
+		return (EAttribute)informationSignalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationSignal_Latency() {
+		return (EAttribute)informationSignalEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationSignal_Accuracy() {
+		return (EAttribute)informationSignalEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationSignal_Resolution() {
+		return (EAttribute)informationSignalEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationSignal_Unit() {
+		return (EAttribute)informationSignalEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInformationMaterial() {
+		return informationMaterialEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationMaterial_Density() {
+		return (EAttribute)informationMaterialEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationMaterial_Velocity() {
+		return (EAttribute)informationMaterialEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInformationPower() {
+		return informationPowerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInformationPower_Power() {
+		return (EAttribute)informationPowerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -492,24 +545,6 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 	 */
 	public EAttribute getElectricPower_Current() {
 		return (EAttribute)electricPowerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPower() {
-		return powerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPower_Power() {
-		return (EAttribute)powerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -689,29 +724,33 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		createEReference(systemEClass, SYSTEM__PROVIDED_OUTPUTS);
 		createEReference(systemEClass, SYSTEM__REQUIRED_INPUTS);
 
-		requiredInputAEClass = createEClass(REQUIRED_INPUT_A);
+		requiredInformationAEClass = createEClass(REQUIRED_INFORMATION_A);
 
-		providedOutputAEClass = createEClass(PROVIDED_OUTPUT_A);
-
-		informationEClass = createEClass(INFORMATION);
-		createEAttribute(informationEClass, INFORMATION__RATE);
-		createEAttribute(informationEClass, INFORMATION__LATENCY);
-		createEAttribute(informationEClass, INFORMATION__ACCURACY);
-		createEAttribute(informationEClass, INFORMATION__RESOLUTION);
-		createEAttribute(informationEClass, INFORMATION__UNIT);
+		providedInformationAEClass = createEClass(PROVIDED_INFORMATION_A);
 
 		informationFlowEClass = createEClass(INFORMATION_FLOW);
 		createEReference(informationFlowEClass, INFORMATION_FLOW__FROM);
 		createEReference(informationFlowEClass, INFORMATION_FLOW__TO);
+
+		informationSignalEClass = createEClass(INFORMATION_SIGNAL);
+		createEAttribute(informationSignalEClass, INFORMATION_SIGNAL__RATE);
+		createEAttribute(informationSignalEClass, INFORMATION_SIGNAL__LATENCY);
+		createEAttribute(informationSignalEClass, INFORMATION_SIGNAL__ACCURACY);
+		createEAttribute(informationSignalEClass, INFORMATION_SIGNAL__RESOLUTION);
+		createEAttribute(informationSignalEClass, INFORMATION_SIGNAL__UNIT);
+
+		informationMaterialEClass = createEClass(INFORMATION_MATERIAL);
+		createEAttribute(informationMaterialEClass, INFORMATION_MATERIAL__DENSITY);
+		createEAttribute(informationMaterialEClass, INFORMATION_MATERIAL__VELOCITY);
+
+		informationPowerEClass = createEClass(INFORMATION_POWER);
+		createEAttribute(informationPowerEClass, INFORMATION_POWER__POWER);
 
 		electricPowerEClass = createEClass(ELECTRIC_POWER);
 		createEAttribute(electricPowerEClass, ELECTRIC_POWER__FREQUENCY);
 		createEAttribute(electricPowerEClass, ELECTRIC_POWER__NPHASES);
 		createEAttribute(electricPowerEClass, ELECTRIC_POWER__VOLTAGE);
 		createEAttribute(electricPowerEClass, ELECTRIC_POWER__CURRENT);
-
-		powerEClass = createEClass(POWER);
-		createEAttribute(powerEClass, POWER__POWER);
 
 		hydraulicPowerEClass = createEClass(HYDRAULIC_POWER);
 		createEAttribute(hydraulicPowerEClass, HYDRAULIC_POWER__PRESSURE);
@@ -773,23 +812,28 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		systemEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		systemEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		systemEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		informationEClass.getESuperTypes().add(this.getProvidedOutputA());
-		informationEClass.getESuperTypes().add(this.getRequiredInputA());
-		informationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		informationEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		informationEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		informationFlowEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		electricPowerEClass.getESuperTypes().add(this.getPower());
-		powerEClass.getESuperTypes().add(this.getProvidedOutputA());
-		powerEClass.getESuperTypes().add(this.getRequiredInputA());
-		powerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		powerEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		powerEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		hydraulicPowerEClass.getESuperTypes().add(this.getPower());
-		rotaryPowerEClass.getESuperTypes().add(this.getPower());
-		linearPowerEClass.getESuperTypes().add(this.getPower());
+		informationSignalEClass.getESuperTypes().add(this.getProvidedInformationA());
+		informationSignalEClass.getESuperTypes().add(this.getRequiredInformationA());
+		informationSignalEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		informationSignalEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		informationSignalEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		informationMaterialEClass.getESuperTypes().add(this.getProvidedInformationA());
+		informationMaterialEClass.getESuperTypes().add(this.getRequiredInformationA());
+		informationMaterialEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		informationMaterialEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		informationMaterialEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		informationPowerEClass.getESuperTypes().add(this.getProvidedInformationA());
+		informationPowerEClass.getESuperTypes().add(this.getRequiredInformationA());
+		informationPowerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		informationPowerEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		informationPowerEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		electricPowerEClass.getESuperTypes().add(this.getInformationPower());
+		hydraulicPowerEClass.getESuperTypes().add(this.getInformationPower());
+		rotaryPowerEClass.getESuperTypes().add(this.getInformationPower());
+		linearPowerEClass.getESuperTypes().add(this.getInformationPower());
 		inputSegregationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 
 		// Initialize classes, features, and operations; add parameters
@@ -804,32 +848,36 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		initEClass(subsystemEClass, Subsystem.class, "Subsystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(systemEClass, de.oaam.model.oaam.systems.System.class, "System", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystem_ProvidedOutputs(), this.getProvidedOutputA(), null, "providedOutputs", null, 0, -1, de.oaam.model.oaam.systems.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSystem_RequiredInputs(), this.getRequiredInputA(), null, "requiredInputs", null, 0, -1, de.oaam.model.oaam.systems.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_ProvidedOutputs(), this.getProvidedInformationA(), null, "providedOutputs", null, 0, -1, de.oaam.model.oaam.systems.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystem_RequiredInputs(), this.getRequiredInformationA(), null, "requiredInputs", null, 0, -1, de.oaam.model.oaam.systems.System.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(requiredInputAEClass, RequiredInputA.class, "RequiredInputA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(requiredInformationAEClass, RequiredInformationA.class, "RequiredInformationA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(providedOutputAEClass, ProvidedOutputA.class, "ProvidedOutputA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(informationEClass, Information.class, "Information", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInformation_Rate(), ecorePackage.getEDouble(), "rate", null, 1, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformation_Latency(), ecorePackage.getEDouble(), "latency", null, 1, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformation_Accuracy(), ecorePackage.getEDouble(), "accuracy", null, 1, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformation_Resolution(), ecorePackage.getEDouble(), "resolution", null, 1, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInformation_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(providedInformationAEClass, ProvidedInformationA.class, "ProvidedInformationA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(informationFlowEClass, InformationFlow.class, "InformationFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInformationFlow_From(), this.getProvidedOutputA(), null, "from", null, 1, 1, InformationFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInformationFlow_To(), this.getRequiredInputA(), null, "to", null, 1, 1, InformationFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInformationFlow_From(), this.getProvidedInformationA(), null, "from", null, 1, 1, InformationFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInformationFlow_To(), this.getRequiredInformationA(), null, "to", null, 1, 1, InformationFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(informationSignalEClass, InformationSignal.class, "InformationSignal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInformationSignal_Rate(), ecorePackage.getEDouble(), "rate", null, 1, 1, InformationSignal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationSignal_Latency(), ecorePackage.getEDouble(), "latency", null, 1, 1, InformationSignal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationSignal_Accuracy(), ecorePackage.getEDouble(), "accuracy", null, 1, 1, InformationSignal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationSignal_Resolution(), ecorePackage.getEDouble(), "resolution", null, 1, 1, InformationSignal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationSignal_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, InformationSignal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(informationMaterialEClass, InformationMaterial.class, "InformationMaterial", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInformationMaterial_Density(), ecorePackage.getEDouble(), "density", null, 1, 1, InformationMaterial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInformationMaterial_Velocity(), ecorePackage.getEDouble(), "velocity", null, 1, 1, InformationMaterial.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(informationPowerEClass, InformationPower.class, "InformationPower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInformationPower_Power(), ecorePackage.getEDouble(), "power", null, 1, 1, InformationPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(electricPowerEClass, ElectricPower.class, "ElectricPower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElectricPower_Frequency(), ecorePackage.getEDouble(), "frequency", null, 1, 1, ElectricPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElectricPower_NPhases(), ecorePackage.getEInt(), "nPhases", "1", 1, 1, ElectricPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElectricPower_Voltage(), ecorePackage.getEDouble(), "voltage", null, 1, 1, ElectricPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElectricPower_Current(), ecorePackage.getEDouble(), "current", null, 1, 1, ElectricPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(powerEClass, Power.class, "Power", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPower_Power(), ecorePackage.getEDouble(), "power", null, 1, 1, Power.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hydraulicPowerEClass, HydraulicPower.class, "HydraulicPower", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHydraulicPower_Pressure(), ecorePackage.getEDouble(), "pressure", "0.0", 1, 1, HydraulicPower.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -847,8 +895,8 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		initEAttribute(getInputSegregation_DissimilarSource(), ecorePackage.getEBoolean(), "dissimilarSource", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInputSegregation_DissimilarRoute(), ecorePackage.getEBoolean(), "dissimilarRoute", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInputSegregation_DissimilarTechnology(), ecorePackage.getEBooleanObject(), "dissimilarTechnology", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInputSegregation_GroupA(), this.getRequiredInputA(), null, "groupA", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInputSegregation_GroupB(), this.getRequiredInputA(), null, "groupB", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInputSegregation_GroupA(), this.getRequiredInformationA(), null, "groupA", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInputSegregation_GroupB(), this.getRequiredInformationA(), null, "groupB", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //SystemsPackageImpl

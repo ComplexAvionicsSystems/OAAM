@@ -107,7 +107,7 @@ public interface InputSegregation extends OaamBaseElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Group A</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInputA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInformationA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -118,11 +118,11 @@ public interface InputSegregation extends OaamBaseElementA {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<RequiredInputA> getGroupA();
+	EList<RequiredInformationA> getGroupA();
 
 	/**
 	 * Returns the value of the '<em><b>Group B</b></em>' reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInputA}.
+	 * The list contents are of type {@link de.oaam.model.oaam.systems.RequiredInformationA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -133,6 +133,6 @@ public interface InputSegregation extends OaamBaseElementA {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<RequiredInputA> getGroupB();
+	EList<RequiredInformationA> getGroupB();
 
 } // InputSegregation

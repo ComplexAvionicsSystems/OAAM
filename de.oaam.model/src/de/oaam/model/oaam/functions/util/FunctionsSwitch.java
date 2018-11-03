@@ -143,13 +143,13 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FunctionsPackage.SYSTEM_INPUT_STATE: {
-				SystemInputState systemInputState = (SystemInputState)theEObject;
-				T result = caseSystemInputState(systemInputState);
-				if (result == null) result = caseBoolA(systemInputState);
-				if (result == null) result = caseOaamBaseElementA(systemInputState);
-				if (result == null) result = caseModeDependentElementA(systemInputState);
-				if (result == null) result = caseVariantDependentElementA(systemInputState);
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE: {
+				OutputIntegrityState outputIntegrityState = (OutputIntegrityState)theEObject;
+				T result = caseOutputIntegrityState(outputIntegrityState);
+				if (result == null) result = caseBoolA(outputIntegrityState);
+				if (result == null) result = caseOaamBaseElementA(outputIntegrityState);
+				if (result == null) result = caseModeDependentElementA(outputIntegrityState);
+				if (result == null) result = caseVariantDependentElementA(outputIntegrityState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -208,10 +208,10 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FunctionsPackage.PARAMETER: {
-				Parameter parameter = (Parameter)theEObject;
-				T result = caseParameter(parameter);
-				if (result == null) result = caseOaamBaseElementA(parameter);
+			case FunctionsPackage.TASK_PARAMETER: {
+				TaskParameter taskParameter = (TaskParameter)theEObject;
+				T result = caseTaskParameter(taskParameter);
+				if (result == null) result = caseOaamBaseElementA(taskParameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -340,17 +340,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>System Input State</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Output Integrity State</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>System Input State</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Output Integrity State</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSystemInputState(SystemInputState object) {
+	public T caseOutputIntegrityState(OutputIntegrityState object) {
 		return null;
 	}
 
@@ -445,17 +445,17 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task Parameter</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T caseTaskParameter(TaskParameter object) {
 		return null;
 	}
 

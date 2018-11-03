@@ -9,8 +9,7 @@ import de.oaam.model.oaam.library.OutputDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-
+import de.oaam.model.oaam.systems.ProvidedInformationA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -45,12 +44,12 @@ public interface Output extends OaamBaseElementA, VariantDependentElementA, Mode
 	 * A reference to an output from the signals model, which is implemented by this output
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Implements</em>' reference.
-	 * @see #setImplements(ProvidedOutputA)
+	 * @see #setImplements(ProvidedInformationA)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getOutput_Implements()
 	 * @model
 	 * @generated
 	 */
-	ProvidedOutputA getImplements();
+	ProvidedInformationA getImplements();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Output#getImplements <em>Implements</em>}' reference.
@@ -60,7 +59,7 @@ public interface Output extends OaamBaseElementA, VariantDependentElementA, Mode
 	 * @see #getImplements()
 	 * @generated
 	 */
-	void setImplements(ProvidedOutputA value);
+	void setImplements(ProvidedInformationA value);
 
 	/**
 	 * Returns the value of the '<em><b>Declaration</b></em>' reference.

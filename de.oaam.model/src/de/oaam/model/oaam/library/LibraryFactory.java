@@ -202,13 +202,13 @@ public interface LibraryFactory extends EFactory {
 	FaultPropagation createFaultPropagation();
 
 	/**
-	 * Returns a new object of class '<em>Function Input State</em>'.
+	 * Returns a new object of class '<em>Task Input State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function Input State</em>'.
+	 * @return a new object of class '<em>Task Input State</em>'.
 	 * @generated
 	 */
-	FunctionInputState createFunctionInputState();
+	TaskInputState createTaskInputState();
 
 	/**
 	 * Returns a new object of class '<em>Power Source</em>'.
@@ -301,40 +301,40 @@ public interface LibraryFactory extends EFactory {
 	Sublibrary createSublibrary();
 
 	/**
-	 * Returns a new object of class '<em>Output Trigger</em>'.
+	 * Returns a new object of class '<em>Task Output Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Output Trigger</em>'.
+	 * @return a new object of class '<em>Task Output Trigger</em>'.
 	 * @generated
 	 */
-	OutputTrigger createOutputTrigger();
+	TaskOutputTrigger createTaskOutputTrigger();
 
 	/**
-	 * Returns a new object of class '<em>Function Input Trigger</em>'.
+	 * Returns a new object of class '<em>Task Input Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function Input Trigger</em>'.
+	 * @return a new object of class '<em>Task Input Trigger</em>'.
 	 * @generated
 	 */
-	FunctionInputTrigger createFunctionInputTrigger();
+	TaskInputTrigger createTaskInputTrigger();
 
 	/**
-	 * Returns a new object of class '<em>Internal State Declaration</em>'.
+	 * Returns a new object of class '<em>Task State Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Internal State Declaration</em>'.
+	 * @return a new object of class '<em>Task State Declaration</em>'.
 	 * @generated
 	 */
-	InternalStateDeclaration createInternalStateDeclaration();
+	TaskStateDeclaration createTaskStateDeclaration();
 
 	/**
-	 * Returns a new object of class '<em>Parameter Declaration</em>'.
+	 * Returns a new object of class '<em>Task Parameter Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter Declaration</em>'.
+	 * @return a new object of class '<em>Task Parameter Declaration</em>'.
 	 * @generated
 	 */
-	ParameterDeclaration createParameterDeclaration();
+	TaskParameterDeclaration createTaskParameterDeclaration();
 
 	/**
 	 * Returns the package supported by this factory.

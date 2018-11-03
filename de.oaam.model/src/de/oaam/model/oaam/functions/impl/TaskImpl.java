@@ -6,9 +6,9 @@ import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
-import de.oaam.model.oaam.functions.Parameter;
 import de.oaam.model.oaam.functions.Task;
 
+import de.oaam.model.oaam.functions.TaskParameter;
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.library.TaskType;
@@ -175,7 +175,7 @@ public class TaskImpl extends OaamBaseElementAImpl implements Task {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Parameter> parameters;
+	protected EList<TaskParameter> parameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -405,9 +405,9 @@ public class TaskImpl extends OaamBaseElementAImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Parameter> getParameters() {
+	public EList<TaskParameter> getParameters() {
 		if (parameters == null) {
-			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this, FunctionsPackage.TASK__PARAMETERS);
+			parameters = new EObjectContainmentEList<TaskParameter>(TaskParameter.class, this, FunctionsPackage.TASK__PARAMETERS);
 		}
 		return parameters;
 	}
@@ -509,7 +509,7 @@ public class TaskImpl extends OaamBaseElementAImpl implements Task {
 				return;
 			case FunctionsPackage.TASK__PARAMETERS:
 				getParameters().clear();
-				getParameters().addAll((Collection<? extends Parameter>)newValue);
+				getParameters().addAll((Collection<? extends TaskParameter>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

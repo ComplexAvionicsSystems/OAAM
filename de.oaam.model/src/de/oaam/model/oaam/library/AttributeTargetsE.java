@@ -42,26 +42,22 @@ public enum AttributeTargetsE implements Enumerator {
 	DEVICE(1, "DEVICE", "DEVICE"),
 
 	/**
-	 * The '<em><b>FUNCTION TYPE</b></em>' literal object.
+	 * The '<em><b>TASK TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FUNCTION_TYPE_VALUE
+	 * @see #TASK_TYPE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	FUNCTION_TYPE(2, "FUNCTION_TYPE", "FUNCTION_TYPE"),
-
-	/**
-	 * The '<em><b>FUNCTION</b></em>' literal object.
+	TASK_TYPE(2, "TASK_TYPE", "TASK_TYPE"), /**
+	 * The '<em><b>TASK</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FUNCTION_VALUE
+	 * @see #TASK_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	FUNCTION(3, "FUNCTION", "FUNCTION"),
-
-	/**
+	TASK(3, "TASK", "TASK"), /**
 	 * The '<em><b>WIRE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -219,17 +215,7 @@ public enum AttributeTargetsE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VARIANT(20, "VARIANT", "VARIANT"),
-
-	/**
-	 * The '<em><b>TIMEFRAME</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TIMEFRAME_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TIMEFRAME(21, "TIMEFRAME", "TIMEFRAME");
+	VARIANT(20, "VARIANT", "VARIANT");
 
 	/**
 	 * The '<em><b>DEVICE TYPE</b></em>' literal value.
@@ -239,6 +225,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for DeviceType objects.
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE_TYPE
 	 * @model
 	 * @generated
@@ -254,6 +243,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Device objects.
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE
 	 * @model
 	 * @generated
@@ -262,34 +254,32 @@ public enum AttributeTargetsE implements Enumerator {
 	public static final int DEVICE_VALUE = 1;
 
 	/**
-	 * The '<em><b>FUNCTION TYPE</b></em>' literal value.
+	 * The '<em><b>TASK TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>FUNCTION TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #FUNCTION_TYPE
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for TaskType objects.
+	 * <!-- end-model-doc -->
+	 * @see #TASK_TYPE
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FUNCTION_TYPE_VALUE = 2;
+	public static final int TASK_TYPE_VALUE = 2;
 
 	/**
-	 * The '<em><b>FUNCTION</b></em>' literal value.
+	 * The '<em><b>TASK</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>FUNCTION</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #FUNCTION
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Task objects.
+	 * <!-- end-model-doc -->
+	 * @see #TASK
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FUNCTION_VALUE = 3;
+	public static final int TASK_VALUE = 3;
 
 	/**
 	 * The '<em><b>WIRE TYPE</b></em>' literal value.
@@ -299,6 +289,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for WireType objects.
+	 * <!-- end-model-doc -->
 	 * @see #WIRE_TYPE
 	 * @model
 	 * @generated
@@ -314,6 +307,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceType objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_TYPE
 	 * @model
 	 * @generated
@@ -329,6 +325,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Resource objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE
 	 * @model
 	 * @generated
@@ -344,6 +343,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for SignalType objects.
+	 * <!-- end-model-doc -->
 	 * @see #SIGNAL_TYPE
 	 * @model
 	 * @generated
@@ -359,6 +361,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Signal objects.
+	 * <!-- end-model-doc -->
 	 * @see #SIGNAL
 	 * @model
 	 * @generated
@@ -374,6 +379,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ConnectionType objects.
+	 * <!-- end-model-doc -->
 	 * @see #CONNECTION_TYPE
 	 * @model
 	 * @generated
@@ -389,6 +397,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Connection objects.
+	 * <!-- end-model-doc -->
 	 * @see #CONNECTION
 	 * @model
 	 * @generated
@@ -404,6 +415,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for LocationType objects.
+	 * <!-- end-model-doc -->
 	 * @see #LOCATION_TYPE
 	 * @model
 	 * @generated
@@ -419,6 +433,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Location objects.
+	 * <!-- end-model-doc -->
 	 * @see #LOCATION
 	 * @model
 	 * @generated
@@ -434,6 +451,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for DuctType objects.
+	 * <!-- end-model-doc -->
 	 * @see #DUCT_TYPE
 	 * @model
 	 * @generated
@@ -449,6 +469,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Duct objects.
+	 * <!-- end-model-doc -->
 	 * @see #DUCT
 	 * @model
 	 * @generated
@@ -464,6 +487,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceBundle objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_BUNDLE
 	 * @model
 	 * @generated
@@ -479,6 +505,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * ResourceAlternative
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_ALTERNATIVE
 	 * @model
 	 * @generated
@@ -494,6 +523,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceGroup objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_GROUP
 	 * @model
 	 * @generated
@@ -509,6 +541,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Area objects.
+	 * <!-- end-model-doc -->
 	 * @see #AREA
 	 * @model
 	 * @generated
@@ -524,27 +559,15 @@ public enum AttributeTargetsE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Variant objects.
+	 * <!-- end-model-doc -->
 	 * @see #VARIANT
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
 	public static final int VARIANT_VALUE = 20;
-
-	/**
-	 * The '<em><b>TIMEFRAME</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>TIMEFRAME</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #TIMEFRAME
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TIMEFRAME_VALUE = 21;
 
 	/**
 	 * An array of all the '<em><b>Attribute Targets E</b></em>' enumerators.
@@ -556,8 +579,8 @@ public enum AttributeTargetsE implements Enumerator {
 		new AttributeTargetsE[] {
 			DEVICE_TYPE,
 			DEVICE,
-			FUNCTION_TYPE,
-			FUNCTION,
+			TASK_TYPE,
+			TASK,
 			WIRE_TYPE,
 			RESOURCE_TYPE,
 			RESOURCE,
@@ -574,7 +597,6 @@ public enum AttributeTargetsE implements Enumerator {
 			RESOURCE_GROUP,
 			AREA,
 			VARIANT,
-			TIMEFRAME,
 		};
 
 	/**
@@ -633,8 +655,8 @@ public enum AttributeTargetsE implements Enumerator {
 		switch (value) {
 			case DEVICE_TYPE_VALUE: return DEVICE_TYPE;
 			case DEVICE_VALUE: return DEVICE;
-			case FUNCTION_TYPE_VALUE: return FUNCTION_TYPE;
-			case FUNCTION_VALUE: return FUNCTION;
+			case TASK_TYPE_VALUE: return TASK_TYPE;
+			case TASK_VALUE: return TASK;
 			case WIRE_TYPE_VALUE: return WIRE_TYPE;
 			case RESOURCE_TYPE_VALUE: return RESOURCE_TYPE;
 			case RESOURCE_VALUE: return RESOURCE;
@@ -651,7 +673,6 @@ public enum AttributeTargetsE implements Enumerator {
 			case RESOURCE_GROUP_VALUE: return RESOURCE_GROUP;
 			case AREA_VALUE: return AREA;
 			case VARIANT_VALUE: return VARIANT;
-			case TIMEFRAME_VALUE: return TIMEFRAME;
 		}
 		return null;
 	}

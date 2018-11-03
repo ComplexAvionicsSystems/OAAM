@@ -9,8 +9,7 @@ import de.oaam.model.oaam.library.InputDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import de.oaam.model.oaam.systems.RequiredInputA;
-
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -71,12 +70,12 @@ public interface Input extends OaamBaseElementA, VariantDependentElementA, ModeD
 	 * A reference to an input from a systems model which is implemented by this function
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Implements</em>' reference.
-	 * @see #setImplements(RequiredInputA)
+	 * @see #setImplements(RequiredInformationA)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getInput_Implements()
 	 * @model
 	 * @generated
 	 */
-	RequiredInputA getImplements();
+	RequiredInformationA getImplements();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Input#getImplements <em>Implements</em>}' reference.
@@ -86,7 +85,7 @@ public interface Input extends OaamBaseElementA, VariantDependentElementA, ModeD
 	 * @see #getImplements()
 	 * @generated
 	 */
-	void setImplements(RequiredInputA value);
+	void setImplements(RequiredInformationA value);
 
 	/**
 	 * Returns the value of the '<em><b>Io Bindings</b></em>' reference list.

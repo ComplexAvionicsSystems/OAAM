@@ -121,11 +121,19 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A: {
+				SignalGroupRestrictionA signalGroupRestrictionA = (SignalGroupRestrictionA)theEObject;
+				T result = caseSignalGroupRestrictionA(signalGroupRestrictionA);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case RestrictionsPackage.LOCATION_RESTRICTION: {
 				LocationRestriction locationRestriction = (LocationRestriction)theEObject;
 				T result = caseLocationRestriction(locationRestriction);
 				if (result == null) result = caseTaskRestrictionA(locationRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(locationRestriction);
 				if (result == null) result = caseSignalRestrictionA(locationRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(locationRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(locationRestriction);
 				if (result == null) result = caseDeviceRestrictionA(locationRestriction);
 				if (result == null) result = caseConnectionRestrinctionA(locationRestriction);
@@ -139,7 +147,9 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				AreaRestriction areaRestriction = (AreaRestriction)theEObject;
 				T result = caseAreaRestriction(areaRestriction);
 				if (result == null) result = caseTaskRestrictionA(areaRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(areaRestriction);
 				if (result == null) result = caseSignalRestrictionA(areaRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(areaRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(areaRestriction);
 				if (result == null) result = caseDeviceRestrictionA(areaRestriction);
 				if (result == null) result = caseConnectionRestrinctionA(areaRestriction);
@@ -153,9 +163,11 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				PowerSourceRestriction powerSourceRestriction = (PowerSourceRestriction)theEObject;
 				T result = casePowerSourceRestriction(powerSourceRestriction);
 				if (result == null) result = caseTaskRestrictionA(powerSourceRestriction);
-				if (result == null) result = caseDeviceRestrictionA(powerSourceRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(powerSourceRestriction);
 				if (result == null) result = caseSignalRestrictionA(powerSourceRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(powerSourceRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(powerSourceRestriction);
+				if (result == null) result = caseDeviceRestrictionA(powerSourceRestriction);
 				if (result == null) result = caseOaamBaseElementA(powerSourceRestriction);
 				if (result == null) result = caseVariantDependentElementA(powerSourceRestriction);
 				if (result == null) result = caseModeDependentElementA(powerSourceRestriction);
@@ -166,7 +178,9 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				DeviceRestriction deviceRestriction = (DeviceRestriction)theEObject;
 				T result = caseDeviceRestriction(deviceRestriction);
 				if (result == null) result = caseTaskRestrictionA(deviceRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(deviceRestriction);
 				if (result == null) result = caseSignalRestrictionA(deviceRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(deviceRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(deviceRestriction);
 				if (result == null) result = caseOaamBaseElementA(deviceRestriction);
 				if (result == null) result = caseVariantDependentElementA(deviceRestriction);
@@ -178,7 +192,9 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				DeviceTypeRestriction deviceTypeRestriction = (DeviceTypeRestriction)theEObject;
 				T result = caseDeviceTypeRestriction(deviceTypeRestriction);
 				if (result == null) result = caseTaskRestrictionA(deviceTypeRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(deviceTypeRestriction);
 				if (result == null) result = caseSignalRestrictionA(deviceTypeRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(deviceTypeRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(deviceTypeRestriction);
 				if (result == null) result = caseOaamBaseElementA(deviceTypeRestriction);
 				if (result == null) result = caseVariantDependentElementA(deviceTypeRestriction);
@@ -186,14 +202,15 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION: {
-				ConectionTypeRestriction conectionTypeRestriction = (ConectionTypeRestriction)theEObject;
-				T result = caseConectionTypeRestriction(conectionTypeRestriction);
-				if (result == null) result = caseSignalRestrictionA(conectionTypeRestriction);
-				if (result == null) result = caseSubfunctionRestrictionA(conectionTypeRestriction);
-				if (result == null) result = caseOaamBaseElementA(conectionTypeRestriction);
-				if (result == null) result = caseVariantDependentElementA(conectionTypeRestriction);
-				if (result == null) result = caseModeDependentElementA(conectionTypeRestriction);
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION: {
+				ConnectionTypeRestriction connectionTypeRestriction = (ConnectionTypeRestriction)theEObject;
+				T result = caseConnectionTypeRestriction(connectionTypeRestriction);
+				if (result == null) result = caseSignalRestrictionA(connectionTypeRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(connectionTypeRestriction);
+				if (result == null) result = caseSubfunctionRestrictionA(connectionTypeRestriction);
+				if (result == null) result = caseOaamBaseElementA(connectionTypeRestriction);
+				if (result == null) result = caseVariantDependentElementA(connectionTypeRestriction);
+				if (result == null) result = caseModeDependentElementA(connectionTypeRestriction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -201,6 +218,7 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				ConnectionRestriction connectionRestriction = (ConnectionRestriction)theEObject;
 				T result = caseConnectionRestriction(connectionRestriction);
 				if (result == null) result = caseSignalRestrictionA(connectionRestriction);
+				if (result == null) result = caseSignalGroupRestrictionA(connectionRestriction);
 				if (result == null) result = caseSubfunctionRestrictionA(connectionRestriction);
 				if (result == null) result = caseOaamBaseElementA(connectionRestriction);
 				if (result == null) result = caseVariantDependentElementA(connectionRestriction);
@@ -231,6 +249,8 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				TaskAtomicRestriction taskAtomicRestriction = (TaskAtomicRestriction)theEObject;
 				T result = caseTaskAtomicRestriction(taskAtomicRestriction);
 				if (result == null) result = caseTaskRestrictionA(taskAtomicRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(taskAtomicRestriction);
+				if (result == null) result = caseSubfunctionRestrictionA(taskAtomicRestriction);
 				if (result == null) result = caseOaamBaseElementA(taskAtomicRestriction);
 				if (result == null) result = caseModeDependentElementA(taskAtomicRestriction);
 				if (result == null) result = caseVariantDependentElementA(taskAtomicRestriction);
@@ -241,6 +261,8 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 				TaskSymmetryRestriction taskSymmetryRestriction = (TaskSymmetryRestriction)theEObject;
 				T result = caseTaskSymmetryRestriction(taskSymmetryRestriction);
 				if (result == null) result = caseTaskRestrictionA(taskSymmetryRestriction);
+				if (result == null) result = caseTaskGroupRestrictionA(taskSymmetryRestriction);
+				if (result == null) result = caseSubfunctionRestrictionA(taskSymmetryRestriction);
 				if (result == null) result = caseOaamBaseElementA(taskSymmetryRestriction);
 				if (result == null) result = caseModeDependentElementA(taskSymmetryRestriction);
 				if (result == null) result = caseVariantDependentElementA(taskSymmetryRestriction);
@@ -391,6 +413,21 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signal Group Restriction A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signal Group Restriction A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignalGroupRestrictionA(SignalGroupRestrictionA object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Location Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -466,17 +503,17 @@ public class RestrictionsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Conection Type Restriction</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Connection Type Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Conection Type Restriction</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Connection Type Restriction</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConectionTypeRestriction(ConectionTypeRestriction object) {
+	public T caseConnectionTypeRestriction(ConnectionTypeRestriction object) {
 		return null;
 	}
 

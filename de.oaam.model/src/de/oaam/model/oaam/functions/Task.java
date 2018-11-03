@@ -198,7 +198,7 @@ public interface Task extends OaamBaseElementA, VariantDependentElementA, ModeDe
 
 	/**
 	 * Returns the value of the '<em><b>Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.functions.Parameter}.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.TaskParameter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -209,6 +209,6 @@ public interface Task extends OaamBaseElementA, VariantDependentElementA, ModeDe
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Parameter> getParameters();
+	EList<TaskParameter> getParameters();
 
 } // Task

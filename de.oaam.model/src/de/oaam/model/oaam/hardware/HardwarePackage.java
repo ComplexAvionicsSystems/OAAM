@@ -353,13 +353,22 @@ public interface HardwarePackage extends EPackage {
 	int DEVICE__POWER_SOURCES = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 14;
 
 	/**
+	 * The feature id for the '<em><b>Subconnections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE__SUBCONNECTIONS = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>Device</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_FEATURE_COUNT = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 15;
+	int DEVICE_FEATURE_COUNT = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Device</em>' class.
@@ -1216,6 +1225,17 @@ public interface HardwarePackage extends EPackage {
 	EReference getDevice_PowerSources();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.hardware.Device#getSubconnections <em>Subconnections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subconnections</em>'.
+	 * @see de.oaam.model.oaam.hardware.Device#getSubconnections()
+	 * @see #getDevice()
+	 * @generated
+	 */
+	EReference getDevice_Subconnections();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.hardware.Connection <em>Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1445,6 +1465,14 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference DEVICE__POWER_SOURCES = eINSTANCE.getDevice_PowerSources();
+
+		/**
+		 * The meta object literal for the '<em><b>Subconnections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEVICE__SUBCONNECTIONS = eINSTANCE.getDevice_Subconnections();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.hardware.impl.ConnectionImpl <em>Connection</em>}' class.

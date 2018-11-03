@@ -4,8 +4,8 @@ package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.restrictions.AreaRestriction;
-import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
+import de.oaam.model.oaam.restrictions.ConnectionTypeRestriction;
 import de.oaam.model.oaam.restrictions.DeviceRestriction;
 import de.oaam.model.oaam.restrictions.DeviceTypeRestriction;
 import de.oaam.model.oaam.restrictions.LocationRestriction;
@@ -46,12 +46,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getPowerSourceRestrictions <em>Power Source Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTaskAtomicRestrictions <em>Task Atomic Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTaskSymmetryRestrictions <em>Task Symmetry Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSynchronicityRestriction <em>Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSegregationRestrictions <em>Segregation Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getSubrestrictions <em>Subrestrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.RestrictionsContainerAImpl#getTimeDelayRestrictions <em>Time Delay Restrictions</em>}</li>
  * </ul>
  *
  * @generated
@@ -128,14 +128,14 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	protected EList<TaskSymmetryRestriction> taskSymmetryRestrictions;
 
 	/**
-	 * The cached value of the '{@link #getInputSynchronicityRestriction() <em>Input Synchronicity Restriction</em>}' containment reference list.
+	 * The cached value of the '{@link #getSynchronicityRestriction() <em>Synchronicity Restriction</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputSynchronicityRestriction()
+	 * @see #getSynchronicityRestriction()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SynchronicityRestriction> inputSynchronicityRestriction;
+	protected EList<SynchronicityRestriction> synchronicityRestriction;
 
 	/**
 	 * The cached value of the '{@link #getConnectionRestrictions() <em>Connection Restrictions</em>}' containment reference list.
@@ -155,7 +155,7 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConectionTypeRestriction> connectionTypeRestrictions;
+	protected EList<ConnectionTypeRestriction> connectionTypeRestrictions;
 
 	/**
 	 * The cached value of the '{@link #getSegregationRestrictions() <em>Segregation Restrictions</em>}' containment reference list.
@@ -178,14 +178,14 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	protected EList<Subrestrictions> subrestrictions;
 
 	/**
-	 * The cached value of the '{@link #getTimedelayrestrictions() <em>Timedelayrestrictions</em>}' containment reference list.
+	 * The cached value of the '{@link #getTimeDelayRestrictions() <em>Time Delay Restrictions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTimedelayrestrictions()
+	 * @see #getTimeDelayRestrictions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TimeDelayRestriction> timedelayrestrictions;
+	protected EList<TimeDelayRestriction> timeDelayRestrictions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -295,11 +295,11 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SynchronicityRestriction> getInputSynchronicityRestriction() {
-		if (inputSynchronicityRestriction == null) {
-			inputSynchronicityRestriction = new EObjectContainmentEList<SynchronicityRestriction>(SynchronicityRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
+	public EList<SynchronicityRestriction> getSynchronicityRestriction() {
+		if (synchronicityRestriction == null) {
+			synchronicityRestriction = new EObjectContainmentEList<SynchronicityRestriction>(SynchronicityRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION);
 		}
-		return inputSynchronicityRestriction;
+		return synchronicityRestriction;
 	}
 
 	/**
@@ -319,9 +319,9 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConectionTypeRestriction> getConnectionTypeRestrictions() {
+	public EList<ConnectionTypeRestriction> getConnectionTypeRestrictions() {
 		if (connectionTypeRestrictions == null) {
-			connectionTypeRestrictions = new EObjectContainmentEList<ConectionTypeRestriction>(ConectionTypeRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
+			connectionTypeRestrictions = new EObjectContainmentEList<ConnectionTypeRestriction>(ConnectionTypeRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
 		}
 		return connectionTypeRestrictions;
 	}
@@ -355,11 +355,11 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TimeDelayRestriction> getTimedelayrestrictions() {
-		if (timedelayrestrictions == null) {
-			timedelayrestrictions = new EObjectContainmentEList<TimeDelayRestriction>(TimeDelayRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
+	public EList<TimeDelayRestriction> getTimeDelayRestrictions() {
+		if (timeDelayRestrictions == null) {
+			timeDelayRestrictions = new EObjectContainmentEList<TimeDelayRestriction>(TimeDelayRestriction.class, this, RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS);
 		}
-		return timedelayrestrictions;
+		return timeDelayRestrictions;
 	}
 
 	/**
@@ -384,8 +384,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return ((InternalEList<?>)getTaskAtomicRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return ((InternalEList<?>)getTaskSymmetryRestrictions()).basicRemove(otherEnd, msgs);
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
-				return ((InternalEList<?>)getInputSynchronicityRestriction()).basicRemove(otherEnd, msgs);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
+				return ((InternalEList<?>)getSynchronicityRestriction()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				return ((InternalEList<?>)getConnectionRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
@@ -394,8 +394,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return ((InternalEList<?>)getSegregationRestrictions()).basicRemove(otherEnd, msgs);
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return ((InternalEList<?>)getSubrestrictions()).basicRemove(otherEnd, msgs);
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
-				return ((InternalEList<?>)getTimedelayrestrictions()).basicRemove(otherEnd, msgs);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
+				return ((InternalEList<?>)getTimeDelayRestrictions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -422,8 +422,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return getTaskAtomicRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return getTaskSymmetryRestrictions();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
-				return getInputSynchronicityRestriction();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
+				return getSynchronicityRestriction();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				return getConnectionRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
@@ -432,8 +432,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return getSegregationRestrictions();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return getSubrestrictions();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
-				return getTimedelayrestrictions();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
+				return getTimeDelayRestrictions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -475,9 +475,9 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				getTaskSymmetryRestrictions().clear();
 				getTaskSymmetryRestrictions().addAll((Collection<? extends TaskSymmetryRestriction>)newValue);
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
-				getInputSynchronicityRestriction().clear();
-				getInputSynchronicityRestriction().addAll((Collection<? extends SynchronicityRestriction>)newValue);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
+				getSynchronicityRestriction().clear();
+				getSynchronicityRestriction().addAll((Collection<? extends SynchronicityRestriction>)newValue);
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				getConnectionRestrictions().clear();
@@ -485,7 +485,7 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 				getConnectionTypeRestrictions().clear();
-				getConnectionTypeRestrictions().addAll((Collection<? extends ConectionTypeRestriction>)newValue);
+				getConnectionTypeRestrictions().addAll((Collection<? extends ConnectionTypeRestriction>)newValue);
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
 				getSegregationRestrictions().clear();
@@ -495,9 +495,9 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				getSubrestrictions().clear();
 				getSubrestrictions().addAll((Collection<? extends Subrestrictions>)newValue);
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
-				getTimedelayrestrictions().clear();
-				getTimedelayrestrictions().addAll((Collection<? extends TimeDelayRestriction>)newValue);
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
+				getTimeDelayRestrictions().clear();
+				getTimeDelayRestrictions().addAll((Collection<? extends TimeDelayRestriction>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -532,8 +532,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				getTaskSymmetryRestrictions().clear();
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
-				getInputSynchronicityRestriction().clear();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
+				getSynchronicityRestriction().clear();
 				return;
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				getConnectionRestrictions().clear();
@@ -547,8 +547,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				getSubrestrictions().clear();
 				return;
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
-				getTimedelayrestrictions().clear();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
+				getTimeDelayRestrictions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -576,8 +576,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return taskAtomicRestrictions != null && !taskAtomicRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
 				return taskSymmetryRestrictions != null && !taskSymmetryRestrictions.isEmpty();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
-				return inputSynchronicityRestriction != null && !inputSynchronicityRestriction.isEmpty();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
+				return synchronicityRestriction != null && !synchronicityRestriction.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 				return connectionRestrictions != null && !connectionRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
@@ -586,8 +586,8 @@ public abstract class RestrictionsContainerAImpl extends OaamBaseElementAImpl im
 				return segregationRestrictions != null && !segregationRestrictions.isEmpty();
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
 				return subrestrictions != null && !subrestrictions.isEmpty();
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
-				return timedelayrestrictions != null && !timedelayrestrictions.isEmpty();
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
+				return timeDelayRestrictions != null && !timeDelayRestrictions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

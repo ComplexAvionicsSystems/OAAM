@@ -63,7 +63,7 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 			case RestrictionsPackage.POWER_SOURCE_RESTRICTION: return createPowerSourceRestriction();
 			case RestrictionsPackage.DEVICE_RESTRICTION: return createDeviceRestriction();
 			case RestrictionsPackage.DEVICE_TYPE_RESTRICTION: return createDeviceTypeRestriction();
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION: return createConectionTypeRestriction();
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION: return createConnectionTypeRestriction();
 			case RestrictionsPackage.CONNECTION_RESTRICTION: return createConnectionRestriction();
 			case RestrictionsPackage.SEGREGATION_RESTRICTION: return createSegregationRestriction();
 			case RestrictionsPackage.SYNCHRONICITY_RESTRICTION: return createSynchronicityRestriction();
@@ -171,9 +171,9 @@ public class RestrictionsFactoryImpl extends EFactoryImpl implements Restriction
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConectionTypeRestriction createConectionTypeRestriction() {
-		ConectionTypeRestrictionImpl conectionTypeRestriction = new ConectionTypeRestrictionImpl();
-		return conectionTypeRestriction;
+	public ConnectionTypeRestriction createConnectionTypeRestriction() {
+		ConnectionTypeRestrictionImpl connectionTypeRestriction = new ConnectionTypeRestrictionImpl();
+		return connectionTypeRestriction;
 	}
 
 	/**

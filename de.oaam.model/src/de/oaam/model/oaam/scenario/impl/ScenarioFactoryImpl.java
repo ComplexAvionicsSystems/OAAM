@@ -57,8 +57,8 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ScenarioPackage.OPERATION_MODE: return createOperationMode();
-			case ScenarioPackage.PARAMETER_NUMERIC: return createParameterNumeric();
-			case ScenarioPackage.PARAMETER_BOOL: return createParameterBool();
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC: return createScenarioParameterNumeric();
+			case ScenarioPackage.SCENARIO_PARAMETER_BOOL: return createScenarioParameterBool();
 			case ScenarioPackage.VARIANT: return createVariant();
 			case ScenarioPackage.OPERATION_MODE_REFERENCE: return createOperationModeReference();
 			case ScenarioPackage.SCENARIO: return createScenario();
@@ -83,9 +83,9 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterNumeric createParameterNumeric() {
-		ParameterNumericImpl parameterNumeric = new ParameterNumericImpl();
-		return parameterNumeric;
+	public ScenarioParameterNumeric createScenarioParameterNumeric() {
+		ScenarioParameterNumericImpl scenarioParameterNumeric = new ScenarioParameterNumericImpl();
+		return scenarioParameterNumeric;
 	}
 
 	/**
@@ -93,9 +93,9 @@ public class ScenarioFactoryImpl extends EFactoryImpl implements ScenarioFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterBool createParameterBool() {
-		ParameterBoolImpl parameterBool = new ParameterBoolImpl();
-		return parameterBool;
+	public ScenarioParameterBool createScenarioParameterBool() {
+		ScenarioParameterBoolImpl scenarioParameterBool = new ScenarioParameterBoolImpl();
+		return scenarioParameterBool;
 	}
 
 	/**

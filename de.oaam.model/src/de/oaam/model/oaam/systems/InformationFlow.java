@@ -36,12 +36,12 @@ public interface InformationFlow extends OaamBaseElementA, ModeDependentElementA
 	 * A single source of this input
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>From</em>' reference.
-	 * @see #setFrom(ProvidedOutputA)
+	 * @see #setFrom(ProvidedInformationA)
 	 * @see de.oaam.model.oaam.systems.SystemsPackage#getInformationFlow_From()
 	 * @model required="true"
 	 * @generated
 	 */
-	ProvidedOutputA getFrom();
+	ProvidedInformationA getFrom();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.systems.InformationFlow#getFrom <em>From</em>}' reference.
@@ -51,7 +51,7 @@ public interface InformationFlow extends OaamBaseElementA, ModeDependentElementA
 	 * @see #getFrom()
 	 * @generated
 	 */
-	void setFrom(ProvidedOutputA value);
+	void setFrom(ProvidedInformationA value);
 
 	/**
 	 * Returns the value of the '<em><b>To</b></em>' reference.
@@ -61,12 +61,12 @@ public interface InformationFlow extends OaamBaseElementA, ModeDependentElementA
 	 * References to the receipients of this output
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>To</em>' reference.
-	 * @see #setTo(RequiredInputA)
+	 * @see #setTo(RequiredInformationA)
 	 * @see de.oaam.model.oaam.systems.SystemsPackage#getInformationFlow_To()
 	 * @model required="true"
 	 * @generated
 	 */
-	RequiredInputA getTo();
+	RequiredInformationA getTo();
 
 	/**
 	 * Sets the value of the '{@link de.oaam.model.oaam.systems.InformationFlow#getTo <em>To</em>}' reference.
@@ -76,6 +76,6 @@ public interface InformationFlow extends OaamBaseElementA, ModeDependentElementA
 	 * @see #getTo()
 	 * @generated
 	 */
-	void setTo(RequiredInputA value);
+	void setTo(RequiredInformationA value);
 
 } // InformationFlow

@@ -166,8 +166,8 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createFaultPropagationAdapter();
 			}
 			@Override
-			public Adapter caseFunctionInputState(FunctionInputState object) {
-				return createFunctionInputStateAdapter();
+			public Adapter caseTaskInputState(TaskInputState object) {
+				return createTaskInputStateAdapter();
 			}
 			@Override
 			public Adapter casePowerSource(PowerSource object) {
@@ -202,28 +202,28 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createResourceTypeDissimilarityAdapter();
 			}
 			@Override
-			public Adapter caseLibrary(Library object) {
-				return createLibraryAdapter();
-			}
-			@Override
 			public Adapter caseSublibrary(Sublibrary object) {
 				return createSublibraryAdapter();
 			}
 			@Override
-			public Adapter caseOutputTrigger(OutputTrigger object) {
-				return createOutputTriggerAdapter();
+			public Adapter caseTaskOutputTrigger(TaskOutputTrigger object) {
+				return createTaskOutputTriggerAdapter();
 			}
 			@Override
-			public Adapter caseFunctionInputTrigger(FunctionInputTrigger object) {
-				return createFunctionInputTriggerAdapter();
+			public Adapter caseTaskInputTrigger(TaskInputTrigger object) {
+				return createTaskInputTriggerAdapter();
 			}
 			@Override
-			public Adapter caseInternalStateDeclaration(InternalStateDeclaration object) {
-				return createInternalStateDeclarationAdapter();
+			public Adapter caseTaskStateDeclaration(TaskStateDeclaration object) {
+				return createTaskStateDeclarationAdapter();
 			}
 			@Override
-			public Adapter caseParameterDeclaration(ParameterDeclaration object) {
-				return createParameterDeclarationAdapter();
+			public Adapter caseTaskParameterDeclaration(TaskParameterDeclaration object) {
+				return createTaskParameterDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseLibrary(Library object) {
+				return createLibraryAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -590,16 +590,16 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.FunctionInputState <em>Function Input State</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.TaskInputState <em>Task Input State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.FunctionInputState
+	 * @see de.oaam.model.oaam.library.TaskInputState
 	 * @generated
 	 */
-	public Adapter createFunctionInputStateAdapter() {
+	public Adapter createTaskInputStateAdapter() {
 		return null;
 	}
 
@@ -744,58 +744,58 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.OutputTrigger <em>Output Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.TaskOutputTrigger <em>Task Output Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.OutputTrigger
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger
 	 * @generated
 	 */
-	public Adapter createOutputTriggerAdapter() {
+	public Adapter createTaskOutputTriggerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.FunctionInputTrigger <em>Function Input Trigger</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.TaskInputTrigger <em>Task Input Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.FunctionInputTrigger
+	 * @see de.oaam.model.oaam.library.TaskInputTrigger
 	 * @generated
 	 */
-	public Adapter createFunctionInputTriggerAdapter() {
+	public Adapter createTaskInputTriggerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.InternalStateDeclaration <em>Internal State Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.TaskStateDeclaration <em>Task State Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.InternalStateDeclaration
+	 * @see de.oaam.model.oaam.library.TaskStateDeclaration
 	 * @generated
 	 */
-	public Adapter createInternalStateDeclarationAdapter() {
+	public Adapter createTaskStateDeclarationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.ParameterDeclaration <em>Parameter Declaration</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.TaskParameterDeclaration <em>Task Parameter Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.library.ParameterDeclaration
+	 * @see de.oaam.model.oaam.library.TaskParameterDeclaration
 	 * @generated
 	 */
-	public Adapter createParameterDeclarationAdapter() {
+	public Adapter createTaskParameterDeclarationAdapter() {
 		return null;
 	}
 

@@ -7,8 +7,7 @@ import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
-import de.oaam.model.oaam.library.OutputTrigger;
-
+import de.oaam.model.oaam.library.TaskOutputTrigger;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -93,7 +92,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * @generated
 	 * @ordered
 	 */
-	protected OutputTrigger trigger;
+	protected TaskOutputTrigger trigger;
 
 	/**
 	 * The default value of the '{@link #getRange() <em>Range</em>}' attribute.
@@ -241,7 +240,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputTrigger getTrigger() {
+	public TaskOutputTrigger getTrigger() {
 		return trigger;
 	}
 
@@ -250,8 +249,8 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTrigger(OutputTrigger newTrigger, NotificationChain msgs) {
-		OutputTrigger oldTrigger = trigger;
+	public NotificationChain basicSetTrigger(TaskOutputTrigger newTrigger, NotificationChain msgs) {
+		TaskOutputTrigger oldTrigger = trigger;
 		trigger = newTrigger;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LibraryPackage.OUTPUT_DECLARATION__TRIGGER, oldTrigger, newTrigger);
@@ -265,7 +264,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTrigger(OutputTrigger newTrigger) {
+	public void setTrigger(TaskOutputTrigger newTrigger) {
 		if (newTrigger != trigger) {
 			NotificationChain msgs = null;
 			if (trigger != null)
@@ -453,7 +452,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 				setPostcondition((String)newValue);
 				return;
 			case LibraryPackage.OUTPUT_DECLARATION__TRIGGER:
-				setTrigger((OutputTrigger)newValue);
+				setTrigger((TaskOutputTrigger)newValue);
 				return;
 			case LibraryPackage.OUTPUT_DECLARATION__RANGE:
 				setRange((String)newValue);
@@ -490,7 +489,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 				setPostcondition(POSTCONDITION_EDEFAULT);
 				return;
 			case LibraryPackage.OUTPUT_DECLARATION__TRIGGER:
-				setTrigger((OutputTrigger)null);
+				setTrigger((TaskOutputTrigger)null);
 				return;
 			case LibraryPackage.OUTPUT_DECLARATION__RANGE:
 				setRange(RANGE_EDEFAULT);

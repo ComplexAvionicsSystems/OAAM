@@ -104,8 +104,8 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createFailureConditionAdapter();
 			}
 			@Override
-			public Adapter caseSystemInputState(SystemInputState object) {
-				return createSystemInputStateAdapter();
+			public Adapter caseOutputIntegrityState(OutputIntegrityState object) {
+				return createOutputIntegrityStateAdapter();
 			}
 			@Override
 			public Adapter caseSignal(Signal object) {
@@ -132,8 +132,8 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createSubfunctionsAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
-				return createParameterAdapter();
+			public Adapter caseTaskParameter(TaskParameter object) {
+				return createTaskParameterAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -284,16 +284,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.SystemInputState <em>System Input State</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.OutputIntegrityState <em>Output Integrity State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.functions.SystemInputState
+	 * @see de.oaam.model.oaam.functions.OutputIntegrityState
 	 * @generated
 	 */
-	public Adapter createSystemInputStateAdapter() {
+	public Adapter createOutputIntegrityStateAdapter() {
 		return null;
 	}
 
@@ -382,16 +382,16 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.Parameter <em>Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.TaskParameter <em>Task Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.functions.Parameter
+	 * @see de.oaam.model.oaam.functions.TaskParameter
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createTaskParameterAdapter() {
 		return null;
 	}
 

@@ -162,22 +162,13 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS_CONTAINER_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Atomic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONS_CONTAINER_A__IS_ATOMIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Task Links</b></em>' containment reference list.
@@ -186,7 +177,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups</b></em>' containment reference list.
@@ -195,7 +186,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task Symmetries</b></em>' containment reference list.
@@ -204,7 +195,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Task Redundancies</b></em>' containment reference list.
@@ -213,7 +204,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
@@ -222,7 +213,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Signal Groups</b></em>' containment reference list.
@@ -231,7 +222,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Failure Events</b></em>' containment reference list.
@@ -240,7 +231,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+	int FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -249,7 +240,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
+	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -258,7 +249,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
+	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -368,15 +359,6 @@ public interface FunctionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
-
-	/**
-	 * The feature id for the '<em><b>Is Atomic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONS__IS_ATOMIC = FUNCTIONS_CONTAINER_A__IS_ATOMIC;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -1321,13 +1303,13 @@ public interface FunctionsPackage extends EPackage {
 	int FAILURE_CONDITION__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Max Occurrence Rate</b></em>' attribute.
+	 * The feature id for the '<em><b>Max Occurrence Probability</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__MAX_OCCURRENCE_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>No Single Failure</b></em>' attribute.
@@ -1357,14 +1339,14 @@ public interface FunctionsPackage extends EPackage {
 	int FAILURE_CONDITION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SystemInputStateImpl <em>System Input State</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl <em>Output Integrity State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.functions.impl.SystemInputStateImpl
-	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getSystemInputState()
+	 * @see de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getOutputIntegrityState()
 	 * @generated
 	 */
-	int SYSTEM_INPUT_STATE = 8;
+	int OUTPUT_INTEGRITY_STATE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1373,7 +1355,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
+	int OUTPUT_INTEGRITY_STATE__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1382,7 +1364,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
+	int OUTPUT_INTEGRITY_STATE__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1391,7 +1373,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
+	int OUTPUT_INTEGRITY_STATE__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1400,7 +1382,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
+	int OUTPUT_INTEGRITY_STATE__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1409,7 +1391,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
+	int OUTPUT_INTEGRITY_STATE__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1418,7 +1400,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
+	int OUTPUT_INTEGRITY_STATE__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1427,7 +1409,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
+	int OUTPUT_INTEGRITY_STATE__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1436,7 +1418,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
+	int OUTPUT_INTEGRITY_STATE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1445,7 +1427,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__OPERATION_MODES = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
+	int OUTPUT_INTEGRITY_STATE__OPERATION_MODES = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -1454,7 +1436,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__VARIANTS = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
+	int OUTPUT_INTEGRITY_STATE__VARIANTS = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -1463,7 +1445,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
+	int OUTPUT_INTEGRITY_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -1472,25 +1454,25 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE__OUTPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 11;
+	int OUTPUT_INTEGRITY_STATE__OUTPUT = CommonPackage.BOOL_A_FEATURE_COUNT + 11;
 
 	/**
-	 * The number of structural features of the '<em>System Input State</em>' class.
+	 * The number of structural features of the '<em>Output Integrity State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 12;
+	int OUTPUT_INTEGRITY_STATE_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of operations of the '<em>System Input State</em>' class.
+	 * The number of operations of the '<em>Output Integrity State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_INPUT_STATE_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
+	int OUTPUT_INTEGRITY_STATE_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.SignalImpl <em>Signal</em>}' class.
@@ -2345,15 +2327,6 @@ public interface FunctionsPackage extends EPackage {
 	int SUBFUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
 
 	/**
-	 * The feature id for the '<em><b>Is Atomic</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBFUNCTIONS__IS_ATOMIC = FUNCTIONS_CONTAINER_A__IS_ATOMIC;
-
-	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2471,14 +2444,14 @@ public interface FunctionsPackage extends EPackage {
 	int SUBFUNCTIONS_OPERATION_COUNT = FUNCTIONS_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskParameterImpl <em>Task Parameter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.functions.impl.ParameterImpl
-	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getParameter()
+	 * @see de.oaam.model.oaam.functions.impl.TaskParameterImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskParameter()
 	 * @generated
 	 */
-	int PARAMETER = 15;
+	int TASK_PARAMETER = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2487,7 +2460,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int TASK_PARAMETER__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2496,7 +2469,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int TASK_PARAMETER__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2505,7 +2478,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int TASK_PARAMETER__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2514,7 +2487,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int TASK_PARAMETER__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2523,7 +2496,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int TASK_PARAMETER__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2532,7 +2505,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int TASK_PARAMETER__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2541,7 +2514,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int TASK_PARAMETER__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2550,7 +2523,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+	int TASK_PARAMETER__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Definition</b></em>' reference.
@@ -2559,7 +2532,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__DEFINITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int TASK_PARAMETER__DEFINITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2568,26 +2541,25 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__VALUE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_PARAMETER__VALUE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * The number of structural features of the '<em>Task Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_PARAMETER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Parameter</em>' class.
+	 * The number of operations of the '<em>Task Parameter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
-
+	int TASK_PARAMETER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Functions <em>Functions</em>}'.
@@ -2608,17 +2580,6 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunctionsContainerA();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.FunctionsContainerA#isIsAtomic <em>Is Atomic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Atomic</em>'.
-	 * @see de.oaam.model.oaam.functions.FunctionsContainerA#isIsAtomic()
-	 * @see #getFunctionsContainerA()
-	 * @generated
-	 */
-	EAttribute getFunctionsContainerA_IsAtomic();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FunctionsContainerA#getTasks <em>Tasks</em>}'.
@@ -2967,15 +2928,15 @@ public interface FunctionsPackage extends EPackage {
 	EReference getFailureCondition_Logic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceRate <em>Max Occurrence Rate</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Occurrence Rate</em>'.
-	 * @see de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceRate()
+	 * @return the meta object for the attribute '<em>Max Occurrence Probability</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability()
 	 * @see #getFailureCondition()
 	 * @generated
 	 */
-	EAttribute getFailureCondition_MaxOccurrenceRate();
+	EAttribute getFailureCondition_MaxOccurrenceProbability();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.FailureCondition#isNoSingleFailure <em>No Single Failure</em>}'.
@@ -2989,36 +2950,36 @@ public interface FunctionsPackage extends EPackage {
 	EAttribute getFailureCondition_NoSingleFailure();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.SystemInputState <em>System Input State</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.OutputIntegrityState <em>Output Integrity State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>System Input State</em>'.
-	 * @see de.oaam.model.oaam.functions.SystemInputState
+	 * @return the meta object for class '<em>Output Integrity State</em>'.
+	 * @see de.oaam.model.oaam.functions.OutputIntegrityState
 	 * @generated
 	 */
-	EClass getSystemInputState();
+	EClass getOutputIntegrityState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.SystemInputState#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.OutputIntegrityState#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see de.oaam.model.oaam.functions.SystemInputState#getState()
-	 * @see #getSystemInputState()
+	 * @see de.oaam.model.oaam.functions.OutputIntegrityState#getState()
+	 * @see #getOutputIntegrityState()
 	 * @generated
 	 */
-	EAttribute getSystemInputState_State();
+	EAttribute getOutputIntegrityState_State();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.SystemInputState#getOutput <em>Output</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.OutputIntegrityState#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Output</em>'.
-	 * @see de.oaam.model.oaam.functions.SystemInputState#getOutput()
-	 * @see #getSystemInputState()
+	 * @see de.oaam.model.oaam.functions.OutputIntegrityState#getOutput()
+	 * @see #getOutputIntegrityState()
 	 * @generated
 	 */
-	EReference getSystemInputState_Output();
+	EReference getOutputIntegrityState_Output();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Signal <em>Signal</em>}'.
@@ -3301,36 +3262,36 @@ public interface FunctionsPackage extends EPackage {
 	EAttribute getSubfunctions_MultiplicityMax();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Parameter <em>Parameter</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.TaskParameter <em>Task Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parameter</em>'.
-	 * @see de.oaam.model.oaam.functions.Parameter
+	 * @return the meta object for class '<em>Task Parameter</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskParameter
 	 * @generated
 	 */
-	EClass getParameter();
+	EClass getTaskParameter();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.Parameter#getDefinition <em>Definition</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.TaskParameter#getDefinition <em>Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Definition</em>'.
-	 * @see de.oaam.model.oaam.functions.Parameter#getDefinition()
-	 * @see #getParameter()
+	 * @see de.oaam.model.oaam.functions.TaskParameter#getDefinition()
+	 * @see #getTaskParameter()
 	 * @generated
 	 */
-	EReference getParameter_Definition();
+	EReference getTaskParameter_Definition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.Parameter#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.TaskParameter#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see de.oaam.model.oaam.functions.Parameter#getValue()
-	 * @see #getParameter()
+	 * @see de.oaam.model.oaam.functions.TaskParameter#getValue()
+	 * @see #getTaskParameter()
 	 * @generated
 	 */
-	EAttribute getParameter_Value();
+	EAttribute getTaskParameter_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3374,14 +3335,6 @@ public interface FunctionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FUNCTIONS_CONTAINER_A = eINSTANCE.getFunctionsContainerA();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Atomic</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTIONS_CONTAINER_A__IS_ATOMIC = eINSTANCE.getFunctionsContainerA_IsAtomic();
 
 		/**
 		 * The meta object literal for the '<em><b>Tasks</b></em>' containment reference list feature.
@@ -3652,12 +3605,12 @@ public interface FunctionsPackage extends EPackage {
 		EReference FAILURE_CONDITION__LOGIC = eINSTANCE.getFailureCondition_Logic();
 
 		/**
-		 * The meta object literal for the '<em><b>Max Occurrence Rate</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Max Occurrence Probability</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FAILURE_CONDITION__MAX_OCCURRENCE_RATE = eINSTANCE.getFailureCondition_MaxOccurrenceRate();
+		EAttribute FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY = eINSTANCE.getFailureCondition_MaxOccurrenceProbability();
 
 		/**
 		 * The meta object literal for the '<em><b>No Single Failure</b></em>' attribute feature.
@@ -3668,14 +3621,14 @@ public interface FunctionsPackage extends EPackage {
 		EAttribute FAILURE_CONDITION__NO_SINGLE_FAILURE = eINSTANCE.getFailureCondition_NoSingleFailure();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.SystemInputStateImpl <em>System Input State</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl <em>Output Integrity State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.functions.impl.SystemInputStateImpl
-		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getSystemInputState()
+		 * @see de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getOutputIntegrityState()
 		 * @generated
 		 */
-		EClass SYSTEM_INPUT_STATE = eINSTANCE.getSystemInputState();
+		EClass OUTPUT_INTEGRITY_STATE = eINSTANCE.getOutputIntegrityState();
 
 		/**
 		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
@@ -3683,7 +3636,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYSTEM_INPUT_STATE__STATE = eINSTANCE.getSystemInputState_State();
+		EAttribute OUTPUT_INTEGRITY_STATE__STATE = eINSTANCE.getOutputIntegrityState_State();
 
 		/**
 		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.
@@ -3691,7 +3644,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SYSTEM_INPUT_STATE__OUTPUT = eINSTANCE.getSystemInputState_Output();
+		EReference OUTPUT_INTEGRITY_STATE__OUTPUT = eINSTANCE.getOutputIntegrityState_Output();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.SignalImpl <em>Signal</em>}' class.
@@ -3914,14 +3867,14 @@ public interface FunctionsPackage extends EPackage {
 		EAttribute SUBFUNCTIONS__MULTIPLICITY_MAX = eINSTANCE.getSubfunctions_MultiplicityMax();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.TaskParameterImpl <em>Task Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.functions.impl.ParameterImpl
-		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getParameter()
+		 * @see de.oaam.model.oaam.functions.impl.TaskParameterImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskParameter()
 		 * @generated
 		 */
-		EClass PARAMETER = eINSTANCE.getParameter();
+		EClass TASK_PARAMETER = eINSTANCE.getTaskParameter();
 
 		/**
 		 * The meta object literal for the '<em><b>Definition</b></em>' reference feature.
@@ -3929,7 +3882,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PARAMETER__DEFINITION = eINSTANCE.getParameter_Definition();
+		EReference TASK_PARAMETER__DEFINITION = eINSTANCE.getTaskParameter_Definition();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3937,7 +3890,7 @@ public interface FunctionsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARAMETER__VALUE = eINSTANCE.getParameter_Value();
+		EAttribute TASK_PARAMETER__VALUE = eINSTANCE.getTaskParameter_Value();
 
 	}
 

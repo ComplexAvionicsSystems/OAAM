@@ -20,6 +20,7 @@ import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
 import de.oaam.model.oaam.capabilities.Subcapabilities;
+import de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability;
 import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
 import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
 import de.oaam.model.oaam.common.CommonPackage;
@@ -113,6 +114,13 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * @generated
 	 */
 	private EClass subdeviceInDeviceCapabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass subconnectionInDeviceCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -314,6 +322,15 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCapabilitiesContainerA_SubconnectionInDeviceCapabilities() {
+		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTaskOnDeviceCapability() {
 		return taskOnDeviceCapabilityEClass;
 	}
@@ -458,6 +475,15 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSignalOnConnectionOrDeviceCapability_WorstCaseTransmissionTime() {
+		return (EAttribute)signalOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSubdeviceInDeviceCapability() {
 		return subdeviceInDeviceCapabilityEClass;
 	}
@@ -478,6 +504,33 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 */
 	public EReference getSubdeviceInDeviceCapability_TargetDeviceType() {
 		return (EReference)subdeviceInDeviceCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSubconnectionInDeviceCapability() {
+		return subconnectionInDeviceCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubconnectionInDeviceCapability_SubconnectionType() {
+		return (EReference)subconnectionInDeviceCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubconnectionInDeviceCapability_TargetDeviceType() {
+		return (EReference)subconnectionInDeviceCapabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -572,6 +625,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES);
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES);
 
 		taskOnDeviceCapabilityEClass = createEClass(TASK_ON_DEVICE_CAPABILITY);
 		createEReference(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__TASK_TYPE);
@@ -592,10 +646,15 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__SIGNAL_TYPE);
 		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE);
 		createEReference(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE);
+		createEAttribute(signalOnConnectionOrDeviceCapabilityEClass, SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME);
 
 		subdeviceInDeviceCapabilityEClass = createEClass(SUBDEVICE_IN_DEVICE_CAPABILITY);
 		createEReference(subdeviceInDeviceCapabilityEClass, SUBDEVICE_IN_DEVICE_CAPABILITY__SUBDEVICE_TYPE);
 		createEReference(subdeviceInDeviceCapabilityEClass, SUBDEVICE_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE);
+
+		subconnectionInDeviceCapabilityEClass = createEClass(SUBCONNECTION_IN_DEVICE_CAPABILITY);
+		createEReference(subconnectionInDeviceCapabilityEClass, SUBCONNECTION_IN_DEVICE_CAPABILITY__SUBCONNECTION_TYPE);
+		createEReference(subconnectionInDeviceCapabilityEClass, SUBCONNECTION_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE);
 
 		resourceConsumptionEClass = createEClass(RESOURCE_CONSUMPTION);
 		createEAttribute(resourceConsumptionEClass, RESOURCE_CONSUMPTION__COUNT);
@@ -661,6 +720,10 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subdeviceInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		capabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
 		subcapabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
@@ -678,6 +741,7 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		initEReference(getCapabilitiesContainerA_SubdeviceInDeviceCapabilities(), this.getSubdeviceInDeviceCapability(), null, "subdeviceInDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities(), this.getConnectionInDuctOrLocationCapability(), null, "connectionInDuctOrLocationCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapabilitiesContainerA_Subcapabilities(), this.getSubcapabilities(), null, "subcapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_SubconnectionInDeviceCapabilities(), this.getSubconnectionInDeviceCapability(), null, "subconnectionInDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskOnDeviceCapabilityEClass, TaskOnDeviceCapability.class, "TaskOnDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskOnDeviceCapability_TaskType(), theLibraryPackage.getTaskType(), null, "taskType", null, 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -698,10 +762,15 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		initEReference(getSignalOnConnectionOrDeviceCapability_SignalType(), theLibraryPackage.getSignalType(), null, "signalType", null, 1, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignalOnConnectionOrDeviceCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 0, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignalOnConnectionOrDeviceCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 0, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSignalOnConnectionOrDeviceCapability_WorstCaseTransmissionTime(), ecorePackage.getEFloat(), "worstCaseTransmissionTime", "0.0", 1, 1, SignalOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subdeviceInDeviceCapabilityEClass, SubdeviceInDeviceCapability.class, "SubdeviceInDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubdeviceInDeviceCapability_SubdeviceType(), theLibraryPackage.getDeviceType(), null, "subdeviceType", null, 1, 1, SubdeviceInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSubdeviceInDeviceCapability_TargetDeviceType(), theLibraryPackage.getDeviceType(), null, "targetDeviceType", null, 1, 1, SubdeviceInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(subconnectionInDeviceCapabilityEClass, SubconnectionInDeviceCapability.class, "SubconnectionInDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubconnectionInDeviceCapability_SubconnectionType(), theLibraryPackage.getConnectionType(), null, "subconnectionType", null, 1, 1, SubconnectionInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubconnectionInDeviceCapability_TargetDeviceType(), theLibraryPackage.getDeviceType(), null, "targetDeviceType", null, 1, 1, SubconnectionInDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceConsumptionEClass, ResourceConsumption.class, "ResourceConsumption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResourceConsumption_Count(), ecorePackage.getEDouble(), "count", null, 1, 1, ResourceConsumption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

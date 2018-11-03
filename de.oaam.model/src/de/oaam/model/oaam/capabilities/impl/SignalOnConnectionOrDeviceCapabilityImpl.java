@@ -56,6 +56,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl#getSignalType <em>Signal Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl#getDeviceType <em>Device Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl#getConnectionType <em>Connection Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.impl.SignalOnConnectionOrDeviceCapabilityImpl#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -260,6 +261,26 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 	 * @ordered
 	 */
 	protected ConnectionType connectionType;
+
+	/**
+	 * The default value of the '{@link #getWorstCaseTransmissionTime() <em>Worst Case Transmission Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWorstCaseTransmissionTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float WORST_CASE_TRANSMISSION_TIME_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getWorstCaseTransmissionTime() <em>Worst Case Transmission Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWorstCaseTransmissionTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected float worstCaseTransmissionTime = WORST_CASE_TRANSMISSION_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -582,6 +603,27 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getWorstCaseTransmissionTime() {
+		return worstCaseTransmissionTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWorstCaseTransmissionTime(float newWorstCaseTransmissionTime) {
+		float oldWorstCaseTransmissionTime = worstCaseTransmissionTime;
+		worstCaseTransmissionTime = newWorstCaseTransmissionTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME, oldWorstCaseTransmissionTime, worstCaseTransmissionTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -630,6 +672,8 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE:
 				if (resolve) return getConnectionType();
 				return basicGetConnectionType();
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME:
+				return getWorstCaseTransmissionTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -685,6 +729,9 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE:
 				setConnectionType((ConnectionType)newValue);
 				return;
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME:
+				setWorstCaseTransmissionTime((Float)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -736,6 +783,9 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE:
 				setConnectionType((ConnectionType)null);
 				return;
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME:
+				setWorstCaseTransmissionTime(WORST_CASE_TRANSMISSION_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -774,6 +824,8 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 				return deviceType != null;
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE:
 				return connectionType != null;
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME:
+				return worstCaseTransmissionTime != WORST_CASE_TRANSMISSION_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -872,6 +924,8 @@ public class SignalOnConnectionOrDeviceCapabilityImpl extends CapabilityAImpl im
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
+		result.append(", worstCaseTransmissionTime: ");
+		result.append(worstCaseTransmissionTime);
 		result.append(')');
 		return result.toString();
 	}

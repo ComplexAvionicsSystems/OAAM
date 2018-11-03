@@ -20,5 +20,5 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface TaskAtomicRestriction extends TaskRestrictionA, OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
+public interface TaskAtomicRestriction extends TaskRestrictionA, TaskGroupRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 } // TaskAtomicRestriction

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RotaryPowerImpl extends PowerImpl implements RotaryPower {
+public class RotaryPowerImpl extends InformationPowerImpl implements RotaryPower {
 	/**
 	 * The default value of the '{@link #getMomentum() <em>Momentum</em>}' attribute.
 	 * <!-- begin-user-doc -->

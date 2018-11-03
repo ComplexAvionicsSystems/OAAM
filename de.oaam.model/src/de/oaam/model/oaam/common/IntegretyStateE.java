@@ -59,6 +59,9 @@ public enum IntegretyStateE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The state is OK, which means it works as it should do.
+	 * <!-- end-model-doc -->
 	 * @see #OK
 	 * @model
 	 * @generated
@@ -74,6 +77,9 @@ public enum IntegretyStateE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The state is failed, but it is known to be failed. 
+	 * <!-- end-model-doc -->
 	 * @see #FAILED
 	 * @model
 	 * @generated
@@ -89,6 +95,9 @@ public enum IntegretyStateE implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The state can be ok or failed or out-of-control. Compared to to the other states it is not known. Therefore, no fault containment can take place.
+	 * <!-- end-model-doc -->
 	 * @see #UNKNOWN
 	 * @model
 	 * @generated

@@ -7,13 +7,14 @@ import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.ElectricPower;
 import de.oaam.model.oaam.systems.HydraulicPower;
-import de.oaam.model.oaam.systems.Information;
 import de.oaam.model.oaam.systems.InformationFlow;
+import de.oaam.model.oaam.systems.InformationMaterial;
+import de.oaam.model.oaam.systems.InformationPower;
+import de.oaam.model.oaam.systems.InformationSignal;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.LinearPower;
-import de.oaam.model.oaam.systems.Power;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.ProvidedInformationA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.RotaryPower;
 import de.oaam.model.oaam.systems.Subsystem;
 import de.oaam.model.oaam.systems.Systems;
@@ -100,28 +101,32 @@ public class SystemsAdapterFactory extends AdapterFactoryImpl {
 				return createSystemAdapter();
 			}
 			@Override
-			public Adapter caseRequiredInputA(RequiredInputA object) {
-				return createRequiredInputAAdapter();
+			public Adapter caseRequiredInformationA(RequiredInformationA object) {
+				return createRequiredInformationAAdapter();
 			}
 			@Override
-			public Adapter caseProvidedOutputA(ProvidedOutputA object) {
-				return createProvidedOutputAAdapter();
-			}
-			@Override
-			public Adapter caseInformation(Information object) {
-				return createInformationAdapter();
+			public Adapter caseProvidedInformationA(ProvidedInformationA object) {
+				return createProvidedInformationAAdapter();
 			}
 			@Override
 			public Adapter caseInformationFlow(InformationFlow object) {
 				return createInformationFlowAdapter();
 			}
 			@Override
-			public Adapter caseElectricPower(ElectricPower object) {
-				return createElectricPowerAdapter();
+			public Adapter caseInformationSignal(InformationSignal object) {
+				return createInformationSignalAdapter();
 			}
 			@Override
-			public Adapter casePower(Power object) {
-				return createPowerAdapter();
+			public Adapter caseInformationMaterial(InformationMaterial object) {
+				return createInformationMaterialAdapter();
+			}
+			@Override
+			public Adapter caseInformationPower(InformationPower object) {
+				return createInformationPowerAdapter();
+			}
+			@Override
+			public Adapter caseElectricPower(ElectricPower object) {
+				return createElectricPowerAdapter();
 			}
 			@Override
 			public Adapter caseHydraulicPower(HydraulicPower object) {
@@ -228,44 +233,30 @@ public class SystemsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.RequiredInputA <em>Required Input A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.RequiredInformationA <em>Required Information A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.systems.RequiredInputA
+	 * @see de.oaam.model.oaam.systems.RequiredInformationA
 	 * @generated
 	 */
-	public Adapter createRequiredInputAAdapter() {
+	public Adapter createRequiredInformationAAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.ProvidedOutputA <em>Provided Output A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.ProvidedInformationA <em>Provided Information A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.systems.ProvidedOutputA
+	 * @see de.oaam.model.oaam.systems.ProvidedInformationA
 	 * @generated
 	 */
-	public Adapter createProvidedOutputAAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.Information <em>Information</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.systems.Information
-	 * @generated
-	 */
-	public Adapter createInformationAdapter() {
+	public Adapter createProvidedInformationAAdapter() {
 		return null;
 	}
 
@@ -284,6 +275,48 @@ public class SystemsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.InformationSignal <em>Information Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.systems.InformationSignal
+	 * @generated
+	 */
+	public Adapter createInformationSignalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.InformationMaterial <em>Information Material</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.systems.InformationMaterial
+	 * @generated
+	 */
+	public Adapter createInformationMaterialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.InformationPower <em>Information Power</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.systems.InformationPower
+	 * @generated
+	 */
+	public Adapter createInformationPowerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.ElectricPower <em>Electric Power</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -294,20 +327,6 @@ public class SystemsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElectricPowerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.Power <em>Power</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.systems.Power
-	 * @generated
-	 */
-	public Adapter createPowerAdapter() {
 		return null;
 	}
 

@@ -308,6 +308,15 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDevice_Subconnections() {
+		return (EReference)deviceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConnection() {
 		return connectionEClass;
 	}
@@ -442,6 +451,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		createEReference(deviceEClass, DEVICE__SUBDEVICES);
 		createEReference(deviceEClass, DEVICE__LOCATION_BINDING);
 		createEReference(deviceEClass, DEVICE__POWER_SOURCES);
+		createEReference(deviceEClass, DEVICE__SUBCONNECTIONS);
 
 		connectionEClass = createEClass(CONNECTION);
 		createEReference(connectionEClass, CONNECTION__TYPE);
@@ -529,6 +539,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		initEReference(getDevice_Subdevices(), this.getDevice(), null, "subdevices", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_LocationBinding(), theAnatomyPackage.getLocation(), null, "locationBinding", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_PowerSources(), theLibraryPackage.getPowerSource(), null, "powerSources", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDevice_Subconnections(), this.getConnection(), null, "subconnections", null, 0, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnection_Type(), theLibraryPackage.getConnectionType(), null, "type", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -8,8 +8,10 @@ import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.functions.Signal;
+import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
 
+import de.oaam.model.oaam.functions.TaskGroup;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 
@@ -17,9 +19,11 @@ import de.oaam.model.oaam.restrictions.ConnectionRestrinctionA;
 import de.oaam.model.oaam.restrictions.DeviceRestrictionA;
 import de.oaam.model.oaam.restrictions.LocationRestriction;
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
+import de.oaam.model.oaam.restrictions.SignalGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
 import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
 
+import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -51,7 +55,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getTaskGroups <em>Task Groups</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getSignals <em>Signals</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getSignalGroups <em>Signal Groups</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getSubfunctions <em>Subfunctions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.impl.LocationRestrictionImpl#getConnections <em>Connections</em>}</li>
@@ -74,6 +80,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LocationRestrictionImpl extends TaskRestrictionAImpl implements LocationRestriction {
 	/**
+	 * The cached value of the '{@link #getTaskGroups() <em>Task Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskGroup> taskGroups;
+
+	/**
 	 * The cached value of the '{@link #getSignals() <em>Signals</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,6 +98,16 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	 * @ordered
 	 */
 	protected EList<Signal> signals;
+
+	/**
+	 * The cached value of the '{@link #getSignalGroups() <em>Signal Groups</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSignalGroups()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SignalGroup> signalGroups;
 
 	/**
 	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' reference list.
@@ -357,11 +383,35 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TaskGroup> getTaskGroups() {
+		if (taskGroups == null) {
+			taskGroups = new EObjectResolvingEList<TaskGroup>(TaskGroup.class, this, RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS);
+		}
+		return taskGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Signal> getSignals() {
 		if (signals == null) {
 			signals = new EObjectResolvingEList<Signal>(Signal.class, this, RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS);
 		}
 		return signals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SignalGroup> getSignalGroups() {
+		if (signalGroups == null) {
+			signalGroups = new EObjectResolvingEList<SignalGroup>(SignalGroup.class, this, RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS);
+		}
+		return signalGroups;
 	}
 
 	/**
@@ -687,8 +737,12 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS:
+				return getTaskGroups();
 			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS:
 				return getSignals();
+			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS:
+				return getSignalGroups();
 			case RestrictionsPackage.LOCATION_RESTRICTION__SUBFUNCTIONS:
 				return getSubfunctions();
 			case RestrictionsPackage.LOCATION_RESTRICTION__DEVICES:
@@ -735,9 +789,17 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
+				getTaskGroups().addAll((Collection<? extends TaskGroup>)newValue);
+				return;
 			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS:
 				getSignals().clear();
 				getSignals().addAll((Collection<? extends Signal>)newValue);
+				return;
+			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
+				getSignalGroups().addAll((Collection<? extends SignalGroup>)newValue);
 				return;
 			case RestrictionsPackage.LOCATION_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
@@ -805,8 +867,14 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS:
+				getTaskGroups().clear();
+				return;
 			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS:
 				getSignals().clear();
+				return;
+			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS:
+				getSignalGroups().clear();
 				return;
 			case RestrictionsPackage.LOCATION_RESTRICTION__SUBFUNCTIONS:
 				getSubfunctions().clear();
@@ -868,8 +936,12 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS:
+				return taskGroups != null && !taskGroups.isEmpty();
 			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS:
 				return signals != null && !signals.isEmpty();
+			case RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS:
+				return signalGroups != null && !signalGroups.isEmpty();
 			case RestrictionsPackage.LOCATION_RESTRICTION__SUBFUNCTIONS:
 				return subfunctions != null && !subfunctions.isEmpty();
 			case RestrictionsPackage.LOCATION_RESTRICTION__DEVICES:
@@ -913,9 +985,21 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskGroupRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS: return RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SignalRestrictionA.class) {
 			switch (derivedFeatureID) {
 				case RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS: return RestrictionsPackage.SIGNAL_RESTRICTION_A__SIGNALS;
+				default: return -1;
+			}
+		}
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (derivedFeatureID) {
+				case RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS: return RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS;
 				default: return -1;
 			}
 		}
@@ -972,9 +1056,21 @@ public class LocationRestrictionImpl extends TaskRestrictionAImpl implements Loc
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TaskGroupRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.TASK_GROUP_RESTRICTION_A__TASK_GROUPS: return RestrictionsPackage.LOCATION_RESTRICTION__TASK_GROUPS;
+				default: return -1;
+			}
+		}
 		if (baseClass == SignalRestrictionA.class) {
 			switch (baseFeatureID) {
 				case RestrictionsPackage.SIGNAL_RESTRICTION_A__SIGNALS: return RestrictionsPackage.LOCATION_RESTRICTION__SIGNALS;
+				default: return -1;
+			}
+		}
+		if (baseClass == SignalGroupRestrictionA.class) {
+			switch (baseFeatureID) {
+				case RestrictionsPackage.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS: return RestrictionsPackage.LOCATION_RESTRICTION__SIGNAL_GROUPS;
 				default: return -1;
 			}
 		}

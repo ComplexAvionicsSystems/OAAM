@@ -24,7 +24,7 @@ package de.oaam.model.oaam.systems;
  * @model
  * @generated
  */
-public interface LinearPower extends Power {
+public interface LinearPower extends InformationPower {
 	/**
 	 * Returns the value of the '<em><b>Force</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.

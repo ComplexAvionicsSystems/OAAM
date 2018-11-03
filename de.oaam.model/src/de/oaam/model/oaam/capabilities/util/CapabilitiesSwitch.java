@@ -131,6 +131,16 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY: {
+				SubconnectionInDeviceCapability subconnectionInDeviceCapability = (SubconnectionInDeviceCapability)theEObject;
+				T result = caseSubconnectionInDeviceCapability(subconnectionInDeviceCapability);
+				if (result == null) result = caseCapabilityA(subconnectionInDeviceCapability);
+				if (result == null) result = caseOaamBaseElementA(subconnectionInDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(subconnectionInDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(subconnectionInDeviceCapability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: {
 				ResourceConsumption resourceConsumption = (ResourceConsumption)theEObject;
 				T result = caseResourceConsumption(resourceConsumption);
@@ -262,6 +272,21 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSubdeviceInDeviceCapability(SubdeviceInDeviceCapability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Subconnection In Device Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Subconnection In Device Capability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubconnectionInDeviceCapability(SubconnectionInDeviceCapability object) {
 		return null;
 	}
 

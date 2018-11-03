@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getTaskAssignments <em>Task Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSignalAssignments <em>Signal Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSuballocations <em>Suballocations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSubconnectionAssignments <em>Subconnection Assignments</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getAllocationsContainerA()
@@ -112,7 +113,7 @@ public interface AllocationsContainerA extends OaamBaseElementA {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * All suballocationss
+	 * All suballocations
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Suballocations</em>' containment reference list.
 	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getAllocationsContainerA_Suballocations()
@@ -120,5 +121,20 @@ public interface AllocationsContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Suballocations> getSuballocations();
+
+	/**
+	 * Returns the value of the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.allocations.SubconnectionAssignment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All subconnection assignments of the allocations package.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Subconnection Assignments</em>' containment reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getAllocationsContainerA_SubconnectionAssignments()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SubconnectionAssignment> getSubconnectionAssignments();
 
 } // AllocationsContainerA

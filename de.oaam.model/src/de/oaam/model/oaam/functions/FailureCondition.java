@@ -21,7 +21,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getLogic <em>Logic</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceRate <em>Max Occurrence Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#isNoSingleFailure <em>No Single Failure</em>}</li>
  * </ul>
  *
@@ -56,29 +56,30 @@ public interface FailureCondition extends OaamBaseElementA, ModeDependentElement
 	void setLogic(BoolA value);
 
 	/**
-	 * Returns the value of the '<em><b>Max Occurrence Rate</b></em>' attribute.
+	 * Returns the value of the '<em><b>Max Occurrence Probability</b></em>' attribute.
+	 * The default value is <code>"0.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The maximal occurrence rate that is allowed for the occurrence of this failure condition. Typically given in [1/operation hour].
+	 * The maximal occurrence probability that is allowed for the occurrence of this failure condition. Typically given for one operation hour.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Max Occurrence Rate</em>' attribute.
-	 * @see #setMaxOccurrenceRate(double)
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_MaxOccurrenceRate()
-	 * @model required="true"
+	 * @return the value of the '<em>Max Occurrence Probability</em>' attribute.
+	 * @see #setMaxOccurrenceProbability(double)
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_MaxOccurrenceProbability()
+	 * @model default="0.0" required="true"
 	 * @generated
 	 */
-	double getMaxOccurrenceRate();
+	double getMaxOccurrenceProbability();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceRate <em>Max Occurrence Rate</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Max Occurrence Rate</em>' attribute.
-	 * @see #getMaxOccurrenceRate()
+	 * @param value the new value of the '<em>Max Occurrence Probability</em>' attribute.
+	 * @see #getMaxOccurrenceProbability()
 	 * @generated
 	 */
-	void setMaxOccurrenceRate(double value);
+	void setMaxOccurrenceProbability(double value);
 
 	/**
 	 * Returns the value of the '<em><b>No Single Failure</b></em>' attribute.

@@ -67,6 +67,15 @@ public interface CapabilitiesFactory extends EFactory {
 	SubdeviceInDeviceCapability createSubdeviceInDeviceCapability();
 
 	/**
+	 * Returns a new object of class '<em>Subconnection In Device Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subconnection In Device Capability</em>'.
+	 * @generated
+	 */
+	SubconnectionInDeviceCapability createSubconnectionInDeviceCapability();
+
+	/**
 	 * Returns a new object of class '<em>Resource Consumption</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -191,13 +191,22 @@ public interface AnatomyPackage extends EPackage {
 	int ANATOMY_CONTAINER_A__SUBANATOMIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Area Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY_CONTAINER_A__AREA_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int ANATOMY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -1079,14 +1088,14 @@ public interface AnatomyPackage extends EPackage {
 	int LOCATION_SYMMETRY_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AreaSymmetryImpl <em>Area Symmetry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
-	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
+	 * @see de.oaam.model.oaam.anatomy.impl.AreaSymmetryImpl
+	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAreaSymmetry()
 	 * @generated
 	 */
-	int ANATOMY = 7;
+	int AREA_SYMMETRY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1095,7 +1104,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__ID = ANATOMY_CONTAINER_A__ID;
+	int AREA_SYMMETRY__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1104,7 +1113,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__NAME = ANATOMY_CONTAINER_A__NAME;
+	int AREA_SYMMETRY__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1113,7 +1122,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__STYLE = ANATOMY_CONTAINER_A__STYLE;
+	int AREA_SYMMETRY__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -1122,7 +1131,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__ATTRIBUTES = ANATOMY_CONTAINER_A__ATTRIBUTES;
+	int AREA_SYMMETRY__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -1131,7 +1140,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__DOCUMENTATION = ANATOMY_CONTAINER_A__DOCUMENTATION;
+	int AREA_SYMMETRY__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -1140,7 +1149,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__MODIFIED = ANATOMY_CONTAINER_A__MODIFIED;
+	int AREA_SYMMETRY__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -1149,7 +1158,7 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__MODIFIER = ANATOMY_CONTAINER_A__MODIFIER;
+	int AREA_SYMMETRY__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -1158,70 +1167,62 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__TRACE_LINK = ANATOMY_CONTAINER_A__TRACE_LINK;
+	int AREA_SYMMETRY__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__LOCATIONS = ANATOMY_CONTAINER_A__LOCATIONS;
+	int AREA_SYMMETRY__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Location Symmetries</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__LOCATION_SYMMETRIES = ANATOMY_CONTAINER_A__LOCATION_SYMMETRIES;
+	int AREA_SYMMETRY__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Ducts</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Areas</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__DUCTS = ANATOMY_CONTAINER_A__DUCTS;
+	int AREA_SYMMETRY__AREAS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Areas</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Area Symmetry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__AREAS = ANATOMY_CONTAINER_A__AREAS;
+	int AREA_SYMMETRY_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Subanatomies</b></em>' containment reference list.
+	 * The number of operations of the '<em>Area Symmetry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANATOMY__SUBANATOMIES = ANATOMY_CONTAINER_A__SUBANATOMIES;
+	int AREA_SYMMETRY_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Anatomy</em>' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
+	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
 	 * @generated
-	 * @ordered
 	 */
-	int ANATOMY_FEATURE_COUNT = ANATOMY_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Anatomy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANATOMY_OPERATION_COUNT = ANATOMY_CONTAINER_A_OPERATION_COUNT + 0;
+	int ANATOMY = 9;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.SubanatomyImpl <em>Subanatomy</em>}' class.
@@ -1351,6 +1352,15 @@ public interface AnatomyPackage extends EPackage {
 	int SUBANATOMY__SUBANATOMIES = ANATOMY_CONTAINER_A__SUBANATOMIES;
 
 	/**
+	 * The feature id for the '<em><b>Area Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBANATOMY__AREA_SYMMETRIES = ANATOMY_CONTAINER_A__AREA_SYMMETRIES;
+
+	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1385,6 +1395,150 @@ public interface AnatomyPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBANATOMY_OPERATION_COUNT = ANATOMY_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__ID = ANATOMY_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__NAME = ANATOMY_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__STYLE = ANATOMY_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__ATTRIBUTES = ANATOMY_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__DOCUMENTATION = ANATOMY_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__MODIFIED = ANATOMY_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__MODIFIER = ANATOMY_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__TRACE_LINK = ANATOMY_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__LOCATIONS = ANATOMY_CONTAINER_A__LOCATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Location Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__LOCATION_SYMMETRIES = ANATOMY_CONTAINER_A__LOCATION_SYMMETRIES;
+
+	/**
+	 * The feature id for the '<em><b>Ducts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__DUCTS = ANATOMY_CONTAINER_A__DUCTS;
+
+	/**
+	 * The feature id for the '<em><b>Areas</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__AREAS = ANATOMY_CONTAINER_A__AREAS;
+
+	/**
+	 * The feature id for the '<em><b>Subanatomies</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__SUBANATOMIES = ANATOMY_CONTAINER_A__SUBANATOMIES;
+
+	/**
+	 * The feature id for the '<em><b>Area Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY__AREA_SYMMETRIES = ANATOMY_CONTAINER_A__AREA_SYMMETRIES;
+
+	/**
+	 * The number of structural features of the '<em>Anatomy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY_FEATURE_COUNT = ANATOMY_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Anatomy</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANATOMY_OPERATION_COUNT = ANATOMY_CONTAINER_A_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1451,6 +1605,17 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAnatomyContainerA_Subanatomies();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.anatomy.AnatomyContainerA#getAreaSymmetries <em>Area Symmetries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Area Symmetries</em>'.
+	 * @see de.oaam.model.oaam.anatomy.AnatomyContainerA#getAreaSymmetries()
+	 * @see #getAnatomyContainerA()
+	 * @generated
+	 */
+	EReference getAnatomyContainerA_AreaSymmetries();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.Location <em>Location</em>}'.
@@ -1689,6 +1854,27 @@ public interface AnatomyPackage extends EPackage {
 	EReference getLocationSymmetry_Locations();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.AreaSymmetry <em>Area Symmetry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Area Symmetry</em>'.
+	 * @see de.oaam.model.oaam.anatomy.AreaSymmetry
+	 * @generated
+	 */
+	EClass getAreaSymmetry();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.anatomy.AreaSymmetry#getAreas <em>Areas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Areas</em>'.
+	 * @see de.oaam.model.oaam.anatomy.AreaSymmetry#getAreas()
+	 * @see #getAreaSymmetry()
+	 * @generated
+	 */
+	EReference getAreaSymmetry_Areas();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.Anatomy <em>Anatomy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1780,6 +1966,14 @@ public interface AnatomyPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ANATOMY_CONTAINER_A__SUBANATOMIES = eINSTANCE.getAnatomyContainerA_Subanatomies();
+
+		/**
+		 * The meta object literal for the '<em><b>Area Symmetries</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANATOMY_CONTAINER_A__AREA_SYMMETRIES = eINSTANCE.getAnatomyContainerA_AreaSymmetries();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.LocationImpl <em>Location</em>}' class.
@@ -1968,6 +2162,24 @@ public interface AnatomyPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION_SYMMETRY__LOCATIONS = eINSTANCE.getLocationSymmetry_Locations();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.AreaSymmetryImpl <em>Area Symmetry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.anatomy.impl.AreaSymmetryImpl
+		 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAreaSymmetry()
+		 * @generated
+		 */
+		EClass AREA_SYMMETRY = eINSTANCE.getAreaSymmetry();
+
+		/**
+		 * The meta object literal for the '<em><b>Areas</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference AREA_SYMMETRY__AREAS = eINSTANCE.getAreaSymmetry_Areas();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.

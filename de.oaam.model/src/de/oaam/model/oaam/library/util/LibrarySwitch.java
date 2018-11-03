@@ -243,11 +243,11 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.FUNCTION_INPUT_STATE: {
-				FunctionInputState functionInputState = (FunctionInputState)theEObject;
-				T result = caseFunctionInputState(functionInputState);
-				if (result == null) result = caseBoolA(functionInputState);
-				if (result == null) result = caseOaamBaseElementA(functionInputState);
+			case LibraryPackage.TASK_INPUT_STATE: {
+				TaskInputState taskInputState = (TaskInputState)theEObject;
+				T result = caseTaskInputState(taskInputState);
+				if (result == null) result = caseBoolA(taskInputState);
+				if (result == null) result = caseOaamBaseElementA(taskInputState);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,14 +308,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.LIBRARY: {
-				Library library = (Library)theEObject;
-				T result = caseLibrary(library);
-				if (result == null) result = caseLibraryContainerA(library);
-				if (result == null) result = caseOaamBaseElementA(library);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case LibraryPackage.SUBLIBRARY: {
 				Sublibrary sublibrary = (Sublibrary)theEObject;
 				T result = caseSublibrary(sublibrary);
@@ -324,32 +316,40 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.OUTPUT_TRIGGER: {
-				OutputTrigger outputTrigger = (OutputTrigger)theEObject;
-				T result = caseOutputTrigger(outputTrigger);
-				if (result == null) result = caseOaamBaseElementA(outputTrigger);
+			case LibraryPackage.TASK_OUTPUT_TRIGGER: {
+				TaskOutputTrigger taskOutputTrigger = (TaskOutputTrigger)theEObject;
+				T result = caseTaskOutputTrigger(taskOutputTrigger);
+				if (result == null) result = caseOaamBaseElementA(taskOutputTrigger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER: {
-				FunctionInputTrigger functionInputTrigger = (FunctionInputTrigger)theEObject;
-				T result = caseFunctionInputTrigger(functionInputTrigger);
-				if (result == null) result = caseBoolA(functionInputTrigger);
-				if (result == null) result = caseOaamBaseElementA(functionInputTrigger);
+			case LibraryPackage.TASK_INPUT_TRIGGER: {
+				TaskInputTrigger taskInputTrigger = (TaskInputTrigger)theEObject;
+				T result = caseTaskInputTrigger(taskInputTrigger);
+				if (result == null) result = caseBoolA(taskInputTrigger);
+				if (result == null) result = caseOaamBaseElementA(taskInputTrigger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.INTERNAL_STATE_DECLARATION: {
-				InternalStateDeclaration internalStateDeclaration = (InternalStateDeclaration)theEObject;
-				T result = caseInternalStateDeclaration(internalStateDeclaration);
-				if (result == null) result = caseOaamBaseElementA(internalStateDeclaration);
+			case LibraryPackage.TASK_STATE_DECLARATION: {
+				TaskStateDeclaration taskStateDeclaration = (TaskStateDeclaration)theEObject;
+				T result = caseTaskStateDeclaration(taskStateDeclaration);
+				if (result == null) result = caseOaamBaseElementA(taskStateDeclaration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.PARAMETER_DECLARATION: {
-				ParameterDeclaration parameterDeclaration = (ParameterDeclaration)theEObject;
-				T result = caseParameterDeclaration(parameterDeclaration);
-				if (result == null) result = caseOaamBaseElementA(parameterDeclaration);
+			case LibraryPackage.TASK_PARAMETER_DECLARATION: {
+				TaskParameterDeclaration taskParameterDeclaration = (TaskParameterDeclaration)theEObject;
+				T result = caseTaskParameterDeclaration(taskParameterDeclaration);
+				if (result == null) result = caseOaamBaseElementA(taskParameterDeclaration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LibraryPackage.LIBRARY: {
+				Library library = (Library)theEObject;
+				T result = caseLibrary(library);
+				if (result == null) result = caseLibraryContainerA(library);
+				if (result == null) result = caseOaamBaseElementA(library);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -718,17 +718,17 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Function Input State</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task Input State</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Function Input State</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task Input State</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionInputState(FunctionInputState object) {
+	public T caseTaskInputState(TaskInputState object) {
 		return null;
 	}
 
@@ -883,62 +883,62 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Output Trigger</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task Output Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Output Trigger</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task Output Trigger</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOutputTrigger(OutputTrigger object) {
+	public T caseTaskOutputTrigger(TaskOutputTrigger object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Function Input Trigger</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task Input Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Function Input Trigger</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task Input Trigger</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFunctionInputTrigger(FunctionInputTrigger object) {
+	public T caseTaskInputTrigger(TaskInputTrigger object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Internal State Declaration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task State Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Internal State Declaration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task State Declaration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInternalStateDeclaration(InternalStateDeclaration object) {
+	public T caseTaskStateDeclaration(TaskStateDeclaration object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parameter Declaration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Task Parameter Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parameter Declaration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Task Parameter Declaration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterDeclaration(ParameterDeclaration object) {
+	public T caseTaskParameterDeclaration(TaskParameterDeclaration object) {
 		return null;
 	}
 

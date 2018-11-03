@@ -85,13 +85,13 @@ public interface RestrictionsFactory extends EFactory {
 	DeviceTypeRestriction createDeviceTypeRestriction();
 
 	/**
-	 * Returns a new object of class '<em>Conection Type Restriction</em>'.
+	 * Returns a new object of class '<em>Connection Type Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conection Type Restriction</em>'.
+	 * @return a new object of class '<em>Connection Type Restriction</em>'.
 	 * @generated
 	 */
-	ConectionTypeRestriction createConectionTypeRestriction();
+	ConnectionTypeRestriction createConnectionTypeRestriction();
 
 	/**
 	 * Returns a new object of class '<em>Connection Restriction</em>'.

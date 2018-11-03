@@ -69,8 +69,8 @@ public class ScenarioAdapterFactory extends AdapterFactoryImpl {
 	protected ScenarioSwitch<Adapter> modelSwitch =
 		new ScenarioSwitch<Adapter>() {
 			@Override
-			public Adapter caseParameterA(ParameterA object) {
-				return createParameterAAdapter();
+			public Adapter caseScenarioParameterA(ScenarioParameterA object) {
+				return createScenarioParameterAAdapter();
 			}
 			@Override
 			public Adapter caseModeDependentElementA(ModeDependentElementA object) {
@@ -89,12 +89,12 @@ public class ScenarioAdapterFactory extends AdapterFactoryImpl {
 				return createOperationModeAdapter();
 			}
 			@Override
-			public Adapter caseParameterNumeric(ParameterNumeric object) {
-				return createParameterNumericAdapter();
+			public Adapter caseScenarioParameterNumeric(ScenarioParameterNumeric object) {
+				return createScenarioParameterNumericAdapter();
 			}
 			@Override
-			public Adapter caseParameterBool(ParameterBool object) {
-				return createParameterBoolAdapter();
+			public Adapter caseScenarioParameterBool(ScenarioParameterBool object) {
+				return createScenarioParameterBoolAdapter();
 			}
 			@Override
 			public Adapter caseVariant(Variant object) {
@@ -137,16 +137,16 @@ public class ScenarioAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ParameterA <em>Parameter A</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ScenarioParameterA <em>Parameter A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.scenario.ParameterA
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterA
 	 * @generated
 	 */
-	public Adapter createParameterAAdapter() {
+	public Adapter createScenarioParameterAAdapter() {
 		return null;
 	}
 
@@ -207,30 +207,30 @@ public class ScenarioAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ParameterNumeric <em>Parameter Numeric</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric <em>Parameter Numeric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.scenario.ParameterNumeric
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterNumeric
 	 * @generated
 	 */
-	public Adapter createParameterNumericAdapter() {
+	public Adapter createScenarioParameterNumericAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ParameterBool <em>Parameter Bool</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.scenario.ScenarioParameterBool <em>Parameter Bool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.scenario.ParameterBool
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterBool
 	 * @generated
 	 */
-	public Adapter createParameterBoolAdapter() {
+	public Adapter createScenarioParameterBoolAdapter() {
 		return null;
 	}
 

@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
 
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
@@ -45,6 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl#getDevice <em>Device</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl#getConnection <em>Connection</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl#getSchedules <em>Schedules</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +101,16 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 	 * @ordered
 	 */
 	protected Connection connection;
+
+	/**
+	 * The cached value of the '{@link #getSchedules() <em>Schedules</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSchedules()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Schedule> schedules;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -262,11 +274,25 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Schedule> getSchedules() {
+		if (schedules == null) {
+			schedules = new EObjectContainmentEList<Schedule>(Schedule.class, this, AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES);
+		}
+		return schedules;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__OPERATION_MODES:
 				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
+				return ((InternalEList<?>)getSchedules()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,6 +318,8 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION:
 				if (resolve) return getConnection();
 				return basicGetConnection();
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
+				return getSchedules();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -322,6 +350,10 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION:
 				setConnection((Connection)newValue);
 				return;
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
+				getSchedules().clear();
+				getSchedules().addAll((Collection<? extends Schedule>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -349,6 +381,9 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION:
 				setConnection((Connection)null);
 				return;
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
+				getSchedules().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -371,6 +406,8 @@ public class SignalAssignmentSegmentImpl extends OaamBaseElementAImpl implements
 				return device != null;
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION:
 				return connection != null;
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
+				return schedules != null && !schedules.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

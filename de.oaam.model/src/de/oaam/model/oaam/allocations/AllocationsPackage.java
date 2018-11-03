@@ -198,13 +198,22 @@ public interface AllocationsPackage extends EPackage {
 	int ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -343,13 +352,13 @@ public interface AllocationsPackage extends EPackage {
 	int TASK_ASSIGNMENT__DEVICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Schedule</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_ASSIGNMENT__SCHEDULE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int TASK_ASSIGNMENT__SCHEDULES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Task Assignment</em>' class.
@@ -769,13 +778,22 @@ public interface AllocationsPackage extends EPackage {
 	int SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Signal Assignment Segment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int SIGNAL_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Signal Assignment Segment</em>' class.
@@ -1222,6 +1240,151 @@ public interface AllocationsPackage extends EPackage {
 	int SUBDEVICE_ASSIGNMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SubconnectionAssignmentImpl <em>Subconnection Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SubconnectionAssignmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubconnectionAssignment()
+	 * @generated
+	 */
+	int SUBCONNECTION_ASSIGNMENT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__CAPABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Subconnection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__SUBCONNECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Target Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT__TARGET_DEVICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Subconnection Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Subconnection Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCONNECTION_ASSIGNMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.AllocationsImpl <em>Allocations</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1229,7 +1392,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getAllocations()
 	 * @generated
 	 */
-	int ALLOCATIONS = 8;
+	int ALLOCATIONS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1358,6 +1521,15 @@ public interface AllocationsPackage extends EPackage {
 	int ALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
+
+	/**
 	 * The number of structural features of the '<em>Allocations</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1383,7 +1555,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSuballocations()
 	 * @generated
 	 */
-	int SUBALLOCATIONS = 9;
+	int SUBALLOCATIONS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1512,6 +1684,15 @@ public interface AllocationsPackage extends EPackage {
 	int SUBALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
+
+	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1555,7 +1736,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSchedule()
 	 * @generated
 	 */
-	int SCHEDULE = 10;
+	int SCHEDULE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1709,7 +1890,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getScheduledTime()
 	 * @generated
 	 */
-	int SCHEDULED_TIME = 11;
+	int SCHEDULED_TIME = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1933,6 +2114,17 @@ public interface AllocationsPackage extends EPackage {
 	EReference getAllocationsContainerA_Suballocations();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSubconnectionAssignments <em>Subconnection Assignments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subconnection Assignments</em>'.
+	 * @see de.oaam.model.oaam.allocations.AllocationsContainerA#getSubconnectionAssignments()
+	 * @see #getAllocationsContainerA()
+	 * @generated
+	 */
+	EReference getAllocationsContainerA_SubconnectionAssignments();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.TaskAssignment <em>Task Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1976,15 +2168,15 @@ public interface AllocationsPackage extends EPackage {
 	EReference getTaskAssignment_Device();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.TaskAssignment#getSchedule <em>Schedule</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.TaskAssignment#getSchedules <em>Schedules</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schedule</em>'.
-	 * @see de.oaam.model.oaam.allocations.TaskAssignment#getSchedule()
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see de.oaam.model.oaam.allocations.TaskAssignment#getSchedules()
 	 * @see #getTaskAssignment()
 	 * @generated
 	 */
-	EReference getTaskAssignment_Schedule();
+	EReference getTaskAssignment_Schedules();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalAssignment <em>Signal Assignment</em>}'.
@@ -2092,6 +2284,17 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSignalAssignmentSegment_Connection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getSchedules <em>Schedules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment#getSchedules()
+	 * @see #getSignalAssignmentSegment()
+	 * @generated
+	 */
+	EReference getSignalAssignmentSegment_Schedules();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.DeviceAssignment <em>Device Assignment</em>}'.
@@ -2221,6 +2424,49 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSubdeviceAssignment_TargetDevice();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SubconnectionAssignment <em>Subconnection Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Subconnection Assignment</em>'.
+	 * @see de.oaam.model.oaam.allocations.SubconnectionAssignment
+	 * @generated
+	 */
+	EClass getSubconnectionAssignment();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SubconnectionAssignment#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.SubconnectionAssignment#getCapability()
+	 * @see #getSubconnectionAssignment()
+	 * @generated
+	 */
+	EReference getSubconnectionAssignment_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SubconnectionAssignment#getSubconnection <em>Subconnection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Subconnection</em>'.
+	 * @see de.oaam.model.oaam.allocations.SubconnectionAssignment#getSubconnection()
+	 * @see #getSubconnectionAssignment()
+	 * @generated
+	 */
+	EReference getSubconnectionAssignment_Subconnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SubconnectionAssignment#getTargetDevice <em>Target Device</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target Device</em>'.
+	 * @see de.oaam.model.oaam.allocations.SubconnectionAssignment#getTargetDevice()
+	 * @see #getSubconnectionAssignment()
+	 * @generated
+	 */
+	EReference getSubconnectionAssignment_TargetDevice();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Allocations <em>Allocations</em>}'.
@@ -2432,6 +2678,14 @@ public interface AllocationsPackage extends EPackage {
 		EReference ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS = eINSTANCE.getAllocationsContainerA_Suballocations();
 
 		/**
+		 * The meta object literal for the '<em><b>Subconnection Assignments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = eINSTANCE.getAllocationsContainerA_SubconnectionAssignments();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl <em>Task Assignment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2466,12 +2720,12 @@ public interface AllocationsPackage extends EPackage {
 		EReference TASK_ASSIGNMENT__DEVICE = eINSTANCE.getTaskAssignment_Device();
 
 		/**
-		 * The meta object literal for the '<em><b>Schedule</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TASK_ASSIGNMENT__SCHEDULE = eINSTANCE.getTaskAssignment_Schedule();
+		EReference TASK_ASSIGNMENT__SCHEDULES = eINSTANCE.getTaskAssignment_Schedules();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentImpl <em>Signal Assignment</em>}' class.
@@ -2558,6 +2812,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = eINSTANCE.getSignalAssignmentSegment_Connection();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES = eINSTANCE.getSignalAssignmentSegment_Schedules();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.DeviceAssignmentImpl <em>Device Assignment</em>}' class.
@@ -2660,6 +2922,40 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SUBDEVICE_ASSIGNMENT__TARGET_DEVICE = eINSTANCE.getSubdeviceAssignment_TargetDevice();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SubconnectionAssignmentImpl <em>Subconnection Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.SubconnectionAssignmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubconnectionAssignment()
+		 * @generated
+		 */
+		EClass SUBCONNECTION_ASSIGNMENT = eINSTANCE.getSubconnectionAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBCONNECTION_ASSIGNMENT__CAPABILITY = eINSTANCE.getSubconnectionAssignment_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Subconnection</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBCONNECTION_ASSIGNMENT__SUBCONNECTION = eINSTANCE.getSubconnectionAssignment_Subconnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Device</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBCONNECTION_ASSIGNMENT__TARGET_DEVICE = eINSTANCE.getSubconnectionAssignment_TargetDevice();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.AllocationsImpl <em>Allocations</em>}' class.

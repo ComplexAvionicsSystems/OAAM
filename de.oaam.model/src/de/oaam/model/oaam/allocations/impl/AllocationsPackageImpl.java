@@ -16,6 +16,7 @@ import de.oaam.model.oaam.allocations.ScheduledTime;
 import de.oaam.model.oaam.allocations.SignalAssignment;
 import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
 import de.oaam.model.oaam.allocations.Suballocations;
+import de.oaam.model.oaam.allocations.SubconnectionAssignment;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 import de.oaam.model.oaam.allocations.TaskAssignment;
 
@@ -126,6 +127,13 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * @generated
 	 */
 	private EClass subdeviceAssignmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass subconnectionAssignmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -316,6 +324,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAllocationsContainerA_SubconnectionAssignments() {
+		return (EReference)allocationsContainerAEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTaskAssignment() {
 		return taskAssignmentEClass;
 	}
@@ -352,7 +369,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskAssignment_Schedule() {
+	public EReference getTaskAssignment_Schedules() {
 		return (EReference)taskAssignmentEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -444,6 +461,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 */
 	public EReference getSignalAssignmentSegment_Connection() {
 		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSignalAssignmentSegment_Schedules() {
+		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -552,6 +578,42 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 */
 	public EReference getSubdeviceAssignment_TargetDevice() {
 		return (EReference)subdeviceAssignmentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSubconnectionAssignment() {
+		return subconnectionAssignmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubconnectionAssignment_Capability() {
+		return (EReference)subconnectionAssignmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubconnectionAssignment_Subconnection() {
+		return (EReference)subconnectionAssignmentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubconnectionAssignment_TargetDevice() {
+		return (EReference)subconnectionAssignmentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -697,12 +759,13 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(allocationsContainerAEClass, ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS);
 		createEReference(allocationsContainerAEClass, ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS);
 		createEReference(allocationsContainerAEClass, ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS);
+		createEReference(allocationsContainerAEClass, ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS);
 
 		taskAssignmentEClass = createEClass(TASK_ASSIGNMENT);
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__CAPABILITY);
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__TASK);
 		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__DEVICE);
-		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__SCHEDULE);
+		createEReference(taskAssignmentEClass, TASK_ASSIGNMENT__SCHEDULES);
 
 		signalAssignmentEClass = createEClass(SIGNAL_ASSIGNMENT);
 		createEReference(signalAssignmentEClass, SIGNAL_ASSIGNMENT__SEGMENTS);
@@ -716,6 +779,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY);
 		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__DEVICE);
 		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION);
+		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES);
 
 		deviceAssignmentEClass = createEClass(DEVICE_ASSIGNMENT);
 		createEReference(deviceAssignmentEClass, DEVICE_ASSIGNMENT__DEVICE);
@@ -731,6 +795,11 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(subdeviceAssignmentEClass, SUBDEVICE_ASSIGNMENT__CAPABILITY);
 		createEReference(subdeviceAssignmentEClass, SUBDEVICE_ASSIGNMENT__SUBDEVICE);
 		createEReference(subdeviceAssignmentEClass, SUBDEVICE_ASSIGNMENT__TARGET_DEVICE);
+
+		subconnectionAssignmentEClass = createEClass(SUBCONNECTION_ASSIGNMENT);
+		createEReference(subconnectionAssignmentEClass, SUBCONNECTION_ASSIGNMENT__CAPABILITY);
+		createEReference(subconnectionAssignmentEClass, SUBCONNECTION_ASSIGNMENT__SUBCONNECTION);
+		createEReference(subconnectionAssignmentEClass, SUBCONNECTION_ASSIGNMENT__TARGET_DEVICE);
 
 		allocationsEClass = createEClass(ALLOCATIONS);
 
@@ -807,6 +876,9 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		subdeviceAssignmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		subdeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subdeviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		subconnectionAssignmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		subconnectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		subconnectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		allocationsEClass.getESuperTypes().add(this.getAllocationsContainerA());
 		suballocationsEClass.getESuperTypes().add(this.getAllocationsContainerA());
 		suballocationsEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
@@ -826,12 +898,13 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getAllocationsContainerA_TaskAssignments(), this.getTaskAssignment(), null, "taskAssignments", null, 0, -1, AllocationsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAllocationsContainerA_SignalAssignments(), this.getSignalAssignment(), null, "signalAssignments", null, 0, -1, AllocationsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAllocationsContainerA_Suballocations(), this.getSuballocations(), null, "suballocations", null, 0, -1, AllocationsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAllocationsContainerA_SubconnectionAssignments(), this.getSubconnectionAssignment(), null, "subconnectionAssignments", null, 0, -1, AllocationsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskAssignmentEClass, TaskAssignment.class, "TaskAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskAssignment_Capability(), theCapabilitiesPackage.getTaskOnDeviceCapability(), null, "capability", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskAssignment_Task(), theFunctionsPackage.getTask(), null, "task", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskAssignment_Device(), theHardwarePackage.getDevice(), null, "device", null, 1, 1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTaskAssignment_Schedule(), this.getSchedule(), null, "schedule", null, 0, -1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskAssignment_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalAssignmentEClass, SignalAssignment.class, "SignalAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignalAssignment_Segments(), this.getSignalAssignmentSegment(), null, "segments", null, 0, -1, SignalAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -845,10 +918,11 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getSignalAssignmentSegment_Capability(), theCapabilitiesPackage.getSignalOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignalAssignmentSegment_Device(), theHardwarePackage.getDevice(), null, "device", null, 0, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignalAssignmentSegment_Connection(), theHardwarePackage.getConnection(), null, "connection", null, 0, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalAssignmentSegment_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceAssignmentEClass, DeviceAssignment.class, "DeviceAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviceAssignment_Device(), theHardwarePackage.getDevice(), null, "device", null, 1, 1, DeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeviceAssignment_Location(), theAnatomyPackage.getLocation(), null, "location", null, 0, 1, DeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeviceAssignment_Location(), theAnatomyPackage.getLocation(), null, "location", null, 1, 1, DeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDeviceAssignment_Capability(), theCapabilitiesPackage.getDeviceInLocationCapability(), null, "capability", null, 1, 1, DeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionAssignmentSegmentEClass, ConnectionAssignmentSegment.class, "ConnectionAssignmentSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -860,6 +934,11 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getSubdeviceAssignment_Capability(), theCapabilitiesPackage.getSubdeviceInDeviceCapability(), null, "capability", null, 1, 1, SubdeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSubdeviceAssignment_Subdevice(), theHardwarePackage.getDevice(), null, "subdevice", null, 1, 1, SubdeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSubdeviceAssignment_TargetDevice(), theHardwarePackage.getDevice(), null, "targetDevice", null, 1, 1, SubdeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(subconnectionAssignmentEClass, SubconnectionAssignment.class, "SubconnectionAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubconnectionAssignment_Capability(), theCapabilitiesPackage.getSubconnectionInDeviceCapability(), null, "capability", null, 1, 1, SubconnectionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubconnectionAssignment_Subconnection(), theHardwarePackage.getConnection(), null, "subconnection", null, 1, 1, SubconnectionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubconnectionAssignment_TargetDevice(), theHardwarePackage.getDevice(), null, "targetDevice", null, 1, 1, SubconnectionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(allocationsEClass, Allocations.class, "Allocations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

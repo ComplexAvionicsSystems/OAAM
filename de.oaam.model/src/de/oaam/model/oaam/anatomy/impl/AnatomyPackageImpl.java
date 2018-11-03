@@ -11,6 +11,7 @@ import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.Area;
+import de.oaam.model.oaam.anatomy.AreaSymmetry;
 import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.DuctOpening;
 import de.oaam.model.oaam.anatomy.Location;
@@ -113,6 +114,13 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * @generated
 	 */
 	private EClass locationSymmetryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass areaSymmetryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -273,6 +281,15 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 */
 	public EReference getAnatomyContainerA_Subanatomies() {
 		return (EReference)anatomyContainerAEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnatomyContainerA_AreaSymmetries() {
+		return (EReference)anatomyContainerAEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -478,6 +495,24 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAreaSymmetry() {
+		return areaSymmetryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAreaSymmetry_Areas() {
+		return (EReference)areaSymmetryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAnatomy() {
 		return anatomyEClass;
 	}
@@ -525,6 +560,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		createEReference(anatomyContainerAEClass, ANATOMY_CONTAINER_A__DUCTS);
 		createEReference(anatomyContainerAEClass, ANATOMY_CONTAINER_A__AREAS);
 		createEReference(anatomyContainerAEClass, ANATOMY_CONTAINER_A__SUBANATOMIES);
+		createEReference(anatomyContainerAEClass, ANATOMY_CONTAINER_A__AREA_SYMMETRIES);
 
 		locationEClass = createEClass(LOCATION);
 		createEReference(locationEClass, LOCATION__TYPE);
@@ -554,9 +590,12 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		locationSymmetryEClass = createEClass(LOCATION_SYMMETRY);
 		createEReference(locationSymmetryEClass, LOCATION_SYMMETRY__LOCATIONS);
 
-		anatomyEClass = createEClass(ANATOMY);
+		areaSymmetryEClass = createEClass(AREA_SYMMETRY);
+		createEReference(areaSymmetryEClass, AREA_SYMMETRY__AREAS);
 
 		subanatomyEClass = createEClass(SUBANATOMY);
+
+		anatomyEClass = createEClass(ANATOMY);
 	}
 
 	/**
@@ -613,10 +652,13 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		locationSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		locationSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		anatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
+		areaSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		areaSymmetryEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		areaSymmetryEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subanatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
 		subanatomyEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subanatomyEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		anatomyEClass.getESuperTypes().add(this.getAnatomyContainerA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(anatomyContainerAEClass, AnatomyContainerA.class, "AnatomyContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -625,6 +667,7 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		initEReference(getAnatomyContainerA_Ducts(), this.getDuct(), null, "ducts", null, 0, -1, AnatomyContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnatomyContainerA_Areas(), this.getArea(), null, "areas", null, 0, -1, AnatomyContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnatomyContainerA_Subanatomies(), this.getSubanatomy(), null, "subanatomies", null, 0, -1, AnatomyContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnatomyContainerA_AreaSymmetries(), this.getAreaSymmetry(), null, "areaSymmetries", null, 0, -1, AnatomyContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocation_Type(), theLibraryPackage.getLocationType(), null, "type", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -654,9 +697,12 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 		initEClass(locationSymmetryEClass, LocationSymmetry.class, "LocationSymmetry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocationSymmetry_Locations(), this.getLocation(), null, "locations", null, 0, -1, LocationSymmetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(anatomyEClass, Anatomy.class, "Anatomy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(areaSymmetryEClass, AreaSymmetry.class, "AreaSymmetry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAreaSymmetry_Areas(), this.getArea(), null, "areas", null, 0, -1, AreaSymmetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subanatomyEClass, Subanatomy.class, "Subanatomy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(anatomyEClass, Anatomy.class, "Anatomy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //AnatomyPackageImpl

@@ -8,8 +8,8 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import de.oaam.model.oaam.systems.ProvidedOutputA;
-import de.oaam.model.oaam.systems.RequiredInputA;
+import de.oaam.model.oaam.systems.ProvidedInformationA;
+import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
@@ -70,7 +70,7 @@ public class SystemImpl extends OaamBaseElementAImpl implements de.oaam.model.oa
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ProvidedOutputA> providedOutputs;
+	protected EList<ProvidedInformationA> providedOutputs;
 
 	/**
 	 * The cached value of the '{@link #getRequiredInputs() <em>Required Inputs</em>}' containment reference list.
@@ -80,7 +80,7 @@ public class SystemImpl extends OaamBaseElementAImpl implements de.oaam.model.oa
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RequiredInputA> requiredInputs;
+	protected EList<RequiredInformationA> requiredInputs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,9 +130,9 @@ public class SystemImpl extends OaamBaseElementAImpl implements de.oaam.model.oa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ProvidedOutputA> getProvidedOutputs() {
+	public EList<ProvidedInformationA> getProvidedOutputs() {
 		if (providedOutputs == null) {
-			providedOutputs = new EObjectContainmentEList<ProvidedOutputA>(ProvidedOutputA.class, this, SystemsPackage.SYSTEM__PROVIDED_OUTPUTS);
+			providedOutputs = new EObjectContainmentEList<ProvidedInformationA>(ProvidedInformationA.class, this, SystemsPackage.SYSTEM__PROVIDED_OUTPUTS);
 		}
 		return providedOutputs;
 	}
@@ -142,9 +142,9 @@ public class SystemImpl extends OaamBaseElementAImpl implements de.oaam.model.oa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RequiredInputA> getRequiredInputs() {
+	public EList<RequiredInformationA> getRequiredInputs() {
 		if (requiredInputs == null) {
-			requiredInputs = new EObjectContainmentEList<RequiredInputA>(RequiredInputA.class, this, SystemsPackage.SYSTEM__REQUIRED_INPUTS);
+			requiredInputs = new EObjectContainmentEList<RequiredInformationA>(RequiredInformationA.class, this, SystemsPackage.SYSTEM__REQUIRED_INPUTS);
 		}
 		return requiredInputs;
 	}
@@ -206,11 +206,11 @@ public class SystemImpl extends OaamBaseElementAImpl implements de.oaam.model.oa
 				return;
 			case SystemsPackage.SYSTEM__PROVIDED_OUTPUTS:
 				getProvidedOutputs().clear();
-				getProvidedOutputs().addAll((Collection<? extends ProvidedOutputA>)newValue);
+				getProvidedOutputs().addAll((Collection<? extends ProvidedInformationA>)newValue);
 				return;
 			case SystemsPackage.SYSTEM__REQUIRED_INPUTS:
 				getRequiredInputs().clear();
-				getRequiredInputs().addAll((Collection<? extends RequiredInputA>)newValue);
+				getRequiredInputs().addAll((Collection<? extends RequiredInformationA>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

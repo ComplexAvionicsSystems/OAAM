@@ -98,6 +98,10 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 				return createSubdeviceInDeviceCapabilityAdapter();
 			}
 			@Override
+			public Adapter caseSubconnectionInDeviceCapability(SubconnectionInDeviceCapability object) {
+				return createSubconnectionInDeviceCapabilityAdapter();
+			}
+			@Override
 			public Adapter caseResourceConsumption(ResourceConsumption object) {
 				return createResourceConsumptionAdapter();
 			}
@@ -236,6 +240,20 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubdeviceInDeviceCapabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability <em>Subconnection In Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability
+	 * @generated
+	 */
+	public Adapter createSubconnectionInDeviceCapabilityAdapter() {
 		return null;
 	}
 

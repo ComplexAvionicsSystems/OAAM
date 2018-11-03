@@ -25,12 +25,12 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getPowerSourceRestrictions <em>Power Source Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskAtomicRestrictions <em>Task Atomic Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTaskSymmetryRestrictions <em>Task Symmetry Restrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getInputSynchronicityRestriction <em>Input Synchronicity Restriction</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSynchronicityRestriction <em>Synchronicity Restriction</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionRestrictions <em>Connection Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getConnectionTypeRestrictions <em>Connection Type Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSegregationRestrictions <em>Segregation Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getSubrestrictions <em>Subrestrictions</em>}</li>
- *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimedelayrestrictions <em>Timedelayrestrictions</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.restrictions.RestrictionsContainerA#getTimeDelayRestrictions <em>Time Delay Restrictions</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA()
@@ -144,19 +144,19 @@ public interface RestrictionsContainerA extends OaamBaseElementA {
 	EList<TaskSymmetryRestriction> getTaskSymmetryRestrictions();
 
 	/**
-	 * Returns the value of the '<em><b>Input Synchronicity Restriction</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Synchronicity Restriction</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.SynchronicityRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All input synchronicity restrictions
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Input Synchronicity Restriction</em>' containment reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_InputSynchronicityRestriction()
+	 * @return the value of the '<em>Synchronicity Restriction</em>' containment reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_SynchronicityRestriction()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SynchronicityRestriction> getInputSynchronicityRestriction();
+	EList<SynchronicityRestriction> getSynchronicityRestriction();
 
 	/**
 	 * Returns the value of the '<em><b>Connection Restrictions</b></em>' containment reference list.
@@ -175,7 +175,7 @@ public interface RestrictionsContainerA extends OaamBaseElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Connection Type Restrictions</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction}.
+	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -186,7 +186,7 @@ public interface RestrictionsContainerA extends OaamBaseElementA {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ConectionTypeRestriction> getConnectionTypeRestrictions();
+	EList<ConnectionTypeRestriction> getConnectionTypeRestrictions();
 
 	/**
 	 * Returns the value of the '<em><b>Segregation Restrictions</b></em>' containment reference list.
@@ -219,18 +219,18 @@ public interface RestrictionsContainerA extends OaamBaseElementA {
 	EList<Subrestrictions> getSubrestrictions();
 
 	/**
-	 * Returns the value of the '<em><b>Timedelayrestrictions</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Time Delay Restrictions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.restrictions.TimeDelayRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All time delay restrictions
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Timedelayrestrictions</em>' containment reference list.
-	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_Timedelayrestrictions()
+	 * @return the value of the '<em>Time Delay Restrictions</em>' containment reference list.
+	 * @see de.oaam.model.oaam.restrictions.RestrictionsPackage#getRestrictionsContainerA_TimeDelayRestrictions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TimeDelayRestriction> getTimedelayrestrictions();
+	EList<TimeDelayRestriction> getTimeDelayRestrictions();
 
 } // RestrictionsContainerA

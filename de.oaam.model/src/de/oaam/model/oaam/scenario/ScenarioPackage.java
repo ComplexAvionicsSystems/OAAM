@@ -99,14 +99,14 @@ public interface ScenarioPackage extends EPackage {
 	int MODE_DEPENDENT_ELEMENT_A_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ParameterAImpl <em>Parameter A</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterAImpl <em>Parameter A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.scenario.impl.ParameterAImpl
-	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterA()
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterAImpl
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterA()
 	 * @generated
 	 */
-	int PARAMETER_A = 0;
+	int SCENARIO_PARAMETER_A = 0;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -115,7 +115,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_A__OPERATION_MODES = MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+	int SCENARIO_PARAMETER_A__OPERATION_MODES = MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -124,7 +124,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_A__VARIANTS = MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 0;
+	int SCENARIO_PARAMETER_A__VARIANTS = MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parameter A</em>' class.
@@ -133,7 +133,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_A_FEATURE_COUNT = MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 1;
+	int SCENARIO_PARAMETER_A_FEATURE_COUNT = MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parameter A</em>' class.
@@ -142,7 +142,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_A_OPERATION_COUNT = MODE_DEPENDENT_ELEMENT_A_OPERATION_COUNT + 0;
+	int SCENARIO_PARAMETER_A_OPERATION_COUNT = MODE_DEPENDENT_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.VariantDependentElementAImpl <em>Variant Dependent Element A</em>}' class.
@@ -427,14 +427,14 @@ public interface ScenarioPackage extends EPackage {
 	int OPERATION_MODE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ParameterNumericImpl <em>Parameter Numeric</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterNumericImpl <em>Parameter Numeric</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.scenario.impl.ParameterNumericImpl
-	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterNumeric()
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterNumericImpl
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterNumeric()
 	 * @generated
 	 */
-	int PARAMETER_NUMERIC = 5;
+	int SCENARIO_PARAMETER_NUMERIC = 5;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -443,7 +443,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__OPERATION_MODES = PARAMETER_A__OPERATION_MODES;
+	int SCENARIO_PARAMETER_NUMERIC__OPERATION_MODES = SCENARIO_PARAMETER_A__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -452,7 +452,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__VARIANTS = PARAMETER_A__VARIANTS;
+	int SCENARIO_PARAMETER_NUMERIC__VARIANTS = SCENARIO_PARAMETER_A__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -461,7 +461,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__ID = PARAMETER_A_FEATURE_COUNT + 0;
+	int SCENARIO_PARAMETER_NUMERIC__ID = SCENARIO_PARAMETER_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -470,7 +470,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__NAME = PARAMETER_A_FEATURE_COUNT + 1;
+	int SCENARIO_PARAMETER_NUMERIC__NAME = SCENARIO_PARAMETER_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -479,7 +479,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__STYLE = PARAMETER_A_FEATURE_COUNT + 2;
+	int SCENARIO_PARAMETER_NUMERIC__STYLE = SCENARIO_PARAMETER_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -488,7 +488,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__ATTRIBUTES = PARAMETER_A_FEATURE_COUNT + 3;
+	int SCENARIO_PARAMETER_NUMERIC__ATTRIBUTES = SCENARIO_PARAMETER_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -497,7 +497,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__DOCUMENTATION = PARAMETER_A_FEATURE_COUNT + 4;
+	int SCENARIO_PARAMETER_NUMERIC__DOCUMENTATION = SCENARIO_PARAMETER_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -506,7 +506,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__MODIFIED = PARAMETER_A_FEATURE_COUNT + 5;
+	int SCENARIO_PARAMETER_NUMERIC__MODIFIED = SCENARIO_PARAMETER_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -515,7 +515,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__MODIFIER = PARAMETER_A_FEATURE_COUNT + 6;
+	int SCENARIO_PARAMETER_NUMERIC__MODIFIER = SCENARIO_PARAMETER_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -524,7 +524,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__TRACE_LINK = PARAMETER_A_FEATURE_COUNT + 7;
+	int SCENARIO_PARAMETER_NUMERIC__TRACE_LINK = SCENARIO_PARAMETER_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -533,7 +533,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC__VALUE = PARAMETER_A_FEATURE_COUNT + 8;
+	int SCENARIO_PARAMETER_NUMERIC__VALUE = SCENARIO_PARAMETER_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Numeric</em>' class.
@@ -542,7 +542,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC_FEATURE_COUNT = PARAMETER_A_FEATURE_COUNT + 9;
+	int SCENARIO_PARAMETER_NUMERIC_FEATURE_COUNT = SCENARIO_PARAMETER_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Parameter Numeric</em>' class.
@@ -551,17 +551,17 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_NUMERIC_OPERATION_COUNT = PARAMETER_A_OPERATION_COUNT + 0;
+	int SCENARIO_PARAMETER_NUMERIC_OPERATION_COUNT = SCENARIO_PARAMETER_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ParameterBoolImpl <em>Parameter Bool</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterBoolImpl <em>Parameter Bool</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.scenario.impl.ParameterBoolImpl
-	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterBool()
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterBoolImpl
+	 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterBool()
 	 * @generated
 	 */
-	int PARAMETER_BOOL = 6;
+	int SCENARIO_PARAMETER_BOOL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -570,7 +570,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__OPERATION_MODES = PARAMETER_A__OPERATION_MODES;
+	int SCENARIO_PARAMETER_BOOL__OPERATION_MODES = SCENARIO_PARAMETER_A__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -579,7 +579,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__VARIANTS = PARAMETER_A__VARIANTS;
+	int SCENARIO_PARAMETER_BOOL__VARIANTS = SCENARIO_PARAMETER_A__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -588,7 +588,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__ID = PARAMETER_A_FEATURE_COUNT + 0;
+	int SCENARIO_PARAMETER_BOOL__ID = SCENARIO_PARAMETER_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -597,7 +597,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__NAME = PARAMETER_A_FEATURE_COUNT + 1;
+	int SCENARIO_PARAMETER_BOOL__NAME = SCENARIO_PARAMETER_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -606,7 +606,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__STYLE = PARAMETER_A_FEATURE_COUNT + 2;
+	int SCENARIO_PARAMETER_BOOL__STYLE = SCENARIO_PARAMETER_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -615,7 +615,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__ATTRIBUTES = PARAMETER_A_FEATURE_COUNT + 3;
+	int SCENARIO_PARAMETER_BOOL__ATTRIBUTES = SCENARIO_PARAMETER_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -624,7 +624,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__DOCUMENTATION = PARAMETER_A_FEATURE_COUNT + 4;
+	int SCENARIO_PARAMETER_BOOL__DOCUMENTATION = SCENARIO_PARAMETER_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -633,7 +633,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__MODIFIED = PARAMETER_A_FEATURE_COUNT + 5;
+	int SCENARIO_PARAMETER_BOOL__MODIFIED = SCENARIO_PARAMETER_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -642,7 +642,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__MODIFIER = PARAMETER_A_FEATURE_COUNT + 6;
+	int SCENARIO_PARAMETER_BOOL__MODIFIER = SCENARIO_PARAMETER_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -651,7 +651,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__TRACE_LINK = PARAMETER_A_FEATURE_COUNT + 7;
+	int SCENARIO_PARAMETER_BOOL__TRACE_LINK = SCENARIO_PARAMETER_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -660,7 +660,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL__VALUE = PARAMETER_A_FEATURE_COUNT + 8;
+	int SCENARIO_PARAMETER_BOOL__VALUE = SCENARIO_PARAMETER_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Bool</em>' class.
@@ -669,7 +669,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL_FEATURE_COUNT = PARAMETER_A_FEATURE_COUNT + 9;
+	int SCENARIO_PARAMETER_BOOL_FEATURE_COUNT = SCENARIO_PARAMETER_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Parameter Bool</em>' class.
@@ -678,7 +678,7 @@ public interface ScenarioPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_BOOL_OPERATION_COUNT = PARAMETER_A_OPERATION_COUNT + 0;
+	int SCENARIO_PARAMETER_BOOL_OPERATION_COUNT = SCENARIO_PARAMETER_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.scenario.impl.VariantImpl <em>Variant</em>}' class.
@@ -1181,14 +1181,14 @@ public interface ScenarioPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ParameterA <em>Parameter A</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ScenarioParameterA <em>Parameter A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameter A</em>'.
-	 * @see de.oaam.model.oaam.scenario.ParameterA
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterA
 	 * @generated
 	 */
-	EClass getParameterA();
+	EClass getScenarioParameterA();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ModeDependentElementA <em>Mode Dependent Element A</em>}'.
@@ -1297,46 +1297,46 @@ public interface ScenarioPackage extends EPackage {
 	EClass getOperationMode();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ParameterNumeric <em>Parameter Numeric</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric <em>Parameter Numeric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameter Numeric</em>'.
-	 * @see de.oaam.model.oaam.scenario.ParameterNumeric
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterNumeric
 	 * @generated
 	 */
-	EClass getParameterNumeric();
+	EClass getScenarioParameterNumeric();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.scenario.ParameterNumeric#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see de.oaam.model.oaam.scenario.ParameterNumeric#getValue()
-	 * @see #getParameterNumeric()
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterNumeric#getValue()
+	 * @see #getScenarioParameterNumeric()
 	 * @generated
 	 */
-	EAttribute getParameterNumeric_Value();
+	EAttribute getScenarioParameterNumeric_Value();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ParameterBool <em>Parameter Bool</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.ScenarioParameterBool <em>Parameter Bool</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parameter Bool</em>'.
-	 * @see de.oaam.model.oaam.scenario.ParameterBool
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterBool
 	 * @generated
 	 */
-	EClass getParameterBool();
+	EClass getScenarioParameterBool();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.scenario.ParameterBool#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.scenario.ScenarioParameterBool#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see de.oaam.model.oaam.scenario.ParameterBool#isValue()
-	 * @see #getParameterBool()
+	 * @see de.oaam.model.oaam.scenario.ScenarioParameterBool#isValue()
+	 * @see #getScenarioParameterBool()
 	 * @generated
 	 */
-	EAttribute getParameterBool_Value();
+	EAttribute getScenarioParameterBool_Value();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.scenario.Variant <em>Variant</em>}'.
@@ -1424,14 +1424,14 @@ public interface ScenarioPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ParameterAImpl <em>Parameter A</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterAImpl <em>Parameter A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.scenario.impl.ParameterAImpl
-		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterA()
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterAImpl
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterA()
 		 * @generated
 		 */
-		EClass PARAMETER_A = eINSTANCE.getParameterA();
+		EClass SCENARIO_PARAMETER_A = eINSTANCE.getScenarioParameterA();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ModeDependentElementAImpl <em>Mode Dependent Element A</em>}' class.
@@ -1522,14 +1522,14 @@ public interface ScenarioPackage extends EPackage {
 		EClass OPERATION_MODE = eINSTANCE.getOperationMode();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ParameterNumericImpl <em>Parameter Numeric</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterNumericImpl <em>Parameter Numeric</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.scenario.impl.ParameterNumericImpl
-		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterNumeric()
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterNumericImpl
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterNumeric()
 		 * @generated
 		 */
-		EClass PARAMETER_NUMERIC = eINSTANCE.getParameterNumeric();
+		EClass SCENARIO_PARAMETER_NUMERIC = eINSTANCE.getScenarioParameterNumeric();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1537,17 +1537,17 @@ public interface ScenarioPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARAMETER_NUMERIC__VALUE = eINSTANCE.getParameterNumeric_Value();
+		EAttribute SCENARIO_PARAMETER_NUMERIC__VALUE = eINSTANCE.getScenarioParameterNumeric_Value();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ParameterBoolImpl <em>Parameter Bool</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.ScenarioParameterBoolImpl <em>Parameter Bool</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.scenario.impl.ParameterBoolImpl
-		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getParameterBool()
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioParameterBoolImpl
+		 * @see de.oaam.model.oaam.scenario.impl.ScenarioPackageImpl#getScenarioParameterBool()
 		 * @generated
 		 */
-		EClass PARAMETER_BOOL = eINSTANCE.getParameterBool();
+		EClass SCENARIO_PARAMETER_BOOL = eINSTANCE.getScenarioParameterBool();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1555,7 +1555,7 @@ public interface ScenarioPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PARAMETER_BOOL__VALUE = eINSTANCE.getParameterBool_Value();
+		EAttribute SCENARIO_PARAMETER_BOOL__VALUE = eINSTANCE.getScenarioParameterBool_Value();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.scenario.impl.VariantImpl <em>Variant</em>}' class.

@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.anatomy.AnatomyContainerA#getDucts <em>Ducts</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.AnatomyContainerA#getAreas <em>Areas</em>}</li>
  *   <li>{@link de.oaam.model.oaam.anatomy.AnatomyContainerA#getSubanatomies <em>Subanatomies</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.anatomy.AnatomyContainerA#getAreaSymmetries <em>Area Symmetries</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getAnatomyContainerA()
@@ -104,5 +105,20 @@ public interface AnatomyContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Subanatomy> getSubanatomies();
+
+	/**
+	 * Returns the value of the '<em><b>Area Symmetries</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.anatomy.AreaSymmetry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All area symmetries in the anatomy model
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Area Symmetries</em>' containment reference list.
+	 * @see de.oaam.model.oaam.anatomy.AnatomyPackage#getAnatomyContainerA_AreaSymmetries()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AreaSymmetry> getAreaSymmetries();
 
 } // AnatomyContainerA

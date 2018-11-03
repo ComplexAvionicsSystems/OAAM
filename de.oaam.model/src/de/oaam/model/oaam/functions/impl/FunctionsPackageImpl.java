@@ -27,13 +27,13 @@ import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
 import de.oaam.model.oaam.functions.Output;
-import de.oaam.model.oaam.functions.Parameter;
+import de.oaam.model.oaam.functions.OutputIntegrityState;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
-import de.oaam.model.oaam.functions.SystemInputState;
 import de.oaam.model.oaam.functions.Task;
 import de.oaam.model.oaam.functions.TaskGroup;
+import de.oaam.model.oaam.functions.TaskParameter;
 import de.oaam.model.oaam.functions.TaskRedundancy;
 import de.oaam.model.oaam.functions.TaskSymmetry;
 
@@ -133,7 +133,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass systemInputStateEClass = null;
+	private EClass outputIntegrityStateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,7 +182,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass parameterEClass = null;
+	private EClass taskParameterEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -300,17 +300,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFunctionsContainerA_IsAtomic() {
-		return (EAttribute)functionsContainerAEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getFunctionsContainerA_Tasks() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(1);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -319,7 +310,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_TaskLinks() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(2);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -328,7 +319,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_TaskGroups() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(3);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -337,7 +328,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_TaskSymmetries() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(4);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -346,7 +337,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_TaskRedundancies() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(5);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -355,7 +346,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_Signals() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(6);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -364,7 +355,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_SignalGroups() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(7);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -373,7 +364,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_FailureEvents() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(8);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -382,7 +373,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * @generated
 	 */
 	public EReference getFunctionsContainerA_Subfunctions() {
-		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(9);
+		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -597,7 +588,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFailureCondition_MaxOccurrenceRate() {
+	public EAttribute getFailureCondition_MaxOccurrenceProbability() {
 		return (EAttribute)failureConditionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -615,8 +606,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSystemInputState() {
-		return systemInputStateEClass;
+	public EClass getOutputIntegrityState() {
+		return outputIntegrityStateEClass;
 	}
 
 	/**
@@ -624,8 +615,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSystemInputState_State() {
-		return (EAttribute)systemInputStateEClass.getEStructuralFeatures().get(0);
+	public EAttribute getOutputIntegrityState_State() {
+		return (EAttribute)outputIntegrityStateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -633,8 +624,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSystemInputState_Output() {
-		return (EReference)systemInputStateEClass.getEStructuralFeatures().get(1);
+	public EReference getOutputIntegrityState_Output() {
+		return (EReference)outputIntegrityStateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -876,8 +867,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getParameter() {
-		return parameterEClass;
+	public EClass getTaskParameter() {
+		return taskParameterEClass;
 	}
 
 	/**
@@ -885,8 +876,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameter_Definition() {
-		return (EReference)parameterEClass.getEStructuralFeatures().get(0);
+	public EReference getTaskParameter_Definition() {
+		return (EReference)taskParameterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -894,8 +885,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getParameter_Value() {
-		return (EAttribute)parameterEClass.getEStructuralFeatures().get(1);
+	public EAttribute getTaskParameter_Value() {
+		return (EAttribute)taskParameterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -929,7 +920,6 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		functionsEClass = createEClass(FUNCTIONS);
 
 		functionsContainerAEClass = createEClass(FUNCTIONS_CONTAINER_A);
-		createEAttribute(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__IS_ATOMIC);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__TASKS);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__TASK_LINKS);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__TASK_GROUPS);
@@ -968,12 +958,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 
 		failureConditionEClass = createEClass(FAILURE_CONDITION);
 		createEReference(failureConditionEClass, FAILURE_CONDITION__LOGIC);
-		createEAttribute(failureConditionEClass, FAILURE_CONDITION__MAX_OCCURRENCE_RATE);
+		createEAttribute(failureConditionEClass, FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY);
 		createEAttribute(failureConditionEClass, FAILURE_CONDITION__NO_SINGLE_FAILURE);
 
-		systemInputStateEClass = createEClass(SYSTEM_INPUT_STATE);
-		createEAttribute(systemInputStateEClass, SYSTEM_INPUT_STATE__STATE);
-		createEReference(systemInputStateEClass, SYSTEM_INPUT_STATE__OUTPUT);
+		outputIntegrityStateEClass = createEClass(OUTPUT_INTEGRITY_STATE);
+		createEAttribute(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__STATE);
+		createEReference(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__OUTPUT);
 
 		signalEClass = createEClass(SIGNAL);
 		createEReference(signalEClass, SIGNAL__SOURCE);
@@ -1007,9 +997,9 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEAttribute(subfunctionsEClass, SUBFUNCTIONS__MULTIPLICITY_MIN);
 		createEAttribute(subfunctionsEClass, SUBFUNCTIONS__MULTIPLICITY_MAX);
 
-		parameterEClass = createEClass(PARAMETER);
-		createEReference(parameterEClass, PARAMETER__DEFINITION);
-		createEAttribute(parameterEClass, PARAMETER__VALUE);
+		taskParameterEClass = createEClass(TASK_PARAMETER);
+		createEReference(taskParameterEClass, TASK_PARAMETER__DEFINITION);
+		createEAttribute(taskParameterEClass, TASK_PARAMETER__VALUE);
 	}
 
 	/**
@@ -1069,10 +1059,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		failureConditionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		failureConditionEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		failureConditionEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		systemInputStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
-		systemInputStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		systemInputStateEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		systemInputStateEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		outputIntegrityStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
+		outputIntegrityStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		outputIntegrityStateEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		outputIntegrityStateEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		signalEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		signalEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		signalEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
@@ -1089,13 +1079,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		externalOutputLinkEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		externalOutputLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subfunctionsEClass.getESuperTypes().add(this.getFunctionsContainerA());
-		parameterEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskParameterEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionsEClass, Functions.class, "Functions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(functionsContainerAEClass, FunctionsContainerA.class, "FunctionsContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFunctionsContainerA_IsAtomic(), ecorePackage.getEBoolean(), "isAtomic", null, 1, 1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_Tasks(), this.getTask(), null, "tasks", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_TaskLinks(), this.getExternalTaskLink(), null, "taskLinks", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_TaskGroups(), this.getTaskGroup(), null, "taskGroups", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1114,7 +1103,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getTask_DeviceBinding(), theHardwarePackage.getDevice(), null, "deviceBinding", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTask_NParallels(), ecorePackage.getEInt(), "nParallels", "1", 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTask_FixedRate(), ecorePackage.getEDouble(), "fixedRate", "-1.0", 1, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_Parameters(), this.getParameter(), null, "parameters", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Parameters(), this.getTaskParameter(), null, "parameters", null, 0, -1, Task.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(externalTaskLinkEClass, ExternalTaskLink.class, "ExternalTaskLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExternalTaskLink_Type(), theLibraryPackage.getTaskType(), null, "type", null, 1, 1, ExternalTaskLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1134,12 +1123,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 
 		initEClass(failureConditionEClass, FailureCondition.class, "FailureCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFailureCondition_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFailureCondition_MaxOccurrenceRate(), ecorePackage.getEDouble(), "maxOccurrenceRate", null, 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFailureCondition_MaxOccurrenceProbability(), ecorePackage.getEDouble(), "maxOccurrenceProbability", "0.0", 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFailureCondition_NoSingleFailure(), ecorePackage.getEBoolean(), "noSingleFailure", "false", 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(systemInputStateEClass, SystemInputState.class, "SystemInputState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSystemInputState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, SystemInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSystemInputState_Output(), this.getOutput(), null, "output", null, 1, 1, SystemInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(outputIntegrityStateEClass, OutputIntegrityState.class, "OutputIntegrityState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOutputIntegrityState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputIntegrityState_Output(), this.getOutput(), null, "output", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Source(), this.getOutput(), null, "source", null, 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1154,13 +1143,13 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInput_Declaration(), theLibraryPackage.getInputDeclaration(), null, "declaration", null, 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInput_Implements(), theSystemsPackage.getRequiredInputA(), null, "implements", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_Implements(), theSystemsPackage.getRequiredInformationA(), null, "implements", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInput_IoBindings(), theHardwarePackage.getIo(), null, "ioBindings", null, 0, -1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_QueueLength(), ecorePackage.getEInt(), "queueLength", "0", 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInput_OutputLink(), this.getExternalOutputLink(), null, "outputLink", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutput_Implements(), theSystemsPackage.getProvidedOutputA(), null, "implements", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutput_Implements(), theSystemsPackage.getProvidedInformationA(), null, "implements", null, 0, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutput_Declaration(), theLibraryPackage.getOutputDeclaration(), null, "declaration", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutput_IoBindings(), theHardwarePackage.getIo(), null, "ioBindings", null, 0, -1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_FixedRate(), ecorePackage.getEDouble(), "fixedRate", null, 1, 1, Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1173,9 +1162,9 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEAttribute(getSubfunctions_MultiplicityMin(), ecorePackage.getEInt(), "multiplicityMin", "1", 1, 1, Subfunctions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubfunctions_MultiplicityMax(), ecorePackage.getEInt(), "multiplicityMax", "1", 1, 1, Subfunctions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getParameter_Definition(), theLibraryPackage.getParameterDeclaration(), null, "definition", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 1, 1, Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(taskParameterEClass, TaskParameter.class, "TaskParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskParameter_Definition(), theLibraryPackage.getTaskParameterDeclaration(), null, "definition", null, 1, 1, TaskParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskParameter_Value(), ecorePackage.getEString(), "value", null, 1, 1, TaskParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //FunctionsPackageImpl

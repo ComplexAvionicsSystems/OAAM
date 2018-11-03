@@ -63,6 +63,7 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 			case AllocationsPackage.DEVICE_ASSIGNMENT: return createDeviceAssignment();
 			case AllocationsPackage.CONNECTION_ASSIGNMENT_SEGMENT: return createConnectionAssignmentSegment();
 			case AllocationsPackage.SUBDEVICE_ASSIGNMENT: return createSubdeviceAssignment();
+			case AllocationsPackage.SUBCONNECTION_ASSIGNMENT: return createSubconnectionAssignment();
 			case AllocationsPackage.ALLOCATIONS: return createAllocations();
 			case AllocationsPackage.SUBALLOCATIONS: return createSuballocations();
 			case AllocationsPackage.SCHEDULE: return createSchedule();
@@ -140,6 +141,16 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	public SubdeviceAssignment createSubdeviceAssignment() {
 		SubdeviceAssignmentImpl subdeviceAssignment = new SubdeviceAssignmentImpl();
 		return subdeviceAssignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SubconnectionAssignment createSubconnectionAssignment() {
+		SubconnectionAssignmentImpl subconnectionAssignment = new SubconnectionAssignmentImpl();
+		return subconnectionAssignment;
 	}
 
 	/**

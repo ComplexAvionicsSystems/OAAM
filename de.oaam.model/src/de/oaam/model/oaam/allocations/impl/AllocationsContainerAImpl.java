@@ -8,6 +8,7 @@ import de.oaam.model.oaam.allocations.ConnectionAssignment;
 import de.oaam.model.oaam.allocations.DeviceAssignment;
 import de.oaam.model.oaam.allocations.SignalAssignment;
 import de.oaam.model.oaam.allocations.Suballocations;
+import de.oaam.model.oaam.allocations.SubconnectionAssignment;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 import de.oaam.model.oaam.allocations.TaskAssignment;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getTaskAssignments <em>Task Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSignalAssignments <em>Signal Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSuballocations <em>Suballocations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSubconnectionAssignments <em>Subconnection Assignments</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +103,16 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	 * @ordered
 	 */
 	protected EList<Suballocations> suballocations;
+
+	/**
+	 * The cached value of the '{@link #getSubconnectionAssignments() <em>Subconnection Assignments</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubconnectionAssignments()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SubconnectionAssignment> subconnectionAssignments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,6 +210,18 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SubconnectionAssignment> getSubconnectionAssignments() {
+		if (subconnectionAssignments == null) {
+			subconnectionAssignments = new EObjectContainmentEList<SubconnectionAssignment>(SubconnectionAssignment.class, this, AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS);
+		}
+		return subconnectionAssignments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -213,6 +237,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return ((InternalEList<?>)getSignalAssignments()).basicRemove(otherEnd, msgs);
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
 				return ((InternalEList<?>)getSuballocations()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+				return ((InternalEList<?>)getSubconnectionAssignments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -237,6 +263,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return getSignalAssignments();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
 				return getSuballocations();
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+				return getSubconnectionAssignments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -274,6 +302,10 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				getSuballocations().clear();
 				getSuballocations().addAll((Collection<? extends Suballocations>)newValue);
 				return;
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+				getSubconnectionAssignments().clear();
+				getSubconnectionAssignments().addAll((Collection<? extends SubconnectionAssignment>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -304,6 +336,9 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
 				getSuballocations().clear();
 				return;
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+				getSubconnectionAssignments().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -328,6 +363,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return signalAssignments != null && !signalAssignments.isEmpty();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
 				return suballocations != null && !suballocations.isEmpty();
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+				return subconnectionAssignments != null && !subconnectionAssignments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

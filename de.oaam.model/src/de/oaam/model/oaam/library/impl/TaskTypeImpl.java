@@ -6,10 +6,10 @@ import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.InputDeclaration;
-import de.oaam.model.oaam.library.InternalStateDeclaration;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
-import de.oaam.model.oaam.library.ParameterDeclaration;
+import de.oaam.model.oaam.library.TaskParameterDeclaration;
+import de.oaam.model.oaam.library.TaskStateDeclaration;
 import de.oaam.model.oaam.library.TaskType;
 
 import java.util.Collection;
@@ -48,7 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInputDeclarations <em>Input Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#isIsDeterministic <em>Is Deterministic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getInternalStateDeclarations <em>Internal State Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getStateDeclarations <em>State Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getParameterDeclarations <em>Parameter Declarations</em>}</li>
  * </ul>
  *
@@ -266,14 +266,14 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	protected float preferredExecutionRate = PREFERRED_EXECUTION_RATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInternalStateDeclarations() <em>Internal State Declarations</em>}' containment reference list.
+	 * The cached value of the '{@link #getStateDeclarations() <em>State Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInternalStateDeclarations()
+	 * @see #getStateDeclarations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<InternalStateDeclaration> internalStateDeclarations;
+	protected EList<TaskStateDeclaration> stateDeclarations;
 
 	/**
 	 * The cached value of the '{@link #getParameterDeclarations() <em>Parameter Declarations</em>}' containment reference list.
@@ -283,7 +283,7 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ParameterDeclaration> parameterDeclarations;
+	protected EList<TaskParameterDeclaration> parameterDeclarations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -534,11 +534,11 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<InternalStateDeclaration> getInternalStateDeclarations() {
-		if (internalStateDeclarations == null) {
-			internalStateDeclarations = new EObjectContainmentEList<InternalStateDeclaration>(InternalStateDeclaration.class, this, LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
+	public EList<TaskStateDeclaration> getStateDeclarations() {
+		if (stateDeclarations == null) {
+			stateDeclarations = new EObjectContainmentEList<TaskStateDeclaration>(TaskStateDeclaration.class, this, LibraryPackage.TASK_TYPE__STATE_DECLARATIONS);
 		}
-		return internalStateDeclarations;
+		return stateDeclarations;
 	}
 
 	/**
@@ -546,9 +546,9 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ParameterDeclaration> getParameterDeclarations() {
+	public EList<TaskParameterDeclaration> getParameterDeclarations() {
 		if (parameterDeclarations == null) {
-			parameterDeclarations = new EObjectContainmentEList<ParameterDeclaration>(ParameterDeclaration.class, this, LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS);
+			parameterDeclarations = new EObjectContainmentEList<TaskParameterDeclaration>(TaskParameterDeclaration.class, this, LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS);
 		}
 		return parameterDeclarations;
 	}
@@ -567,8 +567,8 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return ((InternalEList<?>)getOutputDeclarations()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
 				return ((InternalEList<?>)getInputDeclarations()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
-				return ((InternalEList<?>)getInternalStateDeclarations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
+				return ((InternalEList<?>)getStateDeclarations()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return ((InternalEList<?>)getParameterDeclarations()).basicRemove(otherEnd, msgs);
 		}
@@ -607,8 +607,8 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return isIsDeterministic();
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return getPreferredExecutionRate();
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
-				return getInternalStateDeclarations();
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
+				return getStateDeclarations();
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return getParameterDeclarations();
 		}
@@ -663,13 +663,13 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate((Float)newValue);
 				return;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
-				getInternalStateDeclarations().clear();
-				getInternalStateDeclarations().addAll((Collection<? extends InternalStateDeclaration>)newValue);
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
+				getStateDeclarations().clear();
+				getStateDeclarations().addAll((Collection<? extends TaskStateDeclaration>)newValue);
 				return;
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				getParameterDeclarations().clear();
-				getParameterDeclarations().addAll((Collection<? extends ParameterDeclaration>)newValue);
+				getParameterDeclarations().addAll((Collection<? extends TaskParameterDeclaration>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -719,8 +719,8 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				setPreferredExecutionRate(PREFERRED_EXECUTION_RATE_EDEFAULT);
 				return;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
-				getInternalStateDeclarations().clear();
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
+				getStateDeclarations().clear();
 				return;
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				getParameterDeclarations().clear();
@@ -761,8 +761,8 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return isDeterministic != IS_DETERMINISTIC_EDEFAULT;
 			case LibraryPackage.TASK_TYPE__PREFERRED_EXECUTION_RATE:
 				return preferredExecutionRate != PREFERRED_EXECUTION_RATE_EDEFAULT;
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
-				return internalStateDeclarations != null && !internalStateDeclarations.isEmpty();
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
+				return stateDeclarations != null && !stateDeclarations.isEmpty();
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return parameterDeclarations != null && !parameterDeclarations.isEmpty();
 		}

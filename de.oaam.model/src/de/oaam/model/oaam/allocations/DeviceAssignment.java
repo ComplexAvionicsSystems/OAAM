@@ -69,7 +69,7 @@ public interface DeviceAssignment extends OaamBaseElementA, VariantDependentElem
 	 * @return the value of the '<em>Location</em>' reference.
 	 * @see #setLocation(Location)
 	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getDeviceAssignment_Location()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Location getLocation();

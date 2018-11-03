@@ -47,7 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl#getTask <em>Task</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl#getDevice <em>Device</em>}</li>
- *   <li>{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl#getSchedule <em>Schedule</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl#getSchedules <em>Schedules</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,14 +104,14 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 	protected Device device;
 
 	/**
-	 * The cached value of the '{@link #getSchedule() <em>Schedule</em>}' containment reference list.
+	 * The cached value of the '{@link #getSchedules() <em>Schedules</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSchedule()
+	 * @see #getSchedules()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Schedule> schedule;
+	protected EList<Schedule> schedules;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -275,11 +275,11 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Schedule> getSchedule() {
-		if (schedule == null) {
-			schedule = new EObjectContainmentEList<Schedule>(Schedule.class, this, AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE);
+	public EList<Schedule> getSchedules() {
+		if (schedules == null) {
+			schedules = new EObjectContainmentEList<Schedule>(Schedule.class, this, AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES);
 		}
-		return schedule;
+		return schedules;
 	}
 
 	/**
@@ -292,8 +292,8 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 		switch (featureID) {
 			case AllocationsPackage.TASK_ASSIGNMENT__OPERATION_MODES:
 				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
-				return ((InternalEList<?>)getSchedule()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
+				return ((InternalEList<?>)getSchedules()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -319,8 +319,8 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 			case AllocationsPackage.TASK_ASSIGNMENT__DEVICE:
 				if (resolve) return getDevice();
 				return basicGetDevice();
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
-				return getSchedule();
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
+				return getSchedules();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -351,9 +351,9 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 			case AllocationsPackage.TASK_ASSIGNMENT__DEVICE:
 				setDevice((Device)newValue);
 				return;
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
-				getSchedule().clear();
-				getSchedule().addAll((Collection<? extends Schedule>)newValue);
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
+				getSchedules().clear();
+				getSchedules().addAll((Collection<? extends Schedule>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -382,8 +382,8 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 			case AllocationsPackage.TASK_ASSIGNMENT__DEVICE:
 				setDevice((Device)null);
 				return;
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
-				getSchedule().clear();
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
+				getSchedules().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -407,8 +407,8 @@ public class TaskAssignmentImpl extends OaamBaseElementAImpl implements TaskAssi
 				return task != null;
 			case AllocationsPackage.TASK_ASSIGNMENT__DEVICE:
 				return device != null;
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
-				return schedule != null && !schedule.isEmpty();
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
+				return schedules != null && !schedules.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

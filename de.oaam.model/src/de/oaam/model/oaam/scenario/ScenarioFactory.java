@@ -37,7 +37,7 @@ public interface ScenarioFactory extends EFactory {
 	 * @return a new object of class '<em>Parameter Numeric</em>'.
 	 * @generated
 	 */
-	ParameterNumeric createParameterNumeric();
+	ScenarioParameterNumeric createScenarioParameterNumeric();
 
 	/**
 	 * Returns a new object of class '<em>Parameter Bool</em>'.
@@ -46,7 +46,7 @@ public interface ScenarioFactory extends EFactory {
 	 * @return a new object of class '<em>Parameter Bool</em>'.
 	 * @generated
 	 */
-	ParameterBool createParameterBool();
+	ScenarioParameterBool createScenarioParameterBool();
 
 	/**
 	 * Returns a new object of class '<em>Variant</em>'.

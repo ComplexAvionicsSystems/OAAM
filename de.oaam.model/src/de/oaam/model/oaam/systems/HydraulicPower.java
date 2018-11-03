@@ -24,7 +24,7 @@ package de.oaam.model.oaam.systems;
  * @model
  * @generated
  */
-public interface HydraulicPower extends Power {
+public interface HydraulicPower extends InformationPower {
 	/**
 	 * Returns the value of the '<em><b>Pressure</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.

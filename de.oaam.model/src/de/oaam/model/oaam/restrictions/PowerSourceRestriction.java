@@ -32,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface PowerSourceRestriction extends TaskRestrictionA, DeviceRestrictionA, SignalRestrictionA, SubfunctionRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
+public interface PowerSourceRestriction extends TaskRestrictionA, TaskGroupRestrictionA, SignalRestrictionA, SignalGroupRestrictionA, SubfunctionRestrictionA, DeviceRestrictionA, OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Power Source Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

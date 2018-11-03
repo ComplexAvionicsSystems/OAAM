@@ -1,4 +1,7 @@
 de.oaam.model.oaam
+de.oaam.model.oaam.allocations
+de.oaam.model.oaam.allocations.impl
+de.oaam.model.oaam.allocations.util
 de.oaam.model.oaam.anatomy
 de.oaam.model.oaam.anatomy.impl
 de.oaam.model.oaam.anatomy.util
@@ -18,9 +21,6 @@ de.oaam.model.oaam.impl
 de.oaam.model.oaam.library
 de.oaam.model.oaam.library.impl
 de.oaam.model.oaam.library.util
-de.oaam.model.oaam.mapping
-de.oaam.model.oaam.mapping.impl
-de.oaam.model.oaam.mapping.util
 de.oaam.model.oaam.restrictions
 de.oaam.model.oaam.restrictions.impl
 de.oaam.model.oaam.restrictions.util

@@ -1,19 +1,25 @@
 /**
  */
-package de.oaam.model.oaam.scenario.provider;
+package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 
-import de.oaam.model.oaam.scenario.ParameterBool;
-import de.oaam.model.oaam.scenario.ScenarioPackage;
+import de.oaam.model.oaam.common.provider.BoolAItemProvider;
+
+import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskInputState;
+
+import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
@@ -23,19 +29,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.scenario.ParameterBool} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.library.TaskInputState} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterBoolItemProvider extends ParameterAItemProvider {
+public class TaskInputStateItemProvider extends BoolAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterBoolItemProvider(AdapterFactory adapterFactory) {
+	public TaskInputStateItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -57,7 +63,8 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
-			addValuePropertyDescriptor(object);
+			addStatePropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -217,23 +224,45 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the State feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addStatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ParameterBool_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ParameterBool_value_feature", "_UI_ParameterBool_type"),
-				 ScenarioPackage.Literals.PARAMETER_BOOL__VALUE,
+				 getString("_UI_TaskInputState_state_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskInputState_state_feature", "_UI_TaskInputState_type"),
+				 LibraryPackage.Literals.TASK_INPUT_STATE__STATE,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskInputState_input_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskInputState_input_feature", "_UI_TaskInputState_type"),
+				 LibraryPackage.Literals.TASK_INPUT_STATE__INPUT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -269,14 +298,14 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 	}
 
 	/**
-	 * This returns ParameterBool.gif.
+	 * This returns TaskInputState.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ParameterBool"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskInputState"));
 	}
 
 	/**
@@ -287,10 +316,10 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ParameterBool)object).getName();
+		String label = ((TaskInputState)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ParameterBool_type") :
-			getString("_UI_ParameterBool_type") + " " + label;
+			getString("_UI_TaskInputState_type") :
+			getString("_UI_TaskInputState_type") + " " + label;
 	}
 	
 
@@ -305,18 +334,18 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ParameterBool.class)) {
-			case ScenarioPackage.PARAMETER_BOOL__ID:
-			case ScenarioPackage.PARAMETER_BOOL__NAME:
-			case ScenarioPackage.PARAMETER_BOOL__STYLE:
-			case ScenarioPackage.PARAMETER_BOOL__DOCUMENTATION:
-			case ScenarioPackage.PARAMETER_BOOL__MODIFIED:
-			case ScenarioPackage.PARAMETER_BOOL__MODIFIER:
-			case ScenarioPackage.PARAMETER_BOOL__TRACE_LINK:
-			case ScenarioPackage.PARAMETER_BOOL__VALUE:
+		switch (notification.getFeatureID(TaskInputState.class)) {
+			case LibraryPackage.TASK_INPUT_STATE__ID:
+			case LibraryPackage.TASK_INPUT_STATE__NAME:
+			case LibraryPackage.TASK_INPUT_STATE__STYLE:
+			case LibraryPackage.TASK_INPUT_STATE__DOCUMENTATION:
+			case LibraryPackage.TASK_INPUT_STATE__MODIFIED:
+			case LibraryPackage.TASK_INPUT_STATE__MODIFIER:
+			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
+			case LibraryPackage.TASK_INPUT_STATE__STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ScenarioPackage.PARAMETER_BOOL__ATTRIBUTES:
+			case LibraryPackage.TASK_INPUT_STATE__ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -353,6 +382,17 @@ public class ParameterBoolItemProvider extends ParameterAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return OaamEditPlugin.INSTANCE;
 	}
 
 }

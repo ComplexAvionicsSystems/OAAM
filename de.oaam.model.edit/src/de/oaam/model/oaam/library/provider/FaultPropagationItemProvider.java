@@ -4,7 +4,9 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.library.FaultPropagation;
@@ -175,12 +177,12 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -195,7 +197,7 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 	/**

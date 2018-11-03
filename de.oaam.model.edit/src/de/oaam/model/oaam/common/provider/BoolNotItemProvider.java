@@ -347,17 +347,17 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_NOT__IN,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_NOT__IN,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_NOT__IN,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 }

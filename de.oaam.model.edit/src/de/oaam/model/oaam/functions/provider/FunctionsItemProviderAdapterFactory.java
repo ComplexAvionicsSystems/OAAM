@@ -141,29 +141,6 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Signal} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SignalItemProvider signalItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Signal}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSignalAdapter() {
-		if (signalItemProvider == null) {
-			signalItemProvider = new SignalItemProvider(this);
-		}
-
-		return signalItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskGroup} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,6 +184,98 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		}
 
 		return taskSymmetryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskRedundancy} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskRedundancyItemProvider taskRedundancyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.TaskRedundancy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskRedundancyAdapter() {
+		if (taskRedundancyItemProvider == null) {
+			taskRedundancyItemProvider = new TaskRedundancyItemProvider(this);
+		}
+
+		return taskRedundancyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.FailureCondition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FailureConditionItemProvider failureConditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.FailureCondition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFailureConditionAdapter() {
+		if (failureConditionItemProvider == null) {
+			failureConditionItemProvider = new FailureConditionItemProvider(this);
+		}
+
+		return failureConditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.OutputIntegrityState} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutputIntegrityStateItemProvider outputIntegrityStateItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.OutputIntegrityState}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutputIntegrityStateAdapter() {
+		if (outputIntegrityStateItemProvider == null) {
+			outputIntegrityStateItemProvider = new OutputIntegrityStateItemProvider(this);
+		}
+
+		return outputIntegrityStateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Signal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignalItemProvider signalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Signal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignalAdapter() {
+		if (signalItemProvider == null) {
+			signalItemProvider = new SignalItemProvider(this);
+		}
+
+		return signalItemProvider;
 	}
 
 	/**
@@ -325,95 +394,26 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskRedundancy} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskParameter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TaskRedundancyItemProvider taskRedundancyItemProvider;
+	protected TaskParameterItemProvider taskParameterItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.TaskRedundancy}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.TaskParameter}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTaskRedundancyAdapter() {
-		if (taskRedundancyItemProvider == null) {
-			taskRedundancyItemProvider = new TaskRedundancyItemProvider(this);
+	public Adapter createTaskParameterAdapter() {
+		if (taskParameterItemProvider == null) {
+			taskParameterItemProvider = new TaskParameterItemProvider(this);
 		}
 
-		return taskRedundancyItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.Parameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ParameterItemProvider parameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.Parameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createParameterAdapter() {
-		if (parameterItemProvider == null) {
-			parameterItemProvider = new ParameterItemProvider(this);
-		}
-
-		return parameterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.FailureCondition} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FailureConditionItemProvider failureConditionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.FailureCondition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFailureConditionAdapter() {
-		if (failureConditionItemProvider == null) {
-			failureConditionItemProvider = new FailureConditionItemProvider(this);
-		}
-
-		return failureConditionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.SystemInputState} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SystemInputStateItemProvider systemInputStateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.SystemInputState}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSystemInputStateAdapter() {
-		if (systemInputStateItemProvider == null) {
-			systemInputStateItemProvider = new SystemInputStateItemProvider(this);
-		}
-
-		return systemInputStateItemProvider;
+		return taskParameterItemProvider;
 	}
 
 	/**
@@ -522,14 +522,14 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		if (taskSymmetryItemProvider != null) taskSymmetryItemProvider.dispose();
 		if (taskRedundancyItemProvider != null) taskRedundancyItemProvider.dispose();
 		if (failureConditionItemProvider != null) failureConditionItemProvider.dispose();
-		if (systemInputStateItemProvider != null) systemInputStateItemProvider.dispose();
+		if (outputIntegrityStateItemProvider != null) outputIntegrityStateItemProvider.dispose();
 		if (signalItemProvider != null) signalItemProvider.dispose();
 		if (signalGroupItemProvider != null) signalGroupItemProvider.dispose();
 		if (inputItemProvider != null) inputItemProvider.dispose();
 		if (outputItemProvider != null) outputItemProvider.dispose();
 		if (externalOutputLinkItemProvider != null) externalOutputLinkItemProvider.dispose();
 		if (subfunctionsItemProvider != null) subfunctionsItemProvider.dispose();
-		if (parameterItemProvider != null) parameterItemProvider.dispose();
+		if (taskParameterItemProvider != null) taskParameterItemProvider.dispose();
 	}
 
 }

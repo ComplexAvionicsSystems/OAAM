@@ -277,7 +277,7 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__OUTPUT_DECLARATIONS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUT_DECLARATIONS);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATE_DECLARATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__STATE_DECLARATIONS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS);
 		}
 		return childrenFeatures;
@@ -348,7 +348,7 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.TASK_TYPE__ATTRIBUTES:
 			case LibraryPackage.TASK_TYPE__OUTPUT_DECLARATIONS:
 			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
-			case LibraryPackage.TASK_TYPE__INTERNAL_STATE_DECLARATIONS:
+			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -399,13 +399,13 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_TYPE__INTERNAL_STATE_DECLARATIONS,
-				 LibraryFactory.eINSTANCE.createInternalStateDeclaration()));
+				(LibraryPackage.Literals.TASK_TYPE__STATE_DECLARATIONS,
+				 LibraryFactory.eINSTANCE.createTaskStateDeclaration()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS,
-				 LibraryFactory.eINSTANCE.createParameterDeclaration()));
+				 LibraryFactory.eINSTANCE.createTaskParameterDeclaration()));
 	}
 
 }

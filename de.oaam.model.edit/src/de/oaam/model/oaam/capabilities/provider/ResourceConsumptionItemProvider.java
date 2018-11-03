@@ -5,7 +5,9 @@ package de.oaam.model.oaam.capabilities.provider;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;

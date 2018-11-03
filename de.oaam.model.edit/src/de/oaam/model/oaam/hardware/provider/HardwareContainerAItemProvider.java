@@ -4,6 +4,7 @@ package de.oaam.model.oaam.hardware.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.hardware.HardwareContainerA;
 import de.oaam.model.oaam.hardware.HardwareFactory;
 import de.oaam.model.oaam.hardware.HardwarePackage;
@@ -19,6 +20,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 

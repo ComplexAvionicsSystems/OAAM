@@ -1,16 +1,16 @@
 /**
  */
-package de.oaam.model.oaam.restrictions.provider;
+package de.oaam.model.oaam.systems.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 
-import de.oaam.model.oaam.restrictions.ConectionTypeRestriction;
-import de.oaam.model.oaam.restrictions.RestrictionsPackage;
-
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+
+import de.oaam.model.oaam.systems.InformationSignal;
+import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,19 +26,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.InformationSignal} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItemProvider {
+public class InformationSignalItemProvider extends ProvidedInformationAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConectionTypeRestrictionItemProvider(AdapterFactory adapterFactory) {
+	public InformationSignalItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,7 +53,6 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSubfunctionsPropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addStylePropertyDescriptor(object);
@@ -62,33 +61,13 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
-			addConnectionTypeNamePropertyDescriptor(object);
-			addIsForbiddenPropertyDescriptor(object);
-			addConnectionTypesPropertyDescriptor(object);
+			addRatePropertyDescriptor(object);
+			addLatencyPropertyDescriptor(object);
+			addAccuracyPropertyDescriptor(object);
+			addResolutionPropertyDescriptor(object);
+			addUnitPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Subfunctions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSubfunctionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SubfunctionRestrictionA_subfunctions_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SubfunctionRestrictionA_subfunctions_feature", "_UI_SubfunctionRestrictionA_type"),
-				 RestrictionsPackage.Literals.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -268,67 +247,111 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 	}
 
 	/**
-	 * This adds a property descriptor for the Connection Type Name feature.
+	 * This adds a property descriptor for the Rate feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConnectionTypeNamePropertyDescriptor(Object object) {
+	protected void addRatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ConectionTypeRestriction_connectionTypeName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConectionTypeRestriction_connectionTypeName_feature", "_UI_ConectionTypeRestriction_type"),
-				 RestrictionsPackage.Literals.CONECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME,
+				 getString("_UI_InformationSignal_rate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationSignal_rate_feature", "_UI_InformationSignal_type"),
+				 SystemsPackage.Literals.INFORMATION_SIGNAL__RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Latency feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLatencyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InformationSignal_latency_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationSignal_latency_feature", "_UI_InformationSignal_type"),
+				 SystemsPackage.Literals.INFORMATION_SIGNAL__LATENCY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accuracy feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccuracyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InformationSignal_accuracy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationSignal_accuracy_feature", "_UI_InformationSignal_type"),
+				 SystemsPackage.Literals.INFORMATION_SIGNAL__ACCURACY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resolution feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResolutionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InformationSignal_resolution_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationSignal_resolution_feature", "_UI_InformationSignal_type"),
+				 SystemsPackage.Literals.INFORMATION_SIGNAL__RESOLUTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_InformationSignal_unit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationSignal_unit_feature", "_UI_InformationSignal_type"),
+				 SystemsPackage.Literals.INFORMATION_SIGNAL__UNIT,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Forbidden feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsForbiddenPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ConectionTypeRestriction_isForbidden_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConectionTypeRestriction_isForbidden_feature", "_UI_ConectionTypeRestriction_type"),
-				 RestrictionsPackage.Literals.CONECTION_TYPE_RESTRICTION__IS_FORBIDDEN,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Connection Types feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConnectionTypesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ConectionTypeRestriction_connectionTypes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ConectionTypeRestriction_connectionTypes_feature", "_UI_ConectionTypeRestriction_type"),
-				 RestrictionsPackage.Literals.CONECTION_TYPE_RESTRICTION__CONNECTION_TYPES,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -365,14 +388,14 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 	}
 
 	/**
-	 * This returns ConectionTypeRestriction.gif.
+	 * This returns InformationSignal.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ConectionTypeRestriction"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/InformationSignal"));
 	}
 
 	/**
@@ -383,10 +406,10 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ConectionTypeRestriction)object).getName();
+		String label = ((InformationSignal)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ConectionTypeRestriction_type") :
-			getString("_UI_ConectionTypeRestriction_type") + " " + label;
+			getString("_UI_InformationSignal_type") :
+			getString("_UI_InformationSignal_type") + " " + label;
 	}
 	
 
@@ -401,20 +424,23 @@ public class ConectionTypeRestrictionItemProvider extends SignalRestrictionAItem
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ConectionTypeRestriction.class)) {
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__ID:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__NAME:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__STYLE:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__DOCUMENTATION:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__MODIFIED:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__MODIFIER:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__TRACE_LINK:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__IS_FORBIDDEN:
+		switch (notification.getFeatureID(InformationSignal.class)) {
+			case SystemsPackage.INFORMATION_SIGNAL__ID:
+			case SystemsPackage.INFORMATION_SIGNAL__NAME:
+			case SystemsPackage.INFORMATION_SIGNAL__STYLE:
+			case SystemsPackage.INFORMATION_SIGNAL__DOCUMENTATION:
+			case SystemsPackage.INFORMATION_SIGNAL__MODIFIED:
+			case SystemsPackage.INFORMATION_SIGNAL__MODIFIER:
+			case SystemsPackage.INFORMATION_SIGNAL__TRACE_LINK:
+			case SystemsPackage.INFORMATION_SIGNAL__RATE:
+			case SystemsPackage.INFORMATION_SIGNAL__LATENCY:
+			case SystemsPackage.INFORMATION_SIGNAL__ACCURACY:
+			case SystemsPackage.INFORMATION_SIGNAL__RESOLUTION:
+			case SystemsPackage.INFORMATION_SIGNAL__UNIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__ATTRIBUTES:
-			case RestrictionsPackage.CONECTION_TYPE_RESTRICTION__OPERATION_MODES:
+			case SystemsPackage.INFORMATION_SIGNAL__ATTRIBUTES:
+			case SystemsPackage.INFORMATION_SIGNAL__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

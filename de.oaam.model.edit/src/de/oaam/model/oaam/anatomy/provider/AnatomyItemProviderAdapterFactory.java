@@ -210,26 +210,26 @@ public class AnatomyItemProviderAdapterFactory extends AnatomyAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.anatomy.Anatomy} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.anatomy.AreaSymmetry} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AnatomyItemProvider anatomyItemProvider;
+	protected AreaSymmetryItemProvider areaSymmetryItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.anatomy.Anatomy}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.anatomy.AreaSymmetry}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createAnatomyAdapter() {
-		if (anatomyItemProvider == null) {
-			anatomyItemProvider = new AnatomyItemProvider(this);
+	public Adapter createAreaSymmetryAdapter() {
+		if (areaSymmetryItemProvider == null) {
+			areaSymmetryItemProvider = new AreaSymmetryItemProvider(this);
 		}
 
-		return anatomyItemProvider;
+		return areaSymmetryItemProvider;
 	}
 
 	/**
@@ -253,6 +253,29 @@ public class AnatomyItemProviderAdapterFactory extends AnatomyAdapterFactory imp
 		}
 
 		return subanatomyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.anatomy.Anatomy} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AnatomyItemProvider anatomyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.anatomy.Anatomy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnatomyAdapter() {
+		if (anatomyItemProvider == null) {
+			anatomyItemProvider = new AnatomyItemProvider(this);
+		}
+
+		return anatomyItemProvider;
 	}
 
 	/**
@@ -360,8 +383,9 @@ public class AnatomyItemProviderAdapterFactory extends AnatomyAdapterFactory imp
 		if (ductOpeningItemProvider != null) ductOpeningItemProvider.dispose();
 		if (position3DItemProvider != null) position3DItemProvider.dispose();
 		if (locationSymmetryItemProvider != null) locationSymmetryItemProvider.dispose();
-		if (anatomyItemProvider != null) anatomyItemProvider.dispose();
+		if (areaSymmetryItemProvider != null) areaSymmetryItemProvider.dispose();
 		if (subanatomyItemProvider != null) subanatomyItemProvider.dispose();
+		if (anatomyItemProvider != null) anatomyItemProvider.dispose();
 	}
 
 }

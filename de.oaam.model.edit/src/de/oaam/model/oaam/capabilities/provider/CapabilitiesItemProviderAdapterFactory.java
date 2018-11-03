@@ -187,6 +187,29 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubconnectionInDeviceCapabilityItemProvider subconnectionInDeviceCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubconnectionInDeviceCapabilityAdapter() {
+		if (subconnectionInDeviceCapabilityItemProvider == null) {
+			subconnectionInDeviceCapabilityItemProvider = new SubconnectionInDeviceCapabilityItemProvider(this);
+		}
+
+		return subconnectionInDeviceCapabilityItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.ResourceConsumption} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,6 +382,7 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 		if (connectionInDuctOrLocationCapabilityItemProvider != null) connectionInDuctOrLocationCapabilityItemProvider.dispose();
 		if (signalOnConnectionOrDeviceCapabilityItemProvider != null) signalOnConnectionOrDeviceCapabilityItemProvider.dispose();
 		if (subdeviceInDeviceCapabilityItemProvider != null) subdeviceInDeviceCapabilityItemProvider.dispose();
+		if (subconnectionInDeviceCapabilityItemProvider != null) subconnectionInDeviceCapabilityItemProvider.dispose();
 		if (resourceConsumptionItemProvider != null) resourceConsumptionItemProvider.dispose();
 		if (capabilitiesItemProvider != null) capabilitiesItemProvider.dispose();
 		if (subcapabilitiesItemProvider != null) subcapabilitiesItemProvider.dispose();

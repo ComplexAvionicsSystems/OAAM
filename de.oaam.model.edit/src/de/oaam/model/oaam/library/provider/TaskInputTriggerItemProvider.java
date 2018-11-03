@@ -8,8 +8,8 @@ import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.common.provider.BoolAItemProvider;
 
-import de.oaam.model.oaam.library.FunctionInputState;
 import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskInputTrigger;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
@@ -29,19 +29,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.library.FunctionInputState} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.library.TaskInputTrigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionInputStateItemProvider extends BoolAItemProvider {
+public class TaskInputTriggerItemProvider extends BoolAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionInputStateItemProvider(AdapterFactory adapterFactory) {
+	public TaskInputTriggerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,7 +63,6 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
-			addStatePropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -224,28 +223,6 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the State feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionInputState_state_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionInputState_state_feature", "_UI_FunctionInputState_type"),
-				 LibraryPackage.Literals.FUNCTION_INPUT_STATE__STATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Input feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,9 +233,9 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FunctionInputState_input_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionInputState_input_feature", "_UI_FunctionInputState_type"),
-				 LibraryPackage.Literals.FUNCTION_INPUT_STATE__INPUT,
+				 getString("_UI_TaskInputTrigger_input_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskInputTrigger_input_feature", "_UI_TaskInputTrigger_type"),
+				 LibraryPackage.Literals.TASK_INPUT_TRIGGER__INPUT,
 				 true,
 				 false,
 				 true,
@@ -298,14 +275,14 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This returns FunctionInputState.gif.
+	 * This returns TaskInputTrigger.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FunctionInputState"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskInputTrigger"));
 	}
 
 	/**
@@ -316,10 +293,10 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FunctionInputState)object).getName();
+		String label = ((TaskInputTrigger)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_FunctionInputState_type") :
-			getString("_UI_FunctionInputState_type") + " " + label;
+			getString("_UI_TaskInputTrigger_type") :
+			getString("_UI_TaskInputTrigger_type") + " " + label;
 	}
 	
 
@@ -334,18 +311,17 @@ public class FunctionInputStateItemProvider extends BoolAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FunctionInputState.class)) {
-			case LibraryPackage.FUNCTION_INPUT_STATE__ID:
-			case LibraryPackage.FUNCTION_INPUT_STATE__NAME:
-			case LibraryPackage.FUNCTION_INPUT_STATE__STYLE:
-			case LibraryPackage.FUNCTION_INPUT_STATE__DOCUMENTATION:
-			case LibraryPackage.FUNCTION_INPUT_STATE__MODIFIED:
-			case LibraryPackage.FUNCTION_INPUT_STATE__MODIFIER:
-			case LibraryPackage.FUNCTION_INPUT_STATE__TRACE_LINK:
-			case LibraryPackage.FUNCTION_INPUT_STATE__STATE:
+		switch (notification.getFeatureID(TaskInputTrigger.class)) {
+			case LibraryPackage.TASK_INPUT_TRIGGER__ID:
+			case LibraryPackage.TASK_INPUT_TRIGGER__NAME:
+			case LibraryPackage.TASK_INPUT_TRIGGER__STYLE:
+			case LibraryPackage.TASK_INPUT_TRIGGER__DOCUMENTATION:
+			case LibraryPackage.TASK_INPUT_TRIGGER__MODIFIED:
+			case LibraryPackage.TASK_INPUT_TRIGGER__MODIFIER:
+			case LibraryPackage.TASK_INPUT_TRIGGER__TRACE_LINK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case LibraryPackage.FUNCTION_INPUT_STATE__ATTRIBUTES:
+			case LibraryPackage.TASK_INPUT_TRIGGER__ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

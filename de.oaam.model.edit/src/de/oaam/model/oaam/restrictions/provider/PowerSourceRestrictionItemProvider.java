@@ -53,9 +53,11 @@ public class PowerSourceRestrictionItemProvider extends TaskRestrictionAItemProv
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDevicesPropertyDescriptor(object);
+			addTaskGroupsPropertyDescriptor(object);
 			addSignalsPropertyDescriptor(object);
+			addSignalGroupsPropertyDescriptor(object);
 			addSubfunctionsPropertyDescriptor(object);
+			addDevicesPropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addStylePropertyDescriptor(object);
@@ -72,19 +74,19 @@ public class PowerSourceRestrictionItemProvider extends TaskRestrictionAItemProv
 	}
 
 	/**
-	 * This adds a property descriptor for the Devices feature.
+	 * This adds a property descriptor for the Task Groups feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDevicesPropertyDescriptor(Object object) {
+	protected void addTaskGroupsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DeviceRestrictionA_devices_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DeviceRestrictionA_devices_feature", "_UI_DeviceRestrictionA_type"),
-				 RestrictionsPackage.Literals.DEVICE_RESTRICTION_A__DEVICES,
+				 getString("_UI_TaskGroupRestrictionA_taskGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskGroupRestrictionA_taskGroups_feature", "_UI_TaskGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.TASK_GROUP_RESTRICTION_A__TASK_GROUPS,
 				 true,
 				 false,
 				 true,
@@ -116,6 +118,28 @@ public class PowerSourceRestrictionItemProvider extends TaskRestrictionAItemProv
 	}
 
 	/**
+	 * This adds a property descriptor for the Signal Groups feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSignalGroupsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SignalGroupRestrictionA_signalGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SignalGroupRestrictionA_signalGroups_feature", "_UI_SignalGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Subfunctions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,6 +153,28 @@ public class PowerSourceRestrictionItemProvider extends TaskRestrictionAItemProv
 				 getString("_UI_SubfunctionRestrictionA_subfunctions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SubfunctionRestrictionA_subfunctions_feature", "_UI_SubfunctionRestrictionA_type"),
 				 RestrictionsPackage.Literals.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Devices feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDevicesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DeviceRestrictionA_devices_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DeviceRestrictionA_devices_feature", "_UI_DeviceRestrictionA_type"),
+				 RestrictionsPackage.Literals.DEVICE_RESTRICTION_A__DEVICES,
 				 true,
 				 false,
 				 true,

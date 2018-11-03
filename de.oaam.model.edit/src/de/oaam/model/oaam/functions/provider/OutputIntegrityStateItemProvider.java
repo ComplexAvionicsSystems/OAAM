@@ -1,6 +1,6 @@
 /**
  */
-package de.oaam.model.oaam.library.provider;
+package de.oaam.model.oaam.functions.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
@@ -8,10 +8,13 @@ import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.common.provider.BoolAItemProvider;
 
-import de.oaam.model.oaam.library.FunctionInputTrigger;
-import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.functions.FunctionsPackage;
+import de.oaam.model.oaam.functions.OutputIntegrityState;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
+
+import de.oaam.model.oaam.scenario.ScenarioFactory;
+import de.oaam.model.oaam.scenario.ScenarioPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -29,19 +32,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.library.FunctionInputTrigger} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.functions.OutputIntegrityState} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
+public class OutputIntegrityStateItemProvider extends BoolAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionInputTriggerItemProvider(AdapterFactory adapterFactory) {
+	public OutputIntegrityStateItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,7 +66,9 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
-			addInputPropertyDescriptor(object);
+			addVariantsPropertyDescriptor(object);
+			addStatePropertyDescriptor(object);
+			addOutputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -223,19 +228,63 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Input feature.
+	 * This adds a property descriptor for the Variants feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputPropertyDescriptor(Object object) {
+	protected void addVariantsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FunctionInputTrigger_input_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionInputTrigger_input_feature", "_UI_FunctionInputTrigger_type"),
-				 LibraryPackage.Literals.FUNCTION_INPUT_TRIGGER__INPUT,
+				 getString("_UI_VariantDependentElementA_variants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
+				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the State feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OutputIntegrityState_state_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputIntegrityState_state_feature", "_UI_OutputIntegrityState_type"),
+				 FunctionsPackage.Literals.OUTPUT_INTEGRITY_STATE__STATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Output feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OutputIntegrityState_output_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputIntegrityState_output_feature", "_UI_OutputIntegrityState_type"),
+				 FunctionsPackage.Literals.OUTPUT_INTEGRITY_STATE__OUTPUT,
 				 true,
 				 false,
 				 true,
@@ -257,6 +306,7 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 		}
 		return childrenFeatures;
 	}
@@ -275,14 +325,14 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This returns FunctionInputTrigger.gif.
+	 * This returns OutputIntegrityState.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FunctionInputTrigger"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/OutputIntegrityState"));
 	}
 
 	/**
@@ -293,10 +343,10 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FunctionInputTrigger)object).getName();
+		String label = ((OutputIntegrityState)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_FunctionInputTrigger_type") :
-			getString("_UI_FunctionInputTrigger_type") + " " + label;
+			getString("_UI_OutputIntegrityState_type") :
+			getString("_UI_OutputIntegrityState_type") + " " + label;
 	}
 	
 
@@ -311,17 +361,19 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FunctionInputTrigger.class)) {
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__ID:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__NAME:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__STYLE:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__DOCUMENTATION:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIED:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__MODIFIER:
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__TRACE_LINK:
+		switch (notification.getFeatureID(OutputIntegrityState.class)) {
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__ID:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__NAME:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STYLE:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__DOCUMENTATION:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__MODIFIED:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__MODIFIER:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__TRACE_LINK:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case LibraryPackage.FUNCTION_INPUT_TRIGGER__ATTRIBUTES:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__ATTRIBUTES:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -358,6 +410,11 @@ public class FunctionInputTriggerItemProvider extends BoolAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
+				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
 	}
 
 	/**

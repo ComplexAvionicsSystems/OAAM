@@ -1,17 +1,13 @@
 /**
  */
-package de.oaam.model.oaam.functions.provider;
+package de.oaam.model.oaam.restrictions.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 
-import de.oaam.model.oaam.common.provider.BoolAItemProvider;
-
-import de.oaam.model.oaam.functions.FunctionsPackage;
-import de.oaam.model.oaam.functions.SystemInputState;
-
-import de.oaam.model.oaam.provider.OaamEditPlugin;
+import de.oaam.model.oaam.restrictions.ConnectionTypeRestriction;
+import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -22,8 +18,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -32,19 +26,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.functions.SystemInputState} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SystemInputStateItemProvider extends BoolAItemProvider {
+public class ConnectionTypeRestrictionItemProvider extends SignalRestrictionAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemInputStateItemProvider(AdapterFactory adapterFactory) {
+	public ConnectionTypeRestrictionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -59,6 +53,8 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSignalGroupsPropertyDescriptor(object);
+			addSubfunctionsPropertyDescriptor(object);
 			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addStylePropertyDescriptor(object);
@@ -67,10 +63,55 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
-			addStatePropertyDescriptor(object);
-			addOutputPropertyDescriptor(object);
+			addConnectionTypeNamePropertyDescriptor(object);
+			addIsForbiddenPropertyDescriptor(object);
+			addConnectionTypesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Signal Groups feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSignalGroupsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SignalGroupRestrictionA_signalGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SignalGroupRestrictionA_signalGroups_feature", "_UI_SignalGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Subfunctions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSubfunctionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SubfunctionRestrictionA_subfunctions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SubfunctionRestrictionA_subfunctions_feature", "_UI_SubfunctionRestrictionA_type"),
+				 RestrictionsPackage.Literals.SUBFUNCTION_RESTRICTION_A__SUBFUNCTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -250,19 +291,19 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the State feature.
+	 * This adds a property descriptor for the Connection Type Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatePropertyDescriptor(Object object) {
+	protected void addConnectionTypeNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SystemInputState_state_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SystemInputState_state_feature", "_UI_SystemInputState_type"),
-				 FunctionsPackage.Literals.SYSTEM_INPUT_STATE__STATE,
+				 getString("_UI_ConnectionTypeRestriction_connectionTypeName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionTypeRestriction_connectionTypeName_feature", "_UI_ConnectionTypeRestriction_type"),
+				 RestrictionsPackage.Literals.CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME,
 				 true,
 				 false,
 				 false,
@@ -272,19 +313,41 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Output feature.
+	 * This adds a property descriptor for the Is Forbidden feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOutputPropertyDescriptor(Object object) {
+	protected void addIsForbiddenPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_SystemInputState_output_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SystemInputState_output_feature", "_UI_SystemInputState_type"),
-				 FunctionsPackage.Literals.SYSTEM_INPUT_STATE__OUTPUT,
+				 getString("_UI_ConnectionTypeRestriction_isForbidden_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionTypeRestriction_isForbidden_feature", "_UI_ConnectionTypeRestriction_type"),
+				 RestrictionsPackage.Literals.CONNECTION_TYPE_RESTRICTION__IS_FORBIDDEN,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Connection Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConnectionTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConnectionTypeRestriction_connectionTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionTypeRestriction_connectionTypes_feature", "_UI_ConnectionTypeRestriction_type"),
+				 RestrictionsPackage.Literals.CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPES,
 				 true,
 				 false,
 				 true,
@@ -325,14 +388,14 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This returns SystemInputState.gif.
+	 * This returns ConnectionTypeRestriction.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SystemInputState"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ConnectionTypeRestriction"));
 	}
 
 	/**
@@ -343,10 +406,10 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SystemInputState)object).getName();
+		String label = ((ConnectionTypeRestriction)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SystemInputState_type") :
-			getString("_UI_SystemInputState_type") + " " + label;
+			getString("_UI_ConnectionTypeRestriction_type") :
+			getString("_UI_ConnectionTypeRestriction_type") + " " + label;
 	}
 	
 
@@ -361,19 +424,20 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(SystemInputState.class)) {
-			case FunctionsPackage.SYSTEM_INPUT_STATE__ID:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__NAME:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__STYLE:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__DOCUMENTATION:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIED:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__MODIFIER:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__TRACE_LINK:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__STATE:
+		switch (notification.getFeatureID(ConnectionTypeRestriction.class)) {
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__ID:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__NAME:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__STYLE:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__DOCUMENTATION:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__MODIFIED:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__MODIFIER:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__TRACE_LINK:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__CONNECTION_TYPE_NAME:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__IS_FORBIDDEN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case FunctionsPackage.SYSTEM_INPUT_STATE__ATTRIBUTES:
-			case FunctionsPackage.SYSTEM_INPUT_STATE__OPERATION_MODES:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__ATTRIBUTES:
+			case RestrictionsPackage.CONNECTION_TYPE_RESTRICTION__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -415,17 +479,6 @@ public class SystemInputStateItemProvider extends BoolAItemProvider {
 			(createChildParameter
 				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
 				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return OaamEditPlugin.INSTANCE;
 	}
 
 }

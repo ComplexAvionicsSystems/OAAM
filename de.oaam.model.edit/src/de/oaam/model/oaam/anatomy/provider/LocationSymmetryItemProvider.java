@@ -5,7 +5,9 @@ package de.oaam.model.oaam.anatomy.provider;
 
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.LocationSymmetry;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;

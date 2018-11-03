@@ -9,7 +9,7 @@ import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
-import de.oaam.model.oaam.systems.Information;
+import de.oaam.model.oaam.systems.InformationPower;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
@@ -26,19 +26,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.Information} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.InformationPower} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InformationItemProvider extends ProvidedOutputAItemProvider {
+public class InformationPowerItemProvider extends ProvidedInformationAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InformationItemProvider(AdapterFactory adapterFactory) {
+	public InformationPowerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,11 +61,7 @@ public class InformationItemProvider extends ProvidedOutputAItemProvider {
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
-			addRatePropertyDescriptor(object);
-			addLatencyPropertyDescriptor(object);
-			addAccuracyPropertyDescriptor(object);
-			addResolutionPropertyDescriptor(object);
-			addUnitPropertyDescriptor(object);
+			addPowerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -247,111 +243,23 @@ public class InformationItemProvider extends ProvidedOutputAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Rate feature.
+	 * This adds a property descriptor for the Power feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRatePropertyDescriptor(Object object) {
+	protected void addPowerPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Information_rate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Information_rate_feature", "_UI_Information_type"),
-				 SystemsPackage.Literals.INFORMATION__RATE,
+				 getString("_UI_InformationPower_power_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_InformationPower_power_feature", "_UI_InformationPower_type"),
+				 SystemsPackage.Literals.INFORMATION_POWER__POWER,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Latency feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLatencyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Information_latency_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Information_latency_feature", "_UI_Information_type"),
-				 SystemsPackage.Literals.INFORMATION__LATENCY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Accuracy feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAccuracyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Information_accuracy_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Information_accuracy_feature", "_UI_Information_type"),
-				 SystemsPackage.Literals.INFORMATION__ACCURACY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Resolution feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResolutionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Information_resolution_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Information_resolution_feature", "_UI_Information_type"),
-				 SystemsPackage.Literals.INFORMATION__RESOLUTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Unit feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUnitPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Information_unit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Information_unit_feature", "_UI_Information_type"),
-				 SystemsPackage.Literals.INFORMATION__UNIT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -388,14 +296,14 @@ public class InformationItemProvider extends ProvidedOutputAItemProvider {
 	}
 
 	/**
-	 * This returns Information.gif.
+	 * This returns InformationPower.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Information"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/InformationPower"));
 	}
 
 	/**
@@ -406,10 +314,10 @@ public class InformationItemProvider extends ProvidedOutputAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Information)object).getName();
+		String label = ((InformationPower)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Information_type") :
-			getString("_UI_Information_type") + " " + label;
+			getString("_UI_InformationPower_type") :
+			getString("_UI_InformationPower_type") + " " + label;
 	}
 	
 
@@ -424,23 +332,19 @@ public class InformationItemProvider extends ProvidedOutputAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Information.class)) {
-			case SystemsPackage.INFORMATION__ID:
-			case SystemsPackage.INFORMATION__NAME:
-			case SystemsPackage.INFORMATION__STYLE:
-			case SystemsPackage.INFORMATION__DOCUMENTATION:
-			case SystemsPackage.INFORMATION__MODIFIED:
-			case SystemsPackage.INFORMATION__MODIFIER:
-			case SystemsPackage.INFORMATION__TRACE_LINK:
-			case SystemsPackage.INFORMATION__RATE:
-			case SystemsPackage.INFORMATION__LATENCY:
-			case SystemsPackage.INFORMATION__ACCURACY:
-			case SystemsPackage.INFORMATION__RESOLUTION:
-			case SystemsPackage.INFORMATION__UNIT:
+		switch (notification.getFeatureID(InformationPower.class)) {
+			case SystemsPackage.INFORMATION_POWER__ID:
+			case SystemsPackage.INFORMATION_POWER__NAME:
+			case SystemsPackage.INFORMATION_POWER__STYLE:
+			case SystemsPackage.INFORMATION_POWER__DOCUMENTATION:
+			case SystemsPackage.INFORMATION_POWER__MODIFIED:
+			case SystemsPackage.INFORMATION_POWER__MODIFIER:
+			case SystemsPackage.INFORMATION_POWER__TRACE_LINK:
+			case SystemsPackage.INFORMATION_POWER__POWER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SystemsPackage.INFORMATION__ATTRIBUTES:
-			case SystemsPackage.INFORMATION__OPERATION_MODES:
+			case SystemsPackage.INFORMATION_POWER__ATTRIBUTES:
+			case SystemsPackage.INFORMATION_POWER__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

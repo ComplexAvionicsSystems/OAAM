@@ -6,7 +6,9 @@ package de.oaam.model.oaam.anatomy.provider;
 import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -71,6 +73,7 @@ public class AnatomyContainerAItemProvider extends OaamBaseElementAItemProvider 
 			childrenFeatures.add(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__DUCTS);
 			childrenFeatures.add(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__AREAS);
 			childrenFeatures.add(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__SUBANATOMIES);
+			childrenFeatures.add(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__AREA_SYMMETRIES);
 		}
 		return childrenFeatures;
 	}
@@ -120,6 +123,7 @@ public class AnatomyContainerAItemProvider extends OaamBaseElementAItemProvider 
 			case AnatomyPackage.ANATOMY_CONTAINER_A__DUCTS:
 			case AnatomyPackage.ANATOMY_CONTAINER_A__AREAS:
 			case AnatomyPackage.ANATOMY_CONTAINER_A__SUBANATOMIES:
+			case AnatomyPackage.ANATOMY_CONTAINER_A__AREA_SYMMETRIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -161,6 +165,11 @@ public class AnatomyContainerAItemProvider extends OaamBaseElementAItemProvider 
 			(createChildParameter
 				(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__SUBANATOMIES,
 				 AnatomyFactory.eINSTANCE.createSubanatomy()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AnatomyPackage.Literals.ANATOMY_CONTAINER_A__AREA_SYMMETRIES,
+				 AnatomyFactory.eINSTANCE.createAreaSymmetry()));
 	}
 
 	/**

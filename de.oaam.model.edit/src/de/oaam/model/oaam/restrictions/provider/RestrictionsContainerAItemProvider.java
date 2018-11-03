@@ -4,6 +4,7 @@ package de.oaam.model.oaam.restrictions.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.restrictions.RestrictionsContainerA;
@@ -74,12 +75,12 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS);
-			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION);
+			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS);
 			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS);
-			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS);
+			childrenFeatures.add(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -131,12 +132,12 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__POWER_SOURCE_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_ATOMIC_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TASK_SYMMETRY_RESTRICTIONS:
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION:
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SEGREGATION_RESTRICTIONS:
 			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__SUBRESTRICTIONS:
-			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS:
+			case RestrictionsPackage.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,7 +192,7 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__INPUT_SYNCHRONICITY_RESTRICTION,
+				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__SYNCHRONICITY_RESTRICTION,
 				 RestrictionsFactory.eINSTANCE.createSynchronicityRestriction()));
 
 		newChildDescriptors.add
@@ -202,7 +203,7 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 		newChildDescriptors.add
 			(createChildParameter
 				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__CONNECTION_TYPE_RESTRICTIONS,
-				 RestrictionsFactory.eINSTANCE.createConectionTypeRestriction()));
+				 RestrictionsFactory.eINSTANCE.createConnectionTypeRestriction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -216,7 +217,7 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIMEDELAYRESTRICTIONS,
+				(RestrictionsPackage.Literals.RESTRICTIONS_CONTAINER_A__TIME_DELAY_RESTRICTIONS,
 				 RestrictionsFactory.eINSTANCE.createTimeDelayRestriction()));
 	}
 

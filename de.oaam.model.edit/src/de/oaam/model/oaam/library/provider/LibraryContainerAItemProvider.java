@@ -4,7 +4,9 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;

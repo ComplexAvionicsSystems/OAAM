@@ -4,6 +4,7 @@ package de.oaam.model.oaam.systems.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -179,12 +180,17 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemsPackage.Literals.SYSTEM__PROVIDED_OUTPUTS,
-				 SystemsFactory.eINSTANCE.createInformation()));
+				 SystemsFactory.eINSTANCE.createInformationSignal()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemsPackage.Literals.SYSTEM__PROVIDED_OUTPUTS,
-				 SystemsFactory.eINSTANCE.createPower()));
+				 SystemsFactory.eINSTANCE.createInformationMaterial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SystemsPackage.Literals.SYSTEM__PROVIDED_OUTPUTS,
+				 SystemsFactory.eINSTANCE.createInformationPower()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -209,12 +215,17 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemsPackage.Literals.SYSTEM__REQUIRED_INPUTS,
-				 SystemsFactory.eINSTANCE.createInformation()));
+				 SystemsFactory.eINSTANCE.createInformationSignal()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SystemsPackage.Literals.SYSTEM__REQUIRED_INPUTS,
-				 SystemsFactory.eINSTANCE.createPower()));
+				 SystemsFactory.eINSTANCE.createInformationMaterial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SystemsPackage.Literals.SYSTEM__REQUIRED_INPUTS,
+				 SystemsFactory.eINSTANCE.createInformationPower()));
 
 		newChildDescriptors.add
 			(createChildParameter

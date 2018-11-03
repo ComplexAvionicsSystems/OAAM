@@ -532,26 +532,26 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.FunctionInputState} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskInputState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionInputStateItemProvider functionInputStateItemProvider;
+	protected TaskInputStateItemProvider taskInputStateItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.FunctionInputState}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.TaskInputState}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFunctionInputStateAdapter() {
-		if (functionInputStateItemProvider == null) {
-			functionInputStateItemProvider = new FunctionInputStateItemProvider(this);
+	public Adapter createTaskInputStateAdapter() {
+		if (taskInputStateItemProvider == null) {
+			taskInputStateItemProvider = new TaskInputStateItemProvider(this);
 		}
 
-		return functionInputStateItemProvider;
+		return taskInputStateItemProvider;
 	}
 
 	/**
@@ -739,29 +739,6 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Library} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LibraryItemProvider libraryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Library}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLibraryAdapter() {
-		if (libraryItemProvider == null) {
-			libraryItemProvider = new LibraryItemProvider(this);
-		}
-
-		return libraryItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Sublibrary} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -785,95 +762,118 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.OutputTrigger} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskOutputTrigger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OutputTriggerItemProvider outputTriggerItemProvider;
+	protected TaskOutputTriggerItemProvider taskOutputTriggerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.OutputTrigger}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.TaskOutputTrigger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOutputTriggerAdapter() {
-		if (outputTriggerItemProvider == null) {
-			outputTriggerItemProvider = new OutputTriggerItemProvider(this);
+	public Adapter createTaskOutputTriggerAdapter() {
+		if (taskOutputTriggerItemProvider == null) {
+			taskOutputTriggerItemProvider = new TaskOutputTriggerItemProvider(this);
 		}
 
-		return outputTriggerItemProvider;
+		return taskOutputTriggerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.FunctionInputTrigger} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskInputTrigger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionInputTriggerItemProvider functionInputTriggerItemProvider;
+	protected TaskInputTriggerItemProvider taskInputTriggerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.FunctionInputTrigger}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.TaskInputTrigger}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFunctionInputTriggerAdapter() {
-		if (functionInputTriggerItemProvider == null) {
-			functionInputTriggerItemProvider = new FunctionInputTriggerItemProvider(this);
+	public Adapter createTaskInputTriggerAdapter() {
+		if (taskInputTriggerItemProvider == null) {
+			taskInputTriggerItemProvider = new TaskInputTriggerItemProvider(this);
 		}
 
-		return functionInputTriggerItemProvider;
+		return taskInputTriggerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.InternalStateDeclaration} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskStateDeclaration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InternalStateDeclarationItemProvider internalStateDeclarationItemProvider;
+	protected TaskStateDeclarationItemProvider taskStateDeclarationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.InternalStateDeclaration}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.TaskStateDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInternalStateDeclarationAdapter() {
-		if (internalStateDeclarationItemProvider == null) {
-			internalStateDeclarationItemProvider = new InternalStateDeclarationItemProvider(this);
+	public Adapter createTaskStateDeclarationAdapter() {
+		if (taskStateDeclarationItemProvider == null) {
+			taskStateDeclarationItemProvider = new TaskStateDeclarationItemProvider(this);
 		}
 
-		return internalStateDeclarationItemProvider;
+		return taskStateDeclarationItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.ParameterDeclaration} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskParameterDeclaration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterDeclarationItemProvider parameterDeclarationItemProvider;
+	protected TaskParameterDeclarationItemProvider taskParameterDeclarationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.ParameterDeclaration}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.TaskParameterDeclaration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterDeclarationAdapter() {
-		if (parameterDeclarationItemProvider == null) {
-			parameterDeclarationItemProvider = new ParameterDeclarationItemProvider(this);
+	public Adapter createTaskParameterDeclarationAdapter() {
+		if (taskParameterDeclarationItemProvider == null) {
+			taskParameterDeclarationItemProvider = new TaskParameterDeclarationItemProvider(this);
 		}
 
-		return parameterDeclarationItemProvider;
+		return taskParameterDeclarationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Library} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LibraryItemProvider libraryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Library}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLibraryAdapter() {
+		if (libraryItemProvider == null) {
+			libraryItemProvider = new LibraryItemProvider(this);
+		}
+
+		return libraryItemProvider;
 	}
 
 	/**
@@ -995,7 +995,7 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (ioGroupItemProvider != null) ioGroupItemProvider.dispose();
 		if (attributeDefinitionItemProvider != null) attributeDefinitionItemProvider.dispose();
 		if (faultPropagationItemProvider != null) faultPropagationItemProvider.dispose();
-		if (functionInputStateItemProvider != null) functionInputStateItemProvider.dispose();
+		if (taskInputStateItemProvider != null) taskInputStateItemProvider.dispose();
 		if (powerSourceItemProvider != null) powerSourceItemProvider.dispose();
 		if (resourceLinkItemProvider != null) resourceLinkItemProvider.dispose();
 		if (resourceTypeModifierItemProvider != null) resourceTypeModifierItemProvider.dispose();
@@ -1004,12 +1004,12 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (taskTypeDissimilarityItemProvider != null) taskTypeDissimilarityItemProvider.dispose();
 		if (deviceTypeDissimilarityItemProvider != null) deviceTypeDissimilarityItemProvider.dispose();
 		if (resourceTypeDissimilarityItemProvider != null) resourceTypeDissimilarityItemProvider.dispose();
-		if (libraryItemProvider != null) libraryItemProvider.dispose();
 		if (sublibraryItemProvider != null) sublibraryItemProvider.dispose();
-		if (outputTriggerItemProvider != null) outputTriggerItemProvider.dispose();
-		if (functionInputTriggerItemProvider != null) functionInputTriggerItemProvider.dispose();
-		if (internalStateDeclarationItemProvider != null) internalStateDeclarationItemProvider.dispose();
-		if (parameterDeclarationItemProvider != null) parameterDeclarationItemProvider.dispose();
+		if (taskOutputTriggerItemProvider != null) taskOutputTriggerItemProvider.dispose();
+		if (taskInputTriggerItemProvider != null) taskInputTriggerItemProvider.dispose();
+		if (taskStateDeclarationItemProvider != null) taskStateDeclarationItemProvider.dispose();
+		if (taskParameterDeclarationItemProvider != null) taskParameterDeclarationItemProvider.dispose();
+		if (libraryItemProvider != null) libraryItemProvider.dispose();
 	}
 
 }

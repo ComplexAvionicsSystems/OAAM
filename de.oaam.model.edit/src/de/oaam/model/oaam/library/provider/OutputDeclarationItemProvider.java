@@ -4,6 +4,7 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
@@ -293,7 +294,7 @@ public class OutputDeclarationItemProvider extends OaamBaseElementAItemProvider 
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.OUTPUT_DECLARATION__TRIGGER,
-				 LibraryFactory.eINSTANCE.createOutputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskOutputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter

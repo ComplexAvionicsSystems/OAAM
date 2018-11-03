@@ -7,15 +7,19 @@ import de.oaam.model.oaam.Architecture;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsFactory;
+
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.hardware.HardwareFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
+
 import de.oaam.model.oaam.restrictions.RestrictionsFactory;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;

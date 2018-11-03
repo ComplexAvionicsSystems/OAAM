@@ -4,6 +4,7 @@ package de.oaam.model.oaam.functions.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FunctionsContainerA;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
@@ -25,7 +26,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -57,7 +57,6 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 			super.getPropertyDescriptors(object);
 
 			addVariantsPropertyDescriptor(object);
-			addIsAtomicPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -80,28 +79,6 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Atomic feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsAtomicPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionsContainerA_isAtomic_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionsContainerA_isAtomic_feature", "_UI_FunctionsContainerA_type"),
-				 FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__IS_ATOMIC,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -172,9 +149,6 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FunctionsContainerA.class)) {
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__IS_ATOMIC:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__OPERATION_MODES:
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASKS:
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS:

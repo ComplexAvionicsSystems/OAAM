@@ -373,17 +373,17 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -398,17 +398,17 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 	/**

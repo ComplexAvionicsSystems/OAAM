@@ -3,9 +3,12 @@
 package de.oaam.model.oaam.allocations.provider;
 
 
+import de.oaam.model.oaam.allocations.AllocationsFactory;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -162,6 +165,7 @@ public class SignalAssignmentSegmentItemProvider extends OaamBaseElementAItemPro
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
+			childrenFeatures.add(AllocationsPackage.Literals.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES);
 		}
 		return childrenFeatures;
 	}
@@ -218,6 +222,7 @@ public class SignalAssignmentSegmentItemProvider extends OaamBaseElementAItemPro
 
 		switch (notification.getFeatureID(SignalAssignmentSegment.class)) {
 			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__OPERATION_MODES:
+			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -239,6 +244,11 @@ public class SignalAssignmentSegmentItemProvider extends OaamBaseElementAItemPro
 			(createChildParameter
 				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
 				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES,
+				 AllocationsFactory.eINSTANCE.createSchedule()));
 	}
 
 	/**

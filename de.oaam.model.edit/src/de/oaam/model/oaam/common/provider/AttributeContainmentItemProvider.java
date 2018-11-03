@@ -6,6 +6,7 @@ package de.oaam.model.oaam.common.provider;
 import de.oaam.model.oaam.OaamFactory;
 
 import de.oaam.model.oaam.allocations.AllocationsFactory;
+
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
@@ -19,6 +20,7 @@ import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.hardware.HardwareFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
+
 import de.oaam.model.oaam.restrictions.RestrictionsFactory;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -327,7 +329,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -372,32 +374,32 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createLibrary()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 LibraryFactory.eINSTANCE.createSublibrary()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createOutputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskOutputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createInternalStateDeclaration()));
+				 LibraryFactory.eINSTANCE.createTaskStateDeclaration()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createParameterDeclaration()));
+				 LibraryFactory.eINSTANCE.createTaskParameterDeclaration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createLibrary()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -407,12 +409,12 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 ScenarioFactory.eINSTANCE.createParameterNumeric()));
+				 ScenarioFactory.eINSTANCE.createScenarioParameterNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 ScenarioFactory.eINSTANCE.createParameterBool()));
+				 ScenarioFactory.eINSTANCE.createScenarioParameterBool()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -452,17 +454,22 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 SystemsFactory.eINSTANCE.createInformation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 SystemsFactory.eINSTANCE.createInformationFlow()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 SystemsFactory.eINSTANCE.createPower()));
+				 SystemsFactory.eINSTANCE.createInformationSignal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SystemsFactory.eINSTANCE.createInformationMaterial()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SystemsFactory.eINSTANCE.createInformationPower()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -527,7 +534,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -562,7 +569,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 FunctionsFactory.eINSTANCE.createParameter()));
+				 FunctionsFactory.eINSTANCE.createTaskParameter()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -627,12 +634,17 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 AnatomyFactory.eINSTANCE.createAnatomy()));
+				 AnatomyFactory.eINSTANCE.createAreaSymmetry()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AnatomyFactory.eINSTANCE.createSubanatomy()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AnatomyFactory.eINSTANCE.createAnatomy()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -658,6 +670,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 CapabilitiesFactory.eINSTANCE.createSubdeviceInDeviceCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 CapabilitiesFactory.eINSTANCE.createSubconnectionInDeviceCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -707,7 +724,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 RestrictionsFactory.eINSTANCE.createConectionTypeRestriction()));
+				 RestrictionsFactory.eINSTANCE.createConnectionTypeRestriction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -778,6 +795,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AllocationsFactory.eINSTANCE.createSubdeviceAssignment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createSubconnectionAssignment()));
 
 		newChildDescriptors.add
 			(createChildParameter

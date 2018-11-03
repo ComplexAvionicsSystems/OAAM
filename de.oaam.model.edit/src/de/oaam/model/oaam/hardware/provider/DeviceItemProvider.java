@@ -333,6 +333,7 @@ public class DeviceItemProvider extends ResourceProviderInstanceAItemProvider {
 			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(HardwarePackage.Literals.DEVICE__IOS);
 			childrenFeatures.add(HardwarePackage.Literals.DEVICE__SUBDEVICES);
+			childrenFeatures.add(HardwarePackage.Literals.DEVICE__SUBCONNECTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -401,6 +402,7 @@ public class DeviceItemProvider extends ResourceProviderInstanceAItemProvider {
 			case HardwarePackage.DEVICE__OPERATION_MODES:
 			case HardwarePackage.DEVICE__IOS:
 			case HardwarePackage.DEVICE__SUBDEVICES:
+			case HardwarePackage.DEVICE__SUBCONNECTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -452,6 +454,11 @@ public class DeviceItemProvider extends ResourceProviderInstanceAItemProvider {
 			(createChildParameter
 				(HardwarePackage.Literals.DEVICE__SUBDEVICES,
 				 HardwareFactory.eINSTANCE.createDevice()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(HardwarePackage.Literals.DEVICE__SUBCONNECTIONS,
+				 HardwareFactory.eINSTANCE.createConnection()));
 	}
 
 	/**

@@ -95,49 +95,49 @@ public class ScenarioItemProviderAdapterFactory extends ScenarioAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.scenario.ParameterNumeric} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterNumericItemProvider parameterNumericItemProvider;
+	protected ScenarioParameterNumericItemProvider scenarioParameterNumericItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.scenario.ParameterNumeric}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterNumericAdapter() {
-		if (parameterNumericItemProvider == null) {
-			parameterNumericItemProvider = new ParameterNumericItemProvider(this);
+	public Adapter createScenarioParameterNumericAdapter() {
+		if (scenarioParameterNumericItemProvider == null) {
+			scenarioParameterNumericItemProvider = new ScenarioParameterNumericItemProvider(this);
 		}
 
-		return parameterNumericItemProvider;
+		return scenarioParameterNumericItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.scenario.ParameterBool} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.scenario.ScenarioParameterBool} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterBoolItemProvider parameterBoolItemProvider;
+	protected ScenarioParameterBoolItemProvider scenarioParameterBoolItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.scenario.ParameterBool}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.scenario.ScenarioParameterBool}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createParameterBoolAdapter() {
-		if (parameterBoolItemProvider == null) {
-			parameterBoolItemProvider = new ParameterBoolItemProvider(this);
+	public Adapter createScenarioParameterBoolAdapter() {
+		if (scenarioParameterBoolItemProvider == null) {
+			scenarioParameterBoolItemProvider = new ScenarioParameterBoolItemProvider(this);
 		}
 
-		return parameterBoolItemProvider;
+		return scenarioParameterBoolItemProvider;
 	}
 
 	/**
@@ -332,8 +332,8 @@ public class ScenarioItemProviderAdapterFactory extends ScenarioAdapterFactory i
 	 */
 	public void dispose() {
 		if (operationModeItemProvider != null) operationModeItemProvider.dispose();
-		if (parameterNumericItemProvider != null) parameterNumericItemProvider.dispose();
-		if (parameterBoolItemProvider != null) parameterBoolItemProvider.dispose();
+		if (scenarioParameterNumericItemProvider != null) scenarioParameterNumericItemProvider.dispose();
+		if (scenarioParameterBoolItemProvider != null) scenarioParameterBoolItemProvider.dispose();
 		if (variantItemProvider != null) variantItemProvider.dispose();
 		if (operationModeReferenceItemProvider != null) operationModeReferenceItemProvider.dispose();
 		if (scenarioItemProvider != null) scenarioItemProvider.dispose();

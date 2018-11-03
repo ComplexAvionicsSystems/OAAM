@@ -1,13 +1,9 @@
 /**
  */
-package de.oaam.model.oaam.library.provider;
+package de.oaam.model.oaam.scenario.provider;
 
 
-import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
-import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.ParameterDeclaration;
-
-import de.oaam.model.oaam.provider.OaamEditPlugin;
+import de.oaam.model.oaam.scenario.ScenarioPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -15,25 +11,23 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.library.ParameterDeclaration} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.scenario.ScenarioParameterA} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterDeclarationItemProvider extends OaamBaseElementAItemProvider {
+public class ScenarioParameterAItemProvider extends ModeDependentElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterDeclarationItemProvider(AdapterFactory adapterFactory) {
+	public ScenarioParameterAItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,42 +42,31 @@ public class ParameterDeclarationItemProvider extends OaamBaseElementAItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypePropertyDescriptor(object);
+			addVariantsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
+	 * This adds a property descriptor for the Variants feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addVariantsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ParameterDeclaration_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ParameterDeclaration_type_feature", "_UI_ParameterDeclaration_type"),
-				 LibraryPackage.Literals.PARAMETER_DECLARATION__TYPE,
+				 getString("_UI_VariantDependentElementA_variants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
+				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
 				 true,
 				 false,
 				 true,
 				 null,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This returns ParameterDeclaration.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ParameterDeclaration"));
 	}
 
 	/**
@@ -94,10 +77,7 @@ public class ParameterDeclarationItemProvider extends OaamBaseElementAItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ParameterDeclaration)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ParameterDeclaration_type") :
-			getString("_UI_ParameterDeclaration_type") + " " + label;
+		return getString("_UI_ScenarioParameterA_type");
 	}
 	
 
@@ -124,17 +104,6 @@ public class ParameterDeclarationItemProvider extends OaamBaseElementAItemProvid
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return OaamEditPlugin.INSTANCE;
 	}
 
 }

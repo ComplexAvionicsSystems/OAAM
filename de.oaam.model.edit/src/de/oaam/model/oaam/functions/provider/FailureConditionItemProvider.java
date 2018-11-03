@@ -4,7 +4,9 @@ package de.oaam.model.oaam.functions.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
@@ -60,7 +62,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addVariantsPropertyDescriptor(object);
-			addMaxOccurrenceRatePropertyDescriptor(object);
+			addMaxOccurrenceProbabilityPropertyDescriptor(object);
 			addNoSingleFailurePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -89,19 +91,19 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Max Occurrence Rate feature.
+	 * This adds a property descriptor for the Max Occurrence Probability feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMaxOccurrenceRatePropertyDescriptor(Object object) {
+	protected void addMaxOccurrenceProbabilityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FailureCondition_maxOccurrenceRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FailureCondition_maxOccurrenceRate_feature", "_UI_FailureCondition_type"),
-				 FunctionsPackage.Literals.FAILURE_CONDITION__MAX_OCCURRENCE_RATE,
+				 getString("_UI_FailureCondition_maxOccurrenceProbability_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureCondition_maxOccurrenceProbability_feature", "_UI_FailureCondition_type"),
+				 FunctionsPackage.Literals.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY,
 				 true,
 				 false,
 				 false,
@@ -201,7 +203,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FailureCondition.class)) {
-			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_RATE:
+			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
@@ -232,7 +234,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -247,12 +249,12 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 	}
 
 	/**

@@ -95,29 +95,6 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.Subrestrictions} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubrestrictionsItemProvider subrestrictionsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.Subrestrictions}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubrestrictionsAdapter() {
-		if (subrestrictionsItemProvider == null) {
-			subrestrictionsItemProvider = new SubrestrictionsItemProvider(this);
-		}
-
-		return subrestrictionsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.LocationRestriction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,26 +210,26 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConectionTypeRestrictionItemProvider conectionTypeRestrictionItemProvider;
+	protected ConnectionTypeRestrictionItemProvider connectionTypeRestrictionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.ConectionTypeRestriction}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.ConnectionTypeRestriction}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createConectionTypeRestrictionAdapter() {
-		if (conectionTypeRestrictionItemProvider == null) {
-			conectionTypeRestrictionItemProvider = new ConectionTypeRestrictionItemProvider(this);
+	public Adapter createConnectionTypeRestrictionAdapter() {
+		if (connectionTypeRestrictionItemProvider == null) {
+			connectionTypeRestrictionItemProvider = new ConnectionTypeRestrictionItemProvider(this);
 		}
 
-		return conectionTypeRestrictionItemProvider;
+		return connectionTypeRestrictionItemProvider;
 	}
 
 	/**
@@ -394,6 +371,29 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.restrictions.Subrestrictions} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubrestrictionsItemProvider subrestrictionsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.restrictions.Subrestrictions}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubrestrictionsAdapter() {
+		if (subrestrictionsItemProvider == null) {
+			subrestrictionsItemProvider = new SubrestrictionsItemProvider(this);
+		}
+
+		return subrestrictionsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -498,7 +498,7 @@ public class RestrictionsItemProviderAdapterFactory extends RestrictionsAdapterF
 		if (powerSourceRestrictionItemProvider != null) powerSourceRestrictionItemProvider.dispose();
 		if (deviceRestrictionItemProvider != null) deviceRestrictionItemProvider.dispose();
 		if (deviceTypeRestrictionItemProvider != null) deviceTypeRestrictionItemProvider.dispose();
-		if (conectionTypeRestrictionItemProvider != null) conectionTypeRestrictionItemProvider.dispose();
+		if (connectionTypeRestrictionItemProvider != null) connectionTypeRestrictionItemProvider.dispose();
 		if (connectionRestrictionItemProvider != null) connectionRestrictionItemProvider.dispose();
 		if (segregationRestrictionItemProvider != null) segregationRestrictionItemProvider.dispose();
 		if (synchronicityRestrictionItemProvider != null) synchronicityRestrictionItemProvider.dispose();

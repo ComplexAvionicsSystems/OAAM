@@ -22,12 +22,12 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.RequiredInputA} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.ProvidedInformationA} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RequiredInputAItemProvider 
+public class ProvidedInformationAItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -41,7 +41,7 @@ public class RequiredInputAItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequiredInputAItemProvider(AdapterFactory adapterFactory) {
+	public ProvidedInformationAItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,7 +68,7 @@ public class RequiredInputAItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RequiredInputA_type");
+		return getString("_UI_ProvidedInformationA_type");
 	}
 	
 

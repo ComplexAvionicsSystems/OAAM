@@ -53,7 +53,9 @@ public class AreaRestrictionItemProvider extends TaskRestrictionAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTaskGroupsPropertyDescriptor(object);
 			addSignalsPropertyDescriptor(object);
+			addSignalGroupsPropertyDescriptor(object);
 			addSubfunctionsPropertyDescriptor(object);
 			addDevicesPropertyDescriptor(object);
 			addConnectionsPropertyDescriptor(object);
@@ -73,6 +75,28 @@ public class AreaRestrictionItemProvider extends TaskRestrictionAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Task Groups feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTaskGroupsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskGroupRestrictionA_taskGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskGroupRestrictionA_taskGroups_feature", "_UI_TaskGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.TASK_GROUP_RESTRICTION_A__TASK_GROUPS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Signals feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -86,6 +110,28 @@ public class AreaRestrictionItemProvider extends TaskRestrictionAItemProvider {
 				 getString("_UI_SignalRestrictionA_signals_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SignalRestrictionA_signals_feature", "_UI_SignalRestrictionA_type"),
 				 RestrictionsPackage.Literals.SIGNAL_RESTRICTION_A__SIGNALS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Signal Groups feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSignalGroupsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SignalGroupRestrictionA_signalGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SignalGroupRestrictionA_signalGroups_feature", "_UI_SignalGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS,
 				 true,
 				 false,
 				 true,

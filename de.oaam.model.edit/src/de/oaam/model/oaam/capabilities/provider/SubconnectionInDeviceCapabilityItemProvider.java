@@ -1,16 +1,16 @@
 /**
  */
-package de.oaam.model.oaam.systems.provider;
+package de.oaam.model.oaam.capabilities.provider;
 
+
+import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
+import de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability;
 
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
-
-import de.oaam.model.oaam.systems.Power;
-import de.oaam.model.oaam.systems.SystemsPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,19 +26,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.Power} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PowerItemProvider extends ProvidedOutputAItemProvider {
+public class SubconnectionInDeviceCapabilityItemProvider extends CapabilityAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PowerItemProvider(AdapterFactory adapterFactory) {
+	public SubconnectionInDeviceCapabilityItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,7 +61,8 @@ public class PowerItemProvider extends ProvidedOutputAItemProvider {
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
-			addPowerPropertyDescriptor(object);
+			addSubconnectionTypePropertyDescriptor(object);
+			addTargetDeviceTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -243,23 +244,45 @@ public class PowerItemProvider extends ProvidedOutputAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Power feature.
+	 * This adds a property descriptor for the Subconnection Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPowerPropertyDescriptor(Object object) {
+	protected void addSubconnectionTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Power_power_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Power_power_feature", "_UI_Power_type"),
-				 SystemsPackage.Literals.POWER__POWER,
+				 getString("_UI_SubconnectionInDeviceCapability_subconnectionType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SubconnectionInDeviceCapability_subconnectionType_feature", "_UI_SubconnectionInDeviceCapability_type"),
+				 CapabilitiesPackage.Literals.SUBCONNECTION_IN_DEVICE_CAPABILITY__SUBCONNECTION_TYPE,
 				 true,
 				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target Device Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetDeviceTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SubconnectionInDeviceCapability_targetDeviceType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SubconnectionInDeviceCapability_targetDeviceType_feature", "_UI_SubconnectionInDeviceCapability_type"),
+				 CapabilitiesPackage.Literals.SUBCONNECTION_IN_DEVICE_CAPABILITY__TARGET_DEVICE_TYPE,
+				 true,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -296,14 +319,14 @@ public class PowerItemProvider extends ProvidedOutputAItemProvider {
 	}
 
 	/**
-	 * This returns Power.gif.
+	 * This returns SubconnectionInDeviceCapability.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Power"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SubconnectionInDeviceCapability"));
 	}
 
 	/**
@@ -314,10 +337,10 @@ public class PowerItemProvider extends ProvidedOutputAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Power)object).getName();
+		String label = ((SubconnectionInDeviceCapability)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Power_type") :
-			getString("_UI_Power_type") + " " + label;
+			getString("_UI_SubconnectionInDeviceCapability_type") :
+			getString("_UI_SubconnectionInDeviceCapability_type") + " " + label;
 	}
 	
 
@@ -332,19 +355,18 @@ public class PowerItemProvider extends ProvidedOutputAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Power.class)) {
-			case SystemsPackage.POWER__ID:
-			case SystemsPackage.POWER__NAME:
-			case SystemsPackage.POWER__STYLE:
-			case SystemsPackage.POWER__DOCUMENTATION:
-			case SystemsPackage.POWER__MODIFIED:
-			case SystemsPackage.POWER__MODIFIER:
-			case SystemsPackage.POWER__TRACE_LINK:
-			case SystemsPackage.POWER__POWER:
+		switch (notification.getFeatureID(SubconnectionInDeviceCapability.class)) {
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__ID:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__NAME:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__STYLE:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__DOCUMENTATION:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__MODIFIED:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__MODIFIER:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__TRACE_LINK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SystemsPackage.POWER__ATTRIBUTES:
-			case SystemsPackage.POWER__OPERATION_MODES:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__ATTRIBUTES:
+			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY__OPERATION_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

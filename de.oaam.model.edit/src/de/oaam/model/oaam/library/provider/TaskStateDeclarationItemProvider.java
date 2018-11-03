@@ -4,8 +4,9 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
-import de.oaam.model.oaam.library.InternalStateDeclaration;
+
 import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskStateDeclaration;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
@@ -21,19 +22,19 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.library.InternalStateDeclaration} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.library.TaskStateDeclaration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InternalStateDeclarationItemProvider extends OaamBaseElementAItemProvider {
+public class TaskStateDeclarationItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InternalStateDeclarationItemProvider(AdapterFactory adapterFactory) {
+	public TaskStateDeclarationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -64,9 +65,9 @@ public class InternalStateDeclarationItemProvider extends OaamBaseElementAItemPr
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_InternalStateDeclaration_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InternalStateDeclaration_type_feature", "_UI_InternalStateDeclaration_type"),
-				 LibraryPackage.Literals.INTERNAL_STATE_DECLARATION__TYPE,
+				 getString("_UI_TaskStateDeclaration_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskStateDeclaration_type_feature", "_UI_TaskStateDeclaration_type"),
+				 LibraryPackage.Literals.TASK_STATE_DECLARATION__TYPE,
 				 true,
 				 false,
 				 true,
@@ -76,14 +77,14 @@ public class InternalStateDeclarationItemProvider extends OaamBaseElementAItemPr
 	}
 
 	/**
-	 * This returns InternalStateDeclaration.gif.
+	 * This returns TaskStateDeclaration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/InternalStateDeclaration"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskStateDeclaration"));
 	}
 
 	/**
@@ -94,10 +95,10 @@ public class InternalStateDeclarationItemProvider extends OaamBaseElementAItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InternalStateDeclaration)object).getName();
+		String label = ((TaskStateDeclaration)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_InternalStateDeclaration_type") :
-			getString("_UI_InternalStateDeclaration_type") + " " + label;
+			getString("_UI_TaskStateDeclaration_type") :
+			getString("_UI_TaskStateDeclaration_type") + " " + label;
 	}
 	
 

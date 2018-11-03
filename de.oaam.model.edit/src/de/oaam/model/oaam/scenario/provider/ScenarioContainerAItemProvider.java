@@ -4,6 +4,7 @@ package de.oaam.model.oaam.scenario.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioContainerA;
@@ -139,12 +140,12 @@ public class ScenarioContainerAItemProvider extends OaamBaseElementAItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ScenarioPackage.Literals.SCENARIO_CONTAINER_A__PARAMETERS,
-				 ScenarioFactory.eINSTANCE.createParameterNumeric()));
+				 ScenarioFactory.eINSTANCE.createScenarioParameterNumeric()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ScenarioPackage.Literals.SCENARIO_CONTAINER_A__PARAMETERS,
-				 ScenarioFactory.eINSTANCE.createParameterBool()));
+				 ScenarioFactory.eINSTANCE.createScenarioParameterBool()));
 
 		newChildDescriptors.add
 			(createChildParameter

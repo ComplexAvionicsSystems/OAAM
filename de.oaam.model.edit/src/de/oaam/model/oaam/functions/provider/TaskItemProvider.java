@@ -4,6 +4,7 @@ package de.oaam.model.oaam.functions.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Task;
@@ -312,7 +313,7 @@ public class TaskItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FunctionsPackage.Literals.TASK__PARAMETERS,
-				 FunctionsFactory.eINSTANCE.createParameter()));
+				 FunctionsFactory.eINSTANCE.createTaskParameter()));
 	}
 
 	/**

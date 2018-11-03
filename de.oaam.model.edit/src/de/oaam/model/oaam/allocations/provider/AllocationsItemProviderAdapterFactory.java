@@ -233,6 +233,29 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.SubconnectionAssignment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubconnectionAssignmentItemProvider subconnectionAssignmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.SubconnectionAssignment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubconnectionAssignmentAdapter() {
+		if (subconnectionAssignmentItemProvider == null) {
+			subconnectionAssignmentItemProvider = new SubconnectionAssignmentItemProvider(this);
+		}
+
+		return subconnectionAssignmentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Allocations} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -430,6 +453,7 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (deviceAssignmentItemProvider != null) deviceAssignmentItemProvider.dispose();
 		if (connectionAssignmentSegmentItemProvider != null) connectionAssignmentSegmentItemProvider.dispose();
 		if (subdeviceAssignmentItemProvider != null) subdeviceAssignmentItemProvider.dispose();
+		if (subconnectionAssignmentItemProvider != null) subconnectionAssignmentItemProvider.dispose();
 		if (allocationsItemProvider != null) allocationsItemProvider.dispose();
 		if (suballocationsItemProvider != null) suballocationsItemProvider.dispose();
 		if (scheduleItemProvider != null) scheduleItemProvider.dispose();

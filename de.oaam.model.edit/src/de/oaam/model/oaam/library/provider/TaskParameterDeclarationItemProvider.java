@@ -1,7 +1,12 @@
 /**
  */
-package de.oaam.model.oaam.systems.provider;
+package de.oaam.model.oaam.library.provider;
 
+
+import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
+import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskParameterDeclaration;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
@@ -13,35 +18,23 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.systems.ProvidedOutputA} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.library.TaskParameterDeclaration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProvidedOutputAItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class TaskParameterDeclarationItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedOutputAItemProvider(AdapterFactory adapterFactory) {
+	public TaskParameterDeclarationItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -56,8 +49,42 @@ public class ProvidedOutputAItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskParameterDeclaration_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskParameterDeclaration_type_feature", "_UI_TaskParameterDeclaration_type"),
+				 LibraryPackage.Literals.TASK_PARAMETER_DECLARATION__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns TaskParameterDeclaration.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskParameterDeclaration"));
 	}
 
 	/**
@@ -68,7 +95,10 @@ public class ProvidedOutputAItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProvidedOutputA_type");
+		String label = ((TaskParameterDeclaration)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TaskParameterDeclaration_type") :
+			getString("_UI_TaskParameterDeclaration_type") + " " + label;
 	}
 	
 

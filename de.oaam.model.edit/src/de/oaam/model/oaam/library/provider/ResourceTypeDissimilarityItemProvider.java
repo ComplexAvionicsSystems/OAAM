@@ -4,6 +4,7 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ResourceTypeDissimilarity;
 

@@ -6,7 +6,9 @@ package de.oaam.model.oaam.allocations.provider;
 import de.oaam.model.oaam.allocations.AllocationsContainerA;
 import de.oaam.model.oaam.allocations.AllocationsFactory;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -72,6 +74,7 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS);
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS);
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS);
+			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -122,6 +125,7 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS:
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS:
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,6 +172,11 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			(createChildParameter
 				(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS,
 				 AllocationsFactory.eINSTANCE.createSuballocations()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS,
+				 AllocationsFactory.eINSTANCE.createSubconnectionAssignment()));
 	}
 
 	/**

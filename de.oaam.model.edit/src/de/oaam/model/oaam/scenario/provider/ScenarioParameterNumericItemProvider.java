@@ -6,8 +6,8 @@ package de.oaam.model.oaam.scenario.provider;
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 
-import de.oaam.model.oaam.scenario.ParameterNumeric;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+import de.oaam.model.oaam.scenario.ScenarioParameterNumeric;
 
 import java.util.Collection;
 import java.util.List;
@@ -23,19 +23,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.scenario.ParameterNumeric} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.scenario.ScenarioParameterNumeric} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterNumericItemProvider extends ParameterAItemProvider {
+public class ScenarioParameterNumericItemProvider extends ScenarioParameterAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterNumericItemProvider(AdapterFactory adapterFactory) {
+	public ScenarioParameterNumericItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -227,9 +227,9 @@ public class ParameterNumericItemProvider extends ParameterAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ParameterNumeric_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ParameterNumeric_value_feature", "_UI_ParameterNumeric_type"),
-				 ScenarioPackage.Literals.PARAMETER_NUMERIC__VALUE,
+				 getString("_UI_ScenarioParameterNumeric_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ScenarioParameterNumeric_value_feature", "_UI_ScenarioParameterNumeric_type"),
+				 ScenarioPackage.Literals.SCENARIO_PARAMETER_NUMERIC__VALUE,
 				 true,
 				 false,
 				 false,
@@ -269,14 +269,14 @@ public class ParameterNumericItemProvider extends ParameterAItemProvider {
 	}
 
 	/**
-	 * This returns ParameterNumeric.gif.
+	 * This returns ScenarioParameterNumeric.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ParameterNumeric"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ScenarioParameterNumeric"));
 	}
 
 	/**
@@ -287,10 +287,10 @@ public class ParameterNumericItemProvider extends ParameterAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ParameterNumeric)object).getName();
+		String label = ((ScenarioParameterNumeric)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ParameterNumeric_type") :
-			getString("_UI_ParameterNumeric_type") + " " + label;
+			getString("_UI_ScenarioParameterNumeric_type") :
+			getString("_UI_ScenarioParameterNumeric_type") + " " + label;
 	}
 	
 
@@ -305,18 +305,18 @@ public class ParameterNumericItemProvider extends ParameterAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ParameterNumeric.class)) {
-			case ScenarioPackage.PARAMETER_NUMERIC__ID:
-			case ScenarioPackage.PARAMETER_NUMERIC__NAME:
-			case ScenarioPackage.PARAMETER_NUMERIC__STYLE:
-			case ScenarioPackage.PARAMETER_NUMERIC__DOCUMENTATION:
-			case ScenarioPackage.PARAMETER_NUMERIC__MODIFIED:
-			case ScenarioPackage.PARAMETER_NUMERIC__MODIFIER:
-			case ScenarioPackage.PARAMETER_NUMERIC__TRACE_LINK:
-			case ScenarioPackage.PARAMETER_NUMERIC__VALUE:
+		switch (notification.getFeatureID(ScenarioParameterNumeric.class)) {
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__ID:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__NAME:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__STYLE:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__DOCUMENTATION:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__MODIFIED:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__MODIFIER:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__TRACE_LINK:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ScenarioPackage.PARAMETER_NUMERIC__ATTRIBUTES:
+			case ScenarioPackage.SCENARIO_PARAMETER_NUMERIC__ATTRIBUTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

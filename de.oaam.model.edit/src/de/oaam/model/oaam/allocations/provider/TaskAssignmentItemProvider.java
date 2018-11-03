@@ -6,7 +6,9 @@ package de.oaam.model.oaam.allocations.provider;
 import de.oaam.model.oaam.allocations.AllocationsFactory;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.TaskAssignment;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -163,7 +165,7 @@ public class TaskAssignmentItemProvider extends OaamBaseElementAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
-			childrenFeatures.add(AllocationsPackage.Literals.TASK_ASSIGNMENT__SCHEDULE);
+			childrenFeatures.add(AllocationsPackage.Literals.TASK_ASSIGNMENT__SCHEDULES);
 		}
 		return childrenFeatures;
 	}
@@ -220,7 +222,7 @@ public class TaskAssignmentItemProvider extends OaamBaseElementAItemProvider {
 
 		switch (notification.getFeatureID(TaskAssignment.class)) {
 			case AllocationsPackage.TASK_ASSIGNMENT__OPERATION_MODES:
-			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULE:
+			case AllocationsPackage.TASK_ASSIGNMENT__SCHEDULES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -245,7 +247,7 @@ public class TaskAssignmentItemProvider extends OaamBaseElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(AllocationsPackage.Literals.TASK_ASSIGNMENT__SCHEDULE,
+				(AllocationsPackage.Literals.TASK_ASSIGNMENT__SCHEDULES,
 				 AllocationsFactory.eINSTANCE.createSchedule()));
 	}
 

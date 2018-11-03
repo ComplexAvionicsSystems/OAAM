@@ -64,6 +64,7 @@ public class SignalOnConnectionOrDeviceCapabilityItemProvider extends Capability
 			addSignalTypePropertyDescriptor(object);
 			addDeviceTypePropertyDescriptor(object);
 			addConnectionTypePropertyDescriptor(object);
+			addWorstCaseTransmissionTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -311,6 +312,28 @@ public class SignalOnConnectionOrDeviceCapabilityItemProvider extends Capability
 	}
 
 	/**
+	 * This adds a property descriptor for the Worst Case Transmission Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWorstCaseTransmissionTimePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SignalOnConnectionOrDeviceCapability_worstCaseTransmissionTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SignalOnConnectionOrDeviceCapability_worstCaseTransmissionTime_feature", "_UI_SignalOnConnectionOrDeviceCapability_type"),
+				 CapabilitiesPackage.Literals.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -386,6 +409,7 @@ public class SignalOnConnectionOrDeviceCapabilityItemProvider extends Capability
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIED:
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIER:
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__TRACE_LINK:
+			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CapabilitiesPackage.SIGNAL_ON_CONNECTION_OR_DEVICE_CAPABILITY__ATTRIBUTES:

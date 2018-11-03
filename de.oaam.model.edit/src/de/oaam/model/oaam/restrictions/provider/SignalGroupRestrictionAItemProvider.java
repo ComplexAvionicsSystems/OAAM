@@ -1,13 +1,11 @@
 /**
  */
-package de.oaam.model.oaam.functions.provider;
+package de.oaam.model.oaam.restrictions.provider;
 
-
-import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
-import de.oaam.model.oaam.functions.FunctionsPackage;
-import de.oaam.model.oaam.functions.Parameter;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
+
+import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,24 +16,35 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.functions.Parameter} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.restrictions.SignalGroupRestrictionA} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParameterItemProvider extends OaamBaseElementAItemProvider {
+public class SignalGroupRestrictionAItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ParameterItemProvider(AdapterFactory adapterFactory) {
+	public SignalGroupRestrictionAItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -50,65 +59,31 @@ public class ParameterItemProvider extends OaamBaseElementAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDefinitionPropertyDescriptor(object);
-			addValuePropertyDescriptor(object);
+			addSignalGroupsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Definition feature.
+	 * This adds a property descriptor for the Signal Groups feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefinitionPropertyDescriptor(Object object) {
+	protected void addSignalGroupsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Parameter_definition_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Parameter_definition_feature", "_UI_Parameter_type"),
-				 FunctionsPackage.Literals.PARAMETER__DEFINITION,
+				 getString("_UI_SignalGroupRestrictionA_signalGroups_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SignalGroupRestrictionA_signalGroups_feature", "_UI_SignalGroupRestrictionA_type"),
+				 RestrictionsPackage.Literals.SIGNAL_GROUP_RESTRICTION_A__SIGNAL_GROUPS,
 				 true,
 				 false,
 				 true,
 				 null,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Parameter_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Parameter_value_feature", "_UI_Parameter_type"),
-				 FunctionsPackage.Literals.PARAMETER__VALUE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns Parameter.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Parameter"));
 	}
 
 	/**
@@ -119,10 +94,7 @@ public class ParameterItemProvider extends OaamBaseElementAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Parameter)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Parameter_type") :
-			getString("_UI_Parameter_type") + " " + label;
+		return getString("_UI_SignalGroupRestrictionA_type");
 	}
 	
 
@@ -136,12 +108,6 @@ public class ParameterItemProvider extends OaamBaseElementAItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Parameter.class)) {
-			case FunctionsPackage.PARAMETER__VALUE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

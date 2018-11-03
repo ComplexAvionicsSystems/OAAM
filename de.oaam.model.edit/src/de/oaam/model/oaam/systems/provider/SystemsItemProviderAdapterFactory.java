@@ -141,29 +141,6 @@ public class SystemsItemProviderAdapterFactory extends SystemsAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.Information} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InformationItemProvider informationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.systems.Information}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInformationAdapter() {
-		if (informationItemProvider == null) {
-			informationItemProvider = new InformationItemProvider(this);
-		}
-
-		return informationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.InformationFlow} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -187,6 +164,75 @@ public class SystemsItemProviderAdapterFactory extends SystemsAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.InformationSignal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InformationSignalItemProvider informationSignalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.systems.InformationSignal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInformationSignalAdapter() {
+		if (informationSignalItemProvider == null) {
+			informationSignalItemProvider = new InformationSignalItemProvider(this);
+		}
+
+		return informationSignalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.InformationMaterial} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InformationMaterialItemProvider informationMaterialItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.systems.InformationMaterial}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInformationMaterialAdapter() {
+		if (informationMaterialItemProvider == null) {
+			informationMaterialItemProvider = new InformationMaterialItemProvider(this);
+		}
+
+		return informationMaterialItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.InformationPower} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InformationPowerItemProvider informationPowerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.systems.InformationPower}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInformationPowerAdapter() {
+		if (informationPowerItemProvider == null) {
+			informationPowerItemProvider = new InformationPowerItemProvider(this);
+		}
+
+		return informationPowerItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.ElectricPower} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -207,29 +253,6 @@ public class SystemsItemProviderAdapterFactory extends SystemsAdapterFactory imp
 		}
 
 		return electricPowerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.systems.Power} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PowerItemProvider powerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.systems.Power}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPowerAdapter() {
-		if (powerItemProvider == null) {
-			powerItemProvider = new PowerItemProvider(this);
-		}
-
-		return powerItemProvider;
 	}
 
 	/**
@@ -426,10 +449,11 @@ public class SystemsItemProviderAdapterFactory extends SystemsAdapterFactory imp
 		if (systemsItemProvider != null) systemsItemProvider.dispose();
 		if (subsystemItemProvider != null) subsystemItemProvider.dispose();
 		if (systemItemProvider != null) systemItemProvider.dispose();
-		if (informationItemProvider != null) informationItemProvider.dispose();
 		if (informationFlowItemProvider != null) informationFlowItemProvider.dispose();
+		if (informationSignalItemProvider != null) informationSignalItemProvider.dispose();
+		if (informationMaterialItemProvider != null) informationMaterialItemProvider.dispose();
+		if (informationPowerItemProvider != null) informationPowerItemProvider.dispose();
 		if (electricPowerItemProvider != null) electricPowerItemProvider.dispose();
-		if (powerItemProvider != null) powerItemProvider.dispose();
 		if (hydraulicPowerItemProvider != null) hydraulicPowerItemProvider.dispose();
 		if (rotaryPowerItemProvider != null) rotaryPowerItemProvider.dispose();
 		if (linearPowerItemProvider != null) linearPowerItemProvider.dispose();

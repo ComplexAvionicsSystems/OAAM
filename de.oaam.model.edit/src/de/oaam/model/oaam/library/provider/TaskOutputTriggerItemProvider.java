@@ -4,12 +4,14 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.common.CommonFactory;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.functions.FunctionsFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
-import de.oaam.model.oaam.library.OutputTrigger;
+import de.oaam.model.oaam.library.TaskOutputTrigger;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
@@ -29,19 +31,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.oaam.model.oaam.library.OutputTrigger} object.
+ * This is the item provider adapter for a {@link de.oaam.model.oaam.library.TaskOutputTrigger} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
+public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputTriggerItemProvider(AdapterFactory adapterFactory) {
+	public TaskOutputTriggerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -73,9 +75,9 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OutputTrigger_fixedRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OutputTrigger_fixedRate_feature", "_UI_OutputTrigger_type"),
-				 LibraryPackage.Literals.OUTPUT_TRIGGER__FIXED_RATE,
+				 getString("_UI_TaskOutputTrigger_fixedRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskOutputTrigger_fixedRate_feature", "_UI_TaskOutputTrigger_type"),
+				 LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__FIXED_RATE,
 				 true,
 				 false,
 				 false,
@@ -95,9 +97,9 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OutputTrigger_isFixedRate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OutputTrigger_isFixedRate_feature", "_UI_OutputTrigger_type"),
-				 LibraryPackage.Literals.OUTPUT_TRIGGER__IS_FIXED_RATE,
+				 getString("_UI_TaskOutputTrigger_isFixedRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskOutputTrigger_isFixedRate_feature", "_UI_TaskOutputTrigger_type"),
+				 LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE,
 				 true,
 				 false,
 				 false,
@@ -118,7 +120,7 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC);
 		}
 		return childrenFeatures;
 	}
@@ -137,14 +139,14 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
-	 * This returns OutputTrigger.gif.
+	 * This returns TaskOutputTrigger.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OutputTrigger"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TaskOutputTrigger"));
 	}
 
 	/**
@@ -155,10 +157,10 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OutputTrigger)object).getName();
+		String label = ((TaskOutputTrigger)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_OutputTrigger_type") :
-			getString("_UI_OutputTrigger_type") + " " + label;
+			getString("_UI_TaskOutputTrigger_type") :
+			getString("_UI_TaskOutputTrigger_type") + " " + label;
 	}
 	
 
@@ -173,12 +175,12 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(OutputTrigger.class)) {
-			case LibraryPackage.OUTPUT_TRIGGER__FIXED_RATE:
-			case LibraryPackage.OUTPUT_TRIGGER__IS_FIXED_RATE:
+		switch (notification.getFeatureID(TaskOutputTrigger.class)) {
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__FIXED_RATE:
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case LibraryPackage.OUTPUT_TRIGGER__LOGIC:
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,28 +200,28 @@ public class OutputTriggerItemProvider extends OaamBaseElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputState()));
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC,
-				 LibraryFactory.eINSTANCE.createFunctionInputTrigger()));
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC,
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
 				 CommonFactory.eINSTANCE.createBoolOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC,
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
 				 CommonFactory.eINSTANCE.createBoolNot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.OUTPUT_TRIGGER__LOGIC,
-				 FunctionsFactory.eINSTANCE.createSystemInputState()));
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 	/**

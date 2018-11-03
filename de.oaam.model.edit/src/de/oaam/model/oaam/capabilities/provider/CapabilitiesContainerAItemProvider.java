@@ -6,7 +6,9 @@ package de.oaam.model.oaam.capabilities.provider;
 import de.oaam.model.oaam.capabilities.CapabilitiesContainerA;
 import de.oaam.model.oaam.capabilities.CapabilitiesFactory;
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
+
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import java.util.Collection;
@@ -72,6 +74,7 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES);
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES);
 		}
 		return childrenFeatures;
 	}
@@ -122,6 +125,7 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBDEVICE_IN_DEVICE_CAPABILITIES:
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,6 +172,11 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			(createChildParameter
 				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES,
 				 CapabilitiesFactory.eINSTANCE.createSubcapabilities()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createSubconnectionInDeviceCapability()));
 	}
 
 	/**

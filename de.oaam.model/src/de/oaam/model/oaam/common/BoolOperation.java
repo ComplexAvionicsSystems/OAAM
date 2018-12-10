@@ -55,50 +55,50 @@ public interface BoolOperation extends BoolA, OaamBaseElementA {
 	void setType(BoolOperationTypesE value);
 
 	/**
-	 * Returns the value of the '<em><b>Left</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Left</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The left hand operand of the Boolean operation. This can also be a Boolean operation.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Left</em>' containment reference.
+	 * @return the value of the '<em>Left</em>' reference.
 	 * @see #setLeft(BoolA)
 	 * @see de.oaam.model.oaam.common.CommonPackage#getBoolOperation_Left()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	BoolA getLeft();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolOperation#getLeft <em>Left</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolOperation#getLeft <em>Left</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Left</em>' containment reference.
+	 * @param value the new value of the '<em>Left</em>' reference.
 	 * @see #getLeft()
 	 * @generated
 	 */
 	void setLeft(BoolA value);
 
 	/**
-	 * Returns the value of the '<em><b>Right</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Right</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The right hand operand of the Boolean operation. This can also be a Boolean operation.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Right</em>' containment reference.
+	 * @return the value of the '<em>Right</em>' reference.
 	 * @see #setRight(BoolA)
 	 * @see de.oaam.model.oaam.common.CommonPackage#getBoolOperation_Right()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	BoolA getRight();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolOperation#getRight <em>Right</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolOperation#getRight <em>Right</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Right</em>' containment reference.
+	 * @param value the new value of the '<em>Right</em>' reference.
 	 * @see #getRight()
 	 * @generated
 	 */

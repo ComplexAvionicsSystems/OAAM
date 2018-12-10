@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.ExternalTaskLink;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsContainerA;
@@ -20,13 +21,16 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -48,7 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getTaskRedundancies <em>Task Redundancies</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getSignals <em>Signals</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getSignalGroups <em>Signal Groups</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getFailureEvents <em>Failure Events</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getFailureConditions <em>Failure Conditions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FunctionsContainerAImpl#getSubfunctions <em>Subfunctions</em>}</li>
  * </ul>
  *
@@ -146,14 +150,14 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 	protected EList<SignalGroup> signalGroups;
 
 	/**
-	 * The cached value of the '{@link #getFailureEvents() <em>Failure Events</em>}' containment reference list.
+	 * The cached value of the '{@link #getFailureConditions() <em>Failure Conditions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFailureEvents()
+	 * @see #getFailureConditions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FailureCondition> failureEvents;
+	protected EList<FailureCondition> failureConditions;
 
 	/**
 	 * The cached value of the '{@link #getSubfunctions() <em>Subfunctions</em>}' containment reference list.
@@ -297,11 +301,11 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FailureCondition> getFailureEvents() {
-		if (failureEvents == null) {
-			failureEvents = new EObjectContainmentEList<FailureCondition>(FailureCondition.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS);
+	public EList<FailureCondition> getFailureConditions() {
+		if (failureConditions == null) {
+			failureConditions = new EObjectContainmentEList<FailureCondition>(FailureCondition.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS);
 		}
-		return failureEvents;
+		return failureConditions;
 	}
 
 	/**
@@ -340,8 +344,8 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				return ((InternalEList<?>)getSignals()).basicRemove(otherEnd, msgs);
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS:
 				return ((InternalEList<?>)getSignalGroups()).basicRemove(otherEnd, msgs);
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
-				return ((InternalEList<?>)getFailureEvents()).basicRemove(otherEnd, msgs);
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
+				return ((InternalEList<?>)getFailureConditions()).basicRemove(otherEnd, msgs);
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				return ((InternalEList<?>)getSubfunctions()).basicRemove(otherEnd, msgs);
 		}
@@ -374,8 +378,8 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				return getSignals();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS:
 				return getSignalGroups();
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
-				return getFailureEvents();
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
+				return getFailureConditions();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				return getSubfunctions();
 		}
@@ -427,9 +431,9 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				getSignalGroups().clear();
 				getSignalGroups().addAll((Collection<? extends SignalGroup>)newValue);
 				return;
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
-				getFailureEvents().clear();
-				getFailureEvents().addAll((Collection<? extends FailureCondition>)newValue);
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
+				getFailureConditions().clear();
+				getFailureConditions().addAll((Collection<? extends FailureCondition>)newValue);
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				getSubfunctions().clear();
@@ -474,8 +478,8 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS:
 				getSignalGroups().clear();
 				return;
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
-				getFailureEvents().clear();
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
+				getFailureConditions().clear();
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				getSubfunctions().clear();
@@ -510,8 +514,8 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				return signals != null && !signals.isEmpty();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS:
 				return signalGroups != null && !signalGroups.isEmpty();
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
-				return failureEvents != null && !failureEvents.isEmpty();
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
+				return failureConditions != null && !failureConditions.isEmpty();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				return subfunctions != null && !subfunctions.isEmpty();
 		}

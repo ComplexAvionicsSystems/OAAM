@@ -6,12 +6,15 @@ import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.Area;
 import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.Location;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

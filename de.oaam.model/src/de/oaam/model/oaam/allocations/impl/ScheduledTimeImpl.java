@@ -4,7 +4,9 @@ package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.ScheduledTime;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;

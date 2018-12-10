@@ -3,13 +3,16 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.InputDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.RequiredInformationA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

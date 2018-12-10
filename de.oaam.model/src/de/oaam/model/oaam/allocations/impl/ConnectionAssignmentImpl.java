@@ -5,7 +5,9 @@ package de.oaam.model.oaam.allocations.impl;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.ConnectionAssignment;
 import de.oaam.model.oaam.allocations.ConnectionAssignmentSegment;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Connection;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

@@ -4,10 +4,12 @@ package de.oaam.model.oaam.functions.util;
 
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.functions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

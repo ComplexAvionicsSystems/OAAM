@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
@@ -12,6 +13,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

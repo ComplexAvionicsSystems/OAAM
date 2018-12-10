@@ -4,18 +4,23 @@ package de.oaam.model.oaam.capabilities.impl;
 
 import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**

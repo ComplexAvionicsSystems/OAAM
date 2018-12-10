@@ -3,8 +3,10 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -27,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getTaskRedundancies <em>Task Redundancies</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getSignals <em>Signals</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getSignalGroups <em>Signal Groups</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getFailureEvents <em>Failure Events</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getFailureConditions <em>Failure Conditions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FunctionsContainerA#getSubfunctions <em>Subfunctions</em>}</li>
  * </ul>
  *
@@ -142,19 +144,19 @@ public interface FunctionsContainerA extends OaamBaseElementA, VariantDependentE
 	EList<SignalGroup> getSignalGroups();
 
 	/**
-	 * Returns the value of the '<em><b>Failure Events</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Failure Conditions</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.FailureCondition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * All failure events of this system description.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Failure Events</em>' containment reference list.
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFunctionsContainerA_FailureEvents()
+	 * @return the value of the '<em>Failure Conditions</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFunctionsContainerA_FailureConditions()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FailureCondition> getFailureEvents();
+	EList<FailureCondition> getFailureConditions();
 
 	/**
 	 * Returns the value of the '<em><b>Subfunctions</b></em>' containment reference list.

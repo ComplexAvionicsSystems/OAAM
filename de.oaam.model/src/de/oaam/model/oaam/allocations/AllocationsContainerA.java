@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

@@ -3,11 +3,14 @@
 package de.oaam.model.oaam.anatomy.util;
 
 import de.oaam.model.oaam.anatomy.*;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -260,20 +263,6 @@ public class AnatomyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.anatomy.Anatomy <em>Anatomy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.anatomy.Anatomy
-	 * @generated
-	 */
-	public Adapter createAnatomyAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.anatomy.Subanatomy <em>Subanatomy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -284,6 +273,20 @@ public class AnatomyAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubanatomyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.anatomy.Anatomy <em>Anatomy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.anatomy.Anatomy
+	 * @generated
+	 */
+	public Adapter createAnatomyAdapter() {
 		return null;
 	}
 

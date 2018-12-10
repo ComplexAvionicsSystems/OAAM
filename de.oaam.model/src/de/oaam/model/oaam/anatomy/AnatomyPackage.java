@@ -1215,16 +1215,6 @@ public interface AnatomyPackage extends EPackage {
 	int AREA_SYMMETRY_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
-	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
-	 * @generated
-	 */
-	int ANATOMY = 9;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.SubanatomyImpl <em>Subanatomy</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1395,6 +1385,16 @@ public interface AnatomyPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBANATOMY_OPERATION_COUNT = ANATOMY_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
+	 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
+	 * @generated
+	 */
+	int ANATOMY = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1875,16 +1875,6 @@ public interface AnatomyPackage extends EPackage {
 	EReference getAreaSymmetry_Areas();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.Anatomy <em>Anatomy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Anatomy</em>'.
-	 * @see de.oaam.model.oaam.anatomy.Anatomy
-	 * @generated
-	 */
-	EClass getAnatomy();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.Subanatomy <em>Subanatomy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1893,6 +1883,16 @@ public interface AnatomyPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSubanatomy();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.anatomy.Anatomy <em>Anatomy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Anatomy</em>'.
+	 * @see de.oaam.model.oaam.anatomy.Anatomy
+	 * @generated
+	 */
+	EClass getAnatomy();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2182,16 +2182,6 @@ public interface AnatomyPackage extends EPackage {
 		EReference AREA_SYMMETRY__AREAS = eINSTANCE.getAreaSymmetry_Areas();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
-		 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
-		 * @generated
-		 */
-		EClass ANATOMY = eINSTANCE.getAnatomy();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.SubanatomyImpl <em>Subanatomy</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2200,6 +2190,16 @@ public interface AnatomyPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SUBANATOMY = eINSTANCE.getSubanatomy();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.anatomy.impl.AnatomyImpl <em>Anatomy</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.anatomy.impl.AnatomyImpl
+		 * @see de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl#getAnatomy()
+		 * @generated
+		 */
+		EClass ANATOMY = eINSTANCE.getAnatomy();
 
 	}
 

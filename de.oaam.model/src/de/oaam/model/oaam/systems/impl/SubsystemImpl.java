@@ -7,6 +7,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.Subsystem;
 import de.oaam.model.oaam.systems.SystemsPackage;
 

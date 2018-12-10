@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.capabilities;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.TaskType;
 

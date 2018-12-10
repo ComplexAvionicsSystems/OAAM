@@ -3,8 +3,10 @@
 package de.oaam.model.oaam.capabilities;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

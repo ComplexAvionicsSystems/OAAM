@@ -8,6 +8,7 @@ import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DuctType;
 import de.oaam.model.oaam.library.LocationType;

@@ -430,16 +430,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Library createLibrary() {
-		LibraryImpl library = new LibraryImpl();
-		return library;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Sublibrary createSublibrary() {
 		SublibraryImpl sublibrary = new SublibraryImpl();
 		return sublibrary;
@@ -483,6 +473,16 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public TaskParameterDeclaration createTaskParameterDeclaration() {
 		TaskParameterDeclarationImpl taskParameterDeclaration = new TaskParameterDeclarationImpl();
 		return taskParameterDeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Library createLibrary() {
+		LibraryImpl library = new LibraryImpl();
+		return library;
 	}
 
 	/**

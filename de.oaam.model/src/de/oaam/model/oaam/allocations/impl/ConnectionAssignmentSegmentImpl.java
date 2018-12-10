@@ -9,7 +9,9 @@ import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.Location;
 
 import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;

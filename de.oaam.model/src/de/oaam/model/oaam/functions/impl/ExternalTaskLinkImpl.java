@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.ExternalTaskLink;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;

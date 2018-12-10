@@ -25,25 +25,25 @@ package de.oaam.model.oaam.common;
  */
 public interface BoolNot extends BoolA, OaamBaseElementA {
 	/**
-	 * Returns the value of the '<em><b>In</b></em>' containment reference.
+	 * Returns the value of the '<em><b>In</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A reference to the variable to be negated
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>In</em>' containment reference.
+	 * @return the value of the '<em>In</em>' reference.
 	 * @see #setIn(BoolA)
 	 * @see de.oaam.model.oaam.common.CommonPackage#getBoolNot_In()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	BoolA getIn();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolNot#getIn <em>In</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.common.BoolNot#getIn <em>In</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>In</em>' containment reference.
+	 * @param value the new value of the '<em>In</em>' reference.
 	 * @see #getIn()
 	 * @generated
 	 */

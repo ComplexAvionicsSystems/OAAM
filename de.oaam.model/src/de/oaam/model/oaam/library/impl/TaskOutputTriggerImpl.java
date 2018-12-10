@@ -3,19 +3,29 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.BoolNot;
+import de.oaam.model.oaam.common.BoolOperation;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskInputTrigger;
 import de.oaam.model.oaam.library.TaskOutputTrigger;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,24 +35,17 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getLogic <em>Logic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getFixedRate <em>Fixed Rate</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#isIsFixedRate <em>Is Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getBooleanOperations <em>Boolean Operations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getBooleanNots <em>Boolean Nots</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl#getTaskInputTriggers <em>Task Input Triggers</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskOutputTrigger {
-	/**
-	 * The cached value of the '{@link #getLogic() <em>Logic</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLogic()
-	 * @generated
-	 * @ordered
-	 */
-	protected BoolA logic;
-
 	/**
 	 * The default value of the '{@link #getFixedRate() <em>Fixed Rate</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,6 +87,46 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	protected boolean isFixedRate = IS_FIXED_RATE_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondition()
+	 * @generated
+	 * @ordered
+	 */
+	protected BoolA condition;
+
+	/**
+	 * The cached value of the '{@link #getBooleanOperations() <em>Boolean Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolOperation> booleanOperations;
+
+	/**
+	 * The cached value of the '{@link #getBooleanNots() <em>Boolean Nots</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanNots()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolNot> booleanNots;
+
+	/**
+	 * The cached value of the '{@link #getTaskInputTriggers() <em>Task Input Triggers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskInputTriggers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskInputTrigger> taskInputTriggers;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -100,49 +143,6 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	@Override
 	protected EClass eStaticClass() {
 		return LibraryPackage.Literals.TASK_OUTPUT_TRIGGER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BoolA getLogic() {
-		return logic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLogic(BoolA newLogic, NotificationChain msgs) {
-		BoolA oldLogic = logic;
-		logic = newLogic;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC, oldLogic, newLogic);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLogic(BoolA newLogic) {
-		if (newLogic != logic) {
-			NotificationChain msgs = null;
-			if (logic != null)
-				msgs = ((InternalEObject)logic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC, null, msgs);
-			if (newLogic != null)
-				msgs = ((InternalEObject)newLogic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC, null, msgs);
-			msgs = basicSetLogic(newLogic, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC, newLogic, newLogic));
 	}
 
 	/**
@@ -192,11 +192,89 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BoolA getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject)condition;
+			condition = (BoolA)eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION, oldCondition, condition));
+			}
+		}
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BoolA basicGetCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(BoolA newCondition) {
+		BoolA oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION, oldCondition, condition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BoolOperation> getBooleanOperations() {
+		if (booleanOperations == null) {
+			booleanOperations = new EObjectContainmentEList<BoolOperation>(BoolOperation.class, this, LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS);
+		}
+		return booleanOperations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BoolNot> getBooleanNots() {
+		if (booleanNots == null) {
+			booleanNots = new EObjectContainmentEList<BoolNot>(BoolNot.class, this, LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS);
+		}
+		return booleanNots;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TaskInputTrigger> getTaskInputTriggers() {
+		if (taskInputTriggers == null) {
+			taskInputTriggers = new EObjectContainmentEList<TaskInputTrigger>(TaskInputTrigger.class, this, LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS);
+		}
+		return taskInputTriggers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
-				return basicSetLogic(null, msgs);
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+				return ((InternalEList<?>)getBooleanOperations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+				return ((InternalEList<?>)getBooleanNots()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
+				return ((InternalEList<?>)getTaskInputTriggers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,12 +287,19 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
-				return getLogic();
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__FIXED_RATE:
 				return getFixedRate();
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				return isIsFixedRate();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION:
+				if (resolve) return getCondition();
+				return basicGetCondition();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+				return getBooleanOperations();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+				return getBooleanNots();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
+				return getTaskInputTriggers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,17 +309,30 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
-				setLogic((BoolA)newValue);
-				return;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__FIXED_RATE:
 				setFixedRate((Float)newValue);
 				return;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				setIsFixedRate((Boolean)newValue);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION:
+				setCondition((BoolA)newValue);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				getBooleanOperations().addAll((Collection<? extends BoolOperation>)newValue);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				getBooleanNots().addAll((Collection<? extends BoolNot>)newValue);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
+				getTaskInputTriggers().clear();
+				getTaskInputTriggers().addAll((Collection<? extends TaskInputTrigger>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -248,14 +346,23 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
-				setLogic((BoolA)null);
-				return;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__FIXED_RATE:
 				setFixedRate(FIXED_RATE_EDEFAULT);
 				return;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				setIsFixedRate(IS_FIXED_RATE_EDEFAULT);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION:
+				setCondition((BoolA)null);
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				return;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
+				getTaskInputTriggers().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -269,12 +376,18 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
-				return logic != null;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__FIXED_RATE:
 				return fixedRate != FIXED_RATE_EDEFAULT;
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				return isFixedRate != IS_FIXED_RATE_EDEFAULT;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__CONDITION:
+				return condition != null;
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+				return booleanOperations != null && !booleanOperations.isEmpty();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+				return booleanNots != null && !booleanNots.isEmpty();
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
+				return taskInputTriggers != null && !taskInputTriggers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

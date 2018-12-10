@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.anatomy;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.DuctType;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 

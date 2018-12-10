@@ -7,7 +7,9 @@ import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
 
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 

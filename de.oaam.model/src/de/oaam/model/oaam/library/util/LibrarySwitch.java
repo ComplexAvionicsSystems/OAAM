@@ -4,6 +4,7 @@ package de.oaam.model.oaam.library.util;
 
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -853,21 +854,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLibrary(Library object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Sublibrary</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -939,6 +925,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTaskParameterDeclaration(TaskParameterDeclaration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLibrary(Library object) {
 		return null;
 	}
 

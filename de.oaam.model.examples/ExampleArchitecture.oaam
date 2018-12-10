@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v140/common" xmlns:de.oaam.model.functions="http://www.oaam.de/oaam/model/v140/functions" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v140/library" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" id="example" name="Example">
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v140/common" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" id="example" name="Example">
   <library id="library" style="">
     <sublibraries id="datatypes" name="Data Types">
       <dataTypes xsi:type="de.oaam.model.common:Boolean"/>
@@ -14,29 +14,10 @@
       <taskTypes id="tasktypeadd" name="Add">
         <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
         <outputDeclarations name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
-          <trigger>
-            <logic xsi:type="de.oaam.model.common:BoolOperation">
-              <left xsi:type="de.oaam.model.library:TaskInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
-              <right xsi:type="de.oaam.model.library:TaskInputTrigger" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
-            </logic>
-          </trigger>
-          <faultPropagations>
-            <logic xsi:type="de.oaam.model.common:BoolOperation">
-              <left xsi:type="de.oaam.model.library:TaskInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
-              <right xsi:type="de.oaam.model.library:TaskInputState" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
-            </logic>
-          </faultPropagations>
-          <faultPropagations outputState="FAILED">
-            <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model.library:TaskInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
-              <right xsi:type="de.oaam.model.library:TaskInputState" state="FAILED" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
-            </logic>
-          </faultPropagations>
-          <faultPropagations outputState="UNKNOWN">
-            <logic xsi:type="de.oaam.model.common:BoolOperation" type="OR">
-              <left xsi:type="de.oaam.model.library:TaskInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
-              <right xsi:type="de.oaam.model.library:TaskInputState" state="UNKNOWN" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
-            </logic>
+          <faultPropagations condition="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@booleanOperations.0">
+            <booleanOperations left="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@taskInputStates.0" right=""/>
+            <taskInputStates input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
+            <taskInputStates id="" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
           </faultPropagations>
         </outputDeclarations>
         <inputDeclarations name="a" type="//@library/@sublibraries.0/@dataTypes.1"/>
@@ -114,20 +95,16 @@
     <tasks id="taskcockpitswitch" name="C/O Switch" style="" modifier="" type="tasktypecockpitswitch" deviceBinding="//@hardware/@devices.0">
       <outputs name="on/off" declaration="//@library/@sublibraries.1/@taskTypes.1/@outputDeclarations.0" ioBindings="//@hardware/@devices.0/@ios.0"/>
     </tasks>
+    <failureConditions condition="//@functions/@failureConditions.0/@booleanNots.0">
+      <booleanNots in="//@functions/@failureConditions.0/@outputIntegrityStates.0"/>
+      <outputIntegrityStates output="//@functions/@tasks.1/@outputs.0"/>
+    </failureConditions>
     <subfunctions>
       <taskLinks/>
       <taskSymmetries/>
       <taskRedundancies/>
       <signals name="on/off to a" source="//@functions/@tasks.1/@outputs.0" target="//@functions/@tasks.0/@inputs.0" type="//@library/@sublibraries.1/@signalTypes.0"/>
       <signalGroups/>
-      <failureEvents>
-        <logic xsi:type="de.oaam.model.common:BoolOperation">
-          <left xsi:type="de.oaam.model.common:BoolNot">
-            <in xsi:type="de.oaam.model.functions:OutputIntegrityState"/>
-          </left>
-          <right xsi:type="de.oaam.model.functions:OutputIntegrityState"/>
-        </logic>
-      </failureEvents>
     </subfunctions>
   </functions>
   <hardware id="hardware">

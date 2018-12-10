@@ -11,7 +11,9 @@ import de.oaam.model.oaam.capabilities.Subcapabilities;
 import de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability;
 import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
 import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

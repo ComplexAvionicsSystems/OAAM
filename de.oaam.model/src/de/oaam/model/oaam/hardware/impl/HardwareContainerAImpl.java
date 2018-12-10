@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;

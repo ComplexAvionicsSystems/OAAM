@@ -3,10 +3,12 @@
 package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

@@ -5,7 +5,9 @@ package de.oaam.model.oaam.scenario.impl;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -31,6 +33,7 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -48,6 +51,7 @@ import de.oaam.model.oaam.scenario.ScenarioParameterNumeric;
 import de.oaam.model.oaam.scenario.Subscenario;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.SystemsPackage;
 
 import de.oaam.model.oaam.systems.impl.SystemsPackageImpl;

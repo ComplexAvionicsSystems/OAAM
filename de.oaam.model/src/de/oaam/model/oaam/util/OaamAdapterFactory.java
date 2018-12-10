@@ -3,7 +3,9 @@
 package de.oaam.model.oaam.util;
 
 import de.oaam.model.oaam.*;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 

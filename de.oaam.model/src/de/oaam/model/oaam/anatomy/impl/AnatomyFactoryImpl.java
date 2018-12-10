@@ -145,9 +145,9 @@ public class AnatomyFactoryImpl extends EFactoryImpl implements AnatomyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Anatomy createAnatomy() {
-		AnatomyImpl anatomy = new AnatomyImpl();
-		return anatomy;
+	public Subanatomy createSubanatomy() {
+		SubanatomyImpl subanatomy = new SubanatomyImpl();
+		return subanatomy;
 	}
 
 	/**
@@ -155,9 +155,9 @@ public class AnatomyFactoryImpl extends EFactoryImpl implements AnatomyFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Subanatomy createSubanatomy() {
-		SubanatomyImpl subanatomy = new SubanatomyImpl();
-		return subanatomy;
+	public Anatomy createAnatomy() {
+		AnatomyImpl anatomy = new AnatomyImpl();
+		return anatomy;
 	}
 
 	/**

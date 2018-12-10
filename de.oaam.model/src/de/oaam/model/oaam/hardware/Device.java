@@ -3,13 +3,16 @@
 package de.oaam.model.oaam.hardware;
 
 import de.oaam.model.oaam.anatomy.Location;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

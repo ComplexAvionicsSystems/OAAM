@@ -225,13 +225,13 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Failure Events</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Failure Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+	int FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -424,13 +424,13 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS__SIGNAL_GROUPS = FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Failure Events</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Failure Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS__FAILURE_EVENTS = FUNCTIONS_CONTAINER_A__FAILURE_EVENTS;
+	int FUNCTIONS__FAILURE_CONDITIONS = FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -1294,13 +1294,13 @@ public interface FunctionsPackage extends EPackage {
 	int FAILURE_CONDITION__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int FAILURE_CONDITION__CONDITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Max Occurrence Probability</b></em>' attribute.
@@ -1321,13 +1321,40 @@ public interface FunctionsPackage extends EPackage {
 	int FAILURE_CONDITION__NO_SINGLE_FAILURE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Boolean Operations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAILURE_CONDITION__BOOLEAN_OPERATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Nots</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAILURE_CONDITION__BOOLEAN_NOTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Output Integrity States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Failure Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Failure Condition</em>' class.
@@ -2390,13 +2417,13 @@ public interface FunctionsPackage extends EPackage {
 	int SUBFUNCTIONS__SIGNAL_GROUPS = FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS;
 
 	/**
-	 * The feature id for the '<em><b>Failure Events</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Failure Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBFUNCTIONS__FAILURE_EVENTS = FUNCTIONS_CONTAINER_A__FAILURE_EVENTS;
+	int SUBFUNCTIONS__FAILURE_CONDITIONS = FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -2561,6 +2588,7 @@ public interface FunctionsPackage extends EPackage {
 	 */
 	int TASK_PARAMETER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
+
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Functions <em>Functions</em>}'.
 	 * <!-- begin-user-doc -->
@@ -2659,15 +2687,15 @@ public interface FunctionsPackage extends EPackage {
 	EReference getFunctionsContainerA_SignalGroups();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FunctionsContainerA#getFailureEvents <em>Failure Events</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FunctionsContainerA#getFailureConditions <em>Failure Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Failure Events</em>'.
-	 * @see de.oaam.model.oaam.functions.FunctionsContainerA#getFailureEvents()
+	 * @return the meta object for the containment reference list '<em>Failure Conditions</em>'.
+	 * @see de.oaam.model.oaam.functions.FunctionsContainerA#getFailureConditions()
 	 * @see #getFunctionsContainerA()
 	 * @generated
 	 */
-	EReference getFunctionsContainerA_FailureEvents();
+	EReference getFunctionsContainerA_FailureConditions();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FunctionsContainerA#getSubfunctions <em>Subfunctions</em>}'.
@@ -2917,15 +2945,15 @@ public interface FunctionsPackage extends EPackage {
 	EClass getFailureCondition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.functions.FailureCondition#getLogic <em>Logic</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.FailureCondition#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Logic</em>'.
-	 * @see de.oaam.model.oaam.functions.FailureCondition#getLogic()
+	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getCondition()
 	 * @see #getFailureCondition()
 	 * @generated
 	 */
-	EReference getFailureCondition_Logic();
+	EReference getFailureCondition_Condition();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}'.
@@ -2948,6 +2976,39 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFailureCondition_NoSingleFailure();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanOperations <em>Boolean Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Operations</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getBooleanOperations()
+	 * @see #getFailureCondition()
+	 * @generated
+	 */
+	EReference getFailureCondition_BooleanOperations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanNots <em>Boolean Nots</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Nots</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getBooleanNots()
+	 * @see #getFailureCondition()
+	 * @generated
+	 */
+	EReference getFailureCondition_BooleanNots();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FailureCondition#getOutputIntegrityStates <em>Output Integrity States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output Integrity States</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getOutputIntegrityStates()
+	 * @see #getFailureCondition()
+	 * @generated
+	 */
+	EReference getFailureCondition_OutputIntegrityStates();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.OutputIntegrityState <em>Output Integrity State</em>}'.
@@ -3393,12 +3454,12 @@ public interface FunctionsPackage extends EPackage {
 		EReference FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = eINSTANCE.getFunctionsContainerA_SignalGroups();
 
 		/**
-		 * The meta object literal for the '<em><b>Failure Events</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Failure Conditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTIONS_CONTAINER_A__FAILURE_EVENTS = eINSTANCE.getFunctionsContainerA_FailureEvents();
+		EReference FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS = eINSTANCE.getFunctionsContainerA_FailureConditions();
 
 		/**
 		 * The meta object literal for the '<em><b>Subfunctions</b></em>' containment reference list feature.
@@ -3597,12 +3658,12 @@ public interface FunctionsPackage extends EPackage {
 		EClass FAILURE_CONDITION = eINSTANCE.getFailureCondition();
 
 		/**
-		 * The meta object literal for the '<em><b>Logic</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FAILURE_CONDITION__LOGIC = eINSTANCE.getFailureCondition_Logic();
+		EReference FAILURE_CONDITION__CONDITION = eINSTANCE.getFailureCondition_Condition();
 
 		/**
 		 * The meta object literal for the '<em><b>Max Occurrence Probability</b></em>' attribute feature.
@@ -3619,6 +3680,30 @@ public interface FunctionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FAILURE_CONDITION__NO_SINGLE_FAILURE = eINSTANCE.getFailureCondition_NoSingleFailure();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Operations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAILURE_CONDITION__BOOLEAN_OPERATIONS = eINSTANCE.getFailureCondition_BooleanOperations();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Nots</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAILURE_CONDITION__BOOLEAN_NOTS = eINSTANCE.getFailureCondition_BooleanNots();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Integrity States</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES = eINSTANCE.getFailureCondition_OutputIntegrityStates();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl <em>Output Integrity State</em>}' class.

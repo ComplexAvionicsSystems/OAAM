@@ -54,10 +54,6 @@ public enum IntegretyStateE implements Enumerator {
 	/**
 	 * The '<em><b>OK</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>OK</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The state is OK, which means it works as it should do.
@@ -72,10 +68,6 @@ public enum IntegretyStateE implements Enumerator {
 	/**
 	 * The '<em><b>FAILED</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>FAILED</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The state is failed, but it is known to be failed. 
@@ -90,10 +82,6 @@ public enum IntegretyStateE implements Enumerator {
 	/**
 	 * The '<em><b>UNKNOWN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UNKNOWN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The state can be ok or failed or out-of-control. Compared to to the other states it is not known. Therefore, no fault containment can take place.

@@ -85,15 +85,6 @@ public interface AnatomyFactory extends EFactory {
 	AreaSymmetry createAreaSymmetry();
 
 	/**
-	 * Returns a new object of class '<em>Anatomy</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Anatomy</em>'.
-	 * @generated
-	 */
-	Anatomy createAnatomy();
-
-	/**
 	 * Returns a new object of class '<em>Subanatomy</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +92,15 @@ public interface AnatomyFactory extends EFactory {
 	 * @generated
 	 */
 	Subanatomy createSubanatomy();
+
+	/**
+	 * Returns a new object of class '<em>Anatomy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anatomy</em>'.
+	 * @generated
+	 */
+	Anatomy createAnatomy();
 
 	/**
 	 * Returns the package supported by this factory.

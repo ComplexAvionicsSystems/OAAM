@@ -3,11 +3,13 @@
 package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.InformationFlow;
 import de.oaam.model.oaam.systems.ProvidedInformationA;
 import de.oaam.model.oaam.systems.RequiredInformationA;

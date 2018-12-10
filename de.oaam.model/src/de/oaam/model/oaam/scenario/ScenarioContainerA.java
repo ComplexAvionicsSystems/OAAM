@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.scenario;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

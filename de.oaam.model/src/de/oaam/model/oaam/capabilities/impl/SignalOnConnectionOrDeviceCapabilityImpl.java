@@ -8,6 +8,7 @@ import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.SignalType;

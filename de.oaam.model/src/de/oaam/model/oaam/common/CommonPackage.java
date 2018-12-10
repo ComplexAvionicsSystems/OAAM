@@ -816,7 +816,7 @@ public interface CommonPackage extends EPackage {
 	int BOOL_OPERATION__TYPE = BOOL_A_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * The feature id for the '<em><b>Left</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -825,7 +825,7 @@ public interface CommonPackage extends EPackage {
 	int BOOL_OPERATION__LEFT = BOOL_A_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * The feature id for the '<em><b>Right</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -934,7 +934,7 @@ public interface CommonPackage extends EPackage {
 	int BOOL_NOT__TRACE_LINK = BOOL_A_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>In</b></em>' containment reference.
+	 * The feature id for the '<em><b>In</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2114,10 +2114,10 @@ public interface CommonPackage extends EPackage {
 	EAttribute getBoolOperation_Type();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.common.BoolOperation#getLeft <em>Left</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.common.BoolOperation#getLeft <em>Left</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @return the meta object for the reference '<em>Left</em>'.
 	 * @see de.oaam.model.oaam.common.BoolOperation#getLeft()
 	 * @see #getBoolOperation()
 	 * @generated
@@ -2125,10 +2125,10 @@ public interface CommonPackage extends EPackage {
 	EReference getBoolOperation_Left();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.common.BoolOperation#getRight <em>Right</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.common.BoolOperation#getRight <em>Right</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @return the meta object for the reference '<em>Right</em>'.
 	 * @see de.oaam.model.oaam.common.BoolOperation#getRight()
 	 * @see #getBoolOperation()
 	 * @generated
@@ -2146,10 +2146,10 @@ public interface CommonPackage extends EPackage {
 	EClass getBoolNot();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.common.BoolNot#getIn <em>In</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.common.BoolNot#getIn <em>In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>In</em>'.
+	 * @return the meta object for the reference '<em>In</em>'.
 	 * @see de.oaam.model.oaam.common.BoolNot#getIn()
 	 * @see #getBoolNot()
 	 * @generated
@@ -2595,7 +2595,7 @@ public interface CommonPackage extends EPackage {
 		EAttribute BOOL_OPERATION__TYPE = eINSTANCE.getBoolOperation_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Left</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2603,7 +2603,7 @@ public interface CommonPackage extends EPackage {
 		EReference BOOL_OPERATION__LEFT = eINSTANCE.getBoolOperation_Left();
 
 		/**
-		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Right</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2621,7 +2621,7 @@ public interface CommonPackage extends EPackage {
 		EClass BOOL_NOT = eINSTANCE.getBoolNot();
 
 		/**
-		 * The meta object literal for the '<em><b>In</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>In</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

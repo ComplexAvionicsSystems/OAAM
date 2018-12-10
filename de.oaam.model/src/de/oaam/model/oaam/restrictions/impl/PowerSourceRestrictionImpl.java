@@ -5,11 +5,12 @@ package de.oaam.model.oaam.restrictions.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
-
 import de.oaam.model.oaam.functions.TaskGroup;
+
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.library.PowerSource;
@@ -20,8 +21,8 @@ import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SignalGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
 import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
-
 import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -382,6 +383,42 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Signal> getSignals() {
+		if (signals == null) {
+			signals = new EObjectResolvingEList<Signal>(Signal.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS);
+		}
+		return signals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SignalGroup> getSignalGroups() {
+		if (signalGroups == null) {
+			signalGroups = new EObjectResolvingEList<SignalGroup>(SignalGroup.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS);
+		}
+		return signalGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Subfunctions> getSubfunctions() {
+		if (subfunctions == null) {
+			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS);
+		}
+		return subfunctions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Device getDevices() {
 		if (devices != null && devices.eIsProxy()) {
 			InternalEObject oldDevices = (InternalEObject)devices;
@@ -413,42 +450,6 @@ public class PowerSourceRestrictionImpl extends TaskRestrictionAImpl implements 
 		devices = newDevices;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, RestrictionsPackage.POWER_SOURCE_RESTRICTION__DEVICES, oldDevices, devices));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Signal> getSignals() {
-		if (signals == null) {
-			signals = new EObjectResolvingEList<Signal>(Signal.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNALS);
-		}
-		return signals;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SignalGroup> getSignalGroups() {
-		if (signalGroups == null) {
-			signalGroups = new EObjectResolvingEList<SignalGroup>(SignalGroup.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SIGNAL_GROUPS);
-		}
-		return signalGroups;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Subfunctions> getSubfunctions() {
-		if (subfunctions == null) {
-			subfunctions = new EObjectResolvingEList<Subfunctions>(Subfunctions.class, this, RestrictionsPackage.POWER_SOURCE_RESTRICTION__SUBFUNCTIONS);
-		}
-		return subfunctions;
 	}
 
 	/**

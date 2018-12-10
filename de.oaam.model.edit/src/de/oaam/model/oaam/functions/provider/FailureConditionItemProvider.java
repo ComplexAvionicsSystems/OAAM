@@ -10,9 +10,6 @@ import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
-
-import de.oaam.model.oaam.library.LibraryFactory;
-
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -62,6 +59,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addVariantsPropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 			addMaxOccurrenceProbabilityPropertyDescriptor(object);
 			addNoSingleFailurePropertyDescriptor(object);
 		}
@@ -82,6 +80,28 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 				 getString("_UI_VariantDependentElementA_variants_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
 				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureCondition_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureCondition_condition_feature", "_UI_FailureCondition_type"),
+				 FunctionsPackage.Literals.FAILURE_CONDITION__CONDITION,
 				 true,
 				 false,
 				 true,
@@ -147,7 +167,9 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
-			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC);
+			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_OPERATIONS);
+			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_NOTS);
+			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES);
 		}
 		return childrenFeatures;
 	}
@@ -208,7 +230,9 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__OPERATION_MODES:
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -233,28 +257,18 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
+				(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_OPERATIONS,
 				 CommonFactory.eINSTANCE.createBoolOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
+				(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_NOTS,
 				 CommonFactory.eINSTANCE.createBoolNot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FunctionsPackage.Literals.FAILURE_CONDITION__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
+				(FunctionsPackage.Literals.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES,
+				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 	/**

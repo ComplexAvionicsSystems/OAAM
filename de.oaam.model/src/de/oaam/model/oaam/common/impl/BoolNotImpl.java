@@ -7,6 +7,7 @@ import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -196,7 +197,7 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	protected String traceLink = TRACE_LINK_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIn() <em>In</em>}' containment reference.
+	 * The cached value of the '{@link #getIn() <em>In</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIn()
@@ -389,6 +390,14 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	 * @generated
 	 */
 	public BoolA getIn() {
+		if (in != null && in.eIsProxy()) {
+			InternalEObject oldIn = (InternalEObject)in;
+			in = (BoolA)eResolveProxy(oldIn);
+			if (in != oldIn) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CommonPackage.BOOL_NOT__IN, oldIn, in));
+			}
+		}
 		return in;
 	}
 
@@ -397,14 +406,8 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIn(BoolA newIn, NotificationChain msgs) {
-		BoolA oldIn = in;
-		in = newIn;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_NOT__IN, oldIn, newIn);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public BoolA basicGetIn() {
+		return in;
 	}
 
 	/**
@@ -413,17 +416,10 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 	 * @generated
 	 */
 	public void setIn(BoolA newIn) {
-		if (newIn != in) {
-			NotificationChain msgs = null;
-			if (in != null)
-				msgs = ((InternalEObject)in).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_NOT__IN, null, msgs);
-			if (newIn != null)
-				msgs = ((InternalEObject)newIn).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_NOT__IN, null, msgs);
-			msgs = basicSetIn(newIn, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_NOT__IN, newIn, newIn));
+		BoolA oldIn = in;
+		in = newIn;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_NOT__IN, oldIn, in));
 	}
 
 	/**
@@ -436,8 +432,6 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 		switch (featureID) {
 			case CommonPackage.BOOL_NOT__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case CommonPackage.BOOL_NOT__IN:
-				return basicSetIn(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -467,7 +461,8 @@ public class BoolNotImpl extends BoolAImpl implements BoolNot {
 			case CommonPackage.BOOL_NOT__TRACE_LINK:
 				return getTraceLink();
 			case CommonPackage.BOOL_NOT__IN:
-				return getIn();
+				if (resolve) return getIn();
+				return basicGetIn();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

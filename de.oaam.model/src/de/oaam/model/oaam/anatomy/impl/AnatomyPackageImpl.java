@@ -5,7 +5,9 @@ package de.oaam.model.oaam.anatomy.impl;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.Anatomy;
 import de.oaam.model.oaam.anatomy.AnatomyContainerA;
 import de.oaam.model.oaam.anatomy.AnatomyFactory;
@@ -40,6 +42,7 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -127,14 +130,14 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass anatomyEClass = null;
+	private EClass subanatomyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass subanatomyEClass = null;
+	private EClass anatomyEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -513,8 +516,8 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAnatomy() {
-		return anatomyEClass;
+	public EClass getSubanatomy() {
+		return subanatomyEClass;
 	}
 
 	/**
@@ -522,8 +525,8 @@ public class AnatomyPackageImpl extends EPackageImpl implements AnatomyPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSubanatomy() {
-		return subanatomyEClass;
+	public EClass getAnatomy() {
+		return anatomyEClass;
 	}
 
 	/**

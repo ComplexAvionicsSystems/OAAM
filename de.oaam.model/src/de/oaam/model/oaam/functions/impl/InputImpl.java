@@ -3,9 +3,11 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.ExternalOutputLink;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.Input;
+
 import de.oaam.model.oaam.hardware.Io;
 
 import de.oaam.model.oaam.library.InputDeclaration;
@@ -15,7 +17,9 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.RequiredInformationA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

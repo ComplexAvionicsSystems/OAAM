@@ -3,8 +3,10 @@
 package de.oaam.model.oaam.systems.util;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.systems.ElectricPower;
 import de.oaam.model.oaam.systems.HydraulicPower;
 import de.oaam.model.oaam.systems.InformationFlow;

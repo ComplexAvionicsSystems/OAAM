@@ -3,11 +3,12 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceType;
-
 import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

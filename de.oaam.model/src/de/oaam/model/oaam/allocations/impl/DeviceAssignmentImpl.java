@@ -8,7 +8,9 @@ import de.oaam.model.oaam.allocations.DeviceAssignment;
 import de.oaam.model.oaam.anatomy.Location;
 
 import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

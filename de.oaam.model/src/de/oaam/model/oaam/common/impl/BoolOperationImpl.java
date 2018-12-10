@@ -8,6 +8,7 @@ import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.BoolOperationTypesE;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -219,7 +220,7 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	protected BoolOperationTypesE type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+	 * The cached value of the '{@link #getLeft() <em>Left</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLeft()
@@ -229,7 +230,7 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	protected BoolA left;
 
 	/**
-	 * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+	 * The cached value of the '{@link #getRight() <em>Right</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRight()
@@ -443,6 +444,14 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * @generated
 	 */
 	public BoolA getLeft() {
+		if (left != null && left.eIsProxy()) {
+			InternalEObject oldLeft = (InternalEObject)left;
+			left = (BoolA)eResolveProxy(oldLeft);
+			if (left != oldLeft) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CommonPackage.BOOL_OPERATION__LEFT, oldLeft, left));
+			}
+		}
 		return left;
 	}
 
@@ -451,14 +460,8 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLeft(BoolA newLeft, NotificationChain msgs) {
-		BoolA oldLeft = left;
-		left = newLeft;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__LEFT, oldLeft, newLeft);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public BoolA basicGetLeft() {
+		return left;
 	}
 
 	/**
@@ -467,17 +470,10 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * @generated
 	 */
 	public void setLeft(BoolA newLeft) {
-		if (newLeft != left) {
-			NotificationChain msgs = null;
-			if (left != null)
-				msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_OPERATION__LEFT, null, msgs);
-			if (newLeft != null)
-				msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_OPERATION__LEFT, null, msgs);
-			msgs = basicSetLeft(newLeft, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__LEFT, newLeft, newLeft));
+		BoolA oldLeft = left;
+		left = newLeft;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__LEFT, oldLeft, left));
 	}
 
 	/**
@@ -486,6 +482,14 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * @generated
 	 */
 	public BoolA getRight() {
+		if (right != null && right.eIsProxy()) {
+			InternalEObject oldRight = (InternalEObject)right;
+			right = (BoolA)eResolveProxy(oldRight);
+			if (right != oldRight) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CommonPackage.BOOL_OPERATION__RIGHT, oldRight, right));
+			}
+		}
 		return right;
 	}
 
@@ -494,14 +498,8 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRight(BoolA newRight, NotificationChain msgs) {
-		BoolA oldRight = right;
-		right = newRight;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__RIGHT, oldRight, newRight);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public BoolA basicGetRight() {
+		return right;
 	}
 
 	/**
@@ -510,17 +508,10 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 	 * @generated
 	 */
 	public void setRight(BoolA newRight) {
-		if (newRight != right) {
-			NotificationChain msgs = null;
-			if (right != null)
-				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_OPERATION__RIGHT, null, msgs);
-			if (newRight != null)
-				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CommonPackage.BOOL_OPERATION__RIGHT, null, msgs);
-			msgs = basicSetRight(newRight, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__RIGHT, newRight, newRight));
+		BoolA oldRight = right;
+		right = newRight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.BOOL_OPERATION__RIGHT, oldRight, right));
 	}
 
 	/**
@@ -533,10 +524,6 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 		switch (featureID) {
 			case CommonPackage.BOOL_OPERATION__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-			case CommonPackage.BOOL_OPERATION__LEFT:
-				return basicSetLeft(null, msgs);
-			case CommonPackage.BOOL_OPERATION__RIGHT:
-				return basicSetRight(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -568,9 +555,11 @@ public class BoolOperationImpl extends BoolAImpl implements BoolOperation {
 			case CommonPackage.BOOL_OPERATION__TYPE:
 				return getType();
 			case CommonPackage.BOOL_OPERATION__LEFT:
-				return getLeft();
+				if (resolve) return getLeft();
+				return basicGetLeft();
 			case CommonPackage.BOOL_OPERATION__RIGHT:
-				return getRight();
+				if (resolve) return getRight();
+				return basicGetRight();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

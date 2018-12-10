@@ -5,6 +5,7 @@ package de.oaam.model.oaam.common.impl;
 import de.oaam.model.oaam.common.AttributeReference;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;

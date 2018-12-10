@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;
 import de.oaam.model.oaam.hardware.HardwarePackage;
@@ -12,6 +13,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

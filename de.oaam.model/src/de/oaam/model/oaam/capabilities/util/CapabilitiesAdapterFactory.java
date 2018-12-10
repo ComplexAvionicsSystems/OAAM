@@ -3,9 +3,12 @@
 package de.oaam.model.oaam.capabilities.util;
 
 import de.oaam.model.oaam.capabilities.*;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 

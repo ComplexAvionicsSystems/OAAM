@@ -283,15 +283,6 @@ public interface LibraryFactory extends EFactory {
 	ResourceTypeDissimilarity createResourceTypeDissimilarity();
 
 	/**
-	 * Returns a new object of class '<em>Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Library</em>'.
-	 * @generated
-	 */
-	Library createLibrary();
-
-	/**
 	 * Returns a new object of class '<em>Sublibrary</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,6 +326,15 @@ public interface LibraryFactory extends EFactory {
 	 * @generated
 	 */
 	TaskParameterDeclaration createTaskParameterDeclaration();
+
+	/**
+	 * Returns a new object of class '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library</em>'.
+	 * @generated
+	 */
+	Library createLibrary();
 
 	/**
 	 * Returns the package supported by this factory.

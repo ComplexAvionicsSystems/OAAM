@@ -3,18 +3,30 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.BoolNot;
+import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.IntegretyStateE;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.TaskInputState;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +37,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getOutputState <em>Output State</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getLogic <em>Logic</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getBooleanOperations <em>Boolean Operations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getBooleanNots <em>Boolean Nots</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl#getTaskInputStates <em>Task Input States</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +67,44 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	protected IntegretyStateE outputState = OUTPUT_STATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLogic() <em>Logic</em>}' containment reference.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogic()
+	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected BoolA logic;
+	protected BoolA condition;
+
+	/**
+	 * The cached value of the '{@link #getBooleanOperations() <em>Boolean Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolOperation> booleanOperations;
+
+	/**
+	 * The cached value of the '{@link #getBooleanNots() <em>Boolean Nots</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanNots()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolNot> booleanNots;
+
+	/**
+	 * The cached value of the '{@link #getTaskInputStates() <em>Task Input States</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskInputStates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskInputState> taskInputStates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,8 +151,16 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BoolA getLogic() {
-		return logic;
+	public BoolA getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject)condition;
+			condition = (BoolA)eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.FAULT_PROPAGATION__CONDITION, oldCondition, condition));
+			}
+		}
+		return condition;
 	}
 
 	/**
@@ -115,14 +168,8 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLogic(BoolA newLogic, NotificationChain msgs) {
-		BoolA oldLogic = logic;
-		logic = newLogic;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LibraryPackage.FAULT_PROPAGATION__LOGIC, oldLogic, newLogic);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public BoolA basicGetCondition() {
+		return condition;
 	}
 
 	/**
@@ -130,18 +177,47 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLogic(BoolA newLogic) {
-		if (newLogic != logic) {
-			NotificationChain msgs = null;
-			if (logic != null)
-				msgs = ((InternalEObject)logic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.FAULT_PROPAGATION__LOGIC, null, msgs);
-			if (newLogic != null)
-				msgs = ((InternalEObject)newLogic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.FAULT_PROPAGATION__LOGIC, null, msgs);
-			msgs = basicSetLogic(newLogic, msgs);
-			if (msgs != null) msgs.dispatch();
+	public void setCondition(BoolA newCondition) {
+		BoolA oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.FAULT_PROPAGATION__CONDITION, oldCondition, condition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BoolOperation> getBooleanOperations() {
+		if (booleanOperations == null) {
+			booleanOperations = new EObjectContainmentEList<BoolOperation>(BoolOperation.class, this, LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS);
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.FAULT_PROPAGATION__LOGIC, newLogic, newLogic));
+		return booleanOperations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BoolNot> getBooleanNots() {
+		if (booleanNots == null) {
+			booleanNots = new EObjectContainmentEList<BoolNot>(BoolNot.class, this, LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS);
+		}
+		return booleanNots;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TaskInputState> getTaskInputStates() {
+		if (taskInputStates == null) {
+			taskInputStates = new EObjectContainmentEList<TaskInputState>(TaskInputState.class, this, LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES);
+		}
+		return taskInputStates;
 	}
 
 	/**
@@ -152,8 +228,12 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
-				return basicSetLogic(null, msgs);
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+				return ((InternalEList<?>)getBooleanOperations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+				return ((InternalEList<?>)getBooleanNots()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
+				return ((InternalEList<?>)getTaskInputStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -168,8 +248,15 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 		switch (featureID) {
 			case LibraryPackage.FAULT_PROPAGATION__OUTPUT_STATE:
 				return getOutputState();
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
-				return getLogic();
+			case LibraryPackage.FAULT_PROPAGATION__CONDITION:
+				if (resolve) return getCondition();
+				return basicGetCondition();
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+				return getBooleanOperations();
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+				return getBooleanNots();
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
+				return getTaskInputStates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,14 +266,27 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case LibraryPackage.FAULT_PROPAGATION__OUTPUT_STATE:
 				setOutputState((IntegretyStateE)newValue);
 				return;
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
-				setLogic((BoolA)newValue);
+			case LibraryPackage.FAULT_PROPAGATION__CONDITION:
+				setCondition((BoolA)newValue);
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				getBooleanOperations().addAll((Collection<? extends BoolOperation>)newValue);
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				getBooleanNots().addAll((Collection<? extends BoolNot>)newValue);
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
+				getTaskInputStates().clear();
+				getTaskInputStates().addAll((Collection<? extends TaskInputState>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,8 +303,17 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 			case LibraryPackage.FAULT_PROPAGATION__OUTPUT_STATE:
 				setOutputState(OUTPUT_STATE_EDEFAULT);
 				return;
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
-				setLogic((BoolA)null);
+			case LibraryPackage.FAULT_PROPAGATION__CONDITION:
+				setCondition((BoolA)null);
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				return;
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
+				getTaskInputStates().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -220,8 +329,14 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 		switch (featureID) {
 			case LibraryPackage.FAULT_PROPAGATION__OUTPUT_STATE:
 				return outputState != OUTPUT_STATE_EDEFAULT;
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
-				return logic != null;
+			case LibraryPackage.FAULT_PROPAGATION__CONDITION:
+				return condition != null;
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+				return booleanOperations != null && !booleanOperations.isEmpty();
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+				return booleanNots != null && !booleanNots.isEmpty();
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
+				return taskInputStates != null && !taskInputStates.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

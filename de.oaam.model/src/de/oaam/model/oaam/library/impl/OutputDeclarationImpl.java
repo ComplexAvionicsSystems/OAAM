@@ -3,11 +3,14 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.DataTypeA;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
 import de.oaam.model.oaam.library.TaskOutputTrigger;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

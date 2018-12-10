@@ -10,7 +10,9 @@ import de.oaam.model.oaam.anatomy.Duct;
 import de.oaam.model.oaam.anatomy.Location;
 import de.oaam.model.oaam.anatomy.LocationSymmetry;
 import de.oaam.model.oaam.anatomy.Subanatomy;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

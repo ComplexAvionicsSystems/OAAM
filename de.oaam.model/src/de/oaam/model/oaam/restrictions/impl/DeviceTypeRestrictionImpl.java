@@ -5,11 +5,12 @@ package de.oaam.model.oaam.restrictions.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
-
 import de.oaam.model.oaam.functions.TaskGroup;
+
 import de.oaam.model.oaam.library.DeviceType;
 
 import de.oaam.model.oaam.restrictions.DeviceTypeRestriction;
@@ -17,8 +18,8 @@ import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 import de.oaam.model.oaam.restrictions.SignalGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.SignalRestrictionA;
 import de.oaam.model.oaam.restrictions.SubfunctionRestrictionA;
-
 import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;

@@ -31,15 +31,6 @@ public interface RestrictionsFactory extends EFactory {
 	Restrictions createRestrictions();
 
 	/**
-	 * Returns a new object of class '<em>Subrestrictions</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subrestrictions</em>'.
-	 * @generated
-	 */
-	Subrestrictions createSubrestrictions();
-
-	/**
 	 * Returns a new object of class '<em>Location Restriction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +137,15 @@ public interface RestrictionsFactory extends EFactory {
 	 * @generated
 	 */
 	TimeDelayRestriction createTimeDelayRestriction();
+
+	/**
+	 * Returns a new object of class '<em>Subrestrictions</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subrestrictions</em>'.
+	 * @generated
+	 */
+	Subrestrictions createSubrestrictions();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -6,11 +6,6 @@ package de.oaam.model.oaam.common.provider;
 import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
-
-import de.oaam.model.oaam.functions.FunctionsFactory;
-
-import de.oaam.model.oaam.library.LibraryFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -59,6 +54,7 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
+			addInPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -218,6 +214,28 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the In feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoolNot_in_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoolNot_in_feature", "_UI_BoolNot_type"),
+				 CommonPackage.Literals.BOOL_NOT__IN,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -230,7 +248,6 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
-			childrenFeatures.add(CommonPackage.Literals.BOOL_NOT__IN);
 		}
 		return childrenFeatures;
 	}
@@ -296,7 +313,6 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CommonPackage.BOOL_NOT__ATTRIBUTES:
-			case CommonPackage.BOOL_NOT__IN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -333,31 +349,6 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_NOT__IN,
-				 CommonFactory.eINSTANCE.createBoolOperation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_NOT__IN,
-				 CommonFactory.eINSTANCE.createBoolNot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_NOT__IN,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_NOT__IN,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_NOT__IN,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
 	}
 
 }

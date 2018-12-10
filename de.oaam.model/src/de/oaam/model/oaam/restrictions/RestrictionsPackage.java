@@ -497,16 +497,6 @@ public interface RestrictionsPackage extends EPackage {
 	int RESTRICTIONS_OPERATION_COUNT = RESTRICTIONS_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl <em>Subrestrictions</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl
-	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
-	 * @generated
-	 */
-	int SUBRESTRICTIONS = 21;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.DeviceRestrictionAImpl <em>Device Restriction A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2965,6 +2955,16 @@ public interface RestrictionsPackage extends EPackage {
 	int TIME_DELAY_RESTRICTION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl <em>Subrestrictions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl
+	 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
+	 * @generated
+	 */
+	int SUBRESTRICTIONS = 21;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3362,16 +3362,6 @@ public interface RestrictionsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getRestrictions();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.Subrestrictions <em>Subrestrictions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Subrestrictions</em>'.
-	 * @see de.oaam.model.oaam.restrictions.Subrestrictions
-	 * @generated
-	 */
-	EClass getSubrestrictions();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.DeviceRestrictionA <em>Device Restriction A</em>}'.
@@ -4125,6 +4115,16 @@ public interface RestrictionsPackage extends EPackage {
 	EReference getTimeDelayRestriction_EndTask();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.restrictions.Subrestrictions <em>Subrestrictions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Subrestrictions</em>'.
+	 * @see de.oaam.model.oaam.restrictions.Subrestrictions
+	 * @generated
+	 */
+	EClass getSubrestrictions();
+
+	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.restrictions.SymmetryTypesE <em>Symmetry Types E</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4280,16 +4280,6 @@ public interface RestrictionsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass RESTRICTIONS = eINSTANCE.getRestrictions();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl <em>Subrestrictions</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl
-		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
-		 * @generated
-		 */
-		EClass SUBRESTRICTIONS = eINSTANCE.getSubrestrictions();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.DeviceRestrictionAImpl <em>Device Restriction A</em>}' class.
@@ -4888,6 +4878,16 @@ public interface RestrictionsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TIME_DELAY_RESTRICTION__END_TASK = eINSTANCE.getTimeDelayRestriction_EndTask();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl <em>Subrestrictions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.restrictions.impl.SubrestrictionsImpl
+		 * @see de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl#getSubrestrictions()
+		 * @generated
+		 */
+		EClass SUBRESTRICTIONS = eINSTANCE.getSubrestrictions();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.restrictions.SymmetryTypesE <em>Symmetry Types E</em>}' enum.

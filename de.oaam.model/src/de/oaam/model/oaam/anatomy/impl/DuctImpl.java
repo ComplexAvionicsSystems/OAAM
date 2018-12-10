@@ -9,6 +9,7 @@ import de.oaam.model.oaam.anatomy.DuctOpening;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.DuctType;
 
 import de.oaam.model.oaam.library.impl.ResourceProviderInstanceAImpl;
@@ -18,6 +19,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 import java.util.Date;
 

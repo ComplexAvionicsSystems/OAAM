@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoGroup;
 import de.oaam.model.oaam.library.LibraryPackage;

@@ -4,8 +4,8 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
-
 import de.oaam.model.oaam.library.ResourceTypeModifierLevel;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;

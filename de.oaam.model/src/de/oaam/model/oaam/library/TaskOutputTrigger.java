@@ -3,7 +3,11 @@
 package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.BoolNot;
+import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,9 +22,12 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getLogic <em>Logic</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getFixedRate <em>Fixed Rate</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#isIsFixedRate <em>Is Fixed Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getCondition <em>Condition</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanOperations <em>Boolean Operations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanNots <em>Boolean Nots</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskOutputTrigger#getTaskInputTriggers <em>Task Input Triggers</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger()
@@ -28,31 +35,6 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  * @generated
  */
 public interface TaskOutputTrigger extends OaamBaseElementA {
-	/**
-	 * Returns the value of the '<em><b>Logic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * A Boolean logic of inputs that cause the output to be calculated.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Logic</em>' containment reference.
-	 * @see #setLogic(BoolA)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger_Logic()
-	 * @model containment="true"
-	 * @generated
-	 */
-	BoolA getLogic();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getLogic <em>Logic</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Logic</em>' containment reference.
-	 * @see #getLogic()
-	 * @generated
-	 */
-	void setLogic(BoolA value);
-
 	/**
 	 * Returns the value of the '<em><b>Fixed Rate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -103,5 +85,75 @@ public interface TaskOutputTrigger extends OaamBaseElementA {
 	 * @generated
 	 */
 	void setIsFixedRate(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Condition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The Boolean expression which defines the relation to the input. This can be an TaskInputTrigger or a Boolean operation, which relates same TaskInputTriggers. If the rate is set to fixed that this contition is ommitted and not necessary to be specified.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Condition</em>' reference.
+	 * @see #setCondition(BoolA)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger_Condition()
+	 * @model
+	 * @generated
+	 */
+	BoolA getCondition();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getCondition <em>Condition</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Condition</em>' reference.
+	 * @see #getCondition()
+	 * @generated
+	 */
+	void setCondition(BoolA value);
+
+	/**
+	 * Returns the value of the '<em><b>Boolean Operations</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.BoolOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The Boolean operations, which define the relation to the input.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Boolean Operations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger_BooleanOperations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BoolOperation> getBooleanOperations();
+
+	/**
+	 * Returns the value of the '<em><b>Boolean Nots</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.BoolNot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The Boolean NOT operations which define the relation to the input.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Boolean Nots</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger_BooleanNots()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BoolNot> getBooleanNots();
+
+	/**
+	 * Returns the value of the '<em><b>Task Input Triggers</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.TaskInputTrigger}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The list of all relevant input triggers for this fault propagation
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Task Input Triggers</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskOutputTrigger_TaskInputTriggers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TaskInputTrigger> getTaskInputTriggers();
 
 } // TaskOutputTrigger

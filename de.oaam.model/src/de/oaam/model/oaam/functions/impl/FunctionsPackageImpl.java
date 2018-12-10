@@ -5,7 +5,9 @@ package de.oaam.model.oaam.functions.impl;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -46,6 +48,7 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -363,7 +366,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionsContainerA_FailureEvents() {
+	public EReference getFunctionsContainerA_FailureConditions() {
 		return (EReference)functionsContainerAEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -579,7 +582,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFailureCondition_Logic() {
+	public EReference getFailureCondition_Condition() {
 		return (EReference)failureConditionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -599,6 +602,33 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 */
 	public EAttribute getFailureCondition_NoSingleFailure() {
 		return (EAttribute)failureConditionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFailureCondition_BooleanOperations() {
+		return (EReference)failureConditionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFailureCondition_BooleanNots() {
+		return (EReference)failureConditionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFailureCondition_OutputIntegrityStates() {
+		return (EReference)failureConditionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -927,7 +957,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__SIGNALS);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS);
-		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__FAILURE_EVENTS);
+		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS);
 		createEReference(functionsContainerAEClass, FUNCTIONS_CONTAINER_A__SUBFUNCTIONS);
 
 		taskEClass = createEClass(TASK);
@@ -957,9 +987,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEReference(taskRedundancyEClass, TASK_REDUNDANCY__TASKS);
 
 		failureConditionEClass = createEClass(FAILURE_CONDITION);
-		createEReference(failureConditionEClass, FAILURE_CONDITION__LOGIC);
+		createEReference(failureConditionEClass, FAILURE_CONDITION__CONDITION);
 		createEAttribute(failureConditionEClass, FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY);
 		createEAttribute(failureConditionEClass, FAILURE_CONDITION__NO_SINGLE_FAILURE);
+		createEReference(failureConditionEClass, FAILURE_CONDITION__BOOLEAN_OPERATIONS);
+		createEReference(failureConditionEClass, FAILURE_CONDITION__BOOLEAN_NOTS);
+		createEReference(failureConditionEClass, FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES);
 
 		outputIntegrityStateEClass = createEClass(OUTPUT_INTEGRITY_STATE);
 		createEAttribute(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__STATE);
@@ -1092,7 +1125,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getFunctionsContainerA_TaskRedundancies(), this.getTaskRedundancy(), null, "taskRedundancies", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_Signals(), this.getSignal(), null, "signals", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_SignalGroups(), this.getSignalGroup(), null, "signalGroups", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionsContainerA_FailureEvents(), this.getFailureCondition(), null, "failureEvents", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionsContainerA_FailureConditions(), this.getFailureCondition(), null, "failureConditions", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionsContainerA_Subfunctions(), this.getSubfunctions(), null, "subfunctions", null, 0, -1, FunctionsContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskEClass, Task.class, "Task", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1122,9 +1155,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getTaskRedundancy_Tasks(), this.getTask(), null, "tasks", null, 2, -1, TaskRedundancy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(failureConditionEClass, FailureCondition.class, "FailureCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFailureCondition_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailureCondition_Condition(), theCommonPackage.getBoolA(), null, "condition", null, 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFailureCondition_MaxOccurrenceProbability(), ecorePackage.getEDouble(), "maxOccurrenceProbability", "0.0", 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFailureCondition_NoSingleFailure(), ecorePackage.getEBoolean(), "noSingleFailure", "false", 1, 1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailureCondition_BooleanOperations(), theCommonPackage.getBoolOperation(), null, "booleanOperations", null, 0, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailureCondition_BooleanNots(), theCommonPackage.getBoolNot(), null, "booleanNots", null, 0, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailureCondition_OutputIntegrityStates(), this.getOutputIntegrityState(), null, "outputIntegrityStates", null, 1, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputIntegrityStateEClass, OutputIntegrityState.class, "OutputIntegrityState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutputIntegrityState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

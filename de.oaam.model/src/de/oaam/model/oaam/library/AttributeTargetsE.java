@@ -49,7 +49,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TASK_TYPE(2, "TASK_TYPE", "TASK_TYPE"), /**
+	TASK_TYPE(2, "TASK_TYPE", "TASK_TYPE"),
+
+	/**
 	 * The '<em><b>TASK</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -57,7 +59,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TASK(3, "TASK", "TASK"), /**
+	TASK(3, "TASK", "TASK"),
+
+	/**
 	 * The '<em><b>WIRE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -220,10 +224,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>DEVICE TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DEVICE TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for DeviceType objects.
@@ -238,10 +238,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>DEVICE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DEVICE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Device objects.
@@ -284,10 +280,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>WIRE TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>WIRE TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for WireType objects.
@@ -302,10 +294,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>RESOURCE TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RESOURCE TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for ResourceType objects.
@@ -320,10 +308,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>RESOURCE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RESOURCE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Resource objects.
@@ -338,10 +322,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>SIGNAL TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>SIGNAL TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for SignalType objects.
@@ -356,10 +336,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>SIGNAL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>SIGNAL</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Signal objects.
@@ -374,10 +350,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>CONNECTION TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>CONNECTION TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for ConnectionType objects.
@@ -392,10 +364,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>CONNECTION</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>CONNECTION</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Connection objects.
@@ -410,10 +378,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>LOCATION TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LOCATION TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for LocationType objects.
@@ -428,10 +392,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>LOCATION</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LOCATION</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Location objects.
@@ -446,10 +406,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>DUCT TYPE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DUCT TYPE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for DuctType objects.
@@ -464,10 +420,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>DUCT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>DUCT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Duct objects.
@@ -482,10 +434,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>RESOURCE BUNDLE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RESOURCE BUNDLE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for ResourceBundle objects.
@@ -500,10 +448,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>RESOURCE ALTERNATIVE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RESOURCE ALTERNATIVE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * ResourceAlternative
@@ -518,10 +462,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>RESOURCE GROUP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>RESOURCE GROUP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for ResourceGroup objects.
@@ -536,10 +476,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>AREA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>AREA</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Area objects.
@@ -554,10 +490,6 @@ public enum AttributeTargetsE implements Enumerator {
 	/**
 	 * The '<em><b>VARIANT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>VARIANT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Addition attribute for Variant objects.

@@ -16,6 +16,7 @@ import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

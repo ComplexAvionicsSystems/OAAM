@@ -1647,6 +1647,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 */
 	int SUBCAPABILITIES_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
 
+
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.CapabilityA <em>Capability A</em>}'.
 	 * <!-- begin-user-doc -->

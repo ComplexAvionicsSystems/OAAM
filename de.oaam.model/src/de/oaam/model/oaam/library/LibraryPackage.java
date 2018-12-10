@@ -3408,13 +3408,40 @@ public interface LibraryPackage extends EPackage {
 	int FAULT_PROPAGATION__OUTPUT_STATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int FAULT_PROPAGATION__CONDITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Operations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAULT_PROPAGATION__BOOLEAN_OPERATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Nots</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAULT_PROPAGATION__BOOLEAN_NOTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Task Input States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAULT_PROPAGATION__TASK_INPUT_STATES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Fault Propagation</em>' class.
@@ -3423,7 +3450,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FAULT_PROPAGATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int FAULT_PROPAGATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Fault Propagation</em>' class.
@@ -4479,16 +4506,6 @@ public interface LibraryPackage extends EPackage {
 	int RESOURCE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.LibraryImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
-	 * @generated
-	 */
-	int LIBRARY = 38;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4833,22 +4850,13 @@ public interface LibraryPackage extends EPackage {
 	int TASK_OUTPUT_TRIGGER__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Logic</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_OUTPUT_TRIGGER__LOGIC = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Fixed Rate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OUTPUT_TRIGGER__FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int TASK_OUTPUT_TRIGGER__FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Fixed Rate</b></em>' attribute.
@@ -4857,7 +4865,43 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int TASK_OUTPUT_TRIGGER__IS_FIXED_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OUTPUT_TRIGGER__CONDITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Operations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Boolean Nots</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Task Input Triggers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Task Output Trigger</em>' class.
@@ -4866,7 +4910,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int TASK_OUTPUT_TRIGGER_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Task Output Trigger</em>' class.
@@ -5203,6 +5247,16 @@ public interface LibraryPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_PARAMETER_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.LibraryImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
+	 * @generated
+	 */
+	int LIBRARY = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6861,15 +6915,48 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getFaultPropagation_OutputState();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.FaultPropagation#getLogic <em>Logic</em>}'.
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.FaultPropagation#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Logic</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getLogic()
+	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @see de.oaam.model.oaam.library.FaultPropagation#getCondition()
 	 * @see #getFaultPropagation()
 	 * @generated
 	 */
-	EReference getFaultPropagation_Logic();
+	EReference getFaultPropagation_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getBooleanOperations <em>Boolean Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Operations</em>'.
+	 * @see de.oaam.model.oaam.library.FaultPropagation#getBooleanOperations()
+	 * @see #getFaultPropagation()
+	 * @generated
+	 */
+	EReference getFaultPropagation_BooleanOperations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getBooleanNots <em>Boolean Nots</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Nots</em>'.
+	 * @see de.oaam.model.oaam.library.FaultPropagation#getBooleanNots()
+	 * @see #getFaultPropagation()
+	 * @generated
+	 */
+	EReference getFaultPropagation_BooleanNots();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getTaskInputStates <em>Task Input States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Task Input States</em>'.
+	 * @see de.oaam.model.oaam.library.FaultPropagation#getTaskInputStates()
+	 * @see #getFaultPropagation()
+	 * @generated
+	 */
+	EReference getFaultPropagation_TaskInputStates();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskInputState <em>Task Input State</em>}'.
@@ -7116,16 +7203,6 @@ public interface LibraryPackage extends EPackage {
 	EReference getResourceTypeDissimilarity_ResourceTypes();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Library <em>Library</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Library</em>'.
-	 * @see de.oaam.model.oaam.library.Library
-	 * @generated
-	 */
-	EClass getLibrary();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Sublibrary <em>Sublibrary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7144,17 +7221,6 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTaskOutputTrigger();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getLogic <em>Logic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Logic</em>'.
-	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getLogic()
-	 * @see #getTaskOutputTrigger()
-	 * @generated
-	 */
-	EReference getTaskOutputTrigger_Logic();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getFixedRate <em>Fixed Rate</em>}'.
@@ -7177,6 +7243,50 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTaskOutputTrigger_IsFixedRate();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getCondition()
+	 * @see #getTaskOutputTrigger()
+	 * @generated
+	 */
+	EReference getTaskOutputTrigger_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanOperations <em>Boolean Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Operations</em>'.
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanOperations()
+	 * @see #getTaskOutputTrigger()
+	 * @generated
+	 */
+	EReference getTaskOutputTrigger_BooleanOperations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanNots <em>Boolean Nots</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Boolean Nots</em>'.
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getBooleanNots()
+	 * @see #getTaskOutputTrigger()
+	 * @generated
+	 */
+	EReference getTaskOutputTrigger_BooleanNots();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskOutputTrigger#getTaskInputTriggers <em>Task Input Triggers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Task Input Triggers</em>'.
+	 * @see de.oaam.model.oaam.library.TaskOutputTrigger#getTaskInputTriggers()
+	 * @see #getTaskOutputTrigger()
+	 * @generated
+	 */
+	EReference getTaskOutputTrigger_TaskInputTriggers();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskInputTrigger <em>Task Input Trigger</em>}'.
@@ -7240,6 +7350,16 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTaskParameterDeclaration_Type();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Library <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Library</em>'.
+	 * @see de.oaam.model.oaam.library.Library
+	 * @generated
+	 */
+	EClass getLibrary();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}'.
@@ -8359,12 +8479,36 @@ public interface LibraryPackage extends EPackage {
 		EAttribute FAULT_PROPAGATION__OUTPUT_STATE = eINSTANCE.getFaultPropagation_OutputState();
 
 		/**
-		 * The meta object literal for the '<em><b>Logic</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FAULT_PROPAGATION__LOGIC = eINSTANCE.getFaultPropagation_Logic();
+		EReference FAULT_PROPAGATION__CONDITION = eINSTANCE.getFaultPropagation_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Operations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAULT_PROPAGATION__BOOLEAN_OPERATIONS = eINSTANCE.getFaultPropagation_BooleanOperations();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Nots</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAULT_PROPAGATION__BOOLEAN_NOTS = eINSTANCE.getFaultPropagation_BooleanNots();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Input States</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAULT_PROPAGATION__TASK_INPUT_STATES = eINSTANCE.getFaultPropagation_TaskInputStates();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl <em>Task Input State</em>}' class.
@@ -8569,16 +8713,6 @@ public interface LibraryPackage extends EPackage {
 		EReference RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES = eINSTANCE.getResourceTypeDissimilarity_ResourceTypes();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.LibraryImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
-		 * @generated
-		 */
-		EClass LIBRARY = eINSTANCE.getLibrary();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8599,14 +8733,6 @@ public interface LibraryPackage extends EPackage {
 		EClass TASK_OUTPUT_TRIGGER = eINSTANCE.getTaskOutputTrigger();
 
 		/**
-		 * The meta object literal for the '<em><b>Logic</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK_OUTPUT_TRIGGER__LOGIC = eINSTANCE.getTaskOutputTrigger_Logic();
-
-		/**
 		 * The meta object literal for the '<em><b>Fixed Rate</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8621,6 +8747,38 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK_OUTPUT_TRIGGER__IS_FIXED_RATE = eINSTANCE.getTaskOutputTrigger_IsFixedRate();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_OUTPUT_TRIGGER__CONDITION = eINSTANCE.getTaskOutputTrigger_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Operations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS = eINSTANCE.getTaskOutputTrigger_BooleanOperations();
+
+		/**
+		 * The meta object literal for the '<em><b>Boolean Nots</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS = eINSTANCE.getTaskOutputTrigger_BooleanNots();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Input Triggers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS = eINSTANCE.getTaskOutputTrigger_TaskInputTriggers();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskInputTriggerImpl <em>Task Input Trigger</em>}' class.
@@ -8675,6 +8833,16 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TASK_PARAMETER_DECLARATION__TYPE = eINSTANCE.getTaskParameterDeclaration_Type();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.LibraryImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
+		 * @generated
+		 */
+		EClass LIBRARY = eINSTANCE.getLibrary();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

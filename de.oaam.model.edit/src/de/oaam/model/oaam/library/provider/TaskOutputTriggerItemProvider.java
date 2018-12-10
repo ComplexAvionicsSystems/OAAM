@@ -7,8 +7,6 @@ import de.oaam.model.oaam.common.CommonFactory;
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 
-import de.oaam.model.oaam.functions.FunctionsFactory;
-
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.TaskOutputTrigger;
@@ -60,6 +58,7 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 
 			addFixedRatePropertyDescriptor(object);
 			addIsFixedRatePropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,6 +108,28 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 	}
 
 	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_TaskOutputTrigger_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskOutputTrigger_condition_feature", "_UI_TaskOutputTrigger_type"),
+				 LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__CONDITION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -120,7 +141,9 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS);
 		}
 		return childrenFeatures;
 	}
@@ -180,7 +203,9 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.TASK_OUTPUT_TRIGGER__IS_FIXED_RATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case LibraryPackage.TASK_OUTPUT_TRIGGER__LOGIC:
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS:
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS:
+			case LibraryPackage.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -200,28 +225,18 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS,
 				 CommonFactory.eINSTANCE.createBoolOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS,
 				 CommonFactory.eINSTANCE.createBoolNot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__LOGIC,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
+				(LibraryPackage.Literals.TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS,
+				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
 	}
 
 	/**

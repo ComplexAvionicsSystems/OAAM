@@ -7,7 +7,9 @@ import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.TaskAssignment;
 
 import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.Task;
 
 import de.oaam.model.oaam.hardware.Device;

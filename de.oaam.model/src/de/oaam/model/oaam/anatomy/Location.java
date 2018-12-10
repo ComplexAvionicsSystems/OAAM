@@ -3,11 +3,13 @@
 package de.oaam.model.oaam.anatomy;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.LocationType;
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

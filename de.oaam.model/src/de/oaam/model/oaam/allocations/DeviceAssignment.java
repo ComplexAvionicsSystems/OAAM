@@ -5,7 +5,9 @@ package de.oaam.model.oaam.allocations;
 import de.oaam.model.oaam.anatomy.Location;
 
 import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

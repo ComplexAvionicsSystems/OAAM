@@ -5,7 +5,9 @@ package de.oaam.model.oaam.anatomy.impl;
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 import de.oaam.model.oaam.anatomy.DuctOpening;
 import de.oaam.model.oaam.anatomy.Position3D;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -13,6 +15,7 @@ import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

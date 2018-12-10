@@ -5,13 +5,14 @@ package de.oaam.model.oaam.library.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.IoDirectionE;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceAlternatives;
 import de.oaam.model.oaam.library.ResourceType;
-
 import de.oaam.model.oaam.library.ResourceTypeModifierReference;
+
 import java.util.Collection;
 import java.util.Date;
 

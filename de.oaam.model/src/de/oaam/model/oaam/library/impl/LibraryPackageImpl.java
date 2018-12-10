@@ -5,7 +5,9 @@ package de.oaam.model.oaam.library.impl;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -72,6 +74,7 @@ import de.oaam.model.oaam.library.TaskStateDeclaration;
 import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -335,13 +338,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass libraryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass sublibraryEClass = null;
 
 	/**
@@ -371,6 +367,13 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	private EClass taskParameterDeclarationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass libraryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1634,8 +1637,35 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFaultPropagation_Logic() {
+	public EReference getFaultPropagation_Condition() {
 		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFaultPropagation_BooleanOperations() {
+		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFaultPropagation_BooleanNots() {
+		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFaultPropagation_TaskInputStates() {
+		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1850,15 +1880,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLibrary() {
-		return libraryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSublibrary() {
 		return sublibraryEClass;
 	}
@@ -1877,17 +1898,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTaskOutputTrigger_Logic() {
-		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTaskOutputTrigger_FixedRate() {
-		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1896,7 +1908,43 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	public EAttribute getTaskOutputTrigger_IsFixedRate() {
-		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)taskOutputTriggerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskOutputTrigger_Condition() {
+		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskOutputTrigger_BooleanOperations() {
+		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskOutputTrigger_BooleanNots() {
+		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskOutputTrigger_TaskInputTriggers() {
+		return (EReference)taskOutputTriggerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1951,6 +1999,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 */
 	public EReference getTaskParameterDeclaration_Type() {
 		return (EReference)taskParameterDeclarationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLibrary() {
+		return libraryEClass;
 	}
 
 	/**
@@ -2158,7 +2215,10 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		faultPropagationEClass = createEClass(FAULT_PROPAGATION);
 		createEAttribute(faultPropagationEClass, FAULT_PROPAGATION__OUTPUT_STATE);
-		createEReference(faultPropagationEClass, FAULT_PROPAGATION__LOGIC);
+		createEReference(faultPropagationEClass, FAULT_PROPAGATION__CONDITION);
+		createEReference(faultPropagationEClass, FAULT_PROPAGATION__BOOLEAN_OPERATIONS);
+		createEReference(faultPropagationEClass, FAULT_PROPAGATION__BOOLEAN_NOTS);
+		createEReference(faultPropagationEClass, FAULT_PROPAGATION__TASK_INPUT_STATES);
 
 		taskInputStateEClass = createEClass(TASK_INPUT_STATE);
 		createEAttribute(taskInputStateEClass, TASK_INPUT_STATE__STATE);
@@ -2195,9 +2255,12 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		sublibraryEClass = createEClass(SUBLIBRARY);
 
 		taskOutputTriggerEClass = createEClass(TASK_OUTPUT_TRIGGER);
-		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__LOGIC);
 		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__FIXED_RATE);
 		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__IS_FIXED_RATE);
+		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__CONDITION);
+		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__BOOLEAN_OPERATIONS);
+		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__BOOLEAN_NOTS);
+		createEReference(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__TASK_INPUT_TRIGGERS);
 
 		taskInputTriggerEClass = createEClass(TASK_INPUT_TRIGGER);
 		createEReference(taskInputTriggerEClass, TASK_INPUT_TRIGGER__INPUT);
@@ -2448,7 +2511,10 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		initEClass(faultPropagationEClass, FaultPropagation.class, "FaultPropagation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFaultPropagation_OutputState(), theCommonPackage.getIntegretyStateE(), "outputState", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFaultPropagation_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFaultPropagation_Condition(), theCommonPackage.getBoolA(), null, "condition", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFaultPropagation_BooleanOperations(), theCommonPackage.getBoolOperation(), null, "booleanOperations", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFaultPropagation_BooleanNots(), theCommonPackage.getBoolNot(), null, "booleanNots", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFaultPropagation_TaskInputStates(), this.getTaskInputState(), null, "taskInputStates", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskInputStateEClass, TaskInputState.class, "TaskInputState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTaskInputState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2485,9 +2551,12 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(sublibraryEClass, Sublibrary.class, "Sublibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(taskOutputTriggerEClass, TaskOutputTrigger.class, "TaskOutputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTaskOutputTrigger_Logic(), theCommonPackage.getBoolA(), null, "logic", null, 0, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskOutputTrigger_FixedRate(), ecorePackage.getEFloat(), "fixedRate", null, 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskOutputTrigger_IsFixedRate(), ecorePackage.getEBoolean(), "isFixedRate", "false", 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskOutputTrigger_Condition(), theCommonPackage.getBoolA(), null, "condition", null, 0, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskOutputTrigger_BooleanOperations(), theCommonPackage.getBoolOperation(), null, "booleanOperations", null, 0, -1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskOutputTrigger_BooleanNots(), theCommonPackage.getBoolNot(), null, "booleanNots", null, 0, -1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskOutputTrigger_TaskInputTriggers(), this.getTaskInputTrigger(), null, "taskInputTriggers", null, 0, -1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskInputTriggerEClass, TaskInputTrigger.class, "TaskInputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskInputTrigger_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, TaskInputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

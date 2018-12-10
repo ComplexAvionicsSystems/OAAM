@@ -5,7 +5,9 @@ package de.oaam.model.oaam.common.impl;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+
 import de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl;
+
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -32,6 +34,7 @@ import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.IntegretyStateE;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
+
 import de.oaam.model.oaam.functions.FunctionsPackage;
 
 import de.oaam.model.oaam.functions.impl.FunctionsPackageImpl;
@@ -45,6 +48,7 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
@@ -898,11 +902,11 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		initEClass(boolOperationEClass, BoolOperation.class, "BoolOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoolOperation_Type(), this.getBoolOperationTypesE(), "type", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBoolOperation_Left(), this.getBoolA(), null, "left", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBoolOperation_Right(), this.getBoolA(), null, "right", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoolOperation_Left(), this.getBoolA(), null, "left", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoolOperation_Right(), this.getBoolA(), null, "right", null, 1, 1, BoolOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(boolNotEClass, BoolNot.class, "BoolNot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBoolNot_In(), this.getBoolA(), null, "in", null, 1, 1, BoolNot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoolNot_In(), this.getBoolA(), null, "in", null, 1, 1, BoolNot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataTypeAEClass, DataTypeA.class, "DataTypeA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

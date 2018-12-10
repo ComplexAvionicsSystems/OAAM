@@ -6,11 +6,6 @@ package de.oaam.model.oaam.common.provider;
 import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
-
-import de.oaam.model.oaam.functions.FunctionsFactory;
-
-import de.oaam.model.oaam.library.LibraryFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -60,6 +55,8 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addLeftPropertyDescriptor(object);
+			addRightPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -241,6 +238,50 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Left feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLeftPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoolOperation_left_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoolOperation_left_feature", "_UI_BoolOperation_type"),
+				 CommonPackage.Literals.BOOL_OPERATION__LEFT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Right feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRightPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_BoolOperation_right_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_BoolOperation_right_feature", "_UI_BoolOperation_type"),
+				 CommonPackage.Literals.BOOL_OPERATION__RIGHT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -253,8 +294,6 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
-			childrenFeatures.add(CommonPackage.Literals.BOOL_OPERATION__LEFT);
-			childrenFeatures.add(CommonPackage.Literals.BOOL_OPERATION__RIGHT);
 		}
 		return childrenFeatures;
 	}
@@ -321,8 +360,6 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CommonPackage.BOOL_OPERATION__ATTRIBUTES:
-			case CommonPackage.BOOL_OPERATION__LEFT:
-			case CommonPackage.BOOL_OPERATION__RIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -359,79 +396,6 @@ public class BoolOperationItemProvider extends BoolAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 CommonFactory.eINSTANCE.createBoolOperation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 CommonFactory.eINSTANCE.createBoolNot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__LEFT,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 CommonFactory.eINSTANCE.createBoolOperation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 CommonFactory.eINSTANCE.createBoolNot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.BOOL_OPERATION__RIGHT,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == CommonPackage.Literals.BOOL_OPERATION__LEFT ||
-			childFeature == CommonPackage.Literals.BOOL_OPERATION__RIGHT;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

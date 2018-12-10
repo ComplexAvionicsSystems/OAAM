@@ -7,8 +7,6 @@ import de.oaam.model.oaam.common.CommonFactory;
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 
-import de.oaam.model.oaam.functions.FunctionsFactory;
-
 import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -59,6 +57,7 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOutputStatePropertyDescriptor(object);
+			addConditionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +85,28 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Condition feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConditionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FaultPropagation_condition_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FaultPropagation_condition_feature", "_UI_FaultPropagation_type"),
+				 LibraryPackage.Literals.FAULT_PROPAGATION__CONDITION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -97,7 +118,9 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC);
+			childrenFeatures.add(LibraryPackage.Literals.FAULT_PROPAGATION__BOOLEAN_OPERATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.FAULT_PROPAGATION__BOOLEAN_NOTS);
+			childrenFeatures.add(LibraryPackage.Literals.FAULT_PROPAGATION__TASK_INPUT_STATES);
 		}
 		return childrenFeatures;
 	}
@@ -156,7 +179,9 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 			case LibraryPackage.FAULT_PROPAGATION__OUTPUT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case LibraryPackage.FAULT_PROPAGATION__LOGIC:
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_OPERATIONS:
+			case LibraryPackage.FAULT_PROPAGATION__BOOLEAN_NOTS:
+			case LibraryPackage.FAULT_PROPAGATION__TASK_INPUT_STATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -176,28 +201,18 @@ public class FaultPropagationItemProvider extends OaamBaseElementAItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputState()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 LibraryFactory.eINSTANCE.createTaskInputTrigger()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
+				(LibraryPackage.Literals.FAULT_PROPAGATION__BOOLEAN_OPERATIONS,
 				 CommonFactory.eINSTANCE.createBoolOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
+				(LibraryPackage.Literals.FAULT_PROPAGATION__BOOLEAN_NOTS,
 				 CommonFactory.eINSTANCE.createBoolNot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(LibraryPackage.Literals.FAULT_PROPAGATION__LOGIC,
-				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
+				(LibraryPackage.Literals.FAULT_PROPAGATION__TASK_INPUT_STATES,
+				 LibraryFactory.eINSTANCE.createTaskInputState()));
 	}
 
 	/**

@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.scenario.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.scenario.OperationMode;
 import de.oaam.model.oaam.scenario.ScenarioContainerA;
 import de.oaam.model.oaam.scenario.ScenarioPackage;

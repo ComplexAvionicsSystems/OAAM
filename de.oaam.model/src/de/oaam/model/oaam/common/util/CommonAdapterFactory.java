@@ -16,6 +16,7 @@ import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 

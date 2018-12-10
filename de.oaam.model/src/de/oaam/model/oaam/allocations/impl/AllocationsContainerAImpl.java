@@ -11,7 +11,9 @@ import de.oaam.model.oaam.allocations.Suballocations;
 import de.oaam.model.oaam.allocations.SubconnectionAssignment;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 import de.oaam.model.oaam.allocations.TaskAssignment;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

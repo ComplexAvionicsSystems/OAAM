@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.RequiredInformationA;
 import de.oaam.model.oaam.systems.SystemsPackage;

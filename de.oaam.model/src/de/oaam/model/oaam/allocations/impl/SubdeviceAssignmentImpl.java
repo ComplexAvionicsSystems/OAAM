@@ -6,7 +6,9 @@ import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 
 import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.hardware.Device;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

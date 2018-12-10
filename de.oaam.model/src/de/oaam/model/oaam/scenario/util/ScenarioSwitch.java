@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.scenario.util;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.scenario.*;
 
 import org.eclipse.emf.ecore.EObject;

@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.restrictions;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.Connection;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

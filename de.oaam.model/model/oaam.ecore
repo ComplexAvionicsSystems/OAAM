@@ -227,13 +227,13 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1"
-          eType="#//common/BoolA" containment="true">
+          eType="#//common/BoolA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The left hand operand of the Boolean operation. This can also be a Boolean operation."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1"
-          eType="#//common/BoolA" containment="true">
+          eType="#//common/BoolA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The right hand operand of the Boolean operation. This can also be a Boolean operation."/>
         </eAnnotations>
@@ -243,8 +243,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A Boolean not operation. The output is the negated input"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="in" lowerBound="1" eType="#//common/BoolA"
-          containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="in" lowerBound="1" eType="#//common/BoolA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the variable to be negated"/>
         </eAnnotations>
@@ -1274,10 +1273,28 @@
           <details key="documentation" value="Defines the desired output state for that the logic is valid."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="logic" lowerBound="1"
-          eType="#//common/BoolA" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+          eType="#//common/BoolA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The Boolean expression which define the relation to the input."/>
+          <details key="documentation" value="The Boolean expression which define the relation to the input. This can be an TaskInputState or a Boolean operation, which relates same TaskInputStates"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanOperations" upperBound="-1"
+          eType="#//common/BoolOperation" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean operations, which define the relation to the input."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanNots" upperBound="-1"
+          eType="#//common/BoolNot" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean NOT operations which define the relation to the input."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskInputStates" upperBound="-1"
+          eType="#//library/TaskInputState" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of all relevant input states for this fault propagation"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1418,12 +1435,6 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The trigger condition for the output. If the trigger condition is true, the output is calculated. A trigger is either a Boolean combination of available inputs or a fixed rate."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="logic" eType="#//common/BoolA"
-          containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A Boolean logic of inputs that cause the output to be calculated."/>
-        </eAnnotations>
-      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedRate" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1435,6 +1446,29 @@
           defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="If true the output is calculated at a fixed rate and the fixedRate attribute must be set. If false, the output is calculated if a certain combinations of inputs is available. In the latter case logics must be set."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//common/BoolA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean expression which defines the relation to the input. This can be an TaskInputTrigger or a Boolean operation, which relates same TaskInputTriggers. If the rate is set to fixed that this contition is ommitted and not necessary to be specified."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanOperations" upperBound="-1"
+          eType="#//common/BoolOperation" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean operations, which define the relation to the input."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanNots" upperBound="-1"
+          eType="#//common/BoolNot" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean NOT operations which define the relation to the input."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskInputTriggers" upperBound="-1"
+          eType="#//library/TaskInputTrigger" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of all relevant input triggers for this fault propagation"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1927,7 +1961,7 @@
           <details key="documentation" value="All functions groups in this container"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="failureEvents" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureConditions" upperBound="-1"
           eType="#//functions/FailureCondition" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All failure events of this system description."/>
@@ -2062,8 +2096,8 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A failure condition is a top event that can happen to the system and has effect on the vehicle. It relates the output states of tasks to the occurrence of this failure. The platform shall guarantee that the maximum occurrence rate is not exceeded."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="logic" lowerBound="1"
-          eType="#//common/BoolA" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+          eType="#//common/BoolA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A Boolean expression that relates the inputs of the system. If the expression is true the failure condition is active."/>
         </eAnnotations>
@@ -2080,6 +2114,25 @@
           defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="States if this failure condition is allowed to be caused by a single failure event or not."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanOperations" upperBound="-1"
+          eType="#//common/BoolOperation" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean operations, which define the relation to the failure condition"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="booleanNots" upperBound="-1"
+          eType="#//common/BoolNot" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The Boolean NOT operations which define the relation to the failure condition"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="outputIntegrityStates"
+          lowerBound="1" upperBound="-1" eType="#//functions/OutputIntegrityState"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of all relevant output states for this failure condition."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>

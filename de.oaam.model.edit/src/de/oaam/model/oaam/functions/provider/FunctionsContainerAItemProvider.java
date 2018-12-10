@@ -103,7 +103,7 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES);
 			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__SIGNALS);
 			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS);
-			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS);
+			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS);
 			childrenFeatures.add(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS);
 		}
 		return childrenFeatures;
@@ -157,7 +157,7 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES:
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNALS:
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS:
-			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS:
+			case FunctionsPackage.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS:
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__SUBFUNCTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -218,7 +218,7 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__FAILURE_EVENTS,
+				(FunctionsPackage.Literals.FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS,
 				 FunctionsFactory.eINSTANCE.createFailureCondition()));
 
 		newChildDescriptors.add

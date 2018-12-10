@@ -6,15 +6,19 @@ import de.oaam.model.oaam.Architecture;
 import de.oaam.model.oaam.OaamPackage;
 
 import de.oaam.model.oaam.allocations.Allocations;
+
 import de.oaam.model.oaam.anatomy.Anatomy;
 
 import de.oaam.model.oaam.capabilities.Capabilities;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.Functions;
 
 import de.oaam.model.oaam.hardware.Hardware;
 
 import de.oaam.model.oaam.library.Library;
+
 import de.oaam.model.oaam.restrictions.Restrictions;
 
 import de.oaam.model.oaam.scenario.Scenario;

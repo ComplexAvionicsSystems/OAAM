@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.hardware;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.IoDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

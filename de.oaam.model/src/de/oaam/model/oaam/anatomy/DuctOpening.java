@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.anatomy;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

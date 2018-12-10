@@ -3,12 +3,14 @@
 package de.oaam.model.oaam.hardware.util;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

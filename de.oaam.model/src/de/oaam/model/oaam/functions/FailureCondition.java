@@ -3,9 +3,13 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.BoolA;
+import de.oaam.model.oaam.common.BoolNot;
+import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,9 +24,12 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getLogic <em>Logic</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getCondition <em>Condition</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#isNoSingleFailure <em>No Single Failure</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanOperations <em>Boolean Operations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanNots <em>Boolean Nots</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getOutputIntegrityStates <em>Output Integrity States</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition()
@@ -31,29 +38,29 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  */
 public interface FailureCondition extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
-	 * Returns the value of the '<em><b>Logic</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * A Boolean expression that relates the inputs of the system. If the expression is true the failure condition is active.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Logic</em>' containment reference.
-	 * @see #setLogic(BoolA)
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_Logic()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Condition</em>' reference.
+	 * @see #setCondition(BoolA)
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_Condition()
+	 * @model required="true"
 	 * @generated
 	 */
-	BoolA getLogic();
+	BoolA getCondition();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.functions.FailureCondition#getLogic <em>Logic</em>}' containment reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.functions.FailureCondition#getCondition <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Logic</em>' containment reference.
-	 * @see #getLogic()
+	 * @param value the new value of the '<em>Condition</em>' reference.
+	 * @see #getCondition()
 	 * @generated
 	 */
-	void setLogic(BoolA value);
+	void setCondition(BoolA value);
 
 	/**
 	 * Returns the value of the '<em><b>Max Occurrence Probability</b></em>' attribute.
@@ -106,5 +113,50 @@ public interface FailureCondition extends OaamBaseElementA, ModeDependentElement
 	 * @generated
 	 */
 	void setNoSingleFailure(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Boolean Operations</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.BoolOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The Boolean operations, which define the relation to the failure condition
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Boolean Operations</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_BooleanOperations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BoolOperation> getBooleanOperations();
+
+	/**
+	 * Returns the value of the '<em><b>Boolean Nots</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.common.BoolNot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The Boolean NOT operations which define the relation to the failure condition
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Boolean Nots</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_BooleanNots()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BoolNot> getBooleanNots();
+
+	/**
+	 * Returns the value of the '<em><b>Output Integrity States</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.OutputIntegrityState}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The list of all relevant output states for this failure condition.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Output Integrity States</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_OutputIntegrityStates()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<OutputIntegrityState> getOutputIntegrityStates();
 
 } // FailureCondition

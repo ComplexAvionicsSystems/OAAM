@@ -3,15 +3,21 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.BoolA;
+
+import de.oaam.model.oaam.common.BoolNot;
+import de.oaam.model.oaam.common.BoolOperation;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 
+import de.oaam.model.oaam.functions.OutputIntegrityState;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,9 +44,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getVariants <em>Variants</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getLogic <em>Logic</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getMaxOccurrenceProbability <em>Max Occurrence Probability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#isNoSingleFailure <em>No Single Failure</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getBooleanOperations <em>Boolean Operations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getBooleanNots <em>Boolean Nots</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getOutputIntegrityStates <em>Output Integrity States</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,14 +76,14 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	protected EList<Variant> variants;
 
 	/**
-	 * The cached value of the '{@link #getLogic() <em>Logic</em>}' containment reference.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLogic()
+	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected BoolA logic;
+	protected BoolA condition;
 
 	/**
 	 * The default value of the '{@link #getMaxOccurrenceProbability() <em>Max Occurrence Probability</em>}' attribute.
@@ -115,6 +124,36 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * @ordered
 	 */
 	protected boolean noSingleFailure = NO_SINGLE_FAILURE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBooleanOperations() <em>Boolean Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolOperation> booleanOperations;
+
+	/**
+	 * The cached value of the '{@link #getBooleanNots() <em>Boolean Nots</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBooleanNots()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BoolNot> booleanNots;
+
+	/**
+	 * The cached value of the '{@link #getOutputIntegrityStates() <em>Output Integrity States</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutputIntegrityStates()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OutputIntegrityState> outputIntegrityStates;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,8 +203,16 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BoolA getLogic() {
-		return logic;
+	public BoolA getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject)condition;
+			condition = (BoolA)eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.FAILURE_CONDITION__CONDITION, oldCondition, condition));
+			}
+		}
+		return condition;
 	}
 
 	/**
@@ -173,14 +220,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLogic(BoolA newLogic, NotificationChain msgs) {
-		BoolA oldLogic = logic;
-		logic = newLogic;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FunctionsPackage.FAILURE_CONDITION__LOGIC, oldLogic, newLogic);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public BoolA basicGetCondition() {
+		return condition;
 	}
 
 	/**
@@ -188,18 +229,11 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLogic(BoolA newLogic) {
-		if (newLogic != logic) {
-			NotificationChain msgs = null;
-			if (logic != null)
-				msgs = ((InternalEObject)logic).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FunctionsPackage.FAILURE_CONDITION__LOGIC, null, msgs);
-			if (newLogic != null)
-				msgs = ((InternalEObject)newLogic).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FunctionsPackage.FAILURE_CONDITION__LOGIC, null, msgs);
-			msgs = basicSetLogic(newLogic, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.FAILURE_CONDITION__LOGIC, newLogic, newLogic));
+	public void setCondition(BoolA newCondition) {
+		BoolA oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.FAILURE_CONDITION__CONDITION, oldCondition, condition));
 	}
 
 	/**
@@ -249,13 +283,53 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BoolOperation> getBooleanOperations() {
+		if (booleanOperations == null) {
+			booleanOperations = new EObjectContainmentEList<BoolOperation>(BoolOperation.class, this, FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS);
+		}
+		return booleanOperations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<BoolNot> getBooleanNots() {
+		if (booleanNots == null) {
+			booleanNots = new EObjectContainmentEList<BoolNot>(BoolNot.class, this, FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS);
+		}
+		return booleanNots;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<OutputIntegrityState> getOutputIntegrityStates() {
+		if (outputIntegrityStates == null) {
+			outputIntegrityStates = new EObjectContainmentEList<OutputIntegrityState>(OutputIntegrityState.class, this, FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES);
+		}
+		return outputIntegrityStates;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case FunctionsPackage.FAILURE_CONDITION__OPERATION_MODES:
 				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
-				return basicSetLogic(null, msgs);
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+				return ((InternalEList<?>)getBooleanOperations()).basicRemove(otherEnd, msgs);
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+				return ((InternalEList<?>)getBooleanNots()).basicRemove(otherEnd, msgs);
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+				return ((InternalEList<?>)getOutputIntegrityStates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -272,12 +346,19 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return getOperationModes();
 			case FunctionsPackage.FAILURE_CONDITION__VARIANTS:
 				return getVariants();
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
-				return getLogic();
+			case FunctionsPackage.FAILURE_CONDITION__CONDITION:
+				if (resolve) return getCondition();
+				return basicGetCondition();
 			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
 				return getMaxOccurrenceProbability();
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				return isNoSingleFailure();
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+				return getBooleanOperations();
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+				return getBooleanNots();
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+				return getOutputIntegrityStates();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,14 +380,26 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				getVariants().clear();
 				getVariants().addAll((Collection<? extends Variant>)newValue);
 				return;
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
-				setLogic((BoolA)newValue);
+			case FunctionsPackage.FAILURE_CONDITION__CONDITION:
+				setCondition((BoolA)newValue);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
 				setMaxOccurrenceProbability((Double)newValue);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				setNoSingleFailure((Boolean)newValue);
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				getBooleanOperations().addAll((Collection<? extends BoolOperation>)newValue);
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				getBooleanNots().addAll((Collection<? extends BoolNot>)newValue);
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+				getOutputIntegrityStates().clear();
+				getOutputIntegrityStates().addAll((Collection<? extends OutputIntegrityState>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,14 +419,23 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 			case FunctionsPackage.FAILURE_CONDITION__VARIANTS:
 				getVariants().clear();
 				return;
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
-				setLogic((BoolA)null);
+			case FunctionsPackage.FAILURE_CONDITION__CONDITION:
+				setCondition((BoolA)null);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
 				setMaxOccurrenceProbability(MAX_OCCURRENCE_PROBABILITY_EDEFAULT);
 				return;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				setNoSingleFailure(NO_SINGLE_FAILURE_EDEFAULT);
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+				getBooleanOperations().clear();
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+				getBooleanNots().clear();
+				return;
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+				getOutputIntegrityStates().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -351,12 +453,18 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return operationModes != null && !operationModes.isEmpty();
 			case FunctionsPackage.FAILURE_CONDITION__VARIANTS:
 				return variants != null && !variants.isEmpty();
-			case FunctionsPackage.FAILURE_CONDITION__LOGIC:
-				return logic != null;
+			case FunctionsPackage.FAILURE_CONDITION__CONDITION:
+				return condition != null;
 			case FunctionsPackage.FAILURE_CONDITION__MAX_OCCURRENCE_PROBABILITY:
 				return maxOccurrenceProbability != MAX_OCCURRENCE_PROBABILITY_EDEFAULT;
 			case FunctionsPackage.FAILURE_CONDITION__NO_SINGLE_FAILURE:
 				return noSingleFailure != NO_SINGLE_FAILURE_EDEFAULT;
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
+				return booleanOperations != null && !booleanOperations.isEmpty();
+			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
+				return booleanNots != null && !booleanNots.isEmpty();
+			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+				return outputIntegrityStates != null && !outputIntegrityStates.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

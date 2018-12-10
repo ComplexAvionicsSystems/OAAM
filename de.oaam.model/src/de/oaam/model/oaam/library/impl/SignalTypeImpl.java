@@ -5,6 +5,7 @@ package de.oaam.model.oaam.library.impl;
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.SignalType;
 

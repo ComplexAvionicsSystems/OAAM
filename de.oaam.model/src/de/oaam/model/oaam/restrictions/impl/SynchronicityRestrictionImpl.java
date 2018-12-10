@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.restrictions.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
+
 import de.oaam.model.oaam.functions.Task;
 
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;

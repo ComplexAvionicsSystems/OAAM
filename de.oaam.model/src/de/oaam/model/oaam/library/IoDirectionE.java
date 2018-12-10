@@ -64,10 +64,6 @@ public enum IoDirectionE implements Enumerator {
 	/**
 	 * The '<em><b>NONE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>NONE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * No information flow in no direction.
@@ -82,10 +78,6 @@ public enum IoDirectionE implements Enumerator {
 	/**
 	 * The '<em><b>IN</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>IN</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Information flow into the device.
@@ -100,10 +92,6 @@ public enum IoDirectionE implements Enumerator {
 	/**
 	 * The '<em><b>OUT</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>OUT</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Information flow out of the device.
@@ -118,10 +106,6 @@ public enum IoDirectionE implements Enumerator {
 	/**
 	 * The '<em><b>BOTH</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>BOTH</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Information flow in and out of to the device.

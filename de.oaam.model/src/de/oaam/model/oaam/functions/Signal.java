@@ -3,7 +3,9 @@
 package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.Connection;
+
 import de.oaam.model.oaam.library.SignalType;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;

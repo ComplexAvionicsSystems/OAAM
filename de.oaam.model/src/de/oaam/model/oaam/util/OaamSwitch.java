@@ -3,7 +3,9 @@
 package de.oaam.model.oaam.util;
 
 import de.oaam.model.oaam.*;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

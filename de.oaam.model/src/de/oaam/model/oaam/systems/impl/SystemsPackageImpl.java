@@ -897,7 +897,7 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 		initEClass(inputSegregationEClass, InputSegregation.class, "InputSegregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInputSegregation_DissimilarSource(), ecorePackage.getEBoolean(), "dissimilarSource", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInputSegregation_DissimilarRoute(), ecorePackage.getEBoolean(), "dissimilarRoute", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInputSegregation_DissimilarTechnology(), ecorePackage.getEBooleanObject(), "dissimilarTechnology", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInputSegregation_DissimilarTechnology(), ecorePackage.getEBoolean(), "dissimilarTechnology", null, 1, 1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInputSegregation_GroupA(), this.getRequiredInformationA(), null, "groupA", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInputSegregation_GroupB(), this.getRequiredInformationA(), null, "groupB", null, 1, -1, InputSegregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}

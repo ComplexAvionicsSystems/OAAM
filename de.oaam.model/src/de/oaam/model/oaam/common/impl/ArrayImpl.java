@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.common.impl.ArrayImpl#getNElements <em>NElements</em>}</li>
  *   <li>{@link de.oaam.model.oaam.common.impl.ArrayImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.common.impl.ArrayImpl#getAlignment <em>Alignment</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +60,26 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 	 * @ordered
 	 */
 	protected DataTypeA type;
+
+	/**
+	 * The default value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ALIGNMENT_EDEFAULT = 8;
+
+	/**
+	 * The cached value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected int alignment = ALIGNMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,6 +164,27 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getAlignment() {
+		return alignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlignment(int newAlignment) {
+		int oldAlignment = alignment;
+		alignment = newAlignment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.ARRAY__ALIGNMENT, oldAlignment, alignment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -151,6 +193,8 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 			case CommonPackage.ARRAY__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case CommonPackage.ARRAY__ALIGNMENT:
+				return getAlignment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,6 +212,9 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 				return;
 			case CommonPackage.ARRAY__TYPE:
 				setType((DataTypeA)newValue);
+				return;
+			case CommonPackage.ARRAY__ALIGNMENT:
+				setAlignment((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -187,6 +234,9 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 			case CommonPackage.ARRAY__TYPE:
 				setType((DataTypeA)null);
 				return;
+			case CommonPackage.ARRAY__ALIGNMENT:
+				setAlignment(ALIGNMENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +253,8 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 				return nElements != NELEMENTS_EDEFAULT;
 			case CommonPackage.ARRAY__TYPE:
 				return type != null;
+			case CommonPackage.ARRAY__ALIGNMENT:
+				return alignment != ALIGNMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -219,6 +271,8 @@ public class ArrayImpl extends DataTypeAImpl implements Array {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nElements: ");
 		result.append(nElements);
+		result.append(", alignment: ");
+		result.append(alignment);
 		result.append(')');
 		return result.toString();
 	}

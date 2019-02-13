@@ -22,6 +22,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  *   <li>{@link de.oaam.model.oaam.library.WireType#getNConductors <em>NConductors</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.WireType#getMinBendingRadius <em>Min Bending Radius</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.WireType#getNShields <em>NShields</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.WireType#getMtbf <em>Mtbf</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getWireType()
@@ -155,5 +156,30 @@ public interface WireType extends OaamBaseElementA {
 	 * @generated
 	 */
 	void setNShields(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Mtbf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The mean time between failure in [h]
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Mtbf</em>' attribute.
+	 * @see #setMtbf(double)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getWireType_Mtbf()
+	 * @model required="true"
+	 * @generated
+	 */
+	double getMtbf();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.WireType#getMtbf <em>Mtbf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Mtbf</em>' attribute.
+	 * @see #getMtbf()
+	 * @generated
+	 */
+	void setMtbf(double value);
 
 } // WireType

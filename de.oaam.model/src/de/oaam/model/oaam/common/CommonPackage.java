@@ -1288,13 +1288,22 @@ public interface CommonPackage extends EPackage {
 	int ARRAY__TYPE = DATA_TYPE_A_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY__ALIGNMENT = DATA_TYPE_A_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Array</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 2;
+	int ARRAY_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Array</em>' class.
@@ -1406,13 +1415,31 @@ public interface CommonPackage extends EPackage {
 	int STRUCT__FIELDS = DATA_TYPE_A_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Inherits From</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCT__INHERITS_FROM = DATA_TYPE_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCT__IS_ABSTRACT = DATA_TYPE_A_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Struct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCT_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 2;
+	int STRUCT_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Struct</em>' class.
@@ -2242,6 +2269,17 @@ public interface CommonPackage extends EPackage {
 	EReference getArray_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.Array#getAlignment <em>Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignment</em>'.
+	 * @see de.oaam.model.oaam.common.Array#getAlignment()
+	 * @see #getArray()
+	 * @generated
+	 */
+	EAttribute getArray_Alignment();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.Struct <em>Struct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2272,6 +2310,28 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStruct_Fields();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.common.Struct#getInheritsFrom <em>Inherits From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inherits From</em>'.
+	 * @see de.oaam.model.oaam.common.Struct#getInheritsFrom()
+	 * @see #getStruct()
+	 * @generated
+	 */
+	EReference getStruct_InheritsFrom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.Struct#isIsAbstract <em>Is Abstract</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Abstract</em>'.
+	 * @see de.oaam.model.oaam.common.Struct#isIsAbstract()
+	 * @see #getStruct()
+	 * @generated
+	 */
+	EAttribute getStruct_IsAbstract();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.FloatingPoint <em>Floating Point</em>}'.
@@ -2699,6 +2759,14 @@ public interface CommonPackage extends EPackage {
 		EReference ARRAY__TYPE = eINSTANCE.getArray_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARRAY__ALIGNMENT = eINSTANCE.getArray_Alignment();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.StructImpl <em>Struct</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2723,6 +2791,22 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STRUCT__FIELDS = eINSTANCE.getStruct_Fields();
+
+		/**
+		 * The meta object literal for the '<em><b>Inherits From</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCT__INHERITS_FROM = eINSTANCE.getStruct_InheritsFrom();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Abstract</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRUCT__IS_ABSTRACT = eINSTANCE.getStruct_IsAbstract();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.FloatingPointImpl <em>Floating Point</em>}' class.

@@ -18,6 +18,7 @@ package de.oaam.model.oaam.common;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.common.Array#getNElements <em>NElements</em>}</li>
  *   <li>{@link de.oaam.model.oaam.common.Array#getType <em>Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.common.Array#getAlignment <em>Alignment</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.common.CommonPackage#getArray()
@@ -75,5 +76,31 @@ public interface Array extends DataTypeA {
 	 * @generated
 	 */
 	void setType(DataTypeA value);
+
+	/**
+	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.
+	 * The default value is <code>"8"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The internal alignment (padding) of array fields in bits. 0 means all elements are directly after each other. Values above 0 mean that fields smaller than the value will be stuffed with padding bits until a multiple of the alignment value is reached. 8 equals a one Byte allignment.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Alignment</em>' attribute.
+	 * @see #setAlignment(int)
+	 * @see de.oaam.model.oaam.common.CommonPackage#getArray_Alignment()
+	 * @model default="8" required="true"
+	 * @generated
+	 */
+	int getAlignment();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.common.Array#getAlignment <em>Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Alignment</em>' attribute.
+	 * @see #getAlignment()
+	 * @generated
+	 */
+	void setAlignment(int value);
 
 } // Array

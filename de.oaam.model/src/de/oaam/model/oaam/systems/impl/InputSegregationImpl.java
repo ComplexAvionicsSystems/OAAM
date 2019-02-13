@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#isDissimilarSource <em>Dissimilar Source</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#isDissimilarRoute <em>Dissimilar Route</em>}</li>
- *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#getDissimilarTechnology <em>Dissimilar Technology</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#isDissimilarTechnology <em>Dissimilar Technology</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#getGroupA <em>Group A</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.InputSegregationImpl#getGroupB <em>Group B</em>}</li>
  * </ul>
@@ -79,24 +79,24 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	protected boolean dissimilarRoute = DISSIMILAR_ROUTE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDissimilarTechnology() <em>Dissimilar Technology</em>}' attribute.
+	 * The default value of the '{@link #isDissimilarTechnology() <em>Dissimilar Technology</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDissimilarTechnology()
+	 * @see #isDissimilarTechnology()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Boolean DISSIMILAR_TECHNOLOGY_EDEFAULT = null;
+	protected static final boolean DISSIMILAR_TECHNOLOGY_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getDissimilarTechnology() <em>Dissimilar Technology</em>}' attribute.
+	 * The cached value of the '{@link #isDissimilarTechnology() <em>Dissimilar Technology</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDissimilarTechnology()
+	 * @see #isDissimilarTechnology()
 	 * @generated
 	 * @ordered
 	 */
-	protected Boolean dissimilarTechnology = DISSIMILAR_TECHNOLOGY_EDEFAULT;
+	protected boolean dissimilarTechnology = DISSIMILAR_TECHNOLOGY_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getGroupA() <em>Group A</em>}' reference list.
@@ -184,7 +184,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean getDissimilarTechnology() {
+	public boolean isDissimilarTechnology() {
 		return dissimilarTechnology;
 	}
 
@@ -193,8 +193,8 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDissimilarTechnology(Boolean newDissimilarTechnology) {
-		Boolean oldDissimilarTechnology = dissimilarTechnology;
+	public void setDissimilarTechnology(boolean newDissimilarTechnology) {
+		boolean oldDissimilarTechnology = dissimilarTechnology;
 		dissimilarTechnology = newDissimilarTechnology;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SystemsPackage.INPUT_SEGREGATION__DISSIMILAR_TECHNOLOGY, oldDissimilarTechnology, dissimilarTechnology));
@@ -237,7 +237,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 			case SystemsPackage.INPUT_SEGREGATION__DISSIMILAR_ROUTE:
 				return isDissimilarRoute();
 			case SystemsPackage.INPUT_SEGREGATION__DISSIMILAR_TECHNOLOGY:
-				return getDissimilarTechnology();
+				return isDissimilarTechnology();
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_A:
 				return getGroupA();
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_B:
@@ -316,7 +316,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 			case SystemsPackage.INPUT_SEGREGATION__DISSIMILAR_ROUTE:
 				return dissimilarRoute != DISSIMILAR_ROUTE_EDEFAULT;
 			case SystemsPackage.INPUT_SEGREGATION__DISSIMILAR_TECHNOLOGY:
-				return DISSIMILAR_TECHNOLOGY_EDEFAULT == null ? dissimilarTechnology != null : !DISSIMILAR_TECHNOLOGY_EDEFAULT.equals(dissimilarTechnology);
+				return dissimilarTechnology != DISSIMILAR_TECHNOLOGY_EDEFAULT;
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_A:
 				return groupA != null && !groupA.isEmpty();
 			case SystemsPackage.INPUT_SEGREGATION__GROUP_B:

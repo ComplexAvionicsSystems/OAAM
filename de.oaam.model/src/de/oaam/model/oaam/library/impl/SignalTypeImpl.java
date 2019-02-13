@@ -4,6 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
+import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.LibraryPackage;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.SignalTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.SignalTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.SignalTypeImpl#getTraceLink <em>Trace Link</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.SignalTypeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -195,6 +197,16 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 	 * @ordered
 	 */
 	protected String traceLink = TRACE_LINK_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected DataTypeA type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -379,6 +391,44 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DataTypeA getType() {
+		if (type != null && type.eIsProxy()) {
+			InternalEObject oldType = (InternalEObject)type;
+			type = (DataTypeA)eResolveProxy(oldType);
+			if (type != oldType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.SIGNAL_TYPE__TYPE, oldType, type));
+			}
+		}
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataTypeA basicGetType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(DataTypeA newType) {
+		DataTypeA oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.SIGNAL_TYPE__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -412,6 +462,9 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 				return getModifier();
 			case LibraryPackage.SIGNAL_TYPE__TRACE_LINK:
 				return getTraceLink();
+			case LibraryPackage.SIGNAL_TYPE__TYPE:
+				if (resolve) return getType();
+				return basicGetType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -450,6 +503,9 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 			case LibraryPackage.SIGNAL_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
 				return;
+			case LibraryPackage.SIGNAL_TYPE__TYPE:
+				setType((DataTypeA)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -486,6 +542,9 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 			case LibraryPackage.SIGNAL_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
+			case LibraryPackage.SIGNAL_TYPE__TYPE:
+				setType((DataTypeA)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -514,6 +573,8 @@ public class SignalTypeImpl extends ResourceConsumerAImpl implements SignalType 
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.SIGNAL_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
+			case LibraryPackage.SIGNAL_TYPE__TYPE:
+				return type != null;
 		}
 		return super.eIsSet(featureID);
 	}

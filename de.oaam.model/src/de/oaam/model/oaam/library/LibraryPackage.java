@@ -1342,13 +1342,22 @@ public interface LibraryPackage extends EPackage {
 	int SIGNAL_TYPE__TRACE_LINK = RESOURCE_CONSUMER_A_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TYPE__TYPE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Signal Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 8;
+	int SIGNAL_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Signal Type</em>' class.
@@ -2319,13 +2328,22 @@ public interface LibraryPackage extends EPackage {
 	int WIRE_TYPE__NSHIELDS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Mtbf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRE_TYPE__MTBF = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Wire Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int WIRE_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Wire Type</em>' class.
@@ -6181,6 +6199,17 @@ public interface LibraryPackage extends EPackage {
 	EClass getSignalType();
 
 	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.SignalType#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.library.SignalType#getType()
+	 * @see #getSignalType()
+	 * @generated
+	 */
+	EReference getSignalType_Type();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.DeviceType <em>Device Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6592,6 +6621,17 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWireType_NShields();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.WireType#getMtbf <em>Mtbf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mtbf</em>'.
+	 * @see de.oaam.model.oaam.library.WireType#getMtbf()
+	 * @see #getWireType()
+	 * @generated
+	 */
+	EAttribute getWireType_Mtbf();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.InputDeclaration <em>Input Declaration</em>}'.
@@ -7907,6 +7947,14 @@ public interface LibraryPackage extends EPackage {
 		EClass SIGNAL_TYPE = eINSTANCE.getSignalType();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TYPE__TYPE = eINSTANCE.getSignalType_Type();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl <em>Device Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8219,6 +8267,14 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WIRE_TYPE__NSHIELDS = eINSTANCE.getWireType_NShields();
+
+		/**
+		 * The meta object literal for the '<em><b>Mtbf</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIRE_TYPE__MTBF = eINSTANCE.getWireType_Mtbf();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.InputDeclarationImpl <em>Input Declaration</em>}' class.

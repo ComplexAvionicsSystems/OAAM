@@ -1025,6 +1025,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getSignalType_Type() {
+		return (EReference)signalTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDeviceType() {
 		return deviceTypeEClass;
 	}
@@ -1360,6 +1369,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 */
 	public EAttribute getWireType_NShields() {
 		return (EAttribute)wireTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWireType_Mtbf() {
+		return (EAttribute)wireTypeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2133,6 +2151,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(taskTypeEClass, TASK_TYPE__PARAMETER_DECLARATIONS);
 
 		signalTypeEClass = createEClass(SIGNAL_TYPE);
+		createEReference(signalTypeEClass, SIGNAL_TYPE__TYPE);
 
 		deviceTypeEClass = createEClass(DEVICE_TYPE);
 		createEReference(deviceTypeEClass, DEVICE_TYPE__IO_DECLARATIONS);
@@ -2176,6 +2195,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(wireTypeEClass, WIRE_TYPE__NCONDUCTORS);
 		createEAttribute(wireTypeEClass, WIRE_TYPE__MIN_BENDING_RADIUS);
 		createEAttribute(wireTypeEClass, WIRE_TYPE__NSHIELDS);
+		createEAttribute(wireTypeEClass, WIRE_TYPE__MTBF);
 
 		inputDeclarationEClass = createEClass(INPUT_DECLARATION);
 		createEReference(inputDeclarationEClass, INPUT_DECLARATION__TYPE);
@@ -2429,6 +2449,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getTaskType_ParameterDeclarations(), this.getTaskParameterDeclaration(), null, "parameterDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalTypeEClass, SignalType.class, "SignalType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSignalType_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, SignalType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceTypeEClass, DeviceType.class, "DeviceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviceType_IoDeclarations(), this.getIoDeclaration(), null, "ioDeclarations", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2472,6 +2493,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getWireType_NConductors(), ecorePackage.getEInt(), "nConductors", "1", 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWireType_MinBendingRadius(), ecorePackage.getEDouble(), "minBendingRadius", null, 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWireType_NShields(), ecorePackage.getEInt(), "nShields", "1", 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWireType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputDeclarationEClass, InputDeclaration.class, "InputDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, InputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

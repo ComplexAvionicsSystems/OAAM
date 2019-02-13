@@ -47,6 +47,8 @@ public class StructItemProvider extends DataTypeAItemProvider {
 
 			addAlignmentPropertyDescriptor(object);
 			addFieldsPropertyDescriptor(object);
+			addInheritsFromPropertyDescriptor(object);
+			addIsAbstractPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,6 +98,50 @@ public class StructItemProvider extends DataTypeAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Inherits From feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInheritsFromPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Struct_inheritsFrom_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Struct_inheritsFrom_feature", "_UI_Struct_type"),
+				 CommonPackage.Literals.STRUCT__INHERITS_FROM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Abstract feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsAbstractPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Struct_isAbstract_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Struct_isAbstract_feature", "_UI_Struct_type"),
+				 CommonPackage.Literals.STRUCT__IS_ABSTRACT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Struct.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,6 +180,7 @@ public class StructItemProvider extends DataTypeAItemProvider {
 
 		switch (notification.getFeatureID(Struct.class)) {
 			case CommonPackage.STRUCT__ALIGNMENT:
+			case CommonPackage.STRUCT__IS_ABSTRACT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

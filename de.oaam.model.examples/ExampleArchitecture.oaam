@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v140/common" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" id="example" name="Example">
+<de.oaam.model:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.common="http://www.oaam.de/oaam/model/v140/common" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" xmlns:de.oaam.model.systems="http://www.oaam.de/oaam/model/v140/systems" id="example" name="Example">
   <library id="library" style="">
     <sublibraries id="datatypes" name="Data Types">
       <dataTypes xsi:type="de.oaam.model.common:Boolean"/>
       <dataTypes xsi:type="de.oaam.model.common:FloatingPoint"/>
       <dataTypes xsi:type="de.oaam.model.common:Integer"/>
-      <dataTypes xsi:type="de.oaam.model.common:Array"/>
+      <dataTypes xsi:type="de.oaam.model.common:Array" type="//@library/@sublibraries.0/@dataTypes.0"/>
       <dataTypes xsi:type="de.oaam.model.common:Character"/>
-      <dataTypes xsi:type="de.oaam.model.common:Struct"/>
       <dataTypes xsi:type="de.oaam.model.common:FloatingPoint"/>
+      <dataTypes xsi:type="de.oaam.model.common:Struct" name="Super Struct" modifier="" alignment="16" fields="//@library/@sublibraries.0/@dataTypes.0 //@library/@sublibraries.0/@dataTypes.4" isAbstract="true"/>
+      <dataTypes xsi:type="de.oaam.model.common:Struct" inheritsFrom="//@library/@sublibraries.0/@dataTypes.6"/>
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
         <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
         <outputDeclarations name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
           <faultPropagations condition="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@booleanOperations.0">
-            <booleanOperations left="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@taskInputStates.0" right=""/>
+            <booleanOperations left="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@taskInputStates.0"/>
             <taskInputStates input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.0"/>
             <taskInputStates id="" input="//@library/@sublibraries.1/@taskTypes.0/@inputDeclarations.1"/>
           </faultPropagations>
@@ -31,7 +32,7 @@
           <trigger fixedRate="20.0"/>
         </outputDeclarations>
       </taskTypes>
-      <signalTypes name="BooleanSignal"/>
+      <signalTypes name="BooleanSignal" type="//@library/@sublibraries.0/@dataTypes.6"/>
     </sublibraries>
     <sublibraries id="devicetypes" name="Device Types">
       <deviceTypes name="CockpitSwitch">
@@ -84,7 +85,16 @@
     <operationModes/>
   </scenario>
   <systems>
+    <systems>
+      <providedOutputs xsi:type="de.oaam.model.systems:InformationSignal"/>
+      <providedOutputs xsi:type="de.oaam.model.systems:RotaryPower"/>
+      <requiredInputs xsi:type="de.oaam.model.systems:InformationMaterial"/>
+      <requiredInputs xsi:type="de.oaam.model.systems:InformationSignal"/>
+    </systems>
     <systems/>
+    <informationFlows from="//@systems/@systems.0/@requiredInputs.0" to="//@systems/@systems.0/@providedOutputs.1"/>
+    <inputSegregations/>
+    <subsystems/>
   </systems>
   <functions id="functions">
     <tasks name="Add" type="tasktypeadd">

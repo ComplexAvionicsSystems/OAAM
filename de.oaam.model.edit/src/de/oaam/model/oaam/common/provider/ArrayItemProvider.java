@@ -47,6 +47,7 @@ public class ArrayItemProvider extends DataTypeAItemProvider {
 
 			addNElementsPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addAlignmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,6 +97,28 @@ public class ArrayItemProvider extends DataTypeAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Alignment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlignmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Array_alignment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Array_alignment_feature", "_UI_Array_type"),
+				 CommonPackage.Literals.ARRAY__ALIGNMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Array.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -134,6 +157,7 @@ public class ArrayItemProvider extends DataTypeAItemProvider {
 
 		switch (notification.getFeatureID(Array.class)) {
 			case CommonPackage.ARRAY__NELEMENTS:
+			case CommonPackage.ARRAY__ALIGNMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

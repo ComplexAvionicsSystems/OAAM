@@ -1,175 +1,176 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <de.oaam.model:Architecture xmlns:de.oaam.model="http://www.oaam.de/oaam/model/v140" xmlns:de.oaam.model.allocations="http://www.oaam.de/oaam/model/v140/allocations" xmlns:de.oaam.model.anatomy="http://www.oaam.de/oaam/model/v140/anatomy" xmlns:de.oaam.model.capabilities="http://www.oaam.de/oaam/model/v140/capabilities" xmlns:de.oaam.model.functions="http://www.oaam.de/oaam/model/v140/functions" xmlns:de.oaam.model.hardware="http://www.oaam.de/oaam/model/v140/hardware" xmlns:de.oaam.model.library="http://www.oaam.de/oaam/model/v140/library" xmlns:de.oaam.model.restrictions="http://www.oaam.de/oaam/model/v140/restrictions" xmlns:de.oaam.model.scenario="http://www.oaam.de/oaam/model/v140/scenario" xmlns:de.oaam.model.systems="http://www.oaam.de/oaam/model/v140/systems" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="235132ba-bca6-4820-b771-1815c9e0c76e" xmi:version="2.0">
-  <scenario xsi:type="de.oaam.model.scenario:Scenario"/>
   <functions xsi:type="de.oaam.model.functions:Functions">
     <subfunctions xsi:type="de.oaam.model.functions:Subfunctions" name="All Systems" id="25254af2-dda9-4c7b-b49d-876b40c74ad5">
-      <signals xsi:type="de.oaam.model.functions:Signal" name="Cabin Pressure Sensor-&gt;VCS Pressure" target="//@functions/@subfunctions.0/@tasks.0/@inputs.0" connectionBinding="//@hardware/@subhardware.0/@connections.0" id="Cabin Pressure Sensor-&gt;VCS Pressure" source="//@functions/@subfunctions.0/@tasks.5/@outputs.0"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" name="Left Outflow Valve-&gt;VCS Valve Left" target="//@functions/@subfunctions.0/@tasks.3/@inputs.1" connectionBinding="//@hardware/@subhardware.0/@connections.1" id="Left Outflow Valve-&gt;VCS Valve Left" source="//@functions/@subfunctions.0/@tasks.6/@outputs.0"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" name="Right Outflow Valve-&gt;VCS Valve Right" target="//@functions/@subfunctions.0/@tasks.4/@inputs.1" connectionBinding="//@hardware/@subhardware.0/@connections.2" id="Right Outflow Valve-&gt;VCS Valve Right" source="//@functions/@subfunctions.0/@tasks.7/@outputs.0"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" type="//@library/@sublibraries.0/@signalTypes.0" name="Pressure" target="//@functions/@subfunctions.0/@tasks.1/@inputs.0" id="622fdb22-c16d-49e3-8f83-64e797ae0745" source="//@functions/@subfunctions.0/@tasks.0/@outputs.0"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" type="//@library/@sublibraries.0/@signalTypes.0" name="Left Valve Control" target="//@functions/@subfunctions.0/@tasks.3/@inputs.0" id="4054840c-225a-44dd-ac95-994f5e52a95b" source="//@functions/@subfunctions.0/@tasks.1/@outputs.0"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" type="//@library/@sublibraries.0/@signalTypes.0" name="Right Valve Control" target="//@functions/@subfunctions.0/@tasks.4/@inputs.0" id="598f8890-4af7-409a-910f-1b68dc3e4fe9" source="//@functions/@subfunctions.0/@tasks.1/@outputs.1"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" type="//@library/@sublibraries.0/@signalTypes.0" name="Control Output" target="//@functions/@subfunctions.0/@tasks.2/@inputs.0" id="6449a77e-8d05-4d2e-96f9-17321f561aa4" source="//@functions/@subfunctions.0/@tasks.1/@outputs.2"/>
-      <signals xsi:type="de.oaam.model.functions:Signal" type="//@library/@sublibraries.0/@signalTypes.0" name="Valid" target="//@functions/@subfunctions.0/@tasks.1/@inputs.1" id="5b49d039-6cdb-442d-a5cd-664ba1bde58c" source="//@functions/@subfunctions.0/@tasks.2/@outputs.0"/>
-      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS Pressure" id="7e662a53-7e17-4099-8e31-9e19a7e41438" type="//@library/@sublibraries.0/@taskTypes.0">
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Cabin Pressure Sensor_in" id="Cabin Pressure Sensor_in"/>
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Pressure_SRC" declaration="//@library/@sublibraries.0/@taskTypes.0/@outputDeclarations.0" id="e0d68ba8-7885-4088-9ac7-d7d70a938d79"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.0/@inputs.0" name="Cabin Pressure Sensor_signal_-&gt;VCS Pressure" connectionBinding="//@hardware/@subhardware.0/@connections.0" source="//@functions/@subfunctions.0/@tasks.5/@outputs.0" id="Cabin Pressure Sensor_signal_-&gt;VCS Pressure"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.3/@inputs.1" name="Left Outflow Valve_signal_-&gt;VCS Valve Left" connectionBinding="//@hardware/@subhardware.0/@connections.1" source="//@functions/@subfunctions.0/@tasks.6/@outputs.0" id="Left Outflow Valve_signal_-&gt;VCS Valve Left"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.4/@inputs.1" name="Right Outflow Valve_signal_-&gt;VCS Valve Right" connectionBinding="//@hardware/@subhardware.0/@connections.2" source="//@functions/@subfunctions.0/@tasks.7/@outputs.0" id="Right Outflow Valve_signal_-&gt;VCS Valve Right"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.1/@inputs.0" name="Pressure" source="//@functions/@subfunctions.0/@tasks.0/@outputs.0" type="//@library/@sublibraries.0/@signalTypes.0" id="622fdb22-c16d-49e3-8f83-64e797ae0745"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.3/@inputs.0" name="Left Valve Control" source="//@functions/@subfunctions.0/@tasks.1/@outputs.0" type="//@library/@sublibraries.0/@signalTypes.0" id="4054840c-225a-44dd-ac95-994f5e52a95b"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.4/@inputs.0" name="Right Valve Control" source="//@functions/@subfunctions.0/@tasks.1/@outputs.1" type="//@library/@sublibraries.0/@signalTypes.0" id="598f8890-4af7-409a-910f-1b68dc3e4fe9"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.2/@inputs.0" name="Control Output" source="//@functions/@subfunctions.0/@tasks.1/@outputs.2" type="//@library/@sublibraries.0/@signalTypes.0" id="6449a77e-8d05-4d2e-96f9-17321f561aa4"/>
+      <signals xsi:type="de.oaam.model.functions:Signal" target="//@functions/@subfunctions.0/@tasks.1/@inputs.1" name="Valid" source="//@functions/@subfunctions.0/@tasks.2/@outputs.0" type="//@library/@sublibraries.0/@signalTypes.0" id="5b49d039-6cdb-442d-a5cd-664ba1bde58c"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS Pressure" type="//@library/@sublibraries.0/@taskTypes.0" id="7e662a53-7e17-4099-8e31-9e19a7e41438">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="Pressure_SRC" id="e0d68ba8-7885-4088-9ac7-d7d70a938d79" declaration="//@library/@sublibraries.0/@taskTypes.0/@outputDeclarations.0"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="4f370733-8644-4660-89f0-1bd9e5335f6a_device_Cabin Pressure Sensor_in" id="173cea4c-0c40-11e9-8b4b-b88a60b7258b"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS CON" id="81256b53-836d-4e08-a17c-bb89e304131e" type="//@library/@sublibraries.0/@taskTypes.1">
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Pressure_DST" id="767884c4-41f0-4524-8166-5835aa3ce5d0" declaration="//@library/@sublibraries.0/@taskTypes.1/@inputDeclarations.0"/>
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Valid_DST" id="83dd19d8-6eba-4e3a-950d-0ba334beb4eb" declaration="//@library/@sublibraries.0/@taskTypes.1/@inputDeclarations.1"/>
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Left Valve Control_SRC" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.0" id="c7b5acbe-6bca-4964-a620-1b0d094bb899"/>
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Right Valve Control_SRC" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.1" id="28f438c4-3689-4c61-b9eb-7259c02b6e90"/>
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Control Output_SRC" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.2" id="06e9c177-79e0-49fd-82e4-8e1276ce5610"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS CON" type="//@library/@sublibraries.0/@taskTypes.1" id="81256b53-836d-4e08-a17c-bb89e304131e">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="Left Valve Control_SRC" id="c7b5acbe-6bca-4964-a620-1b0d094bb899" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.0"/>
+        <outputs xsi:type="de.oaam.model.functions:Output" name="Right Valve Control_SRC" id="28f438c4-3689-4c61-b9eb-7259c02b6e90" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.1"/>
+        <outputs xsi:type="de.oaam.model.functions:Output" name="Control Output_SRC" id="06e9c177-79e0-49fd-82e4-8e1276ce5610" declaration="//@library/@sublibraries.0/@taskTypes.1/@outputDeclarations.2"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="Pressure_DST" declaration="//@library/@sublibraries.0/@taskTypes.1/@inputDeclarations.0" id="767884c4-41f0-4524-8166-5835aa3ce5d0"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="Valid_DST" declaration="//@library/@sublibraries.0/@taskTypes.1/@inputDeclarations.1" id="83dd19d8-6eba-4e3a-950d-0ba334beb4eb"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS MON" id="a023f0d7-5e5f-41c6-8920-749ff3a07870" type="//@library/@sublibraries.0/@taskTypes.2">
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Control Output_DST" id="3a8b31c7-a2eb-4b6e-b176-f091129a863e" declaration="//@library/@sublibraries.0/@taskTypes.2/@inputDeclarations.0"/>
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Valid_SRC" declaration="//@library/@sublibraries.0/@taskTypes.2/@outputDeclarations.0" id="ea2e13c3-8568-4d6a-88ea-aac387227387"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS MON" type="//@library/@sublibraries.0/@taskTypes.2" id="a023f0d7-5e5f-41c6-8920-749ff3a07870">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="Valid_SRC" id="ea2e13c3-8568-4d6a-88ea-aac387227387" declaration="//@library/@sublibraries.0/@taskTypes.2/@outputDeclarations.0"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="Control Output_DST" declaration="//@library/@sublibraries.0/@taskTypes.2/@inputDeclarations.0" id="3a8b31c7-a2eb-4b6e-b176-f091129a863e"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS Valve Left" type="//@library/@sublibraries.0/@taskTypes.3" id="7dc37805-cc66-4b78-8b16-25eb1494235d">
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Left Valve Control_DST" id="8bfa7671-5199-4e28-bf5e-61ea9e8f142e" declaration="//@library/@sublibraries.0/@taskTypes.3/@inputDeclarations.0"/>
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Left Outflow Valve_in" id="Left Outflow Valve_in"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" id="7dc37805-cc66-4b78-8b16-25eb1494235d" name="VCS Valve Left" type="//@library/@sublibraries.0/@taskTypes.3">
+        <inputs xsi:type="de.oaam.model.functions:Input" name="Left Valve Control_DST" declaration="//@library/@sublibraries.0/@taskTypes.3/@inputDeclarations.0" id="8bfa7671-5199-4e28-bf5e-61ea9e8f142e"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="997acb13-1a48-4694-8738-db9dd0bc2956_device_Left Outflow Valve_in" id="173d5f1e-0c40-11e9-ace9-b88a60b7258b"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" name="VCS Valve Right" type="//@library/@sublibraries.0/@taskTypes.3" id="dd9ffad2-809f-4a94-97fc-875c0df85a38">
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Right Valve Control_DST" id="b5dbcb65-a03b-40a5-a8e0-046faf34f77a" declaration="//@library/@sublibraries.0/@taskTypes.3/@inputDeclarations.1"/>
-        <inputs xsi:type="de.oaam.model.functions:Input" name="Right Outflow Valve_in" id="Right Outflow Valve_in"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" id="dd9ffad2-809f-4a94-97fc-875c0df85a38" name="VCS Valve Right" type="//@library/@sublibraries.0/@taskTypes.3">
+        <inputs xsi:type="de.oaam.model.functions:Input" name="Right Valve Control_DST" declaration="//@library/@sublibraries.0/@taskTypes.3/@inputDeclarations.1" id="b5dbcb65-a03b-40a5-a8e0-046faf34f77a"/>
+        <inputs xsi:type="de.oaam.model.functions:Input" name="46dcd1e0-47b3-4c70-a0e7-c1b984388404_device_Right Outflow Valve_in" id="173d8613-0c40-11e9-9090-b88a60b7258b"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" deviceBinding="//@hardware/@subhardware.0/@devices.0" name="Cabin Pressure Sensor" id="4f370733-8644-4660-89f0-1bd9e5335f6a_task" type="//@library/@sublibraries.0/@taskTypes.4">
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Cabin Pressure Sensor_out" id="Cabin Pressure Sensor_out"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="Cabin Pressure Sensor" type="//@library/@sublibraries.0/@taskTypes.4" deviceBinding="//@hardware/@subhardware.0/@devices.0" id="4f370733-8644-4660-89f0-1bd9e5335f6a_task">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="4f370733-8644-4660-89f0-1bd9e5335f6a_device_Cabin Pressure Sensor_out" id="173cea4d-0c40-11e9-98bd-b88a60b7258b"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" deviceBinding="//@hardware/@subhardware.0/@devices.1" name="Left Outflow Valve" id="997acb13-1a48-4694-8738-db9dd0bc2956_task" type="//@library/@sublibraries.0/@taskTypes.5">
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Left Outflow Valve_out" id="Left Outflow Valve_out"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="Left Outflow Valve" type="//@library/@sublibraries.0/@taskTypes.5" deviceBinding="//@hardware/@subhardware.0/@devices.1" id="997acb13-1a48-4694-8738-db9dd0bc2956_task">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="997acb13-1a48-4694-8738-db9dd0bc2956_device_Left Outflow Valve_out" id="173d5f1f-0c40-11e9-be34-b88a60b7258b"/>
       </tasks>
-      <tasks xsi:type="de.oaam.model.functions:Task" deviceBinding="//@hardware/@subhardware.0/@devices.2" name="Right Outflow Valve" id="46dcd1e0-47b3-4c70-a0e7-c1b984388404_task" type="//@library/@sublibraries.0/@taskTypes.5">
-        <outputs xsi:type="de.oaam.model.functions:Output" name="Right Outflow Valve_out" id="Right Outflow Valve_out"/>
+      <tasks xsi:type="de.oaam.model.functions:Task" name="Right Outflow Valve" type="//@library/@sublibraries.0/@taskTypes.5" deviceBinding="//@hardware/@subhardware.0/@devices.2" id="46dcd1e0-47b3-4c70-a0e7-c1b984388404_task">
+        <outputs xsi:type="de.oaam.model.functions:Output" name="46dcd1e0-47b3-4c70-a0e7-c1b984388404_device_Right Outflow Valve_out" id="173d8614-0c40-11e9-93ef-b88a60b7258b"/>
       </tasks>
-      <taskGroups xsi:type="de.oaam.model.functions:TaskGroup" tasks="//@functions/@subfunctions.0/@tasks.0 //@functions/@subfunctions.0/@tasks.1 //@functions/@subfunctions.0/@tasks.2 //@functions/@subfunctions.0/@tasks.3 //@functions/@subfunctions.0/@tasks.4" name="VCSSystem" id="5f5ff37a-4a8b-4225-83b1-17893adc83f4"/>
+      <taskGroups xsi:type="de.oaam.model.functions:TaskGroup" id="5f5ff37a-4a8b-4225-83b1-17893adc83f4" tasks="//@functions/@subfunctions.0/@tasks.0 //@functions/@subfunctions.0/@tasks.1 //@functions/@subfunctions.0/@tasks.2 //@functions/@subfunctions.0/@tasks.3 //@functions/@subfunctions.0/@tasks.4" name="VCSSystem"/>
     </subfunctions>
   </functions>
   <anatomy xsi:type="de.oaam.model.anatomy:Anatomy">
-    <subanatomies xsi:type="de.oaam.model.anatomy:Subanatomy" name="New NSR" id="574d2850-5aaf-4e17-b141-8520ab6c7667">
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Avionics Bay" type="//@library/@sublibraries.1/@locationTypes.0" id="26fc5e88-9115-4118-9eec-b44fd4235e72">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.0/@ductOpeningDeclarations.0" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
+    <subanatomies xsi:type="de.oaam.model.anatomy:Subanatomy" id="574d2850-5aaf-4e17-b141-8520ab6c7667" name="New NSR">
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Avionics Bay" id="26fc5e88-9115-4118-9eec-b44fd4235e72" type="//@library/@sublibraries.1/@locationTypes.0">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_26fc5e88-9115-4118-9eec-b44fd4235e72from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6" declaration="//@library/@sublibraries.1/@locationTypes.0/@ductOpeningDeclarations.0" name="to_Avionics Bayfrom_Center"/>
+        <position xsi:type="de.oaam.model.anatomy:Position3D" id="173e9537-0c40-11e9-aa63-b88a60b7258b"/>
+      </locations>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Aircraft Middle" id="3d5c7d11-0a65-40c5-964a-dd93aad5e60e" type="//@library/@sublibraries.1/@locationTypes.1">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_3d5c7d11-0a65-40c5-964a-dd93aad5e60e_to_65888844-bcad-4d92-974d-e1dfc22a0410" declaration="//@library/@sublibraries.1/@locationTypes.1/@ductOpeningDeclarations.0" name="from_Aircraft Middle_to_CabinFloor"/>
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60efrom_e673cdd1-f199-42a7-9ed2-9bb453bd31e6" declaration="//@library/@sublibraries.1/@locationTypes.1/@ductOpeningDeclarations.1" name="to_Aircraft Middlefrom_Center"/>
+        <position xsi:type="de.oaam.model.anatomy:Position3D" x="-10.0" id="173ebc28-0c40-11e9-b0f9-b88a60b7258b"/>
+      </locations>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Cabin Pressure Sensor" id="f3541bd6-1ce1-41cd-b8a9-972df5d97c9a" type="//@library/@sublibraries.1/@locationTypes.2">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a_to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6" declaration="//@library/@sublibraries.1/@locationTypes.2/@ductOpeningDeclarations.0" name="from_Cabin Pressure Sensor_to_Center"/>
+        <position xsi:type="de.oaam.model.anatomy:Position3D" x="-3.0" id="173ee31c-0c40-11e9-9c69-b88a60b7258b" z="1.0"/>
+      </locations>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Left Outflow Valve" id="1d99fac0-b1f6-422a-ac46-30248966fd92" type="//@library/@sublibraries.1/@locationTypes.3">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_1d99fac0-b1f6-422a-ac46-30248966fd92from_65888844-bcad-4d92-974d-e1dfc22a0410" declaration="//@library/@sublibraries.1/@locationTypes.3/@ductOpeningDeclarations.0" name="to_Left Outflow Valvefrom_CabinFloor"/>
+        <position xsi:type="de.oaam.model.anatomy:Position3D" x="-20.0" id="173f0a12-0c40-11e9-8671-b88a60b7258b" y="-1.0"/>
+      </locations>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Right Outflow Valve" id="dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4" type="//@library/@sublibraries.1/@locationTypes.4">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4from_65888844-bcad-4d92-974d-e1dfc22a0410" declaration="//@library/@sublibraries.1/@locationTypes.4/@ductOpeningDeclarations.0" name="to_Right Outflow Valvefrom_CabinFloor"/>
+        <position xsi:type="de.oaam.model.anatomy:Position3D" x="-20.0" id="173f0a13-0c40-11e9-8fd3-b88a60b7258b" y="1.0"/>
+      </locations>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="CabinFloor" id="65888844-bcad-4d92-974d-e1dfc22a0410" type="//@library/@sublibraries.1/@locationTypes.5">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_65888844-bcad-4d92-974d-e1dfc22a0410_to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.0" name="from_CabinFloor_to_Right Outflow Valve"/>
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_65888844-bcad-4d92-974d-e1dfc22a0410_to_1d99fac0-b1f6-422a-ac46-30248966fd92" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.1" name="from_CabinFloor_to_Left Outflow Valve"/>
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_65888844-bcad-4d92-974d-e1dfc22a0410from_3d5c7d11-0a65-40c5-964a-dd93aad5e60e" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.2" name="to_CabinFloorfrom_Aircraft Middle"/>
         <position xsi:type="de.oaam.model.anatomy:Position3D"/>
       </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Aircraft Middle" type="//@library/@sublibraries.1/@locationTypes.1" id="3d5c7d11-0a65-40c5-964a-dd93aad5e60e">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.1/@ductOpeningDeclarations.0" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.1/@ductOpeningDeclarations.1" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
-        <position xsi:type="de.oaam.model.anatomy:Position3D" x="-10.0"/>
-      </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Cabin Pressure Sensor" type="//@library/@sublibraries.1/@locationTypes.2" id="f3541bd6-1ce1-41cd-b8a9-972df5d97c9a">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.2/@ductOpeningDeclarations.0" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
-        <position xsi:type="de.oaam.model.anatomy:Position3D" z="1.0" x="-3.0"/>
-      </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Left Outflow Valve" type="//@library/@sublibraries.1/@locationTypes.3" id="1d99fac0-b1f6-422a-ac46-30248966fd92">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.3/@ductOpeningDeclarations.0" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
-        <position xsi:type="de.oaam.model.anatomy:Position3D" y="-1.0" x="-20.0"/>
-      </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Right Outflow Valve" type="//@library/@sublibraries.1/@locationTypes.4" id="dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.4/@ductOpeningDeclarations.0" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
-        <position xsi:type="de.oaam.model.anatomy:Position3D" y="1.0" x="-20.0"/>
-      </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="CabinFloor" type="//@library/@sublibraries.1/@locationTypes.5" id="65888844-bcad-4d92-974d-e1dfc22a0410">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.0" name="to_Right Outflow Valve" id="to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4"/>
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.1" name="to_Left Outflow Valve" id="to_1d99fac0-b1f6-422a-ac46-30248966fd92"/>
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.5/@ductOpeningDeclarations.2" name="to_Aircraft Middle" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e"/>
+      <locations xsi:type="de.oaam.model.anatomy:Location" name="Center" id="e673cdd1-f199-42a7-9ed2-9bb453bd31e6" type="//@library/@sublibraries.1/@locationTypes.6">
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.0" name="from_Center_to_Aircraft Middle"/>
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_to_26fc5e88-9115-4118-9eec-b44fd4235e72" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.1" name="from_Center_to_Avionics Bay"/>
+        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6from_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.2" name="to_Centerfrom_Cabin Pressure Sensor"/>
         <position xsi:type="de.oaam.model.anatomy:Position3D"/>
       </locations>
-      <locations xsi:type="de.oaam.model.anatomy:Location" name="Center" type="//@library/@sublibraries.1/@locationTypes.6" id="e673cdd1-f199-42a7-9ed2-9bb453bd31e6">
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.0" name="to_Aircraft Middle" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e"/>
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.1" name="to_Avionics Bay" id="to_26fc5e88-9115-4118-9eec-b44fd4235e72"/>
-        <ductOpenings xsi:type="de.oaam.model.anatomy:DuctOpening" declaration="//@library/@sublibraries.1/@locationTypes.6/@ductOpeningDeclarations.2" name="to_Cabin Pressure Sensor" id="to_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a"/>
-        <position xsi:type="de.oaam.model.anatomy:Position3D"/>
-      </locations>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.0" endPoint="//@anatomy/@subanatomies.0/@locations.4/@ductOpenings.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" startingPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.0" id="5bd9c45c-d48c-4f8a-82ef-50def57c7c7b" length="1.0"/>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.1" endPoint="//@anatomy/@subanatomies.0/@locations.3/@ductOpenings.0" name="CabinFloor&lt;-&gt;Left Outflow Valve" startingPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.1" id="66e73d63-05da-4bd3-9e84-d097f937f665" length="1.0"/>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.2" endPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.2" name="Aircraft Middle&lt;-&gt;CabinFloor" startingPoint="//@anatomy/@subanatomies.0/@locations.1/@ductOpenings.0" id="770395eb-af57-4f24-a459-f19d5a8dc02f" length="10.0"/>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.3" endPoint="//@anatomy/@subanatomies.0/@locations.1/@ductOpenings.1" name="Center&lt;-&gt;Aircraft Middle" startingPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.0" id="483f68a2-a05f-4592-81ab-73e5ae729d21" length="7.0"/>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.4" endPoint="//@anatomy/@subanatomies.0/@locations.0/@ductOpenings.0" name="Center&lt;-&gt;Avionics Bay" startingPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.1" id="1cf80ad7-1c0e-432d-b23e-4b96ec7a85b4" length="3.0"/>
-      <ducts xsi:type="de.oaam.model.anatomy:Duct" type="//@library/@sublibraries.1/@ductTypes.5" endPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.2" name="Cabin Pressure Sensor&lt;-&gt;Center" startingPoint="//@anatomy/@subanatomies.0/@locations.2/@ductOpenings.0" id="d7238b2f-6915-4386-97b7-5d8075b63d7e" length="1.0"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" length="1.0" type="//@library/@sublibraries.1/@ductTypes.0" id="5bd9c45c-d48c-4f8a-82ef-50def57c7c7b" endPoint="//@anatomy/@subanatomies.0/@locations.4/@ductOpenings.0"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" length="1.0" type="//@library/@sublibraries.1/@ductTypes.1" id="66e73d63-05da-4bd3-9e84-d097f937f665" endPoint="//@anatomy/@subanatomies.0/@locations.3/@ductOpenings.0"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.1/@ductOpenings.0" name="Aircraft Middle&lt;-&gt;CabinFloor" length="10.0" type="//@library/@sublibraries.1/@ductTypes.2" id="770395eb-af57-4f24-a459-f19d5a8dc02f" endPoint="//@anatomy/@subanatomies.0/@locations.5/@ductOpenings.2"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.0" name="Center&lt;-&gt;Aircraft Middle" length="7.0" type="//@library/@sublibraries.1/@ductTypes.3" id="483f68a2-a05f-4592-81ab-73e5ae729d21" endPoint="//@anatomy/@subanatomies.0/@locations.1/@ductOpenings.1"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.1" name="Center&lt;-&gt;Avionics Bay" length="3.0" type="//@library/@sublibraries.1/@ductTypes.4" id="1cf80ad7-1c0e-432d-b23e-4b96ec7a85b4" endPoint="//@anatomy/@subanatomies.0/@locations.0/@ductOpenings.0"/>
+      <ducts xsi:type="de.oaam.model.anatomy:Duct" startingPoint="//@anatomy/@subanatomies.0/@locations.2/@ductOpenings.0" name="Cabin Pressure Sensor&lt;-&gt;Center" length="1.0" type="//@library/@sublibraries.1/@ductTypes.5" id="d7238b2f-6915-4386-97b7-5d8075b63d7e" endPoint="//@anatomy/@subanatomies.0/@locations.6/@ductOpenings.2"/>
     </subanatomies>
   </anatomy>
   <restrictions xsi:type="de.oaam.model.restrictions:Restrictions">
     <subrestrictions xsi:type="de.oaam.model.restrictions:Subrestrictions" name="All Systems" id="25254af2-dda9-4c7b-b49d-876b40c74ad5_res">
-      <powerSourceRestrictions xsi:type="de.oaam.model.restrictions:PowerSourceRestriction" tasks="//@functions/@subfunctions.0/@tasks.1" powerSources="//@library/@sublibraries.0/@powerSources.0" name="Atomic" id="f08d844e-bdce-4b8c-abb0-a4dc267d42bb"/>
-      <segregationRestrictions xsi:type="de.oaam.model.restrictions:SegregationRestriction" tasksA="//@functions/@subfunctions.0/@tasks.1" name="VCS CON&lt;-&gt;VCS MON" tasksB="//@functions/@subfunctions.0/@tasks.2" id="ad11842f-4009-4d2c-bab8-025ce5e7886a"/>
-      <deviceRestrictions xsi:type="de.oaam.model.restrictions:DeviceRestriction" tasks="//@functions/@subfunctions.0/@tasks.2" name="Atomic" devices="//@hardware/@subhardware.1/@devices.3" id="15195e66-893e-47bc-85c4-b85474eb7521"/>
+      <powerSourceRestrictions xsi:type="de.oaam.model.restrictions:PowerSourceRestriction" tasks="//@functions/@subfunctions.0/@tasks.1" name="Atomic" powerSources="//@library/@sublibraries.0/@powerSources.0" id="f08d844e-bdce-4b8c-abb0-a4dc267d42bb"/>
+      <deviceRestrictions xsi:type="de.oaam.model.restrictions:DeviceRestriction" tasks="//@functions/@subfunctions.0/@tasks.2" name="Atomic" id="15195e66-893e-47bc-85c4-b85474eb7521" devices="//@hardware/@subhardware.1/@devices.3"/>
+      <segregationRestrictions xsi:type="de.oaam.model.restrictions:SegregationRestriction" name="VCS CON&lt;-&gt;VCS MON" tasksA="//@functions/@subfunctions.0/@tasks.1" id="ad11842f-4009-4d2c-bab8-025ce5e7886a" tasksB="//@functions/@subfunctions.0/@tasks.2"/>
     </subrestrictions>
   </restrictions>
   <library xsi:type="de.oaam.model.library:Library">
-    <resourceTypes xsi:type="de.oaam.model.library:ResourceType" name="Limit" id="Limit"/>
     <sublibraries xsi:type="de.oaam.model.library:Sublibrary" name="CPM and RDC Platform" id="4531128e-5d78-40f5-9c6c-9e6b7f6f8706">
-      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" weight="1.0" isSelfManaging="true" name="CPM" mtbf="100000.0" cost="20000.0" id="daf6d12c-9bb7-45d0-8561-5a6055985beb">
+      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Afdx Line" id="4883e413-b012-4889-b835-4c869452b24a" wireTypes="//@library/@sublibraries.0/@wireTypes.2"/>
+      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Pressure Sensor" id="c314538d-1fcb-4b65-beef-d49cceef0a0d_connection" wireTypes="//@library/@sublibraries.0/@wireTypes.0"/>
+      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Outflow Valve" id="a157e201-1d82-42da-b1c1-b3c9131db5e0_connection" wireTypes="//@library/@sublibraries.0/@wireTypes.1"/>
+      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" cost="20000.0" name="CPM" weight="1.0" id="daf6d12c-9bb7-45d0-8561-5a6055985beb" isSelfManaging="true" mtbf="100000.0">
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="f49ce19c-3433-47a6-89cc-e9f455f7c4bf" type="//@library/@sublibraries.0/@resourceTypes.0" count="2.0"/>
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="4b3095d0-8803-452d-8659-68d077a7f173" type="//@library/@sublibraries.0/@resourceTypes.1" count="200.0"/>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="CPU:90">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.2" name="Device Resource" id="84a3a324-4a35-497a-bf59-63f5a42eff72" count="90.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="84a3a324-4a35-497a-bf59-63f5a42eff72" type="//@library/@sublibraries.0/@resourceTypes.2" count="90.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="AFDX:1">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.3" name="Device Resource" id="99f5042b-84c1-4193-ad1b-3087080b3e22"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="99f5042b-84c1-4193-ad1b-3087080b3e22" type="//@library/@sublibraries.0/@resourceTypes.3"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="BANDWIDTH:100">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.7" name="Device Resource" id="ce0ac648-c932-4d7f-8478-94bf198a400b" count="100.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="ce0ac648-c932-4d7f-8478-94bf198a400b" type="//@library/@sublibraries.0/@resourceTypes.7" count="100.0"/>
         </providedBundles>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.0" name="Installation Location Resource" id="f49ce19c-3433-47a6-89cc-e9f455f7c4bf" count="2.0"/>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.1" name="Installation Location Resource" id="4b3095d0-8803-452d-8659-68d077a7f173" count="200.0"/>
       </deviceTypes>
-      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" weight="1.0" isSelfManaging="true" name="RDC" mtbf="100000.0" cost="50000.0" id="d335d6e6-117e-40fb-acaf-0caacb48fa02">
+      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" cost="50000.0" name="RDC" weight="1.0" id="d335d6e6-117e-40fb-acaf-0caacb48fa02" isSelfManaging="true" mtbf="100000.0">
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="46218fbc-af79-4548-8c7e-8e1a1ebf4341" type="//@library/@sublibraries.0/@resourceTypes.0"/>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="CPU:10">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.2" name="Device Resource" id="bfd72bc8-df91-4b2c-8397-f9bf4a5585f1" count="10.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="bfd72bc8-df91-4b2c-8397-f9bf4a5585f1" type="//@library/@sublibraries.0/@resourceTypes.2" count="10.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="AFDX:1">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.3" name="Device Resource" id="f129410b-6e3d-4c5c-a662-b71d4b18c665"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="f129410b-6e3d-4c5c-a662-b71d4b18c665" type="//@library/@sublibraries.0/@resourceTypes.3"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="BANDWIDTH:100">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.7" name="Device Resource" id="62c69820-2298-40ac-939c-1ae7d8ca83f4" count="100.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="62c69820-2298-40ac-939c-1ae7d8ca83f4" type="//@library/@sublibraries.0/@resourceTypes.7" count="100.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="CAN:3">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.4" name="Device Resource" id="d4c1ac5a-07df-4430-b588-5b83260402a0" count="3.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="d4c1ac5a-07df-4430-b588-5b83260402a0" type="//@library/@sublibraries.0/@resourceTypes.4" count="3.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="DISCRETE:10">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.5" name="Device Resource" id="adf59337-da74-47f8-9a67-af06e0b00b58" count="10.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="adf59337-da74-47f8-9a67-af06e0b00b58" type="//@library/@sublibraries.0/@resourceTypes.5" count="10.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="ANALOGUE:10">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.6" name="Device Resource" id="6feeb546-bf35-4734-9f34-6ef7f3ccd4b9" count="10.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="6feeb546-bf35-4734-9f34-6ef7f3ccd4b9" type="//@library/@sublibraries.0/@resourceTypes.6" count="10.0"/>
         </providedBundles>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.0" name="Installation Location Resource" id="46218fbc-af79-4548-8c7e-8e1a1ebf4341"/>
       </deviceTypes>
-      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" weight="1.0" isSelfManaging="true" name="AFDX Switch" mtbf="1000000.0" cost="10000.0" id="3447a0f4-3a39-47ca-a1d7-5899e964906c">
+      <deviceTypes xsi:type="de.oaam.model.library:DeviceType" cost="10000.0" name="AFDX Switch" weight="1.0" id="3447a0f4-3a39-47ca-a1d7-5899e964906c" isSelfManaging="true" mtbf="1000000.0">
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="1cf35e05-926f-4e47-b9ae-c16a3262eb97" type="//@library/@sublibraries.0/@resourceTypes.0"/>
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="91a69fd6-12a3-4044-9309-a3ab79c206c4" type="//@library/@sublibraries.0/@resourceTypes.1" count="10.0"/>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="AFDX:10">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.3" name="Device Resource" id="12946793-9498-4fbd-986f-e2563596a474" count="10.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="12946793-9498-4fbd-986f-e2563596a474" type="//@library/@sublibraries.0/@resourceTypes.3" count="10.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="BANDWIDTH:100">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.7" name="Device Resource" id="89b54504-9ab9-4275-ba4f-d4873629664e" count="100.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Device Resource" id="89b54504-9ab9-4275-ba4f-d4873629664e" type="//@library/@sublibraries.0/@resourceTypes.7" count="100.0"/>
         </providedBundles>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.0" name="Installation Location Resource" id="1cf35e05-926f-4e47-b9ae-c16a3262eb97"/>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.1" name="Installation Location Resource" id="91a69fd6-12a3-4044-9309-a3ab79c206c4" count="10.0"/>
       </deviceTypes>
       <deviceTypes xsi:type="de.oaam.model.library:DeviceType" name="Pressure Sensor" id="c314538d-1fcb-4b65-beef-d49cceef0a0d_device"/>
       <deviceTypes xsi:type="de.oaam.model.library:DeviceType" name="Outflow Valve" id="a157e201-1d82-42da-b1c1-b3c9131db5e0_device"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="#" name="Slots" id="f6f2f08b-595c-4c39-b41d-344b0f18dcd2"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="W/t" name="Cooling" id="4da1c7df-66e0-4fbf-995d-ce674b86cd2e"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="MIPS" name="CPU" id="eec97daf-7d67-4ef5-9532-278819a430a7"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="#ports" name="AFDX" id="0d9b95dc-43ce-4a4c-9fd2-a5905c2be04d"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="#ports" name="CAN" id="16f482e5-116b-4d6d-b988-5520ab691b91"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="#pins" name="DISCRETE" id="4e40515c-4e17-4174-80d4-386a16c0f1ae"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="#pins" name="ANALOGUE" id="b98a7f6c-ccb9-4889-b6c5-a75d2fdb7a83"/>
-      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" unit="kb/s" name="BANDWIDTH" id="f7460667-2db8-40d3-81ba-1046af6c0795"/>
-      <wireTypes xsi:type="de.oaam.model.library:WireType" specificPrice="1.0" name="Analogue Line" id="32344196-e961-4858-81bf-316c72d192a9" specificWeight="0.1"/>
-      <wireTypes xsi:type="de.oaam.model.library:WireType" specificPrice="1.0" name="Discretes (4 lines)" id="44462c7c-efc2-4312-ab64-101a2d8b3a1b" specificWeight="0.4"/>
-      <wireTypes xsi:type="de.oaam.model.library:WireType" specificPrice="10.0" name="AFDX Wire" id="10de0a34-9ff8-4c9c-8898-5e4b14ef5dee" specificWeight="0.5"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="f6f2f08b-595c-4c39-b41d-344b0f18dcd2" unit="#" name="Slots"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="4da1c7df-66e0-4fbf-995d-ce674b86cd2e" unit="W/t" name="Cooling"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="eec97daf-7d67-4ef5-9532-278819a430a7" unit="MIPS" name="CPU"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="0d9b95dc-43ce-4a4c-9fd2-a5905c2be04d" unit="#ports" name="AFDX"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="16f482e5-116b-4d6d-b988-5520ab691b91" unit="#ports" name="CAN"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="4e40515c-4e17-4174-80d4-386a16c0f1ae" unit="#pins" name="DISCRETE"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="b98a7f6c-ccb9-4889-b6c5-a75d2fdb7a83" unit="#pins" name="ANALOGUE"/>
+      <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="f7460667-2db8-40d3-81ba-1046af6c0795" unit="kb/s" name="BANDWIDTH"/>
+      <wireTypes xsi:type="de.oaam.model.library:WireType" name="Analogue Line" specificPrice="1.0" specificWeight="0.1" id="32344196-e961-4858-81bf-316c72d192a9"/>
+      <wireTypes xsi:type="de.oaam.model.library:WireType" name="Discretes (4 lines)" specificPrice="1.0" specificWeight="0.4" id="44462c7c-efc2-4312-ab64-101a2d8b3a1b"/>
+      <wireTypes xsi:type="de.oaam.model.library:WireType" name="AFDX Wire" specificPrice="10.0" specificWeight="0.5" id="10de0a34-9ff8-4c9c-8898-5e4b14ef5dee"/>
       <taskTypes xsi:type="de.oaam.model.library:TaskType" name="Pressure" id="4a0e2bae-2553-4118-8332-d5e71f09a952">
         <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Pressure_SRC" id="92a1c1f1-4963-4bf4-ac3f-235d9fe5949e"/>
-        <requiredResources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.5" name="DISCRETE:1" id="76ea371e-d23d-483b-89f0-caadd52b54e5"/>
+        <requiredResources xsi:type="de.oaam.model.library:Resource" name="DISCRETE:1" id="76ea371e-d23d-483b-89f0-caadd52b54e5" type="//@library/@sublibraries.0/@resourceTypes.5"/>
       </taskTypes>
       <taskTypes xsi:type="de.oaam.model.library:TaskType" name="CON" id="21a1f43d-fdda-4cb2-9370-61f5f8f457e2">
+        <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Pressure_DST" id="81e4994e-0fff-44de-b2a4-5a0d7809eb3e"/>
+        <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Valid_DST" id="59b22dc4-daf6-4b1c-86ba-df22dbe2efd3"/>
         <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Left Valve Control_SRC" id="ba1193db-20df-4aef-ab8b-a585301d4d1f"/>
         <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Right Valve Control_SRC" id="9dd497aa-4aee-45a5-a2c4-2862d3b83484"/>
         <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Control Output_SRC" id="c2fb1aab-240e-4995-90a4-15a35e502617"/>
-        <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Pressure_DST" id="81e4994e-0fff-44de-b2a4-5a0d7809eb3e"/>
-        <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Valid_DST" id="59b22dc4-daf6-4b1c-86ba-df22dbe2efd3"/>
       </taskTypes>
       <taskTypes xsi:type="de.oaam.model.library:TaskType" name="MON" id="6dda4aad-6edd-4cf4-bcfc-1bf144e2619c">
-        <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Valid_SRC" id="f8014eef-ef94-4f47-82b8-9ca1a36a199b"/>
         <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Control Output_DST" id="9971ddf5-efa3-4b9c-b09a-87eeb60be614"/>
+        <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Valid_SRC" id="f8014eef-ef94-4f47-82b8-9ca1a36a199b"/>
       </taskTypes>
       <taskTypes xsi:type="de.oaam.model.library:TaskType" name="Valve" id="647637df-d89c-4911-b900-75dcb1ef48fb">
         <inputDeclarations xsi:type="de.oaam.model.library:InputDeclaration" name="Left Valve Control_DST" id="1007d58e-344b-41f8-8812-f6fcca5566aa"/>
@@ -182,343 +183,342 @@
         <outputDeclarations xsi:type="de.oaam.model.library:OutputDeclaration" name="Outflow Valve" id="a157e201-1d82-42da-b1c1-b3c9131db5e0_out"/>
       </taskTypes>
       <signalTypes xsi:type="de.oaam.model.library:SignalType" name="FLOAT32" id="aa0dc992-da3f-49d1-9f92-c63a4beae364"/>
-      <powerSources xsi:type="de.oaam.model.library:PowerSource" name="DC_ESSENTIAL" id="9b7c5758-4f66-444d-bee9-6c11f69718ba"/>
-      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Afdx Line" id="4883e413-b012-4889-b835-4c869452b24a" wireTypes="//@library/@sublibraries.0/@wireTypes.2"/>
-      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Pressure Sensor" id="c314538d-1fcb-4b65-beef-d49cceef0a0d_connection" wireTypes="//@library/@sublibraries.0/@wireTypes.0"/>
-      <connectionTypes xsi:type="de.oaam.model.library:ConnectionType" name="Outflow Valve" id="a157e201-1d82-42da-b1c1-b3c9131db5e0_connection" wireTypes="//@library/@sublibraries.0/@wireTypes.1"/>
+      <powerSources xsi:type="de.oaam.model.library:PowerSource" id="9b7c5758-4f66-444d-bee9-6c11f69718ba" name="DC_ESSENTIAL"/>
     </sublibraries>
-    <sublibraries xsi:type="de.oaam.model.library:Sublibrary" name="New NSR" id="574d2850-5aaf-4e17-b141-8520ab6c7667">
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Avionics Bay" id="26fc5e88-9115-4118-9eec-b44fd4235e72">
+    <sublibraries xsi:type="de.oaam.model.library:Sublibrary" id="173e9536-0c40-11e9-b852-b88a60b7258b" name="New NSR">
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Avionics Bay" id="26fc5e88-9115-4118-9eec-b44fd4235e72_type">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_26fc5e88-9115-4118-9eec-b44fd4235e72from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_type" name="to_Avionics Bayfrom_Center_type"/>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="Slots:10">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.0" name="Installation Location Resource" id="f22ec8ef-b805-44ad-8413-7cd6277141f1" count="10.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="f22ec8ef-b805-44ad-8413-7cd6277141f1" type="//@library/@sublibraries.0/@resourceTypes.0" count="10.0"/>
         </providedBundles>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="Cooling:1000">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.1" name="Installation Location Resource" id="89aad932-2471-454c-8e7d-faaccdf06a29" count="1000.0"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="89aad932-2471-454c-8e7d-faaccdf06a29" type="//@library/@sublibraries.0/@resourceTypes.1" count="1000.0"/>
         </providedBundles>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Aircraft Middle" id="3d5c7d11-0a65-40c5-964a-dd93aad5e60e">
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Aircraft Middle" id="3d5c7d11-0a65-40c5-964a-dd93aad5e60e_type">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_3d5c7d11-0a65-40c5-964a-dd93aad5e60e_to_65888844-bcad-4d92-974d-e1dfc22a0410_type" name="from_Aircraft Middle_to_CabinFloor"/>
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60efrom_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_type" name="to_Aircraft Middlefrom_Center_type"/>
         <providedBundles xsi:type="de.oaam.model.library:ResourceBundle" name="Slots:1">
-          <resources xsi:type="de.oaam.model.library:Resource" type="//@library/@sublibraries.0/@resourceTypes.0" name="Installation Location Resource" id="494e4a00-f5b8-4d4c-8b64-bad946304222"/>
+          <resources xsi:type="de.oaam.model.library:Resource" name="Installation Location Resource" id="494e4a00-f5b8-4d4c-8b64-bad946304222" type="//@library/@sublibraries.0/@resourceTypes.0"/>
         </providedBundles>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Cabin Pressure Sensor" id="f3541bd6-1ce1-41cd-b8a9-972df5d97c9a">
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Center" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6"/>
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" id="f3541bd6-1ce1-41cd-b8a9-972df5d97c9a_type" name="Cabin Pressure Sensor">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a_to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_type" name="from_Cabin Pressure Sensor_to_Center"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Left Outflow Valve" id="1d99fac0-b1f6-422a-ac46-30248966fd92">
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" id="1d99fac0-b1f6-422a-ac46-30248966fd92_type" name="Left Outflow Valve">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_1d99fac0-b1f6-422a-ac46-30248966fd92from_65888844-bcad-4d92-974d-e1dfc22a0410_type" name="to_Left Outflow Valvefrom_CabinFloor_type"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" name="Right Outflow Valve" id="dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4">
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_CabinFloor" id="to_65888844-bcad-4d92-974d-e1dfc22a0410"/>
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" id="dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4_type" name="Right Outflow Valve">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4from_65888844-bcad-4d92-974d-e1dfc22a0410_type" name="to_Right Outflow Valvefrom_CabinFloor_type"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" isJoint="true" name="CabinFloor" id="65888844-bcad-4d92-974d-e1dfc22a0410">
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Right Outflow Valve" id="to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4"/>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Left Outflow Valve" id="to_1d99fac0-b1f6-422a-ac46-30248966fd92"/>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Aircraft Middle" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e"/>
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" id="65888844-bcad-4d92-974d-e1dfc22a0410" name="CabinFloor" isJoint="true">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_65888844-bcad-4d92-974d-e1dfc22a0410_to_dbe0c4e4-84b0-4f61-80cb-5a42ef7c4dd4_type" name="from_CabinFloor_to_Right Outflow Valve"/>
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_65888844-bcad-4d92-974d-e1dfc22a0410_to_1d99fac0-b1f6-422a-ac46-30248966fd92_type" name="from_CabinFloor_to_Left Outflow Valve"/>
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_65888844-bcad-4d92-974d-e1dfc22a0410from_3d5c7d11-0a65-40c5-964a-dd93aad5e60e_type" name="to_CabinFloorfrom_Aircraft Middle_type"/>
       </locationTypes>
-      <locationTypes xsi:type="de.oaam.model.library:LocationType" isJoint="true" name="Center" id="e673cdd1-f199-42a7-9ed2-9bb453bd31e6">
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Aircraft Middle" id="to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e"/>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Avionics Bay" id="to_26fc5e88-9115-4118-9eec-b44fd4235e72"/>
-        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" name="to_Cabin Pressure Sensor" id="to_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a"/>
+      <locationTypes xsi:type="de.oaam.model.library:LocationType" id="e673cdd1-f199-42a7-9ed2-9bb453bd31e6" name="Center" isJoint="true">
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_to_3d5c7d11-0a65-40c5-964a-dd93aad5e60e_type" name="from_Center_to_Aircraft Middle"/>
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="from_e673cdd1-f199-42a7-9ed2-9bb453bd31e6_to_26fc5e88-9115-4118-9eec-b44fd4235e72_type" name="from_Center_to_Avionics Bay"/>
+        <ductOpeningDeclarations xsi:type="de.oaam.model.library:DuctOpeningDeclaration" id="to_e673cdd1-f199-42a7-9ed2-9bb453bd31e6from_f3541bd6-1ce1-41cd-b8a9-972df5d97c9a_type" name="to_Centerfrom_Cabin Pressure Sensor_type"/>
       </locationTypes>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="5bd9c45c-d48c-4f8a-82ef-50def57c7c7b"/>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="66e73d63-05da-4bd3-9e84-d097f937f665"/>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="770395eb-af57-4f24-a459-f19d5a8dc02f"/>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="483f68a2-a05f-4592-81ab-73e5ae729d21"/>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="1cf80ad7-1c0e-432d-b23e-4b96ec7a85b4"/>
-      <ductTypes xsi:type="de.oaam.model.library:DuctType" name="Cable Route" id="d7238b2f-6915-4386-97b7-5d8075b63d7e"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="5bd9c45c-d48c-4f8a-82ef-50def57c7c7b_type" name="Cable Route"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="66e73d63-05da-4bd3-9e84-d097f937f665_type" name="Cable Route"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="770395eb-af57-4f24-a459-f19d5a8dc02f_type" name="Cable Route"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="483f68a2-a05f-4592-81ab-73e5ae729d21_type" name="Cable Route"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="1cf80ad7-1c0e-432d-b23e-4b96ec7a85b4_type" name="Cable Route"/>
+      <ductTypes xsi:type="de.oaam.model.library:DuctType" id="d7238b2f-6915-4386-97b7-5d8075b63d7e_type" name="Cable Route"/>
     </sublibraries>
+    <resourceTypes xsi:type="de.oaam.model.library:ResourceType" id="Limit" name="Limit"/>
   </library>
   <systems xsi:type="de.oaam.model.systems:Systems"/>
   <hardware xsi:type="de.oaam.model.hardware:Hardware">
-    <subhardware xsi:type="de.oaam.model.hardware:Subhardware" name="All Systems" id="25254af2-dda9-4c7b-b49d-876b40c74ad5_har">
-      <connections xsi:type="de.oaam.model.hardware:Connection" startingPoints="//@hardware/@subhardware.0/@devices.0/@ios.0" name="Cabin Pressure Sensor-&gt;VCS Pressure" type="//@library/@sublibraries.0/@connectionTypes.1" id="Cabin Pressure Sensor-&gt;VCS Pressure"/>
-      <connections xsi:type="de.oaam.model.hardware:Connection" startingPoints="//@hardware/@subhardware.0/@devices.1/@ios.0" name="Left Outflow Valve-&gt;VCS Valve Left" type="//@library/@sublibraries.0/@connectionTypes.2" id="Left Outflow Valve-&gt;VCS Valve Left"/>
-      <connections xsi:type="de.oaam.model.hardware:Connection" startingPoints="//@hardware/@subhardware.0/@devices.2/@ios.0" name="Right Outflow Valve-&gt;VCS Valve Right" type="//@library/@sublibraries.0/@connectionTypes.2" id="Right Outflow Valve-&gt;VCS Valve Right"/>
-      <devices xsi:type="de.oaam.model.hardware:Device" locationBinding="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" type="//@library/@sublibraries.0/@deviceTypes.3" id="4f370733-8644-4660-89f0-1bd9e5335f6a_device">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Cabin Pressure Sensor_io" id="Cabin Pressure Sensor_io"/>
+    <subhardware xsi:type="de.oaam.model.hardware:Subhardware" id="25254af2-dda9-4c7b-b49d-876b40c74ad5_har" name="All Systems">
+      <connections xsi:type="de.oaam.model.hardware:Connection" id="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" type="//@library/@sublibraries.0/@connectionTypes.1" startingPoints="//@hardware/@subhardware.0/@devices.0/@ios.0"/>
+      <connections xsi:type="de.oaam.model.hardware:Connection" id="Left Outflow Valve_connection_-&gt;VCS Valve Left" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" type="//@library/@sublibraries.0/@connectionTypes.2" startingPoints="//@hardware/@subhardware.0/@devices.1/@ios.0"/>
+      <connections xsi:type="de.oaam.model.hardware:Connection" id="Right Outflow Valve_connection_-&gt;VCS Valve Right" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" type="//@library/@sublibraries.0/@connectionTypes.2" startingPoints="//@hardware/@subhardware.0/@devices.2/@ios.0"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" name="Cabin Pressure Sensor" locationBinding="//@anatomy/@subanatomies.0/@locations.2" type="//@library/@sublibraries.0/@deviceTypes.3" id="4f370733-8644-4660-89f0-1bd9e5335f6a_device">
+        <ios xsi:type="de.oaam.model.hardware:Io" name="4f370733-8644-4660-89f0-1bd9e5335f6a_device_Cabin Pressure Sensor_io" id="173d1126-0c40-11e9-9d1b-b88a60b7258b"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" locationBinding="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" type="//@library/@sublibraries.0/@deviceTypes.4" id="997acb13-1a48-4694-8738-db9dd0bc2956_device">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Left Outflow Valve_io" id="Left Outflow Valve_io"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" name="Left Outflow Valve" locationBinding="//@anatomy/@subanatomies.0/@locations.3" type="//@library/@sublibraries.0/@deviceTypes.4" id="997acb13-1a48-4694-8738-db9dd0bc2956_device">
+        <ios xsi:type="de.oaam.model.hardware:Io" name="997acb13-1a48-4694-8738-db9dd0bc2956_device_Left Outflow Valve_io" id="173d8612-0c40-11e9-8209-b88a60b7258b"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" locationBinding="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" type="//@library/@sublibraries.0/@deviceTypes.4" id="46dcd1e0-47b3-4c70-a0e7-c1b984388404_device">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Right Outflow Valve_io" id="Right Outflow Valve_io"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" name="Right Outflow Valve" locationBinding="//@anatomy/@subanatomies.0/@locations.4" type="//@library/@sublibraries.0/@deviceTypes.4" id="46dcd1e0-47b3-4c70-a0e7-c1b984388404_device">
+        <ios xsi:type="de.oaam.model.hardware:Io" name="46dcd1e0-47b3-4c70-a0e7-c1b984388404_device_Right Outflow Valve_io" id="173dad38-0c40-11e9-8970-b88a60b7258b"/>
       </devices>
     </subhardware>
-    <subhardware xsi:type="de.oaam.model.hardware:Subhardware" name="CPM and RDC" id="1d14641f-f5d9-4c49-a361-d0c9d4662fd1">
-      <connections xsi:type="de.oaam.model.hardware:Connection" type="//@library/@sublibraries.0/@connectionTypes.0" startingPoints="//@hardware/@subhardware.1/@devices.0/@ios.0" name="Link" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.0" id="7e05f750-cc14-4e91-97ed-98d428f10aae"/>
-      <connections xsi:type="de.oaam.model.hardware:Connection" type="//@library/@sublibraries.0/@connectionTypes.0" startingPoints="//@hardware/@subhardware.1/@devices.2/@ios.0" name="Link" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.1" id="3582bd91-cd3f-4d9e-860a-8eaad42f3bb8"/>
-      <connections xsi:type="de.oaam.model.hardware:Connection" type="//@library/@sublibraries.0/@connectionTypes.0" startingPoints="//@hardware/@subhardware.1/@devices.3/@ios.0" name="Link" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.2" id="e57ab806-77c9-4e65-92d9-4fdb7485aa74"/>
-      <connections xsi:type="de.oaam.model.hardware:Connection" type="//@library/@sublibraries.0/@connectionTypes.0" startingPoints="//@hardware/@subhardware.1/@devices.1/@ios.0" name="Link" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.3" id="94a4dd5a-61ad-45fa-a02e-9a51afcbbe60"/>
-      <devices xsi:type="de.oaam.model.hardware:Device" type="//@library/@sublibraries.0/@deviceTypes.1" name="RDC1" id="b706787b-c7c5-454d-bdb2-badd6f05952a">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_source" id="7e05f750-cc14-4e91-97ed-98d428f10aae_source"/>
+    <subhardware xsi:type="de.oaam.model.hardware:Subhardware" id="1d14641f-f5d9-4c49-a361-d0c9d4662fd1" name="CPM and RDC">
+      <devices xsi:type="de.oaam.model.hardware:Device" id="b706787b-c7c5-454d-bdb2-badd6f05952a" type="//@library/@sublibraries.0/@deviceTypes.1" name="RDC1">
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e4750-0c40-11e9-85a0-b88a60b7258b" name="Link_source"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" type="//@library/@sublibraries.0/@deviceTypes.1" name="RDC2" id="0b06095d-eb4e-4b6f-8772-0095e2b39daa">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_source" id="94a4dd5a-61ad-45fa-a02e-9a51afcbbe60_source"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" id="0b06095d-eb4e-4b6f-8772-0095e2b39daa" type="//@library/@sublibraries.0/@deviceTypes.1" name="RDC2">
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e6e44-0c40-11e9-8ca4-b88a60b7258b" name="Link_source"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" type="//@library/@sublibraries.0/@deviceTypes.0" name="CPM1" id="cbfb9a98-6a0b-467f-a596-54212d71133b">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_source" id="3582bd91-cd3f-4d9e-860a-8eaad42f3bb8_source"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" id="cbfb9a98-6a0b-467f-a596-54212d71133b" type="//@library/@sublibraries.0/@deviceTypes.0" name="CPM1">
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e4752-0c40-11e9-9b7f-b88a60b7258b" name="Link_source"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" type="//@library/@sublibraries.0/@deviceTypes.0" name="CPM2" id="6c940fb0-0904-46ed-a8e0-feca18e307c9">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_source" id="e57ab806-77c9-4e65-92d9-4fdb7485aa74_source"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" id="6c940fb0-0904-46ed-a8e0-feca18e307c9" type="//@library/@sublibraries.0/@deviceTypes.0" name="CPM2">
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e6e42-0c40-11e9-a761-b88a60b7258b" name="Link_source"/>
       </devices>
-      <devices xsi:type="de.oaam.model.hardware:Device" type="//@library/@sublibraries.0/@deviceTypes.2" name="Switch1" id="7d5caadd-f86f-4906-a37c-0214d4eaf313">
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_destination" id="7e05f750-cc14-4e91-97ed-98d428f10aae_destination"/>
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_destination" id="3582bd91-cd3f-4d9e-860a-8eaad42f3bb8_destination"/>
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_destination" id="e57ab806-77c9-4e65-92d9-4fdb7485aa74_destination"/>
-        <ios xsi:type="de.oaam.model.hardware:Io" name="Link_destination" id="94a4dd5a-61ad-45fa-a02e-9a51afcbbe60_destination"/>
+      <devices xsi:type="de.oaam.model.hardware:Device" id="7d5caadd-f86f-4906-a37c-0214d4eaf313" type="//@library/@sublibraries.0/@deviceTypes.2" name="Switch1">
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e4751-0c40-11e9-bd87-b88a60b7258b" name="Link_destination"/>
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e4753-0c40-11e9-9ad6-b88a60b7258b" name="Link_destination"/>
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e6e43-0c40-11e9-8c16-b88a60b7258b" name="Link_destination"/>
+        <ios xsi:type="de.oaam.model.hardware:Io" id="173e6e45-0c40-11e9-ba45-b88a60b7258b" name="Link_destination"/>
       </devices>
+      <connections xsi:type="de.oaam.model.hardware:Connection" name="Link" startingPoints="//@hardware/@subhardware.1/@devices.0/@ios.0" id="7e05f750-cc14-4e91-97ed-98d428f10aae" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.0" type="//@library/@sublibraries.0/@connectionTypes.0"/>
+      <connections xsi:type="de.oaam.model.hardware:Connection" name="Link" startingPoints="//@hardware/@subhardware.1/@devices.2/@ios.0" id="3582bd91-cd3f-4d9e-860a-8eaad42f3bb8" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.1" type="//@library/@sublibraries.0/@connectionTypes.0"/>
+      <connections xsi:type="de.oaam.model.hardware:Connection" name="Link" startingPoints="//@hardware/@subhardware.1/@devices.3/@ios.0" id="e57ab806-77c9-4e65-92d9-4fdb7485aa74" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.2" type="//@library/@sublibraries.0/@connectionTypes.0"/>
+      <connections xsi:type="de.oaam.model.hardware:Connection" name="Link" startingPoints="//@hardware/@subhardware.1/@devices.1/@ios.0" id="94a4dd5a-61ad-45fa-a02e-9a51afcbbe60" endPoints="//@hardware/@subhardware.1/@devices.4/@ios.3" type="//@library/@sublibraries.0/@connectionTypes.0"/>
     </subhardware>
   </hardware>
   <capabilities xsi:type="de.oaam.model.capabilities:Capabilities">
-    <subcapabilities xsi:type="de.oaam.model.capabilities:Subcapabilities" name="CPM and RDC Platform" id="4531128e-5d78-40f5-9c6c-9e6b7f6f8706_cap">
+    <subcapabilities xsi:type="de.oaam.model.capabilities:Subcapabilities" id="4531128e-5d78-40f5-9c6c-9e6b7f6f8706_cap" name="CPM and RDC Platform">
       <subcapabilities xsi:type="de.oaam.model.capabilities:Subcapabilities" name="CPM">
-        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.0" taskType="//@library/@sublibraries.0/@taskTypes.1" name="CON on CPM">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="CPU:60" id="d652b9a5-9a19-420f-8fc8-968bd280569e" count="60.0" type="//@library/@sublibraries.0/@resourceTypes.2"/>
+        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" taskType="//@library/@sublibraries.0/@taskTypes.1" deviceType="//@library/@sublibraries.0/@deviceTypes.0" name="CON on CPM">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.2" name="CPU:60" count="60.0" id="d652b9a5-9a19-420f-8fc8-968bd280569e"/>
         </taskOnDeviceCapabilities>
-        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.0" taskType="//@library/@sublibraries.0/@taskTypes.2" name="MON on CPM">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="CPU:30" id="af38a562-0e99-404a-b140-c530df11f966" count="30.0" type="//@library/@sublibraries.0/@resourceTypes.2"/>
+        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" taskType="//@library/@sublibraries.0/@taskTypes.2" deviceType="//@library/@sublibraries.0/@deviceTypes.0" name="MON on CPM">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.2" name="CPU:30" count="30.0" id="af38a562-0e99-404a-b140-c530df11f966"/>
         </taskOnDeviceCapabilities>
       </subcapabilities>
       <subcapabilities xsi:type="de.oaam.model.capabilities:Subcapabilities" name="RDC">
-        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.1" taskType="//@library/@sublibraries.0/@taskTypes.0" name="Pressure on RDC">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="ANALOGUE:1" id="e054d30a-c803-475a-9d97-ca88a5225e13" count="1.0" type="//@library/@sublibraries.0/@resourceTypes.6"/>
+        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" taskType="//@library/@sublibraries.0/@taskTypes.0" deviceType="//@library/@sublibraries.0/@deviceTypes.1" name="Pressure on RDC">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.6" name="ANALOGUE:1" count="1.0" id="e054d30a-c803-475a-9d97-ca88a5225e13"/>
         </taskOnDeviceCapabilities>
-        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.1" taskType="//@library/@sublibraries.0/@taskTypes.3" name="Valve on RDC">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="DISCRETE:4" id="7db04b84-aa09-4017-aac3-4b7fab124156" count="4.0" type="//@library/@sublibraries.0/@resourceTypes.5"/>
+        <taskOnDeviceCapabilities xsi:type="de.oaam.model.capabilities:TaskOnDeviceCapability" taskType="//@library/@sublibraries.0/@taskTypes.3" deviceType="//@library/@sublibraries.0/@deviceTypes.1" name="Valve on RDC">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.5" name="DISCRETE:4" count="4.0" id="7db04b84-aa09-4017-aac3-4b7fab124156"/>
         </taskOnDeviceCapabilities>
       </subcapabilities>
       <subcapabilities xsi:type="de.oaam.model.capabilities:Subcapabilities" name="AFDX Switch">
-        <signalOnConnectionOrDeviceCapabilities xsi:type="de.oaam.model.capabilities:SignalOnConnectionOrDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.2" signalType="//@library/@sublibraries.0/@signalTypes.0" name="Capability">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="BANDWIDTH:10" id="f884d633-5c5f-4b18-a391-84a080a6d41b" count="10.0" type="//@library/@sublibraries.0/@resourceTypes.7"/>
+        <signalOnConnectionOrDeviceCapabilities xsi:type="de.oaam.model.capabilities:SignalOnConnectionOrDeviceCapability" deviceType="//@library/@sublibraries.0/@deviceTypes.2" name="Capability" signalType="//@library/@sublibraries.0/@signalTypes.0">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.7" name="BANDWIDTH:10" count="10.0" id="f884d633-5c5f-4b18-a391-84a080a6d41b"/>
         </signalOnConnectionOrDeviceCapabilities>
-        <signalOnConnectionOrDeviceCapabilities xsi:type="de.oaam.model.capabilities:SignalOnConnectionOrDeviceCapability" connectionType="//@library/@sublibraries.0/@connectionTypes.0" signalType="//@library/@sublibraries.0/@signalTypes.0" name="Capability">
-          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" name="BANDWIDTH:10" id="406c1226-bc9c-4b43-a3ec-e00d9e2caebe" count="10.0" type="//@library/@sublibraries.0/@resourceTypes.7"/>
+        <signalOnConnectionOrDeviceCapabilities xsi:type="de.oaam.model.capabilities:SignalOnConnectionOrDeviceCapability" connectionType="//@library/@sublibraries.0/@connectionTypes.0" name="Capability" signalType="//@library/@sublibraries.0/@signalTypes.0">
+          <resourceConsumptions xsi:type="de.oaam.model.capabilities:ResourceConsumption" type="//@library/@sublibraries.0/@resourceTypes.7" name="BANDWIDTH:10" count="10.0" id="406c1226-bc9c-4b43-a3ec-e00d9e2caebe"/>
         </signalOnConnectionOrDeviceCapabilities>
       </subcapabilities>
     </subcapabilities>
   </capabilities>
   <allocations xsi:type="de.oaam.model.allocations:Allocations">
-    <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Dezentralized New NSR Lufthansa" id="8cd68083-96e4-4404-9532-664625e1d582">
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0" id="999ef5a4-0675-415b-b154-bbf6ff5868e4"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="c9fac5cf-f448-4f12-9152-447d41b6b7e9"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="b15ed858-8dd6-4bec-8309-1f02d39f57b2"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="141ef1a8-c3a9-4302-8740-f77b7a1ba0eb"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="a9d55763-b562-463f-8713-067aaf886e72"/>
+    <suballocations xsi:type="de.oaam.model.allocations:Suballocations" id="8cd68083-96e4-4404-9532-664625e1d582" name="Dezentralized New NSR Lufthansa">
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="999ef5a4-0675-415b-b154-bbf6ff5868e4" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="c9fac5cf-f448-4f12-9152-447d41b6b7e9" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="b15ed858-8dd6-4bec-8309-1f02d39f57b2" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="141ef1a8-c3a9-4302-8740-f77b7a1ba0eb" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="a9d55763-b562-463f-8713-067aaf886e72" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Task Assignment (Peripheral Wire Mass)" id="b29aecde-87b5-4a05-9de0-372aa7c67aef">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.0" name="VCS Pressure-&gt;RDC1" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="b4a08f8e-246f-46ff-9d7f-7ff1501b879d"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="e8c784b9-cb58-49f3-aed6-2cddb5a571f5"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="befc38cd-4710-4c6a-9632-ed2816b6083e"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Left-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="fae8dabe-9f36-4b7b-9ae7-c6167362f215"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Right-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="b7c776a6-63df-4961-95db-7a913a969439"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0" id="3c3411b6-fb9c-4cd2-9751-52cd7282aeb0"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="8a5cee9a-394b-413a-bcdb-379c38ca9268"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="b0c3a6a6-8ff7-4f6f-94cf-86d44865b3a2"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="b38b3480-963e-4b44-b480-3a41dde78224"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="d11bf2d9-5c62-4e4f-95bd-12acb1265657"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="eeb516ef-e0a8-4a99-9219-519decef5aaa">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="eeb516ef-e0a8-4a99-9219-519decef5aaa"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="eeb516ef-e0a8-4a99-9219-519decef5aaa"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="eeb516ef-e0a8-4a99-9219-519decef5aaa"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="eeb516ef-e0a8-4a99-9219-519decef5aaa"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="eeb516ef-e0a8-4a99-9219-519decef5aaa"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="3c3411b6-fb9c-4cd2-9751-52cd7282aeb0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="8a5cee9a-394b-413a-bcdb-379c38ca9268" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="b0c3a6a6-8ff7-4f6f-94cf-86d44865b3a2" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="b38b3480-963e-4b44-b480-3a41dde78224" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="d11bf2d9-5c62-4e4f-95bd-12acb1265657" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa_4" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="eeb516ef-e0a8-4a99-9219-519decef5aaa_5" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2f337b50-73b3-4cab-b4c1-ced77f8350e4_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="2d31150d-cfe4-4750-bdb0-f54f59d915db">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="2d31150d-cfe4-4750-bdb0-f54f59d915db"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="2d31150d-cfe4-4750-bdb0-f54f59d915db"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="2d31150d-cfe4-4750-bdb0-f54f59d915db"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="2d31150d-cfe4-4750-bdb0-f54f59d915db"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="2d31150d-cfe4-4750-bdb0-f54f59d915db"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="2d31150d-cfe4-4750-bdb0-f54f59d915db_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC1" device="//@hardware/@subhardware.1/@devices.0" task="//@functions/@subfunctions.0/@tasks.0" id="b4a08f8e-246f-46ff-9d7f-7ff1501b879d" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="e8c784b9-cb58-49f3-aed6-2cddb5a571f5" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="befc38cd-4710-4c6a-9632-ed2816b6083e" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.3" id="fae8dabe-9f36-4b7b-9ae7-c6167362f215" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.4" id="b7c776a6-63df-4961-95db-7a913a969439" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Task Assignment (Device Mass)" id="f0c4491d-fd98-4818-9670-c32c07f5280b">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="c9b85f5b-73d1-4162-9f2d-bfd625a6335c"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="21109fe4-bcb5-4896-b543-e7af687b04b7"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Pressure-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="5987c809-c587-46f6-8bf5-754481c35d23"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Left-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="f8fbe690-4a14-46f3-a7dc-3063f4d64297"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Right-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="371326b5-8353-4621-ab2b-a54996d1a4dd"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="1fe279a0-0c43-4bda-9832-4f1a7d33cfa8"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="76fb650e-c26c-46ae-a9f6-6e430075ff0e"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="df9d88e7-a929-4f11-b6ef-071402cdfebe"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="0df82485-e57e-4baa-a094-e228b514c3eb"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="3b7762c7-c506-4727-9ddc-424081ec6fb7">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="3b7762c7-c506-4727-9ddc-424081ec6fb7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="3b7762c7-c506-4727-9ddc-424081ec6fb7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="3b7762c7-c506-4727-9ddc-424081ec6fb7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="3b7762c7-c506-4727-9ddc-424081ec6fb7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="3b7762c7-c506-4727-9ddc-424081ec6fb7"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="1fe279a0-0c43-4bda-9832-4f1a7d33cfa8" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="76fb650e-c26c-46ae-a9f6-6e430075ff0e" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="df9d88e7-a929-4f11-b6ef-071402cdfebe" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="0df82485-e57e-4baa-a094-e228b514c3eb" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7_4" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="3b7762c7-c506-4727-9ddc-424081ec6fb7_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="7ca96123-151b-4125-ab20-5f86c545e2fd">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="7ca96123-151b-4125-ab20-5f86c545e2fd"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="7ca96123-151b-4125-ab20-5f86c545e2fd"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="7ca96123-151b-4125-ab20-5f86c545e2fd"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="7ca96123-151b-4125-ab20-5f86c545e2fd"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="7ca96123-151b-4125-ab20-5f86c545e2fd"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="7ca96123-151b-4125-ab20-5f86c545e2fd" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7ca96123-151b-4125-ab20-5f86c545e2fd_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7ca96123-151b-4125-ab20-5f86c545e2fd_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7ca96123-151b-4125-ab20-5f86c545e2fd_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7ca96123-151b-4125-ab20-5f86c545e2fd_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7ca96123-151b-4125-ab20-5f86c545e2fd_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="6d4169ae-b436-47c8-8e78-172d4687d701">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="6d4169ae-b436-47c8-8e78-172d4687d701"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="6d4169ae-b436-47c8-8e78-172d4687d701"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="6d4169ae-b436-47c8-8e78-172d4687d701"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="6d4169ae-b436-47c8-8e78-172d4687d701"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="6d4169ae-b436-47c8-8e78-172d4687d701"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="6d4169ae-b436-47c8-8e78-172d4687d701" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="6d4169ae-b436-47c8-8e78-172d4687d701_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="6d4169ae-b436-47c8-8e78-172d4687d701_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="6d4169ae-b436-47c8-8e78-172d4687d701_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="6d4169ae-b436-47c8-8e78-172d4687d701_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="6d4169ae-b436-47c8-8e78-172d4687d701_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="c9b85f5b-73d1-4162-9f2d-bfd625a6335c" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="21109fe4-bcb5-4896-b543-e7af687b04b7" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.0" id="5987c809-c587-46f6-8bf5-754481c35d23" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.3" id="f8fbe690-4a14-46f3-a7dc-3063f4d64297" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.4" id="371326b5-8353-4621-ab2b-a54996d1a4dd" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Task Assignment (OIC)" id="fbf9f8cb-0a91-41d5-b3d0-9cd9e3a0caf2">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.0" name="VCS Pressure-&gt;RDC1" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="d757ea21-ac6b-48c2-8189-73e0763c2e64"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.0" name="VCS Valve Left-&gt;RDC1" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="7f5de5ba-6f8a-4698-a9af-96d849086df3"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.0" name="VCS Valve Right-&gt;RDC1" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="adec9481-2fe3-4646-9d60-eefc39a83abc"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="2e141ee9-f643-478e-9dde-14fbe6095b9b"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="cda3c8ad-87b5-4255-89d5-cf5954a39db1"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0" id="b718030c-555d-4cf3-8d20-389fbad25c2c"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="aab09ae4-8b2e-43c1-830e-22981d81e96f"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="c75a3962-2746-4cdc-b4dc-229a37200a9d"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="45ca6057-4e2a-427c-b3d7-c547303bc142"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="eb9260bd-8b77-4663-a08c-680db6286efd"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="b5cde846-e592-44c6-a644-6b88d7988e86">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="b5cde846-e592-44c6-a644-6b88d7988e86"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="b5cde846-e592-44c6-a644-6b88d7988e86"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="b5cde846-e592-44c6-a644-6b88d7988e86"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="b5cde846-e592-44c6-a644-6b88d7988e86"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="b5cde846-e592-44c6-a644-6b88d7988e86"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="b718030c-555d-4cf3-8d20-389fbad25c2c" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="aab09ae4-8b2e-43c1-830e-22981d81e96f" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="c75a3962-2746-4cdc-b4dc-229a37200a9d" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="45ca6057-4e2a-427c-b3d7-c547303bc142" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="eb9260bd-8b77-4663-a08c-680db6286efd" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="b5cde846-e592-44c6-a644-6b88d7988e86" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="b5cde846-e592-44c6-a644-6b88d7988e86_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="b5cde846-e592-44c6-a644-6b88d7988e86_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="b5cde846-e592-44c6-a644-6b88d7988e86_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="b5cde846-e592-44c6-a644-6b88d7988e86_4" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="b5cde846-e592-44c6-a644-6b88d7988e86_5" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_6" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_7" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_8" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a385fc4e-5e9d-45fb-a331-bd84123c22a9_9" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="7d969830-3ebb-44a2-8520-586736aef285">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="7d969830-3ebb-44a2-8520-586736aef285"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="7d969830-3ebb-44a2-8520-586736aef285"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="7d969830-3ebb-44a2-8520-586736aef285" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_6" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_7" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_8" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="7d969830-3ebb-44a2-8520-586736aef285_9" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC1" device="//@hardware/@subhardware.1/@devices.0" task="//@functions/@subfunctions.0/@tasks.0" id="d757ea21-ac6b-48c2-8189-73e0763c2e64" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC1" device="//@hardware/@subhardware.1/@devices.0" task="//@functions/@subfunctions.0/@tasks.3" id="7f5de5ba-6f8a-4698-a9af-96d849086df3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC1" device="//@hardware/@subhardware.1/@devices.0" task="//@functions/@subfunctions.0/@tasks.4" id="adec9481-2fe3-4646-9d60-eefc39a83abc" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="2e141ee9-f643-478e-9dde-14fbe6095b9b" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="cda3c8ad-87b5-4255-89d5-cf5954a39db1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Optimal Task Assignment (Mass)" id="962c2336-3583-4a5d-9838-13105729f19d">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="e0351c92-c00e-4940-a3e3-4989ffedd05c"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="291d724b-26fe-41fb-93ff-e5c4a768191c"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Pressure-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="66fcf3e8-eacc-40eb-9bd6-18094e574aa7"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Left-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="cf5e4935-fa97-4d9b-976e-224f6b1e2d0d"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Right-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="271fd44b-f0f0-418c-87f6-e9184123be9e"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="85b8f966-d358-493b-9345-38df783d57c0"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="53e8c486-5053-405d-a77b-755fe5392b2c"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="4af43bab-f7cf-4c60-b823-ee0511f77030"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="b161293e-4827-4d48-921b-f1d14f5874cd"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="85b8f966-d358-493b-9345-38df783d57c0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="53e8c486-5053-405d-a77b-755fe5392b2c" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="4af43bab-f7cf-4c60-b823-ee0511f77030" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="b161293e-4827-4d48-921b-f1d14f5874cd" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961_4" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="0dd2d371-7d6d-4446-b5fc-12e8c5889961_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="5aebd851-fbe7-41ef-870d-55299303446d">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="5aebd851-fbe7-41ef-870d-55299303446d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="5aebd851-fbe7-41ef-870d-55299303446d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="5aebd851-fbe7-41ef-870d-55299303446d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="5aebd851-fbe7-41ef-870d-55299303446d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="5aebd851-fbe7-41ef-870d-55299303446d"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="5aebd851-fbe7-41ef-870d-55299303446d" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="5aebd851-fbe7-41ef-870d-55299303446d_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="5aebd851-fbe7-41ef-870d-55299303446d_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="5aebd851-fbe7-41ef-870d-55299303446d_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="5aebd851-fbe7-41ef-870d-55299303446d_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="5aebd851-fbe7-41ef-870d-55299303446d_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a1728d2a-f9da-4cd7-b1d8-78a458b76420_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="e0351c92-c00e-4940-a3e3-4989ffedd05c" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="291d724b-26fe-41fb-93ff-e5c4a768191c" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.0" id="66fcf3e8-eacc-40eb-9bd6-18094e574aa7" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.3" id="cf5e4935-fa97-4d9b-976e-224f6b1e2d0d" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.4" id="271fd44b-f0f0-418c-87f6-e9184123be9e" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="Mass Optimal Device Assignment" id="da4b5641-6b13-48c7-83ea-30904ebbef65">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="86c0a5c6-0df9-4603-a983-f32226e49f8f"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="8d871987-3885-43ba-99aa-0be63571af16"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Pressure-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="69b96430-9b9a-4cfc-8a21-61d8f00acc9a"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Left-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="735cc644-67b8-4115-accc-384428ca15c5"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Right-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="b5019e1f-eca0-4362-aaab-245616d5a2bf"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0" id="2c01adb3-9530-4aa4-b69e-462183f42bed"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="761bf97b-5afb-40d8-866e-8872d6753365"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="6b5a5df4-797e-4228-b5f0-4cf8d55670c8"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="80a495a6-f338-44e7-962c-0c18c8527b6f"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1" id="7feb8e8a-d268-4508-89e7-d411e918d6ad"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="2c01adb3-9530-4aa4-b69e-462183f42bed" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="761bf97b-5afb-40d8-866e-8872d6753365" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="6b5a5df4-797e-4228-b5f0-4cf8d55670c8" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="80a495a6-f338-44e7-962c-0c18c8527b6f" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.1" id="7feb8e8a-d268-4508-89e7-d411e918d6ad" name="RDC2-&gt;Aircraft Middle" device="//@hardware/@subhardware.1/@devices.1"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9_4" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="a862666e-0be5-4f7f-a7ef-94897f7f4aa9_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="989d6cb6-522d-47a0-877e-46c2501e8cfc">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="989d6cb6-522d-47a0-877e-46c2501e8cfc"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="989d6cb6-522d-47a0-877e-46c2501e8cfc"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="989d6cb6-522d-47a0-877e-46c2501e8cfc"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="989d6cb6-522d-47a0-877e-46c2501e8cfc"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="989d6cb6-522d-47a0-877e-46c2501e8cfc"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="989d6cb6-522d-47a0-877e-46c2501e8cfc_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="8bd26290-a861-407a-84e9-c6b542ffc6c7">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="8bd26290-a861-407a-84e9-c6b542ffc6c7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="8bd26290-a861-407a-84e9-c6b542ffc6c7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="8bd26290-a861-407a-84e9-c6b542ffc6c7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="8bd26290-a861-407a-84e9-c6b542ffc6c7"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="8bd26290-a861-407a-84e9-c6b542ffc6c7"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="8bd26290-a861-407a-84e9-c6b542ffc6c7_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="86c0a5c6-0df9-4603-a983-f32226e49f8f" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="8d871987-3885-43ba-99aa-0be63571af16" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.0" id="69b96430-9b9a-4cfc-8a21-61d8f00acc9a" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.3" id="735cc644-67b8-4115-accc-384428ca15c5" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.4" id="b5019e1f-eca0-4362-aaab-245616d5a2bf" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
     </suballocations>
     <suballocations xsi:type="de.oaam.model.allocations:Suballocations" name="OIC Optimal Device Assignment" id="fd4421b6-7e5a-45ce-861e-cda2ffb73b68">
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Pressure-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.0" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0" id="84d6f625-dd57-4716-bee6-01fe38b56799"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Left-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.3" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="a96394ef-1343-4625-835f-2212c46b2a5d"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.1" name="VCS Valve Right-&gt;RDC2" task="//@functions/@subfunctions.0/@tasks.4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1" id="3b9c9edb-dff5-4b41-b720-259fd8eef2c4"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.2" name="VCS CON-&gt;CPM1" task="//@functions/@subfunctions.0/@tasks.1" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0" id="99661f4f-300c-436e-bb03-b204a4a968b4"/>
-      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" device="//@hardware/@subhardware.1/@devices.3" name="VCS MON-&gt;CPM2" task="//@functions/@subfunctions.0/@tasks.2" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1" id="5b8dd8ee-4b8a-40b1-9642-dc5191061e70"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0" id="353bb298-b3d0-40c2-880b-6805d234c94b"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="RDC2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.1" id="4f7a9cc5-1844-4a6f-8da8-240c08403e54"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2" id="e546639c-f56d-4d75-ba87-7fcfd64f9a32"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3" id="fb059498-98e3-43ba-ab37-4e3d82593a0b"/>
-      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4" id="19e4350d-91f6-4518-98cf-bf1c0fc801d3"/>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Cabin Pressure Sensor-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.2" name="Cabin Pressure Sensor" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.5" name="Cabin Pressure Sensor&lt;-&gt;Center" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="353bb298-b3d0-40c2-880b-6805d234c94b" name="RDC1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.0"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="4f7a9cc5-1844-4a6f-8da8-240c08403e54" name="RDC2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.1"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="e546639c-f56d-4d75-ba87-7fcfd64f9a32" name="CPM1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.2"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="fb059498-98e3-43ba-ab37-4e3d82593a0b" name="CPM2-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.3"/>
+      <deviceAssignments xsi:type="de.oaam.model.allocations:DeviceAssignment" location="//@anatomy/@subanatomies.0/@locations.0" id="19e4350d-91f6-4518-98cf-bf1c0fc801d3" name="Switch1-&gt;Avionics Bay" device="//@hardware/@subhardware.1/@devices.4"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a" name="Cabin Pressure Sensor_connection_-&gt;VCS Pressure" connection="//@hardware/@subhardware.0/@connections.0">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a_1" name="Cabin Pressure Sensor" location="//@anatomy/@subanatomies.0/@locations.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a_2" name="Cabin Pressure Sensor&lt;-&gt;Center" duct="//@anatomy/@subanatomies.0/@ducts.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a_3" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a_4" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="aadb8efe-7fcd-4873-92ca-b35cc34e1c5a_5" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Left Outflow Valve-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1" id="fbe450f0-31dd-4e47-9450-dae268d0660d">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.3" name="Left Outflow Valve" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.1" name="CabinFloor&lt;-&gt;Left Outflow Valve" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="fbe450f0-31dd-4e47-9450-dae268d0660d"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="fbe450f0-31dd-4e47-9450-dae268d0660d" name="Left Outflow Valve_connection_-&gt;VCS Valve Left" connection="//@hardware/@subhardware.0/@connections.1">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_1" name="Left Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_2" name="CabinFloor&lt;-&gt;Left Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_6" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_7" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_8" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="fbe450f0-31dd-4e47-9450-dae268d0660d_9" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
-      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" name="Right Outflow Valve-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2" id="10da82b4-566f-42b6-bb7b-09134c81c55d">
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.4" name="Right Outflow Valve" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.0" name="CabinFloor&lt;-&gt;Right Outflow Valve" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.5" name="CabinFloor" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.2" name="Aircraft Middle&lt;-&gt;CabinFloor" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.1" name="Aircraft Middle" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.3" name="Center&lt;-&gt;Aircraft Middle" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.6" name="Center" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" duct="//@anatomy/@subanatomies.0/@ducts.4" name="Center&lt;-&gt;Avionics Bay" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
-        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" location="//@anatomy/@subanatomies.0/@locations.0" name="Avionics Bay" id="10da82b4-566f-42b6-bb7b-09134c81c55d"/>
+      <connectionAssignments xsi:type="de.oaam.model.allocations:ConnectionAssignment" id="10da82b4-566f-42b6-bb7b-09134c81c55d" name="Right Outflow Valve_connection_-&gt;VCS Valve Right" connection="//@hardware/@subhardware.0/@connections.2">
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_1" name="Right Outflow Valve" location="//@anatomy/@subanatomies.0/@locations.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_2" name="CabinFloor&lt;-&gt;Right Outflow Valve" duct="//@anatomy/@subanatomies.0/@ducts.0"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_3" name="CabinFloor" location="//@anatomy/@subanatomies.0/@locations.5"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_4" name="Aircraft Middle&lt;-&gt;CabinFloor" duct="//@anatomy/@subanatomies.0/@ducts.2"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_5" name="Aircraft Middle" location="//@anatomy/@subanatomies.0/@locations.1"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_6" name="Center&lt;-&gt;Aircraft Middle" duct="//@anatomy/@subanatomies.0/@ducts.3"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_7" name="Center" location="//@anatomy/@subanatomies.0/@locations.6"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_8" name="Center&lt;-&gt;Avionics Bay" duct="//@anatomy/@subanatomies.0/@ducts.4"/>
+        <segments xsi:type="de.oaam.model.allocations:ConnectionAssignmentSegment" id="10da82b4-566f-42b6-bb7b-09134c81c55d_9" name="Avionics Bay" location="//@anatomy/@subanatomies.0/@locations.0"/>
       </connectionAssignments>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Pressure-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.0" id="84d6f625-dd57-4716-bee6-01fe38b56799" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Left-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.3" id="a96394ef-1343-4625-835f-2212c46b2a5d" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS Valve Right-&gt;RDC2" device="//@hardware/@subhardware.1/@devices.1" task="//@functions/@subfunctions.0/@tasks.4" id="3b9c9edb-dff5-4b41-b720-259fd8eef2c4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.1/@taskOnDeviceCapabilities.1"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS CON-&gt;CPM1" device="//@hardware/@subhardware.1/@devices.2" task="//@functions/@subfunctions.0/@tasks.1" id="99661f4f-300c-436e-bb03-b204a4a968b4" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.0"/>
+      <taskAssignments xsi:type="de.oaam.model.allocations:TaskAssignment" name="VCS MON-&gt;CPM2" device="//@hardware/@subhardware.1/@devices.3" task="//@functions/@subfunctions.0/@tasks.2" id="5b8dd8ee-4b8a-40b1-9642-dc5191061e70" capability="//@capabilities/@subcapabilities.0/@subcapabilities.0/@taskOnDeviceCapabilities.1"/>
     </suballocations>
   </allocations>
+  <scenario xsi:type="de.oaam.model.scenario:Scenario"/>
 </de.oaam.model:Architecture>

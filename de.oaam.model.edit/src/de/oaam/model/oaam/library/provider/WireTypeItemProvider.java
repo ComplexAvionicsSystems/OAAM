@@ -56,6 +56,7 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 			addNConductorsPropertyDescriptor(object);
 			addMinBendingRadiusPropertyDescriptor(object);
 			addNShieldsPropertyDescriptor(object);
+			addMtbfPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -171,6 +172,28 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Mtbf feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMtbfPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WireType_mtbf_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WireType_mtbf_feature", "_UI_WireType_type"),
+				 LibraryPackage.Literals.WIRE_TYPE__MTBF,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns WireType.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -213,6 +236,7 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 			case LibraryPackage.WIRE_TYPE__NCONDUCTORS:
 			case LibraryPackage.WIRE_TYPE__MIN_BENDING_RADIUS:
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
+			case LibraryPackage.WIRE_TYPE__MTBF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

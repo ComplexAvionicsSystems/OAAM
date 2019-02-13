@@ -294,21 +294,37 @@
           <details key="documentation" value="The data type of the array"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="8">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The internal alignment (padding) of array fields in bits. 0 means all elements are directly after each other. Values above 0 mean that fields smaller than the value will be stuffed with padding bits until a multiple of the alignment value is reached. 8 equals a one Byte allignment."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Struct" eSuperTypes="#//common/DataTypeA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A structure composed of multiple variables or arrays"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="8">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The internal alignment of array fields in byte. 0 means all elements are directly after each other. Values above 0 mean that fields smaller than the value will be stuffed with padding bytes until the alignment matches."/>
+          <details key="documentation" value="The internal alignment (padding) of array fields in bits. 0 means all elements are directly after each other. Values above 0 mean that fields smaller than the value will be stuffed with padding bits until a multiple of the alignment value is reached. 8 equals a one Byte allignment."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="fields" lowerBound="1"
           upperBound="-1" eType="#//common/DataTypeA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The data types of which the structure is composed of in sequential order."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inheritsFrom" eType="#//common/Struct">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to a super type of the struct. The inhereting struc will contain all elements of the super type and his super types plus the elements that are defined here."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If set to true there cannot be an instance of that struct. However, inhereting structs may be used in tasks or signals."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -873,6 +889,12 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A definition of a signal type."/>
       </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+          eType="#//common/DataTypeA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The data type or structure of a signal"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//library/ResourceConsumerA #//library/ResourceProviderA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1106,6 +1128,12 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="How many shielding conductors are used?"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The mean time between failure in [h]"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1885,7 +1913,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dissimilarTechnology"
-          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject">
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The information must be acquired by dissimilar technology. E.g. resistive and capacitive temperature sensors, or electric and mechanical power supply"/>
         </eAnnotations>

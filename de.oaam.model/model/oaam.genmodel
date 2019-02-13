@@ -81,11 +81,15 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Array/nElements"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//common/Array/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Array/alignment"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//common/Struct">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Struct/alignment"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//common/Struct/fields"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//common/Struct/inheritsFrom"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Struct/isAbstract"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//common/FloatingPoint">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/FloatingPoint/nBits"/>
@@ -205,7 +209,10 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/stateDeclarations"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/parameterDeclarations"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//library/SignalType"/>
+      <genClasses ecoreClass="oaam.ecore#//library/SignalType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/SignalType/type"/>
+      </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/DeviceType">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ioDeclarations"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/isSubdevice"/>
@@ -251,6 +258,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/nConductors"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/minBendingRadius"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/nShields"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/mtbf"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/InputDeclaration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

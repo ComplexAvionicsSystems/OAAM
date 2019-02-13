@@ -2444,11 +2444,11 @@ public interface SystemsPackage extends EPackage {
 	EAttribute getInputSegregation_DissimilarRoute();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InputSegregation#getDissimilarTechnology <em>Dissimilar Technology</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.systems.InputSegregation#isDissimilarTechnology <em>Dissimilar Technology</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Dissimilar Technology</em>'.
-	 * @see de.oaam.model.oaam.systems.InputSegregation#getDissimilarTechnology()
+	 * @see de.oaam.model.oaam.systems.InputSegregation#isDissimilarTechnology()
 	 * @see #getInputSegregation()
 	 * @generated
 	 */

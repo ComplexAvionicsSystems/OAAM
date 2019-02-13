@@ -611,6 +611,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getArray_Alignment() {
+		return (EAttribute)arrayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStruct() {
 		return structEClass;
 	}
@@ -631,6 +640,24 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 */
 	public EReference getStruct_Fields() {
 		return (EReference)structEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStruct_InheritsFrom() {
+		return (EReference)structEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStruct_IsAbstract() {
+		return (EAttribute)structEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -804,10 +831,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		arrayEClass = createEClass(ARRAY);
 		createEAttribute(arrayEClass, ARRAY__NELEMENTS);
 		createEReference(arrayEClass, ARRAY__TYPE);
+		createEAttribute(arrayEClass, ARRAY__ALIGNMENT);
 
 		structEClass = createEClass(STRUCT);
 		createEAttribute(structEClass, STRUCT__ALIGNMENT);
 		createEReference(structEClass, STRUCT__FIELDS);
+		createEReference(structEClass, STRUCT__INHERITS_FROM);
+		createEAttribute(structEClass, STRUCT__IS_ABSTRACT);
 
 		floatingPointEClass = createEClass(FLOATING_POINT);
 		createEAttribute(floatingPointEClass, FLOATING_POINT__NBITS);
@@ -918,10 +948,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArray_NElements(), ecorePackage.getEInt(), "nElements", "1", 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArray_Type(), this.getDataTypeA(), null, "type", null, 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArray_Alignment(), ecorePackage.getEInt(), "alignment", "8", 1, 1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(structEClass, Struct.class, "Struct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStruct_Alignment(), ecorePackage.getEInt(), "alignment", "0", 1, 1, Struct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStruct_Alignment(), ecorePackage.getEInt(), "alignment", "8", 1, 1, Struct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStruct_Fields(), this.getDataTypeA(), null, "fields", null, 1, -1, Struct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStruct_InheritsFrom(), this.getStruct(), null, "inheritsFrom", null, 0, 1, Struct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStruct_IsAbstract(), ecorePackage.getEBoolean(), "isAbstract", null, 0, 1, Struct.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(floatingPointEClass, FloatingPoint.class, "FloatingPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFloatingPoint_NBits(), ecorePackage.getEInt(), "nBits", "32", 1, 1, FloatingPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

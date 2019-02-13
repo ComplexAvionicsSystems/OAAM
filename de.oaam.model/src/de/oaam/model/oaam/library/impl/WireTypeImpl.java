@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.oaam.model.oaam.library.impl.WireTypeImpl#getNConductors <em>NConductors</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.WireTypeImpl#getMinBendingRadius <em>Min Bending Radius</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.WireTypeImpl#getNShields <em>NShields</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.WireTypeImpl#getMtbf <em>Mtbf</em>}</li>
  * </ul>
  *
  * @generated
@@ -130,6 +131,26 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 	 * @ordered
 	 */
 	protected int nShields = NSHIELDS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMtbf() <em>Mtbf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMtbf()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MTBF_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMtbf() <em>Mtbf</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMtbf()
+	 * @generated
+	 * @ordered
+	 */
+	protected double mtbf = MTBF_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -260,6 +281,27 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getMtbf() {
+		return mtbf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMtbf(double newMtbf) {
+		double oldMtbf = mtbf;
+		mtbf = newMtbf;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.WIRE_TYPE__MTBF, oldMtbf, mtbf));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -273,6 +315,8 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 				return getMinBendingRadius();
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
 				return getNShields();
+			case LibraryPackage.WIRE_TYPE__MTBF:
+				return getMtbf();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,6 +343,9 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 				return;
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
 				setNShields((Integer)newValue);
+				return;
+			case LibraryPackage.WIRE_TYPE__MTBF:
+				setMtbf((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -327,6 +374,9 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
 				setNShields(NSHIELDS_EDEFAULT);
 				return;
+			case LibraryPackage.WIRE_TYPE__MTBF:
+				setMtbf(MTBF_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -349,6 +399,8 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 				return minBendingRadius != MIN_BENDING_RADIUS_EDEFAULT;
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
 				return nShields != NSHIELDS_EDEFAULT;
+			case LibraryPackage.WIRE_TYPE__MTBF:
+				return mtbf != MTBF_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -373,6 +425,8 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 		result.append(minBendingRadius);
 		result.append(", nShields: ");
 		result.append(nShields);
+		result.append(", mtbf: ");
+		result.append(mtbf);
 		result.append(')');
 		return result.toString();
 	}

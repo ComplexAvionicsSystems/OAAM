@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#isDissimilarSource <em>Dissimilar Source</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#isDissimilarRoute <em>Dissimilar Route</em>}</li>
- *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#getDissimilarTechnology <em>Dissimilar Technology</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#isDissimilarTechnology <em>Dissimilar Technology</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#getGroupA <em>Group A</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.InputSegregation#getGroupB <em>Group B</em>}</li>
  * </ul>
@@ -89,22 +89,22 @@ public interface InputSegregation extends OaamBaseElementA {
 	 * The information must be acquired by dissimilar technology. E.g. resistive and capacitive temperature sensors, or electric and mechanical power supply
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Dissimilar Technology</em>' attribute.
-	 * @see #setDissimilarTechnology(Boolean)
+	 * @see #setDissimilarTechnology(boolean)
 	 * @see de.oaam.model.oaam.systems.SystemsPackage#getInputSegregation_DissimilarTechnology()
 	 * @model required="true"
 	 * @generated
 	 */
-	Boolean getDissimilarTechnology();
+	boolean isDissimilarTechnology();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.systems.InputSegregation#getDissimilarTechnology <em>Dissimilar Technology</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.systems.InputSegregation#isDissimilarTechnology <em>Dissimilar Technology</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Dissimilar Technology</em>' attribute.
-	 * @see #getDissimilarTechnology()
+	 * @see #isDissimilarTechnology()
 	 * @generated
 	 */
-	void setDissimilarTechnology(Boolean value);
+	void setDissimilarTechnology(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Group A</b></em>' reference list.

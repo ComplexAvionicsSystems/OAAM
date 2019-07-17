@@ -454,13 +454,22 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_CONTAINER_A__SUBLIBRARIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 17;
 
 	/**
+	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__IO_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 18;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 18;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -2355,6 +2364,115 @@ public interface LibraryPackage extends EPackage {
 	int WIRE_TYPE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.IoTypeImpl <em>Io Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.IoTypeImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoType()
+	 * @generated
+	 */
+	int IO_TYPE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Direction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__DIRECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Io Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Io Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.InputDeclarationImpl <em>Input Declaration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2362,7 +2480,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getInputDeclaration()
 	 * @generated
 	 */
-	int INPUT_DECLARATION = 15;
+	int INPUT_DECLARATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2516,7 +2634,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getOutputDeclaration()
 	 * @generated
 	 */
-	int OUTPUT_DECLARATION = 16;
+	int OUTPUT_DECLARATION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2688,7 +2806,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoDeclaration()
 	 * @generated
 	 */
-	int IO_DECLARATION = 17;
+	int IO_DECLARATION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2772,13 +2890,22 @@ public interface LibraryPackage extends EPackage {
 	int IO_DECLARATION__RESOURCES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_DECLARATION__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Io Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IO_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int IO_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Io Declaration</em>' class.
@@ -2797,7 +2924,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getDuctOpeningDeclaration()
 	 * @generated
 	 */
-	int DUCT_OPENING_DECLARATION = 18;
+	int DUCT_OPENING_DECLARATION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2897,7 +3024,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceGroup()
 	 * @generated
 	 */
-	int RESOURCE_GROUP = 19;
+	int RESOURCE_GROUP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3006,7 +3133,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getDeviceTypeSymmetry()
 	 * @generated
 	 */
-	int DEVICE_TYPE_SYMMETRY = 20;
+	int DEVICE_TYPE_SYMMETRY = 21;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3115,7 +3242,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoGroup()
 	 * @generated
 	 */
-	int IO_GROUP = 21;
+	int IO_GROUP = 22;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3224,7 +3351,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeDefinition()
 	 * @generated
 	 */
-	int ATTRIBUTE_DEFINITION = 22;
+	int ATTRIBUTE_DEFINITION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3342,7 +3469,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFaultPropagation()
 	 * @generated
 	 */
-	int FAULT_PROPAGATION = 23;
+	int FAULT_PROPAGATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3487,7 +3614,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputState()
 	 * @generated
 	 */
-	int TASK_INPUT_STATE = 24;
+	int TASK_INPUT_STATE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3605,7 +3732,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getPowerSource()
 	 * @generated
 	 */
-	int POWER_SOURCE = 25;
+	int POWER_SOURCE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3705,7 +3832,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceLink()
 	 * @generated
 	 */
-	int RESOURCE_LINK = 26;
+	int RESOURCE_LINK = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3823,7 +3950,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifier()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER = 27;
+	int RESOURCE_TYPE_MODIFIER = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3932,7 +4059,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierLevel()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER_LEVEL = 28;
+	int RESOURCE_TYPE_MODIFIER_LEVEL = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4068,7 +4195,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierReference()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER_REFERENCE = 29;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4186,7 +4313,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskTypeDissimilarity()
 	 * @generated
 	 */
-	int TASK_TYPE_DISSIMILARITY = 30;
+	int TASK_TYPE_DISSIMILARITY = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4304,7 +4431,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getDeviceTypeDissimilarity()
 	 * @generated
 	 */
-	int DEVICE_TYPE_DISSIMILARITY = 31;
+	int DEVICE_TYPE_DISSIMILARITY = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4422,7 +4549,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeDissimilarity()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY = 32;
+	int RESOURCE_TYPE_DISSIMILARITY = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4531,7 +4658,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
 	 * @generated
 	 */
-	int SUBLIBRARY = 33;
+	int SUBLIBRARY = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4768,6 +4895,15 @@ public interface LibraryPackage extends EPackage {
 	int SUBLIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
 
 	/**
+	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__IO_TYPES = LIBRARY_CONTAINER_A__IO_TYPES;
+
+	/**
 	 * The number of structural features of the '<em>Sublibrary</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4793,7 +4929,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskOutputTrigger()
 	 * @generated
 	 */
-	int TASK_OUTPUT_TRIGGER = 34;
+	int TASK_OUTPUT_TRIGGER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4947,7 +5083,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputTrigger()
 	 * @generated
 	 */
-	int TASK_INPUT_TRIGGER = 35;
+	int TASK_INPUT_TRIGGER = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5056,7 +5192,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskStateDeclaration()
 	 * @generated
 	 */
-	int TASK_STATE_DECLARATION = 36;
+	int TASK_STATE_DECLARATION = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5165,7 +5301,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskParameterDeclaration()
 	 * @generated
 	 */
-	int TASK_PARAMETER_DECLARATION = 37;
+	int TASK_PARAMETER_DECLARATION = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5274,7 +5410,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
 	 * @generated
 	 */
-	int LIBRARY = 38;
+	int LIBRARY = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5511,6 +5647,15 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
 
 	/**
+	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__IO_TYPES = LIBRARY_CONTAINER_A__IO_TYPES;
+
+	/**
 	 * The number of structural features of the '<em>Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5536,7 +5681,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoDirectionE()
 	 * @generated
 	 */
-	int IO_DIRECTION_E = 39;
+	int IO_DIRECTION_E = 40;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTypesE <em>Attribute Types E</em>}' enum.
@@ -5546,7 +5691,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTypesE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPES_E = 40;
+	int ATTRIBUTE_TYPES_E = 41;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTargetsE <em>Attribute Targets E</em>}' enum.
@@ -5556,7 +5701,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTargetsE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TARGETS_E = 41;
+	int ATTRIBUTE_TARGETS_E = 42;
 
 
 	/**
@@ -5873,6 +6018,17 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLibraryContainerA_Sublibraries();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.LibraryContainerA#getIoTypes <em>Io Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Io Types</em>'.
+	 * @see de.oaam.model.oaam.library.LibraryContainerA#getIoTypes()
+	 * @see #getLibraryContainerA()
+	 * @generated
+	 */
+	EReference getLibraryContainerA_IoTypes();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceType <em>Resource Type</em>}'.
@@ -6634,6 +6790,27 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getWireType_Mtbf();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.IoType <em>Io Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Io Type</em>'.
+	 * @see de.oaam.model.oaam.library.IoType
+	 * @generated
+	 */
+	EClass getIoType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.IoType#getDirection <em>Direction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Direction</em>'.
+	 * @see de.oaam.model.oaam.library.IoType#getDirection()
+	 * @see #getIoType()
+	 * @generated
+	 */
+	EAttribute getIoType_Direction();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.InputDeclaration <em>Input Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6827,6 +7004,17 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIoDeclaration_Resources();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.IoDeclaration#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.library.IoDeclaration#getType()
+	 * @see #getIoDeclaration()
+	 * @generated
+	 */
+	EReference getIoDeclaration_Type();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.DuctOpeningDeclaration <em>Duct Opening Declaration</em>}'.
@@ -7695,6 +7883,14 @@ public interface LibraryPackage extends EPackage {
 		EReference LIBRARY_CONTAINER_A__SUBLIBRARIES = eINSTANCE.getLibraryContainerA_Sublibraries();
 
 		/**
+		 * The meta object literal for the '<em><b>Io Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_CONTAINER_A__IO_TYPES = eINSTANCE.getLibraryContainerA_IoTypes();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl <em>Resource Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8277,6 +8473,24 @@ public interface LibraryPackage extends EPackage {
 		EAttribute WIRE_TYPE__MTBF = eINSTANCE.getWireType_Mtbf();
 
 		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.IoTypeImpl <em>Io Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.IoTypeImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoType()
+		 * @generated
+		 */
+		EClass IO_TYPE = eINSTANCE.getIoType();
+
+		/**
+		 * The meta object literal for the '<em><b>Direction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IO_TYPE__DIRECTION = eINSTANCE.getIoType_Direction();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.InputDeclarationImpl <em>Input Declaration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8425,6 +8639,14 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IO_DECLARATION__RESOURCES = eINSTANCE.getIoDeclaration_Resources();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IO_DECLARATION__TYPE = eINSTANCE.getIoDeclaration_Type();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.DuctOpeningDeclarationImpl <em>Duct Opening Declaration</em>}' class.

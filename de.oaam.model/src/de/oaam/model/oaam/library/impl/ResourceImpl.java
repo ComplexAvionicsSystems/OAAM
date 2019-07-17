@@ -258,7 +258,7 @@ public class ResourceImpl extends OaamBaseElementAImpl implements Resource {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (count: ");
 		result.append(count);
 		result.append(')');

@@ -25,6 +25,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * The '<em><b>AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Set the Boolean operation to AND.
+	 * <!-- end-model-doc -->
 	 * @see #AND_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * The '<em><b>OR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Sets the Boolean operation to OR.
+	 * <!-- end-model-doc -->
 	 * @see #OR_VALUE
 	 * @generated
 	 * @ordered
@@ -45,6 +51,9 @@ public enum BoolOperationTypesE implements Enumerator {
 	 * The '<em><b>XOR</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Sets the Boolean opartion to XOR.
+	 * <!-- end-model-doc -->
 	 * @see #XOR_VALUE
 	 * @generated
 	 * @ordered

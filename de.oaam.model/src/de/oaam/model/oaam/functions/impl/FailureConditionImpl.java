@@ -522,7 +522,7 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (maxOccurrenceProbability: ");
 		result.append(maxOccurrenceProbability);
 		result.append(", noSingleFailure: ");

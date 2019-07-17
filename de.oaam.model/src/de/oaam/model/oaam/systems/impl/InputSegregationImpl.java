@@ -334,7 +334,7 @@ public class InputSegregationImpl extends OaamBaseElementAImpl implements InputS
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (dissimilarSource: ");
 		result.append(dissimilarSource);
 		result.append(", dissimilarRoute: ");

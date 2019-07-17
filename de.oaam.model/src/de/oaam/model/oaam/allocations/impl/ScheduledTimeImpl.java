@@ -453,7 +453,7 @@ public class ScheduledTimeImpl extends OaamBaseElementAImpl implements Scheduled
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (cycle: ");
 		result.append(cycle);
 		result.append(", startTime: ");

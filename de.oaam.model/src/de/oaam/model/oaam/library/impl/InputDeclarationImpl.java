@@ -425,7 +425,7 @@ public class InputDeclarationImpl extends OaamBaseElementAImpl implements InputD
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (unit: ");
 		result.append(unit);
 		result.append(", precondition: ");

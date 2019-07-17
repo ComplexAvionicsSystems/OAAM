@@ -68,6 +68,7 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.LOCATION_TYPE: return createLocationType();
 			case LibraryPackage.DUCT_TYPE: return createDuctType();
 			case LibraryPackage.WIRE_TYPE: return createWireType();
+			case LibraryPackage.IO_TYPE: return createIoType();
 			case LibraryPackage.INPUT_DECLARATION: return createInputDeclaration();
 			case LibraryPackage.OUTPUT_DECLARATION: return createOutputDeclaration();
 			case LibraryPackage.IO_DECLARATION: return createIoDeclaration();
@@ -243,6 +244,16 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public WireType createWireType() {
 		WireTypeImpl wireType = new WireTypeImpl();
 		return wireType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IoType createIoType() {
+		IoTypeImpl ioType = new IoTypeImpl();
+		return ioType;
 	}
 
 	/**

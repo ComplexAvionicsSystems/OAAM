@@ -25,6 +25,9 @@ public enum IoDirectionE implements Enumerator {
 	 * The '<em><b>NONE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * No information flow in no direction.
+	 * <!-- end-model-doc -->
 	 * @see #NONE_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum IoDirectionE implements Enumerator {
 	 * The '<em><b>IN</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow into the device.
+	 * <!-- end-model-doc -->
 	 * @see #IN_VALUE
 	 * @generated
 	 * @ordered
@@ -45,6 +51,9 @@ public enum IoDirectionE implements Enumerator {
 	 * The '<em><b>OUT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow out of the device.
+	 * <!-- end-model-doc -->
 	 * @see #OUT_VALUE
 	 * @generated
 	 * @ordered
@@ -55,6 +64,9 @@ public enum IoDirectionE implements Enumerator {
 	 * The '<em><b>BOTH</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Information flow in and out of to the device.
+	 * <!-- end-model-doc -->
 	 * @see #BOTH_VALUE
 	 * @generated
 	 * @ordered

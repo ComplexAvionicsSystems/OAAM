@@ -165,6 +165,7 @@ public class RestrictionsActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("restrictions-settings"));
 		toolBarManager.add(new Separator("restrictions-additions"));
 	}

@@ -121,6 +121,15 @@ public interface LibraryFactory extends EFactory {
 	WireType createWireType();
 
 	/**
+	 * Returns a new object of class '<em>Io Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io Type</em>'.
+	 * @generated
+	 */
+	IoType createIoType();
+
+	/**
 	 * Returns a new object of class '<em>Input Declaration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

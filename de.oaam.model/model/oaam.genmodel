@@ -171,6 +171,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/genericAttributes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/powerSources"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/sublibraries"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/ioTypes"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/ResourceType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/unit"/>
@@ -260,6 +261,9 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/nShields"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/mtbf"/>
       </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/IoType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/IoType/direction"/>
+      </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/InputDeclaration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/InputDeclaration/type"/>
@@ -283,6 +287,8 @@
       <genClasses ecoreClass="oaam.ecore#//library/IoDeclaration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/IoDeclaration/resources"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/IoDeclaration/type"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/DuctOpeningDeclaration"/>
       <genClasses ecoreClass="oaam.ecore#//library/ResourceGroup">

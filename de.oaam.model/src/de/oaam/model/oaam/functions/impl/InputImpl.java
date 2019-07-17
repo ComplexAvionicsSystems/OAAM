@@ -524,7 +524,7 @@ public class InputImpl extends OaamBaseElementAImpl implements Input {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (queueLength: ");
 		result.append(queueLength);
 		result.append(')');

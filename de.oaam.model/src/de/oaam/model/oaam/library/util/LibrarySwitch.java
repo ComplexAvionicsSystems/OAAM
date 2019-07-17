@@ -181,6 +181,13 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case LibraryPackage.IO_TYPE: {
+				IoType ioType = (IoType)theEObject;
+				T result = caseIoType(ioType);
+				if (result == null) result = caseOaamBaseElementA(ioType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case LibraryPackage.INPUT_DECLARATION: {
 				InputDeclaration inputDeclaration = (InputDeclaration)theEObject;
 				T result = caseInputDeclaration(inputDeclaration);
@@ -580,6 +587,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseWireType(WireType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Io Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Io Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIoType(IoType object) {
 		return null;
 	}
 

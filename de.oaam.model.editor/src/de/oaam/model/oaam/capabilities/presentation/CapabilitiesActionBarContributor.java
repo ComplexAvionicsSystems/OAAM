@@ -165,6 +165,7 @@ public class CapabilitiesActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("capabilities-settings"));
 		toolBarManager.add(new Separator("capabilities-additions"));
 	}

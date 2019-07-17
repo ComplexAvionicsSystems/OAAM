@@ -595,7 +595,7 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (inIndex: ");
 		result.append(inIndex);
 		result.append(", outIndex: ");

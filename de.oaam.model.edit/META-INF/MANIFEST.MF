@@ -2,7 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.oaam.model.edit;singleton:=true
-Bundle-Version: 1.5.2.qualifier
+Automatic-Module-Name: de.oaam.model.edit
+Bundle-Version: 1.5.3.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.oaam.model.oaam.provider.OaamEditPlugin$Implementation
 Bundle-Vendor: %providerName

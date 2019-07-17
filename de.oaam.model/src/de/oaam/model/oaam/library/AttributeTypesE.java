@@ -25,6 +25,9 @@ public enum AttributeTypesE implements Enumerator {
 	 * The '<em><b>STRING</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * A string attribute
+	 * <!-- end-model-doc -->
 	 * @see #STRING_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum AttributeTypesE implements Enumerator {
 	 * The '<em><b>NUMERIC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * A numerical value attribute
+	 * <!-- end-model-doc -->
 	 * @see #NUMERIC_VALUE
 	 * @generated
 	 * @ordered
@@ -45,6 +51,9 @@ public enum AttributeTypesE implements Enumerator {
 	 * The '<em><b>BOOL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * A Boolean attribute
+	 * <!-- end-model-doc -->
 	 * @see #BOOL_VALUE
 	 * @generated
 	 * @ordered

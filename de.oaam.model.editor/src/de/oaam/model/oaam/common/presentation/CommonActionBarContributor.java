@@ -165,6 +165,7 @@ public class CommonActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("common-settings"));
 		toolBarManager.add(new Separator("common-additions"));
 	}

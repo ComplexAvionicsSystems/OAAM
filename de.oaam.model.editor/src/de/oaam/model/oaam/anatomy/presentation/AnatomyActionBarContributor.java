@@ -165,6 +165,7 @@ public class AnatomyActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("anatomy-settings"));
 		toolBarManager.add(new Separator("anatomy-additions"));
 	}

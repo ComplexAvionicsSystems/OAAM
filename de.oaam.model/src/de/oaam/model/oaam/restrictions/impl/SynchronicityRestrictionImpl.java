@@ -346,7 +346,7 @@ public class SynchronicityRestrictionImpl extends OaamBaseElementAImpl implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (maxJitter: ");
 		result.append(maxJitter);
 		result.append(')');

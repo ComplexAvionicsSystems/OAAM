@@ -38,6 +38,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getGenericAttributes <em>Generic Attributes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getSublibraries <em>Sublibraries</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getIoTypes <em>Io Types</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA()
@@ -314,5 +315,20 @@ public interface LibraryContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Sublibrary> getSublibraries();
+
+	/**
+	 * Returns the value of the '<em><b>Io Types</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.IoType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All IO types of this library
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Io Types</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_IoTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<IoType> getIoTypes();
 
 } // LibraryContainerA

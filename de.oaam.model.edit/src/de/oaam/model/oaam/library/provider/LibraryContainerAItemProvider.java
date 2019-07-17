@@ -88,6 +88,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__POWER_SOURCES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__SUBLIBRARIES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__IO_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -150,6 +151,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -286,6 +288,11 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__SUBLIBRARIES,
 				 LibraryFactory.eINSTANCE.createSublibrary()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__IO_TYPES,
+				 LibraryFactory.eINSTANCE.createIoType()));
 	}
 
 	/**

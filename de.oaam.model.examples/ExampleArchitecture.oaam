@@ -13,7 +13,7 @@
     </sublibraries>
     <sublibraries id="tasktypes" name="Task Types">
       <taskTypes id="tasktypeadd" name="Add">
-        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="20.0"/>
+        <requiredResources name="CPU" type="//@library/@sublibraries.4/@resourceTypes.3" count="20.0"/>
         <outputDeclarations name="sum" type="//@library/@sublibraries.0/@dataTypes.1">
           <faultPropagations condition="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@booleanOperations.0">
             <booleanOperations left="//@library/@sublibraries.1/@taskTypes.0/@outputDeclarations.0/@faultPropagations.0/@taskInputStates.0"/>
@@ -27,27 +27,31 @@
         <parameterDeclarations name="Number of inputs" type="//@library/@sublibraries.0/@dataTypes.2"/>
       </taskTypes>
       <taskTypes id="tasktypecockpitswitch" name="CockpitSwitch">
-        <requiredResources name="DSI" style="" type="//@library/@sublibraries.3/@resourceTypes.0"/>
+        <requiredResources name="DSI" style="" type="//@library/@sublibraries.4/@resourceTypes.0"/>
         <outputDeclarations name="on/off" type="//@library/@sublibraries.0/@dataTypes.0">
           <trigger fixedRate="20.0"/>
         </outputDeclarations>
       </taskTypes>
       <signalTypes name="BooleanSignal" type="//@library/@sublibraries.0/@dataTypes.6"/>
     </sublibraries>
+    <sublibraries name="IoType">
+      <ioTypes name="DSO GND/OPN"/>
+      <ioTypes name="DSI GND/OPN" direction="IN"/>
+    </sublibraries>
     <sublibraries id="devicetypes" name="Device Types">
       <deviceTypes name="CockpitSwitch">
-        <requiredResources name="DSO GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.1"/>
-        <ioDeclarations name="DSO GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.0/@requiredResources.0"/>
+        <requiredResources name="DSO GND/OPN" type="//@library/@sublibraries.4/@resourceTypes.1"/>
+        <ioDeclarations name="DSO GND/OPN 1" resources="//@library/@sublibraries.3/@deviceTypes.0/@requiredResources.0" type="//@library/@sublibraries.2/@ioTypes.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A" canHaveSubdevices="true">
-        <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.3/@resourceTypes.2" count="4.0"/>
+        <requiredResources name="SLOTS" style="" type="//@library/@sublibraries.4/@resourceTypes.2" count="4.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A CPU CARD" style="" isSubdevice="true">
-        <requiredResources name="CPU" type="//@library/@sublibraries.3/@resourceTypes.3" count="100.0"/>
+        <requiredResources name="CPU" type="//@library/@sublibraries.4/@resourceTypes.3" count="100.0"/>
       </deviceTypes>
       <deviceTypes name="CPM A IO CARD" canHaveSubdevices="true">
-        <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.3/@resourceTypes.0"/>
-        <ioDeclarations name="DSI GND/OPN 1" resources="//@library/@sublibraries.2/@deviceTypes.3/@requiredResources.0"/>
+        <requiredResources name="DSI GND/OPN" type="//@library/@sublibraries.4/@resourceTypes.0"/>
+        <ioDeclarations name="DSI GND/OPN 1" resources="//@library/@sublibraries.3/@deviceTypes.3/@requiredResources.0" type="//@library/@sublibraries.2/@ioTypes.1"/>
       </deviceTypes>
     </sublibraries>
     <sublibraries id="resourcestypes" name="Resource Types">
@@ -55,7 +59,7 @@
       <resourceTypes name="DSO GND/OPN" style="" isIo="true"/>
       <resourceTypes name="CPM SLOT"/>
       <resourceTypes name="CPU">
-        <requiredResources name="SLOT" type="//@library/@sublibraries.3/@resourceTypes.2"/>
+        <requiredResources name="SLOT" type="//@library/@sublibraries.4/@resourceTypes.2"/>
       </resourceTypes>
     </sublibraries>
     <sublibraries name="Connection Types">
@@ -83,6 +87,7 @@
     <parameters xsi:type="de.oaam.model.scenario:ScenarioParameterBool"/>
     <variants/>
     <operationModes/>
+    <subscenarios/>
   </scenario>
   <systems>
     <systems>
@@ -118,16 +123,16 @@
     </subfunctions>
   </functions>
   <hardware id="hardware">
-    <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.2/@deviceTypes.0">
-      <ios name="C/O on/off DSO" declaration="//@library/@sublibraries.2/@deviceTypes.0/@ioDeclarations.0"/>
+    <devices name="C/O Cockpit Switch" type="//@library/@sublibraries.3/@deviceTypes.0">
+      <ios name="C/O on/off DSO" declaration="//@library/@sublibraries.3/@deviceTypes.0/@ioDeclarations.0"/>
     </devices>
-    <devices name="CPM A1" type="//@library/@sublibraries.2/@deviceTypes.1">
+    <devices name="CPM A1" type="//@library/@sublibraries.3/@deviceTypes.1">
       <subdevices name="CPU Card"/>
-      <subdevices name="IO Card" type="//@library/@sublibraries.2/@deviceTypes.3">
-        <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.2/@deviceTypes.3/@ioDeclarations.0"/>
+      <subdevices name="IO Card" type="//@library/@sublibraries.3/@deviceTypes.3">
+        <ios id="" name="DSI GND/OPN 1" declaration="//@library/@sublibraries.3/@deviceTypes.3/@ioDeclarations.0"/>
       </subdevices>
     </devices>
-    <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.4/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0"/>
+    <connections name="DSI Cockpit to CPM line" type="//@library/@sublibraries.5/@connectionTypes.0" endPoints="//@hardware/@devices.0/@ios.0"/>
     <subhardware>
       <deviceSymmetries/>
     </subhardware>
@@ -145,11 +150,11 @@
     </subanatomies>
   </anatomy>
   <capabilities id="capabilities">
-    <taskOnDeviceCapabilities taskType="tasktypeadd" deviceType="//@library/@sublibraries.2/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
+    <taskOnDeviceCapabilities taskType="tasktypeadd" deviceType="//@library/@sublibraries.3/@deviceTypes.2" worstCaseExecutionTime="1.0E-5"/>
     <signalOnConnectionOrDeviceCapabilities/>
     <deviceInLocationCapabilities/>
-    <subdeviceInDeviceCapabilities subdeviceType="//@library/@sublibraries.2/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.2/@deviceTypes.1">
-      <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.3/@resourceTypes.2"/>
+    <subdeviceInDeviceCapabilities subdeviceType="//@library/@sublibraries.3/@deviceTypes.2" targetDeviceType="//@library/@sublibraries.3/@deviceTypes.1">
+      <resourceConsumptions name="" style="" modifier="" count="1.0" type="//@library/@sublibraries.4/@resourceTypes.2"/>
     </subdeviceInDeviceCapabilities>
     <connectionInDuctOrLocationCapabilities/>
     <subcapabilities/>

@@ -20,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.IoDeclaration#getResources <em>Resources</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.IoDeclaration#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getIoDeclaration()
@@ -41,5 +42,27 @@ public interface IoDeclaration extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Resource> getResources();
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' reference.
+	 * @see #setType(IoType)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getIoDeclaration_Type()
+	 * @model required="true"
+	 * @generated
+	 */
+	IoType getType();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.IoDeclaration#getType <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(IoType value);
 
 } // IoDeclaration

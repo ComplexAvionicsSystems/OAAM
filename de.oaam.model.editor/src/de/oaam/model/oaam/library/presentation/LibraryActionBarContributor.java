@@ -165,6 +165,7 @@ public class LibraryActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("library-settings"));
 		toolBarManager.add(new Separator("library-additions"));
 	}

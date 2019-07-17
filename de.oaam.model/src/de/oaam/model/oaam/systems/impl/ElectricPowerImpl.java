@@ -308,7 +308,7 @@ public class ElectricPowerImpl extends InformationPowerImpl implements ElectricP
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (frequency: ");
 		result.append(frequency);
 		result.append(", nPhases: ");

@@ -350,7 +350,7 @@ public class FaultPropagationImpl extends OaamBaseElementAImpl implements FaultP
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (outputState: ");
 		result.append(outputState);
 		result.append(')');

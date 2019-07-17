@@ -259,7 +259,7 @@ public class IntegerImpl extends DataTypeAImpl implements de.oaam.model.oaam.com
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (signed: ");
 		result.append(signed);
 		result.append(", nBits: ");

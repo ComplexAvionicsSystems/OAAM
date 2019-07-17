@@ -325,6 +325,29 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.IoType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IoTypeItemProvider ioTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.IoType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIoTypeAdapter() {
+		if (ioTypeItemProvider == null) {
+			ioTypeItemProvider = new IoTypeItemProvider(this);
+		}
+
+		return ioTypeItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.InputDeclaration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -986,6 +1009,7 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (locationTypeItemProvider != null) locationTypeItemProvider.dispose();
 		if (ductTypeItemProvider != null) ductTypeItemProvider.dispose();
 		if (wireTypeItemProvider != null) wireTypeItemProvider.dispose();
+		if (ioTypeItemProvider != null) ioTypeItemProvider.dispose();
 		if (inputDeclarationItemProvider != null) inputDeclarationItemProvider.dispose();
 		if (outputDeclarationItemProvider != null) outputDeclarationItemProvider.dispose();
 		if (ioDeclarationItemProvider != null) ioDeclarationItemProvider.dispose();

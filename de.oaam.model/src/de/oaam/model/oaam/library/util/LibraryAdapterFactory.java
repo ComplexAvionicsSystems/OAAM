@@ -131,6 +131,10 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createWireTypeAdapter();
 			}
 			@Override
+			public Adapter caseIoType(IoType object) {
+				return createIoTypeAdapter();
+			}
+			@Override
 			public Adapter caseInputDeclaration(InputDeclaration object) {
 				return createInputDeclarationAdapter();
 			}
@@ -461,6 +465,20 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createWireTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.IoType <em>Io Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.library.IoType
+	 * @generated
+	 */
+	public Adapter createIoTypeAdapter() {
 		return null;
 	}
 

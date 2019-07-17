@@ -165,6 +165,7 @@ public class AllocationsActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("allocations-settings"));
 		toolBarManager.add(new Separator("allocations-additions"));
 	}

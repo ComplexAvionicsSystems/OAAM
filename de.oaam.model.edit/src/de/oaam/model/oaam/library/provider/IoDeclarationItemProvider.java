@@ -50,6 +50,7 @@ public class IoDeclarationItemProvider extends OaamBaseElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addResourcesPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class IoDeclarationItemProvider extends OaamBaseElementAItemProvider {
 				 getString("_UI_IoDeclaration_resources_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IoDeclaration_resources_feature", "_UI_IoDeclaration_type"),
 				 LibraryPackage.Literals.IO_DECLARATION__RESOURCES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IoDeclaration_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IoDeclaration_type_feature", "_UI_IoDeclaration_type"),
+				 LibraryPackage.Literals.IO_DECLARATION__TYPE,
 				 true,
 				 false,
 				 true,

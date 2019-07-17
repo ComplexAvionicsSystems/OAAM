@@ -12,6 +12,7 @@ import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
 import de.oaam.model.oaam.library.DeviceTypeSymmetry;
 import de.oaam.model.oaam.library.DuctType;
+import de.oaam.model.oaam.library.IoType;
 import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
@@ -64,6 +65,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getGenericAttributes <em>Generic Attributes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getSublibraries <em>Sublibraries</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getIoTypes <em>Io Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -248,6 +250,16 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * @ordered
 	 */
 	protected EList<Sublibrary> sublibraries;
+
+	/**
+	 * The cached value of the '{@link #getIoTypes() <em>Io Types</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIoTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IoType> ioTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -489,6 +501,18 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IoType> getIoTypes() {
+		if (ioTypes == null) {
+			ioTypes = new EObjectContainmentEList<IoType>(IoType.class, this, LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES);
+		}
+		return ioTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -528,6 +552,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return ((InternalEList<?>)getPowerSources()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return ((InternalEList<?>)getSublibraries()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+				return ((InternalEList<?>)getIoTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -576,6 +602,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return getPowerSources();
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return getSublibraries();
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+				return getIoTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -661,6 +689,10 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				getSublibraries().clear();
 				getSublibraries().addAll((Collection<? extends Sublibrary>)newValue);
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+				getIoTypes().clear();
+				getIoTypes().addAll((Collection<? extends IoType>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -727,6 +759,9 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				getSublibraries().clear();
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+				getIoTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -775,6 +810,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return powerSources != null && !powerSources.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 				return sublibraries != null && !sublibraries.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+				return ioTypes != null && !ioTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

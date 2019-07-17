@@ -25,6 +25,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>DEVICE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for DeviceType objects.
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>DEVICE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Device objects.
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE_VALUE
 	 * @generated
 	 * @ordered
@@ -45,6 +51,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>TASK TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for TaskType objects.
+	 * <!-- end-model-doc -->
 	 * @see #TASK_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -55,6 +64,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>TASK</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Task objects.
+	 * <!-- end-model-doc -->
 	 * @see #TASK_VALUE
 	 * @generated
 	 * @ordered
@@ -65,6 +77,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>WIRE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for WireType objects.
+	 * <!-- end-model-doc -->
 	 * @see #WIRE_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -75,6 +90,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>RESOURCE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceType objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -85,6 +103,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>RESOURCE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Resource objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_VALUE
 	 * @generated
 	 * @ordered
@@ -95,6 +116,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>SIGNAL TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for SignalType objects.
+	 * <!-- end-model-doc -->
 	 * @see #SIGNAL_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -105,6 +129,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>SIGNAL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Signal objects.
+	 * <!-- end-model-doc -->
 	 * @see #SIGNAL_VALUE
 	 * @generated
 	 * @ordered
@@ -115,6 +142,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>CONNECTION TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ConnectionType objects.
+	 * <!-- end-model-doc -->
 	 * @see #CONNECTION_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -125,6 +155,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>CONNECTION</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Connection objects.
+	 * <!-- end-model-doc -->
 	 * @see #CONNECTION_VALUE
 	 * @generated
 	 * @ordered
@@ -135,6 +168,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>LOCATION TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for LocationType objects.
+	 * <!-- end-model-doc -->
 	 * @see #LOCATION_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -145,6 +181,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>LOCATION</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Location objects.
+	 * <!-- end-model-doc -->
 	 * @see #LOCATION_VALUE
 	 * @generated
 	 * @ordered
@@ -155,6 +194,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>DUCT TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for DuctType objects.
+	 * <!-- end-model-doc -->
 	 * @see #DUCT_TYPE_VALUE
 	 * @generated
 	 * @ordered
@@ -165,6 +207,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>DUCT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Duct objects.
+	 * <!-- end-model-doc -->
 	 * @see #DUCT_VALUE
 	 * @generated
 	 * @ordered
@@ -175,6 +220,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>RESOURCE BUNDLE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceBundle objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_BUNDLE_VALUE
 	 * @generated
 	 * @ordered
@@ -185,6 +233,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>RESOURCE ALTERNATIVE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * ResourceAlternative
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_ALTERNATIVE_VALUE
 	 * @generated
 	 * @ordered
@@ -195,6 +246,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>RESOURCE GROUP</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for ResourceGroup objects.
+	 * <!-- end-model-doc -->
 	 * @see #RESOURCE_GROUP_VALUE
 	 * @generated
 	 * @ordered
@@ -205,6 +259,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>AREA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Area objects.
+	 * <!-- end-model-doc -->
 	 * @see #AREA_VALUE
 	 * @generated
 	 * @ordered
@@ -215,6 +272,9 @@ public enum AttributeTargetsE implements Enumerator {
 	 * The '<em><b>VARIANT</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Addition attribute for Variant objects.
+	 * <!-- end-model-doc -->
 	 * @see #VARIANT_VALUE
 	 * @generated
 	 * @ordered

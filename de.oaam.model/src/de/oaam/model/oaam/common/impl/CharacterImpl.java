@@ -205,7 +205,7 @@ public class CharacterImpl extends DataTypeAImpl implements de.oaam.model.oaam.c
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (encoding: ");
 		result.append(encoding);
 		result.append(", nBits: ");

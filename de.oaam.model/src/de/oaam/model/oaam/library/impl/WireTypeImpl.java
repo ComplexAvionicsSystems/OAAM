@@ -414,7 +414,7 @@ public class WireTypeImpl extends OaamBaseElementAImpl implements WireType {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (specificWeight: ");
 		result.append(specificWeight);
 		result.append(", specificPrice: ");

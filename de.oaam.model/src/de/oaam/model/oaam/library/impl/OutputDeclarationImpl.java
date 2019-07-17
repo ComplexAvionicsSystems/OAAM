@@ -550,7 +550,7 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (unit: ");
 		result.append(unit);
 		result.append(", postcondition: ");

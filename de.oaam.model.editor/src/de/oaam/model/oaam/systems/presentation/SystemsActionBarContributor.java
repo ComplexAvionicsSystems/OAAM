@@ -165,6 +165,7 @@ public class SystemsActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("systems-settings"));
 		toolBarManager.add(new Separator("systems-additions"));
 	}

@@ -284,6 +284,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createIoType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 LibraryFactory.eINSTANCE.createInputDeclaration()));
 
 		newChildDescriptors.add

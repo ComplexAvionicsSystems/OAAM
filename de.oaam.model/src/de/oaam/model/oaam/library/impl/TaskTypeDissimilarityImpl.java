@@ -196,7 +196,7 @@ public class TaskTypeDissimilarityImpl extends OaamBaseElementAImpl implements T
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (percentageOfCommonCode: ");
 		result.append(percentageOfCommonCode);
 		result.append(')');

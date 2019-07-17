@@ -165,6 +165,7 @@ public class ScenarioActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("scenario-settings"));
 		toolBarManager.add(new Separator("scenario-additions"));
 	}

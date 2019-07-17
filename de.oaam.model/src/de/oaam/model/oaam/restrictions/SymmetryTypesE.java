@@ -25,6 +25,9 @@ public enum SymmetryTypesE implements Enumerator {
 	 * The '<em><b>LOCATION</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Symmetric locations, e.g. left cabin and right cabin
+	 * <!-- end-model-doc -->
 	 * @see #LOCATION_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum SymmetryTypesE implements Enumerator {
 	 * The '<em><b>DEVICE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Symmetric devices, e.g. lane A and lane B of a duplex device.
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE_VALUE
 	 * @generated
 	 * @ordered
@@ -45,6 +51,9 @@ public enum SymmetryTypesE implements Enumerator {
 	 * The '<em><b>AREA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Symmetric areas, e.g. left and right side of the aircraft.
+	 * <!-- end-model-doc -->
 	 * @see #AREA_VALUE
 	 * @generated
 	 * @ordered
@@ -55,6 +64,9 @@ public enum SymmetryTypesE implements Enumerator {
 	 * The '<em><b>DEVICE TYPE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Symmetric device types, 
+	 * <!-- end-model-doc -->
 	 * @see #DEVICE_TYPE_VALUE
 	 * @generated
 	 * @ordered

@@ -165,6 +165,7 @@ public class HardwareActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("hardware-settings"));
 		toolBarManager.add(new Separator("hardware-additions"));
 	}

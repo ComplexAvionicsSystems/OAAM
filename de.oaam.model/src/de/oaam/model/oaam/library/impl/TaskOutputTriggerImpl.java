@@ -401,7 +401,7 @@ public class TaskOutputTriggerImpl extends OaamBaseElementAImpl implements TaskO
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (fixedRate: ");
 		result.append(fixedRate);
 		result.append(", isFixedRate: ");

@@ -25,6 +25,9 @@ public enum EndianessE implements Enumerator {
 	 * The '<em><b>BIG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Big endian: The most significant bit comes first
+	 * <!-- end-model-doc -->
 	 * @see #BIG_VALUE
 	 * @generated
 	 * @ordered
@@ -35,6 +38,9 @@ public enum EndianessE implements Enumerator {
 	 * The '<em><b>LITTLE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Little endian: The least significant bit comes first.
+	 * <!-- end-model-doc -->
 	 * @see #LITTLE_VALUE
 	 * @generated
 	 * @ordered

@@ -2,11 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.oaam.model;singleton:=true
-Bundle-Version: 1.5.2.qualifier
+Automatic-Module-Name: de.oaam.model
+Bundle-Version: 1.5.3.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: de.oaam.model.oaam,
  de.oaam.model.oaam.allocations,
  de.oaam.model.oaam.allocations.impl,

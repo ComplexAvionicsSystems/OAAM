@@ -3,13 +3,7 @@
 package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
-
-import de.oaam.model.oaam.common.OaamBaseElementA;
-
 import de.oaam.model.oaam.hardware.Bus;
-
-import de.oaam.model.oaam.scenario.ModeDependentElementA;
-import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +26,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Message extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA, MessageA {
+public interface Message extends MessageA {
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->

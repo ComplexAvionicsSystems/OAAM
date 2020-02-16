@@ -4023,7 +4023,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA #//allocations/MessageA">
+    <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//allocations/MessageA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A message is a virtual packaging of signals. It can be used to describe the data transportation on a bussystem."/>
       </eAnnotations>

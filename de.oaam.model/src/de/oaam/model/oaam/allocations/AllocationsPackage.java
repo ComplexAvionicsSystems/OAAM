@@ -2048,7 +2048,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int MESSAGE__ID = MESSAGE_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2057,7 +2057,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int MESSAGE__NAME = MESSAGE_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -2066,7 +2066,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int MESSAGE__STYLE = MESSAGE_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -2075,7 +2075,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int MESSAGE__ATTRIBUTES = MESSAGE_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -2084,7 +2084,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int MESSAGE__DOCUMENTATION = MESSAGE_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -2093,7 +2093,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int MESSAGE__MODIFIED = MESSAGE_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -2102,7 +2102,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int MESSAGE__MODIFIER = MESSAGE_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -2111,7 +2111,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+	int MESSAGE__TRACE_LINK = MESSAGE_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
@@ -2120,7 +2120,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int MESSAGE__VARIANTS = MESSAGE_A__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -2129,7 +2129,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int MESSAGE__OPERATION_MODES = MESSAGE_A__OPERATION_MODES;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
@@ -2138,7 +2138,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__SCHEDULES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int MESSAGE__SCHEDULES = MESSAGE_A__SCHEDULES;
 
 	/**
 	 * The feature id for the '<em><b>Submessages</b></em>' containment reference list.
@@ -2147,7 +2147,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__SUBMESSAGES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int MESSAGE__SUBMESSAGES = MESSAGE_A__SUBMESSAGES;
 
 	/**
 	 * The feature id for the '<em><b>Signal To Message Assignments</b></em>' containment reference list.
@@ -2156,7 +2156,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int MESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS = MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
@@ -2165,7 +2165,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__SEGMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int MESSAGE__SEGMENTS = MESSAGE_A__SEGMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -2174,7 +2174,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__CAPABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int MESSAGE__CAPABILITY = MESSAGE_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Bus</b></em>' reference.
@@ -2183,7 +2183,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE__BUS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int MESSAGE__BUS = MESSAGE_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Message</em>' class.
@@ -2192,7 +2192,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Message</em>' class.
@@ -2201,7 +2201,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int MESSAGE_OPERATION_COUNT = MESSAGE_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SubmessageImpl <em>Submessage</em>}' class.

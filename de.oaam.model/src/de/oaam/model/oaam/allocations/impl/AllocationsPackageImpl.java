@@ -1186,9 +1186,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		messageSegmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		messageSegmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		messageSegmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		messageEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		messageEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		messageEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		messageEClass.getESuperTypes().add(this.getMessageA());
 		submessageEClass.getESuperTypes().add(this.getMessageA());
 		allocationsEClass.getESuperTypes().add(this.getAllocationsContainerA());

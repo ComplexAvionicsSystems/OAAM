@@ -181,13 +181,22 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE_CONTAINER_A__SUBHARDWARE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Buses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE_CONTAINER_A__BUSES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -915,6 +924,15 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE__SUBHARDWARE = HARDWARE_CONTAINER_A__SUBHARDWARE;
 
 	/**
+	 * The feature id for the '<em><b>Buses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE__BUSES = HARDWARE_CONTAINER_A__BUSES;
+
+	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1069,6 +1087,15 @@ public interface HardwarePackage extends EPackage {
 	int SUBHARDWARE__SUBHARDWARE = HARDWARE_CONTAINER_A__SUBHARDWARE;
 
 	/**
+	 * The feature id for the '<em><b>Buses</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBHARDWARE__BUSES = HARDWARE_CONTAINER_A__BUSES;
+
+	/**
 	 * The feature id for the '<em><b>Variants</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1103,6 +1130,161 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBHARDWARE_OPERATION_COUNT = HARDWARE_CONTAINER_A_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.hardware.impl.BusImpl <em>Bus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.hardware.impl.BusImpl
+	 * @see de.oaam.model.oaam.hardware.impl.HardwarePackageImpl#getBus()
+	 * @generated
+	 */
+	int BUS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Required Modifiers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__REQUIRED_MODIFIERS = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A__REQUIRED_MODIFIERS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__ID = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__NAME = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__STYLE = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__ATTRIBUTES = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__DOCUMENTATION = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__MODIFIED = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__MODIFIER = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__TRACE_LINK = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__VARIANTS = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__OPERATION_MODES = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__TYPE = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__CONNECTIONS = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Devices</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS__DEVICES = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of structural features of the '<em>Bus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_FEATURE_COUNT = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The number of operations of the '<em>Bus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_OPERATION_COUNT = LibraryPackage.RESOURCE_PROVIDER_INSTANCE_A_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1158,6 +1340,17 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getHardwareContainerA_Subhardware();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.hardware.HardwareContainerA#getBuses <em>Buses</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Buses</em>'.
+	 * @see de.oaam.model.oaam.hardware.HardwareContainerA#getBuses()
+	 * @see #getHardwareContainerA()
+	 * @generated
+	 */
+	EReference getHardwareContainerA_Buses();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.hardware.Device <em>Device</em>}'.
@@ -1352,6 +1545,49 @@ public interface HardwarePackage extends EPackage {
 	EClass getSubhardware();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.hardware.Bus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bus</em>'.
+	 * @see de.oaam.model.oaam.hardware.Bus
+	 * @generated
+	 */
+	EClass getBus();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.hardware.Bus#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.hardware.Bus#getType()
+	 * @see #getBus()
+	 * @generated
+	 */
+	EReference getBus_Type();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.hardware.Bus#getConnections <em>Connections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Connections</em>'.
+	 * @see de.oaam.model.oaam.hardware.Bus#getConnections()
+	 * @see #getBus()
+	 * @generated
+	 */
+	EReference getBus_Connections();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.hardware.Bus#getDevices <em>Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Devices</em>'.
+	 * @see de.oaam.model.oaam.hardware.Bus#getDevices()
+	 * @see #getBus()
+	 * @generated
+	 */
+	EReference getBus_Devices();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1415,6 +1651,14 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference HARDWARE_CONTAINER_A__SUBHARDWARE = eINSTANCE.getHardwareContainerA_Subhardware();
+
+		/**
+		 * The meta object literal for the '<em><b>Buses</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HARDWARE_CONTAINER_A__BUSES = eINSTANCE.getHardwareContainerA_Buses();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.hardware.impl.DeviceImpl <em>Device</em>}' class.
@@ -1571,6 +1815,40 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SUBHARDWARE = eINSTANCE.getSubhardware();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.hardware.impl.BusImpl <em>Bus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.hardware.impl.BusImpl
+		 * @see de.oaam.model.oaam.hardware.impl.HardwarePackageImpl#getBus()
+		 * @generated
+		 */
+		EClass BUS = eINSTANCE.getBus();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS__TYPE = eINSTANCE.getBus_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Connections</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS__CONNECTIONS = eINSTANCE.getBus_Connections();
+
+		/**
+		 * The meta object literal for the '<em><b>Devices</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS__DEVICES = eINSTANCE.getBus_Devices();
 
 	}
 

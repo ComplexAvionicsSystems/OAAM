@@ -76,6 +76,15 @@ public interface HardwareFactory extends EFactory {
 	Subhardware createSubhardware();
 
 	/**
+	 * Returns a new object of class '<em>Bus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bus</em>'.
+	 * @generated
+	 */
+	Bus createBus();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -112,7 +112,7 @@ public class OutputImpl extends OaamBaseElementAImpl implements Output {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double FIXED_RATE_EDEFAULT = 0.0;
+	protected static final double FIXED_RATE_EDEFAULT = -1.0;
 
 	/**
 	 * The cached value of the '{@link #getFixedRate() <em>Fixed Rate</em>}' attribute.

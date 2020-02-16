@@ -36,7 +36,7 @@ public class IoTypeImpl extends OaamBaseElementAImpl implements IoType {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final IoDirectionE DIRECTION_EDEFAULT = IoDirectionE.OUT;
+	protected static final IoDirectionE DIRECTION_EDEFAULT = IoDirectionE.NONE;
 
 	/**
 	 * The cached value of the '{@link #getDirection() <em>Direction</em>}' attribute.

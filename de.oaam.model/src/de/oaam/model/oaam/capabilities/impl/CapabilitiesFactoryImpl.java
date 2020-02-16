@@ -63,6 +63,10 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 			case CapabilitiesPackage.SUBDEVICE_IN_DEVICE_CAPABILITY: return createSubdeviceInDeviceCapability();
 			case CapabilitiesPackage.SUBCONNECTION_IN_DEVICE_CAPABILITY: return createSubconnectionInDeviceCapability();
 			case CapabilitiesPackage.RESOURCE_CONSUMPTION: return createResourceConsumption();
+			case CapabilitiesPackage.MESSAGE_ON_BUS_CAPABILITY: return createMessageOnBusCapability();
+			case CapabilitiesPackage.MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY: return createMessageOnConnectionOrDeviceCapability();
+			case CapabilitiesPackage.SUBMESSAGE_IN_MESSAGE_CAPABILITY: return createSubmessageInMessageCapability();
+			case CapabilitiesPackage.SIGNAL_IN_MESSAGE_CAPABILITY: return createSignalInMessageCapability();
 			case CapabilitiesPackage.CAPABILITIES: return createCapabilities();
 			case CapabilitiesPackage.SUBCAPABILITIES: return createSubcapabilities();
 			default:
@@ -158,6 +162,46 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	public Subcapabilities createSubcapabilities() {
 		SubcapabilitiesImpl subcapabilities = new SubcapabilitiesImpl();
 		return subcapabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageOnBusCapability createMessageOnBusCapability() {
+		MessageOnBusCapabilityImpl messageOnBusCapability = new MessageOnBusCapabilityImpl();
+		return messageOnBusCapability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SubmessageInMessageCapability createSubmessageInMessageCapability() {
+		SubmessageInMessageCapabilityImpl submessageInMessageCapability = new SubmessageInMessageCapabilityImpl();
+		return submessageInMessageCapability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignalInMessageCapability createSignalInMessageCapability() {
+		SignalInMessageCapabilityImpl signalInMessageCapability = new SignalInMessageCapabilityImpl();
+		return signalInMessageCapability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability() {
+		MessageOnConnectionOrDeviceCapabilityImpl messageOnConnectionOrDeviceCapability = new MessageOnConnectionOrDeviceCapabilityImpl();
+		return messageOnConnectionOrDeviceCapability;
 	}
 
 	/**

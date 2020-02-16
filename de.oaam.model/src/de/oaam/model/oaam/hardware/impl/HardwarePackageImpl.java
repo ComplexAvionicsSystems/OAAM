@@ -24,6 +24,7 @@ import de.oaam.model.oaam.functions.FunctionsPackage;
 
 import de.oaam.model.oaam.functions.impl.FunctionsPackageImpl;
 
+import de.oaam.model.oaam.hardware.Bus;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;
@@ -113,6 +114,13 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * @generated
 	 */
 	private EClass subhardwareEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass busEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -260,6 +268,15 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 */
 	public EReference getHardwareContainerA_Subhardware() {
 		return (EReference)hardwareContainerAEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHardwareContainerA_Buses() {
+		return (EReference)hardwareContainerAEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -429,6 +446,42 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBus() {
+		return busEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBus_Type() {
+		return (EReference)busEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBus_Connections() {
+		return (EReference)busEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBus_Devices() {
+		return (EReference)busEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public HardwareFactory getHardwareFactory() {
 		return (HardwareFactory)getEFactoryInstance();
 	}
@@ -457,6 +510,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		createEReference(hardwareContainerAEClass, HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES);
 		createEReference(hardwareContainerAEClass, HARDWARE_CONTAINER_A__CONNECTIONS);
 		createEReference(hardwareContainerAEClass, HARDWARE_CONTAINER_A__SUBHARDWARE);
+		createEReference(hardwareContainerAEClass, HARDWARE_CONTAINER_A__BUSES);
 
 		deviceEClass = createEClass(DEVICE);
 		createEReference(deviceEClass, DEVICE__TYPE);
@@ -481,6 +535,11 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		hardwareEClass = createEClass(HARDWARE);
 
 		subhardwareEClass = createEClass(SUBHARDWARE);
+
+		busEClass = createEClass(BUS);
+		createEReference(busEClass, BUS__TYPE);
+		createEReference(busEClass, BUS__CONNECTIONS);
+		createEReference(busEClass, BUS__DEVICES);
 	}
 
 	/**
@@ -538,6 +597,10 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		subhardwareEClass.getESuperTypes().add(this.getHardwareContainerA());
 		subhardwareEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subhardwareEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		busEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
+		busEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		busEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		busEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(hardwareContainerAEClass, HardwareContainerA.class, "HardwareContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -545,6 +608,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		initEReference(getHardwareContainerA_DeviceSymmetries(), this.getDeviceSymmetry(), null, "deviceSymmetries", null, 0, -1, HardwareContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardwareContainerA_Connections(), this.getConnection(), null, "connections", null, 0, -1, HardwareContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardwareContainerA_Subhardware(), this.getSubhardware(), null, "subhardware", null, 0, -1, HardwareContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHardwareContainerA_Buses(), this.getBus(), null, "buses", null, 0, -1, HardwareContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceEClass, Device.class, "Device", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDevice_Type(), theLibraryPackage.getDeviceType(), null, "type", null, 0, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -569,6 +633,11 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		initEClass(hardwareEClass, Hardware.class, "Hardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(subhardwareEClass, Subhardware.class, "Subhardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(busEClass, Bus.class, "Bus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBus_Type(), theLibraryPackage.getBusType(), null, "type", null, 0, 1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBus_Connections(), this.getConnection(), null, "connections", null, 0, -1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBus_Devices(), this.getDevice(), null, "devices", null, 0, -1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //HardwarePackageImpl

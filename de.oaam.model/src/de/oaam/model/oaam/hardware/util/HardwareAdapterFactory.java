@@ -103,6 +103,10 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 				return createSubhardwareAdapter();
 			}
 			@Override
+			public Adapter caseBus(Bus object) {
+				return createBusAdapter();
+			}
+			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
 				return createOaamBaseElementAAdapter();
 			}
@@ -233,6 +237,20 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubhardwareAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.hardware.Bus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.hardware.Bus
+	 * @generated
+	 */
+	public Adapter createBusAdapter() {
 		return null;
 	}
 

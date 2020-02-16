@@ -9,6 +9,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

@@ -346,6 +346,24 @@ public interface LibraryFactory extends EFactory {
 	Library createLibrary();
 
 	/**
+	 * Returns a new object of class '<em>Bus Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bus Type</em>'.
+	 * @generated
+	 */
+	BusType createBusType();
+
+	/**
+	 * Returns a new object of class '<em>Message Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message Type</em>'.
+	 * @generated
+	 */
+	MessageType createMessageType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

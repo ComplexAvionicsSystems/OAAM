@@ -3,15 +3,15 @@
 package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.BoolA;
-
 import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.BoolOperation;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsPackage;
-
 import de.oaam.model.oaam.functions.OutputIntegrityState;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;

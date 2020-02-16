@@ -6,6 +6,7 @@ import de.oaam.model.oaam.allocations.AllocationsContainerA;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.ConnectionAssignment;
 import de.oaam.model.oaam.allocations.DeviceAssignment;
+import de.oaam.model.oaam.allocations.Message;
 import de.oaam.model.oaam.allocations.SignalAssignment;
 import de.oaam.model.oaam.allocations.Suballocations;
 import de.oaam.model.oaam.allocations.SubconnectionAssignment;
@@ -41,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSignalAssignments <em>Signal Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSuballocations <em>Suballocations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSubconnectionAssignments <em>Subconnection Assignments</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getMessages <em>Messages</em>}</li>
  * </ul>
  *
  * @generated
@@ -115,6 +117,16 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	 * @ordered
 	 */
 	protected EList<SubconnectionAssignment> subconnectionAssignments;
+
+	/**
+	 * The cached value of the '{@link #getMessages() <em>Messages</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMessages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Message> messages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -224,6 +236,18 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Message> getMessages() {
+		if (messages == null) {
+			messages = new EObjectContainmentEList<Message>(Message.class, this, AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES);
+		}
+		return messages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -241,6 +265,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return ((InternalEList<?>)getSuballocations()).basicRemove(otherEnd, msgs);
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
 				return ((InternalEList<?>)getSubconnectionAssignments()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
+				return ((InternalEList<?>)getMessages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -267,6 +293,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return getSuballocations();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
 				return getSubconnectionAssignments();
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
+				return getMessages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,6 +336,10 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				getSubconnectionAssignments().clear();
 				getSubconnectionAssignments().addAll((Collection<? extends SubconnectionAssignment>)newValue);
 				return;
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
+				getMessages().clear();
+				getMessages().addAll((Collection<? extends Message>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -341,6 +373,9 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
 				getSubconnectionAssignments().clear();
 				return;
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
+				getMessages().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -367,6 +402,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return suballocations != null && !suballocations.isEmpty();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
 				return subconnectionAssignments != null && !subconnectionAssignments.isEmpty();
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
+				return messages != null && !messages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

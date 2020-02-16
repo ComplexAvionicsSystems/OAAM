@@ -64,10 +64,14 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 			case AllocationsPackage.CONNECTION_ASSIGNMENT_SEGMENT: return createConnectionAssignmentSegment();
 			case AllocationsPackage.SUBDEVICE_ASSIGNMENT: return createSubdeviceAssignment();
 			case AllocationsPackage.SUBCONNECTION_ASSIGNMENT: return createSubconnectionAssignment();
-			case AllocationsPackage.ALLOCATIONS: return createAllocations();
-			case AllocationsPackage.SUBALLOCATIONS: return createSuballocations();
 			case AllocationsPackage.SCHEDULE: return createSchedule();
 			case AllocationsPackage.SCHEDULED_TIME: return createScheduledTime();
+			case AllocationsPackage.MESSAGE_SEGMENT: return createMessageSegment();
+			case AllocationsPackage.MESSAGE: return createMessage();
+			case AllocationsPackage.SUBMESSAGE: return createSubmessage();
+			case AllocationsPackage.SIGNAL_TO_MESSAGE_ASSIGNMENT: return createSignalToMessageAssignment();
+			case AllocationsPackage.ALLOCATIONS: return createAllocations();
+			case AllocationsPackage.SUBALLOCATIONS: return createSuballocations();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -191,6 +195,46 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	public ScheduledTime createScheduledTime() {
 		ScheduledTimeImpl scheduledTime = new ScheduledTimeImpl();
 		return scheduledTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message createMessage() {
+		MessageImpl message = new MessageImpl();
+		return message;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignalToMessageAssignment createSignalToMessageAssignment() {
+		SignalToMessageAssignmentImpl signalToMessageAssignment = new SignalToMessageAssignmentImpl();
+		return signalToMessageAssignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageSegment createMessageSegment() {
+		MessageSegmentImpl messageSegment = new MessageSegmentImpl();
+		return messageSegment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Submessage createSubmessage() {
+		SubmessageImpl submessage = new SubmessageImpl();
+		return submessage;
 	}
 
 	/**

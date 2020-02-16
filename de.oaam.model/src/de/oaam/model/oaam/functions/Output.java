@@ -106,15 +106,16 @@ public interface Output extends OaamBaseElementA, VariantDependentElementA, Mode
 
 	/**
 	 * Returns the value of the '<em><b>Fixed Rate</b></em>' attribute.
+	 * The default value is <code>"-1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The fixed rate, in which the output shall be calculated, given in Hz. If this is set to other that 0.0, it overrides the rate of the taskType declaration.
+	 * The fixed rate, in which the output shall be calculated, given in Hz. -1.0 isinherit.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fixed Rate</em>' attribute.
 	 * @see #setFixedRate(double)
 	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getOutput_FixedRate()
-	 * @model required="true"
+	 * @model default="-1.0" required="true"
 	 * @generated
 	 */
 	double getFixedRate();

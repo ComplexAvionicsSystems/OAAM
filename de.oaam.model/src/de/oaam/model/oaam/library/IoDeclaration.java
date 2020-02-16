@@ -47,6 +47,9 @@ public interface IoDeclaration extends OaamBaseElementA {
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The reference to a specific type of the IO
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(IoType)
 	 * @see de.oaam.model.oaam.library.LibraryPackage#getIoDeclaration_Type()

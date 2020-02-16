@@ -110,7 +110,7 @@ public class ResourceAlternativesItemProvider extends OaamBaseElementAItemProvid
 			getString("_UI_ResourceAlternatives_type") :
 			getString("_UI_ResourceAlternatives_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

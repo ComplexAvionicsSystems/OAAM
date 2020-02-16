@@ -388,7 +388,7 @@ public class SignalOnConnectionOrDeviceCapabilityItemProvider extends Capability
 			getString("_UI_SignalOnConnectionOrDeviceCapability_type") :
 			getString("_UI_SignalOnConnectionOrDeviceCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -159,7 +159,7 @@ public class TaskSymmetryItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_TaskSymmetry_type") :
 			getString("_UI_TaskSymmetry_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -165,7 +165,7 @@ public class ElectricPowerItemProvider extends InformationPowerItemProvider {
 			getString("_UI_ElectricPower_type") :
 			getString("_UI_ElectricPower_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

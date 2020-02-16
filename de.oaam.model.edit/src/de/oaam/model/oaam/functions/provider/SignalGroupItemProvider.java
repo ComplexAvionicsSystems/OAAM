@@ -159,7 +159,7 @@ public class SignalGroupItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_SignalGroup_type") :
 			getString("_UI_SignalGroup_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

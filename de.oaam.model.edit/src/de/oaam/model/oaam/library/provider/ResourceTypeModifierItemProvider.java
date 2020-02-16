@@ -110,7 +110,7 @@ public class ResourceTypeModifierItemProvider extends OaamBaseElementAItemProvid
 			getString("_UI_ResourceTypeModifier_type") :
 			getString("_UI_ResourceTypeModifier_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

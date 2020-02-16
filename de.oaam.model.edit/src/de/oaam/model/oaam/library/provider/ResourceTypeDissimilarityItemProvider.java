@@ -100,7 +100,7 @@ public class ResourceTypeDissimilarityItemProvider extends OaamBaseElementAItemP
 			getString("_UI_ResourceTypeDissimilarity_type") :
 			getString("_UI_ResourceTypeDissimilarity_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

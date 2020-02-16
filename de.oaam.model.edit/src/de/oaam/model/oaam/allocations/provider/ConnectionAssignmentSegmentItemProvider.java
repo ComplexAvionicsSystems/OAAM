@@ -205,7 +205,7 @@ public class ConnectionAssignmentSegmentItemProvider extends OaamBaseElementAIte
 			getString("_UI_ConnectionAssignmentSegment_type") :
 			getString("_UI_ConnectionAssignmentSegment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

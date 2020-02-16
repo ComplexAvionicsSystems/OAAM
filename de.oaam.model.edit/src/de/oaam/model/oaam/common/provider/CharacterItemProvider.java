@@ -118,7 +118,7 @@ public class CharacterItemProvider extends DataTypeAItemProvider {
 			getString("_UI_Character_type") :
 			getString("_UI_Character_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

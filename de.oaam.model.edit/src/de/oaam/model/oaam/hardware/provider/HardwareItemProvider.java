@@ -130,7 +130,7 @@ public class HardwareItemProvider extends HardwareContainerAItemProvider {
 			getString("_UI_Hardware_type") :
 			getString("_UI_Hardware_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

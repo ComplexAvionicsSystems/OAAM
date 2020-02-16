@@ -320,7 +320,7 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			getString("_UI_TaskType_type") :
 			getString("_UI_TaskType_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

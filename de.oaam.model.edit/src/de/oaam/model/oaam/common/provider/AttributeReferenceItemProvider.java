@@ -94,7 +94,7 @@ public class AttributeReferenceItemProvider extends AttributeAItemProvider {
 			getString("_UI_AttributeReference_type") :
 			getString("_UI_AttributeReference_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

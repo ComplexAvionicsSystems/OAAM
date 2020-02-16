@@ -119,7 +119,7 @@ public class HydraulicPowerItemProvider extends InformationPowerItemProvider {
 			getString("_UI_HydraulicPower_type") :
 			getString("_UI_HydraulicPower_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -69,7 +69,7 @@ public class AllocationsItemProvider extends AllocationsContainerAItemProvider {
 			getString("_UI_Allocations_type") :
 			getString("_UI_Allocations_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

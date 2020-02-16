@@ -119,7 +119,7 @@ public class RotaryPowerItemProvider extends InformationPowerItemProvider {
 			getString("_UI_RotaryPower_type") :
 			getString("_UI_RotaryPower_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

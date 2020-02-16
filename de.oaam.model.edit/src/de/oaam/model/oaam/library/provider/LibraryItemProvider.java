@@ -69,7 +69,7 @@ public class LibraryItemProvider extends LibraryContainerAItemProvider {
 			getString("_UI_Library_type") :
 			getString("_UI_Library_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -69,7 +69,7 @@ public class CapabilitiesItemProvider extends CapabilitiesContainerAItemProvider
 			getString("_UI_Capabilities_type") :
 			getString("_UI_Capabilities_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

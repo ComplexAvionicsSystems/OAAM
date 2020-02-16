@@ -351,7 +351,7 @@ public class LocationItemProvider extends ResourceProviderInstanceAItemProvider 
 			getString("_UI_Location_type") :
 			getString("_UI_Location_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

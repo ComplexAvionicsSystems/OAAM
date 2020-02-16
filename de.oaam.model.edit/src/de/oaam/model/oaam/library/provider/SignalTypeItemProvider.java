@@ -292,7 +292,7 @@ public class SignalTypeItemProvider extends ResourceConsumerAItemProvider {
 			getString("_UI_SignalType_type") :
 			getString("_UI_SignalType_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -900,6 +900,52 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.BusType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BusTypeItemProvider busTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.BusType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBusTypeAdapter() {
+		if (busTypeItemProvider == null) {
+			busTypeItemProvider = new BusTypeItemProvider(this);
+		}
+
+		return busTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.MessageType} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageTypeItemProvider messageTypeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.MessageType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageTypeAdapter() {
+		if (messageTypeItemProvider == null) {
+			messageTypeItemProvider = new MessageTypeItemProvider(this);
+		}
+
+		return messageTypeItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1028,12 +1074,14 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (taskTypeDissimilarityItemProvider != null) taskTypeDissimilarityItemProvider.dispose();
 		if (deviceTypeDissimilarityItemProvider != null) deviceTypeDissimilarityItemProvider.dispose();
 		if (resourceTypeDissimilarityItemProvider != null) resourceTypeDissimilarityItemProvider.dispose();
-		if (sublibraryItemProvider != null) sublibraryItemProvider.dispose();
 		if (taskOutputTriggerItemProvider != null) taskOutputTriggerItemProvider.dispose();
 		if (taskInputTriggerItemProvider != null) taskInputTriggerItemProvider.dispose();
 		if (taskStateDeclarationItemProvider != null) taskStateDeclarationItemProvider.dispose();
 		if (taskParameterDeclarationItemProvider != null) taskParameterDeclarationItemProvider.dispose();
+		if (busTypeItemProvider != null) busTypeItemProvider.dispose();
+		if (messageTypeItemProvider != null) messageTypeItemProvider.dispose();
 		if (libraryItemProvider != null) libraryItemProvider.dispose();
+		if (sublibraryItemProvider != null) sublibraryItemProvider.dispose();
 	}
 
 }

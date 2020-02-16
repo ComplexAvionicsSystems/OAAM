@@ -256,7 +256,7 @@ public class TaskItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Task_type") :
 			getString("_UI_Task_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

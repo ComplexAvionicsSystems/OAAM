@@ -394,7 +394,7 @@ public class DuctItemProvider extends ResourceProviderInstanceAItemProvider {
 			getString("_UI_Duct_type") :
 			getString("_UI_Duct_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

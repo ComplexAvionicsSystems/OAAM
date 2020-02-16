@@ -388,7 +388,7 @@ public class TaskOnDeviceCapabilityItemProvider extends CapabilityAItemProvider 
 			getString("_UI_TaskOnDeviceCapability_type") :
 			getString("_UI_TaskOnDeviceCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

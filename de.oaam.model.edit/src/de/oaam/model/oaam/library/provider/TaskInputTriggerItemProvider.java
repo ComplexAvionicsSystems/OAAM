@@ -298,7 +298,7 @@ public class TaskInputTriggerItemProvider extends BoolAItemProvider {
 			getString("_UI_TaskInputTrigger_type") :
 			getString("_UI_TaskInputTrigger_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -123,7 +123,7 @@ public class ResourceTypeModifierReferenceItemProvider extends OaamBaseElementAI
 			getString("_UI_ResourceTypeModifierReference_type") :
 			getString("_UI_ResourceTypeModifierReference_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

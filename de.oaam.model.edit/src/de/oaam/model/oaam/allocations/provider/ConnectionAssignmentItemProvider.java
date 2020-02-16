@@ -161,7 +161,7 @@ public class ConnectionAssignmentItemProvider extends OaamBaseElementAItemProvid
 			getString("_UI_ConnectionAssignment_type") :
 			getString("_UI_ConnectionAssignment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

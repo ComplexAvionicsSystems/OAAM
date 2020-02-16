@@ -119,7 +119,7 @@ public class SubfunctionsItemProvider extends FunctionsContainerAItemProvider {
 			getString("_UI_Subfunctions_type") :
 			getString("_UI_Subfunctions_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

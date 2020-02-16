@@ -130,7 +130,7 @@ public class SuballocationsItemProvider extends AllocationsContainerAItemProvide
 			getString("_UI_Suballocations_type") :
 			getString("_UI_Suballocations_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

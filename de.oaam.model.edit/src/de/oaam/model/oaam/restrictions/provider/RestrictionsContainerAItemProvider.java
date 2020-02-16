@@ -111,7 +111,7 @@ public class RestrictionsContainerAItemProvider extends OaamBaseElementAItemProv
 			getString("_UI_RestrictionsContainerA_type") :
 			getString("_UI_RestrictionsContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

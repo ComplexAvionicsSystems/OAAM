@@ -205,7 +205,7 @@ public class SubconnectionAssignmentItemProvider extends OaamBaseElementAItemPro
 			getString("_UI_SubconnectionAssignment_type") :
 			getString("_UI_SubconnectionAssignment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

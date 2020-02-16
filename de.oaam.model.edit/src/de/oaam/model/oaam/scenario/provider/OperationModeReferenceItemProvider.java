@@ -125,7 +125,7 @@ public class OperationModeReferenceItemProvider extends OaamBaseElementAItemProv
 			getString("_UI_OperationModeReference_type") :
 			getString("_UI_OperationModeReference_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

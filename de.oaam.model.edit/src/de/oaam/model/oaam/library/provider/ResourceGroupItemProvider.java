@@ -100,7 +100,7 @@ public class ResourceGroupItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_ResourceGroup_type") :
 			getString("_UI_ResourceGroup_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

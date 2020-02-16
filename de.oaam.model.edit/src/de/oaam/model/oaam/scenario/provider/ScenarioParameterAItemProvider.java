@@ -79,7 +79,7 @@ public class ScenarioParameterAItemProvider extends ModeDependentElementAItemPro
 	public String getText(Object object) {
 		return getString("_UI_ScenarioParameterA_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

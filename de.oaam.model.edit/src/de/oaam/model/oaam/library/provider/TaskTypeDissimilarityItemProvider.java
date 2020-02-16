@@ -125,7 +125,7 @@ public class TaskTypeDissimilarityItemProvider extends OaamBaseElementAItemProvi
 			getString("_UI_TaskTypeDissimilarity_type") :
 			getString("_UI_TaskTypeDissimilarity_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

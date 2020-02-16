@@ -206,7 +206,7 @@ public class Position3DItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Position3D_type") :
 			getString("_UI_Position3D_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

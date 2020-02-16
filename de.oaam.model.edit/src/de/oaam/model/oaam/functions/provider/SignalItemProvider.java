@@ -275,7 +275,7 @@ public class SignalItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Signal_type") :
 			getString("_UI_Signal_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

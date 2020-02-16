@@ -75,6 +75,7 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS);
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS);
 			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS);
+			childrenFeatures.add(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__MESSAGES);
 		}
 		return childrenFeatures;
 	}
@@ -105,7 +106,7 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			getString("_UI_AllocationsContainerA_type") :
 			getString("_UI_AllocationsContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -126,6 +127,7 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS:
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS:
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS:
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__MESSAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -177,6 +179,11 @@ public class AllocationsContainerAItemProvider extends OaamBaseElementAItemProvi
 			(createChildParameter
 				(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS,
 				 AllocationsFactory.eINSTANCE.createSubconnectionAssignment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A__MESSAGES,
+				 AllocationsFactory.eINSTANCE.createMessage()));
 	}
 
 	/**

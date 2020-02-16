@@ -130,7 +130,7 @@ public class SubcapabilitiesItemProvider extends CapabilitiesContainerAItemProvi
 			getString("_UI_Subcapabilities_type") :
 			getString("_UI_Subcapabilities_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

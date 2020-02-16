@@ -96,7 +96,7 @@ public class SignalGroupRestrictionAItemProvider
 	public String getText(Object object) {
 		return getString("_UI_SignalGroupRestrictionA_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

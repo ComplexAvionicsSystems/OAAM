@@ -411,7 +411,7 @@ public class ConnectionRestrictionItemProvider extends SignalRestrictionAItemPro
 			getString("_UI_ConnectionRestriction_type") :
 			getString("_UI_ConnectionRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

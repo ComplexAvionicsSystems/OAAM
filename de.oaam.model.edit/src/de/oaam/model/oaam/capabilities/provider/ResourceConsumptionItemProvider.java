@@ -148,7 +148,7 @@ public class ResourceConsumptionItemProvider extends OaamBaseElementAItemProvide
 			getString("_UI_ResourceConsumption_type") :
 			getString("_UI_ResourceConsumption_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -69,7 +69,7 @@ public class SubscenarioItemProvider extends ScenarioContainerAItemProvider {
 			getString("_UI_Subscenario_type") :
 			getString("_UI_Subscenario_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -69,7 +69,7 @@ public class FunctionsItemProvider extends FunctionsContainerAItemProvider {
 			getString("_UI_Functions_type") :
 			getString("_UI_Functions_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

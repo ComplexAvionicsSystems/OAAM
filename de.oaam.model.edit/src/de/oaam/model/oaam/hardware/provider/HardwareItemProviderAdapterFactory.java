@@ -210,6 +210,29 @@ public class HardwareItemProviderAdapterFactory extends HardwareAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.hardware.Bus} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BusItemProvider busItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.hardware.Bus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBusAdapter() {
+		if (busItemProvider == null) {
+			busItemProvider = new BusItemProvider(this);
+		}
+
+		return busItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +337,7 @@ public class HardwareItemProviderAdapterFactory extends HardwareAdapterFactory i
 		if (deviceSymmetryItemProvider != null) deviceSymmetryItemProvider.dispose();
 		if (hardwareItemProvider != null) hardwareItemProvider.dispose();
 		if (subhardwareItemProvider != null) subhardwareItemProvider.dispose();
+		if (busItemProvider != null) busItemProvider.dispose();
 	}
 
 }

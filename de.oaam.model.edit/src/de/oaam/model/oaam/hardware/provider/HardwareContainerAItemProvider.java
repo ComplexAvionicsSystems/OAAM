@@ -72,6 +72,7 @@ public class HardwareContainerAItemProvider extends OaamBaseElementAItemProvider
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES);
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__CONNECTIONS);
 			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__SUBHARDWARE);
+			childrenFeatures.add(HardwarePackage.Literals.HARDWARE_CONTAINER_A__BUSES);
 		}
 		return childrenFeatures;
 	}
@@ -102,7 +103,7 @@ public class HardwareContainerAItemProvider extends OaamBaseElementAItemProvider
 			getString("_UI_HardwareContainerA_type") :
 			getString("_UI_HardwareContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -120,6 +121,7 @@ public class HardwareContainerAItemProvider extends OaamBaseElementAItemProvider
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
 			case HardwarePackage.HARDWARE_CONTAINER_A__CONNECTIONS:
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,6 +158,11 @@ public class HardwareContainerAItemProvider extends OaamBaseElementAItemProvider
 			(createChildParameter
 				(HardwarePackage.Literals.HARDWARE_CONTAINER_A__SUBHARDWARE,
 				 HardwareFactory.eINSTANCE.createSubhardware()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(HardwarePackage.Literals.HARDWARE_CONTAINER_A__BUSES,
+				 HardwareFactory.eINSTANCE.createBus()));
 	}
 
 	/**

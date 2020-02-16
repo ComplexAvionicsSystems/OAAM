@@ -394,7 +394,7 @@ public class ConnectionItemProvider extends ResourceProviderInstanceAItemProvide
 			getString("_UI_Connection_type") :
 			getString("_UI_Connection_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

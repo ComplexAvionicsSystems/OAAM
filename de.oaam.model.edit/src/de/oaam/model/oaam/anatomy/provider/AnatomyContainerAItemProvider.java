@@ -104,7 +104,7 @@ public class AnatomyContainerAItemProvider extends OaamBaseElementAItemProvider 
 			getString("_UI_AnatomyContainerA_type") :
 			getString("_UI_AnatomyContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

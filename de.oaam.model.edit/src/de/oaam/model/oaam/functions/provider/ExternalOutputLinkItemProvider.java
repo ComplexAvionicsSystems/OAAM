@@ -183,7 +183,7 @@ public class ExternalOutputLinkItemProvider extends OaamBaseElementAItemProvider
 			getString("_UI_ExternalOutputLink_type") :
 			getString("_UI_ExternalOutputLink_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

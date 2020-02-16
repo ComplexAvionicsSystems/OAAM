@@ -135,7 +135,7 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 			getString("_UI_FunctionsContainerA_type") :
 			getString("_UI_FunctionsContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

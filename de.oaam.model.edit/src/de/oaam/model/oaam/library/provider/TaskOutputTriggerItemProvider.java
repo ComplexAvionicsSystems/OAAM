@@ -185,7 +185,7 @@ public class TaskOutputTriggerItemProvider extends OaamBaseElementAItemProvider 
 			getString("_UI_TaskOutputTrigger_type") :
 			getString("_UI_TaskOutputTrigger_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

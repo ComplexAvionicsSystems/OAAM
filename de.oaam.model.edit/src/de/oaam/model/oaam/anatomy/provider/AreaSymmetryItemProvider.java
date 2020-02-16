@@ -159,7 +159,7 @@ public class AreaSymmetryItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_AreaSymmetry_type") :
 			getString("_UI_AreaSymmetry_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -551,7 +551,7 @@ public class SegregationRestrictionItemProvider extends OaamBaseElementAItemProv
 			getString("_UI_SegregationRestriction_type") :
 			getString("_UI_SegregationRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

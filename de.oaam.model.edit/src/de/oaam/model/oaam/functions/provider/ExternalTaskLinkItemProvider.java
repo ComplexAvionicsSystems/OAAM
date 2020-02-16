@@ -209,7 +209,7 @@ public class ExternalTaskLinkItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_ExternalTaskLink_type") :
 			getString("_UI_ExternalTaskLink_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

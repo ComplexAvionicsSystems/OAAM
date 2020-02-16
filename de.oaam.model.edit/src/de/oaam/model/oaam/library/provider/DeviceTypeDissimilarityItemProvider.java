@@ -125,7 +125,7 @@ public class DeviceTypeDissimilarityItemProvider extends OaamBaseElementAItemPro
 			getString("_UI_DeviceTypeDissimilarity_type") :
 			getString("_UI_DeviceTypeDissimilarity_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

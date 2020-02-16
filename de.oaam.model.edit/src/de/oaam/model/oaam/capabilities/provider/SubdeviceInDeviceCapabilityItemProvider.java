@@ -342,7 +342,7 @@ public class SubdeviceInDeviceCapabilityItemProvider extends CapabilityAItemProv
 			getString("_UI_SubdeviceInDeviceCapability_type") :
 			getString("_UI_SubdeviceInDeviceCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

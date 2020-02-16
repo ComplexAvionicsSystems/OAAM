@@ -159,7 +159,7 @@ public class DeviceSymmetryItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_DeviceSymmetry_type") :
 			getString("_UI_DeviceSymmetry_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

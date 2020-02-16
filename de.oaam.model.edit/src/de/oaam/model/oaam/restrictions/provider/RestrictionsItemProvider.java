@@ -69,7 +69,7 @@ public class RestrictionsItemProvider extends RestrictionsContainerAItemProvider
 			getString("_UI_Restrictions_type") :
 			getString("_UI_Restrictions_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

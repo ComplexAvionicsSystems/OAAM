@@ -217,7 +217,7 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_WireType_type") :
 			getString("_UI_WireType_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

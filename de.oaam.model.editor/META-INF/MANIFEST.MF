@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.oaam.model.editor;singleton:=true
 Automatic-Module-Name: de.oaam.model.editor
-Bundle-Version: 1.5.3.qualifier
+Bundle-Version: 1.5.4.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.oaam.model.oaam.presentation.OaamEditorPlugin$Implementation
 Bundle-Vendor: %providerName

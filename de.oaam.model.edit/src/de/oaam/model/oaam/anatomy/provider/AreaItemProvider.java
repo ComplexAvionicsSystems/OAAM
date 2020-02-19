@@ -182,7 +182,7 @@ public class AreaItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Area_type") :
 			getString("_UI_Area_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

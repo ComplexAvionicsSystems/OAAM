@@ -207,7 +207,7 @@ public class SignalAssignmentSegmentItemProvider extends OaamBaseElementAItemPro
 			getString("_UI_SignalAssignmentSegment_type") :
 			getString("_UI_SignalAssignmentSegment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

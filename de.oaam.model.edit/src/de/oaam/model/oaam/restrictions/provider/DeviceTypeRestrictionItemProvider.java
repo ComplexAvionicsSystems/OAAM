@@ -457,7 +457,7 @@ public class DeviceTypeRestrictionItemProvider extends TaskRestrictionAItemProvi
 			getString("_UI_DeviceTypeRestriction_type") :
 			getString("_UI_DeviceTypeRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

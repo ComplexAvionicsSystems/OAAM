@@ -207,7 +207,7 @@ public class TaskAssignmentItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_TaskAssignment_type") :
 			getString("_UI_TaskAssignment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

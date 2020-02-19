@@ -96,7 +96,7 @@ public class AttributeStringItemProvider extends AttributeAItemProvider {
 			getString("_UI_AttributeString_type") :
 			getString("_UI_AttributeString_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -321,7 +321,7 @@ public class TaskInputStateItemProvider extends BoolAItemProvider {
 			getString("_UI_TaskInputState_type") :
 			getString("_UI_TaskInputState_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

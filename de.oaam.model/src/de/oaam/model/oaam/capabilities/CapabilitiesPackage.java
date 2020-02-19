@@ -244,13 +244,49 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Message On Bus Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Submessage In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Signal In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Message On Connection Or Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int CAPABILITIES_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -1311,7 +1347,615 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
 	 * @generated
 	 */
-	int CAPABILITIES = 9;
+	int CAPABILITIES = 13;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
+	 * @generated
+	 */
+	int SUBCAPABILITIES = 14;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl <em>Message On Bus Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnBusCapability()
+	 * @generated
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY = 9;
+
+	/**
+	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Bus Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__BUS_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY__MESSAGE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Message On Bus Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Message On Bus Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_BUS_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl <em>Submessage In Message Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubmessageInMessageCapability()
+	 * @generated
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY = 11;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl <em>Signal In Message Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalInMessageCapability()
+	 * @generated
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY = 12;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl <em>Message On Connection Or Device Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY = 10;
+
+	/**
+	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MESSAGE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Device Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Connection Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = CAPABILITY_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Worst Case Transmission Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = CAPABILITY_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The number of structural features of the '<em>Message On Connection Or Device Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 14;
+
+	/**
+	 * The number of operations of the '<em>Message On Connection Or Device Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Submessage Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY__SUBMESSAGE_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Submessage In Message Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Submessage In Message Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__RESOURCE_CONSUMPTIONS = CAPABILITY_A__RESOURCE_CONSUMPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__ID = CAPABILITY_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__NAME = CAPABILITY_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__STYLE = CAPABILITY_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__ATTRIBUTES = CAPABILITY_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__DOCUMENTATION = CAPABILITY_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__MODIFIED = CAPABILITY_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__MODIFIER = CAPABILITY_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__TRACE_LINK = CAPABILITY_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__VARIANTS = CAPABILITY_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__OPERATION_MODES = CAPABILITY_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE = CAPABILITY_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Signal Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY__SIGNAL_TYPE = CAPABILITY_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of structural features of the '<em>Signal In Message Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY_FEATURE_COUNT = CAPABILITY_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The number of operations of the '<em>Signal In Message Capability</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1449,6 +2093,42 @@ public interface CapabilitiesPackage extends EPackage {
 	int CAPABILITIES__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES;
 
 	/**
+	 * The feature id for the '<em><b>Message On Bus Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES__MESSAGE_ON_BUS_CAPABILITIES = CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Submessage In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES__SUBMESSAGE_IN_MESSAGE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Signal In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES__SIGNAL_IN_MESSAGE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Message On Connection Or Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITIES__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES;
+
+	/**
 	 * The number of structural features of the '<em>Capabilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1465,16 +2145,6 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAPABILITIES_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
-	 * @generated
-	 */
-	int SUBCAPABILITIES = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1610,6 +2280,42 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBCAPABILITIES__SUBCONNECTION_IN_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Message On Bus Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCAPABILITIES__MESSAGE_ON_BUS_CAPABILITIES = CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Submessage In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCAPABILITIES__SUBMESSAGE_IN_MESSAGE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Signal In Message Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCAPABILITIES__SIGNAL_IN_MESSAGE_CAPABILITIES = CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES;
+
+	/**
+	 * The feature id for the '<em><b>Message On Connection Or Device Capabilities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBCAPABILITIES__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES = CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -1755,6 +2461,50 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCapabilitiesContainerA_SubconnectionInDeviceCapabilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnBusCapabilities <em>Message On Bus Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Message On Bus Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnBusCapabilities()
+	 * @see #getCapabilitiesContainerA()
+	 * @generated
+	 */
+	EReference getCapabilitiesContainerA_MessageOnBusCapabilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubmessageInMessageCapabilities <em>Submessage In Message Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submessage In Message Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubmessageInMessageCapabilities()
+	 * @see #getCapabilitiesContainerA()
+	 * @generated
+	 */
+	EReference getCapabilitiesContainerA_SubmessageInMessageCapabilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalInMessageCapabilities <em>Signal In Message Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signal In Message Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalInMessageCapabilities()
+	 * @see #getCapabilitiesContainerA()
+	 * @generated
+	 */
+	EReference getCapabilitiesContainerA_SignalInMessageCapabilities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnConnectionOrDeviceCapabilities <em>Message On Connection Or Device Capabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Message On Connection Or Device Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnConnectionOrDeviceCapabilities()
+	 * @see #getCapabilitiesContainerA()
+	 * @generated
+	 */
+	EReference getCapabilitiesContainerA_MessageOnConnectionOrDeviceCapabilities();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.TaskOnDeviceCapability <em>Task On Device Capability</em>}'.
@@ -2067,6 +2817,156 @@ public interface CapabilitiesPackage extends EPackage {
 	EClass getSubcapabilities();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability <em>Message On Bus Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message On Bus Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnBusCapability
+	 * @generated
+	 */
+	EClass getMessageOnBusCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability#getBusType <em>Bus Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bus Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnBusCapability#getBusType()
+	 * @see #getMessageOnBusCapability()
+	 * @generated
+	 */
+	EReference getMessageOnBusCapability_BusType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnBusCapability#getMessageType()
+	 * @see #getMessageOnBusCapability()
+	 * @generated
+	 */
+	EReference getMessageOnBusCapability_MessageType();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability <em>Submessage In Message Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submessage In Message Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubmessageInMessageCapability
+	 * @generated
+	 */
+	EClass getSubmessageInMessageCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubmessageInMessageCapability#getMessageType()
+	 * @see #getSubmessageInMessageCapability()
+	 * @generated
+	 */
+	EReference getSubmessageInMessageCapability_MessageType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability#getSubmessageType <em>Submessage Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Submessage Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SubmessageInMessageCapability#getSubmessageType()
+	 * @see #getSubmessageInMessageCapability()
+	 * @generated
+	 */
+	EReference getSubmessageInMessageCapability_SubmessageType();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SignalInMessageCapability <em>Signal In Message Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal In Message Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SignalInMessageCapability
+	 * @generated
+	 */
+	EClass getSignalInMessageCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalInMessageCapability#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SignalInMessageCapability#getMessageType()
+	 * @see #getSignalInMessageCapability()
+	 * @generated
+	 */
+	EReference getSignalInMessageCapability_MessageType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.SignalInMessageCapability#getSignalType <em>Signal Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Signal Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.SignalInMessageCapability#getSignalType()
+	 * @see #getSignalInMessageCapability()
+	 * @generated
+	 */
+	EReference getSignalInMessageCapability_SignalType();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message On Connection Or Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @generated
+	 */
+	EClass getMessageOnConnectionOrDeviceCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_MessageType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType <em>Device Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Device Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_DeviceType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType <em>Connection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connection Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_ConnectionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Worst Case Transmission Time</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2172,6 +3072,38 @@ public interface CapabilitiesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SubconnectionInDeviceCapabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Message On Bus Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_MessageOnBusCapabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Submessage In Message Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SubmessageInMessageCapabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal In Message Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_SignalInMessageCapabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Message On Connection Or Device Capabilities</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES = eINSTANCE.getCapabilitiesContainerA_MessageOnConnectionOrDeviceCapabilities();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.TaskOnDeviceCapabilityImpl <em>Task On Device Capability</em>}' class.
@@ -2422,6 +3354,126 @@ public interface CapabilitiesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SUBCAPABILITIES = eINSTANCE.getSubcapabilities();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl <em>Message On Bus Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnBusCapability()
+		 * @generated
+		 */
+		EClass MESSAGE_ON_BUS_CAPABILITY = eINSTANCE.getMessageOnBusCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Bus Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_BUS_CAPABILITY__BUS_TYPE = eINSTANCE.getMessageOnBusCapability_BusType();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_BUS_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getMessageOnBusCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl <em>Submessage In Message Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubmessageInMessageCapability()
+		 * @generated
+		 */
+		EClass SUBMESSAGE_IN_MESSAGE_CAPABILITY = eINSTANCE.getSubmessageInMessageCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMESSAGE_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getSubmessageInMessageCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Submessage Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMESSAGE_IN_MESSAGE_CAPABILITY__SUBMESSAGE_TYPE = eINSTANCE.getSubmessageInMessageCapability_SubmessageType();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl <em>Signal In Message Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalInMessageCapability()
+		 * @generated
+		 */
+		EClass SIGNAL_IN_MESSAGE_CAPABILITY = eINSTANCE.getSignalInMessageCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getSignalInMessageCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_IN_MESSAGE_CAPABILITY__SIGNAL_TYPE = eINSTANCE.getSignalInMessageCapability_SignalType();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl <em>Message On Connection Or Device Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnConnectionOrDeviceCapability()
+		 * @generated
+		 */
+		EClass MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY = eINSTANCE.getMessageOnConnectionOrDeviceCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_DeviceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_ConnectionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Worst Case Transmission Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = eINSTANCE.getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
 
 	}
 

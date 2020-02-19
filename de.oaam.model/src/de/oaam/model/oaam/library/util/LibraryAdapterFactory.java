@@ -207,10 +207,6 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createResourceTypeDissimilarityAdapter();
 			}
 			@Override
-			public Adapter caseSublibrary(Sublibrary object) {
-				return createSublibraryAdapter();
-			}
-			@Override
 			public Adapter caseTaskOutputTrigger(TaskOutputTrigger object) {
 				return createTaskOutputTriggerAdapter();
 			}
@@ -227,8 +223,20 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 				return createTaskParameterDeclarationAdapter();
 			}
 			@Override
+			public Adapter caseBusType(BusType object) {
+				return createBusTypeAdapter();
+			}
+			@Override
+			public Adapter caseMessageType(MessageType object) {
+				return createMessageTypeAdapter();
+			}
+			@Override
 			public Adapter caseLibrary(Library object) {
 				return createLibraryAdapter();
+			}
+			@Override
+			public Adapter caseSublibrary(Sublibrary object) {
+				return createSublibraryAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -815,6 +823,34 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLibraryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.BusType <em>Bus Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.library.BusType
+	 * @generated
+	 */
+	public Adapter createBusTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.library.MessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.library.MessageType
+	 * @generated
+	 */
+	public Adapter createMessageTypeAdapter() {
 		return null;
 	}
 

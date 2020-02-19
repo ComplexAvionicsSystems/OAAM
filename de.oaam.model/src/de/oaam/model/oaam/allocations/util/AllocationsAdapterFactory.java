@@ -109,20 +109,40 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 				return createSubconnectionAssignmentAdapter();
 			}
 			@Override
-			public Adapter caseAllocations(Allocations object) {
-				return createAllocationsAdapter();
-			}
-			@Override
-			public Adapter caseSuballocations(Suballocations object) {
-				return createSuballocationsAdapter();
-			}
-			@Override
 			public Adapter caseSchedule(Schedule object) {
 				return createScheduleAdapter();
 			}
 			@Override
 			public Adapter caseScheduledTime(ScheduledTime object) {
 				return createScheduledTimeAdapter();
+			}
+			@Override
+			public Adapter caseMessageA(MessageA object) {
+				return createMessageAAdapter();
+			}
+			@Override
+			public Adapter caseMessageSegment(MessageSegment object) {
+				return createMessageSegmentAdapter();
+			}
+			@Override
+			public Adapter caseMessage(Message object) {
+				return createMessageAdapter();
+			}
+			@Override
+			public Adapter caseSubmessage(Submessage object) {
+				return createSubmessageAdapter();
+			}
+			@Override
+			public Adapter caseSignalToMessageAssignment(SignalToMessageAssignment object) {
+				return createSignalToMessageAssignmentAdapter();
+			}
+			@Override
+			public Adapter caseAllocations(Allocations object) {
+				return createAllocationsAdapter();
+			}
+			@Override
+			public Adapter caseSuballocations(Suballocations object) {
+				return createSuballocationsAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -335,6 +355,76 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createScheduledTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.Message
+	 * @generated
+	 */
+	public Adapter createMessageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment
+	 * @generated
+	 */
+	public Adapter createSignalToMessageAssignmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.MessageSegment <em>Message Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment
+	 * @generated
+	 */
+	public Adapter createMessageSegmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.Submessage <em>Submessage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.Submessage
+	 * @generated
+	 */
+	public Adapter createSubmessageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.MessageA
+	 * @generated
+	 */
+	public Adapter createMessageAAdapter() {
 		return null;
 	}
 

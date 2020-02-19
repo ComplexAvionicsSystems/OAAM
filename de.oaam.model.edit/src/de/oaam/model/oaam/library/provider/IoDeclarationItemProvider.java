@@ -123,7 +123,7 @@ public class IoDeclarationItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_IoDeclaration_type") :
 			getString("_UI_IoDeclaration_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

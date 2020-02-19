@@ -96,7 +96,7 @@ public class AttributeNumericItemProvider extends AttributeAItemProvider {
 			getString("_UI_AttributeNumeric_type") :
 			getString("_UI_AttributeNumeric_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

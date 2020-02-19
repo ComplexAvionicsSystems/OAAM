@@ -292,7 +292,7 @@ public class ScenarioParameterNumericItemProvider extends ScenarioParameterAItem
 			getString("_UI_ScenarioParameterNumeric_type") :
 			getString("_UI_ScenarioParameterNumeric_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

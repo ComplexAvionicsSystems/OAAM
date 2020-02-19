@@ -69,7 +69,7 @@ public class SublibraryItemProvider extends LibraryContainerAItemProvider {
 			getString("_UI_Sublibrary_type") :
 			getString("_UI_Sublibrary_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

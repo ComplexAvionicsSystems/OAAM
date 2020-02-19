@@ -107,7 +107,7 @@ public class CapabilityAItemProvider
 	public String getText(Object object) {
 		return getString("_UI_CapabilityA_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

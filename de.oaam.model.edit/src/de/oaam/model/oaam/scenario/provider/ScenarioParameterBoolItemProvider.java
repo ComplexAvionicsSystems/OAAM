@@ -292,7 +292,7 @@ public class ScenarioParameterBoolItemProvider extends ScenarioParameterAItemPro
 			getString("_UI_ScenarioParameterBool_type") :
 			getString("_UI_ScenarioParameterBool_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

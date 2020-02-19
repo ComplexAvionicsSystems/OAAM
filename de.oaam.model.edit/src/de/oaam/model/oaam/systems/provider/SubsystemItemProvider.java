@@ -130,7 +130,7 @@ public class SubsystemItemProvider extends SystemsContainerAItemProvider {
 			getString("_UI_Subsystem_type") :
 			getString("_UI_Subsystem_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

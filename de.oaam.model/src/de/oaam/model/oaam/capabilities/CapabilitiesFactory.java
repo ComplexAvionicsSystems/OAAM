@@ -103,6 +103,42 @@ public interface CapabilitiesFactory extends EFactory {
 	Subcapabilities createSubcapabilities();
 
 	/**
+	 * Returns a new object of class '<em>Message On Bus Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message On Bus Capability</em>'.
+	 * @generated
+	 */
+	MessageOnBusCapability createMessageOnBusCapability();
+
+	/**
+	 * Returns a new object of class '<em>Submessage In Message Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Submessage In Message Capability</em>'.
+	 * @generated
+	 */
+	SubmessageInMessageCapability createSubmessageInMessageCapability();
+
+	/**
+	 * Returns a new object of class '<em>Signal In Message Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signal In Message Capability</em>'.
+	 * @generated
+	 */
+	SignalInMessageCapability createSignalInMessageCapability();
+
+	/**
+	 * Returns a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * @generated
+	 */
+	MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -150,24 +150,6 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AllocationsPackage.ALLOCATIONS: {
-				Allocations allocations = (Allocations)theEObject;
-				T result = caseAllocations(allocations);
-				if (result == null) result = caseAllocationsContainerA(allocations);
-				if (result == null) result = caseOaamBaseElementA(allocations);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AllocationsPackage.SUBALLOCATIONS: {
-				Suballocations suballocations = (Suballocations)theEObject;
-				T result = caseSuballocations(suballocations);
-				if (result == null) result = caseAllocationsContainerA(suballocations);
-				if (result == null) result = caseModeDependentElementA(suballocations);
-				if (result == null) result = caseVariantDependentElementA(suballocations);
-				if (result == null) result = caseOaamBaseElementA(suballocations);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case AllocationsPackage.SCHEDULE: {
 				Schedule schedule = (Schedule)theEObject;
 				T result = caseSchedule(schedule);
@@ -183,6 +165,68 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOaamBaseElementA(scheduledTime);
 				if (result == null) result = caseModeDependentElementA(scheduledTime);
 				if (result == null) result = caseVariantDependentElementA(scheduledTime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.MESSAGE_A: {
+				MessageA messageA = (MessageA)theEObject;
+				T result = caseMessageA(messageA);
+				if (result == null) result = caseOaamBaseElementA(messageA);
+				if (result == null) result = caseVariantDependentElementA(messageA);
+				if (result == null) result = caseModeDependentElementA(messageA);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.MESSAGE_SEGMENT: {
+				MessageSegment messageSegment = (MessageSegment)theEObject;
+				T result = caseMessageSegment(messageSegment);
+				if (result == null) result = caseOaamBaseElementA(messageSegment);
+				if (result == null) result = caseVariantDependentElementA(messageSegment);
+				if (result == null) result = caseModeDependentElementA(messageSegment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.MESSAGE: {
+				Message message = (Message)theEObject;
+				T result = caseMessage(message);
+				if (result == null) result = caseMessageA(message);
+				if (result == null) result = caseOaamBaseElementA(message);
+				if (result == null) result = caseVariantDependentElementA(message);
+				if (result == null) result = caseModeDependentElementA(message);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.SUBMESSAGE: {
+				Submessage submessage = (Submessage)theEObject;
+				T result = caseSubmessage(submessage);
+				if (result == null) result = caseMessageA(submessage);
+				if (result == null) result = caseOaamBaseElementA(submessage);
+				if (result == null) result = caseVariantDependentElementA(submessage);
+				if (result == null) result = caseModeDependentElementA(submessage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.SIGNAL_TO_MESSAGE_ASSIGNMENT: {
+				SignalToMessageAssignment signalToMessageAssignment = (SignalToMessageAssignment)theEObject;
+				T result = caseSignalToMessageAssignment(signalToMessageAssignment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.ALLOCATIONS: {
+				Allocations allocations = (Allocations)theEObject;
+				T result = caseAllocations(allocations);
+				if (result == null) result = caseAllocationsContainerA(allocations);
+				if (result == null) result = caseOaamBaseElementA(allocations);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.SUBALLOCATIONS: {
+				Suballocations suballocations = (Suballocations)theEObject;
+				T result = caseSuballocations(suballocations);
+				if (result == null) result = caseAllocationsContainerA(suballocations);
+				if (result == null) result = caseModeDependentElementA(suballocations);
+				if (result == null) result = caseVariantDependentElementA(suballocations);
+				if (result == null) result = caseOaamBaseElementA(suballocations);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -382,6 +426,81 @@ public class AllocationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseScheduledTime(ScheduledTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessage(Message object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signal To Message Assignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signal To Message Assignment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignalToMessageAssignment(SignalToMessageAssignment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Segment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Segment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageSegment(MessageSegment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Submessage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Submessage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubmessage(Submessage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageA(MessageA object) {
 		return null;
 	}
 

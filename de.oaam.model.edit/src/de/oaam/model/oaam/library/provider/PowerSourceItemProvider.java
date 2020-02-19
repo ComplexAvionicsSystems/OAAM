@@ -75,7 +75,7 @@ public class PowerSourceItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_PowerSource_type") :
 			getString("_UI_PowerSource_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

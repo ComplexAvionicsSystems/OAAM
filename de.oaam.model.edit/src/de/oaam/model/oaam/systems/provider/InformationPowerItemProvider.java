@@ -319,7 +319,7 @@ public class InformationPowerItemProvider extends ProvidedInformationAItemProvid
 			getString("_UI_InformationPower_type") :
 			getString("_UI_InformationPower_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

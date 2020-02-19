@@ -342,7 +342,7 @@ public class TaskAtomicRestrictionItemProvider extends TaskRestrictionAItemProvi
 			getString("_UI_TaskAtomicRestriction_type") :
 			getString("_UI_TaskAtomicRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

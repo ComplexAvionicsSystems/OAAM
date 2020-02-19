@@ -206,7 +206,7 @@ public class TimeDelayRestrictionItemProvider extends OaamBaseElementAItemProvid
 			getString("_UI_TimeDelayRestriction_type") :
 			getString("_UI_TimeDelayRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

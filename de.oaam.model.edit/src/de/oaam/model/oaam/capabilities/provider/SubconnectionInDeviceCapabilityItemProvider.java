@@ -342,7 +342,7 @@ public class SubconnectionInDeviceCapabilityItemProvider extends CapabilityAItem
 			getString("_UI_SubconnectionInDeviceCapability_type") :
 			getString("_UI_SubconnectionInDeviceCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

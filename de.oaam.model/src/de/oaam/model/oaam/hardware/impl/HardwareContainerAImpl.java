@@ -4,6 +4,7 @@ package de.oaam.model.oaam.hardware.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
+import de.oaam.model.oaam.hardware.Bus;
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
 import de.oaam.model.oaam.hardware.DeviceSymmetry;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getDeviceSymmetries <em>Device Symmetries</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getConnections <em>Connections</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getSubhardware <em>Subhardware</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getBuses <em>Buses</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +81,16 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	 * @ordered
 	 */
 	protected EList<Subhardware> subhardware;
+
+	/**
+	 * The cached value of the '{@link #getBuses() <em>Buses</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBuses()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Bus> buses;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,6 +164,18 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Bus> getBuses() {
+		if (buses == null) {
+			buses = new EObjectContainmentEList<Bus>(Bus.class, this, HardwarePackage.HARDWARE_CONTAINER_A__BUSES);
+		}
+		return buses;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -163,6 +187,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return ((InternalEList<?>)getSubhardware()).basicRemove(otherEnd, msgs);
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
+				return ((InternalEList<?>)getBuses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -183,6 +209,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 				return getConnections();
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return getSubhardware();
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
+				return getBuses();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +240,10 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 				getSubhardware().clear();
 				getSubhardware().addAll((Collection<? extends Subhardware>)newValue);
 				return;
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
+				getBuses().clear();
+				getBuses().addAll((Collection<? extends Bus>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -236,6 +268,9 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				getSubhardware().clear();
 				return;
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
+				getBuses().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +291,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 				return connections != null && !connections.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__SUBHARDWARE:
 				return subhardware != null && !subhardware.isEmpty();
+			case HardwarePackage.HARDWARE_CONTAINER_A__BUSES:
+				return buses != null && !buses.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

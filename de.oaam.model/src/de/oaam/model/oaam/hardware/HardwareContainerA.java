@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.hardware.HardwareContainerA#getDeviceSymmetries <em>Device Symmetries</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.HardwareContainerA#getConnections <em>Connections</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.HardwareContainerA#getSubhardware <em>Subhardware</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.hardware.HardwareContainerA#getBuses <em>Buses</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.hardware.HardwarePackage#getHardwareContainerA()
@@ -89,5 +90,20 @@ public interface HardwareContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<Subhardware> getSubhardware();
+
+	/**
+	 * Returns the value of the '<em><b>Buses</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Bus}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All buses in the hardware.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Buses</em>' containment reference list.
+	 * @see de.oaam.model.oaam.hardware.HardwarePackage#getHardwareContainerA_Buses()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Bus> getBuses();
 
 } // HardwareContainerA

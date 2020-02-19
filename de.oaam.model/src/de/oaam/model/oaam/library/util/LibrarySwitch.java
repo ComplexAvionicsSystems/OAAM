@@ -316,14 +316,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case LibraryPackage.SUBLIBRARY: {
-				Sublibrary sublibrary = (Sublibrary)theEObject;
-				T result = caseSublibrary(sublibrary);
-				if (result == null) result = caseLibraryContainerA(sublibrary);
-				if (result == null) result = caseOaamBaseElementA(sublibrary);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case LibraryPackage.TASK_OUTPUT_TRIGGER: {
 				TaskOutputTrigger taskOutputTrigger = (TaskOutputTrigger)theEObject;
 				T result = caseTaskOutputTrigger(taskOutputTrigger);
@@ -353,11 +345,36 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case LibraryPackage.BUS_TYPE: {
+				BusType busType = (BusType)theEObject;
+				T result = caseBusType(busType);
+				if (result == null) result = caseResourceProviderA(busType);
+				if (result == null) result = caseOaamBaseElementA(busType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LibraryPackage.MESSAGE_TYPE: {
+				MessageType messageType = (MessageType)theEObject;
+				T result = caseMessageType(messageType);
+				if (result == null) result = caseOaamBaseElementA(messageType);
+				if (result == null) result = caseResourceConsumerA(messageType);
+				if (result == null) result = caseResourceProviderA(messageType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case LibraryPackage.LIBRARY: {
 				Library library = (Library)theEObject;
 				T result = caseLibrary(library);
 				if (result == null) result = caseLibraryContainerA(library);
 				if (result == null) result = caseOaamBaseElementA(library);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case LibraryPackage.SUBLIBRARY: {
+				Sublibrary sublibrary = (Sublibrary)theEObject;
+				T result = caseSublibrary(sublibrary);
+				if (result == null) result = caseLibraryContainerA(sublibrary);
+				if (result == null) result = caseOaamBaseElementA(sublibrary);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -962,6 +979,36 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLibrary(Library object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bus Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bus Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBusType(BusType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageType(MessageType object) {
 		return null;
 	}
 

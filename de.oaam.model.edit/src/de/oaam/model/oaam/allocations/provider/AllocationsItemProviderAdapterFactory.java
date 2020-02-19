@@ -348,6 +348,98 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Message} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageItemProvider messageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Message}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageAdapter() {
+		if (messageItemProvider == null) {
+			messageItemProvider = new MessageItemProvider(this);
+		}
+
+		return messageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.SignalToMessageAssignment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignalToMessageAssignmentItemProvider signalToMessageAssignmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.SignalToMessageAssignment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignalToMessageAssignmentAdapter() {
+		if (signalToMessageAssignmentItemProvider == null) {
+			signalToMessageAssignmentItemProvider = new SignalToMessageAssignmentItemProvider(this);
+		}
+
+		return signalToMessageAssignmentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.MessageSegment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageSegmentItemProvider messageSegmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.MessageSegment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageSegmentAdapter() {
+		if (messageSegmentItemProvider == null) {
+			messageSegmentItemProvider = new MessageSegmentItemProvider(this);
+		}
+
+		return messageSegmentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Submessage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubmessageItemProvider submessageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Submessage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubmessageAdapter() {
+		if (submessageItemProvider == null) {
+			submessageItemProvider = new SubmessageItemProvider(this);
+		}
+
+		return submessageItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -454,10 +546,14 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (connectionAssignmentSegmentItemProvider != null) connectionAssignmentSegmentItemProvider.dispose();
 		if (subdeviceAssignmentItemProvider != null) subdeviceAssignmentItemProvider.dispose();
 		if (subconnectionAssignmentItemProvider != null) subconnectionAssignmentItemProvider.dispose();
-		if (allocationsItemProvider != null) allocationsItemProvider.dispose();
-		if (suballocationsItemProvider != null) suballocationsItemProvider.dispose();
 		if (scheduleItemProvider != null) scheduleItemProvider.dispose();
 		if (scheduledTimeItemProvider != null) scheduledTimeItemProvider.dispose();
+		if (messageSegmentItemProvider != null) messageSegmentItemProvider.dispose();
+		if (messageItemProvider != null) messageItemProvider.dispose();
+		if (submessageItemProvider != null) submessageItemProvider.dispose();
+		if (signalToMessageAssignmentItemProvider != null) signalToMessageAssignmentItemProvider.dispose();
+		if (allocationsItemProvider != null) allocationsItemProvider.dispose();
+		if (suballocationsItemProvider != null) suballocationsItemProvider.dispose();
 	}
 
 }

@@ -365,7 +365,7 @@ public class ConnectionInDuctOrLocationCapabilityItemProvider extends Capability
 			getString("_UI_ConnectionInDuctOrLocationCapability_type") :
 			getString("_UI_ConnectionInDuctOrLocationCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -10,6 +10,7 @@ import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsFactory;
 import de.oaam.model.oaam.functions.FunctionsPackage;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -211,7 +212,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_FailureCondition_type") :
 			getString("_UI_FailureCondition_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -89,6 +89,8 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__POWER_SOURCES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__SUBLIBRARIES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__IO_TYPES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__MESSAGE_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +121,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			getString("_UI_LibraryContainerA_type") :
 			getString("_UI_LibraryContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -152,6 +154,8 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.LIBRARY_CONTAINER_A__POWER_SOURCES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__SUBLIBRARIES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -293,6 +297,16 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__IO_TYPES,
 				 LibraryFactory.eINSTANCE.createIoType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES,
+				 LibraryFactory.eINSTANCE.createBusType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__MESSAGE_TYPES,
+				 LibraryFactory.eINSTANCE.createMessageType()));
 	}
 
 	/**

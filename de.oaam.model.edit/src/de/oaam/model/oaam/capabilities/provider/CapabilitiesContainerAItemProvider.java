@@ -75,6 +75,10 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
 			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES);
+			childrenFeatures.add(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES);
 		}
 		return childrenFeatures;
 	}
@@ -105,7 +109,7 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			getString("_UI_CapabilitiesContainerA_type") :
 			getString("_UI_CapabilitiesContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -126,6 +130,10 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES:
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCAPABILITIES:
 			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES:
+			case CapabilitiesPackage.CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -177,6 +185,26 @@ public class CapabilitiesContainerAItemProvider extends OaamBaseElementAItemProv
 			(createChildParameter
 				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES,
 				 CapabilitiesFactory.eINSTANCE.createSubconnectionInDeviceCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createMessageOnBusCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createSubmessageInMessageCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createSignalInMessageCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CapabilitiesPackage.Literals.CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES,
+				 CapabilitiesFactory.eINSTANCE.createMessageOnConnectionOrDeviceCapability()));
 	}
 
 	/**

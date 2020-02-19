@@ -138,6 +138,16 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HardwarePackage.BUS: {
+				Bus bus = (Bus)theEObject;
+				T result = caseBus(bus);
+				if (result == null) result = caseResourceProviderInstanceA(bus);
+				if (result == null) result = caseOaamBaseElementA(bus);
+				if (result == null) result = caseVariantDependentElementA(bus);
+				if (result == null) result = caseModeDependentElementA(bus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -244,6 +254,21 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSubhardware(Subhardware object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBus(Bus object) {
 		return null;
 	}
 

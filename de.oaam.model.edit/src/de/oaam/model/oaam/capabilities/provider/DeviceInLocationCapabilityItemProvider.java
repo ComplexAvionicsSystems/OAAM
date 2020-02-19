@@ -342,7 +342,7 @@ public class DeviceInLocationCapabilityItemProvider extends CapabilityAItemProvi
 			getString("_UI_DeviceInLocationCapability_type") :
 			getString("_UI_DeviceInLocationCapability_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

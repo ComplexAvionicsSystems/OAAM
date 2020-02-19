@@ -87,12 +87,14 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.TASK_TYPE_DISSIMILARITY: return createTaskTypeDissimilarity();
 			case LibraryPackage.DEVICE_TYPE_DISSIMILARITY: return createDeviceTypeDissimilarity();
 			case LibraryPackage.RESOURCE_TYPE_DISSIMILARITY: return createResourceTypeDissimilarity();
-			case LibraryPackage.SUBLIBRARY: return createSublibrary();
 			case LibraryPackage.TASK_OUTPUT_TRIGGER: return createTaskOutputTrigger();
 			case LibraryPackage.TASK_INPUT_TRIGGER: return createTaskInputTrigger();
 			case LibraryPackage.TASK_STATE_DECLARATION: return createTaskStateDeclaration();
 			case LibraryPackage.TASK_PARAMETER_DECLARATION: return createTaskParameterDeclaration();
+			case LibraryPackage.BUS_TYPE: return createBusType();
+			case LibraryPackage.MESSAGE_TYPE: return createMessageType();
 			case LibraryPackage.LIBRARY: return createLibrary();
+			case LibraryPackage.SUBLIBRARY: return createSublibrary();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -494,6 +496,26 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public Library createLibrary() {
 		LibraryImpl library = new LibraryImpl();
 		return library;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BusType createBusType() {
+		BusTypeImpl busType = new BusTypeImpl();
+		return busType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageType createMessageType() {
+		MessageTypeImpl messageType = new MessageTypeImpl();
+		return messageType;
 	}
 
 	/**

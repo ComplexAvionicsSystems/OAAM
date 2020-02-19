@@ -26,7 +26,6 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  * @generated
  */
 public interface SignalType extends ResourceConsumerA, OaamBaseElementA {
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -51,4 +50,5 @@ public interface SignalType extends ResourceConsumerA, OaamBaseElementA {
 	 * @generated
 	 */
 	void setType(DataTypeA value);
+
 } // SignalType

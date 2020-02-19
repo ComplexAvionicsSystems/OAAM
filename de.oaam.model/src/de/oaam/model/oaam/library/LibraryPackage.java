@@ -463,13 +463,31 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_CONTAINER_A__IO_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 18;
 
 	/**
+	 * The feature id for the '<em><b>Hardware Group Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 19;
+
+	/**
+	 * The feature id for the '<em><b>Message Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__MESSAGE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 20;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 19;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -4658,268 +4676,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
 	 * @generated
 	 */
-	int SUBLIBRARY = 34;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__ID = LIBRARY_CONTAINER_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__NAME = LIBRARY_CONTAINER_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__STYLE = LIBRARY_CONTAINER_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__ATTRIBUTES = LIBRARY_CONTAINER_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DOCUMENTATION = LIBRARY_CONTAINER_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__MODIFIED = LIBRARY_CONTAINER_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__MODIFIER = LIBRARY_CONTAINER_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DATA_TYPES = LIBRARY_CONTAINER_A__DATA_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__RESOURCE_TYPES = LIBRARY_CONTAINER_A__RESOURCE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Bundles</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__RESOURCE_BUNDLES = LIBRARY_CONTAINER_A__RESOURCE_BUNDLES;
-
-	/**
-	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__RESOURCE_MODIFIERS = LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS;
-
-	/**
-	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__RESOURCE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES;
-
-	/**
-	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__TASK_TYPES = LIBRARY_CONTAINER_A__TASK_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__TASK_TYPE_DISSIMILARITY = LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY;
-
-	/**
-	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__SIGNAL_TYPES = LIBRARY_CONTAINER_A__SIGNAL_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DEVICE_TYPES = LIBRARY_CONTAINER_A__DEVICE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DEVICE_TYPE_SYMMETRIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES;
-
-	/**
-	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DEVICE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES;
-
-	/**
-	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__CONNECTION_TYPES = LIBRARY_CONTAINER_A__CONNECTION_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__WIRE_TYPES = LIBRARY_CONTAINER_A__WIRE_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__LOCATION_TYPES = LIBRARY_CONTAINER_A__LOCATION_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Duct Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__DUCT_TYPES = LIBRARY_CONTAINER_A__DUCT_TYPES;
-
-	/**
-	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__GENERIC_ATTRIBUTES = LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Power Sources</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__POWER_SOURCES = LIBRARY_CONTAINER_A__POWER_SOURCES;
-
-	/**
-	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
-
-	/**
-	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY__IO_TYPES = LIBRARY_CONTAINER_A__IO_TYPES;
-
-	/**
-	 * The number of structural features of the '<em>Sublibrary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY_FEATURE_COUNT = LIBRARY_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Sublibrary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBLIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
+	int SUBLIBRARY = 41;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl <em>Task Output Trigger</em>}' class.
@@ -4929,7 +4686,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskOutputTrigger()
 	 * @generated
 	 */
-	int TASK_OUTPUT_TRIGGER = 35;
+	int TASK_OUTPUT_TRIGGER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5083,7 +4840,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputTrigger()
 	 * @generated
 	 */
-	int TASK_INPUT_TRIGGER = 36;
+	int TASK_INPUT_TRIGGER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5192,7 +4949,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskStateDeclaration()
 	 * @generated
 	 */
-	int TASK_STATE_DECLARATION = 37;
+	int TASK_STATE_DECLARATION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5301,7 +5058,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskParameterDeclaration()
 	 * @generated
 	 */
-	int TASK_PARAMETER_DECLARATION = 38;
+	int TASK_PARAMETER_DECLARATION = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5410,7 +5167,396 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
 	 * @generated
 	 */
-	int LIBRARY = 39;
+	int LIBRARY = 40;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.BusTypeImpl <em>Bus Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.BusTypeImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getBusType()
+	 * @generated
+	 */
+	int BUS_TYPE = 38;
+
+	/**
+	 * The feature id for the '<em><b>Provided Bundles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__PROVIDED_BUNDLES = RESOURCE_PROVIDER_A__PROVIDED_BUNDLES;
+
+	/**
+	 * The feature id for the '<em><b>Possible Resource Provisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__POSSIBLE_RESOURCE_PROVISIONS = RESOURCE_PROVIDER_A__POSSIBLE_RESOURCE_PROVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>Provided Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__PROVIDED_GROUPS = RESOURCE_PROVIDER_A__PROVIDED_GROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__RESOURCE_LINKS = RESOURCE_PROVIDER_A__RESOURCE_LINKS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__ID = RESOURCE_PROVIDER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__NAME = RESOURCE_PROVIDER_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__STYLE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__ATTRIBUTES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__DOCUMENTATION = RESOURCE_PROVIDER_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__MODIFIED = RESOURCE_PROVIDER_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__MODIFIER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__TRACE_LINK = RESOURCE_PROVIDER_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Device Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__DEVICE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Mtbf</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__MTBF = RESOURCE_PROVIDER_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Is Self Managing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__IS_SELF_MANAGING = RESOURCE_PROVIDER_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Connection Types</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__CONNECTION_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Requires Master</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Messagetypes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__MESSAGETYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The number of structural features of the '<em>Bus Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 14;
+
+	/**
+	 * The number of operations of the '<em>Bus Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE_OPERATION_COUNT = RESOURCE_PROVIDER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.MessageTypeImpl <em>Message Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.MessageTypeImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getMessageType()
+	 * @generated
+	 */
+	int MESSAGE_TYPE = 39;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Required Resources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__REQUIRED_RESOURCES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Consumed Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__CONSUMED_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Provided Bundles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__PROVIDED_BUNDLES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Possible Resource Provisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__POSSIBLE_RESOURCE_PROVISIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Provided Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__PROVIDED_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Resource Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__RESOURCE_LINKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Min Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__MIN_LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__MAX_LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Allignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__ALLIGNMENT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Header Definition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__HEADER_DEFINITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Trailer Definition</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE__TRAILER_DEFINITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>Message Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of operations of the '<em>Message Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_TYPE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5656,6 +5802,24 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY__IO_TYPES = LIBRARY_CONTAINER_A__IO_TYPES;
 
 	/**
+	 * The feature id for the '<em><b>Hardware Group Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__HARDWARE_GROUP_TYPES = LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Message Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__MESSAGE_TYPES = LIBRARY_CONTAINER_A__MESSAGE_TYPES;
+
+	/**
 	 * The number of structural features of the '<em>Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5674,6 +5838,285 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__ID = LIBRARY_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__NAME = LIBRARY_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__STYLE = LIBRARY_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__ATTRIBUTES = LIBRARY_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DOCUMENTATION = LIBRARY_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__MODIFIED = LIBRARY_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__MODIFIER = LIBRARY_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DATA_TYPES = LIBRARY_CONTAINER_A__DATA_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__RESOURCE_TYPES = LIBRARY_CONTAINER_A__RESOURCE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Bundles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__RESOURCE_BUNDLES = LIBRARY_CONTAINER_A__RESOURCE_BUNDLES;
+
+	/**
+	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__RESOURCE_MODIFIERS = LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS;
+
+	/**
+	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__RESOURCE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES;
+
+	/**
+	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__TASK_TYPES = LIBRARY_CONTAINER_A__TASK_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__TASK_TYPE_DISSIMILARITY = LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY;
+
+	/**
+	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__SIGNAL_TYPES = LIBRARY_CONTAINER_A__SIGNAL_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DEVICE_TYPES = LIBRARY_CONTAINER_A__DEVICE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DEVICE_TYPE_SYMMETRIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES;
+
+	/**
+	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DEVICE_TYPE_DISSIMILARITIES = LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES;
+
+	/**
+	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__CONNECTION_TYPES = LIBRARY_CONTAINER_A__CONNECTION_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__WIRE_TYPES = LIBRARY_CONTAINER_A__WIRE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__LOCATION_TYPES = LIBRARY_CONTAINER_A__LOCATION_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Duct Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__DUCT_TYPES = LIBRARY_CONTAINER_A__DUCT_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__GENERIC_ATTRIBUTES = LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Power Sources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__POWER_SOURCES = LIBRARY_CONTAINER_A__POWER_SOURCES;
+
+	/**
+	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__SUBLIBRARIES = LIBRARY_CONTAINER_A__SUBLIBRARIES;
+
+	/**
+	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__IO_TYPES = LIBRARY_CONTAINER_A__IO_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Hardware Group Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__HARDWARE_GROUP_TYPES = LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Message Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__MESSAGE_TYPES = LIBRARY_CONTAINER_A__MESSAGE_TYPES;
+
+	/**
+	 * The number of structural features of the '<em>Sublibrary</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY_FEATURE_COUNT = LIBRARY_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Sublibrary</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5681,7 +6124,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoDirectionE()
 	 * @generated
 	 */
-	int IO_DIRECTION_E = 40;
+	int IO_DIRECTION_E = 42;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTypesE <em>Attribute Types E</em>}' enum.
@@ -5691,7 +6134,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTypesE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPES_E = 41;
+	int ATTRIBUTE_TYPES_E = 43;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTargetsE <em>Attribute Targets E</em>}' enum.
@@ -5701,7 +6144,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTargetsE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TARGETS_E = 42;
+	int ATTRIBUTE_TARGETS_E = 44;
 
 
 	/**
@@ -6029,6 +6472,28 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLibraryContainerA_IoTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.LibraryContainerA#getHardwareGroupTypes <em>Hardware Group Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Hardware Group Types</em>'.
+	 * @see de.oaam.model.oaam.library.LibraryContainerA#getHardwareGroupTypes()
+	 * @see #getLibraryContainerA()
+	 * @generated
+	 */
+	EReference getLibraryContainerA_HardwareGroupTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.LibraryContainerA#getMessageTypes <em>Message Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Message Types</em>'.
+	 * @see de.oaam.model.oaam.library.LibraryContainerA#getMessageTypes()
+	 * @see #getLibraryContainerA()
+	 * @generated
+	 */
+	EReference getLibraryContainerA_MessageTypes();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceType <em>Resource Type</em>}'.
@@ -7590,6 +8055,147 @@ public interface LibraryPackage extends EPackage {
 	EClass getLibrary();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.BusType <em>Bus Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bus Type</em>'.
+	 * @see de.oaam.model.oaam.library.BusType
+	 * @generated
+	 */
+	EClass getBusType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.BusType#getDeviceTypes <em>Device Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Device Types</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#getDeviceTypes()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EReference getBusType_DeviceTypes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.BusType#getMtbf <em>Mtbf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mtbf</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#getMtbf()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EAttribute getBusType_Mtbf();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.BusType#isIsSelfManaging <em>Is Self Managing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Self Managing</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#isIsSelfManaging()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EAttribute getBusType_IsSelfManaging();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.BusType#getConnectionTypes <em>Connection Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Connection Types</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#getConnectionTypes()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EReference getBusType_ConnectionTypes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.BusType#isRequiresMaster <em>Requires Master</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Requires Master</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#isRequiresMaster()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EAttribute getBusType_RequiresMaster();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.library.BusType#getMessagetypes <em>Messagetypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Messagetypes</em>'.
+	 * @see de.oaam.model.oaam.library.BusType#getMessagetypes()
+	 * @see #getBusType()
+	 * @generated
+	 */
+	EReference getBusType_Messagetypes();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.MessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType
+	 * @generated
+	 */
+	EClass getMessageType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.MessageType#getMinLength <em>Min Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Length</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getMinLength()
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	EAttribute getMessageType_MinLength();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.MessageType#getMaxLength <em>Max Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Max Length</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getMaxLength()
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	EAttribute getMessageType_MaxLength();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.MessageType#getAllignment <em>Allignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allignment</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getAllignment()
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	EAttribute getMessageType_Allignment();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.MessageType#getHeaderDefinition <em>Header Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Header Definition</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getHeaderDefinition()
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	EReference getMessageType_HeaderDefinition();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.MessageType#getTrailerDefinition <em>Trailer Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Trailer Definition</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getTrailerDefinition()
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	EReference getMessageType_TrailerDefinition();
+
+	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7889,6 +8495,22 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LIBRARY_CONTAINER_A__IO_TYPES = eINSTANCE.getLibraryContainerA_IoTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Hardware Group Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES = eINSTANCE.getLibraryContainerA_HardwareGroupTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_CONTAINER_A__MESSAGE_TYPES = eINSTANCE.getLibraryContainerA_MessageTypes();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl <em>Resource Type</em>}' class.
@@ -9121,6 +9743,114 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LIBRARY = eINSTANCE.getLibrary();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.BusTypeImpl <em>Bus Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.BusTypeImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getBusType()
+		 * @generated
+		 */
+		EClass BUS_TYPE = eINSTANCE.getBusType();
+
+		/**
+		 * The meta object literal for the '<em><b>Device Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS_TYPE__DEVICE_TYPES = eINSTANCE.getBusType_DeviceTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Mtbf</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUS_TYPE__MTBF = eINSTANCE.getBusType_Mtbf();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Self Managing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUS_TYPE__IS_SELF_MANAGING = eINSTANCE.getBusType_IsSelfManaging();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection Types</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS_TYPE__CONNECTION_TYPES = eINSTANCE.getBusType_ConnectionTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Requires Master</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUS_TYPE__REQUIRES_MASTER = eINSTANCE.getBusType_RequiresMaster();
+
+		/**
+		 * The meta object literal for the '<em><b>Messagetypes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BUS_TYPE__MESSAGETYPES = eINSTANCE.getBusType_Messagetypes();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.MessageTypeImpl <em>Message Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.MessageTypeImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getMessageType()
+		 * @generated
+		 */
+		EClass MESSAGE_TYPE = eINSTANCE.getMessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_TYPE__MIN_LENGTH = eINSTANCE.getMessageType_MinLength();
+
+		/**
+		 * The meta object literal for the '<em><b>Max Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_TYPE__MAX_LENGTH = eINSTANCE.getMessageType_MaxLength();
+
+		/**
+		 * The meta object literal for the '<em><b>Allignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_TYPE__ALLIGNMENT = eINSTANCE.getMessageType_Allignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Header Definition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_TYPE__HEADER_DEFINITION = eINSTANCE.getMessageType_HeaderDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Trailer Definition</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_TYPE__TRAILER_DEFINITION = eINSTANCE.getMessageType_TrailerDefinition();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

@@ -62,6 +62,7 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 			case HardwarePackage.DEVICE_SYMMETRY: return createDeviceSymmetry();
 			case HardwarePackage.HARDWARE: return createHardware();
 			case HardwarePackage.SUBHARDWARE: return createSubhardware();
+			case HardwarePackage.BUS: return createBus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -125,6 +126,16 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	public Subhardware createSubhardware() {
 		SubhardwareImpl subhardware = new SubhardwareImpl();
 		return subhardware;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bus createBus() {
+		BusImpl bus = new BusImpl();
+		return bus;
 	}
 
 	/**

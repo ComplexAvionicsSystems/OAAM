@@ -39,6 +39,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getSublibraries <em>Sublibraries</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getIoTypes <em>Io Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getHardwareGroupTypes <em>Hardware Group Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getMessageTypes <em>Message Types</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA()
@@ -330,5 +332,35 @@ public interface LibraryContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<IoType> getIoTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Hardware Group Types</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.BusType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All hardware group types of a library.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Hardware Group Types</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_HardwareGroupTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BusType> getHardwareGroupTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Message Types</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.MessageType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All message types of the library
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Message Types</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_MessageTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MessageType> getMessageTypes();
 
 } // LibraryContainerA

@@ -102,7 +102,7 @@ public class ScenarioContainerAItemProvider extends OaamBaseElementAItemProvider
 			getString("_UI_ScenarioContainerA_type") :
 			getString("_UI_ScenarioContainerA_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

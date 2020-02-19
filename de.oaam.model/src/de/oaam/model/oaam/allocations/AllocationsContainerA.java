@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSignalAssignments <em>Signal Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSuballocations <em>Suballocations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getSubconnectionAssignments <em>Subconnection Assignments</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getMessages <em>Messages</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getAllocationsContainerA()
@@ -137,5 +138,21 @@ public interface AllocationsContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<SubconnectionAssignment> getSubconnectionAssignments();
+
+	/**
+	 * Returns the value of the '<em><b>Messages</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.allocations.Message}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All messages
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Messages</em>' containment reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getAllocationsContainerA_Messages()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Message> getMessages();
 
 } // AllocationsContainerA

@@ -480,7 +480,7 @@ public class PowerSourceRestrictionItemProvider extends TaskRestrictionAItemProv
 			getString("_UI_PowerSourceRestriction_type") :
 			getString("_UI_PowerSourceRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

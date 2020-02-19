@@ -231,7 +231,7 @@ public class InputItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Input_type") :
 			getString("_UI_Input_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

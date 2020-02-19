@@ -109,6 +109,22 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 				return createResourceConsumptionAdapter();
 			}
 			@Override
+			public Adapter caseMessageOnBusCapability(MessageOnBusCapability object) {
+				return createMessageOnBusCapabilityAdapter();
+			}
+			@Override
+			public Adapter caseMessageOnConnectionOrDeviceCapability(MessageOnConnectionOrDeviceCapability object) {
+				return createMessageOnConnectionOrDeviceCapabilityAdapter();
+			}
+			@Override
+			public Adapter caseSubmessageInMessageCapability(SubmessageInMessageCapability object) {
+				return createSubmessageInMessageCapabilityAdapter();
+			}
+			@Override
+			public Adapter caseSignalInMessageCapability(SignalInMessageCapability object) {
+				return createSignalInMessageCapabilityAdapter();
+			}
+			@Override
 			public Adapter caseCapabilities(Capabilities object) {
 				return createCapabilitiesAdapter();
 			}
@@ -299,6 +315,62 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSubcapabilitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability <em>Message On Bus Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnBusCapability
+	 * @generated
+	 */
+	public Adapter createMessageOnBusCapabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability <em>Submessage In Message Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.SubmessageInMessageCapability
+	 * @generated
+	 */
+	public Adapter createSubmessageInMessageCapabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.SignalInMessageCapability <em>Signal In Message Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.SignalInMessageCapability
+	 * @generated
+	 */
+	public Adapter createSignalInMessageCapabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @generated
+	 */
+	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
 		return null;
 	}
 

@@ -207,13 +207,22 @@ public interface AllocationsPackage extends EPackage {
 	int ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Messages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS_CONTAINER_A__MESSAGES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -1392,160 +1401,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getAllocations()
 	 * @generated
 	 */
-	int ALLOCATIONS = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__ID = ALLOCATIONS_CONTAINER_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__NAME = ALLOCATIONS_CONTAINER_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__STYLE = ALLOCATIONS_CONTAINER_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__ATTRIBUTES = ALLOCATIONS_CONTAINER_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__DOCUMENTATION = ALLOCATIONS_CONTAINER_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__MODIFIED = ALLOCATIONS_CONTAINER_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__MODIFIER = ALLOCATIONS_CONTAINER_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__DEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Subdevice Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__SUBDEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__CONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__TASK_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__SIGNAL_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Suballocations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
-
-	/**
-	 * The number of structural features of the '<em>Allocations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS_FEATURE_COUNT = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Allocations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
+	int ALLOCATIONS = 16;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SuballocationsImpl <em>Suballocations</em>}' class.
@@ -1555,178 +1411,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSuballocations()
 	 * @generated
 	 */
-	int SUBALLOCATIONS = 10;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__ID = ALLOCATIONS_CONTAINER_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__NAME = ALLOCATIONS_CONTAINER_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__STYLE = ALLOCATIONS_CONTAINER_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__ATTRIBUTES = ALLOCATIONS_CONTAINER_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__DOCUMENTATION = ALLOCATIONS_CONTAINER_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__MODIFIED = ALLOCATIONS_CONTAINER_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__MODIFIER = ALLOCATIONS_CONTAINER_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__DEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Subdevice Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__SUBDEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__CONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__TASK_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__SIGNAL_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Suballocations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
-
-	/**
-	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__OPERATION_MODES = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS__VARIANTS = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Suballocations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS_FEATURE_COUNT = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Suballocations</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
+	int SUBALLOCATIONS = 17;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.ScheduleImpl <em>Schedule</em>}' class.
@@ -1736,7 +1421,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSchedule()
 	 * @generated
 	 */
-	int SCHEDULE = 11;
+	int SCHEDULE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1890,7 +1575,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getScheduledTime()
 	 * @generated
 	 */
-	int SCHEDULED_TIME = 12;
+	int SCHEDULED_TIME = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2038,6 +1723,1083 @@ public interface AllocationsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
+	 * @generated
+	 */
+	int MESSAGE = 13;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
+	 * @generated
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT = 15;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
+	 * @generated
+	 */
+	int MESSAGE_SEGMENT = 12;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageAImpl <em>Message A</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.MessageAImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
+	 * @generated
+	 */
+	int MESSAGE_A = 11;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__SCHEDULES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Submessages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__SUBMESSAGES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Signal To Message Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__SEGMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>Message A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>Message A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__CAPABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__DEVICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT__CONNECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Message Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Message Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_SEGMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__ID = MESSAGE_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__NAME = MESSAGE_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__STYLE = MESSAGE_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__ATTRIBUTES = MESSAGE_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__DOCUMENTATION = MESSAGE_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__MODIFIED = MESSAGE_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__MODIFIER = MESSAGE_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__TRACE_LINK = MESSAGE_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__VARIANTS = MESSAGE_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__OPERATION_MODES = MESSAGE_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__SCHEDULES = MESSAGE_A__SCHEDULES;
+
+	/**
+	 * The feature id for the '<em><b>Submessages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__SUBMESSAGES = MESSAGE_A__SUBMESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Signal To Message Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS = MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__SEGMENTS = MESSAGE_A__SEGMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__CAPABILITY = MESSAGE_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Bus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__BUS = MESSAGE_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_OPERATION_COUNT = MESSAGE_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SubmessageImpl <em>Submessage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SubmessageImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubmessage()
+	 * @generated
+	 */
+	int SUBMESSAGE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__ID = MESSAGE_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__NAME = MESSAGE_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__STYLE = MESSAGE_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__ATTRIBUTES = MESSAGE_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__DOCUMENTATION = MESSAGE_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__MODIFIED = MESSAGE_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__MODIFIER = MESSAGE_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__TRACE_LINK = MESSAGE_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__VARIANTS = MESSAGE_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__OPERATION_MODES = MESSAGE_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__SCHEDULES = MESSAGE_A__SCHEDULES;
+
+	/**
+	 * The feature id for the '<em><b>Submessages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__SUBMESSAGES = MESSAGE_A__SUBMESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Signal To Message Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS = MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__SEGMENTS = MESSAGE_A__SEGMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__CAPABILITY = MESSAGE_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__POSITION = MESSAGE_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Submessage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Submessage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE_OPERATION_COUNT = MESSAGE_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Signal</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__SIGNAL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__ATTRIBUTES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__VARIANTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__OPERATION_MODES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Data Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__DATA_TYPE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Position</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__POSITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT__CAPABILITY = 6;
+
+	/**
+	 * The number of structural features of the '<em>Signal To Message Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Signal To Message Assignment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__ID = ALLOCATIONS_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__NAME = ALLOCATIONS_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__STYLE = ALLOCATIONS_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__ATTRIBUTES = ALLOCATIONS_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__DOCUMENTATION = ALLOCATIONS_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__MODIFIED = ALLOCATIONS_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__MODIFIER = ALLOCATIONS_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__DEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Subdevice Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__SUBDEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__CONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__TASK_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__SIGNAL_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Suballocations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Messages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__MESSAGES = ALLOCATIONS_CONTAINER_A__MESSAGES;
+
+	/**
+	 * The number of structural features of the '<em>Allocations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS_FEATURE_COUNT = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Allocations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__ID = ALLOCATIONS_CONTAINER_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__NAME = ALLOCATIONS_CONTAINER_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__STYLE = ALLOCATIONS_CONTAINER_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__ATTRIBUTES = ALLOCATIONS_CONTAINER_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__DOCUMENTATION = ALLOCATIONS_CONTAINER_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__MODIFIED = ALLOCATIONS_CONTAINER_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__MODIFIER = ALLOCATIONS_CONTAINER_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__DEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Subdevice Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__SUBDEVICE_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__CONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__TASK_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__SIGNAL_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Suballocations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__SUBALLOCATIONS = ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__SUBCONNECTION_ASSIGNMENTS = ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Messages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__MESSAGES = ALLOCATIONS_CONTAINER_A__MESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__OPERATION_MODES = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__VARIANTS = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Suballocations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS_FEATURE_COUNT = ALLOCATIONS_CONTAINER_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Suballocations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.AllocationsContainerA <em>Container A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2123,6 +2885,17 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAllocationsContainerA_SubconnectionAssignments();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.AllocationsContainerA#getMessages <em>Messages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Messages</em>'.
+	 * @see de.oaam.model.oaam.allocations.AllocationsContainerA#getMessages()
+	 * @see #getAllocationsContainerA()
+	 * @generated
+	 */
+	EReference getAllocationsContainerA_Messages();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.TaskAssignment <em>Task Assignment</em>}'.
@@ -2597,6 +3370,254 @@ public interface AllocationsPackage extends EPackage {
 	EAttribute getScheduledTime_Restart();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message
+	 * @generated
+	 */
+	EClass getMessage();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getCapability()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getBus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bus</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getBus()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Bus();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal To Message Assignment</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment
+	 * @generated
+	 */
+	EClass getSignalToMessageAssignment();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal <em>Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Signal</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Signal();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Attributes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants <em>Variants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Variants</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Variants();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes <em>Operation Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operation Modes</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_OperationModes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Data Type</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_DataType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EAttribute getSignalToMessageAssignment_Position();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Capability();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageSegment <em>Message Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message Segment</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment
+	 * @generated
+	 */
+	EClass getMessageSegment();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getCapability()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getDevice <em>Device</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Device</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getDevice()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Device();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getConnection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connection</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getConnection()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Connection();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Submessage <em>Submessage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submessage</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage
+	 * @generated
+	 */
+	EClass getSubmessage();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Submessage#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage#getCapability()
+	 * @see #getSubmessage()
+	 * @generated
+	 */
+	EReference getSubmessage_Capability();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Submessage#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage#getPosition()
+	 * @see #getSubmessage()
+	 * @generated
+	 */
+	EAttribute getSubmessage_Position();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message A</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA
+	 * @generated
+	 */
+	EClass getMessageA();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSchedules <em>Schedules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSchedules()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Schedules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSubmessages <em>Submessages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submessages</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSubmessages()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Submessages();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signal To Message Assignments</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_SignalToMessageAssignments();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSegments <em>Segments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Segments</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSegments()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Segments();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2684,6 +3705,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = eINSTANCE.getAllocationsContainerA_SubconnectionAssignments();
+
+		/**
+		 * The meta object literal for the '<em><b>Messages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALLOCATIONS_CONTAINER_A__MESSAGES = eINSTANCE.getAllocationsContainerA_Messages();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.TaskAssignmentImpl <em>Task Assignment</em>}' class.
@@ -3060,6 +4089,200 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SCHEDULED_TIME__RESTART = eINSTANCE.getScheduledTime_Restart();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
+		 * @generated
+		 */
+		EClass MESSAGE = eINSTANCE.getMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__CAPABILITY = eINSTANCE.getMessage_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Bus</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__BUS = eINSTANCE.getMessage_Bus();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
+		 * @generated
+		 */
+		EClass SIGNAL_TO_MESSAGE_ASSIGNMENT = eINSTANCE.getSignalToMessageAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__SIGNAL = eINSTANCE.getSignalToMessageAssignment_Signal();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__ATTRIBUTES = eINSTANCE.getSignalToMessageAssignment_Attributes();
+
+		/**
+		 * The meta object literal for the '<em><b>Variants</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__VARIANTS = eINSTANCE.getSignalToMessageAssignment_Variants();
+
+		/**
+		 * The meta object literal for the '<em><b>Operation Modes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__OPERATION_MODES = eINSTANCE.getSignalToMessageAssignment_OperationModes();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__DATA_TYPE = eINSTANCE.getSignalToMessageAssignment_DataType();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNAL_TO_MESSAGE_ASSIGNMENT__POSITION = eINSTANCE.getSignalToMessageAssignment_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__CAPABILITY = eINSTANCE.getSignalToMessageAssignment_Capability();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
+		 * @generated
+		 */
+		EClass MESSAGE_SEGMENT = eINSTANCE.getMessageSegment();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__CAPABILITY = eINSTANCE.getMessageSegment_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Device</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__DEVICE = eINSTANCE.getMessageSegment_Device();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__CONNECTION = eINSTANCE.getMessageSegment_Connection();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SubmessageImpl <em>Submessage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.SubmessageImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubmessage()
+		 * @generated
+		 */
+		EClass SUBMESSAGE = eINSTANCE.getSubmessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMESSAGE__CAPABILITY = eINSTANCE.getSubmessage_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMESSAGE__POSITION = eINSTANCE.getSubmessage_Position();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageAImpl <em>Message A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.MessageAImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
+		 * @generated
+		 */
+		EClass MESSAGE_A = eINSTANCE.getMessageA();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SCHEDULES = eINSTANCE.getMessageA_Schedules();
+
+		/**
+		 * The meta object literal for the '<em><b>Submessages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SUBMESSAGES = eINSTANCE.getMessageA_Submessages();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal To Message Assignments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS = eINSTANCE.getMessageA_SignalToMessageAssignments();
+
+		/**
+		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SEGMENTS = eINSTANCE.getMessageA_Segments();
 
 	}
 

@@ -229,7 +229,7 @@ public class OutputItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_Output_type") :
 			getString("_UI_Output_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

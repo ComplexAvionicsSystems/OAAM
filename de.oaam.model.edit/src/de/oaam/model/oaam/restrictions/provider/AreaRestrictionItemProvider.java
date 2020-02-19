@@ -503,7 +503,7 @@ public class AreaRestrictionItemProvider extends TaskRestrictionAItemProvider {
 			getString("_UI_AreaRestriction_type") :
 			getString("_UI_AreaRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

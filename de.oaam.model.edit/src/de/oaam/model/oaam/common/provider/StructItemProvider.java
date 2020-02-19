@@ -165,7 +165,7 @@ public class StructItemProvider extends DataTypeAItemProvider {
 			getString("_UI_Struct_type") :
 			getString("_UI_Struct_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

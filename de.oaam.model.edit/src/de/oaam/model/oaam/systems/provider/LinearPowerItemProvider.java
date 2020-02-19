@@ -119,7 +119,7 @@ public class LinearPowerItemProvider extends InformationPowerItemProvider {
 			getString("_UI_LinearPower_type") :
 			getString("_UI_LinearPower_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

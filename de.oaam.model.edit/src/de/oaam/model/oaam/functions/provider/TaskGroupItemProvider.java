@@ -159,7 +159,7 @@ public class TaskGroupItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_TaskGroup_type") :
 			getString("_UI_TaskGroup_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -6,6 +6,7 @@ package de.oaam.model.oaam.common.provider;
 import de.oaam.model.oaam.common.BoolNot;
 import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -289,7 +290,7 @@ public class BoolNotItemProvider extends BoolAItemProvider {
 			getString("_UI_BoolNot_type") :
 			getString("_UI_BoolNot_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

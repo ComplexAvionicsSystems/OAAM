@@ -375,7 +375,7 @@ public class DeviceItemProvider extends ResourceProviderInstanceAItemProvider {
 			getString("_UI_Device_type") :
 			getString("_UI_Device_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

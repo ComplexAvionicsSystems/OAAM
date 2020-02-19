@@ -182,7 +182,7 @@ public class InformationFlowItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_InformationFlow_type") :
 			getString("_UI_InformationFlow_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

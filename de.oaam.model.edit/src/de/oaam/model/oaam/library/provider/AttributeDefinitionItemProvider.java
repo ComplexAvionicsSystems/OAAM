@@ -125,7 +125,7 @@ public class AttributeDefinitionItemProvider extends OaamBaseElementAItemProvide
 			getString("_UI_AttributeDefinition_type") :
 			getString("_UI_AttributeDefinition_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

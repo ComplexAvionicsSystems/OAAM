@@ -19,11 +19,15 @@ import de.oaam.model.oaam.capabilities.CapabilitiesPackage;
 import de.oaam.model.oaam.capabilities.CapabilityA;
 import de.oaam.model.oaam.capabilities.ConnectionInDuctOrLocationCapability;
 import de.oaam.model.oaam.capabilities.DeviceInLocationCapability;
+import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
+import de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability;
 import de.oaam.model.oaam.capabilities.ResourceConsumption;
+import de.oaam.model.oaam.capabilities.SignalInMessageCapability;
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
 import de.oaam.model.oaam.capabilities.Subcapabilities;
 import de.oaam.model.oaam.capabilities.SubconnectionInDeviceCapability;
 import de.oaam.model.oaam.capabilities.SubdeviceInDeviceCapability;
+import de.oaam.model.oaam.capabilities.SubmessageInMessageCapability;
 import de.oaam.model.oaam.capabilities.TaskOnDeviceCapability;
 
 import de.oaam.model.oaam.common.CommonPackage;
@@ -146,6 +150,34 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * @generated
 	 */
 	private EClass subcapabilitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageOnBusCapabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass submessageInMessageCapabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signalInMessageCapabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageOnConnectionOrDeviceCapabilityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -338,6 +370,42 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 */
 	public EReference getCapabilitiesContainerA_SubconnectionInDeviceCapabilities() {
 		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitiesContainerA_MessageOnBusCapabilities() {
+		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitiesContainerA_SubmessageInMessageCapabilities() {
+		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitiesContainerA_SignalInMessageCapabilities() {
+		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCapabilitiesContainerA_MessageOnConnectionOrDeviceCapabilities() {
+		return (EReference)capabilitiesContainerAEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -606,6 +674,132 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMessageOnBusCapability() {
+		return messageOnBusCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnBusCapability_BusType() {
+		return (EReference)messageOnBusCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnBusCapability_MessageType() {
+		return (EReference)messageOnBusCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSubmessageInMessageCapability() {
+		return submessageInMessageCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubmessageInMessageCapability_MessageType() {
+		return (EReference)submessageInMessageCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSubmessageInMessageCapability_SubmessageType() {
+		return (EReference)submessageInMessageCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSignalInMessageCapability() {
+		return signalInMessageCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSignalInMessageCapability_MessageType() {
+		return (EReference)signalInMessageCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSignalInMessageCapability_SignalType() {
+		return (EReference)signalInMessageCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessageOnConnectionOrDeviceCapability() {
+		return messageOnConnectionOrDeviceCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_MessageType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_DeviceType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_ConnectionType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime() {
+		return (EAttribute)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CapabilitiesFactory getCapabilitiesFactory() {
 		return (CapabilitiesFactory)getEFactoryInstance();
 	}
@@ -640,6 +834,10 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__CONNECTION_IN_DUCT_OR_LOCATION_CAPABILITIES);
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBCAPABILITIES);
 		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBCONNECTION_IN_DEVICE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__MESSAGE_ON_BUS_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SUBMESSAGE_IN_MESSAGE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__SIGNAL_IN_MESSAGE_CAPABILITIES);
+		createEReference(capabilitiesContainerAEClass, CAPABILITIES_CONTAINER_A__MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITIES);
 
 		taskOnDeviceCapabilityEClass = createEClass(TASK_ON_DEVICE_CAPABILITY);
 		createEReference(taskOnDeviceCapabilityEClass, TASK_ON_DEVICE_CAPABILITY__TASK_TYPE);
@@ -674,6 +872,24 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		createEAttribute(resourceConsumptionEClass, RESOURCE_CONSUMPTION__COUNT);
 		createEReference(resourceConsumptionEClass, RESOURCE_CONSUMPTION__ORIGINAL_RESOURCE);
 		createEReference(resourceConsumptionEClass, RESOURCE_CONSUMPTION__TYPE);
+
+		messageOnBusCapabilityEClass = createEClass(MESSAGE_ON_BUS_CAPABILITY);
+		createEReference(messageOnBusCapabilityEClass, MESSAGE_ON_BUS_CAPABILITY__BUS_TYPE);
+		createEReference(messageOnBusCapabilityEClass, MESSAGE_ON_BUS_CAPABILITY__MESSAGE_TYPE);
+
+		messageOnConnectionOrDeviceCapabilityEClass = createEClass(MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY);
+		createEReference(messageOnConnectionOrDeviceCapabilityEClass, MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MESSAGE_TYPE);
+		createEReference(messageOnConnectionOrDeviceCapabilityEClass, MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE);
+		createEReference(messageOnConnectionOrDeviceCapabilityEClass, MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE);
+		createEAttribute(messageOnConnectionOrDeviceCapabilityEClass, MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME);
+
+		submessageInMessageCapabilityEClass = createEClass(SUBMESSAGE_IN_MESSAGE_CAPABILITY);
+		createEReference(submessageInMessageCapabilityEClass, SUBMESSAGE_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE);
+		createEReference(submessageInMessageCapabilityEClass, SUBMESSAGE_IN_MESSAGE_CAPABILITY__SUBMESSAGE_TYPE);
+
+		signalInMessageCapabilityEClass = createEClass(SIGNAL_IN_MESSAGE_CAPABILITY);
+		createEReference(signalInMessageCapabilityEClass, SIGNAL_IN_MESSAGE_CAPABILITY__MESSAGE_TYPE);
+		createEReference(signalInMessageCapabilityEClass, SIGNAL_IN_MESSAGE_CAPABILITY__SIGNAL_TYPE);
 
 		capabilitiesEClass = createEClass(CAPABILITIES);
 
@@ -739,6 +955,22 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subconnectionInDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		resourceConsumptionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		messageOnBusCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		messageOnBusCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		messageOnBusCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		messageOnBusCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		messageOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		messageOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		messageOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		messageOnConnectionOrDeviceCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		submessageInMessageCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		submessageInMessageCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		submessageInMessageCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		submessageInMessageCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		signalInMessageCapabilityEClass.getESuperTypes().add(this.getCapabilityA());
+		signalInMessageCapabilityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		signalInMessageCapabilityEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		signalInMessageCapabilityEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		capabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
 		subcapabilitiesEClass.getESuperTypes().add(this.getCapabilitiesContainerA());
 		subcapabilitiesEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
@@ -756,6 +988,10 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		initEReference(getCapabilitiesContainerA_ConnectionInDuctOrLocationCapabilities(), this.getConnectionInDuctOrLocationCapability(), null, "connectionInDuctOrLocationCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapabilitiesContainerA_Subcapabilities(), this.getSubcapabilities(), null, "subcapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCapabilitiesContainerA_SubconnectionInDeviceCapabilities(), this.getSubconnectionInDeviceCapability(), null, "subconnectionInDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_MessageOnBusCapabilities(), this.getMessageOnBusCapability(), null, "messageOnBusCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_SubmessageInMessageCapabilities(), this.getSubmessageInMessageCapability(), null, "submessageInMessageCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_SignalInMessageCapabilities(), this.getSignalInMessageCapability(), null, "signalInMessageCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCapabilitiesContainerA_MessageOnConnectionOrDeviceCapabilities(), this.getMessageOnConnectionOrDeviceCapability(), null, "messageOnConnectionOrDeviceCapabilities", null, 0, -1, CapabilitiesContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(taskOnDeviceCapabilityEClass, TaskOnDeviceCapability.class, "TaskOnDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskOnDeviceCapability_TaskType(), theLibraryPackage.getTaskType(), null, "taskType", null, 1, 1, TaskOnDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -790,6 +1026,24 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		initEAttribute(getResourceConsumption_Count(), ecorePackage.getEDouble(), "count", null, 1, 1, ResourceConsumption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceConsumption_OriginalResource(), theLibraryPackage.getResource(), null, "originalResource", null, 0, -1, ResourceConsumption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getResourceConsumption_Type(), theLibraryPackage.getResourceType(), null, "type", null, 1, 1, ResourceConsumption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(messageOnBusCapabilityEClass, MessageOnBusCapability.class, "MessageOnBusCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMessageOnBusCapability_BusType(), theLibraryPackage.getBusType(), null, "busType", null, 1, 1, MessageOnBusCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageOnBusCapability_MessageType(), theLibraryPackage.getMessageType(), null, "messageType", null, 1, 1, MessageOnBusCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(messageOnConnectionOrDeviceCapabilityEClass, MessageOnConnectionOrDeviceCapability.class, "MessageOnConnectionOrDeviceCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMessageOnConnectionOrDeviceCapability_MessageType(), theLibraryPackage.getMessageType(), null, "messageType", null, 1, 1, MessageOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageOnConnectionOrDeviceCapability_DeviceType(), theLibraryPackage.getDeviceType(), null, "deviceType", null, 0, 1, MessageOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageOnConnectionOrDeviceCapability_ConnectionType(), theLibraryPackage.getConnectionType(), null, "connectionType", null, 0, 1, MessageOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime(), ecorePackage.getEFloat(), "worstCaseTransmissionTime", "0.0", 1, 1, MessageOnConnectionOrDeviceCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(submessageInMessageCapabilityEClass, SubmessageInMessageCapability.class, "SubmessageInMessageCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSubmessageInMessageCapability_MessageType(), theLibraryPackage.getMessageType(), null, "messageType", null, 1, 1, SubmessageInMessageCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubmessageInMessageCapability_SubmessageType(), theLibraryPackage.getMessageType(), null, "submessageType", null, 1, 1, SubmessageInMessageCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(signalInMessageCapabilityEClass, SignalInMessageCapability.class, "SignalInMessageCapability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSignalInMessageCapability_MessageType(), theLibraryPackage.getMessageType(), null, "messageType", null, 1, 1, SignalInMessageCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalInMessageCapability_SignalType(), theLibraryPackage.getSignalType(), null, "signalType", null, 1, 1, SignalInMessageCapability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(capabilitiesEClass, Capabilities.class, "Capabilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

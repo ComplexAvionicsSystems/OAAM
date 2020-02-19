@@ -119,7 +119,7 @@ public class FloatingPointItemProvider extends DataTypeAItemProvider {
 			getString("_UI_FloatingPoint_type") :
 			getString("_UI_FloatingPoint_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

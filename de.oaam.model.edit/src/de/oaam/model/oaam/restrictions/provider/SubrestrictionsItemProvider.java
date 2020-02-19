@@ -130,7 +130,7 @@ public class SubrestrictionsItemProvider extends RestrictionsContainerAItemProvi
 			getString("_UI_Subrestrictions_type") :
 			getString("_UI_Subrestrictions_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

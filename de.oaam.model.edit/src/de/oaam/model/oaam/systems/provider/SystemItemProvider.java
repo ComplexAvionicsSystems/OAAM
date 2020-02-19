@@ -138,7 +138,7 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_System_type") :
 			getString("_UI_System_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

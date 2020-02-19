@@ -161,7 +161,7 @@ public class DuctOpeningItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_DuctOpening_type") :
 			getString("_UI_DuctOpening_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -26,6 +26,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getConnectionInDuctOrLocationCapabilities <em>Connection In Duct Or Location Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubcapabilities <em>Subcapabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubconnectionInDeviceCapabilities <em>Subconnection In Device Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnBusCapabilities <em>Message On Bus Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSubmessageInMessageCapabilities <em>Submessage In Message Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getSignalInMessageCapabilities <em>Signal In Message Capabilities</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.capabilities.CapabilitiesContainerA#getMessageOnConnectionOrDeviceCapabilities <em>Message On Connection Or Device Capabilities</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA()
@@ -137,5 +141,65 @@ public interface CapabilitiesContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<SubconnectionInDeviceCapability> getSubconnectionInDeviceCapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Message On Bus Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.MessageOnBusCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All message capabilities
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Message On Bus Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_MessageOnBusCapabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MessageOnBusCapability> getMessageOnBusCapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Submessage In Message Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All submessge capabilities
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Submessage In Message Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SubmessageInMessageCapabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SubmessageInMessageCapability> getSubmessageInMessageCapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Signal In Message Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.SignalInMessageCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All signal in message capabilities.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Signal In Message Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_SignalInMessageCapabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<SignalInMessageCapability> getSignalInMessageCapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Message On Connection Or Device Capabilities</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All message on connection capabilieties
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Message On Connection Or Device Capabilities</em>' containment reference list.
+	 * @see de.oaam.model.oaam.capabilities.CapabilitiesPackage#getCapabilitiesContainerA_MessageOnConnectionOrDeviceCapabilities()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MessageOnConnectionOrDeviceCapability> getMessageOnConnectionOrDeviceCapabilities();
 
 } // CapabilitiesContainerA

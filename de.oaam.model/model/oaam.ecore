@@ -719,6 +719,18 @@
           <details key="documentation" value="All IO types of this library"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hardwareGroupTypes" upperBound="-1"
+          eType="#//library/BusType" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All hardware group types of a library."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageTypes" upperBound="-1"
+          eType="#//library/MessageType" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All message types of the library"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ResourceType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1144,8 +1156,15 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IoType" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type of an IO"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" lowerBound="1"
-          eType="#//library/IoDirectionE" defaultValueLiteral="OUT"/>
+          eType="#//library/IoDirectionE" defaultValueLiteral="NONE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The direction of the IO, e.g. IN, OUT, BOTH"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InputDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1246,7 +1265,11 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
-          eType="#//library/IoType"/>
+          eType="#//library/IoType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The reference to a specific type of the IO"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DuctOpeningDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1466,11 +1489,6 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Sublibrary" eSuperTypes="#//library/LibraryContainerA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="A sublibrary can contain the same elements that a library can contain, but it can exist within a library"/>
-      </eAnnotations>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskOutputTrigger" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The trigger condition for the output. If the trigger condition is true, the output is calculated. A trigger is either a Boolean combination of available inputs or a fixed rate."/>
@@ -1545,9 +1563,92 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BusType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A hardware group is a set of devices and connections that form a common resource pool, but not a physical unit. For instance bus systems might be modeled as hardware groups"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="deviceTypes" upperBound="-1"
+          eType="#//library/DeviceType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The device types that could be member of such a resourc group."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The mean time between failure in [h]"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSelfManaging" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines for a self-managing avionics platform, if the device type is capable of managing itself, i.e. can assign itself tasks and a shedule"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionTypes" upperBound="-1"
+          eType="#//library/ConnectionType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The connection types that could be member of such a resourc group."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiresMaster" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Is a special bus participant required to control the bus, e.g. SPI? Can also denote a multi-master bus."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messagetypes" upperBound="-1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All supported message types of this bustype."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageType" eSuperTypes="#//common/OaamBaseElementA #//library/ResourceConsumerA #//library/ResourceProviderA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The definition of a certian message type of a bus system."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minLength" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The minimum size of a message in bits"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxLength" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="8">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The maximum size of a message in bits"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="allignment" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Specifies if the messages of this type require a byte allignment given in bits, e.g. a value of 32 means that all signals in this header have to start at multiples of 4 byte."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="headerDefinition" eType="#//common/DataTypeA"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The data structure of the header of this kind of messages"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="trailerDefinition" eType="#//common/DataTypeA"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The data structure of the trailer of this kind of messages"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Library" eSuperTypes="#//library/LibraryContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root of the library model layer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sublibrary" eSuperTypes="#//library/LibraryContainerA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A sublibrary can contain the same elements that a library can contain, but it can exist within a library"/>
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
@@ -2300,9 +2401,10 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="fixedRate" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+          defaultValueLiteral="-1.0">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz. If this is set to other that 0.0, it overrides the rate of the taskType declaration."/>
+          <details key="documentation" value="The fixed rate, in which the output shall be calculated, given in Hz. -1.0 isinherit."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -2388,6 +2490,12 @@
           eType="#//hardware/Subhardware" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="All hardware subgroups of this hardware"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="buses" upperBound="-1"
+          eType="#//hardware/Bus" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All buses in the hardware."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -2489,6 +2597,28 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Subhardware can be used to organize the hardware model like folders"/>
       </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//library/ResourceProviderInstanceA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A bus is a group of devices and connections that share common properties."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//library/BusType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the hardware group type, which specifies the available device types and connection types."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+          eType="#//hardware/Connection">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All connections, which are part of this bus"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="devices" upperBound="-1"
+          eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All devices that are part of this hardware group."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="anatomy" nsURI="http://www.oaam.de/oaam/model/v140/anatomy"
@@ -2749,6 +2879,31 @@
           <details key="documentation" value="All subconnection capabilities"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageOnBusCapabilities"
+          upperBound="-1" eType="#//capabilities/MessageOnBusCapability" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All message capabilities"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="submessageInMessageCapabilities"
+          upperBound="-1" eType="#//capabilities/SubmessageInMessageCapability" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All submessge capabilities"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalInMessageCapabilities"
+          upperBound="-1" eType="#//capabilities/SignalInMessageCapability" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All signal in message capabilities."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageOnConnectionOrDeviceCapabilities"
+          upperBound="-1" eType="#//capabilities/MessageOnConnectionOrDeviceCapability"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All message on connection capabilieties"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskOnDeviceCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -2902,6 +3057,86 @@
           eType="#//library/ResourceType">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The resource type to be consumed."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageOnBusCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A possible allocations of a connection to a location or duct."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busType" lowerBound="1"
+          eType="#//library/BusType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The connection type for which this capability is valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" lowerBound="1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The message type of the messages for which this capability is valid"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageOnConnectionOrDeviceCapability"
+        eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A possible allocations of a signal to a device or connection."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" lowerBound="1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The signal type for which this capability is valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="deviceType" eType="#//library/DeviceType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Only one either a device type or a connection type can be specified as a target for signals."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connectionType" eType="#//library/ConnectionType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Only one either a device type or a connection type can be specified as a target for signals."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="worstCaseTransmissionTime"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+          defaultValueLiteral="0.0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The worst case transmission time of the signal in s. It makes only sense, if the transmission is deterministic."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SubmessageInMessageCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A possible allocations of a connection to a location or duct."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" lowerBound="1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The message type of the messages for which this capability is valid (parent)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="submessageType" lowerBound="1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The message type of the messages for which this capability is valid (child)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SignalInMessageCapability" eSuperTypes="#//capabilities/CapabilityA #//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A possible allocations of a connection to a location or duct."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" lowerBound="1"
+          eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The message type of the messages for which this capability is valid (parent)"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalType" lowerBound="1"
+          eType="#//library/SignalType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The message type of the messages for which this capability is valid (child)"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -3486,6 +3721,12 @@
           <details key="documentation" value="All subconnection assignments of the allocations package."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+          eType="#//allocations/Message" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All messages&#xD;&#xA;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -3667,16 +3908,6 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Allocations" eSuperTypes="#//allocations/AllocationsContainerA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The root element of the allocationss layer"/>
-      </eAnnotations>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Suballocations" eSuperTypes="#//allocations/AllocationsContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="With suballocations the assignments can be organized like folders"/>
-      </eAnnotations>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Schedule" eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A schedule assigens periodic or non-periodic time slots to a task assignment."/>
@@ -3741,6 +3972,146 @@
           <details key="documentation" value="If the task is restarted at the begin of the active time or if a previously interrupted state is recovered."/>
         </eAnnotations>
       </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageA" abstract="true" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A message is a virtual packaging of signals. It can be used to describe the data transportation on a bussystem."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="schedules" upperBound="-1"
+          eType="#//allocations/Schedule" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Schedules for the tasks on this device. Multiple schedules are valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="submessages" upperBound="-1"
+          eType="#//allocations/Submessage" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Each message can be composed of several submessages."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalToMessageAssignments"
+          upperBound="-1" eType="#//allocations/SignalToMessageAssignment" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All signals that are assigned to this message with its properties"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
+          eType="#//allocations/MessageSegment" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The schedules for this signal segment"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MessageSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A message segment is a piecewise allocation of a message to hardware. Each segment refers a connection or device&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+          eType="#//capabilities/MessageOnConnectionOrDeviceCapability">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the used capabilty, which specifies the resource consumtion."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="device" eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the device."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//hardware/Connection">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Either device or connection can be filled. Not both at the same time."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//allocations/MessageA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A message is a virtual packaging of signals. It can be used to describe the data transportation on a bussystem."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+          eType="#//capabilities/MessageOnBusCapability">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the used capability, which specifies the resource consumption."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="1" eType="#//hardware/Bus">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the bus this message is allocated to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Submessage" eSuperTypes="#//allocations/MessageA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A submessage is a virtual packaging of signals within a parent message. It can be used to describe the hirachic data transportation on a bussystem."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+          eType="#//capabilities/SubmessageInMessageCapability">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the used capability, which specifies the resource consumption."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The start bit of this submessage inside the message. The length of and encoding is defined with the datatype of the signal."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SignalToMessageAssignment">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Assigns a signal to a message and defines the properties for that, e.g. the position end encoding in the message."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signal" lowerBound="1"
+          eType="#//functions/Signal">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the signal."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+          eType="#//common/AttributeA" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This can be used to append arbitrary additional attributes to every element. The form of additional attributes is always name and value whereas the value type is different for different attribute types."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="variants" upperBound="-1"
+          eType="#//scenario/Variant">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The variants for which this element is valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="operationModes" upperBound="-1"
+          eType="#//scenario/OperationModeReference" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The operation modes in which the element is valid."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dataType" eType="#//common/DataTypeA"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The specific data type used for this signal on the bus."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The start bit of this signal inside the message. The length of and encoding is defined with the datatype of the signal."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+          eType="#//capabilities/SignalInMessageCapability">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the used capability, which specifies the resource consumption."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Allocations" eSuperTypes="#//allocations/AllocationsContainerA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The root element of the allocationss layer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Suballocations" eSuperTypes="#//allocations/AllocationsContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="With suballocations the assignments can be organized like folders"/>
+      </eAnnotations>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

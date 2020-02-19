@@ -503,7 +503,7 @@ public class LocationRestrictionItemProvider extends TaskRestrictionAItemProvide
 			getString("_UI_LocationRestriction_type") :
 			getString("_UI_LocationRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

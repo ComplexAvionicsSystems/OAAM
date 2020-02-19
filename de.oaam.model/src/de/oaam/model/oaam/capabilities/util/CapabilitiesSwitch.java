@@ -151,6 +151,46 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CapabilitiesPackage.MESSAGE_ON_BUS_CAPABILITY: {
+				MessageOnBusCapability messageOnBusCapability = (MessageOnBusCapability)theEObject;
+				T result = caseMessageOnBusCapability(messageOnBusCapability);
+				if (result == null) result = caseCapabilityA(messageOnBusCapability);
+				if (result == null) result = caseOaamBaseElementA(messageOnBusCapability);
+				if (result == null) result = caseVariantDependentElementA(messageOnBusCapability);
+				if (result == null) result = caseModeDependentElementA(messageOnBusCapability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CapabilitiesPackage.MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY: {
+				MessageOnConnectionOrDeviceCapability messageOnConnectionOrDeviceCapability = (MessageOnConnectionOrDeviceCapability)theEObject;
+				T result = caseMessageOnConnectionOrDeviceCapability(messageOnConnectionOrDeviceCapability);
+				if (result == null) result = caseCapabilityA(messageOnConnectionOrDeviceCapability);
+				if (result == null) result = caseOaamBaseElementA(messageOnConnectionOrDeviceCapability);
+				if (result == null) result = caseVariantDependentElementA(messageOnConnectionOrDeviceCapability);
+				if (result == null) result = caseModeDependentElementA(messageOnConnectionOrDeviceCapability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CapabilitiesPackage.SUBMESSAGE_IN_MESSAGE_CAPABILITY: {
+				SubmessageInMessageCapability submessageInMessageCapability = (SubmessageInMessageCapability)theEObject;
+				T result = caseSubmessageInMessageCapability(submessageInMessageCapability);
+				if (result == null) result = caseCapabilityA(submessageInMessageCapability);
+				if (result == null) result = caseOaamBaseElementA(submessageInMessageCapability);
+				if (result == null) result = caseVariantDependentElementA(submessageInMessageCapability);
+				if (result == null) result = caseModeDependentElementA(submessageInMessageCapability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CapabilitiesPackage.SIGNAL_IN_MESSAGE_CAPABILITY: {
+				SignalInMessageCapability signalInMessageCapability = (SignalInMessageCapability)theEObject;
+				T result = caseSignalInMessageCapability(signalInMessageCapability);
+				if (result == null) result = caseCapabilityA(signalInMessageCapability);
+				if (result == null) result = caseOaamBaseElementA(signalInMessageCapability);
+				if (result == null) result = caseVariantDependentElementA(signalInMessageCapability);
+				if (result == null) result = caseModeDependentElementA(signalInMessageCapability);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CapabilitiesPackage.CAPABILITIES: {
 				Capabilities capabilities = (Capabilities)theEObject;
 				T result = caseCapabilities(capabilities);
@@ -335,6 +375,66 @@ public class CapabilitiesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSubcapabilities(Subcapabilities object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message On Bus Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message On Bus Capability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageOnBusCapability(MessageOnBusCapability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Submessage In Message Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Submessage In Message Capability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubmessageInMessageCapability(SubmessageInMessageCapability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Signal In Message Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Signal In Message Capability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSignalInMessageCapability(SignalInMessageCapability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message On Connection Or Device Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message On Connection Or Device Capability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessageOnConnectionOrDeviceCapability(MessageOnConnectionOrDeviceCapability object) {
 		return null;
 	}
 

@@ -130,7 +130,7 @@ public class SubhardwareItemProvider extends HardwareContainerAItemProvider {
 			getString("_UI_Subhardware_type") :
 			getString("_UI_Subhardware_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

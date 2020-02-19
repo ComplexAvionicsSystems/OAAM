@@ -130,7 +130,7 @@ public class SubanatomyItemProvider extends AnatomyContainerAItemProvider {
 			getString("_UI_Subanatomy_type") :
 			getString("_UI_Subanatomy_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

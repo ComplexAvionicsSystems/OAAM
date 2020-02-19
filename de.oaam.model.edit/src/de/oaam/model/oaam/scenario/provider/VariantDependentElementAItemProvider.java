@@ -96,7 +96,7 @@ public class VariantDependentElementAItemProvider
 	public String getText(Object object) {
 		return getString("_UI_VariantDependentElementA_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

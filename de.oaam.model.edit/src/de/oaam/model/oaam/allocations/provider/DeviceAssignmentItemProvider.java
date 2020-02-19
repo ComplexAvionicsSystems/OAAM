@@ -205,7 +205,7 @@ public class DeviceAssignmentItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_DeviceAssignment_type") :
 			getString("_UI_DeviceAssignment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

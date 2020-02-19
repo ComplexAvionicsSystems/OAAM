@@ -456,7 +456,7 @@ public class ResourceTypeItemProvider extends ResourceConsumerAItemProvider {
 			getString("_UI_ResourceType_type") :
 			getString("_UI_ResourceType_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

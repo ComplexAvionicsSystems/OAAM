@@ -33,6 +33,7 @@ import de.oaam.model.oaam.impl.OaamPackageImpl;
 import de.oaam.model.oaam.library.AttributeDefinition;
 import de.oaam.model.oaam.library.AttributeTargetsE;
 import de.oaam.model.oaam.library.AttributeTypesE;
+import de.oaam.model.oaam.library.BusType;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
@@ -50,6 +51,7 @@ import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
+import de.oaam.model.oaam.library.MessageType;
 import de.oaam.model.oaam.library.OutputDeclaration;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.Resource;
@@ -382,6 +384,20 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	private EClass libraryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass busTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -775,6 +791,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 */
 	public EReference getLibraryContainerA_IoTypes() {
 		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLibraryContainerA_HardwareGroupTypes() {
+		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLibraryContainerA_MessageTypes() {
+		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(20);
 	}
 
 	/**
@@ -2087,6 +2121,123 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBusType() {
+		return busTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusType_DeviceTypes() {
+		return (EReference)busTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusType_Mtbf() {
+		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusType_IsSelfManaging() {
+		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusType_ConnectionTypes() {
+		return (EReference)busTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBusType_RequiresMaster() {
+		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusType_Messagetypes() {
+		return (EReference)busTypeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessageType() {
+		return messageTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageType_MinLength() {
+		return (EAttribute)messageTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageType_MaxLength() {
+		return (EAttribute)messageTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageType_Allignment() {
+		return (EAttribute)messageTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageType_HeaderDefinition() {
+		return (EReference)messageTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageType_TrailerDefinition() {
+		return (EReference)messageTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getIoDirectionE() {
 		return ioDirectionEEEnum;
 	}
@@ -2170,6 +2321,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__POWER_SOURCES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__SUBLIBRARIES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__IO_TYPES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__MESSAGE_TYPES);
 
 		resourceTypeEClass = createEClass(RESOURCE_TYPE);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__UNIT);
@@ -2331,8 +2484,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		resourceTypeDissimilarityEClass = createEClass(RESOURCE_TYPE_DISSIMILARITY);
 		createEReference(resourceTypeDissimilarityEClass, RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES);
 
-		sublibraryEClass = createEClass(SUBLIBRARY);
-
 		taskOutputTriggerEClass = createEClass(TASK_OUTPUT_TRIGGER);
 		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__FIXED_RATE);
 		createEAttribute(taskOutputTriggerEClass, TASK_OUTPUT_TRIGGER__IS_FIXED_RATE);
@@ -2350,7 +2501,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		taskParameterDeclarationEClass = createEClass(TASK_PARAMETER_DECLARATION);
 		createEReference(taskParameterDeclarationEClass, TASK_PARAMETER_DECLARATION__TYPE);
 
+		busTypeEClass = createEClass(BUS_TYPE);
+		createEReference(busTypeEClass, BUS_TYPE__DEVICE_TYPES);
+		createEAttribute(busTypeEClass, BUS_TYPE__MTBF);
+		createEAttribute(busTypeEClass, BUS_TYPE__IS_SELF_MANAGING);
+		createEReference(busTypeEClass, BUS_TYPE__CONNECTION_TYPES);
+		createEAttribute(busTypeEClass, BUS_TYPE__REQUIRES_MASTER);
+		createEReference(busTypeEClass, BUS_TYPE__MESSAGETYPES);
+
+		messageTypeEClass = createEClass(MESSAGE_TYPE);
+		createEAttribute(messageTypeEClass, MESSAGE_TYPE__MIN_LENGTH);
+		createEAttribute(messageTypeEClass, MESSAGE_TYPE__MAX_LENGTH);
+		createEAttribute(messageTypeEClass, MESSAGE_TYPE__ALLIGNMENT);
+		createEReference(messageTypeEClass, MESSAGE_TYPE__HEADER_DEFINITION);
+		createEReference(messageTypeEClass, MESSAGE_TYPE__TRAILER_DEFINITION);
+
 		libraryEClass = createEClass(LIBRARY);
+
+		sublibraryEClass = createEClass(SUBLIBRARY);
 
 		// Create enums
 		ioDirectionEEEnum = createEEnum(IO_DIRECTION_E);
@@ -2432,13 +2600,18 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		taskTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceTypeDissimilarityEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		sublibraryEClass.getESuperTypes().add(this.getLibraryContainerA());
 		taskOutputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskInputTriggerEClass.getESuperTypes().add(theCommonPackage.getBoolA());
 		taskInputTriggerEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskStateDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskParameterDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		busTypeEClass.getESuperTypes().add(this.getResourceProviderA());
+		busTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		messageTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		messageTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
+		messageTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		libraryEClass.getESuperTypes().add(this.getLibraryContainerA());
+		sublibraryEClass.getESuperTypes().add(this.getLibraryContainerA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(resourceConsumerAEClass, ResourceConsumerA.class, "ResourceConsumerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2474,6 +2647,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getLibraryContainerA_PowerSources(), this.getPowerSource(), null, "powerSources", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_Sublibraries(), this.getSublibrary(), null, "sublibraries", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_IoTypes(), this.getIoType(), null, "ioTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_HardwareGroupTypes(), this.getBusType(), null, "hardwareGroupTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_MessageTypes(), this.getMessageType(), null, "messageTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceTypeEClass, ResourceType.class, "ResourceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResourceType_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2557,7 +2732,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getWireType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ioTypeEClass, IoType.class, "IoType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIoType_Direction(), this.getIoDirectionE(), "direction", "OUT", 1, 1, IoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIoType_Direction(), this.getIoDirectionE(), "direction", "NONE", 1, 1, IoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputDeclarationEClass, InputDeclaration.class, "InputDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, InputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2635,8 +2810,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(resourceTypeDissimilarityEClass, ResourceTypeDissimilarity.class, "ResourceTypeDissimilarity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResourceTypeDissimilarity_ResourceTypes(), this.getResourceType(), null, "resourceTypes", null, 0, -1, ResourceTypeDissimilarity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(sublibraryEClass, Sublibrary.class, "Sublibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(taskOutputTriggerEClass, TaskOutputTrigger.class, "TaskOutputTrigger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTaskOutputTrigger_FixedRate(), ecorePackage.getEFloat(), "fixedRate", null, 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskOutputTrigger_IsFixedRate(), ecorePackage.getEBoolean(), "isFixedRate", "false", 1, 1, TaskOutputTrigger.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2654,7 +2827,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(taskParameterDeclarationEClass, TaskParameterDeclaration.class, "TaskParameterDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskParameterDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, TaskParameterDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(busTypeEClass, BusType.class, "BusType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBusType_DeviceTypes(), this.getDeviceType(), null, "deviceTypes", null, 0, -1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusType_IsSelfManaging(), ecorePackage.getEBoolean(), "isSelfManaging", "false", 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusType_ConnectionTypes(), this.getConnectionType(), null, "connectionTypes", null, 0, -1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBusType_RequiresMaster(), ecorePackage.getEBoolean(), "requiresMaster", "false", 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusType_Messagetypes(), this.getMessageType(), null, "messagetypes", null, 0, -1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(messageTypeEClass, MessageType.class, "MessageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMessageType_MinLength(), ecorePackage.getEInt(), "minLength", "0", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageType_MaxLength(), ecorePackage.getEInt(), "maxLength", "8", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageType_Allignment(), ecorePackage.getEInt(), "allignment", "0", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageType_HeaderDefinition(), theCommonPackage.getDataTypeA(), null, "headerDefinition", null, 0, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageType_TrailerDefinition(), theCommonPackage.getDataTypeA(), null, "trailerDefinition", null, 0, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(libraryEClass, Library.class, "Library", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sublibraryEClass, Sublibrary.class, "Sublibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(ioDirectionEEEnum, IoDirectionE.class, "IoDirectionE");

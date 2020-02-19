@@ -411,7 +411,7 @@ public class InformationSignalItemProvider extends ProvidedInformationAItemProvi
 			getString("_UI_InformationSignal_type") :
 			getString("_UI_InformationSignal_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -7,6 +7,7 @@ import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.library.AttributeDefinition;
+import de.oaam.model.oaam.library.BusType;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
@@ -16,6 +17,7 @@ import de.oaam.model.oaam.library.IoType;
 import de.oaam.model.oaam.library.LibraryContainerA;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.LocationType;
+import de.oaam.model.oaam.library.MessageType;
 import de.oaam.model.oaam.library.PowerSource;
 import de.oaam.model.oaam.library.ResourceBundle;
 import de.oaam.model.oaam.library.ResourceType;
@@ -66,6 +68,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getPowerSources <em>Power Sources</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getSublibraries <em>Sublibraries</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getIoTypes <em>Io Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getHardwareGroupTypes <em>Hardware Group Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getMessageTypes <em>Message Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -260,6 +264,26 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * @ordered
 	 */
 	protected EList<IoType> ioTypes;
+
+	/**
+	 * The cached value of the '{@link #getHardwareGroupTypes() <em>Hardware Group Types</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHardwareGroupTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BusType> hardwareGroupTypes;
+
+	/**
+	 * The cached value of the '{@link #getMessageTypes() <em>Message Types</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMessageTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MessageType> messageTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -513,6 +537,30 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BusType> getHardwareGroupTypes() {
+		if (hardwareGroupTypes == null) {
+			hardwareGroupTypes = new EObjectContainmentEList<BusType>(BusType.class, this, LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
+		}
+		return hardwareGroupTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<MessageType> getMessageTypes() {
+		if (messageTypes == null) {
+			messageTypes = new EObjectContainmentEList<MessageType>(MessageType.class, this, LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES);
+		}
+		return messageTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -554,6 +602,10 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return ((InternalEList<?>)getSublibraries()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 				return ((InternalEList<?>)getIoTypes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+				return ((InternalEList<?>)getHardwareGroupTypes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+				return ((InternalEList<?>)getMessageTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -604,6 +656,10 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return getSublibraries();
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 				return getIoTypes();
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+				return getHardwareGroupTypes();
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+				return getMessageTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -693,6 +749,14 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				getIoTypes().clear();
 				getIoTypes().addAll((Collection<? extends IoType>)newValue);
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+				getHardwareGroupTypes().clear();
+				getHardwareGroupTypes().addAll((Collection<? extends BusType>)newValue);
+				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+				getMessageTypes().clear();
+				getMessageTypes().addAll((Collection<? extends MessageType>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -762,6 +826,12 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 				getIoTypes().clear();
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+				getHardwareGroupTypes().clear();
+				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+				getMessageTypes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -812,6 +882,10 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return sublibraries != null && !sublibraries.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 				return ioTypes != null && !ioTypes.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
+				return hardwareGroupTypes != null && !hardwareGroupTypes.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+				return messageTypes != null && !messageTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

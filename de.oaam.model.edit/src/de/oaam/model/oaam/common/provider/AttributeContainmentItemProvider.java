@@ -124,7 +124,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			getString("_UI_AttributeContainment_type") :
 			getString("_UI_AttributeContainment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -379,11 +379,6 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createSublibrary()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 LibraryFactory.eINSTANCE.createTaskOutputTrigger()));
 
 		newChildDescriptors.add
@@ -404,7 +399,22 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createBusType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createMessageType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 LibraryFactory.eINSTANCE.createLibrary()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 LibraryFactory.eINSTANCE.createSublibrary()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -609,6 +619,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 HardwareFactory.eINSTANCE.createBus()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AnatomyFactory.eINSTANCE.createLocation()));
 
 		newChildDescriptors.add
@@ -685,6 +700,26 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 CapabilitiesFactory.eINSTANCE.createResourceConsumption()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 CapabilitiesFactory.eINSTANCE.createMessageOnBusCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 CapabilitiesFactory.eINSTANCE.createMessageOnConnectionOrDeviceCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 CapabilitiesFactory.eINSTANCE.createSubmessageInMessageCapability()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 CapabilitiesFactory.eINSTANCE.createSignalInMessageCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -809,22 +844,37 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 AllocationsFactory.eINSTANCE.createAllocations()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 AllocationsFactory.eINSTANCE.createSuballocations()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AllocationsFactory.eINSTANCE.createSchedule()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AllocationsFactory.eINSTANCE.createScheduledTime()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createMessageSegment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createMessage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createSubmessage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createAllocations()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createSuballocations()));
 	}
 
 	/**

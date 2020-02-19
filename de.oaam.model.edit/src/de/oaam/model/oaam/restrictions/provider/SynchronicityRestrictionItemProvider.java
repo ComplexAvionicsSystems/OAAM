@@ -183,7 +183,7 @@ public class SynchronicityRestrictionItemProvider extends OaamBaseElementAItemPr
 			getString("_UI_SynchronicityRestriction_type") :
 			getString("_UI_SynchronicityRestriction_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

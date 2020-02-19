@@ -279,6 +279,98 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.MessageOnBusCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageOnBusCapabilityItemProvider messageOnBusCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.MessageOnBusCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageOnBusCapabilityAdapter() {
+		if (messageOnBusCapabilityItemProvider == null) {
+			messageOnBusCapabilityItemProvider = new MessageOnBusCapabilityItemProvider(this);
+		}
+
+		return messageOnBusCapabilityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubmessageInMessageCapabilityItemProvider submessageInMessageCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubmessageInMessageCapabilityAdapter() {
+		if (submessageInMessageCapabilityItemProvider == null) {
+			submessageInMessageCapabilityItemProvider = new SubmessageInMessageCapabilityItemProvider(this);
+		}
+
+		return submessageInMessageCapabilityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.SignalInMessageCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SignalInMessageCapabilityItemProvider signalInMessageCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.SignalInMessageCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSignalInMessageCapabilityAdapter() {
+		if (signalInMessageCapabilityItemProvider == null) {
+			signalInMessageCapabilityItemProvider = new SignalInMessageCapabilityItemProvider(this);
+		}
+
+		return signalInMessageCapabilityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageOnConnectionOrDeviceCapabilityItemProvider messageOnConnectionOrDeviceCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
+		if (messageOnConnectionOrDeviceCapabilityItemProvider == null) {
+			messageOnConnectionOrDeviceCapabilityItemProvider = new MessageOnConnectionOrDeviceCapabilityItemProvider(this);
+		}
+
+		return messageOnConnectionOrDeviceCapabilityItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -384,6 +476,10 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 		if (subdeviceInDeviceCapabilityItemProvider != null) subdeviceInDeviceCapabilityItemProvider.dispose();
 		if (subconnectionInDeviceCapabilityItemProvider != null) subconnectionInDeviceCapabilityItemProvider.dispose();
 		if (resourceConsumptionItemProvider != null) resourceConsumptionItemProvider.dispose();
+		if (messageOnBusCapabilityItemProvider != null) messageOnBusCapabilityItemProvider.dispose();
+		if (messageOnConnectionOrDeviceCapabilityItemProvider != null) messageOnConnectionOrDeviceCapabilityItemProvider.dispose();
+		if (submessageInMessageCapabilityItemProvider != null) submessageInMessageCapabilityItemProvider.dispose();
+		if (signalInMessageCapabilityItemProvider != null) signalInMessageCapabilityItemProvider.dispose();
 		if (capabilitiesItemProvider != null) capabilitiesItemProvider.dispose();
 		if (subcapabilitiesItemProvider != null) subcapabilitiesItemProvider.dispose();
 	}

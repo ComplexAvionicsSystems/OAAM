@@ -100,7 +100,7 @@ public class OperationModeItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_OperationMode_type") :
 			getString("_UI_OperationMode_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

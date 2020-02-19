@@ -159,7 +159,7 @@ public class TaskRedundancyItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_TaskRedundancy_type") :
 			getString("_UI_TaskRedundancy_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

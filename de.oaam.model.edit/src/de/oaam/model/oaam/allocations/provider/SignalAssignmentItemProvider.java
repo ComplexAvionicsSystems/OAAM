@@ -161,7 +161,7 @@ public class SignalAssignmentItemProvider extends OaamBaseElementAItemProvider {
 			getString("_UI_SignalAssignment_type") :
 			getString("_UI_SignalAssignment_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

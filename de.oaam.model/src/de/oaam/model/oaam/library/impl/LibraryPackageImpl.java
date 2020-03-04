@@ -1347,6 +1347,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConnectionType_MessageType() {
+		return (EReference)connectionTypeEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLocationType() {
 		return locationTypeEClass;
 	}
@@ -2211,7 +2220,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMessageType_Allignment() {
+	public EAttribute getMessageType_Alignment() {
 		return (EAttribute)messageTypeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2390,6 +2399,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__MAX_LENGTH);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__IS_UNIDIRECTIONAL);
 		createEAttribute(connectionTypeEClass, CONNECTION_TYPE__REQUIRES_MASTER);
+		createEReference(connectionTypeEClass, CONNECTION_TYPE__MESSAGE_TYPE);
 
 		locationTypeEClass = createEClass(LOCATION_TYPE);
 		createEAttribute(locationTypeEClass, LOCATION_TYPE__IS_JOINT);
@@ -2512,7 +2522,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		messageTypeEClass = createEClass(MESSAGE_TYPE);
 		createEAttribute(messageTypeEClass, MESSAGE_TYPE__MIN_LENGTH);
 		createEAttribute(messageTypeEClass, MESSAGE_TYPE__MAX_LENGTH);
-		createEAttribute(messageTypeEClass, MESSAGE_TYPE__ALLIGNMENT);
+		createEAttribute(messageTypeEClass, MESSAGE_TYPE__ALIGNMENT);
 		createEReference(messageTypeEClass, MESSAGE_TYPE__HEADER_DEFINITION);
 		createEReference(messageTypeEClass, MESSAGE_TYPE__TRAILER_DEFINITION);
 
@@ -2716,6 +2726,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getConnectionType_MaxLength(), ecorePackage.getEDouble(), "maxLength", "100", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_IsUnidirectional(), ecorePackage.getEBoolean(), "isUnidirectional", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConnectionType_RequiresMaster(), ecorePackage.getEBoolean(), "requiresMaster", "false", 1, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConnectionType_MessageType(), this.getMessageType(), null, "messageType", null, 0, 1, ConnectionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationTypeEClass, LocationType.class, "LocationType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocationType_IsJoint(), ecorePackage.getEBoolean(), "isJoint", null, 1, 1, LocationType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2838,7 +2849,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEClass(messageTypeEClass, MessageType.class, "MessageType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMessageType_MinLength(), ecorePackage.getEInt(), "minLength", "0", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMessageType_MaxLength(), ecorePackage.getEInt(), "maxLength", "8", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMessageType_Allignment(), ecorePackage.getEInt(), "allignment", "0", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageType_Alignment(), ecorePackage.getEInt(), "alignment", "0", 1, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageType_HeaderDefinition(), theCommonPackage.getDataTypeA(), null, "headerDefinition", null, 0, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageType_TrailerDefinition(), theCommonPackage.getDataTypeA(), null, "trailerDefinition", null, 0, 1, MessageType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

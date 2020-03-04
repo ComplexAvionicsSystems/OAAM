@@ -1920,13 +1920,22 @@ public interface LibraryPackage extends EPackage {
 	int CONNECTION_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 27;
 
 	/**
+	 * The feature id for the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__MESSAGE_TYPE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 28;
+
+	/**
 	 * The number of structural features of the '<em>Connection Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 28;
+	int CONNECTION_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 29;
 
 	/**
 	 * The number of operations of the '<em>Connection Type</em>' class.
@@ -5514,13 +5523,13 @@ public interface LibraryPackage extends EPackage {
 	int MESSAGE_TYPE__MAX_LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Allignment</b></em>' attribute.
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_TYPE__ALLIGNMENT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int MESSAGE_TYPE__ALIGNMENT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Header Definition</b></em>' containment reference.
@@ -7137,6 +7146,17 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getConnectionType_RequiresMaster();
 
 	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.ConnectionType#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.library.ConnectionType#getMessageType()
+	 * @see #getConnectionType()
+	 * @generated
+	 */
+	EReference getConnectionType_MessageType();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.LocationType <em>Location Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8163,15 +8183,15 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getMessageType_MaxLength();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.MessageType#getAllignment <em>Allignment</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.MessageType#getAlignment <em>Alignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Allignment</em>'.
-	 * @see de.oaam.model.oaam.library.MessageType#getAllignment()
+	 * @return the meta object for the attribute '<em>Alignment</em>'.
+	 * @see de.oaam.model.oaam.library.MessageType#getAlignment()
 	 * @see #getMessageType()
 	 * @generated
 	 */
-	EAttribute getMessageType_Allignment();
+	EAttribute getMessageType_Alignment();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.MessageType#getHeaderDefinition <em>Header Definition</em>}'.
@@ -8999,6 +9019,14 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONNECTION_TYPE__REQUIRES_MASTER = eINSTANCE.getConnectionType_RequiresMaster();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION_TYPE__MESSAGE_TYPE = eINSTANCE.getConnectionType_MessageType();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.LocationTypeImpl <em>Location Type</em>}' class.
@@ -9829,12 +9857,12 @@ public interface LibraryPackage extends EPackage {
 		EAttribute MESSAGE_TYPE__MAX_LENGTH = eINSTANCE.getMessageType_MaxLength();
 
 		/**
-		 * The meta object literal for the '<em><b>Allignment</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MESSAGE_TYPE__ALLIGNMENT = eINSTANCE.getMessageType_Allignment();
+		EAttribute MESSAGE_TYPE__ALIGNMENT = eINSTANCE.getMessageType_Alignment();
 
 		/**
 		 * The meta object literal for the '<em><b>Header Definition</b></em>' containment reference feature.

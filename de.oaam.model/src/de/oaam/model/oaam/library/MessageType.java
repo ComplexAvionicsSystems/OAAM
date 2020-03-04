@@ -20,7 +20,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.MessageType#getMinLength <em>Min Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.MessageType#getMaxLength <em>Max Length</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.MessageType#getAllignment <em>Allignment</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.MessageType#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.MessageType#getHeaderDefinition <em>Header Definition</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.MessageType#getTrailerDefinition <em>Trailer Definition</em>}</li>
  * </ul>
@@ -83,30 +83,30 @@ public interface MessageType extends OaamBaseElementA, ResourceConsumerA, Resour
 	void setMaxLength(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Allignment</b></em>' attribute.
+	 * Returns the value of the '<em><b>Alignment</b></em>' attribute.
 	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * Specifies if the messages of this type require a byte allignment given in bits, e.g. a value of 32 means that all signals in this header have to start at multiples of 4 byte.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Allignment</em>' attribute.
-	 * @see #setAllignment(int)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getMessageType_Allignment()
+	 * @return the value of the '<em>Alignment</em>' attribute.
+	 * @see #setAlignment(int)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getMessageType_Alignment()
 	 * @model default="0" required="true"
 	 * @generated
 	 */
-	int getAllignment();
+	int getAlignment();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.MessageType#getAllignment <em>Allignment</em>}' attribute.
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.MessageType#getAlignment <em>Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Allignment</em>' attribute.
-	 * @see #getAllignment()
+	 * @param value the new value of the '<em>Alignment</em>' attribute.
+	 * @see #getAlignment()
 	 * @generated
 	 */
-	void setAllignment(int value);
+	void setAlignment(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Header Definition</b></em>' containment reference.

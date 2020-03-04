@@ -9,6 +9,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.LibraryPackage;
+import de.oaam.model.oaam.library.MessageType;
 import de.oaam.model.oaam.library.Resource;
 import de.oaam.model.oaam.library.ResourceConsumerA;
 import de.oaam.model.oaam.library.ResourceGroup;
@@ -68,6 +69,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsUnidirectional <em>Is Unidirectional</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isRequiresMaster <em>Requires Master</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getMessageType <em>Message Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -562,6 +564,16 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * @ordered
 	 */
 	protected boolean requiresMaster = REQUIRES_MASTER_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getMessageType() <em>Message Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMessageType()
+	 * @generated
+	 * @ordered
+	 */
+	protected MessageType messageType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1112,6 +1124,44 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MessageType getMessageType() {
+		if (messageType != null && messageType.eIsProxy()) {
+			InternalEObject oldMessageType = (InternalEObject)messageType;
+			messageType = (MessageType)eResolveProxy(oldMessageType);
+			if (messageType != oldMessageType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE, oldMessageType, messageType));
+			}
+		}
+		return messageType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageType basicGetMessageType() {
+		return messageType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMessageType(MessageType newMessageType) {
+		MessageType oldMessageType = messageType;
+		messageType = newMessageType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE, oldMessageType, messageType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -1189,6 +1239,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return isIsUnidirectional();
 			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
 				return isRequiresMaster();
+			case LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE:
+				if (resolve) return getMessageType();
+				return basicGetMessageType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1293,6 +1346,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
 				setRequiresMaster((Boolean)newValue);
 				return;
+			case LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE:
+				setMessageType((MessageType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1389,6 +1445,9 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
 				setRequiresMaster(REQUIRES_MASTER_EDEFAULT);
 				return;
+			case LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE:
+				setMessageType((MessageType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1457,6 +1516,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return isUnidirectional != IS_UNIDIRECTIONAL_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__REQUIRES_MASTER:
 				return requiresMaster != REQUIRES_MASTER_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__MESSAGE_TYPE:
+				return messageType != null;
 		}
 		return super.eIsSet(featureID);
 	}

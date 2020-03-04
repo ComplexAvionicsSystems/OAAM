@@ -57,6 +57,7 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addVariantsPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,6 +76,28 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 				 getString("_UI_VariantDependentElementA_variants_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
 				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MessageA_type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MessageA_type_feature", "_UI_MessageA_type"),
+				 AllocationsPackage.Literals.MESSAGE_A__TYPE,
 				 true,
 				 false,
 				 true,

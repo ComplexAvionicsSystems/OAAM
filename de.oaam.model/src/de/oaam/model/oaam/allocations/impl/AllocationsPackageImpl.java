@@ -815,6 +815,24 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMessage_SourceDevices() {
+		return (EReference)messageEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessage_DestinationDevices() {
+		return (EReference)messageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSignalToMessageAssignment() {
 		return signalToMessageAssignmentEClass;
 	}
@@ -995,6 +1013,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMessageA_Type() {
+		return (EReference)messageAEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AllocationsFactory getAllocationsFactory() {
 		return (AllocationsFactory)getEFactoryInstance();
 	}
@@ -1085,6 +1112,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(messageAEClass, MESSAGE_A__SUBMESSAGES);
 		createEReference(messageAEClass, MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS);
 		createEReference(messageAEClass, MESSAGE_A__SEGMENTS);
+		createEReference(messageAEClass, MESSAGE_A__TYPE);
 
 		messageSegmentEClass = createEClass(MESSAGE_SEGMENT);
 		createEReference(messageSegmentEClass, MESSAGE_SEGMENT__CAPABILITY);
@@ -1094,6 +1122,8 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		messageEClass = createEClass(MESSAGE);
 		createEReference(messageEClass, MESSAGE__CAPABILITY);
 		createEReference(messageEClass, MESSAGE__BUS);
+		createEReference(messageEClass, MESSAGE__SOURCE_DEVICES);
+		createEReference(messageEClass, MESSAGE__DESTINATION_DEVICES);
 
 		submessageEClass = createEClass(SUBMESSAGE);
 		createEReference(submessageEClass, SUBMESSAGE__CAPABILITY);
@@ -1143,6 +1173,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		FunctionsPackage theFunctionsPackage = (FunctionsPackage)EPackage.Registry.INSTANCE.getEPackage(FunctionsPackage.eNS_URI);
 		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
 		AnatomyPackage theAnatomyPackage = (AnatomyPackage)EPackage.Registry.INSTANCE.getEPackage(AnatomyPackage.eNS_URI);
+		LibraryPackage theLibraryPackage = (LibraryPackage)EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1261,6 +1292,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getMessageA_Submessages(), this.getSubmessage(), null, "submessages", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_SignalToMessageAssignments(), this.getSignalToMessageAssignment(), null, "signalToMessageAssignments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_Segments(), this.getMessageSegment(), null, "segments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageA_Type(), theLibraryPackage.getMessageType(), null, "type", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(messageSegmentEClass, MessageSegment.class, "MessageSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageSegment_Capability(), theCapabilitiesPackage.getMessageOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, MessageSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1270,6 +1302,8 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEClass(messageEClass, Message.class, "Message", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessage_Capability(), theCapabilitiesPackage.getMessageOnBusCapability(), null, "capability", null, 1, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessage_Bus(), theHardwarePackage.getBus(), null, "bus", null, 1, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessage_SourceDevices(), theHardwarePackage.getDevice(), null, "sourceDevices", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessage_DestinationDevices(), theHardwarePackage.getDevice(), null, "destinationDevices", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(submessageEClass, Submessage.class, "Submessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubmessage_Capability(), theCapabilitiesPackage.getSubmessageInMessageCapability(), null, "capability", null, 1, 1, Submessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

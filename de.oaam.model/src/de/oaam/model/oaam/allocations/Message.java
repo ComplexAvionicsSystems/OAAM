@@ -3,7 +3,10 @@
 package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
+
 import de.oaam.model.oaam.hardware.Bus;
+import de.oaam.model.oaam.hardware.Device;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +23,8 @@ import de.oaam.model.oaam.hardware.Bus;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.allocations.Message#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.Message#getBus <em>Bus</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.Message#getSourceDevices <em>Source Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.Message#getDestinationDevices <em>Destination Devices</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessage()
@@ -76,5 +81,35 @@ public interface Message extends MessageA {
 	 * @generated
 	 */
 	void setBus(Bus value);
+
+	/**
+	 * Returns the value of the '<em><b>Source Devices</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Device}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Can be used to assign source devices for this message
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Source Devices</em>' reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessage_SourceDevices()
+	 * @model
+	 * @generated
+	 */
+	EList<Device> getSourceDevices();
+
+	/**
+	 * Returns the value of the '<em><b>Destination Devices</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.hardware.Device}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Can be used to assign target devices for this message
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Destination Devices</em>' reference list.
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessage_DestinationDevices()
+	 * @model
+	 * @generated
+	 */
+	EList<Device> getDestinationDevices();
 
 } // Message

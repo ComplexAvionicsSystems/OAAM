@@ -48,7 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getResourceLinks <em>Resource Links</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getMinLength <em>Min Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getMaxLength <em>Max Length</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getAllignment <em>Allignment</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getAlignment <em>Alignment</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getHeaderDefinition <em>Header Definition</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.MessageTypeImpl#getTrailerDefinition <em>Trailer Definition</em>}</li>
  * </ul>
@@ -157,24 +157,24 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 	protected int maxLength = MAX_LENGTH_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAllignment() <em>Allignment</em>}' attribute.
+	 * The default value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAllignment()
+	 * @see #getAlignment()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ALLIGNMENT_EDEFAULT = 0;
+	protected static final int ALIGNMENT_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getAllignment() <em>Allignment</em>}' attribute.
+	 * The cached value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAllignment()
+	 * @see #getAlignment()
 	 * @generated
 	 * @ordered
 	 */
-	protected int allignment = ALLIGNMENT_EDEFAULT;
+	protected int alignment = ALIGNMENT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getHeaderDefinition() <em>Header Definition</em>}' containment reference.
@@ -334,8 +334,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getAllignment() {
-		return allignment;
+	public int getAlignment() {
+		return alignment;
 	}
 
 	/**
@@ -343,11 +343,11 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAllignment(int newAllignment) {
-		int oldAllignment = allignment;
-		allignment = newAllignment;
+	public void setAlignment(int newAlignment) {
+		int oldAlignment = alignment;
+		alignment = newAlignment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.MESSAGE_TYPE__ALLIGNMENT, oldAllignment, allignment));
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.MESSAGE_TYPE__ALIGNMENT, oldAlignment, alignment));
 	}
 
 	/**
@@ -486,8 +486,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 				return getMinLength();
 			case LibraryPackage.MESSAGE_TYPE__MAX_LENGTH:
 				return getMaxLength();
-			case LibraryPackage.MESSAGE_TYPE__ALLIGNMENT:
-				return getAllignment();
+			case LibraryPackage.MESSAGE_TYPE__ALIGNMENT:
+				return getAlignment();
 			case LibraryPackage.MESSAGE_TYPE__HEADER_DEFINITION:
 				return getHeaderDefinition();
 			case LibraryPackage.MESSAGE_TYPE__TRAILER_DEFINITION:
@@ -535,8 +535,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 			case LibraryPackage.MESSAGE_TYPE__MAX_LENGTH:
 				setMaxLength((Integer)newValue);
 				return;
-			case LibraryPackage.MESSAGE_TYPE__ALLIGNMENT:
-				setAllignment((Integer)newValue);
+			case LibraryPackage.MESSAGE_TYPE__ALIGNMENT:
+				setAlignment((Integer)newValue);
 				return;
 			case LibraryPackage.MESSAGE_TYPE__HEADER_DEFINITION:
 				setHeaderDefinition((DataTypeA)newValue);
@@ -580,8 +580,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 			case LibraryPackage.MESSAGE_TYPE__MAX_LENGTH:
 				setMaxLength(MAX_LENGTH_EDEFAULT);
 				return;
-			case LibraryPackage.MESSAGE_TYPE__ALLIGNMENT:
-				setAllignment(ALLIGNMENT_EDEFAULT);
+			case LibraryPackage.MESSAGE_TYPE__ALIGNMENT:
+				setAlignment(ALIGNMENT_EDEFAULT);
 				return;
 			case LibraryPackage.MESSAGE_TYPE__HEADER_DEFINITION:
 				setHeaderDefinition((DataTypeA)null);
@@ -617,8 +617,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 				return minLength != MIN_LENGTH_EDEFAULT;
 			case LibraryPackage.MESSAGE_TYPE__MAX_LENGTH:
 				return maxLength != MAX_LENGTH_EDEFAULT;
-			case LibraryPackage.MESSAGE_TYPE__ALLIGNMENT:
-				return allignment != ALLIGNMENT_EDEFAULT;
+			case LibraryPackage.MESSAGE_TYPE__ALIGNMENT:
+				return alignment != ALIGNMENT_EDEFAULT;
 			case LibraryPackage.MESSAGE_TYPE__HEADER_DEFINITION:
 				return headerDefinition != null;
 			case LibraryPackage.MESSAGE_TYPE__TRAILER_DEFINITION:
@@ -693,8 +693,8 @@ public class MessageTypeImpl extends OaamBaseElementAImpl implements MessageType
 		result.append(minLength);
 		result.append(", maxLength: ");
 		result.append(maxLength);
-		result.append(", allignment: ");
-		result.append(allignment);
+		result.append(", alignment: ");
+		result.append(alignment);
 		result.append(')');
 		return result.toString();
 	}

@@ -37,6 +37,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getMaxLength <em>Max Length</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isIsUnidirectional <em>Is Unidirectional</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.ConnectionType#isRequiresMaster <em>Requires Master</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.ConnectionType#getMessageType <em>Message Type</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType()
@@ -466,5 +467,30 @@ public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, Oa
 	 * @generated
 	 */
 	void setRequiresMaster(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Message Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Defines valid messages on this connection type
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Message Type</em>' reference.
+	 * @see #setMessageType(MessageType)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getConnectionType_MessageType()
+	 * @model
+	 * @generated
+	 */
+	MessageType getMessageType();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.ConnectionType#getMessageType <em>Message Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Message Type</em>' reference.
+	 * @see #getMessageType()
+	 * @generated
+	 */
+	void setMessageType(MessageType value);
 
 } // ConnectionType

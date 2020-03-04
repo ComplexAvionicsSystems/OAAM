@@ -1889,13 +1889,22 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_A__SEGMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Message A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Message A</em>' class.
@@ -2168,6 +2177,15 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__SEGMENTS = MESSAGE_A__SEGMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__TYPE = MESSAGE_A__TYPE;
+
+	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2186,13 +2204,31 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__BUS = MESSAGE_A_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Source Devices</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__SOURCE_DEVICES = MESSAGE_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Destination Devices</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__DESTINATION_DEVICES = MESSAGE_A_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 2;
+	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Message</em>' class.
@@ -2338,6 +2374,15 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBMESSAGE__SEGMENTS = MESSAGE_A__SEGMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__TYPE = MESSAGE_A__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -3402,6 +3447,28 @@ public interface AllocationsPackage extends EPackage {
 	EReference getMessage_Bus();
 
 	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getSourceDevices <em>Source Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Source Devices</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getSourceDevices()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_SourceDevices();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getDestinationDevices <em>Destination Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Destination Devices</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getDestinationDevices()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_DestinationDevices();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3616,6 +3683,17 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageA_Segments();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getType()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Type();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4117,6 +4195,22 @@ public interface AllocationsPackage extends EPackage {
 		EReference MESSAGE__BUS = eINSTANCE.getMessage_Bus();
 
 		/**
+		 * The meta object literal for the '<em><b>Source Devices</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__SOURCE_DEVICES = eINSTANCE.getMessage_SourceDevices();
+
+		/**
+		 * The meta object literal for the '<em><b>Destination Devices</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__DESTINATION_DEVICES = eINSTANCE.getMessage_DestinationDevices();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4283,6 +4377,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_A__SEGMENTS = eINSTANCE.getMessageA_Segments();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__TYPE = eINSTANCE.getMessageA_Type();
 
 	}
 

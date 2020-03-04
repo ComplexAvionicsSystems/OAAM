@@ -1091,6 +1091,11 @@
           <details key="documentation" value="Is a special bus participant required to control the bus, e.g. SPI? Can also denote a multi-master bus."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="messageType" eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines valid messages on this connection type"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LocationType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1622,7 +1627,7 @@
           <details key="documentation" value="The maximum size of a message in bits"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="allignment" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Specifies if the messages of this type require a byte allignment given in bits, e.g. a value of 32 means that all signals in this header have to start at multiples of 4 byte."/>
@@ -4001,6 +4006,11 @@
           <details key="documentation" value="The schedules for this signal segment"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//library/MessageType">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines type of this message"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MessageSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4036,6 +4046,18 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="bus" lowerBound="1" eType="#//hardware/Bus">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="A reference to the bus this message is allocated to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sourceDevices" upperBound="-1"
+          eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Can be used to assign source devices for this message"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="destinationDevices" upperBound="-1"
+          eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Can be used to assign target devices for this message"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>

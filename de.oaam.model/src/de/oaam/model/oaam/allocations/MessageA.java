@@ -4,6 +4,7 @@ package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.library.MessageType;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
@@ -26,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getSubmessages <em>Submessages</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getSegments <em>Segments</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA()
@@ -92,5 +94,30 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 	 * @generated
 	 */
 	EList<MessageSegment> getSegments();
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Defines type of this message
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Type</em>' reference.
+	 * @see #setType(MessageType)
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA_Type()
+	 * @model
+	 * @generated
+	 */
+	MessageType getType();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(MessageType value);
 
 } // MessageA

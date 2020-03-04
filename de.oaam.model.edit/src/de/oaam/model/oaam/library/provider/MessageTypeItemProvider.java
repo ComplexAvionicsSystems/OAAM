@@ -59,7 +59,7 @@ public class MessageTypeItemProvider extends OaamBaseElementAItemProvider {
 			addPossibleResourceProvisionsPropertyDescriptor(object);
 			addMinLengthPropertyDescriptor(object);
 			addMaxLengthPropertyDescriptor(object);
-			addAllignmentPropertyDescriptor(object);
+			addAlignmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,19 +131,19 @@ public class MessageTypeItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Allignment feature.
+	 * This adds a property descriptor for the Alignment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAllignmentPropertyDescriptor(Object object) {
+	protected void addAlignmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MessageType_allignment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MessageType_allignment_feature", "_UI_MessageType_type"),
-				 LibraryPackage.Literals.MESSAGE_TYPE__ALLIGNMENT,
+				 getString("_UI_MessageType_alignment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MessageType_alignment_feature", "_UI_MessageType_type"),
+				 LibraryPackage.Literals.MESSAGE_TYPE__ALIGNMENT,
 				 true,
 				 false,
 				 false,
@@ -228,7 +228,7 @@ public class MessageTypeItemProvider extends OaamBaseElementAItemProvider {
 		switch (notification.getFeatureID(MessageType.class)) {
 			case LibraryPackage.MESSAGE_TYPE__MIN_LENGTH:
 			case LibraryPackage.MESSAGE_TYPE__MAX_LENGTH:
-			case LibraryPackage.MESSAGE_TYPE__ALLIGNMENT:
+			case LibraryPackage.MESSAGE_TYPE__ALIGNMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.MESSAGE_TYPE__REQUIRED_RESOURCES:

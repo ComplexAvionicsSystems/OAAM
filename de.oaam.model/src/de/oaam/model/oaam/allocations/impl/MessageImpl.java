@@ -4,13 +4,21 @@ package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.Message;
+
 import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
+
 import de.oaam.model.oaam.hardware.Bus;
+
+import de.oaam.model.oaam.hardware.Device;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +30,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getCapability <em>Capability</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getBus <em>Bus</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getSourceDevices <em>Source Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getDestinationDevices <em>Destination Devices</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +56,26 @@ public class MessageImpl extends MessageAImpl implements Message {
 	 * @ordered
 	 */
 	protected Bus bus;
+
+	/**
+	 * The cached value of the '{@link #getSourceDevices() <em>Source Devices</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceDevices()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Device> sourceDevices;
+
+	/**
+	 * The cached value of the '{@link #getDestinationDevices() <em>Destination Devices</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDestinationDevices()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Device> destinationDevices;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,6 +177,30 @@ public class MessageImpl extends MessageAImpl implements Message {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Device> getSourceDevices() {
+		if (sourceDevices == null) {
+			sourceDevices = new EObjectResolvingEList<Device>(Device.class, this, AllocationsPackage.MESSAGE__SOURCE_DEVICES);
+		}
+		return sourceDevices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Device> getDestinationDevices() {
+		if (destinationDevices == null) {
+			destinationDevices = new EObjectResolvingEList<Device>(Device.class, this, AllocationsPackage.MESSAGE__DESTINATION_DEVICES);
+		}
+		return destinationDevices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -156,6 +210,10 @@ public class MessageImpl extends MessageAImpl implements Message {
 			case AllocationsPackage.MESSAGE__BUS:
 				if (resolve) return getBus();
 				return basicGetBus();
+			case AllocationsPackage.MESSAGE__SOURCE_DEVICES:
+				return getSourceDevices();
+			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
+				return getDestinationDevices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -175,6 +233,14 @@ public class MessageImpl extends MessageAImpl implements Message {
 			case AllocationsPackage.MESSAGE__BUS:
 				setBus((Bus)newValue);
 				return;
+			case AllocationsPackage.MESSAGE__SOURCE_DEVICES:
+				getSourceDevices().clear();
+				getSourceDevices().addAll((Collection<? extends Device>)newValue);
+				return;
+			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
+				getDestinationDevices().clear();
+				getDestinationDevices().addAll((Collection<? extends Device>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -193,6 +259,12 @@ public class MessageImpl extends MessageAImpl implements Message {
 			case AllocationsPackage.MESSAGE__BUS:
 				setBus((Bus)null);
 				return;
+			case AllocationsPackage.MESSAGE__SOURCE_DEVICES:
+				getSourceDevices().clear();
+				return;
+			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
+				getDestinationDevices().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -209,6 +281,10 @@ public class MessageImpl extends MessageAImpl implements Message {
 				return capability != null;
 			case AllocationsPackage.MESSAGE__BUS:
 				return bus != null;
+			case AllocationsPackage.MESSAGE__SOURCE_DEVICES:
+				return sourceDevices != null && !sourceDevices.isEmpty();
+			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
+				return destinationDevices != null && !destinationDevices.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

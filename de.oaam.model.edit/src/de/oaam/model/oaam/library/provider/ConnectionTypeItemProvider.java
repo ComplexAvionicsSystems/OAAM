@@ -76,6 +76,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			addMaxLengthPropertyDescriptor(object);
 			addIsUnidirectionalPropertyDescriptor(object);
 			addRequiresMasterPropertyDescriptor(object);
+			addMessageTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -626,6 +627,28 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Message Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMessageTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ConnectionType_messageType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionType_messageType_feature", "_UI_ConnectionType_type"),
+				 LibraryPackage.Literals.CONNECTION_TYPE__MESSAGE_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

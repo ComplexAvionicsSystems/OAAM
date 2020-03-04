@@ -11,6 +11,7 @@ import de.oaam.model.oaam.allocations.Submessage;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
+import de.oaam.model.oaam.library.MessageType;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
@@ -19,6 +20,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -26,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -44,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getSubmessages <em>Submessages</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getSegments <em>Segments</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,6 +112,16 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * @ordered
 	 */
 	protected EList<MessageSegment> segments;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected MessageType type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +219,44 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MessageType getType() {
+		if (type != null && type.eIsProxy()) {
+			InternalEObject oldType = (InternalEObject)type;
+			type = (MessageType)eResolveProxy(oldType);
+			if (type != oldType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.MESSAGE_A__TYPE, oldType, type));
+			}
+		}
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageType basicGetType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(MessageType newType) {
+		MessageType oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE_A__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -242,6 +294,9 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 				return getSignalToMessageAssignments();
 			case AllocationsPackage.MESSAGE_A__SEGMENTS:
 				return getSegments();
+			case AllocationsPackage.MESSAGE_A__TYPE:
+				if (resolve) return getType();
+				return basicGetType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -279,6 +334,9 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 				getSegments().clear();
 				getSegments().addAll((Collection<? extends MessageSegment>)newValue);
 				return;
+			case AllocationsPackage.MESSAGE_A__TYPE:
+				setType((MessageType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -309,6 +367,9 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 			case AllocationsPackage.MESSAGE_A__SEGMENTS:
 				getSegments().clear();
 				return;
+			case AllocationsPackage.MESSAGE_A__TYPE:
+				setType((MessageType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -333,6 +394,8 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 				return signalToMessageAssignments != null && !signalToMessageAssignments.isEmpty();
 			case AllocationsPackage.MESSAGE_A__SEGMENTS:
 				return segments != null && !segments.isEmpty();
+			case AllocationsPackage.MESSAGE_A__TYPE:
+				return type != null;
 		}
 		return super.eIsSet(featureID);
 	}

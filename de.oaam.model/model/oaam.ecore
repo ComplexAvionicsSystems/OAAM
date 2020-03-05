@@ -349,6 +349,12 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="8 Bits of unknown content"/>
       </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nBits" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="8">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The number of character encoding bits. The default is 8."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Character" eSuperTypes="#//common/DataTypeA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -386,6 +392,12 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A Boolean value, i.e. true or false."/>
       </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nBits" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The number of character encoding bits. The default is 8."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v140/library"

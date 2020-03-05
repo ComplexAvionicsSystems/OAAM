@@ -711,6 +711,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getByte_NBits() {
+		return (EAttribute)byteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCharacter() {
 		return characterEClass;
 	}
@@ -740,6 +749,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 */
 	public EClass getBoolean() {
 		return booleanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBoolean_NBits() {
+		return (EAttribute)booleanEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -854,12 +872,14 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		createEAttribute(floatingPointEClass, FLOATING_POINT__ENDIANESS);
 
 		byteEClass = createEClass(BYTE);
+		createEAttribute(byteEClass, BYTE__NBITS);
 
 		characterEClass = createEClass(CHARACTER);
 		createEAttribute(characterEClass, CHARACTER__ENCODING);
 		createEAttribute(characterEClass, CHARACTER__NBITS);
 
 		booleanEClass = createEClass(BOOLEAN);
+		createEAttribute(booleanEClass, BOOLEAN__NBITS);
 
 		// Create enums
 		boolOperationTypesEEEnum = createEEnum(BOOL_OPERATION_TYPES_E);
@@ -971,12 +991,14 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEAttribute(getFloatingPoint_Endianess(), this.getEndianessE(), "endianess", "BIG", 1, 1, FloatingPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(byteEClass, de.oaam.model.oaam.common.Byte.class, "Byte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getByte_NBits(), ecorePackage.getEInt(), "nBits", "8", 1, 1, de.oaam.model.oaam.common.Byte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(characterEClass, de.oaam.model.oaam.common.Character.class, "Character", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCharacter_Encoding(), ecorePackage.getEString(), "encoding", null, 1, 1, de.oaam.model.oaam.common.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCharacter_NBits(), ecorePackage.getEInt(), "nBits", "8", 1, 1, de.oaam.model.oaam.common.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(booleanEClass, de.oaam.model.oaam.common.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBoolean_NBits(), ecorePackage.getEInt(), "nBits", "1", 1, 1, de.oaam.model.oaam.common.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(boolOperationTypesEEEnum, BoolOperationTypesE.class, "BoolOperationTypesE");

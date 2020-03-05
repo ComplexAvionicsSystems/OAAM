@@ -1651,13 +1651,22 @@ public interface CommonPackage extends EPackage {
 	int BYTE__TRACE_LINK = DATA_TYPE_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>NBits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BYTE__NBITS = DATA_TYPE_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Byte</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BYTE_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 0;
+	int BYTE_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Byte</em>' class.
@@ -1869,13 +1878,22 @@ public interface CommonPackage extends EPackage {
 	int BOOLEAN__TRACE_LINK = DATA_TYPE_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>NBits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN__NBITS = DATA_TYPE_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Boolean</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 0;
+	int BOOLEAN_FEATURE_COUNT = DATA_TYPE_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Boolean</em>' class.
@@ -2376,6 +2394,17 @@ public interface CommonPackage extends EPackage {
 	EClass getByte();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.Byte#getNBits <em>NBits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>NBits</em>'.
+	 * @see de.oaam.model.oaam.common.Byte#getNBits()
+	 * @see #getByte()
+	 * @generated
+	 */
+	EAttribute getByte_NBits();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.Character <em>Character</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2416,6 +2445,17 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBoolean();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.common.Boolean#getNBits <em>NBits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>NBits</em>'.
+	 * @see de.oaam.model.oaam.common.Boolean#getNBits()
+	 * @see #getBoolean()
+	 * @generated
+	 */
+	EAttribute getBoolean_NBits();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.common.BoolOperationTypesE <em>Bool Operation Types E</em>}'.
@@ -2845,6 +2885,14 @@ public interface CommonPackage extends EPackage {
 		EClass BYTE = eINSTANCE.getByte();
 
 		/**
+		 * The meta object literal for the '<em><b>NBits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BYTE__NBITS = eINSTANCE.getByte_NBits();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.CharacterImpl <em>Character</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2879,6 +2927,14 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOOLEAN = eINSTANCE.getBoolean();
+
+		/**
+		 * The meta object literal for the '<em><b>NBits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN__NBITS = eINSTANCE.getBoolean_NBits();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.BoolOperationTypesE <em>Bool Operation Types E</em>}' enum.

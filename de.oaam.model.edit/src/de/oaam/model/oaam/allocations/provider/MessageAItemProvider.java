@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -58,6 +59,8 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 
 			addVariantsPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addIsPersistentPropertyDescriptor(object);
+			addLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -102,6 +105,50 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Persistent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsPersistentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MessageA_isPersistent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MessageA_isPersistent_feature", "_UI_MessageA_type"),
+				 AllocationsPackage.Literals.MESSAGE_A__IS_PERSISTENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Length feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLengthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MessageA_length_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MessageA_length_feature", "_UI_MessageA_type"),
+				 AllocationsPackage.Literals.MESSAGE_A__LENGTH,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -178,6 +225,10 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MessageA.class)) {
+			case AllocationsPackage.MESSAGE_A__IS_PERSISTENT:
+			case AllocationsPackage.MESSAGE_A__LENGTH:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case AllocationsPackage.MESSAGE_A__OPERATION_MODES:
 			case AllocationsPackage.MESSAGE_A__SCHEDULES:
 			case AllocationsPackage.MESSAGE_A__SUBMESSAGES:

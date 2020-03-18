@@ -1898,13 +1898,31 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_A__TYPE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Is Persistent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__IS_PERSISTENT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Message A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Message A</em>' class.
@@ -2186,6 +2204,24 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__TYPE = MESSAGE_A__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Is Persistent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__IS_PERSISTENT = MESSAGE_A__IS_PERSISTENT;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__LENGTH = MESSAGE_A__LENGTH;
+
+	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2383,6 +2419,24 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBMESSAGE__TYPE = MESSAGE_A__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Is Persistent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__IS_PERSISTENT = MESSAGE_A__IS_PERSISTENT;
+
+	/**
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__LENGTH = MESSAGE_A__LENGTH;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -3696,6 +3750,28 @@ public interface AllocationsPackage extends EPackage {
 	EReference getMessageA_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Persistent</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#isIsPersistent()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EAttribute getMessageA_IsPersistent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getLength()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EAttribute getMessageA_Length();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4385,6 +4461,22 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_A__TYPE = eINSTANCE.getMessageA_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Persistent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_A__IS_PERSISTENT = eINSTANCE.getMessageA_IsPersistent();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_A__LENGTH = eINSTANCE.getMessageA_Length();
 
 	}
 

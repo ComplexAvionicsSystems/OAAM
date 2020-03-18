@@ -95,12 +95,16 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/FloatingPoint/nBits"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/FloatingPoint/endianess"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//common/Byte"/>
+      <genClasses ecoreClass="oaam.ecore#//common/Byte">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Byte/nBits"/>
+      </genClasses>
       <genClasses ecoreClass="oaam.ecore#//common/Character">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Character/encoding"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Character/nBits"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//common/Boolean"/>
+      <genClasses ecoreClass="oaam.ecore#//common/Boolean">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//common/Boolean/nBits"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Library" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//library">
@@ -1045,6 +1049,8 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/segments"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/isPersistent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/length"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//allocations/MessageSegment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

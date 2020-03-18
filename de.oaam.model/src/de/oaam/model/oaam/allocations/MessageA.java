@@ -28,6 +28,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getSegments <em>Segments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA()
@@ -119,5 +121,55 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 	 * @generated
 	 */
 	void setType(MessageType value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Persistent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * If set, message will not be altered in any way. Typically used for messages from complex sensors.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Is Persistent</em>' attribute.
+	 * @see #setIsPersistent(boolean)
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA_IsPersistent()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsPersistent();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Persistent</em>' attribute.
+	 * @see #isIsPersistent()
+	 * @generated
+	 */
+	void setIsPersistent(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Length</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Defines length of this message
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Length</em>' attribute.
+	 * @see #setLength(int)
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA_Length()
+	 * @model
+	 * @generated
+	 */
+	int getLength();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Length</em>' attribute.
+	 * @see #getLength()
+	 * @generated
+	 */
+	void setLength(int value);
 
 } // MessageA

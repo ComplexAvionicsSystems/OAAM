@@ -1022,6 +1022,24 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMessageA_IsPersistent() {
+		return (EAttribute)messageAEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageA_Length() {
+		return (EAttribute)messageAEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AllocationsFactory getAllocationsFactory() {
 		return (AllocationsFactory)getEFactoryInstance();
 	}
@@ -1113,6 +1131,8 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(messageAEClass, MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS);
 		createEReference(messageAEClass, MESSAGE_A__SEGMENTS);
 		createEReference(messageAEClass, MESSAGE_A__TYPE);
+		createEAttribute(messageAEClass, MESSAGE_A__IS_PERSISTENT);
+		createEAttribute(messageAEClass, MESSAGE_A__LENGTH);
 
 		messageSegmentEClass = createEClass(MESSAGE_SEGMENT);
 		createEReference(messageSegmentEClass, MESSAGE_SEGMENT__CAPABILITY);
@@ -1293,6 +1313,8 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getMessageA_SignalToMessageAssignments(), this.getSignalToMessageAssignment(), null, "signalToMessageAssignments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_Segments(), this.getMessageSegment(), null, "segments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_Type(), theLibraryPackage.getMessageType(), null, "type", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageA_IsPersistent(), ecorePackage.getEBoolean(), "isPersistent", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMessageA_Length(), ecorePackage.getEInt(), "length", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(messageSegmentEClass, MessageSegment.class, "MessageSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageSegment_Capability(), theCapabilitiesPackage.getMessageOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, MessageSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

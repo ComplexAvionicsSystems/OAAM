@@ -48,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getSegments <em>Segments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getType <em>Type</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#isIsPersistent <em>Is Persistent</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageAImpl#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,6 +124,46 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * @ordered
 	 */
 	protected MessageType type;
+
+	/**
+	 * The default value of the '{@link #isIsPersistent() <em>Is Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsPersistent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_PERSISTENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsPersistent() <em>Is Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsPersistent()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isPersistent = IS_PERSISTENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LENGTH_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
+	 * @generated
+	 * @ordered
+	 */
+	protected int length = LENGTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -257,6 +299,48 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsPersistent() {
+		return isPersistent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsPersistent(boolean newIsPersistent) {
+		boolean oldIsPersistent = isPersistent;
+		isPersistent = newIsPersistent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE_A__IS_PERSISTENT, oldIsPersistent, isPersistent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLength() {
+		return length;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLength(int newLength) {
+		int oldLength = length;
+		length = newLength;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE_A__LENGTH, oldLength, length));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -297,6 +381,10 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 			case AllocationsPackage.MESSAGE_A__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case AllocationsPackage.MESSAGE_A__IS_PERSISTENT:
+				return isIsPersistent();
+			case AllocationsPackage.MESSAGE_A__LENGTH:
+				return getLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -337,6 +425,12 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 			case AllocationsPackage.MESSAGE_A__TYPE:
 				setType((MessageType)newValue);
 				return;
+			case AllocationsPackage.MESSAGE_A__IS_PERSISTENT:
+				setIsPersistent((Boolean)newValue);
+				return;
+			case AllocationsPackage.MESSAGE_A__LENGTH:
+				setLength((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -370,6 +464,12 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 			case AllocationsPackage.MESSAGE_A__TYPE:
 				setType((MessageType)null);
 				return;
+			case AllocationsPackage.MESSAGE_A__IS_PERSISTENT:
+				setIsPersistent(IS_PERSISTENT_EDEFAULT);
+				return;
+			case AllocationsPackage.MESSAGE_A__LENGTH:
+				setLength(LENGTH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -396,6 +496,10 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 				return segments != null && !segments.isEmpty();
 			case AllocationsPackage.MESSAGE_A__TYPE:
 				return type != null;
+			case AllocationsPackage.MESSAGE_A__IS_PERSISTENT:
+				return isPersistent != IS_PERSISTENT_EDEFAULT;
+			case AllocationsPackage.MESSAGE_A__LENGTH:
+				return length != LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -442,6 +546,24 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (isPersistent: ");
+		result.append(isPersistent);
+		result.append(", length: ");
+		result.append(length);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MessageAImpl

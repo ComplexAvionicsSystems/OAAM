@@ -1049,6 +1049,8 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/segments"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/isPersistent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/length"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//allocations/MessageSegment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

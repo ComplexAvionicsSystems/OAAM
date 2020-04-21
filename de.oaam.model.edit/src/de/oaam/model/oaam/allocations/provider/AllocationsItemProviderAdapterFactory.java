@@ -141,26 +141,26 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.SignalAssignmentSegment} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Segment} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SignalAssignmentSegmentItemProvider signalAssignmentSegmentItemProvider;
+	protected SegmentItemProvider segmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.SignalAssignmentSegment}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Segment}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSignalAssignmentSegmentAdapter() {
-		if (signalAssignmentSegmentItemProvider == null) {
-			signalAssignmentSegmentItemProvider = new SignalAssignmentSegmentItemProvider(this);
+	public Adapter createSegmentAdapter() {
+		if (segmentItemProvider == null) {
+			segmentItemProvider = new SegmentItemProvider(this);
 		}
 
-		return signalAssignmentSegmentItemProvider;
+		return segmentItemProvider;
 	}
 
 	/**
@@ -256,52 +256,6 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Allocations} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected AllocationsItemProvider allocationsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Allocations}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createAllocationsAdapter() {
-		if (allocationsItemProvider == null) {
-			allocationsItemProvider = new AllocationsItemProvider(this);
-		}
-
-		return allocationsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Suballocations} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SuballocationsItemProvider suballocationsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Suballocations}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSuballocationsAdapter() {
-		if (suballocationsItemProvider == null) {
-			suballocationsItemProvider = new SuballocationsItemProvider(this);
-		}
-
-		return suballocationsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Schedule} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -348,6 +302,29 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.MessageSegment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageSegmentItemProvider messageSegmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.MessageSegment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageSegmentAdapter() {
+		if (messageSegmentItemProvider == null) {
+			messageSegmentItemProvider = new MessageSegmentItemProvider(this);
+		}
+
+		return messageSegmentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Message} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -368,6 +345,29 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		}
 
 		return messageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Submessage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubmessageItemProvider submessageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Submessage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubmessageAdapter() {
+		if (submessageItemProvider == null) {
+			submessageItemProvider = new SubmessageItemProvider(this);
+		}
+
+		return submessageItemProvider;
 	}
 
 	/**
@@ -394,49 +394,95 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.MessageSegment} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Allocations} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MessageSegmentItemProvider messageSegmentItemProvider;
+	protected AllocationsItemProvider allocationsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.MessageSegment}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Allocations}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMessageSegmentAdapter() {
-		if (messageSegmentItemProvider == null) {
-			messageSegmentItemProvider = new MessageSegmentItemProvider(this);
+	public Adapter createAllocationsAdapter() {
+		if (allocationsItemProvider == null) {
+			allocationsItemProvider = new AllocationsItemProvider(this);
 		}
 
-		return messageSegmentItemProvider;
+		return allocationsItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Submessage} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Suballocations} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubmessageItemProvider submessageItemProvider;
+	protected SuballocationsItemProvider suballocationsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Submessage}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Suballocations}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSubmessageAdapter() {
-		if (submessageItemProvider == null) {
-			submessageItemProvider = new SubmessageItemProvider(this);
+	public Adapter createSuballocationsAdapter() {
+		if (suballocationsItemProvider == null) {
+			suballocationsItemProvider = new SuballocationsItemProvider(this);
 		}
 
-		return submessageItemProvider;
+		return suballocationsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.Path} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PathItemProvider pathItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.Path}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPathAdapter() {
+		if (pathItemProvider == null) {
+			pathItemProvider = new PathItemProvider(this);
+		}
+
+		return pathItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.allocations.PathGroup} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PathGroupItemProvider pathGroupItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.allocations.PathGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPathGroupAdapter() {
+		if (pathGroupItemProvider == null) {
+			pathGroupItemProvider = new PathGroupItemProvider(this);
+		}
+
+		return pathGroupItemProvider;
 	}
 
 	/**
@@ -541,7 +587,7 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (taskAssignmentItemProvider != null) taskAssignmentItemProvider.dispose();
 		if (signalAssignmentItemProvider != null) signalAssignmentItemProvider.dispose();
 		if (connectionAssignmentItemProvider != null) connectionAssignmentItemProvider.dispose();
-		if (signalAssignmentSegmentItemProvider != null) signalAssignmentSegmentItemProvider.dispose();
+		if (segmentItemProvider != null) segmentItemProvider.dispose();
 		if (deviceAssignmentItemProvider != null) deviceAssignmentItemProvider.dispose();
 		if (connectionAssignmentSegmentItemProvider != null) connectionAssignmentSegmentItemProvider.dispose();
 		if (subdeviceAssignmentItemProvider != null) subdeviceAssignmentItemProvider.dispose();
@@ -554,6 +600,8 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (signalToMessageAssignmentItemProvider != null) signalToMessageAssignmentItemProvider.dispose();
 		if (allocationsItemProvider != null) allocationsItemProvider.dispose();
 		if (suballocationsItemProvider != null) suballocationsItemProvider.dispose();
+		if (pathItemProvider != null) pathItemProvider.dispose();
+		if (pathGroupItemProvider != null) pathGroupItemProvider.dispose();
 	}
 
 }

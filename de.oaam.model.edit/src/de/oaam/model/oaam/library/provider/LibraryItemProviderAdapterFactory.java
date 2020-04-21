@@ -762,29 +762,6 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Sublibrary} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SublibraryItemProvider sublibraryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Sublibrary}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSublibraryAdapter() {
-		if (sublibraryItemProvider == null) {
-			sublibraryItemProvider = new SublibraryItemProvider(this);
-		}
-
-		return sublibraryItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskOutputTrigger} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -877,29 +854,6 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Library} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LibraryItemProvider libraryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Library}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLibraryAdapter() {
-		if (libraryItemProvider == null) {
-			libraryItemProvider = new LibraryItemProvider(this);
-		}
-
-		return libraryItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.BusType} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -943,6 +897,52 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		}
 
 		return messageTypeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Library} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LibraryItemProvider libraryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Library}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLibraryAdapter() {
+		if (libraryItemProvider == null) {
+			libraryItemProvider = new LibraryItemProvider(this);
+		}
+
+		return libraryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.Sublibrary} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SublibraryItemProvider sublibraryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.library.Sublibrary}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSublibraryAdapter() {
+		if (sublibraryItemProvider == null) {
+			sublibraryItemProvider = new SublibraryItemProvider(this);
+		}
+
+		return sublibraryItemProvider;
 	}
 
 	/**

@@ -10,6 +10,7 @@ import de.oaam.model.oaam.library.SignalType;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +26,7 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getSource <em>Source</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.Signal#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.Signal#getTargets <em>Targets</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getInIndex <em>In Index</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.Signal#getOutIndex <em>Out Index</em>}</li>
@@ -63,29 +64,19 @@ public interface Signal extends OaamBaseElementA, VariantDependentElementA, Mode
 	void setSource(Output value);
 
 	/**
-	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * Returns the value of the '<em><b>Targets</b></em>' reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.Input}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 * The target input the signal goes to
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(Input)
-	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getSignal_Target()
+	 * @return the value of the '<em>Targets</em>' reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getSignal_Targets()
 	 * @model required="true"
 	 * @generated
 	 */
-	Input getTarget();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.functions.Signal#getTarget <em>Target</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Target</em>' reference.
-	 * @see #getTarget()
-	 * @generated
-	 */
-	void setTarget(Input value);
+	EList<Input> getTargets();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.

@@ -2321,8 +2321,8 @@
           <details key="documentation" value="The source output the signal comes from"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-          eType="#//functions/Input">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="targets" lowerBound="1"
+          upperBound="-1" eType="#//functions/Input">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The target input the signal goes to"/>
         </eAnnotations>
@@ -3779,7 +3779,7 @@
         <details key="documentation" value="A allocations of a signal to a chain of devices and connections."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
-          eType="#//allocations/SignalAssignmentSegment" containment="true">
+          eType="#//allocations/SegmentA" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The segment of this allocations."/>
         </eAnnotations>
@@ -3808,32 +3808,10 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalAssignmentSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Segment" eSuperTypes="#//allocations/SegmentA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A signal segment is the allocations of a signal to either one device or one connection. Many consecutive segment define a full signal allocations path"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
-          eType="#//capabilities/SignalOnConnectionOrDeviceCapability">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A reference to the used capabilty, which specifies the resource consumtion."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="device" eType="#//hardware/Device">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A reference to the device."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//hardware/Connection">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="Either device or connection can be filled. Not both at the same time."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="schedules" upperBound="-1"
-          eType="#//allocations/Schedule" containment="true">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The schedules for this signal segment"/>
-        </eAnnotations>
-      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DeviceAssignment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -3990,7 +3968,8 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MessageA" abstract="true" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="MessageA" abstract="true" interface="true"
+        eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A message is a virtual packaging of signals. It can be used to describe the data transportation on a bussystem."/>
       </eAnnotations>
@@ -4013,7 +3992,7 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
-          eType="#//allocations/MessageSegment" containment="true">
+          eType="#//allocations/SegmentA" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The schedules for this signal segment"/>
         </eAnnotations>
@@ -4033,6 +4012,7 @@
           <details key="documentation" value="Defines length of this message"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="path" eType="#//allocations/PathA"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MessageSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4157,5 +4137,93 @@
         <details key="documentation" value="With suballocations the assignments can be organized like folders"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SegmentA" abstract="true" interface="true"
+        eSuperTypes="#//scenario/ModeDependentElementA #//common/OaamBaseElementA #//scenario/VariantDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An abstract segment is the base class for segment derivatives"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="capability" lowerBound="1"
+          eType="#//capabilities/SignalOnConnectionOrDeviceCapability">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the used capabilty, which specifies the resource consumtion."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="device" eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A reference to the device."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//hardware/Connection">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Either device or connection can be filled. Not both at the same time."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="schedules" upperBound="-1"
+          eType="#//allocations/Schedule" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The schedules for this signal segment"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Path" eSuperTypes="#//allocations/PathA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A path indicates the path a signal/message may take on the real hardware"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="segments" upperBound="-1"
+          eType="#//allocations/Segment" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Path for this segment"/>
+          <details key="children" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Source device for this path"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//allocations/DeviceAssignment">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Destination device for this path"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="message" eType="#//allocations/MessageA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Message that realizes this path"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PathGroup" eSuperTypes="#//allocations/PathA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A path group can be used to identify path variants, e.g., for redundancy"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subpaths" upperBound="-1"
+          eType="#//allocations/SegmentA" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Subpaths for this group, can be used to show redundancy"/>
+          <details key="children" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="childrenRedundant" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="false">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="If true, all children are recognized as being redundant to each other"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sources" upperBound="-1"
+          eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Source devices for this path group"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="destinations" upperBound="-1"
+          eType="#//hardware/Device">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Destination devices for this path group"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PathA" abstract="true" interface="true"
+        eSuperTypes="#//allocations/SegmentA"/>
   </eSubpackages>
 </ecore:EPackage>

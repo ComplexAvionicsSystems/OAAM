@@ -46,7 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getSource <em>Source</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getTargets <em>Targets</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getInIndex <em>In Index</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.SignalImpl#getOutIndex <em>Out Index</em>}</li>
@@ -87,14 +87,14 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 	protected Output source;
 
 	/**
-	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
+	 * The cached value of the '{@link #getTargets() <em>Targets</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTarget()
+	 * @see #getTargets()
 	 * @generated
 	 * @ordered
 	 */
-	protected Input target;
+	protected EList<Input> targets;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -242,37 +242,11 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input getTarget() {
-		if (target != null && target.eIsProxy()) {
-			InternalEObject oldTarget = (InternalEObject)target;
-			target = (Input)eResolveProxy(oldTarget);
-			if (target != oldTarget) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.SIGNAL__TARGET, oldTarget, target));
-			}
+	public EList<Input> getTargets() {
+		if (targets == null) {
+			targets = new EObjectResolvingEList<Input>(Input.class, this, FunctionsPackage.SIGNAL__TARGETS);
 		}
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Input basicGetTarget() {
-		return target;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTarget(Input newTarget) {
-		Input oldTarget = target;
-		target = newTarget;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.SIGNAL__TARGET, oldTarget, target));
+		return targets;
 	}
 
 	/**
@@ -422,9 +396,8 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 			case FunctionsPackage.SIGNAL__SOURCE:
 				if (resolve) return getSource();
 				return basicGetSource();
-			case FunctionsPackage.SIGNAL__TARGET:
-				if (resolve) return getTarget();
-				return basicGetTarget();
+			case FunctionsPackage.SIGNAL__TARGETS:
+				return getTargets();
 			case FunctionsPackage.SIGNAL__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -459,8 +432,9 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 			case FunctionsPackage.SIGNAL__SOURCE:
 				setSource((Output)newValue);
 				return;
-			case FunctionsPackage.SIGNAL__TARGET:
-				setTarget((Input)newValue);
+			case FunctionsPackage.SIGNAL__TARGETS:
+				getTargets().clear();
+				getTargets().addAll((Collection<? extends Input>)newValue);
 				return;
 			case FunctionsPackage.SIGNAL__TYPE:
 				setType((SignalType)newValue);
@@ -495,8 +469,8 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 			case FunctionsPackage.SIGNAL__SOURCE:
 				setSource((Output)null);
 				return;
-			case FunctionsPackage.SIGNAL__TARGET:
-				setTarget((Input)null);
+			case FunctionsPackage.SIGNAL__TARGETS:
+				getTargets().clear();
 				return;
 			case FunctionsPackage.SIGNAL__TYPE:
 				setType((SignalType)null);
@@ -528,8 +502,8 @@ public class SignalImpl extends OaamBaseElementAImpl implements Signal {
 				return operationModes != null && !operationModes.isEmpty();
 			case FunctionsPackage.SIGNAL__SOURCE:
 				return source != null;
-			case FunctionsPackage.SIGNAL__TARGET:
-				return target != null;
+			case FunctionsPackage.SIGNAL__TARGETS:
+				return targets != null && !targets.isEmpty();
 			case FunctionsPackage.SIGNAL__TYPE:
 				return type != null;
 			case FunctionsPackage.SIGNAL__IN_INDEX:

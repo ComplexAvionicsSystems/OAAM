@@ -3,9 +3,8 @@
 package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
+import de.oaam.model.oaam.allocations.SegmentA;
 import de.oaam.model.oaam.allocations.SignalAssignment;
-import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
-
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.functions.Signal;
@@ -77,7 +76,7 @@ public class SignalAssignmentImpl extends OaamBaseElementAImpl implements Signal
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SignalAssignmentSegment> segments;
+	protected EList<SegmentA> segments;
 
 	/**
 	 * The cached value of the '{@link #getSignal() <em>Signal</em>}' reference.
@@ -137,9 +136,9 @@ public class SignalAssignmentImpl extends OaamBaseElementAImpl implements Signal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SignalAssignmentSegment> getSegments() {
+	public EList<SegmentA> getSegments() {
 		if (segments == null) {
-			segments = new EObjectContainmentEList<SignalAssignmentSegment>(SignalAssignmentSegment.class, this, AllocationsPackage.SIGNAL_ASSIGNMENT__SEGMENTS);
+			segments = new EObjectContainmentEList<SegmentA>(SegmentA.class, this, AllocationsPackage.SIGNAL_ASSIGNMENT__SEGMENTS);
 		}
 		return segments;
 	}
@@ -238,7 +237,7 @@ public class SignalAssignmentImpl extends OaamBaseElementAImpl implements Signal
 				return;
 			case AllocationsPackage.SIGNAL_ASSIGNMENT__SEGMENTS:
 				getSegments().clear();
-				getSegments().addAll((Collection<? extends SignalAssignmentSegment>)newValue);
+				getSegments().addAll((Collection<? extends SegmentA>)newValue);
 				return;
 			case AllocationsPackage.SIGNAL_ASSIGNMENT__SIGNAL:
 				setSignal((Signal)newValue);

@@ -49,13 +49,13 @@ public interface AllocationsFactory extends EFactory {
 	ConnectionAssignment createConnectionAssignment();
 
 	/**
-	 * Returns a new object of class '<em>Signal Assignment Segment</em>'.
+	 * Returns a new object of class '<em>Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Signal Assignment Segment</em>'.
+	 * @return a new object of class '<em>Segment</em>'.
 	 * @generated
 	 */
-	SignalAssignmentSegment createSignalAssignmentSegment();
+	Segment createSegment();
 
 	/**
 	 * Returns a new object of class '<em>Device Assignment</em>'.
@@ -110,6 +110,24 @@ public interface AllocationsFactory extends EFactory {
 	 * @generated
 	 */
 	Suballocations createSuballocations();
+
+	/**
+	 * Returns a new object of class '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path</em>'.
+	 * @generated
+	 */
+	Path createPath();
+
+	/**
+	 * Returns a new object of class '<em>Path Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Group</em>'.
+	 * @generated
+	 */
+	PathGroup createPathGroup();
 
 	/**
 	 * Returns a new object of class '<em>Schedule</em>'.

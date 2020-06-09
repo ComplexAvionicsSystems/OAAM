@@ -2071,7 +2071,7 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_A__LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' reference.
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2386,7 +2386,7 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__LENGTH = MESSAGE_A__LENGTH;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' reference.
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2431,13 +2431,22 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__DESTINATION_DEVICES = MESSAGE_A_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Redundant To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__IS_REDUNDANT_TO = MESSAGE_A_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 4;
+	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Message</em>' class.
@@ -2612,7 +2621,7 @@ public interface AllocationsPackage extends EPackage {
 	int SUBMESSAGE__LENGTH = MESSAGE_A__LENGTH;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' reference.
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3407,13 +3416,22 @@ public interface AllocationsPackage extends EPackage {
 	int PATH__MESSAGE = PATH_A_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Redundant To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__IS_REDUNDANT_TO = PATH_A_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Path</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_FEATURE_COUNT = PATH_A_FEATURE_COUNT + 4;
+	int PATH_FEATURE_COUNT = PATH_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Path</em>' class.
@@ -4141,6 +4159,17 @@ public interface AllocationsPackage extends EPackage {
 	EReference getPath_Message();
 
 	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Path#getIsRedundantTo <em>Is Redundant To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getIsRedundantTo()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_IsRedundantTo();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.PathGroup <em>Path Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4365,6 +4394,17 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessage_DestinationDevices();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getIsRedundantTo()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_IsRedundantTo();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
@@ -4616,10 +4656,10 @@ public interface AllocationsPackage extends EPackage {
 	EAttribute getMessageA_Length();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}'.
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Path</em>'.
+	 * @return the meta object for the containment reference '<em>Path</em>'.
 	 * @see de.oaam.model.oaam.allocations.MessageA#getPath()
 	 * @see #getMessageA()
 	 * @generated
@@ -5068,6 +5108,14 @@ public interface AllocationsPackage extends EPackage {
 		EReference PATH__MESSAGE = eINSTANCE.getPath_Message();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__IS_REDUNDANT_TO = eINSTANCE.getPath_IsRedundantTo();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.PathGroupImpl <em>Path Group</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5244,6 +5292,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE__DESTINATION_DEVICES = eINSTANCE.getMessage_DestinationDevices();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__IS_REDUNDANT_TO = eINSTANCE.getMessage_IsRedundantTo();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
@@ -5438,7 +5494,7 @@ public interface AllocationsPackage extends EPackage {
 		EAttribute MESSAGE_A__LENGTH = eINSTANCE.getMessageA_Length();
 
 		/**
-		 * The meta object literal for the '<em><b>Path</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

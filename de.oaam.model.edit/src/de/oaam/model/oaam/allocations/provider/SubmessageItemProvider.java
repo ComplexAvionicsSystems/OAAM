@@ -234,6 +234,7 @@ public class SubmessageItemProvider extends OaamBaseElementAItemProvider {
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SUBMESSAGES);
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS);
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS);
+			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__PATH);
 		}
 		return childrenFeatures;
 	}
@@ -299,6 +300,7 @@ public class SubmessageItemProvider extends OaamBaseElementAItemProvider {
 			case AllocationsPackage.SUBMESSAGE__SUBMESSAGES:
 			case AllocationsPackage.SUBMESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS:
 			case AllocationsPackage.SUBMESSAGE__SEGMENTS:
+			case AllocationsPackage.SUBMESSAGE__PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -350,6 +352,39 @@ public class SubmessageItemProvider extends OaamBaseElementAItemProvider {
 			(createChildParameter
 				(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS,
 				 AllocationsFactory.eINSTANCE.createPathGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__PATH,
+				 AllocationsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__PATH,
+				 AllocationsFactory.eINSTANCE.createPathGroup()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == AllocationsPackage.Literals.MESSAGE_A__SEGMENTS ||
+			childFeature == AllocationsPackage.Literals.MESSAGE_A__PATH;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

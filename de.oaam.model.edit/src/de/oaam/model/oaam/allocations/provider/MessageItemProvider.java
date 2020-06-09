@@ -61,6 +61,7 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 			addBusPropertyDescriptor(object);
 			addSourceDevicesPropertyDescriptor(object);
 			addDestinationDevicesPropertyDescriptor(object);
+			addIsRedundantToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -242,6 +243,28 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Redundant To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsRedundantToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Message_isRedundantTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Message_isRedundantTo_feature", "_UI_Message_type"),
+				 AllocationsPackage.Literals.MESSAGE__IS_REDUNDANT_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Path feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -280,6 +303,7 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SUBMESSAGES);
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS);
 			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS);
+			childrenFeatures.add(AllocationsPackage.Literals.MESSAGE_A__PATH);
 		}
 		return childrenFeatures;
 	}
@@ -344,6 +368,7 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 			case AllocationsPackage.MESSAGE__SUBMESSAGES:
 			case AllocationsPackage.MESSAGE__SIGNAL_TO_MESSAGE_ASSIGNMENTS:
 			case AllocationsPackage.MESSAGE__SEGMENTS:
+			case AllocationsPackage.MESSAGE__PATH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -395,6 +420,39 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 			(createChildParameter
 				(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS,
 				 AllocationsFactory.eINSTANCE.createPathGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__PATH,
+				 AllocationsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__PATH,
+				 AllocationsFactory.eINSTANCE.createPathGroup()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == AllocationsPackage.Literals.MESSAGE_A__SEGMENTS ||
+			childFeature == AllocationsPackage.Literals.MESSAGE_A__PATH;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

@@ -3,7 +3,6 @@
 package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
-import de.oaam.model.oaam.allocations.DeviceAssignment;
 import de.oaam.model.oaam.allocations.MessageA;
 import de.oaam.model.oaam.allocations.Path;
 import de.oaam.model.oaam.allocations.Schedule;
@@ -59,6 +58,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.PathImpl#getSource <em>Source</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.PathImpl#getDestination <em>Destination</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.PathImpl#getMessage <em>Message</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.PathImpl#getIsRedundantTo <em>Is Redundant To</em>}</li>
  * </ul>
  *
  * @generated
@@ -271,7 +271,7 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 	 * @generated
 	 * @ordered
 	 */
-	protected DeviceAssignment destination;
+	protected Device destination;
 	/**
 	 * The cached value of the '{@link #getMessage() <em>Message</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -281,6 +281,16 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 	 * @ordered
 	 */
 	protected MessageA message;
+
+	/**
+	 * The cached value of the '{@link #getIsRedundantTo() <em>Is Redundant To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsRedundantTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Path isRedundantTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -653,10 +663,10 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeviceAssignment getDestination() {
+	public Device getDestination() {
 		if (destination != null && destination.eIsProxy()) {
 			InternalEObject oldDestination = (InternalEObject)destination;
-			destination = (DeviceAssignment)eResolveProxy(oldDestination);
+			destination = (Device)eResolveProxy(oldDestination);
 			if (destination != oldDestination) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.PATH__DESTINATION, oldDestination, destination));
@@ -670,7 +680,7 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeviceAssignment basicGetDestination() {
+	public Device basicGetDestination() {
 		return destination;
 	}
 
@@ -679,8 +689,8 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDestination(DeviceAssignment newDestination) {
-		DeviceAssignment oldDestination = destination;
+	public void setDestination(Device newDestination) {
+		Device oldDestination = destination;
 		destination = newDestination;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.PATH__DESTINATION, oldDestination, destination));
@@ -722,6 +732,44 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 		message = newMessage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.PATH__MESSAGE, oldMessage, message));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Path getIsRedundantTo() {
+		if (isRedundantTo != null && isRedundantTo.eIsProxy()) {
+			InternalEObject oldIsRedundantTo = (InternalEObject)isRedundantTo;
+			isRedundantTo = (Path)eResolveProxy(oldIsRedundantTo);
+			if (isRedundantTo != oldIsRedundantTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.PATH__IS_REDUNDANT_TO, oldIsRedundantTo, isRedundantTo));
+			}
+		}
+		return isRedundantTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Path basicGetIsRedundantTo() {
+		return isRedundantTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsRedundantTo(Path newIsRedundantTo) {
+		Path oldIsRedundantTo = isRedundantTo;
+		isRedundantTo = newIsRedundantTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.PATH__IS_REDUNDANT_TO, oldIsRedundantTo, isRedundantTo));
 	}
 
 	/**
@@ -790,6 +838,9 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 			case AllocationsPackage.PATH__MESSAGE:
 				if (resolve) return getMessage();
 				return basicGetMessage();
+			case AllocationsPackage.PATH__IS_REDUNDANT_TO:
+				if (resolve) return getIsRedundantTo();
+				return basicGetIsRedundantTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -853,10 +904,13 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 				setSource((Device)newValue);
 				return;
 			case AllocationsPackage.PATH__DESTINATION:
-				setDestination((DeviceAssignment)newValue);
+				setDestination((Device)newValue);
 				return;
 			case AllocationsPackage.PATH__MESSAGE:
 				setMessage((MessageA)newValue);
+				return;
+			case AllocationsPackage.PATH__IS_REDUNDANT_TO:
+				setIsRedundantTo((Path)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -916,10 +970,13 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 				setSource((Device)null);
 				return;
 			case AllocationsPackage.PATH__DESTINATION:
-				setDestination((DeviceAssignment)null);
+				setDestination((Device)null);
 				return;
 			case AllocationsPackage.PATH__MESSAGE:
 				setMessage((MessageA)null);
+				return;
+			case AllocationsPackage.PATH__IS_REDUNDANT_TO:
+				setIsRedundantTo((Path)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -967,6 +1024,8 @@ public class PathImpl extends ModeDependentElementAImpl implements Path {
 				return destination != null;
 			case AllocationsPackage.PATH__MESSAGE:
 				return message != null;
+			case AllocationsPackage.PATH__IS_REDUNDANT_TO:
+				return isRedundantTo != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -167,7 +167,7 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 	protected int length = LENGTH_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPath() <em>Path</em>}' reference.
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPath()
@@ -383,14 +383,6 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 	 * @generated
 	 */
 	public PathA getPath() {
-		if (path != null && path.eIsProxy()) {
-			InternalEObject oldPath = (InternalEObject)path;
-			path = (PathA)eResolveProxy(oldPath);
-			if (path != oldPath) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.SUBMESSAGE__PATH, oldPath, path));
-			}
-		}
 		return path;
 	}
 
@@ -399,8 +391,14 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PathA basicGetPath() {
-		return path;
+	public NotificationChain basicSetPath(PathA newPath, NotificationChain msgs) {
+		PathA oldPath = path;
+		path = newPath;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AllocationsPackage.SUBMESSAGE__PATH, oldPath, newPath);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -409,10 +407,17 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 	 * @generated
 	 */
 	public void setPath(PathA newPath) {
-		PathA oldPath = path;
-		path = newPath;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.SUBMESSAGE__PATH, oldPath, path));
+		if (newPath != path) {
+			NotificationChain msgs = null;
+			if (path != null)
+				msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.SUBMESSAGE__PATH, null, msgs);
+			if (newPath != null)
+				msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.SUBMESSAGE__PATH, null, msgs);
+			msgs = basicSetPath(newPath, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.SUBMESSAGE__PATH, newPath, newPath));
 	}
 
 	/**
@@ -492,6 +497,8 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 				return ((InternalEList<?>)getSignalToMessageAssignments()).basicRemove(otherEnd, msgs);
 			case AllocationsPackage.SUBMESSAGE__SEGMENTS:
 				return ((InternalEList<?>)getSegments()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.SUBMESSAGE__PATH:
+				return basicSetPath(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -524,8 +531,7 @@ public class SubmessageImpl extends OaamBaseElementAImpl implements Submessage {
 			case AllocationsPackage.SUBMESSAGE__LENGTH:
 				return getLength();
 			case AllocationsPackage.SUBMESSAGE__PATH:
-				if (resolve) return getPath();
-				return basicGetPath();
+				return getPath();
 			case AllocationsPackage.SUBMESSAGE__CAPABILITY:
 				if (resolve) return getCapability();
 				return basicGetCapability();

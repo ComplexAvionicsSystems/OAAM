@@ -174,22 +174,22 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 	void setLength(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Path</b></em>' reference.
+	 * Returns the value of the '<em><b>Path</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Path</em>' reference.
+	 * @return the value of the '<em>Path</em>' containment reference.
 	 * @see #setPath(PathA)
 	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA_Path()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	PathA getPath();
 
 	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}' reference.
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Path</em>' reference.
+	 * @param value the new value of the '<em>Path</em>' containment reference.
 	 * @see #getPath()
 	 * @generated
 	 */

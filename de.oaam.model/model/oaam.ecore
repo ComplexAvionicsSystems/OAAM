@@ -743,6 +743,13 @@
           <details key="documentation" value="All message types of the library"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busTypes" upperBound="-1"
+          eType="#//library/BusType" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="createChild" value="true"/>
+          <details key="documentation" value="Type definitions for busses"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ResourceType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4012,7 +4019,12 @@
           <details key="documentation" value="Defines length of this message"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="path" eType="#//allocations/PathA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="path" eType="#//allocations/PathA"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="children" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MessageSegment" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4060,6 +4072,11 @@
           eType="#//hardware/Device">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Can be used to assign target devices for this message"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isRedundantTo" eType="#//allocations/Message">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates redundancy. The referenced message is intended to be the master message."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -4181,7 +4198,7 @@
           <details key="documentation" value="Source device for this path"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//allocations/DeviceAssignment">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="destination" eType="#//hardware/Device">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Destination device for this path"/>
         </eAnnotations>
@@ -4189,6 +4206,11 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="message" eType="#//allocations/MessageA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Message that realizes this path"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="isRedundantTo" eType="#//allocations/Path">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Indicates redundancy. The referenced message is intended to be the master message."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>

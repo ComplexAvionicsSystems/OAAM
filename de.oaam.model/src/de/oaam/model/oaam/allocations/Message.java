@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.Message#getBus <em>Bus</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.Message#getSourceDevices <em>Source Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.Message#getDestinationDevices <em>Destination Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessage()
@@ -111,5 +112,30 @@ public interface Message extends MessageA {
 	 * @generated
 	 */
 	EList<Device> getDestinationDevices();
+
+	/**
+	 * Returns the value of the '<em><b>Is Redundant To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Indicates redundancy. The referenced message is intended to be the master message.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Is Redundant To</em>' reference.
+	 * @see #setIsRedundantTo(Message)
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessage_IsRedundantTo()
+	 * @model
+	 * @generated
+	 */
+	Message getIsRedundantTo();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Redundant To</em>' reference.
+	 * @see #getIsRedundantTo()
+	 * @generated
+	 */
+	void setIsRedundantTo(Message value);
 
 } // Message

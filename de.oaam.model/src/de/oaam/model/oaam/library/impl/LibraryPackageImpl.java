@@ -816,6 +816,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLibraryContainerA_BusTypes() {
+		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getResourceType() {
 		return resourceTypeEClass;
 	}
@@ -2332,6 +2341,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__IO_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__MESSAGE_TYPES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__BUS_TYPES);
 
 		resourceTypeEClass = createEClass(RESOURCE_TYPE);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__UNIT);
@@ -2659,6 +2669,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getLibraryContainerA_IoTypes(), this.getIoType(), null, "ioTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_HardwareGroupTypes(), this.getBusType(), null, "hardwareGroupTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_MessageTypes(), this.getMessageType(), null, "messageTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_BusTypes(), this.getBusType(), null, "busTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceTypeEClass, ResourceType.class, "ResourceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResourceType_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

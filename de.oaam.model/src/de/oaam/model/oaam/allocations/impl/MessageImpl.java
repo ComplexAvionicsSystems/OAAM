@@ -57,6 +57,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getBus <em>Bus</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getSourceDevices <em>Source Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getDestinationDevices <em>Destination Devices</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.MessageImpl#getIsRedundantTo <em>Is Redundant To</em>}</li>
  * </ul>
  *
  * @generated
@@ -173,7 +174,7 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	protected int length = LENGTH_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPath() <em>Path</em>}' reference.
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPath()
@@ -221,6 +222,16 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	 * @ordered
 	 */
 	protected EList<Device> destinationDevices;
+
+	/**
+	 * The cached value of the '{@link #getIsRedundantTo() <em>Is Redundant To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsRedundantTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Message isRedundantTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -498,15 +509,45 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PathA getPath() {
-		if (path != null && path.eIsProxy()) {
-			InternalEObject oldPath = (InternalEObject)path;
-			path = (PathA)eResolveProxy(oldPath);
-			if (path != oldPath) {
+	public Message getIsRedundantTo() {
+		if (isRedundantTo != null && isRedundantTo.eIsProxy()) {
+			InternalEObject oldIsRedundantTo = (InternalEObject)isRedundantTo;
+			isRedundantTo = (Message)eResolveProxy(oldIsRedundantTo);
+			if (isRedundantTo != oldIsRedundantTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.MESSAGE__PATH, oldPath, path));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.MESSAGE__IS_REDUNDANT_TO, oldIsRedundantTo, isRedundantTo));
 			}
 		}
+		return isRedundantTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message basicGetIsRedundantTo() {
+		return isRedundantTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsRedundantTo(Message newIsRedundantTo) {
+		Message oldIsRedundantTo = isRedundantTo;
+		isRedundantTo = newIsRedundantTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__IS_REDUNDANT_TO, oldIsRedundantTo, isRedundantTo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PathA getPath() {
 		return path;
 	}
 
@@ -515,8 +556,14 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PathA basicGetPath() {
-		return path;
+	public NotificationChain basicSetPath(PathA newPath, NotificationChain msgs) {
+		PathA oldPath = path;
+		path = newPath;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, oldPath, newPath);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -525,10 +572,17 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	 * @generated
 	 */
 	public void setPath(PathA newPath) {
-		PathA oldPath = path;
-		path = newPath;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, oldPath, path));
+		if (newPath != path) {
+			NotificationChain msgs = null;
+			if (path != null)
+				msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
+			if (newPath != null)
+				msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
+			msgs = basicSetPath(newPath, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, newPath, newPath));
 	}
 
 	/**
@@ -549,6 +603,8 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 				return ((InternalEList<?>)getSignalToMessageAssignments()).basicRemove(otherEnd, msgs);
 			case AllocationsPackage.MESSAGE__SEGMENTS:
 				return ((InternalEList<?>)getSegments()).basicRemove(otherEnd, msgs);
+			case AllocationsPackage.MESSAGE__PATH:
+				return basicSetPath(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -581,8 +637,7 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 			case AllocationsPackage.MESSAGE__LENGTH:
 				return getLength();
 			case AllocationsPackage.MESSAGE__PATH:
-				if (resolve) return getPath();
-				return basicGetPath();
+				return getPath();
 			case AllocationsPackage.MESSAGE__CAPABILITY:
 				if (resolve) return getCapability();
 				return basicGetCapability();
@@ -593,6 +648,9 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 				return getSourceDevices();
 			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
 				return getDestinationDevices();
+			case AllocationsPackage.MESSAGE__IS_REDUNDANT_TO:
+				if (resolve) return getIsRedundantTo();
+				return basicGetIsRedundantTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -656,6 +714,9 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 				getDestinationDevices().clear();
 				getDestinationDevices().addAll((Collection<? extends Device>)newValue);
 				return;
+			case AllocationsPackage.MESSAGE__IS_REDUNDANT_TO:
+				setIsRedundantTo((Message)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -710,6 +771,9 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
 				getDestinationDevices().clear();
 				return;
+			case AllocationsPackage.MESSAGE__IS_REDUNDANT_TO:
+				setIsRedundantTo((Message)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -750,6 +814,8 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 				return sourceDevices != null && !sourceDevices.isEmpty();
 			case AllocationsPackage.MESSAGE__DESTINATION_DEVICES:
 				return destinationDevices != null && !destinationDevices.isEmpty();
+			case AllocationsPackage.MESSAGE__IS_REDUNDANT_TO:
+				return isRedundantTo != null;
 		}
 		return super.eIsSet(featureID);
 	}

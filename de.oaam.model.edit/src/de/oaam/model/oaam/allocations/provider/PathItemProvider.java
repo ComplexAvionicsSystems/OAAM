@@ -74,6 +74,7 @@ public class PathItemProvider extends ModeDependentElementAItemProvider {
 			addSourcePropertyDescriptor(object);
 			addDestinationPropertyDescriptor(object);
 			addMessagePropertyDescriptor(object);
+			addIsRedundantToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -400,6 +401,28 @@ public class PathItemProvider extends ModeDependentElementAItemProvider {
 				 getString("_UI_Path_message_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Path_message_feature", "_UI_Path_type"),
 				 AllocationsPackage.Literals.PATH__MESSAGE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Redundant To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsRedundantToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Path_isRedundantTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Path_isRedundantTo_feature", "_UI_Path_type"),
+				 AllocationsPackage.Literals.PATH__IS_REDUNDANT_TO,
 				 true,
 				 false,
 				 true,

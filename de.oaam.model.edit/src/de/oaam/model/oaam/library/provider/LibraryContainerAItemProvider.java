@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -54,8 +55,31 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBusTypesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Bus Types feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBusTypesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LibraryContainerA_busTypes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LibraryContainerA_busTypes_feature", "_UI_LibraryContainerA_type"),
+				 LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES,
+				 true,
+				 false,
+				 false,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -91,6 +115,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__IO_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__MESSAGE_TYPES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -156,6 +181,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.LIBRARY_CONTAINER_A__IO_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -307,6 +333,34 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__MESSAGE_TYPES,
 				 LibraryFactory.eINSTANCE.createMessageType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES,
+				 LibraryFactory.eINSTANCE.createBusType()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES ||
+			childFeature == LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

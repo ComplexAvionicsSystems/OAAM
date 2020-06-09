@@ -14,17 +14,20 @@ import de.oaam.model.oaam.allocations.DeviceAssignment;
 import de.oaam.model.oaam.allocations.Message;
 import de.oaam.model.oaam.allocations.MessageA;
 import de.oaam.model.oaam.allocations.MessageSegment;
+import de.oaam.model.oaam.allocations.Path;
+import de.oaam.model.oaam.allocations.PathA;
+import de.oaam.model.oaam.allocations.PathGroup;
 import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.ScheduledTime;
+import de.oaam.model.oaam.allocations.Segment;
+import de.oaam.model.oaam.allocations.SegmentA;
 import de.oaam.model.oaam.allocations.SignalAssignment;
-import de.oaam.model.oaam.allocations.SignalAssignmentSegment;
 import de.oaam.model.oaam.allocations.SignalToMessageAssignment;
 import de.oaam.model.oaam.allocations.Suballocations;
 import de.oaam.model.oaam.allocations.SubconnectionAssignment;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 import de.oaam.model.oaam.allocations.Submessage;
 import de.oaam.model.oaam.allocations.TaskAssignment;
-
 import de.oaam.model.oaam.anatomy.AnatomyPackage;
 
 import de.oaam.model.oaam.anatomy.impl.AnatomyPackageImpl;
@@ -110,7 +113,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass signalAssignmentSegmentEClass = null;
+	private EClass segmentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,6 +156,34 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * @generated
 	 */
 	private EClass suballocationsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass segmentAEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -491,44 +522,8 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSignalAssignmentSegment() {
-		return signalAssignmentSegmentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSignalAssignmentSegment_Capability() {
-		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSignalAssignmentSegment_Device() {
-		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSignalAssignmentSegment_Connection() {
-		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSignalAssignmentSegment_Schedules() {
-		return (EReference)signalAssignmentSegmentEClass.getEStructuralFeatures().get(3);
+	public EClass getSegment() {
+		return segmentEClass;
 	}
 
 	/**
@@ -698,6 +693,159 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSegmentA() {
+		return segmentAEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSegmentA_Capability() {
+		return (EReference)segmentAEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSegmentA_Device() {
+		return (EReference)segmentAEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSegmentA_Connection() {
+		return (EReference)segmentAEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSegmentA_Schedules() {
+		return (EReference)segmentAEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPath() {
+		return pathEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPath_Segments() {
+		return (EReference)pathEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPath_Source() {
+		return (EReference)pathEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPath_Destination() {
+		return (EReference)pathEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPath_Message() {
+		return (EReference)pathEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPath_IsRedundantTo() {
+		return (EReference)pathEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPathGroup() {
+		return pathGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPathGroup_Subpaths() {
+		return (EReference)pathGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPathGroup_ChildrenRedundant() {
+		return (EAttribute)pathGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPathGroup_Sources() {
+		return (EReference)pathGroupEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPathGroup_Destinations() {
+		return (EReference)pathGroupEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPathA() {
+		return pathAEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSchedule() {
 		return scheduleEClass;
 	}
@@ -826,6 +974,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 */
 	public EReference getMessage_DestinationDevices() {
 		return (EReference)messageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessage_IsRedundantTo() {
+		return (EReference)messageEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1040,6 +1197,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMessageA_Path() {
+		return (EReference)messageAEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AllocationsFactory getAllocationsFactory() {
 		return (AllocationsFactory)getEFactoryInstance();
 	}
@@ -1087,11 +1253,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(connectionAssignmentEClass, CONNECTION_ASSIGNMENT__SEGMENTS);
 		createEReference(connectionAssignmentEClass, CONNECTION_ASSIGNMENT__CONNECTION);
 
-		signalAssignmentSegmentEClass = createEClass(SIGNAL_ASSIGNMENT_SEGMENT);
-		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY);
-		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__DEVICE);
-		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION);
-		createEReference(signalAssignmentSegmentEClass, SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES);
+		segmentEClass = createEClass(SEGMENT);
 
 		deviceAssignmentEClass = createEClass(DEVICE_ASSIGNMENT);
 		createEReference(deviceAssignmentEClass, DEVICE_ASSIGNMENT__DEVICE);
@@ -1133,6 +1295,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(messageAEClass, MESSAGE_A__TYPE);
 		createEAttribute(messageAEClass, MESSAGE_A__IS_PERSISTENT);
 		createEAttribute(messageAEClass, MESSAGE_A__LENGTH);
+		createEReference(messageAEClass, MESSAGE_A__PATH);
 
 		messageSegmentEClass = createEClass(MESSAGE_SEGMENT);
 		createEReference(messageSegmentEClass, MESSAGE_SEGMENT__CAPABILITY);
@@ -1144,6 +1307,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(messageEClass, MESSAGE__BUS);
 		createEReference(messageEClass, MESSAGE__SOURCE_DEVICES);
 		createEReference(messageEClass, MESSAGE__DESTINATION_DEVICES);
+		createEReference(messageEClass, MESSAGE__IS_REDUNDANT_TO);
 
 		submessageEClass = createEClass(SUBMESSAGE);
 		createEReference(submessageEClass, SUBMESSAGE__CAPABILITY);
@@ -1161,6 +1325,27 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		allocationsEClass = createEClass(ALLOCATIONS);
 
 		suballocationsEClass = createEClass(SUBALLOCATIONS);
+
+		segmentAEClass = createEClass(SEGMENT_A);
+		createEReference(segmentAEClass, SEGMENT_A__CAPABILITY);
+		createEReference(segmentAEClass, SEGMENT_A__DEVICE);
+		createEReference(segmentAEClass, SEGMENT_A__CONNECTION);
+		createEReference(segmentAEClass, SEGMENT_A__SCHEDULES);
+
+		pathEClass = createEClass(PATH);
+		createEReference(pathEClass, PATH__SEGMENTS);
+		createEReference(pathEClass, PATH__SOURCE);
+		createEReference(pathEClass, PATH__DESTINATION);
+		createEReference(pathEClass, PATH__MESSAGE);
+		createEReference(pathEClass, PATH__IS_REDUNDANT_TO);
+
+		pathGroupEClass = createEClass(PATH_GROUP);
+		createEReference(pathGroupEClass, PATH_GROUP__SUBPATHS);
+		createEAttribute(pathGroupEClass, PATH_GROUP__CHILDREN_REDUNDANT);
+		createEReference(pathGroupEClass, PATH_GROUP__SOURCES);
+		createEReference(pathGroupEClass, PATH_GROUP__DESTINATIONS);
+
+		pathAEClass = createEClass(PATH_A);
 	}
 
 	/**
@@ -1210,9 +1395,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		connectionAssignmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		connectionAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		signalAssignmentSegmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		segmentEClass.getESuperTypes().add(this.getSegmentA());
 		deviceAssignmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		deviceAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
@@ -1243,6 +1426,12 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		suballocationsEClass.getESuperTypes().add(this.getAllocationsContainerA());
 		suballocationsEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		suballocationsEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		segmentAEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		segmentAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		segmentAEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
+		pathEClass.getESuperTypes().add(this.getPathA());
+		pathGroupEClass.getESuperTypes().add(this.getPathA());
+		pathAEClass.getESuperTypes().add(this.getSegmentA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(allocationsContainerAEClass, AllocationsContainerA.class, "AllocationsContainerA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1262,18 +1451,14 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getTaskAssignment_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, TaskAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalAssignmentEClass, SignalAssignment.class, "SignalAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSignalAssignment_Segments(), this.getSignalAssignmentSegment(), null, "segments", null, 0, -1, SignalAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignalAssignment_Segments(), this.getSegmentA(), null, "segments", null, 0, -1, SignalAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignalAssignment_Signal(), theFunctionsPackage.getSignal(), null, "signal", null, 1, 1, SignalAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionAssignmentEClass, ConnectionAssignment.class, "ConnectionAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConnectionAssignment_Segments(), this.getConnectionAssignmentSegment(), null, "segments", null, 0, -1, ConnectionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnectionAssignment_Connection(), theHardwarePackage.getConnection(), null, "connection", null, 1, 1, ConnectionAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(signalAssignmentSegmentEClass, SignalAssignmentSegment.class, "SignalAssignmentSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSignalAssignmentSegment_Capability(), theCapabilitiesPackage.getSignalOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignalAssignmentSegment_Device(), theHardwarePackage.getDevice(), null, "device", null, 0, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignalAssignmentSegment_Connection(), theHardwarePackage.getConnection(), null, "connection", null, 0, 1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignalAssignmentSegment_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, SignalAssignmentSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(segmentEClass, Segment.class, "Segment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(deviceAssignmentEClass, DeviceAssignment.class, "DeviceAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviceAssignment_Device(), theHardwarePackage.getDevice(), null, "device", null, 1, 1, DeviceAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1307,14 +1492,15 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEAttribute(getScheduledTime_Duration(), ecorePackage.getEDouble(), "duration", "0.0", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getScheduledTime_Restart(), ecorePackage.getEBoolean(), "restart", "true", 1, 1, ScheduledTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(messageAEClass, MessageA.class, "MessageA", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(messageAEClass, MessageA.class, "MessageA", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageA_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_Submessages(), this.getSubmessage(), null, "submessages", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_SignalToMessageAssignments(), this.getSignalToMessageAssignment(), null, "signalToMessageAssignments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMessageA_Segments(), this.getMessageSegment(), null, "segments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageA_Segments(), this.getSegmentA(), null, "segments", null, 0, -1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessageA_Type(), theLibraryPackage.getMessageType(), null, "type", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMessageA_IsPersistent(), ecorePackage.getEBoolean(), "isPersistent", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMessageA_Length(), ecorePackage.getEInt(), "length", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessageA_Path(), this.getPathA(), null, "path", null, 0, 1, MessageA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(messageSegmentEClass, MessageSegment.class, "MessageSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMessageSegment_Capability(), theCapabilitiesPackage.getMessageOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, MessageSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1326,6 +1512,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getMessage_Bus(), theHardwarePackage.getBus(), null, "bus", null, 1, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessage_SourceDevices(), theHardwarePackage.getDevice(), null, "sourceDevices", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMessage_DestinationDevices(), theHardwarePackage.getDevice(), null, "destinationDevices", null, 0, -1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMessage_IsRedundantTo(), this.getMessage(), null, "isRedundantTo", null, 0, 1, Message.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(submessageEClass, Submessage.class, "Submessage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSubmessage_Capability(), theCapabilitiesPackage.getSubmessageInMessageCapability(), null, "capability", null, 1, 1, Submessage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1343,6 +1530,27 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEClass(allocationsEClass, Allocations.class, "Allocations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(suballocationsEClass, Suballocations.class, "Suballocations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(segmentAEClass, SegmentA.class, "SegmentA", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSegmentA_Capability(), theCapabilitiesPackage.getSignalOnConnectionOrDeviceCapability(), null, "capability", null, 1, 1, SegmentA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegmentA_Device(), theHardwarePackage.getDevice(), null, "device", null, 0, 1, SegmentA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegmentA_Connection(), theHardwarePackage.getConnection(), null, "connection", null, 0, 1, SegmentA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSegmentA_Schedules(), this.getSchedule(), null, "schedules", null, 0, -1, SegmentA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pathEClass, Path.class, "Path", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPath_Segments(), this.getSegment(), null, "segments", null, 0, -1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPath_Source(), theHardwarePackage.getDevice(), null, "source", null, 0, 1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPath_Destination(), theHardwarePackage.getDevice(), null, "destination", null, 0, 1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPath_Message(), this.getMessageA(), null, "message", null, 0, 1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPath_IsRedundantTo(), this.getPath(), null, "isRedundantTo", null, 0, 1, Path.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pathGroupEClass, PathGroup.class, "PathGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPathGroup_Subpaths(), this.getSegmentA(), null, "subpaths", null, 0, -1, PathGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathGroup_ChildrenRedundant(), ecorePackage.getEBoolean(), "childrenRedundant", "false", 1, 1, PathGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathGroup_Sources(), theHardwarePackage.getDevice(), null, "sources", null, 0, -1, PathGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathGroup_Destinations(), theHardwarePackage.getDevice(), null, "destinations", null, 0, -1, PathGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pathAEClass, PathA.class, "PathA", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create annotations
 		// http://www.obeo.fr/dsl/dnc/archetype

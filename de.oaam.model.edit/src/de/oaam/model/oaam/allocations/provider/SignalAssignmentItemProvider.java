@@ -202,7 +202,17 @@ public class SignalAssignmentItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(AllocationsPackage.Literals.SIGNAL_ASSIGNMENT__SEGMENTS,
-				 AllocationsFactory.eINSTANCE.createSignalAssignmentSegment()));
+				 AllocationsFactory.eINSTANCE.createSegment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.SIGNAL_ASSIGNMENT__SEGMENTS,
+				 AllocationsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.SIGNAL_ASSIGNMENT__SEGMENTS,
+				 AllocationsFactory.eINSTANCE.createPathGroup()));
 	}
 
 	/**

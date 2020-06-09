@@ -4,8 +4,8 @@ package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.MessageA;
-import de.oaam.model.oaam.allocations.MessageSegment;
 import de.oaam.model.oaam.allocations.Schedule;
+import de.oaam.model.oaam.allocations.SegmentA;
 import de.oaam.model.oaam.allocations.SignalToMessageAssignment;
 import de.oaam.model.oaam.allocations.Submessage;
 
@@ -113,7 +113,7 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MessageSegment> segments;
+	protected EList<SegmentA> segments;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -249,9 +249,9 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MessageSegment> getSegments() {
+	public EList<SegmentA> getSegments() {
 		if (segments == null) {
-			segments = new EObjectContainmentEList<MessageSegment>(MessageSegment.class, this, AllocationsPackage.MESSAGE_A__SEGMENTS);
+			segments = new EObjectContainmentEList<SegmentA>(SegmentA.class, this, AllocationsPackage.MESSAGE_A__SEGMENTS);
 		}
 		return segments;
 	}
@@ -420,7 +420,7 @@ public abstract class MessageAImpl extends OaamBaseElementAImpl implements Messa
 				return;
 			case AllocationsPackage.MESSAGE_A__SEGMENTS:
 				getSegments().clear();
-				getSegments().addAll((Collection<? extends MessageSegment>)newValue);
+				getSegments().addAll((Collection<? extends SegmentA>)newValue);
 				return;
 			case AllocationsPackage.MESSAGE_A__TYPE:
 				setType((MessageType)newValue);

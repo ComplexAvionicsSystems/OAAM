@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.library.provider;
 
 
+import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.Sublibrary;
 
 import java.util.Collection;
@@ -94,6 +95,29 @@ public class SublibraryItemProvider extends LibraryContainerAItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES ||
+			childFeature == LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

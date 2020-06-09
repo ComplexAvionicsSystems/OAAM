@@ -691,7 +691,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSignal_Target() {
+	public EReference getSignal_Targets() {
 		return (EReference)signalEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1010,7 +1010,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 
 		signalEClass = createEClass(SIGNAL);
 		createEReference(signalEClass, SIGNAL__SOURCE);
-		createEReference(signalEClass, SIGNAL__TARGET);
+		createEReference(signalEClass, SIGNAL__TARGETS);
 		createEReference(signalEClass, SIGNAL__TYPE);
 		createEAttribute(signalEClass, SIGNAL__IN_INDEX);
 		createEAttribute(signalEClass, SIGNAL__OUT_INDEX);
@@ -1178,7 +1178,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 
 		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignal_Source(), this.getOutput(), null, "source", null, 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSignal_Target(), this.getInput(), null, "target", null, 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSignal_Targets(), this.getInput(), null, "targets", null, 1, -1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSignal_Type(), theLibraryPackage.getSignalType(), null, "type", null, 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSignal_InIndex(), ecorePackage.getEInt(), "inIndex", "1", 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSignal_OutIndex(), ecorePackage.getEInt(), "outIndex", "1", 1, 1, Signal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

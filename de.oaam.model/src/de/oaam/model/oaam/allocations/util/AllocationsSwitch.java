@@ -105,12 +105,13 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT: {
-				SignalAssignmentSegment signalAssignmentSegment = (SignalAssignmentSegment)theEObject;
-				T result = caseSignalAssignmentSegment(signalAssignmentSegment);
-				if (result == null) result = caseOaamBaseElementA(signalAssignmentSegment);
-				if (result == null) result = caseVariantDependentElementA(signalAssignmentSegment);
-				if (result == null) result = caseModeDependentElementA(signalAssignmentSegment);
+			case AllocationsPackage.SEGMENT: {
+				Segment segment = (Segment)theEObject;
+				T result = caseSegment(segment);
+				if (result == null) result = caseSegmentA(segment);
+				if (result == null) result = caseModeDependentElementA(segment);
+				if (result == null) result = caseOaamBaseElementA(segment);
+				if (result == null) result = caseVariantDependentElementA(segment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -230,6 +231,47 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AllocationsPackage.SEGMENT_A: {
+				SegmentA segmentA = (SegmentA)theEObject;
+				T result = caseSegmentA(segmentA);
+				if (result == null) result = caseModeDependentElementA(segmentA);
+				if (result == null) result = caseOaamBaseElementA(segmentA);
+				if (result == null) result = caseVariantDependentElementA(segmentA);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.PATH: {
+				Path path = (Path)theEObject;
+				T result = casePath(path);
+				if (result == null) result = casePathA(path);
+				if (result == null) result = caseSegmentA(path);
+				if (result == null) result = caseModeDependentElementA(path);
+				if (result == null) result = caseOaamBaseElementA(path);
+				if (result == null) result = caseVariantDependentElementA(path);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.PATH_GROUP: {
+				PathGroup pathGroup = (PathGroup)theEObject;
+				T result = casePathGroup(pathGroup);
+				if (result == null) result = casePathA(pathGroup);
+				if (result == null) result = caseSegmentA(pathGroup);
+				if (result == null) result = caseModeDependentElementA(pathGroup);
+				if (result == null) result = caseOaamBaseElementA(pathGroup);
+				if (result == null) result = caseVariantDependentElementA(pathGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AllocationsPackage.PATH_A: {
+				PathA pathA = (PathA)theEObject;
+				T result = casePathA(pathA);
+				if (result == null) result = caseSegmentA(pathA);
+				if (result == null) result = caseModeDependentElementA(pathA);
+				if (result == null) result = caseOaamBaseElementA(pathA);
+				if (result == null) result = caseVariantDependentElementA(pathA);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -295,17 +337,17 @@ public class AllocationsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Signal Assignment Segment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Segment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Signal Assignment Segment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Segment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSignalAssignmentSegment(SignalAssignmentSegment object) {
+	public T caseSegment(Segment object) {
 		return null;
 	}
 
@@ -396,6 +438,66 @@ public class AllocationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSuballocations(Suballocations object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Segment A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Segment A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSegmentA(SegmentA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePath(Path object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathGroup(PathGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathA(PathA object) {
 		return null;
 	}
 

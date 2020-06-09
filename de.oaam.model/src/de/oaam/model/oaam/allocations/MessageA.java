@@ -30,10 +30,11 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface MessageA extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
@@ -84,7 +85,7 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 
 	/**
 	 * Returns the value of the '<em><b>Segments</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.allocations.MessageSegment}.
+	 * The list contents are of type {@link de.oaam.model.oaam.allocations.SegmentA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -95,7 +96,7 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<MessageSegment> getSegments();
+	EList<SegmentA> getSegments();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -171,5 +172,27 @@ public interface MessageA extends OaamBaseElementA, VariantDependentElementA, Mo
 	 * @generated
 	 */
 	void setLength(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Path</em>' containment reference.
+	 * @see #setPath(PathA)
+	 * @see de.oaam.model.oaam.allocations.AllocationsPackage#getMessageA_Path()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PathA getPath();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Path</em>' containment reference.
+	 * @see #getPath()
+	 * @generated
+	 */
+	void setPath(PathA value);
 
 } // MessageA

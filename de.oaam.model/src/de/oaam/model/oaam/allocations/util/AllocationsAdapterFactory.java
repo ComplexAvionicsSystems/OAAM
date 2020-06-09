@@ -89,8 +89,8 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 				return createConnectionAssignmentAdapter();
 			}
 			@Override
-			public Adapter caseSignalAssignmentSegment(SignalAssignmentSegment object) {
-				return createSignalAssignmentSegmentAdapter();
+			public Adapter caseSegment(Segment object) {
+				return createSegmentAdapter();
 			}
 			@Override
 			public Adapter caseDeviceAssignment(DeviceAssignment object) {
@@ -143,6 +143,22 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSuballocations(Suballocations object) {
 				return createSuballocationsAdapter();
+			}
+			@Override
+			public Adapter caseSegmentA(SegmentA object) {
+				return createSegmentAAdapter();
+			}
+			@Override
+			public Adapter casePath(Path object) {
+				return createPathAdapter();
+			}
+			@Override
+			public Adapter casePathGroup(PathGroup object) {
+				return createPathGroupAdapter();
+			}
+			@Override
+			public Adapter casePathA(PathA object) {
+				return createPathAAdapter();
 			}
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
@@ -233,16 +249,16 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment <em>Signal Assignment Segment</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.Segment <em>Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment
+	 * @see de.oaam.model.oaam.allocations.Segment
 	 * @generated
 	 */
-	public Adapter createSignalAssignmentSegmentAdapter() {
+	public Adapter createSegmentAdapter() {
 		return null;
 	}
 
@@ -327,6 +343,62 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSuballocationsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.SegmentA <em>Segment A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.SegmentA
+	 * @generated
+	 */
+	public Adapter createSegmentAAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.Path
+	 * @generated
+	 */
+	public Adapter createPathAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.PathGroup <em>Path Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.PathGroup
+	 * @generated
+	 */
+	public Adapter createPathGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.allocations.PathA <em>Path A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.allocations.PathA
+	 * @generated
+	 */
+	public Adapter createPathAAdapter() {
 		return null;
 	}
 

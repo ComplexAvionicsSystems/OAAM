@@ -481,13 +481,22 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_CONTAINER_A__MESSAGE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 20;
 
 	/**
+	 * The feature id for the '<em><b>Bus Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__BUS_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 22;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -5829,6 +5838,15 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY__MESSAGE_TYPES = LIBRARY_CONTAINER_A__MESSAGE_TYPES;
 
 	/**
+	 * The feature id for the '<em><b>Bus Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__BUS_TYPES = LIBRARY_CONTAINER_A__BUS_TYPES;
+
+	/**
 	 * The number of structural features of the '<em>Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6106,6 +6124,15 @@ public interface LibraryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBLIBRARY__MESSAGE_TYPES = LIBRARY_CONTAINER_A__MESSAGE_TYPES;
+
+	/**
+	 * The feature id for the '<em><b>Bus Types</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__BUS_TYPES = LIBRARY_CONTAINER_A__BUS_TYPES;
 
 	/**
 	 * The number of structural features of the '<em>Sublibrary</em>' class.
@@ -6503,6 +6530,17 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLibraryContainerA_MessageTypes();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.LibraryContainerA#getBusTypes <em>Bus Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bus Types</em>'.
+	 * @see de.oaam.model.oaam.library.LibraryContainerA#getBusTypes()
+	 * @see #getLibraryContainerA()
+	 * @generated
+	 */
+	EReference getLibraryContainerA_BusTypes();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceType <em>Resource Type</em>}'.
@@ -8531,6 +8569,14 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LIBRARY_CONTAINER_A__MESSAGE_TYPES = eINSTANCE.getLibraryContainerA_MessageTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Bus Types</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_CONTAINER_A__BUS_TYPES = eINSTANCE.getLibraryContainerA_BusTypes();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl <em>Resource Type</em>}' class.

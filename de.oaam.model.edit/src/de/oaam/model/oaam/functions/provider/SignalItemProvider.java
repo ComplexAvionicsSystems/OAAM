@@ -58,7 +58,7 @@ public class SignalItemProvider extends OaamBaseElementAItemProvider {
 
 			addVariantsPropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
-			addTargetPropertyDescriptor(object);
+			addTargetsPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addInIndexPropertyDescriptor(object);
 			addOutIndexPropertyDescriptor(object);
@@ -112,19 +112,19 @@ public class SignalItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Target feature.
+	 * This adds a property descriptor for the Targets feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTargetPropertyDescriptor(Object object) {
+	protected void addTargetsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Signal_target_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_target_feature", "_UI_Signal_type"),
-				 FunctionsPackage.Literals.SIGNAL__TARGET,
+				 getString("_UI_Signal_targets_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Signal_targets_feature", "_UI_Signal_type"),
+				 FunctionsPackage.Literals.SIGNAL__TARGETS,
 				 true,
 				 false,
 				 true,

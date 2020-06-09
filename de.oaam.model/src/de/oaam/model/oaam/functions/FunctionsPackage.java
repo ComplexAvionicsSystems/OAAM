@@ -1611,13 +1611,13 @@ public interface FunctionsPackage extends EPackage {
 	int SIGNAL__SOURCE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * The feature id for the '<em><b>Targets</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL__TARGET = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int SIGNAL__TARGETS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -3064,15 +3064,15 @@ public interface FunctionsPackage extends EPackage {
 	EReference getSignal_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.Signal#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.functions.Signal#getTargets <em>Targets</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see de.oaam.model.oaam.functions.Signal#getTarget()
+	 * @return the meta object for the reference list '<em>Targets</em>'.
+	 * @see de.oaam.model.oaam.functions.Signal#getTargets()
 	 * @see #getSignal()
 	 * @generated
 	 */
-	EReference getSignal_Target();
+	EReference getSignal_Targets();
 
 	/**
 	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.Signal#getType <em>Type</em>}'.
@@ -3750,12 +3750,12 @@ public interface FunctionsPackage extends EPackage {
 		EReference SIGNAL__SOURCE = eINSTANCE.getSignal_Source();
 
 		/**
-		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Targets</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SIGNAL__TARGET = eINSTANCE.getSignal_Target();
+		EReference SIGNAL__TARGETS = eINSTANCE.getSignal_Targets();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.

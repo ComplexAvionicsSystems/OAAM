@@ -59,7 +59,7 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 			case AllocationsPackage.TASK_ASSIGNMENT: return createTaskAssignment();
 			case AllocationsPackage.SIGNAL_ASSIGNMENT: return createSignalAssignment();
 			case AllocationsPackage.CONNECTION_ASSIGNMENT: return createConnectionAssignment();
-			case AllocationsPackage.SIGNAL_ASSIGNMENT_SEGMENT: return createSignalAssignmentSegment();
+			case AllocationsPackage.SEGMENT: return createSegment();
 			case AllocationsPackage.DEVICE_ASSIGNMENT: return createDeviceAssignment();
 			case AllocationsPackage.CONNECTION_ASSIGNMENT_SEGMENT: return createConnectionAssignmentSegment();
 			case AllocationsPackage.SUBDEVICE_ASSIGNMENT: return createSubdeviceAssignment();
@@ -72,6 +72,8 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 			case AllocationsPackage.SIGNAL_TO_MESSAGE_ASSIGNMENT: return createSignalToMessageAssignment();
 			case AllocationsPackage.ALLOCATIONS: return createAllocations();
 			case AllocationsPackage.SUBALLOCATIONS: return createSuballocations();
+			case AllocationsPackage.PATH: return createPath();
+			case AllocationsPackage.PATH_GROUP: return createPathGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -112,9 +114,9 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SignalAssignmentSegment createSignalAssignmentSegment() {
-		SignalAssignmentSegmentImpl signalAssignmentSegment = new SignalAssignmentSegmentImpl();
-		return signalAssignmentSegment;
+	public Segment createSegment() {
+		SegmentImpl segment = new SegmentImpl();
+		return segment;
 	}
 
 	/**
@@ -175,6 +177,26 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	public Suballocations createSuballocations() {
 		SuballocationsImpl suballocations = new SuballocationsImpl();
 		return suballocations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Path createPath() {
+		PathImpl path = new PathImpl();
+		return path;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PathGroup createPathGroup() {
+		PathGroupImpl pathGroup = new PathGroupImpl();
+		return pathGroup;
 	}
 
 	/**

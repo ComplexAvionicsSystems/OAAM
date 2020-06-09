@@ -4,6 +4,7 @@ package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.common.CommonPackage;
 
+import de.oaam.model.oaam.scenario.ScenarioPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -660,95 +661,14 @@ public interface AllocationsPackage extends EPackage {
 	int CONNECTION_ASSIGNMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl <em>Signal Assignment Segment</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.SegmentA <em>Segment A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalAssignmentSegment()
+	 * @see de.oaam.model.oaam.allocations.SegmentA
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSegmentA()
 	 * @generated
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int SEGMENT_A = 18;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -757,7 +677,88 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int SEGMENT_A__OPERATION_MODES = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__ID = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__NAME = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__STYLE = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__ATTRIBUTES = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__DOCUMENTATION = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__MODIFIED = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__MODIFIER = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__TRACE_LINK = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_A__VARIANTS = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -766,7 +767,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int SEGMENT_A__CAPABILITY = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Device</b></em>' reference.
@@ -775,7 +776,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__DEVICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int SEGMENT_A__DEVICE = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Connection</b></em>' reference.
@@ -784,7 +785,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int SEGMENT_A__CONNECTION = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
@@ -793,25 +794,179 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int SEGMENT_A__SCHEDULES = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
-	 * The number of structural features of the '<em>Signal Assignment Segment</em>' class.
+	 * The number of structural features of the '<em>Segment A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int SEGMENT_A_FEATURE_COUNT = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
-	 * The number of operations of the '<em>Signal Assignment Segment</em>' class.
+	 * The number of operations of the '<em>Segment A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_ASSIGNMENT_SEGMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int SEGMENT_A_OPERATION_COUNT = ScenarioPackage.MODE_DEPENDENT_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SegmentImpl <em>Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SegmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSegment()
+	 * @generated
+	 */
+	int SEGMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__OPERATION_MODES = SEGMENT_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__ID = SEGMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__NAME = SEGMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__STYLE = SEGMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__ATTRIBUTES = SEGMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__DOCUMENTATION = SEGMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__MODIFIED = SEGMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__MODIFIER = SEGMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__TRACE_LINK = SEGMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__VARIANTS = SEGMENT_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__CAPABILITY = SEGMENT_A__CAPABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__DEVICE = SEGMENT_A__DEVICE;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__CONNECTION = SEGMENT_A__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT__SCHEDULES = SEGMENT_A__SCHEDULES;
+
+	/**
+	 * The number of structural features of the '<em>Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_FEATURE_COUNT = SEGMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Segment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEGMENT_OPERATION_COUNT = SEGMENT_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.DeviceAssignmentImpl <em>Device Assignment</em>}' class.
@@ -1753,10 +1908,10 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_SEGMENT = 12;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageAImpl <em>Message A</em>}' class.
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.MessageAImpl
+	 * @see de.oaam.model.oaam.allocations.MessageA
 	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
 	 * @generated
 	 */
@@ -1916,13 +2071,22 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_A__LENGTH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_A__PATH = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Message A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+	int MESSAGE_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Message A</em>' class.
@@ -2222,6 +2386,15 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__LENGTH = MESSAGE_A__LENGTH;
 
 	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__PATH = MESSAGE_A__PATH;
+
+	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2258,13 +2431,22 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE__DESTINATION_DEVICES = MESSAGE_A_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Redundant To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__IS_REDUNDANT_TO = MESSAGE_A_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 4;
+	int MESSAGE_FEATURE_COUNT = MESSAGE_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Message</em>' class.
@@ -2437,6 +2619,15 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBMESSAGE__LENGTH = MESSAGE_A__LENGTH;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBMESSAGE__PATH = MESSAGE_A__PATH;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference.
@@ -2899,6 +3090,549 @@ public interface AllocationsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.PathA <em>Path A</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.PathA
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPathA()
+	 * @generated
+	 */
+	int PATH_A = 21;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__OPERATION_MODES = SEGMENT_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__ID = SEGMENT_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__NAME = SEGMENT_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__STYLE = SEGMENT_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__ATTRIBUTES = SEGMENT_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__DOCUMENTATION = SEGMENT_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__MODIFIED = SEGMENT_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__MODIFIER = SEGMENT_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__TRACE_LINK = SEGMENT_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__VARIANTS = SEGMENT_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__CAPABILITY = SEGMENT_A__CAPABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__DEVICE = SEGMENT_A__DEVICE;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__CONNECTION = SEGMENT_A__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A__SCHEDULES = SEGMENT_A__SCHEDULES;
+
+	/**
+	 * The number of structural features of the '<em>Path A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A_FEATURE_COUNT = SEGMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Path A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_A_OPERATION_COUNT = SEGMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.PathImpl <em>Path</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.PathImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPath()
+	 * @generated
+	 */
+	int PATH = 19;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__OPERATION_MODES = PATH_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__ID = PATH_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__NAME = PATH_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__STYLE = PATH_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__ATTRIBUTES = PATH_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__DOCUMENTATION = PATH_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__MODIFIED = PATH_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__MODIFIER = PATH_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__TRACE_LINK = PATH_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__VARIANTS = PATH_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__CAPABILITY = PATH_A__CAPABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__DEVICE = PATH_A__DEVICE;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__CONNECTION = PATH_A__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__SCHEDULES = PATH_A__SCHEDULES;
+
+	/**
+	 * The feature id for the '<em><b>Segments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__SEGMENTS = PATH_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__SOURCE = PATH_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Destination</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__DESTINATION = PATH_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__MESSAGE = PATH_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Redundant To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH__IS_REDUNDANT_TO = PATH_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_FEATURE_COUNT = PATH_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Path</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_OPERATION_COUNT = PATH_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.PathGroupImpl <em>Path Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.PathGroupImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPathGroup()
+	 * @generated
+	 */
+	int PATH_GROUP = 20;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__OPERATION_MODES = PATH_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__ID = PATH_A__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__NAME = PATH_A__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__STYLE = PATH_A__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__ATTRIBUTES = PATH_A__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__DOCUMENTATION = PATH_A__DOCUMENTATION;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__MODIFIED = PATH_A__MODIFIED;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__MODIFIER = PATH_A__MODIFIER;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__TRACE_LINK = PATH_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__VARIANTS = PATH_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__CAPABILITY = PATH_A__CAPABILITY;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__DEVICE = PATH_A__DEVICE;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__CONNECTION = PATH_A__CONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Schedules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__SCHEDULES = PATH_A__SCHEDULES;
+
+	/**
+	 * The feature id for the '<em><b>Subpaths</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__SUBPATHS = PATH_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Children Redundant</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__CHILDREN_REDUNDANT = PATH_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Sources</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__SOURCES = PATH_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Destinations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP__DESTINATIONS = PATH_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Path Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP_FEATURE_COUNT = PATH_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Path Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_GROUP_OPERATION_COUNT = PATH_A_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.AllocationsContainerA <em>Container A</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3115,58 +3849,14 @@ public interface AllocationsPackage extends EPackage {
 	EReference getConnectionAssignment_Connection();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment <em>Signal Assignment Segment</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Segment <em>Segment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Signal Assignment Segment</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment
+	 * @return the meta object for class '<em>Segment</em>'.
+	 * @see de.oaam.model.oaam.allocations.Segment
 	 * @generated
 	 */
-	EClass getSignalAssignmentSegment();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getCapability <em>Capability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Capability</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment#getCapability()
-	 * @see #getSignalAssignmentSegment()
-	 * @generated
-	 */
-	EReference getSignalAssignmentSegment_Capability();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getDevice <em>Device</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Device</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment#getDevice()
-	 * @see #getSignalAssignmentSegment()
-	 * @generated
-	 */
-	EReference getSignalAssignmentSegment_Device();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getConnection <em>Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Connection</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment#getConnection()
-	 * @see #getSignalAssignmentSegment()
-	 * @generated
-	 */
-	EReference getSignalAssignmentSegment_Connection();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalAssignmentSegment#getSchedules <em>Schedules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalAssignmentSegment#getSchedules()
-	 * @see #getSignalAssignmentSegment()
-	 * @generated
-	 */
-	EReference getSignalAssignmentSegment_Schedules();
+	EClass getSegment();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.DeviceAssignment <em>Device Assignment</em>}'.
@@ -3361,6 +4051,189 @@ public interface AllocationsPackage extends EPackage {
 	EClass getSuballocations();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SegmentA <em>Segment A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Segment A</em>'.
+	 * @see de.oaam.model.oaam.allocations.SegmentA
+	 * @generated
+	 */
+	EClass getSegmentA();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SegmentA#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.SegmentA#getCapability()
+	 * @see #getSegmentA()
+	 * @generated
+	 */
+	EReference getSegmentA_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SegmentA#getDevice <em>Device</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Device</em>'.
+	 * @see de.oaam.model.oaam.allocations.SegmentA#getDevice()
+	 * @see #getSegmentA()
+	 * @generated
+	 */
+	EReference getSegmentA_Device();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SegmentA#getConnection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connection</em>'.
+	 * @see de.oaam.model.oaam.allocations.SegmentA#getConnection()
+	 * @see #getSegmentA()
+	 * @generated
+	 */
+	EReference getSegmentA_Connection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SegmentA#getSchedules <em>Schedules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see de.oaam.model.oaam.allocations.SegmentA#getSchedules()
+	 * @see #getSegmentA()
+	 * @generated
+	 */
+	EReference getSegmentA_Schedules();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Path <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path
+	 * @generated
+	 */
+	EClass getPath();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.Path#getSegments <em>Segments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Segments</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getSegments()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_Segments();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Path#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getSource()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Path#getDestination <em>Destination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Destination</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getDestination()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_Destination();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Path#getMessage <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getMessage()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_Message();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Path#getIsRedundantTo <em>Is Redundant To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
+	 * @see de.oaam.model.oaam.allocations.Path#getIsRedundantTo()
+	 * @see #getPath()
+	 * @generated
+	 */
+	EReference getPath_IsRedundantTo();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.PathGroup <em>Path Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Group</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathGroup
+	 * @generated
+	 */
+	EClass getPathGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.PathGroup#getSubpaths <em>Subpaths</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Subpaths</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathGroup#getSubpaths()
+	 * @see #getPathGroup()
+	 * @generated
+	 */
+	EReference getPathGroup_Subpaths();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.PathGroup#isChildrenRedundant <em>Children Redundant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Children Redundant</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathGroup#isChildrenRedundant()
+	 * @see #getPathGroup()
+	 * @generated
+	 */
+	EAttribute getPathGroup_ChildrenRedundant();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.PathGroup#getSources <em>Sources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Sources</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathGroup#getSources()
+	 * @see #getPathGroup()
+	 * @generated
+	 */
+	EReference getPathGroup_Sources();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.PathGroup#getDestinations <em>Destinations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Destinations</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathGroup#getDestinations()
+	 * @see #getPathGroup()
+	 * @generated
+	 */
+	EReference getPathGroup_Destinations();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.PathA <em>Path A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path A</em>'.
+	 * @see de.oaam.model.oaam.allocations.PathA
+	 * @generated
+	 */
+	EClass getPathA();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Schedule <em>Schedule</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3521,6 +4394,17 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessage_DestinationDevices();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getIsRedundantTo()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_IsRedundantTo();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
@@ -3772,6 +4656,17 @@ public interface AllocationsPackage extends EPackage {
 	EAttribute getMessageA_Length();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Path</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getPath()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Path();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3963,46 +4858,14 @@ public interface AllocationsPackage extends EPackage {
 		EReference CONNECTION_ASSIGNMENT__CONNECTION = eINSTANCE.getConnectionAssignment_Connection();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl <em>Signal Assignment Segment</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SegmentImpl <em>Segment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.SignalAssignmentSegmentImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalAssignmentSegment()
+		 * @see de.oaam.model.oaam.allocations.impl.SegmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSegment()
 		 * @generated
 		 */
-		EClass SIGNAL_ASSIGNMENT_SEGMENT = eINSTANCE.getSignalAssignmentSegment();
-
-		/**
-		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_ASSIGNMENT_SEGMENT__CAPABILITY = eINSTANCE.getSignalAssignmentSegment_Capability();
-
-		/**
-		 * The meta object literal for the '<em><b>Device</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_ASSIGNMENT_SEGMENT__DEVICE = eINSTANCE.getSignalAssignmentSegment_Device();
-
-		/**
-		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_ASSIGNMENT_SEGMENT__CONNECTION = eINSTANCE.getSignalAssignmentSegment_Connection();
-
-		/**
-		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_ASSIGNMENT_SEGMENT__SCHEDULES = eINSTANCE.getSignalAssignmentSegment_Schedules();
+		EClass SEGMENT = eINSTANCE.getSegment();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.DeviceAssignmentImpl <em>Device Assignment</em>}' class.
@@ -4161,6 +5024,150 @@ public interface AllocationsPackage extends EPackage {
 		EClass SUBALLOCATIONS = eINSTANCE.getSuballocations();
 
 		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.SegmentA <em>Segment A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.SegmentA
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSegmentA()
+		 * @generated
+		 */
+		EClass SEGMENT_A = eINSTANCE.getSegmentA();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEGMENT_A__CAPABILITY = eINSTANCE.getSegmentA_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Device</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEGMENT_A__DEVICE = eINSTANCE.getSegmentA_Device();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEGMENT_A__CONNECTION = eINSTANCE.getSegmentA_Connection();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SEGMENT_A__SCHEDULES = eINSTANCE.getSegmentA_Schedules();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.PathImpl <em>Path</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.PathImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPath()
+		 * @generated
+		 */
+		EClass PATH = eINSTANCE.getPath();
+
+		/**
+		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__SEGMENTS = eINSTANCE.getPath_Segments();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__SOURCE = eINSTANCE.getPath_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Destination</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__DESTINATION = eINSTANCE.getPath_Destination();
+
+		/**
+		 * The meta object literal for the '<em><b>Message</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__MESSAGE = eINSTANCE.getPath_Message();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH__IS_REDUNDANT_TO = eINSTANCE.getPath_IsRedundantTo();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.PathGroupImpl <em>Path Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.PathGroupImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPathGroup()
+		 * @generated
+		 */
+		EClass PATH_GROUP = eINSTANCE.getPathGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Subpaths</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_GROUP__SUBPATHS = eINSTANCE.getPathGroup_Subpaths();
+
+		/**
+		 * The meta object literal for the '<em><b>Children Redundant</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATH_GROUP__CHILDREN_REDUNDANT = eINSTANCE.getPathGroup_ChildrenRedundant();
+
+		/**
+		 * The meta object literal for the '<em><b>Sources</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_GROUP__SOURCES = eINSTANCE.getPathGroup_Sources();
+
+		/**
+		 * The meta object literal for the '<em><b>Destinations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATH_GROUP__DESTINATIONS = eINSTANCE.getPathGroup_Destinations();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.PathA <em>Path A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.PathA
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getPathA()
+		 * @generated
+		 */
+		EClass PATH_A = eINSTANCE.getPathA();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.ScheduleImpl <em>Schedule</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4285,6 +5292,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE__DESTINATION_DEVICES = eINSTANCE.getMessage_DestinationDevices();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__IS_REDUNDANT_TO = eINSTANCE.getMessage_IsRedundantTo();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
@@ -4413,10 +5428,10 @@ public interface AllocationsPackage extends EPackage {
 		EAttribute SUBMESSAGE__POSITION = eINSTANCE.getSubmessage_Position();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageAImpl <em>Message A</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.MessageAImpl
+		 * @see de.oaam.model.oaam.allocations.MessageA
 		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
 		 * @generated
 		 */
@@ -4477,6 +5492,14 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MESSAGE_A__LENGTH = eINSTANCE.getMessageA_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__PATH = eINSTANCE.getMessageA_Path();
 
 	}
 

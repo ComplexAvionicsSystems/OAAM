@@ -274,7 +274,18 @@ public class MessageAItemProvider extends OaamBaseElementAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS,
-				 AllocationsFactory.eINSTANCE.createMessageSegment()));
+				 AllocationsFactory.eINSTANCE.createSegment()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS,
+				 AllocationsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AllocationsPackage.Literals.MESSAGE_A__SEGMENTS,
+				 AllocationsFactory.eINSTANCE.createPathGroup()));
+
 	}
 
 	/**

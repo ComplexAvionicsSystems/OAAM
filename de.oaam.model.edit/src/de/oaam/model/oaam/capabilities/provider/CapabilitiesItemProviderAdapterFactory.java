@@ -233,52 +233,6 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Capabilities} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CapabilitiesItemProvider capabilitiesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Capabilities}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCapabilitiesAdapter() {
-		if (capabilitiesItemProvider == null) {
-			capabilitiesItemProvider = new CapabilitiesItemProvider(this);
-		}
-
-		return capabilitiesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Subcapabilities} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SubcapabilitiesItemProvider subcapabilitiesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Subcapabilities}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSubcapabilitiesAdapter() {
-		if (subcapabilitiesItemProvider == null) {
-			subcapabilitiesItemProvider = new SubcapabilitiesItemProvider(this);
-		}
-
-		return subcapabilitiesItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.MessageOnBusCapability} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +253,29 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 		}
 
 		return messageOnBusCapabilityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageOnConnectionOrDeviceCapabilityItemProvider messageOnConnectionOrDeviceCapabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
+		if (messageOnConnectionOrDeviceCapabilityItemProvider == null) {
+			messageOnConnectionOrDeviceCapabilityItemProvider = new MessageOnConnectionOrDeviceCapabilityItemProvider(this);
+		}
+
+		return messageOnConnectionOrDeviceCapabilityItemProvider;
 	}
 
 	/**
@@ -348,26 +325,49 @@ public class CapabilitiesItemProviderAdapterFactory extends CapabilitiesAdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability} instances.
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Capabilities} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MessageOnConnectionOrDeviceCapabilityItemProvider messageOnConnectionOrDeviceCapabilityItemProvider;
+	protected CapabilitiesItemProvider capabilitiesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability}.
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Capabilities}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
-		if (messageOnConnectionOrDeviceCapabilityItemProvider == null) {
-			messageOnConnectionOrDeviceCapabilityItemProvider = new MessageOnConnectionOrDeviceCapabilityItemProvider(this);
+	public Adapter createCapabilitiesAdapter() {
+		if (capabilitiesItemProvider == null) {
+			capabilitiesItemProvider = new CapabilitiesItemProvider(this);
 		}
 
-		return messageOnConnectionOrDeviceCapabilityItemProvider;
+		return capabilitiesItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.capabilities.Subcapabilities} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubcapabilitiesItemProvider subcapabilitiesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.capabilities.Subcapabilities}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSubcapabilitiesAdapter() {
+		if (subcapabilitiesItemProvider == null) {
+			subcapabilitiesItemProvider = new SubcapabilitiesItemProvider(this);
+		}
+
+		return subcapabilitiesItemProvider;
 	}
 
 	/**

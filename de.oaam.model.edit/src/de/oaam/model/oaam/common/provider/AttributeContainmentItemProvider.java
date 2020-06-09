@@ -819,7 +819,7 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 AllocationsFactory.eINSTANCE.createSignalAssignmentSegment()));
+				 AllocationsFactory.eINSTANCE.createSegment()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -875,6 +875,16 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AllocationsFactory.eINSTANCE.createSuballocations()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createPath()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 AllocationsFactory.eINSTANCE.createPathGroup()));
 	}
 
 	/**

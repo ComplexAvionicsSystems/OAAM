@@ -178,6 +178,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/ioTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/hardwareGroupTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/messageTypes"/>
+        <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/busTypes"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/ResourceType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/unit"/>
@@ -568,7 +569,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/source"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/target"/>
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/targets"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/Signal/type"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/Signal/inIndex"/>
@@ -989,15 +990,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/ConnectionAssignment/connection"/>
       </genClasses>
-      <genClasses ecoreClass="oaam.ecore#//allocations/SignalAssignmentSegment">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/capability"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/device"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/connection"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/SignalAssignmentSegment/schedules"/>
-      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//allocations/Segment"/>
       <genClasses ecoreClass="oaam.ecore#//allocations/DeviceAssignment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/DeviceAssignment/device"/>
@@ -1051,6 +1044,8 @@
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/type"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/isPersistent"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/MessageA/length"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/MessageA/path"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//allocations/MessageSegment">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -1069,6 +1064,8 @@
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/Message/sourceDevices"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//allocations/Message/destinationDevices"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Message/isRedundantTo"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//allocations/Submessage">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -1089,6 +1086,37 @@
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//allocations/Allocations"/>
       <genClasses ecoreClass="oaam.ecore#//allocations/Suballocations"/>
+      <genClasses ecoreClass="oaam.ecore#//allocations/SegmentA">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SegmentA/capability"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SegmentA/device"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/SegmentA/connection"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//allocations/SegmentA/schedules"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//allocations/Path">
+        <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Path/segments"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Path/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Path/destination"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Path/message"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/Path/isRedundantTo"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//allocations/PathGroup">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/PathGroup/subpaths"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//allocations/PathGroup/childrenRedundant"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/PathGroup/sources"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//allocations/PathGroup/destinations"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="oaam.ecore#//allocations/PathA"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

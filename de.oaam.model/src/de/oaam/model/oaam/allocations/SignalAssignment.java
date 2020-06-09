@@ -35,7 +35,7 @@ import org.eclipse.emf.common.util.EList;
 public interface SignalAssignment extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Segments</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.allocations.SignalAssignmentSegment}.
+	 * The list contents are of type {@link de.oaam.model.oaam.allocations.SegmentA}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -46,7 +46,7 @@ public interface SignalAssignment extends OaamBaseElementA, VariantDependentElem
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<SignalAssignmentSegment> getSegments();
+	EList<SegmentA> getSegments();
 
 	/**
 	 * Returns the value of the '<em><b>Signal</b></em>' reference.

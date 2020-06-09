@@ -41,6 +41,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getIoTypes <em>Io Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getHardwareGroupTypes <em>Hardware Group Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getMessageTypes <em>Message Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getBusTypes <em>Bus Types</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA()
@@ -362,5 +363,20 @@ public interface LibraryContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<MessageType> getMessageTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Bus Types</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.library.BusType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Type definitions for busses
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Bus Types</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_BusTypes()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BusType> getBusTypes();
 
 } // LibraryContainerA

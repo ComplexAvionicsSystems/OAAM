@@ -1,0 +1,105 @@
+Oaam tracker
+
+Changed 10.08.2018
+* Renamed ResourceBundles to ResourceBundle, because it is a the class for a single bundle
+* LibraryContainer.ressourceBundles
+* Renamed Mappings to Allocations, which seems the better wording
+* Rename TaskCapabilities -> DeviceCapabilities and DeviceCapabilities -> LocationCapabilities
+* Renamed SubCapability to SubCapabilities because it is not a single capability, but a container for others
+* Rename functionCapabilties to TaskOnDeviceCapability, which is more intuative
+* Rename Subfunction to Subfunctions, becaus it is the container for several functions (tasks)
+* PowerSource could not be contained. Added missing containment to LibraryContainer
+* Removed Task group isAtomic, because there is a AtomicRestriction for this issue
+* renamed segregationsRestrictions to segregationRestrictions (typo)
+
+Changed 12.08.2018
+* Added a connection binding attribute for signals to represent necessary pysical wiring for peripherals
+* Unified the naming of subdevice and subDevice in classes and attributes to subdevices
+
+Changed 19.08.2018
+* Changed ConnectionType.wireType to .wireTypes, which allowes for multiple-wire types within a single connection
+
+Changed 21.08.2018
+* Allocations color is too dark: changed to turquoise
+* Duct: Renamed DuctopeningA and B to startingPoint and endPoint, which is more intuative
+* Connection: Extended connections by start points for unidirectional connections and masters for master controlled busses
+* ConnectionType: Renamed nSources and nTargets to nEndPoints and nStartingPoints to be consistent 
+
+Changed 26.08.2018
+* TaskA and B of SegregationRestriction was TaskType instead of Task
+
+Changed 28.08.2018
+* Renamed subFunction to subfunction everywhere for consistency reasons
+* Added length attribute to locations
+* Renamed routeTypes to ductTypes in library and containment ductOpenings to ductOpeningDeclarations
+* Added unit attribute to resource types in order to specify the countable quantity
+* Added relations for specifying the starting and end point resource types for ConnectionTypes
+* DeviceType: Renamed ios to ioDeclarations
+* TaskType: Renamed inputs and outputs to inputDeclarations and outputDeclarations
+* Renamed InternalStateDefinition to InternalStateDeclaration
+* Renamed ParameterDefinition to ParameterDeclaration
+
+Changed 19.09.2018
+Open issues:
+* Renamed ElementA to OaamBaseElementA
+
+Changes 26.10.2018
+* Version 1.5.0
+* Systems package: Renamed Power to InformationPower, Information to InformationSignal, and added InformationMaterial in order be complient with the general system engineering model
+* Functions package: 
+** Removed the isAtomic attribute from FunctionsContainerA, because this shall be done with restrictions.
+** Renamed maxOccurenceRate to maxOccurenceProbability, which is more usefull for safety assesements
+* Resolved ambigous or similar names in library, scenario and functions:
+** Library: Renamed OutputTrigger to TaskOutpuTrigger.
+** Library: Renamed InternalStateDeclaration to TaskStateDeclaration.
+** Scenario: Renamed all Parameter... to ScenarioParameter...
+** Functions: Renamed Parameter to TaskParameter.
+** Functions: Renamed FunctionInputTrigger to TaskInputTrigger.
+** Functions: Renamed SystemInputState to OutputIntegrityState, because it is attached to outputs.
+* Hardware package: Added a subconnections reference to devices for internal connections.
+* Restrictions package: 
+** Renamed inputSynchronicityRestrictions to sychronicityRestrictions to match the name of the class.
+** Fixed a typo in ConnectionTypeRestriction.
+** Added SignalGroupRestriction to enable the attachment of restrictions to signal groups
+** Enabled restrictions for TaskGroups.
+* Anatomy package: Added the AreaSymmetry class to define symmetric areas.
+* Capabilities package: Added worstCaseTransmissionTime to Signal capabilities have no transmission time
+* Allocations package: 
+** Changed the lowerBound of the location reference of DeviceAssignment such that this becomes mandatory.
+** Added the possibilities to add a Schedule to SignalAssignmentSegments.
+** Renamed ScheduledTimes to ScheduledTime, because it is a single time.
+** Added missing documentation of EEnumLiterals
+
+Changed 10.12.2018:
+* Version 1.5.1
+* Flattened the model for failure propagations, triggers, and failure conditions. All Boolean oparations are now on the same model level.
+
+Changed 13.02.2019:
+* Version 1.5.2
+** Renamed failureEvents -> failureConditions
+** added type attribute to signal types to specify the data
+** changed unit of alignment attribute of structs from byte to bits and set the default value to 8 bit
+** added the same alignment attribute to arrays
+** added inheritsFrom reference to structs, which enables to specify generic structs which can be refined by inheritance.
+** added isAbstract attribute to struct. If this is true, it means the there cannot be an instance of that struct.
+** changed type of attribute dissimilarTechnology of InputSegregationClass or systems package from EBooleanObject to EBoolean.
+** added mtbf attribute to wire types
+
+
+Changed 17.02.2019:
+Version 1.5.3
+* Introduced IO types in the library, which can model IO types independent of devices these specify for instance the directon of the IO. IO type can be attached to IO declarations.
+* Icon update
+
+
+
+Open Issues:
+** Resolve multiple inheritances in OAAM model to single inheritances
+** Required inputs and provided outputs cannot be differentiated in EMF editor
+** It is not possible to define Subdevice types
+** Location compartment necessary?
+** IoDeclarations are containments of Device types, which makes definitions dublicated
+** IoDeclarations are not connected to IoDirections.
+** For message modeling signal groups could be of use.
+
+

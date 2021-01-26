@@ -93,21 +93,21 @@
         </eAnnotations>
       </eLiterals>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="IntegretyStateE">
+    <eClassifiers xsi:type="ecore:EEnum" name="IntegrityStateE">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Classification of the integrity of a signal or function output"/>
+        <details key="documentation" value="Classification of the integrity of a signal, task output or task"/>
       </eAnnotations>
       <eLiterals name="OK">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The state is OK, which means it works as it should do."/>
         </eAnnotations>
       </eLiterals>
-      <eLiterals name="FAILED" value="1">
+      <eLiterals name="DETECTED" value="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The state is failed, but it is known to be failed. "/>
         </eAnnotations>
       </eLiterals>
-      <eLiterals name="UNKNOWN" value="3">
+      <eLiterals name="UNDETECTED" value="2" literal="UNDETECTED">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The state can be ok or failed or out-of-control. Compared to to the other states it is not known. Therefore, no fault containment can take place."/>
         </eAnnotations>
@@ -750,6 +750,13 @@
           <details key="documentation" value="Type definitions for busses"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureModels" upperBound="-1"
+          eType="#//library/FailureModel" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="createChild" value="true"/>
+          <details key="documentation" value="Type definitions for busses"/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ResourceType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -921,6 +928,19 @@
           <details key="documentation" value="All parameters of a tasks type"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requirementDeclarations"
+          upperBound="-1" eType="#//library/requirementDeclarations/RequirementDeclaration"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All requirement declarations of this task type.&#xD;&#xA;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failurePropagation" eType="#//library/failurePropagations/FailurePropagation"
+          containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The failure propagation of this task type."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SignalType" eSuperTypes="#//library/ResourceConsumerA #//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -933,7 +953,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//library/ResourceConsumerA #//library/ResourceProviderA #//common/OaamBaseElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//library/ResourceConsumerA #//library/ResourceProviderA #//common/OaamBaseElementA #//library/FailureProviderA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A definition of a device type. This holds the properties and resources that are identical for each device of this type"/>
       </eAnnotations>
@@ -955,12 +975,6 @@
           defaultValueLiteral="false">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Specifies if this device type is allowed to have subdevices e. g. a cabinet."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The mean time between failure in [h]"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" lowerBound="1"
@@ -989,7 +1003,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//library/ResourceProviderA #//library/ResourceConsumerA #//common/OaamBaseElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="ConnectionType" eSuperTypes="#//library/ResourceProviderA #//library/ResourceConsumerA #//common/OaamBaseElementA #//library/FailureProviderA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A connection is a physical link between two devices. With the connection type the unambiguous properties for a connection type can be set. A connection type can represent various topologies like lines, busses and stars, but also wireless. Moreover, passive and active connections like switched networks can be modeled"/>
       </eAnnotations>
@@ -1138,7 +1152,7 @@
         <details key="documentation" value="Definition of the common properties of a cable route or duct"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="WireType" eSuperTypes="#//common/OaamBaseElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="WireType" eSuperTypes="#//common/OaamBaseElementA #//library/FailureProviderA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The properties common to all instance of a wire type"/>
       </eAnnotations>
@@ -1170,12 +1184,6 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="How many shielding conductors are used?"/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The mean time between failure in [h]"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -1355,7 +1363,7 @@
         <details key="documentation" value="Specifies how the state of the inputs transfers to the outputs. An arbitrary Boolean logic can be created."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputState" lowerBound="1"
-          eType="#//common/IntegretyStateE">
+          eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Defines the desired output state for that the logic is valid."/>
         </eAnnotations>
@@ -1390,7 +1398,7 @@
         <details key="documentation" value="A link between a Boolean expression and the state of the input. This Boolean is considered to be true if the input has the state defined within."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
-          eType="#//common/IntegretyStateE">
+          eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The state of the input for which the expression is true"/>
         </eAnnotations>
@@ -1587,7 +1595,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="BusType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="BusType" eSuperTypes="#//library/ResourceProviderA #//common/OaamBaseElementA #//library/FailureProviderA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A hardware group is a set of devices and connections that form a common resource pool, but not a physical unit. For instance bus systems might be modeled as hardware groups"/>
       </eAnnotations>
@@ -1595,12 +1603,6 @@
           eType="#//library/DeviceType">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The device types that could be member of such a resourc group."/>
-        </eAnnotations>
-      </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The mean time between failure in [h]"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSelfManaging" lowerBound="1"
@@ -1675,6 +1677,305 @@
         <details key="documentation" value="A sublibrary can contain the same elements that a library can contain, but it can exist within a library"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureModel" eSuperTypes="#//common/OaamBaseElementA">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureModes" upperBound="-1"
+          eType="#//library/FailureMode" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureMode" eSuperTypes="#//common/OaamBaseElementA">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requirementFailureEffects"
+          upperBound="-1" eType="#//library/RequirementFailureEffect" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
+          eType="#//common/IntegrityStateE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The condition is fulfilled if the input is in this state."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortNotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A string for the name of the element as shown in textual or graphical representations of the model"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="RequirementFailureEffectTypesE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The generic failure effects a failure mode can have on requirement components."/>
+      </eAnnotations>
+      <eLiterals name="EARLY" literal="EARLY">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A string attribute"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="LATE" value="1">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A numerical value attribute"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="ALWAYS" value="2">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Boolean attribute"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="NEVER" value="3" literal="NEVER">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Boolean attribute"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RequirementFailureEffect" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The effect on a requirements component. Specified per failure mode in the failure model."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="effect" eType="#//library/RequirementFailureEffectTypesE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" eType="#//library/RequirementFailureEffectTargetsE"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="RequirementFailureEffectTargetsE">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Classification of object class bound mandatory additional attributes"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A Boolean attribute"/>
+      </eAnnotations>
+      <eLiterals name="NoTarget"/>
+      <eLiterals name="Below" value="1" literal="Below"/>
+      <eLiterals name="Above" value="2"/>
+      <eLiterals name="Signal" value="3"/>
+      <eLiterals name="Value" value="4"/>
+      <eLiterals name="And" value="6"/>
+      <eLiterals name="Or" value="7"/>
+      <eLiterals name="Not" value="8"/>
+      <eLiterals name="Contract" value="9"/>
+      <eLiterals name="Agreement" value="10" literal="Agreement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PartFailureMode" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specification of a part failure mode. With help of the failure mode ratio the failure rate of this mode is specified depending on the part failure rate."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureModeRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureEffects" eType="#//library/FailureEffect"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureProviderA">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failable" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The mean time between failure in [h]"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="partFailureModes" upperBound="-1"
+          eType="#//library/PartFailureMode" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FailureEffect" eSuperTypes="#//common/OaamBaseElementA">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="propagationFailureMode"
+          eType="#//library/FailureMode"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationState" eType="#//common/IntegrityStateE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureEffectProbability"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eSubpackages name="requirementDeclarations" nsURI="http://www.oaam.de/oaam/model/v140/library/requirementDeclarations"
+        nsPrefix="de.oaam.model.library.requirements">
+      <eClassifiers xsi:type="ecore:EClass" name="RequirementComponent" abstract="true"
+          eSuperTypes="#//common/OaamBaseElementA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Comparator" abstract="true" eSuperTypes="#//library/requirementDeclarations/RequirementComponent">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="compA" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="compB" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Agreement" eSuperTypes="#//library/requirementDeclarations/Comparator"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Below" eSuperTypes="#//library/requirementDeclarations/Comparator"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Above" eSuperTypes="#//library/requirementDeclarations/Comparator"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" eSuperTypes="#//library/requirementDeclarations/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="IoSignal" eSuperTypes="#//library/requirementDeclarations/Source">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredOutput" eType="#//library/OutputDeclaration"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredInput" eType="#//library/InputDeclaration"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//library/requirementDeclarations/Source"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ComplexOperator" abstract="true"
+          eSuperTypes="#//library/requirementDeclarations/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BoolTimeout" eSuperTypes="#//library/requirementDeclarations/ComplexOperator">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanOperator" abstract="true"
+          eSuperTypes="#//library/requirementDeclarations/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//library/requirementDeclarations/BooleanOperator">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//library/requirementDeclarations/BooleanOperator">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Not" eSuperTypes="#//library/requirementDeclarations/BooleanOperator">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//library/requirementDeclarations/ComplexOperator">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="preCondition" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="postCondition" eType="#//library/requirementDeclarations/RequirementComponent"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="invariant" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RequirementDeclaration" eSuperTypes="#//common/OaamBaseElementA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+            eType="#//library/requirementDeclarations/RequirementComponent" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="requires" eType="#//library/requirementDeclarations/RequirementComponent"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="failurePropagations" nsURI="http://www.oaam.de/oaam/model/v140/library/failurePropagations"
+        nsPrefix="de.oaam.model.library.failurePropagations">
+      <eClassifiers xsi:type="ecore:EClass" name="FailurePropagation" eSuperTypes="#//common/OaamBaseElementA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="propagators" upperBound="-1"
+            eType="#//library/failurePropagations/PropagatorA" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropagatorA" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanGateA" abstract="true" eSuperTypes="#//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/PropagatorA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+            eType="#//library/failurePropagations/BooleanPropagatorA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanAnd" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanOr" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanXor" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanNot" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/PropagatorA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanPropagatorA" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="StateBooleanConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromState" eType="#//common/IntegrityStateE"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ModePropagatorA" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModeBooleanConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanModeConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StateModeConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromState" eType="#//common/IntegrityStateE"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StatePropagatorA" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ModeStateConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toState" eType="#//common/IntegrityStateE"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanStateConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ConversionA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromBoolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toState" eType="#//common/IntegrityStateE"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropagationInput" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/PropagatorA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ModePropagatorA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//functions/Input"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropagationOutput" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/PropagatorA">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//functions/Output"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="statePropagations"
+            upperBound="-1" eType="#//library/failurePropagations/StatePropagatorA"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="modePropagations" upperBound="-1"
+            eType="#//library/failurePropagations/ModePropagatorA"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MatrixA" abstract="true" eSuperTypes="#//library/failurePropagations/PropagatorA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ConversionA" abstract="true" eSuperTypes="#//library/failurePropagations/PropagatorA"/>
+      <eSubpackages name="booleanMatrix" nsURI="http://www.oaam.de/oaam/model/v140/library/failurePropagations/booleanMatrix"
+          nsPrefix="de.oaam.model.library.failurePropagations.booleanMatrix">
+        <eClassifiers xsi:type="ecore:EClass" name="BooleanMatrix" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/MatrixA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
+              eType="#//library/failurePropagations/booleanMatrix/Outport" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
+              eType="#//library/failurePropagations/booleanMatrix/Inport" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
+              eType="#//library/failurePropagations/booleanMatrix/Row" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Inport" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Outport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Row" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/booleanMatrix/InportEntry" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/booleanMatrix/OutportEntry" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="InportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/booleanMatrix/Inport"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="OutportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/booleanMatrix/Outport"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="stateMatrix" nsURI="http://www.oaam.de/oaam/model/v140/library/failurePropagations/stateMatrix"
+          nsPrefix="de.oaam.model.library.failurePropagations.stateMatrix">
+        <eClassifiers xsi:type="ecore:EClass" name="StateMatrix" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/MatrixA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
+              eType="#//library/failurePropagations/stateMatrix/Outport" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
+              eType="#//library/failurePropagations/stateMatrix/Inport" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
+              eType="#//library/failurePropagations/stateMatrix/Row" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Outport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="#//common/IntegrityStateE"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Inport" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Row" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/stateMatrix/InportEntry" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/stateMatrix/OutportEntry" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="InportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//common/IntegrityStateE"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/stateMatrix/Inport"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="OutportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//common/IntegrityStateE"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/stateMatrix/Outport"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="modeMatrix" nsURI="http://www.oaam.de/oaam/model/v140/library/failurePropagations/modeMatrix"
+          nsPrefix="de.oaam.model.library.failurePropagations.modeMatrix">
+        <eClassifiers xsi:type="ecore:EClass" name="ModeMatrix" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
+              eType="#//library/failurePropagations/modeMatrix/Row" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
+              eType="#//library/failurePropagations/modeMatrix/Inport" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
+              eType="#//library/failurePropagations/modeMatrix/Outport" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Inport" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Outport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Row" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/modeMatrix/InportEntry" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
+              eType="#//library/failurePropagations/modeMatrix/OutportEntry" containment="true"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="InportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/modeMatrix/Inport"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="OutportEntry" eSuperTypes="#//common/OaamBaseElementA">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/modeMatrix/Outport"/>
+        </eClassifiers>
+      </eSubpackages>
+    </eSubpackages>
   </eSubpackages>
   <eSubpackages name="scenario" nsURI="http://www.oaam.de/oaam/model/v140/scenario"
       nsPrefix="de.oaam.model.scenario">
@@ -2300,13 +2601,19 @@
           <details key="documentation" value="The list of all relevant output states for this failure condition."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskFailures" lowerBound="1"
+          upperBound="-1" eType="#//functions/TaskFailure" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The list of all relevant task losses for this failure condition."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OutputIntegrityState" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Relates the Boolean expression of the failure event to the system's input states."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
-          eType="#//common/IntegretyStateE">
+          eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The condition is fulfilled if the input is in this state."/>
         </eAnnotations>
@@ -2478,6 +2785,29 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The value of the parameter as a string, e.g. 3.14 for a double parameter."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskFailure" eSuperTypes="#//common/BoolA #//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes the failure of a task to specifiy failure conditions."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1"
+          eType="#//functions/Task">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The task output related to this failure condition."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskState" lowerBound="1"
+          eType="#//common/IntegrityStateE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The task is considered failed, if a failure with the specified integrity state occurs. You should specify either the task integrity state or the task failure mode, but not both."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskFailureMode" lowerBound="1"
+          eType="#//common/IntegrityStateE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The task is considered failed, if the specified failure mode occurs. You should specify either the task integrity state or the task failure mode, but not both."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>

@@ -2804,12 +2804,7 @@
           <details key="documentation" value="The task is considered failed, if a failure with the specified integrity state occurs. You should specify either the task integrity state or the task failure mode, but not both."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskFailureMode" lowerBound="1"
-          eType="#//common/IntegrityStateE">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The task is considered failed, if the specified failure mode occurs. You should specify either the task integrity state or the task failure mode, but not both."/>
-        </eAnnotations>
-      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskFailureMode" eType="#//library/FailureMode"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v140/hardware"

@@ -1751,8 +1751,8 @@
         <details key="documentation" value="The specification of a part failure mode. With help of the failure mode ratio the failure rate of this mode is specified depending on the part failure rate."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureModeRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="failureEffects" eType="#//library/FailureEffect"
-          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="failureEffects" upperBound="-1"
+          eType="#//library/FailureEffect" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FailureProviderA">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="failable" lowerBound="1"

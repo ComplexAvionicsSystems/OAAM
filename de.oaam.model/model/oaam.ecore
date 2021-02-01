@@ -1745,30 +1745,64 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PartFailureMode" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The specification of a part failure mode. With help of the failure mode ratio the failure rate of this mode is specified depending on the part failure rate."/>
+        <details key="documentation" value="The specification of a part failure mode. With help of the failure mode ratio the failure rate of this mode is specified depending on the failure rate."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureModeRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureModeRatio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Describes the percentage of the failure mode over all failures."/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failureEffects" upperBound="-1"
-          eType="#//library/FailureEffect" containment="true"/>
+          eType="#//library/FailureEffect" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of failure effects that can occur from this failure mode."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FailureProviderA">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failable" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="mtbf" lowerBound="1"
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A (hardware) part for which probabilistic failures can be described."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="canFail" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Describes whether the component can fail."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureRate" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The mean time between failure in [h]"/>
+          <details key="documentation" value="The failure rate of the component given in 1/h."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="partFailureModes" upperBound="-1"
-          eType="#//library/PartFailureMode" containment="true"/>
+          eType="#//library/PartFailureMode" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A list of failure modes that can occur for this hardware part."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FailureEffect" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A failure effect that can occur. It is described with a probability (also known as beta-ratio) and the failure mode or integrity state that is propagated."/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="propagationFailureMode"
-          eType="#//library/FailureMode"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationState" eType="#//common/IntegrityStateE"/>
+          eType="#//library/FailureMode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The propagated failure mode. There should either a state or a failure mode be defined for propagation, not both."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationState" eType="#//common/IntegrityStateE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The propagated integrity state. There should either a state or a failure mode be defined for propagation, not both."/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureEffectProbability"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The probability of the failure effect also known as beta-ratio."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eSubpackages name="requirementDeclarations" nsURI="http://www.oaam.de/oaam/model/v140/library/requirementDeclarations"
         nsPrefix="de.oaam.model.library.requirements">

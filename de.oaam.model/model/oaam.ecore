@@ -1187,7 +1187,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="IoType" eSuperTypes="#//common/OaamBaseElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="IoType" eSuperTypes="#//common/OaamBaseElementA #//library/FailureProviderA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The type of an IO"/>
       </eAnnotations>

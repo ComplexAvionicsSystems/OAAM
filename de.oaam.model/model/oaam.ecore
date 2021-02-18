@@ -2063,105 +2063,295 @@
       <eSubpackages name="failurePropagationMatrices" nsURI="http://www.oaam.de/oaam/model/v150/library/failurePropagations/failurePropagationMatrices"
           nsPrefix="de.oaam.model.library.failurePropagations.failurePropagationMatrices">
         <eClassifiers xsi:type="ecore:EClass" name="FailurePropagationMatrixA" abstract="true"
-            eSuperTypes="#//library/failurePropagations/PropagatorA"/>
+            eSuperTypes="#//library/failurePropagations/PropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Abstract definition of a propagation matrix."/>
+          </eAnnotations>
+        </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeMatrix" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/failurePropagationMatrices/FailurePropagationMatrixA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A propagation matrix containing only failure modes as inputs/outputs."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/ModeMatrixRow"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The rows of the matrix. A row contains row entries that describe the input-output behavior."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/ModeInport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inports of the matrix. The inports expect failure modes."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/ModeOutport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outports of the matrix. The outports propagate failure modes."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateMatrix" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/failurePropagationMatrices/FailurePropagationMatrixA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A propagation matrix containing only integrity states as inputs/outputs."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/StateOutport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outports of the matrix. The outports propagate integrity states."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/StateInport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inports of the matrix. The inports expect integrity states."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/StateMatrixRow"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The rows of the matrix. A row contains row entries that describe the input-output behavior."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanMatrix" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/failurePropagationMatrices/FailurePropagationMatrixA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A Boolean valued matrix for the implementation of truth tables. All inputs/outputs are Boolean values."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/BooleanOutport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outports of the matrix.  The outports propagate Boolean values."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inports" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/BooleanInport"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inports of the matrix. The inports expect Boolean values."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/BooleanMatrixRow"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The rows of the matrix. A row contains row entries that describe the input-output behavior."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeInport" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix inport expecting failure modes."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The upstream propagator which must propagate a failure mode."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeOutport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultMode" eType="#//library/FunctionalFailureMode"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix outport propagating failure modes."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultMode" eType="#//library/FunctionalFailureMode">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The default failure mode that is propagated by this outport. The default value defines the failure mode that should used if no specific output was specified by the matrix."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeMatrixRow" eSuperTypes="#//common/OaamBaseElementA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix row for failure mode entries."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/ModeInportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The failure mode entries in the row for the matrix inports. "/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/ModeOutportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The failure mode entries in the row for the matrix outports. "/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeInportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeInport"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an incoming failure mode on a specific inport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeInport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The failure mode this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeOutportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeOutport"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an outgoing failure mode on a specific outport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeOutport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The failure mode this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateOutport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultState" eType="#//common/IntegrityStateE"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix outport propagating integrity states."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultState" eType="#//common/IntegrityStateE">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The default integriy state that is propagated by this outport. The default value defines the integrity state that should used if no specific output was specified by the matrix."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateInport" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix inport expecting integrity states."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The upstream propagator which must propagate an integrity state."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateMatrixRow" eSuperTypes="#//common/OaamBaseElementA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix row for integrity state entries."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/StateInportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The integrity state entries in the row for the matrix inports. "/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/StateOutportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The integrity state entries in the row for the matrix outports."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateInportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/StateInport"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an incoming integrity state on a specific inport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The integrity state this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/StateInport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateOutportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/StateOutport"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an outgoing integrity state on a specific outport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The integrity state this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/StateOutport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanInport" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix inport expecting Boolean values."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The upstream propagator which must propagate a Boolean value."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanOutport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix outport propagating Boolean values."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The default Boolean value that is propagated by this outport. The default value defines the Boolean value that should used if no specific output was specified by the matrix."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanMatrixRow" eSuperTypes="#//common/OaamBaseElementA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A matrix row for Boolean values."/>
+          </eAnnotations>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/BooleanInportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The Boolean valued entries in the row for the matrix inports."/>
+            </eAnnotations>
+          </eStructuralFeatures>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outportEntries" upperBound="-1"
               eType="#//library/failurePropagations/failurePropagationMatrices/BooleanOutportEntry"
-              containment="true"/>
+              containment="true">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The Boolean valued entries in the row for the matrix outports. "/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanInportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/BooleanInport"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an outgoing Boolean value on a specific outport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The Boolean value this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/BooleanInport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The inport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanOutportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/BooleanOutport"/>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A row entry specifying an outgoing Boolean value on a specific outport."/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The Boolean value this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/BooleanOutport">
+            <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+              <details key="documentation" value="The outport which this entry refers to."/>
+            </eAnnotations>
+          </eStructuralFeatures>
         </eClassifiers>
       </eSubpackages>
     </eSubpackages>

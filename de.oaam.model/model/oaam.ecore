@@ -1992,73 +1992,238 @@
         </eLiterals>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="FailurePropagation" eSuperTypes="#//common/OaamBaseElementA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A failure propagation container."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EReference" name="propagators" upperBound="-1"
-            eType="#//library/failurePropagations/PropagatorA" containment="true"/>
+            eType="#//library/failurePropagations/PropagatorA" containment="true">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The propagators contained in the failure propagation."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="PropagatorA" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="ModePropagatorA" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="BooleanPropagatorA" abstract="true"/>
-      <eClassifiers xsi:type="ecore:EClass" name="ConversionA" abstract="true" eSuperTypes="#//library/failurePropagations/PropagatorA"/>
-      <eClassifiers xsi:type="ecore:EClass" name="StatePropagatorA" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PropagatorA" abstract="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a failure propagator."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ModePropagatorA" abstract="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a failure mode propagator."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanPropagatorA" abstract="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of Boolean value propagator."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ConversionA" abstract="true" eSuperTypes="#//library/failurePropagations/PropagatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a conversion."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="StatePropagatorA" abstract="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of an integrity state propagator."/>
+        </eAnnotations>
+      </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BooleanGateA" abstract="true" eSuperTypes="#//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/PropagatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a n-input Boolean gate."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-            eType="#//library/failurePropagations/BooleanPropagatorA"/>
+            eType="#//library/failurePropagations/BooleanPropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="N-inputs of the Boolean gate. The upstream propagators must be Boolean Propagators."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="BooleanAnd" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
-      <eClassifiers xsi:type="ecore:EClass" name="BooleanOr" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
-      <eClassifiers xsi:type="ecore:EClass" name="BooleanXor" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanAnd" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Boolean AND Operator for n-inputs."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanOr" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Boolean OR Operator for n-inputs."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanXor" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanGateA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Boolean XOR Operator for n-inputs."/>
+        </eAnnotations>
+      </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BooleanNot" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/PropagatorA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Boolean NOT Operator for a single input."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Boolean propagator for which the value is negated."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="StateBooleanConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/ConversionA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between integrity states and boolen values."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputIntegrityState"
-            eType="#//common/IntegrityStateE"/>
+            eType="#//common/IntegrityStateE">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming integrity state for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputBooleanValue"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing boolean value. The output is negated if the propagated integrity state does not match the selected input integrity state."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Integrity State Propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ModeBooleanConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/BooleanPropagatorA #//library/failurePropagations/ConversionA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between Failure Mode and Boolean values."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Failure Mode Propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputBooleanValue"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="inputFailureMode" eType="#//library/FunctionalFailureMode"/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing boolean value. The output is negated if the propagated failure mode does not match the selected input failure mode."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputFailureMode" eType="#//library/FunctionalFailureMode">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming failure mode for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BooleanModeConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA #//library/failurePropagations/ConversionA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between Boolean values and Failure Modes."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputBooleanValue"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming Boolean value for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Boolean propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="outputFailureMode"
-            eType="#//library/FunctionalFailureMode"/>
+            eType="#//library/FunctionalFailureMode">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing failure mode.  The propagation is stopped if the propagated boolean value is not equal to the selected input boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="StateModeConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/ModePropagatorA #//library/failurePropagations/ConversionA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between integrity states and failure modes."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputIntegrityState"
-            eType="#//common/IntegrityStateE"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA"/>
+            eType="#//common/IntegrityStateE">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming integrity state for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/StatePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Integrity State Propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="outputFailureMode"
-            eType="#//library/FunctionalFailureMode"/>
+            eType="#//library/FunctionalFailureMode">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing failure mode.  The propagation is stopped if the propagated integrity state is not equal to the selected input integrity state."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="ModeStateConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ConversionA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between integrity states and boolen values."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/ModePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Failure Mode Propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputIntegrityState"
-            eType="#//common/IntegrityStateE"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="inputFailureMode" eType="#//library/FunctionalFailureMode"/>
+            eType="#//common/IntegrityStateE">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing integrity state.  The propagation is stopped if the propagated failure mode is not equal to the selected input failure mode."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="inputFailureMode" eType="#//library/FunctionalFailureMode">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming failure mode for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="BooleanStateConversion" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ConversionA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A conversion between boolen values and integrity states."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//library/failurePropagations/BooleanPropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to a Boolean propagator."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputBooleanValue"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Incoming Boolean value for the conversion."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputIntegrityState"
-            eType="#//common/IntegrityStateE"/>
+            eType="#//common/IntegrityStateE">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Outgoing integrity state.  The propagation is stopped if the propagated Boolean value is not equal to the selected input Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="PropagationInput" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/PropagatorA #//library/failurePropagations/StatePropagatorA #//library/failurePropagations/ModePropagatorA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//library/InputDeclaration"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A source for incoming failure modes and integrity states."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//library/InputDeclaration">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to the input declaration of the task."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="PropagationOutput" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/PropagatorA">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//library/OutputDeclaration"/>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A sink for outgoing failure modes and integrity states."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//library/OutputDeclaration">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A reference to the ouput declaration of the task."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="propagatedIntegrityStates"
-            upperBound="-1" eType="#//library/failurePropagations/StatePropagatorA"/>
+            upperBound="-1" eType="#//library/failurePropagations/StatePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="All propagations of integrity states."/>
+          </eAnnotations>
+        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="propagatedFailureModes"
-            upperBound="-1" eType="#//library/failurePropagations/ModePropagatorA"/>
+            upperBound="-1" eType="#//library/failurePropagations/ModePropagatorA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="All propagations of failure modes."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
       <eSubpackages name="failurePropagationMatrices" nsURI="http://www.oaam.de/oaam/model/v150/library/failurePropagations/failurePropagationMatrices"
           nsPrefix="de.oaam.model.library.failurePropagations.failurePropagationMatrices">
@@ -2160,7 +2325,8 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A matrix outport propagating failure modes."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultFailureMode" eType="#//library/FunctionalFailureMode">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultFailureMode"
+              eType="#//library/FunctionalFailureMode">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The default failure mode that is propagated by this outport. The default value defines the failure mode that should used if no specific output was specified by the matrix."/>
             </eAnnotations>
@@ -2219,7 +2385,8 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A matrix outport propagating integrity states."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIntegrityState" eType="#//common/IntegrityStateE">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIntegrityState"
+              eType="#//common/IntegrityStateE">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The default integriy state that is propagated by this outport. The default value defines the integrity state that should used if no specific output was specified by the matrix."/>
             </eAnnotations>

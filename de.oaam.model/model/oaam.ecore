@@ -750,11 +750,11 @@
           <details key="documentation" value="Type definitions for busses"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="failureModels" upperBound="-1"
-          eType="#//library/FunctionalFailureModeSet" containment="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="functionalFailureModeSets"
+          upperBound="-1" eType="#//library/FunctionalFailureModeSet" containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="createChild" value="true"/>
-          <details key="documentation" value="Type definitions for busses"/>
+          <details key="documentation" value="All sets of functional failure modes of the library."/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
@@ -928,11 +928,11 @@
           <details key="documentation" value="All parameters of a tasks type"/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="requirementDeclarations"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskInternalRequirements"
           upperBound="-1" eType="#//library/taskInternalRequirements/TaskInternalRequirement"
           containment="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="All requirement declarations of this task type.&#xD;&#xA;"/>
+          <details key="documentation" value="All internal requirements of this task type.&#xD;&#xA;"/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failurePropagation" eType="#//library/failurePropagations/FailurePropagation"
@@ -1678,34 +1678,56 @@
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FunctionalFailureModeSet" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A set of function functional failure modes."/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failureModes" upperBound="-1"
-          eType="#//library/FunctionalFailureMode" containment="true"/>
+          eType="#//library/FunctionalFailureMode" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The failure modes contained in this set."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FunctionalFailureMode" eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A functional failure mode describes a failure mode that can possibly interfere with or prevent the proper function of a task. The functional failure modes are propagated through the failure propagation defined for each TaskType."/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requirementFailureEffects"
-          upperBound="-1" eType="#//library/RequirementFailureEffect" containment="true"/>
+          upperBound="-1" eType="#//library/RequirementFailureEffect" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The effects that this failure mode has on requirement components."/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" lowerBound="1"
           eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The condition is fulfilled if the input is in this state."/>
+          <details key="documentation" value="The integrity state associated with the failure mode. "/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortNotation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="A string for the name of the element as shown in textual or graphical representations of the model"/>
+          <details key="documentation" value="A short notation (2-4 letters) for the failure mode. (e.g. erroneously high --> HI)"/>
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RequirementFailureEffect" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The effect on a requirements component. Specified per failure mode in the failure model."/>
+        <details key="documentation" value="A failure effect on a requirements component. Specified per failure mode in the failure mode set."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="effect" eType="#//library/RequirementFailureEffectTypesE"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" eType="#//library/RequirementFailureEffectTargetsE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="effect" eType="#//library/RequirementFailureEffectTypesE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The generic failure effect to the requirement component."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="target" eType="#//library/RequirementFailureEffectTargetsE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The requirement component affect by the failure effect."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="RequirementFailureEffectTargetsE">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="Classification of object class bound mandatory additional attributes"/>
+        <details key="documentation" value="Enumeration of all requirement components."/>
       </eAnnotations>
       <eLiterals name="NO_TARGET"/>
       <eLiterals name="BELOW" value="1" literal="Below"/>
@@ -1789,13 +1811,13 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="propagationFailureMode"
           eType="#//library/FunctionalFailureMode">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The propagated failure mode. There should either a state or a failure mode be defined for propagation, not both."/>
+          <details key="documentation" value="The propagated failure mode. There should either a state or a failure mode be defined for propagation, not both. If a failure mode should be propagated the propgates-switch must be set to FAILURE_MODE."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationIntegrityState"
           eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The propagated integrity state. There should either a state or a failure mode be defined for propagation, not both."/>
+          <details key="documentation" value="The propagated integrity state. There should either a state or a failure mode be defined for propagation, not both. If an integrity state should be propagated the propagates-switch must be set to INTEGRITY_STATE."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="failureEffectProbability"
@@ -1805,7 +1827,11 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagates" eType="#//library/failurePropagations/FailurePropagationGenericTypeE"
-          defaultValueLiteral="INTEGRITY_STATE"/>
+          defaultValueLiteral="INTEGRITY_STATE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Selection if the failure effect propagates an integrity state or a failure mode."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eSubpackages name="taskInternalRequirements" nsURI="http://www.oaam.de/oaam/model/v150/library/taskInternalRequirements"
         nsPrefix="de.oaam.model.library.taskInternalRequirements">
@@ -3341,7 +3367,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1"
           eType="#//functions/Task">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-          <details key="documentation" value="The task output related to this failure condition."/>
+          <details key="documentation" value="The failing task."/>
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="taskState" lowerBound="1"
@@ -3350,9 +3376,17 @@
           <details key="documentation" value="The task is considered failed, if a failure with the specified integrity state occurs. You should specify either the task integrity state or the task failure mode, but not both."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="taskFailureMode" eType="#//library/FunctionalFailureMode"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="taskFailureMode" eType="#//library/FunctionalFailureMode">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The task is considered failed, if a failure with the specified failure mode occurs. You should specify either the task integrity state or the task failure mode, but not both. "/>
+        </eAnnotations>
+      </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="failsWith" eType="#//library/failurePropagations/FailurePropagationGenericTypeE"
-          defaultValueLiteral="INTEGRITY_STATE"/>
+          defaultValueLiteral="INTEGRITY_STATE">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Selects which the failiure type should be regarded. Set failsWith to FAILURE_MODE if you want to describe a task failure based on a failure mode. Set failsWith to INTEGRITY_STATE if you want to describe a task failure based on an integrity state."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v150/hardware"

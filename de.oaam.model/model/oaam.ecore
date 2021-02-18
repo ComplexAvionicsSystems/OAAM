@@ -2160,7 +2160,7 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A matrix outport propagating failure modes."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultMode" eType="#//library/FunctionalFailureMode">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="defaultFailureMode" eType="#//library/FunctionalFailureMode">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The default failure mode that is propagated by this outport. The default value defines the failure mode that should used if no specific output was specified by the matrix."/>
             </eAnnotations>
@@ -2219,7 +2219,7 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A matrix outport propagating integrity states."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultState" eType="#//common/IntegrityStateE">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultIntegrityState" eType="#//common/IntegrityStateE">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The default integriy state that is propagated by this outport. The default value defines the integrity state that should used if no specific output was specified by the matrix."/>
             </eAnnotations>
@@ -2298,7 +2298,7 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A matrix outport propagating Boolean values."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="default" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The default Boolean value that is propagated by this outport. The default value defines the Boolean value that should used if no specific output was specified by the matrix."/>
             </eAnnotations>

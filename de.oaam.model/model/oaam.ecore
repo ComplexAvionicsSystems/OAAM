@@ -1397,7 +1397,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A link between a Boolean expression and the state of the input. This Boolean is considered to be true if the input has the state defined within."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" lowerBound="1"
           eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The state of the input for which the expression is true"/>
@@ -1684,7 +1684,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="FunctionalFailureMode" eSuperTypes="#//common/OaamBaseElementA">
       <eStructuralFeatures xsi:type="ecore:EReference" name="requirementFailureEffects"
           upperBound="-1" eType="#//library/RequirementFailureEffect" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" lowerBound="1"
           eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The condition is fulfilled if the input is in this state."/>
@@ -1792,7 +1792,8 @@
           <details key="documentation" value="The propagated failure mode. There should either a state or a failure mode be defined for propagation, not both."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationState" eType="#//common/IntegrityStateE">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagationIntegrityState"
+          eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The propagated integrity state. There should either a state or a failure mode be defined for propagation, not both."/>
         </eAnnotations>
@@ -1803,6 +1804,8 @@
           <details key="documentation" value="The probability of the failure effect also known as beta-ratio."/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagates" eType="#//library/failurePropagations/FailurePropagationGenericTypeE"
+          defaultValueLiteral="INTEGRITY_STATE"/>
     </eClassifiers>
     <eSubpackages name="taskInternalRequirements" nsURI="http://www.oaam.de/oaam/model/v150/library/taskInternalRequirements"
         nsPrefix="de.oaam.model.library.taskInternalRequirements">
@@ -1980,11 +1983,11 @@
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeInportEntry" eSuperTypes="#//common/OaamBaseElementA">
           <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeInport"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="mode" eType="#//library/FunctionalFailureMode"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="ModeOutportEntry" eSuperTypes="#//common/OaamBaseElementA">
           <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/ModeOutport"/>
-          <eStructuralFeatures xsi:type="ecore:EReference" name="mode" eType="#//library/FunctionalFailureMode"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="failureMode" eType="#//library/FunctionalFailureMode"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateOutport" eSuperTypes="#//common/OaamBaseElementA #//library/failurePropagations/StatePropagatorA">
           <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultState" eType="#//common/IntegrityStateE"/>
@@ -2001,11 +2004,11 @@
               containment="true"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateInportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//common/IntegrityStateE"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE"/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="inport" eType="#//library/failurePropagations/failurePropagationMatrices/StateInport"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="StateOutportEntry" eSuperTypes="#//common/OaamBaseElementA">
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//common/IntegrityStateE"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" eType="#//common/IntegrityStateE"/>
           <eStructuralFeatures xsi:type="ecore:EReference" name="outport" eType="#//library/failurePropagations/failurePropagationMatrices/StateOutport"/>
         </eClassifiers>
         <eClassifiers xsi:type="ecore:EClass" name="BooleanInport" eSuperTypes="#//common/OaamBaseElementA">
@@ -2668,7 +2671,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Relates the Boolean expression of the failure event to the system's input states."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" lowerBound="1"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityState" lowerBound="1"
           eType="#//common/IntegrityStateE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The condition is fulfilled if the input is in this state."/>
@@ -2861,6 +2864,8 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="taskFailureMode" eType="#//library/FunctionalFailureMode"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failsWith" eType="#//library/failurePropagations/FailurePropagationGenericTypeE"
+          defaultValueLiteral="INTEGRITY_STATE"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v150/hardware"

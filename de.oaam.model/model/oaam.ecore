@@ -1810,48 +1810,168 @@
     <eSubpackages name="taskInternalRequirements" nsURI="http://www.oaam.de/oaam/model/v150/library/taskInternalRequirements"
         nsPrefix="de.oaam.model.library.taskInternalRequirements">
       <eClassifiers xsi:type="ecore:EClass" name="TaskInternalRequirement" eSuperTypes="#//common/OaamBaseElementA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="An internal requirement of a task. The internal requirement describes conditions that need to be fulfilled for the task success."/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-            eType="#//library/taskInternalRequirements/RequirementComponent" containment="true"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="requires" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+            eType="#//library/taskInternalRequirements/RequirementComponentA" containment="true">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The components inside the requirement."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="requires" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The top component of the requirement."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="RequirementComponent" abstract="true"
-          eSuperTypes="#//common/OaamBaseElementA"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Comparator" abstract="true" eSuperTypes="#//library/taskInternalRequirements/RequirementComponent">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="compA" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="compB" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="RequirementComponentA" abstract="true"
+          eSuperTypes="#//common/OaamBaseElementA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a requirement component."/>
+        </eAnnotations>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Agreement" eSuperTypes="#//library/taskInternalRequirements/Comparator"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Below" eSuperTypes="#//library/taskInternalRequirements/Comparator"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Above" eSuperTypes="#//library/taskInternalRequirements/Comparator"/>
-      <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" eSuperTypes="#//library/taskInternalRequirements/RequirementComponent"/>
-      <eClassifiers xsi:type="ecore:EClass" name="IoSignal" eSuperTypes="#//library/taskInternalRequirements/Source">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredOutput" eType="#//library/OutputDeclaration"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredInput" eType="#//library/InputDeclaration"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ComparatorA" abstract="true" eSuperTypes="#//library/taskInternalRequirements/RequirementComponentA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of comparator. A comparator compares two incoming valued requirement components A and B."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="compA" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A upstream requirements component providing of any type."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="compB" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="A upstream requirements component providing of any type."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//library/taskInternalRequirements/Source"/>
-      <eClassifiers xsi:type="ecore:EClass" name="ComplexOperator" abstract="true"
-          eSuperTypes="#//library/taskInternalRequirements/RequirementComponent"/>
-      <eClassifiers xsi:type="ecore:EClass" name="BoolTimeout" eSuperTypes="#//library/taskInternalRequirements/ComplexOperator">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Agreement" eSuperTypes="#//library/taskInternalRequirements/ComparatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This components requires the fulfillability of signal agreement between the incoming signals A and B, A=B. If signals A and B are not affected by any failure mode compromising an agreement (see FailureModeSet), then the comparision is considered fulfillable."/>
+        </eAnnotations>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="BooleanOperator" abstract="true"
-          eSuperTypes="#//library/taskInternalRequirements/RequirementComponent"/>
-      <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//library/taskInternalRequirements/BooleanOperator">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Below" eSuperTypes="#//library/taskInternalRequirements/ComparatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This components requires the fulfillability of signal  A being greater than signal B, A>B. If signals A and B are not affected by any failure mode compromising the comparision (see FailureModeSet), then the comparision is considered fulfillable."/>
+        </eAnnotations>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//library/taskInternalRequirements/BooleanOperator">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Above" eSuperTypes="#//library/taskInternalRequirements/ComparatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This components requires the fulfillability of signal  A being less than signal B, A&lt;B. If signals A and B are not affected by any failure mode compromising the comparision (see FailureModeSet), then the comparision is considered fulfillable."/>
+        </eAnnotations>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Not" eSuperTypes="#//library/taskInternalRequirements/BooleanOperator">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SourceA" abstract="true" eSuperTypes="#//library/taskInternalRequirements/RequirementComponentA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a value source."/>
+        </eAnnotations>
       </eClassifiers>
-      <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//library/taskInternalRequirements/ComplexOperator">
-        <eStructuralFeatures xsi:type="ecore:EReference" name="preCondition" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="postCondition" eType="#//library/taskInternalRequirements/RequirementComponent"/>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="invariant" eType="#//library/taskInternalRequirements/RequirementComponent"/>
+      <eClassifiers xsi:type="ecore:EClass" name="IoSignal" eSuperTypes="#//library/taskInternalRequirements/SourceA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Inputs and Outputs of the task that provide values. Either an input or an output can be referenced."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredOutput" eType="#//library/OutputDeclaration">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The referenced output declaration. The declaredOutput must not be referenced if a declaredInput is referenced."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredInput" eType="#//library/InputDeclaration">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The referenced input declaration. The declaredInput must not be referenced if a declaredOutput is referenced."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//library/taskInternalRequirements/SourceA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A constant value."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ComplexOperatorA" abstract="true"
+          eSuperTypes="#//library/taskInternalRequirements/RequirementComponentA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a complex operator that contains more internal logic."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BoolTimeout" eSuperTypes="#//library/taskInternalRequirements/ComplexOperatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A delayed fulfillment of the upstream requirement component. The component expresses, that a fulfillment of the upstream requirement is considered after x seconds."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The upstream requirement component, which must provide a Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The timeout in seconds."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="BooleanOperatorA" abstract="true"
+          eSuperTypes="#//library/taskInternalRequirements/RequirementComponentA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Abstract definition of a Boolean operator."/>
+        </eAnnotations>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//library/taskInternalRequirements/BooleanOperatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Boolean AND-Gate. The upstream expression must provide Boolean values."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The second requirement component. The component must provide a Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The first requirement component. The component must provide a Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//library/taskInternalRequirements/BooleanOperatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Boolean OR-Gate. The upstream expression must provide Boolean values. One of the upstream requirement components must be fulfillable."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprB" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The second requirement component. The component must provide a Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="exprA" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The first requirement component. The component must provide a Boolean value."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Not" eSuperTypes="#//library/taskInternalRequirements/BooleanOperatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A Boolean NOT-Gate. The upstream expression must provide Boolean values."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="Negates the fulfillment of the upstream requirement component."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//library/taskInternalRequirements/ComplexOperatorA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A contract specifies a conditional requirement fullfillment. The contract is fulfillable if (1) the invariant is fulfillable and (2) the post-condition is fulfillable when the pre-condition is fulfillable. If the pre-condition is not fulfillable the contract is not evaluatable, i.e. the contract needs not to be fulfillable."/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="preCondition" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The pre-condition of the contract. If fulfillable, the post-condition must also be fulfillable."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="postCondition" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The post-condition which must be fulfillable if the pre-condition is met."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="invariant" eType="#//library/taskInternalRequirements/RequirementComponentA">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The invariant that must always hold i.e. must always be fulfillable."/>
+          </eAnnotations>
+        </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
     <eSubpackages name="failurePropagations" nsURI="http://www.oaam.de/oaam/model/v150/library/failurePropagations"

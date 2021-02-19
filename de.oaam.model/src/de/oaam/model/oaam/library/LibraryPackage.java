@@ -292,13 +292,49 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__SYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__INFORMATION_FLOWS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__SUBSYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DATA_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int LIBRARY_CONTAINER_A__DATA_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Resource Types</b></em>' containment reference list.
@@ -307,7 +343,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int LIBRARY_CONTAINER_A__RESOURCE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Resource Bundles</b></em>' containment reference list.
@@ -316,7 +352,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_BUNDLES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int LIBRARY_CONTAINER_A__RESOURCE_BUNDLES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Resource Modifiers</b></em>' containment reference list.
@@ -325,7 +361,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int LIBRARY_CONTAINER_A__RESOURCE_MODIFIERS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Resource Type Dissimilarities</b></em>' containment reference list.
@@ -334,7 +370,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int LIBRARY_CONTAINER_A__RESOURCE_TYPE_DISSIMILARITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Task Types</b></em>' containment reference list.
@@ -343,7 +379,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__TASK_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int LIBRARY_CONTAINER_A__TASK_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Task Type Dissimilarity</b></em>' containment reference list.
@@ -352,7 +388,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int LIBRARY_CONTAINER_A__TASK_TYPE_DISSIMILARITY = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Signal Types</b></em>' containment reference list.
@@ -361,7 +397,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__SIGNAL_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int LIBRARY_CONTAINER_A__SIGNAL_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Device Types</b></em>' containment reference list.
@@ -370,7 +406,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Symmetries</b></em>' containment reference list.
@@ -379,7 +415,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPE_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Device Type Dissimilarities</b></em>' containment reference list.
@@ -388,7 +424,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+	int LIBRARY_CONTAINER_A__DEVICE_TYPE_DISSIMILARITIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Connection Types</b></em>' containment reference list.
@@ -397,7 +433,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__CONNECTION_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
+	int LIBRARY_CONTAINER_A__CONNECTION_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Wire Types</b></em>' containment reference list.
@@ -406,7 +442,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__WIRE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
+	int LIBRARY_CONTAINER_A__WIRE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Location Types</b></em>' containment reference list.
@@ -415,7 +451,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__LOCATION_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 13;
+	int LIBRARY_CONTAINER_A__LOCATION_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Duct Types</b></em>' containment reference list.
@@ -424,7 +460,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__DUCT_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 14;
+	int LIBRARY_CONTAINER_A__DUCT_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Generic Attributes</b></em>' containment reference list.
@@ -433,7 +469,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 15;
+	int LIBRARY_CONTAINER_A__GENERIC_ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Power Sources</b></em>' containment reference list.
@@ -442,7 +478,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__POWER_SOURCES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 16;
+	int LIBRARY_CONTAINER_A__POWER_SOURCES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Sublibraries</b></em>' containment reference list.
@@ -451,7 +487,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__SUBLIBRARIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 17;
+	int LIBRARY_CONTAINER_A__SUBLIBRARIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Io Types</b></em>' containment reference list.
@@ -460,7 +496,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__IO_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 18;
+	int LIBRARY_CONTAINER_A__IO_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Hardware Group Types</b></em>' containment reference list.
@@ -469,7 +505,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 19;
+	int LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Message Types</b></em>' containment reference list.
@@ -478,7 +514,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__MESSAGE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 20;
+	int LIBRARY_CONTAINER_A__MESSAGE_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Bus Types</b></em>' containment reference list.
@@ -487,7 +523,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A__BUS_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
+	int LIBRARY_CONTAINER_A__BUS_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 25;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -496,7 +532,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 22;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 26;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -5649,6 +5685,42 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__SYSTEMS = LIBRARY_CONTAINER_A__SYSTEMS;
+
+	/**
+	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__INFORMATION_FLOWS = LIBRARY_CONTAINER_A__INFORMATION_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__INPUT_SEGREGATIONS = LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__SUBSYSTEMS = LIBRARY_CONTAINER_A__SUBSYSTEMS;
+
+	/**
 	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5935,6 +6007,42 @@ public interface LibraryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBLIBRARY__TRACE_LINK = LIBRARY_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__SYSTEMS = LIBRARY_CONTAINER_A__SYSTEMS;
+
+	/**
+	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__INFORMATION_FLOWS = LIBRARY_CONTAINER_A__INFORMATION_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__INPUT_SEGREGATIONS = LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__SUBSYSTEMS = LIBRARY_CONTAINER_A__SUBSYSTEMS;
 
 	/**
 	 * The feature id for the '<em><b>Data Types</b></em>' containment reference list.

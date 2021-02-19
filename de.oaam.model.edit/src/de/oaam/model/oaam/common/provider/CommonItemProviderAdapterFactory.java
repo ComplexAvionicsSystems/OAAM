@@ -371,6 +371,29 @@ public class CommonItemProviderAdapterFactory extends CommonAdapterFactory imple
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.common.SystemBelongingElementA} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SystemBelongingElementAItemProvider systemBelongingElementAItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.common.SystemBelongingElementA}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSystemBelongingElementAAdapter() {
+		if (systemBelongingElementAItemProvider == null) {
+			systemBelongingElementAItemProvider = new SystemBelongingElementAItemProvider(this);
+		}
+
+		return systemBelongingElementAItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,6 +505,7 @@ public class CommonItemProviderAdapterFactory extends CommonAdapterFactory imple
 		if (byteItemProvider != null) byteItemProvider.dispose();
 		if (characterItemProvider != null) characterItemProvider.dispose();
 		if (booleanItemProvider != null) booleanItemProvider.dispose();
+		if (systemBelongingElementAItemProvider != null) systemBelongingElementAItemProvider.dispose();
 	}
 
 }

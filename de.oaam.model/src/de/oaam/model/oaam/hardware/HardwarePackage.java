@@ -145,13 +145,22 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE_CONTAINER_A__BELONGS_TO = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__DEVICES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int HARDWARE_CONTAINER_A__DEVICES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Device Symmetries</b></em>' containment reference list.
@@ -160,7 +169,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
@@ -169,7 +178,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__CONNECTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int HARDWARE_CONTAINER_A__CONNECTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Subhardware</b></em>' containment reference list.
@@ -178,7 +187,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__SUBHARDWARE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int HARDWARE_CONTAINER_A__SUBHARDWARE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Buses</b></em>' containment reference list.
@@ -187,7 +196,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A__BUSES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int HARDWARE_CONTAINER_A__BUSES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -196,7 +205,7 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int HARDWARE_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -888,6 +897,15 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE__TRACE_LINK = HARDWARE_CONTAINER_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE__BELONGS_TO = HARDWARE_CONTAINER_A__BELONGS_TO;
+
+	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1049,6 +1067,15 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBHARDWARE__TRACE_LINK = HARDWARE_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBHARDWARE__BELONGS_TO = HARDWARE_CONTAINER_A__BELONGS_TO;
 
 	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.

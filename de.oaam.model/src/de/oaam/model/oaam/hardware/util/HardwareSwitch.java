@@ -4,6 +4,7 @@ package de.oaam.model.oaam.hardware.util;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
@@ -77,6 +78,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				HardwareContainerA hardwareContainerA = (HardwareContainerA)theEObject;
 				T result = caseHardwareContainerA(hardwareContainerA);
 				if (result == null) result = caseOaamBaseElementA(hardwareContainerA);
+				if (result == null) result = caseSystemBelongingElementA(hardwareContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,6 +127,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = caseVariantDependentElementA(hardware);
 				if (result == null) result = caseModeDependentElementA(hardware);
 				if (result == null) result = caseOaamBaseElementA(hardware);
+				if (result == null) result = caseSystemBelongingElementA(hardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -135,6 +138,7 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = caseVariantDependentElementA(subhardware);
 				if (result == null) result = caseModeDependentElementA(subhardware);
 				if (result == null) result = caseOaamBaseElementA(subhardware);
+				if (result == null) result = caseSystemBelongingElementA(subhardware);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -284,6 +288,21 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOaamBaseElementA(OaamBaseElementA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Belonging Element A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Belonging Element A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemBelongingElementA(SystemBelongingElementA object) {
 		return null;
 	}
 

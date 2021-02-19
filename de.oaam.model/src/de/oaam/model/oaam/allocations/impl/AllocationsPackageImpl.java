@@ -1386,6 +1386,7 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 
 		// Add supertypes to classes
 		allocationsContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		allocationsContainerAEClass.getESuperTypes().add(theCommonPackage.getSystemBelongingElementA());
 		taskAssignmentEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		taskAssignmentEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());

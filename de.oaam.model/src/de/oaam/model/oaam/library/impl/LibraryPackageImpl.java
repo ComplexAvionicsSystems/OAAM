@@ -2571,6 +2571,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		// Obtain other dependent packages
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		SystemsPackage theSystemsPackage = (SystemsPackage)EPackage.Registry.INSTANCE.getEPackage(SystemsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2578,6 +2579,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		// Add supertypes to classes
 		libraryContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		libraryContainerAEClass.getESuperTypes().add(theSystemsPackage.getSystemsContainerA());
 		resourceTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
 		resourceTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		resourceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());

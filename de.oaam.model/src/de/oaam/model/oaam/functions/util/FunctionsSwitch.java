@@ -5,6 +5,7 @@ package de.oaam.model.oaam.functions.util;
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.functions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -79,6 +80,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOaamBaseElementA(functions);
 				if (result == null) result = caseVariantDependentElementA(functions);
 				if (result == null) result = caseModeDependentElementA(functions);
+				if (result == null) result = caseSystemBelongingElementA(functions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,6 +90,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOaamBaseElementA(functionsContainerA);
 				if (result == null) result = caseVariantDependentElementA(functionsContainerA);
 				if (result == null) result = caseModeDependentElementA(functionsContainerA);
+				if (result == null) result = caseSystemBelongingElementA(functionsContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -207,6 +210,7 @@ public class FunctionsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseOaamBaseElementA(subfunctions);
 				if (result == null) result = caseVariantDependentElementA(subfunctions);
 				if (result == null) result = caseModeDependentElementA(subfunctions);
+				if (result == null) result = caseSystemBelongingElementA(subfunctions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -503,6 +507,21 @@ public class FunctionsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseModeDependentElementA(ModeDependentElementA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Belonging Element A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Belonging Element A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemBelongingElementA(SystemBelongingElementA object) {
 		return null;
 	}
 

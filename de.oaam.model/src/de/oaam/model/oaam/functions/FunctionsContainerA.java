@@ -4,6 +4,7 @@ package de.oaam.model.oaam.functions;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
@@ -37,7 +38,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface FunctionsContainerA extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA {
+public interface FunctionsContainerA extends OaamBaseElementA, VariantDependentElementA, ModeDependentElementA, SystemBelongingElementA {
 	/**
 	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.functions.Task}.

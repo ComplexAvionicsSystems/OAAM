@@ -17,6 +17,7 @@ import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.IntegretyStateE;
 import de.oaam.model.oaam.common.Struct;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -83,6 +84,7 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 			case CommonPackage.BYTE: return createByte();
 			case CommonPackage.CHARACTER: return createCharacter();
 			case CommonPackage.BOOLEAN: return createBoolean();
+			case CommonPackage.SYSTEM_BELONGING_ELEMENT_A: return createSystemBelongingElementA();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -254,6 +256,16 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	public de.oaam.model.oaam.common.Boolean createBoolean() {
 		BooleanImpl boolean_ = new BooleanImpl();
 		return boolean_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemBelongingElementA createSystemBelongingElementA() {
+		SystemBelongingElementAImpl systemBelongingElementA = new SystemBelongingElementAImpl();
+		return systemBelongingElementA;
 	}
 
 	/**

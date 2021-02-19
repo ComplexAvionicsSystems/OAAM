@@ -5,6 +5,7 @@ package de.oaam.model.oaam.functions.util;
 import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.functions.*;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
@@ -148,6 +149,10 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseModeDependentElementA(ModeDependentElementA object) {
 				return createModeDependentElementAAdapter();
+			}
+			@Override
+			public Adapter caseSystemBelongingElementA(SystemBelongingElementA object) {
+				return createSystemBelongingElementAAdapter();
 			}
 			@Override
 			public Adapter caseBoolA(BoolA object) {
@@ -436,6 +441,20 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModeDependentElementAAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.SystemBelongingElementA <em>System Belonging Element A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.common.SystemBelongingElementA
+	 * @generated
+	 */
+	public Adapter createSystemBelongingElementAAdapter() {
 		return null;
 	}
 

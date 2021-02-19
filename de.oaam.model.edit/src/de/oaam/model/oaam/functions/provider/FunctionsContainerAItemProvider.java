@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.functions.provider;
 
 
+import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 
 import de.oaam.model.oaam.functions.FunctionsContainerA;
@@ -57,6 +58,7 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 			super.getPropertyDescriptors(object);
 
 			addVariantsPropertyDescriptor(object);
+			addBelongsToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,6 +77,28 @@ public class FunctionsContainerAItemProvider extends OaamBaseElementAItemProvide
 				 getString("_UI_VariantDependentElementA_variants_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
 				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Belongs To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBelongsToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemBelongingElementA_belongsTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemBelongingElementA_belongsTo_feature", "_UI_SystemBelongingElementA_type"),
+				 CommonPackage.Literals.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO,
 				 true,
 				 false,
 				 true,

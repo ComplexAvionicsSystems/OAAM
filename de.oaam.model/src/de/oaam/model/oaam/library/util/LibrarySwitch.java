@@ -7,6 +7,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.*;
 
+import de.oaam.model.oaam.systems.SystemsContainerA;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -90,6 +91,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 			case LibraryPackage.LIBRARY_CONTAINER_A: {
 				LibraryContainerA libraryContainerA = (LibraryContainerA)theEObject;
 				T result = caseLibraryContainerA(libraryContainerA);
+				if (result == null) result = caseSystemsContainerA(libraryContainerA);
 				if (result == null) result = caseOaamBaseElementA(libraryContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -366,6 +368,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				Library library = (Library)theEObject;
 				T result = caseLibrary(library);
 				if (result == null) result = caseLibraryContainerA(library);
+				if (result == null) result = caseSystemsContainerA(library);
 				if (result == null) result = caseOaamBaseElementA(library);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -374,6 +377,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				Sublibrary sublibrary = (Sublibrary)theEObject;
 				T result = caseSublibrary(sublibrary);
 				if (result == null) result = caseLibraryContainerA(sublibrary);
+				if (result == null) result = caseSystemsContainerA(sublibrary);
 				if (result == null) result = caseOaamBaseElementA(sublibrary);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1024,6 +1028,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOaamBaseElementA(OaamBaseElementA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Container A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Container A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemsContainerA(SystemsContainerA object) {
 		return null;
 	}
 

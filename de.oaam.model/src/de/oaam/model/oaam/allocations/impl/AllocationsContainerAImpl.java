@@ -13,10 +13,14 @@ import de.oaam.model.oaam.allocations.SubconnectionAssignment;
 import de.oaam.model.oaam.allocations.SubdeviceAssignment;
 import de.oaam.model.oaam.allocations.TaskAssignment;
 
+import de.oaam.model.oaam.common.CommonPackage;
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
+import de.oaam.model.oaam.systems.SystemsContainerA;
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -24,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getDeviceAssignments <em>Device Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getSubdeviceAssignments <em>Subdevice Assignments</em>}</li>
  *   <li>{@link de.oaam.model.oaam.allocations.impl.AllocationsContainerAImpl#getConnectionAssignments <em>Connection Assignments</em>}</li>
@@ -48,6 +54,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl implements AllocationsContainerA {
+	/**
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBelongsTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected SystemsContainerA belongsTo;
+
 	/**
 	 * The cached value of the '{@link #getDeviceAssignments() <em>Device Assignments</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -145,6 +161,44 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	@Override
 	protected EClass eStaticClass() {
 		return AllocationsPackage.Literals.ALLOCATIONS_CONTAINER_A;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemsContainerA getBelongsTo() {
+		if (belongsTo != null && belongsTo.eIsProxy()) {
+			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
+			belongsTo = (SystemsContainerA)eResolveProxy(oldBelongsTo);
+			if (belongsTo != oldBelongsTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
+			}
+		}
+		return belongsTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemsContainerA basicGetBelongsTo() {
+		return belongsTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBelongsTo(SystemsContainerA newBelongsTo) {
+		SystemsContainerA oldBelongsTo = belongsTo;
+		belongsTo = newBelongsTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -279,6 +333,9 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO:
+				if (resolve) return getBelongsTo();
+				return basicGetBelongsTo();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS:
 				return getDeviceAssignments();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS:
@@ -308,6 +365,9 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO:
+				setBelongsTo((SystemsContainerA)newValue);
+				return;
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS:
 				getDeviceAssignments().clear();
 				getDeviceAssignments().addAll((Collection<? extends DeviceAssignment>)newValue);
@@ -352,6 +412,9 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO:
+				setBelongsTo((SystemsContainerA)null);
+				return;
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS:
 				getDeviceAssignments().clear();
 				return;
@@ -388,6 +451,8 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO:
+				return belongsTo != null;
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS:
 				return deviceAssignments != null && !deviceAssignments.isEmpty();
 			case AllocationsPackage.ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS:
@@ -406,6 +471,38 @@ public abstract class AllocationsContainerAImpl extends OaamBaseElementAImpl imp
 				return messages != null && !messages.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == SystemBelongingElementA.class) {
+			switch (derivedFeatureID) {
+				case AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO: return CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == SystemBelongingElementA.class) {
+			switch (baseFeatureID) {
+				case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO: return AllocationsPackage.ALLOCATIONS_CONTAINER_A__BELONGS_TO;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //AllocationsContainerAImpl

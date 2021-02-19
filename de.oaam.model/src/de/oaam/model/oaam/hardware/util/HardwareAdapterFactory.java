@@ -4,6 +4,7 @@ package de.oaam.model.oaam.hardware.util;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.hardware.*;
 
 import de.oaam.model.oaam.library.ResourceProviderInstanceA;
@@ -109,6 +110,10 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
 				return createOaamBaseElementAAdapter();
+			}
+			@Override
+			public Adapter caseSystemBelongingElementA(SystemBelongingElementA object) {
+				return createSystemBelongingElementAAdapter();
 			}
 			@Override
 			public Adapter caseResourceProviderInstanceA(ResourceProviderInstanceA object) {
@@ -265,6 +270,20 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOaamBaseElementAAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.SystemBelongingElementA <em>System Belonging Element A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.common.SystemBelongingElementA
+	 * @generated
+	 */
+	public Adapter createSystemBelongingElementAAdapter() {
 		return null;
 	}
 

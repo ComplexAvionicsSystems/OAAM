@@ -35,6 +35,7 @@ import de.oaam.model.oaam.common.IntegretyStateE;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 
 import de.oaam.model.oaam.functions.impl.FunctionsPackageImpl;
@@ -194,6 +195,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * @generated
 	 */
 	private EClass booleanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemBelongingElementAEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -765,6 +773,24 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSystemBelongingElementA() {
+		return systemBelongingElementAEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSystemBelongingElementA_BelongsTo() {
+		return (EReference)systemBelongingElementAEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getBoolOperationTypesE() {
 		return boolOperationTypesEEEnum;
 	}
@@ -881,6 +907,9 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		booleanEClass = createEClass(BOOLEAN);
 		createEAttribute(booleanEClass, BOOLEAN__NBITS);
 
+		systemBelongingElementAEClass = createEClass(SYSTEM_BELONGING_ELEMENT_A);
+		createEReference(systemBelongingElementAEClass, SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO);
+
 		// Create enums
 		boolOperationTypesEEEnum = createEEnum(BOOL_OPERATION_TYPES_E);
 		integretyStateEEEnum = createEEnum(INTEGRETY_STATE_E);
@@ -909,6 +938,9 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
+
+		// Obtain other dependent packages
+		SystemsPackage theSystemsPackage = (SystemsPackage)EPackage.Registry.INSTANCE.getEPackage(SystemsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -999,6 +1031,9 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		initEClass(booleanEClass, de.oaam.model.oaam.common.Boolean.class, "Boolean", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBoolean_NBits(), ecorePackage.getEInt(), "nBits", "1", 1, 1, de.oaam.model.oaam.common.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(systemBelongingElementAEClass, SystemBelongingElementA.class, "SystemBelongingElementA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystemBelongingElementA_BelongsTo(), theSystemsPackage.getSystemsContainerA(), null, "belongsTo", null, 0, 1, SystemBelongingElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(boolOperationTypesEEEnum, BoolOperationTypesE.class, "BoolOperationTypesE");

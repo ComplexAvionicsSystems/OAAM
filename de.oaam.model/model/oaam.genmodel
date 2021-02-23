@@ -26,10 +26,10 @@
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/BoolOperationTypesE/OR"/>
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/BoolOperationTypesE/XOR"/>
       </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//common/IntegretyStateE">
-        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegretyStateE/OK"/>
-        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegretyStateE/FAILED"/>
-        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegretyStateE/UNKNOWN"/>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//common/IntegrityStateE">
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegrityStateE/OK"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegrityStateE/FAILED_DETECTED"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/IntegrityStateE/FAILED_UNDETECTED"/>
       </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//common/EndianessE">
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//common/EndianessE/BIG"/>
@@ -141,6 +141,24 @@
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/AttributeTargetsE/AREA"/>
         <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/AttributeTargetsE/VARIANT"/>
       </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//library/RequirementFailureEffectTargetsE">
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/NO_TARGET"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/BELOW"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/ABOVE"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/SIGNAL"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/VALUE"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/AND"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/OR"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/NOT"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/CONTRACT"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTargetsE/AGREEMENT"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//library/RequirementFailureEffectTypesE">
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTypesE/EARLY"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTypesE/LATE"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTypesE/ALWAYS"/>
+        <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/RequirementFailureEffectTypesE/NEVER"/>
+      </genEnums>
       <genClasses image="false" ecoreClass="oaam.ecore#//library/ResourceConsumerA">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceConsumerA/requiredResources"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/ResourceConsumerA/consumedGroups"/>
@@ -179,6 +197,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/hardwareGroupTypes"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/messageTypes"/>
         <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/busTypes"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/LibraryContainerA/functionalFailureModeSets"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/ResourceType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/ResourceType/unit"/>
@@ -216,6 +235,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskType/preferredExecutionRate"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/stateDeclarations"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/parameterDeclarations"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/taskInternalRequirements"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/TaskType/failurePropagation"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/SignalType">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -225,7 +246,6 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ioDeclarations"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/isSubdevice"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/canHaveSubdevices"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/mtbf"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/weight"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/DeviceType/cost"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/DeviceType/ioGroups"/>
@@ -268,7 +288,6 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/nConductors"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/minBendingRadius"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/nShields"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/WireType/mtbf"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/IoType">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/IoType/direction"/>
@@ -325,7 +344,7 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/FaultPropagation/taskInputStates"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/TaskInputState">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskInputState/state"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/TaskInputState/integrityState"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/TaskInputState/input"/>
       </genClasses>
@@ -389,7 +408,6 @@
       <genClasses ecoreClass="oaam.ecore#//library/BusType">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/BusType/deviceTypes"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/BusType/mtbf"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/BusType/isSelfManaging"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//library/BusType/connectionTypes"/>
@@ -406,6 +424,254 @@
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//library/Library"/>
       <genClasses ecoreClass="oaam.ecore#//library/Sublibrary"/>
+      <genClasses ecoreClass="oaam.ecore#//library/FunctionalFailureModeSet">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/FunctionalFailureModeSet/failureModes"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/FunctionalFailureMode">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/FunctionalFailureMode/requirementFailureEffects"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FunctionalFailureMode/integrityState"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FunctionalFailureMode/shortNotation"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/RequirementFailureEffect">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/RequirementFailureEffect/effect"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/RequirementFailureEffect/target"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/PartFailureMode">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/PartFailureMode/failureModeRatio"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/PartFailureMode/failureEffects"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/FailureProviderA">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FailureProviderA/canFail"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FailureProviderA/failureRate"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/FailureProviderA/partFailureModes"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//library/FailureEffect">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//library/FailureEffect/propagationFailureMode"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FailureEffect/propagationIntegrityState"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FailureEffect/failureEffectProbability"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/FailureEffect/propagates"/>
+      </genClasses>
+      <nestedGenPackages prefix="TaskInternalRequirements" disposableProviderFactory="true"
+          ecorePackage="oaam.ecore#//library/taskInternalRequirements">
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/TaskInternalRequirement">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/TaskInternalRequirement/components"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/TaskInternalRequirement/requires"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/taskInternalRequirements/RequirementComponentA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/taskInternalRequirements/ComparatorA">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/ComparatorA/compA"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/ComparatorA/compB"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Agreement"/>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Below"/>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Above"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/taskInternalRequirements/SourceA"/>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/IoSignal">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/IoSignal/declaredOutput"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/IoSignal/declaredInput"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Value"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/taskInternalRequirements/ComplexOperatorA"/>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/BoolTimeout">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/BoolTimeout/expr"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/taskInternalRequirements/BoolTimeout/timeout"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/taskInternalRequirements/BooleanOperatorA"/>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/And">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/And/exprB"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/And/exprA"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Or">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Or/exprB"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Or/exprA"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Not">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Not/expr"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/taskInternalRequirements/Contract">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Contract/preCondition"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Contract/postCondition"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/taskInternalRequirements/Contract/invariant"/>
+        </genClasses>
+      </nestedGenPackages>
+      <nestedGenPackages prefix="FailurePropagations" disposableProviderFactory="true"
+          ecorePackage="oaam.ecore#//library/failurePropagations">
+        <genEnums typeSafeEnumCompatible="false" ecoreEnum="oaam.ecore#//library/failurePropagations/FailurePropagationGenericTypeE">
+          <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/failurePropagations/FailurePropagationGenericTypeE/INTEGRITY_STATE"/>
+          <genEnumLiterals ecoreEnumLiteral="oaam.ecore#//library/failurePropagations/FailurePropagationGenericTypeE/FAILURE_MODE"/>
+        </genEnums>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/FailurePropagation">
+          <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/FailurePropagation/propagators"/>
+        </genClasses>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/PropagatorA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/ModePropagatorA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/BooleanPropagatorA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/ConversionA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/StatePropagatorA"/>
+        <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/BooleanGateA">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/BooleanGateA/inputs"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanAnd"/>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanOr"/>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanXor"/>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanNot">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/BooleanNot/input"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/StateBooleanConversion">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/StateBooleanConversion/inputIntegrityState"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/StateBooleanConversion/outputBooleanValue"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/StateBooleanConversion/input"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/ModeBooleanConversion">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/ModeBooleanConversion/input"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/ModeBooleanConversion/outputBooleanValue"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/ModeBooleanConversion/inputFailureMode"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanModeConversion">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/BooleanModeConversion/inputBooleanValue"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/BooleanModeConversion/input"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/BooleanModeConversion/outputFailureMode"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/StateModeConversion">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/StateModeConversion/inputIntegrityState"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/StateModeConversion/input"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/StateModeConversion/outputFailureMode"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/ModeStateConversion">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/ModeStateConversion/input"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/ModeStateConversion/outputIntegrityState"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/ModeStateConversion/inputFailureMode"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/BooleanStateConversion">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/BooleanStateConversion/input"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/BooleanStateConversion/inputBooleanValue"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/BooleanStateConversion/outputIntegrityState"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/PropagationInput">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/PropagationInput/source"/>
+        </genClasses>
+        <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/PropagationOutput">
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/PropagationOutput/target"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/PropagationOutput/propagatedIntegrityStates"/>
+          <genFeatures notify="false" createChild="false" propertySortChoices="true"
+              ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/PropagationOutput/propagatedFailureModes"/>
+        </genClasses>
+        <nestedGenPackages prefix="FailurePropagationMatrices" disposableProviderFactory="true"
+            ecorePackage="oaam.ecore#//library/failurePropagations/failurePropagationMatrices">
+          <genClasses image="false" ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/FailurePropagationMatrixA"/>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrix">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrix/rows"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrix/inports"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrix/outports"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrix">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrix/outports"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrix/inports"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrix/rows"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrix">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrix/outports"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrix/inports"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrix/rows"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeInport">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeInport/input"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeOutport">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeOutport/defaultFailureMode"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrixRow">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrixRow/inportEntries"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeMatrixRow/outportEntries"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeInportEntry">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeInportEntry/inport"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeInportEntry/failureMode"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeOutportEntry">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeOutportEntry/outport"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/ModeOutportEntry/failureMode"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateOutport">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateOutport/defaultIntegrityState"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateInport">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateInport/input"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrixRow">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrixRow/inportEntries"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateMatrixRow/outportEntries"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateInportEntry">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateInportEntry/integrityState"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateInportEntry/inport"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateOutportEntry">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateOutportEntry/integrityState"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/StateOutportEntry/outport"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanInport">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanInport/input"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanOutport">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanOutport/defaultValue"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrixRow">
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrixRow/inportEntries"/>
+            <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanMatrixRow/outportEntries"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanInportEntry">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanInportEntry/bool"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanInportEntry/inport"/>
+          </genClasses>
+          <genClasses ecoreClass="oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanOutportEntry">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanOutportEntry/bool"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference oaam.ecore#//library/failurePropagations/failurePropagationMatrices/BooleanOutportEntry/outport"/>
+          </genClasses>
+        </nestedGenPackages>
+      </nestedGenPackages>
     </nestedGenPackages>
     <nestedGenPackages prefix="Scenario" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"
         multipleEditorPages="false" generateModelWizard="false" ecorePackage="oaam.ecore#//scenario">
@@ -559,9 +825,10 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FailureCondition/booleanOperations"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FailureCondition/booleanNots"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FailureCondition/outputIntegrityStates"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oaam.ecore#//functions/FailureCondition/taskFailures"/>
       </genClasses>
       <genClasses ecoreClass="oaam.ecore#//functions/OutputIntegrityState">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/OutputIntegrityState/state"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/OutputIntegrityState/integrityState"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/OutputIntegrityState/output"/>
       </genClasses>
@@ -613,6 +880,14 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskParameter/definition"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/TaskParameter/value"/>
+      </genClasses>
+      <genClasses ecoreClass="oaam.ecore#//functions/TaskFailure">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskFailure/task"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/TaskFailure/taskState"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference oaam.ecore#//functions/TaskFailure/taskFailureMode"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oaam.ecore#//functions/TaskFailure/failsWith"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Hardware" basePackage="de.oaam.model.oaam" disposableProviderFactory="true"

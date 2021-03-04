@@ -2475,7 +2475,8 @@
           <details key="documentation" value="The task is considered failed, if a failure with the specified failure mode occurs. You should specify either the task integrity state or the task failure mode, but not both. "/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failsWith" defaultValueLiteral="INTEGRITY_STATE">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="failsWith" eType="#//safety/failurePropagations/FailurePropagationGenericTypeE"
+          defaultValueLiteral="INTEGRITY_STATE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Selects which the failiure type should be regarded. Set failsWith to FAILURE_MODE if you want to describe a task failure based on a failure mode. Set failsWith to INTEGRITY_STATE if you want to describe a task failure based on an integrity state."/>
         </eAnnotations>
@@ -4287,7 +4288,8 @@
           <details key="documentation" value="The probability of the failure effect also known as beta-ratio."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagates" defaultValueLiteral="INTEGRITY_STATE">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="propagates" eType="#//safety/failurePropagations/FailurePropagationGenericTypeE"
+          defaultValueLiteral="INTEGRITY_STATE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Selection if the failure effect propagates an integrity state or a failure mode."/>
         </eAnnotations>

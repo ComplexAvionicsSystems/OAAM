@@ -4502,14 +4502,14 @@
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Inputs and Outputs of the task that provide values. Either an input or an output can be referenced."/>
         </eAnnotations>
-        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredOutput" eType="#//library/OutputDeclaration">
-          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-            <details key="documentation" value="The referenced output declaration. The declaredOutput must not be referenced if a declaredInput is referenced."/>
-          </eAnnotations>
-        </eStructuralFeatures>
         <eStructuralFeatures xsi:type="ecore:EReference" name="declaredInput" eType="#//library/InputDeclaration">
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="The referenced input declaration. The declaredInput must not be referenced if a declaredOutput is referenced."/>
+          </eAnnotations>
+        </eStructuralFeatures>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="declaredOutput" eType="#//library/OutputDeclaration">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The referenced output declaration. The declaredOutput must not be referenced if a declaredInput is referenced."/>
           </eAnnotations>
         </eStructuralFeatures>
       </eClassifiers>
@@ -5145,7 +5145,7 @@
           <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
             <details key="documentation" value="A row entry specifying an outgoing Boolean value on a specific outport."/>
           </eAnnotations>
-          <eStructuralFeatures xsi:type="ecore:EAttribute" name="bool" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
             <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
               <details key="documentation" value="The Boolean value this entry refers to."/>
             </eAnnotations>

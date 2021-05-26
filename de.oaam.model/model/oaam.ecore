@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oaam" nsURI="http://www.oaam.de/oaam/model/v150" nsPrefix="de.oaam.model">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="oaam" nsURI="http://www.oaam.de/oaam/model/v160" nsPrefix="de.oaam.model">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation" value="The Open Avionics Architecture Model (OAAM) is inteded for describing an avionics architecture in software, hardware and spaces. It contains nine layers (library, scenarios, systems, functions, hardware, anatomy, capabilities, restrictions, allocationss), which add up to the final architecture. It is intended to be the information store and system function description language for a plug&amp;fly avioncis system, but also for offline architecture analysis and optimization. It is allowed to distribute architecture information over multiple oaam files."/>
   </eAnnotations>
@@ -69,7 +69,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eSubpackages name="common" nsURI="http://www.oaam.de/oaam/model/v150/common" nsPrefix="de.oaam.model.common">
+  <eSubpackages name="common" nsURI="http://www.oaam.de/oaam/model/v160/common" nsPrefix="de.oaam.model.common">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The definition of common abstract classes and enumerations. This is not visible in the user model."/>
     </eAnnotations>
@@ -400,7 +400,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v150/library"
+  <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v160/library"
       nsPrefix="de.oaam.model.library">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Common and reusable definitions as data, task, hardware, and signal types."/>
@@ -1285,6 +1285,16 @@
           <details key="documentation" value="The fault propagation conditions for this output"/>
         </eAnnotations>
       </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The initial value of the output."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStateful">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Defines whether this output is a stateful output."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="IoDeclaration" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1643,7 +1653,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="scenario" nsURI="http://www.oaam.de/oaam/model/v150/scenario"
+  <eSubpackages name="scenario" nsURI="http://www.oaam.de/oaam/model/v160/scenario"
       nsPrefix="de.oaam.model.scenario">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Architecture wide properties, as well as variants and operation mode definitions."/>
@@ -1767,7 +1777,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="systems" nsURI="http://www.oaam.de/oaam/model/v150/systems"
+  <eSubpackages name="systems" nsURI="http://www.oaam.de/oaam/model/v160/systems"
       nsPrefix="de.oaam.model.systems">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="High-level and not executable description of systems including physical informations."/>
@@ -2036,7 +2046,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="functions" nsURI="http://www.oaam.de/oaam/model/v150/functions"
+  <eSubpackages name="functions" nsURI="http://www.oaam.de/oaam/model/v160/functions"
       nsPrefix="de.oaam.model.functions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Main part of the executable function description, including tasks and data flows."/>
@@ -2483,7 +2493,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v150/hardware"
+  <eSubpackages name="hardware" nsURI="http://www.oaam.de/oaam/model/v160/hardware"
       nsPrefix="de.oaam.model.hardware">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The hardware topology of devices and connections. "/>
@@ -2646,7 +2656,7 @@
       </eStructuralFeatures>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="anatomy" nsURI="http://www.oaam.de/oaam/model/v150/anatomy"
+  <eSubpackages name="anatomy" nsURI="http://www.oaam.de/oaam/model/v160/anatomy"
       nsPrefix="de.oaam.model.anatomy">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The spatial topology of installation locations and cable routes."/>
@@ -2838,7 +2848,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="capabilities" nsURI="http://www.oaam.de/oaam/model/v150/capabilities"
+  <eSubpackages name="capabilities" nsURI="http://www.oaam.de/oaam/model/v160/capabilities"
       nsPrefix="de.oaam.model.capabilities">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Definition of software to hardware to anatomy assignment possibilities and resource consumptions."/>
@@ -3176,7 +3186,7 @@
       </eAnnotations>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="restrictions" nsURI="http://www.oaam.de/oaam/model/v150/restrictions"
+  <eSubpackages name="restrictions" nsURI="http://www.oaam.de/oaam/model/v160/restrictions"
       nsPrefix="de.oaam.model.restrictions">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Constraints on system functions including the presented safety and timing restrictions."/>
@@ -3694,7 +3704,7 @@
       </eLiterals>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="allocations" nsURI="http://www.oaam.de/oaam/model/v150/allocations"
+  <eSubpackages name="allocations" nsURI="http://www.oaam.de/oaam/model/v160/allocations"
       nsPrefix="de.oaam.model.allocations">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The assignment of tasks functions to hardware and hardware to anatomy."/>
@@ -4249,7 +4259,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="PathA" abstract="true" interface="true"
         eSuperTypes="#//allocations/SegmentA"/>
   </eSubpackages>
-  <eSubpackages name="safety" nsURI="http://www.oaam.de/oaam/model/v150/safety" nsPrefix="de.oaam.model.safety">
+  <eSubpackages name="safety" nsURI="http://www.oaam.de/oaam/model/v160/safety" nsPrefix="de.oaam.model.safety">
     <eClassifiers xsi:type="ecore:EClass" name="PartFailureMode" eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The specification of a part failure mode. With help of the failure mode ratio the failure rate of this mode is specified depending on the failure rate."/>
@@ -4441,7 +4451,7 @@
         </eAnnotations>
       </eLiterals>
     </eClassifiers>
-    <eSubpackages name="taskInternalRequirements" nsURI="http://www.oaam.de/oaam/model/v150/safety/taskInternalRequirements"
+    <eSubpackages name="taskInternalRequirements" nsURI="http://www.oaam.de/oaam/model/v160/safety/taskInternalRequirements"
         nsPrefix="de.oaam.model.safety.taskInternalRequirements">
       <eClassifiers xsi:type="ecore:EClass" name="TaskInternalRequirement" eSuperTypes="#//common/OaamBaseElementA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4608,7 +4618,7 @@
         </eStructuralFeatures>
       </eClassifiers>
     </eSubpackages>
-    <eSubpackages name="failurePropagations" nsURI="http://www.oaam.de/oaam/model/v150/safety/failurePropagations"
+    <eSubpackages name="failurePropagations" nsURI="http://www.oaam.de/oaam/model/v160/safety/failurePropagations"
         nsPrefix="de.oaam.model.safety.failurePropagations">
       <eClassifiers xsi:type="ecore:EEnum" name="FailurePropagationGenericTypeE">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -4890,7 +4900,7 @@
           </eAnnotations>
         </eStructuralFeatures>
       </eClassifiers>
-      <eSubpackages name="failurePropagationMatrices" nsURI="http://www.oaam.de/oaam/model/v150/safety/failurePropagations/failurePropagationMatrices"
+      <eSubpackages name="failurePropagationMatrices" nsURI="http://www.oaam.de/oaam/model/v160/safety/failurePropagations/failurePropagationMatrices"
           nsPrefix="de.oaam.model.safety.failurePropagations.failurePropagationMatrices">
         <eClassifiers xsi:type="ecore:EClass" name="FailurePropagationMatrixA" abstract="true"
             eSuperTypes="#//safety/failurePropagations/PropagatorA">

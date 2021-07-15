@@ -4,6 +4,8 @@ package de.oaam.model.oaam.systems;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -29,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface SystemsContainerA extends OaamBaseElementA {
+public interface SystemsContainerA extends OaamBaseElementA, ModeDependentElementA, VariantDependentElementA {
 	/**
 	 * Returns the value of the '<em><b>Systems</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.systems.System}.

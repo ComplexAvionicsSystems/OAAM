@@ -162,7 +162,7 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS_CONTAINER_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -370,7 +370,7 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2372,7 +2372,7 @@ public interface FunctionsPackage extends EPackage {
 	int SUBFUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

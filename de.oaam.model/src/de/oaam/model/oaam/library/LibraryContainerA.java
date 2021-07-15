@@ -4,8 +4,6 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
-
-import de.oaam.model.oaam.systems.SystemsContainerA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -49,7 +47,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface LibraryContainerA extends OaamBaseElementA, SystemsContainerA {
+public interface LibraryContainerA extends OaamBaseElementA {
 	/**
 	 * Returns the value of the '<em><b>Data Types</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.common.DataTypeA}.

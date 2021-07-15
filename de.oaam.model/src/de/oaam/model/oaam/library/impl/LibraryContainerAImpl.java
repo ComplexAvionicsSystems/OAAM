@@ -28,12 +28,6 @@ import de.oaam.model.oaam.library.Sublibrary;
 import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
-
-import de.oaam.model.oaam.systems.InformationFlow;
-import de.oaam.model.oaam.systems.InputSegregation;
-import de.oaam.model.oaam.systems.Subsystem;
-import de.oaam.model.oaam.systems.SystemsContainerA;
-import de.oaam.model.oaam.systems.SystemsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -54,10 +48,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getSystems <em>Systems</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getInformationFlows <em>Information Flows</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getInputSegregations <em>Input Segregations</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getSubsystems <em>Subsystems</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getDataTypes <em>Data Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceTypes <em>Resource Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getResourceBundles <em>Resource Bundles</em>}</li>
@@ -85,46 +75,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl implements LibraryContainerA {
-	/**
-	 * The cached value of the '{@link #getSystems() <em>Systems</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSystems()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<de.oaam.model.oaam.systems.System> systems;
-
-	/**
-	 * The cached value of the '{@link #getInformationFlows() <em>Information Flows</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInformationFlows()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InformationFlow> informationFlows;
-
-	/**
-	 * The cached value of the '{@link #getInputSegregations() <em>Input Segregations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputSegregations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InputSegregation> inputSegregations;
-
-	/**
-	 * The cached value of the '{@link #getSubsystems() <em>Subsystems</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubsystems()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Subsystem> subsystems;
-
 	/**
 	 * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -362,54 +312,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	protected EClass eStaticClass() {
 		return LibraryPackage.Literals.LIBRARY_CONTAINER_A;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<de.oaam.model.oaam.systems.System> getSystems() {
-		if (systems == null) {
-			systems = new EObjectContainmentEList<de.oaam.model.oaam.systems.System>(de.oaam.model.oaam.systems.System.class, this, LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS);
-		}
-		return systems;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<InformationFlow> getInformationFlows() {
-		if (informationFlows == null) {
-			informationFlows = new EObjectContainmentEList<InformationFlow>(InformationFlow.class, this, LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS);
-		}
-		return informationFlows;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<InputSegregation> getInputSegregations() {
-		if (inputSegregations == null) {
-			inputSegregations = new EObjectContainmentEList<InputSegregation>(InputSegregation.class, this, LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS);
-		}
-		return inputSegregations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Subsystem> getSubsystems() {
-		if (subsystems == null) {
-			subsystems = new EObjectContainmentEList<Subsystem>(Subsystem.class, this, LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS);
-		}
-		return subsystems;
 	}
 
 	/**
@@ -684,14 +586,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-				return ((InternalEList<?>)getSystems()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-				return ((InternalEList<?>)getInformationFlows()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-				return ((InternalEList<?>)getInputSegregations()).basicRemove(otherEnd, msgs);
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
-				return ((InternalEList<?>)getSubsystems()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 				return ((InternalEList<?>)getDataTypes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
@@ -748,14 +642,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-				return getSystems();
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-				return getInformationFlows();
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-				return getInputSegregations();
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
-				return getSubsystems();
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 				return getDataTypes();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
@@ -813,22 +699,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-				getSystems().clear();
-				getSystems().addAll((Collection<? extends de.oaam.model.oaam.systems.System>)newValue);
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-				getInformationFlows().clear();
-				getInformationFlows().addAll((Collection<? extends InformationFlow>)newValue);
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-				getInputSegregations().clear();
-				getInputSegregations().addAll((Collection<? extends InputSegregation>)newValue);
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
-				getSubsystems().clear();
-				getSubsystems().addAll((Collection<? extends Subsystem>)newValue);
-				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 				getDataTypes().clear();
 				getDataTypes().addAll((Collection<? extends DataTypeA>)newValue);
@@ -929,18 +799,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-				getSystems().clear();
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-				getInformationFlows().clear();
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-				getInputSegregations().clear();
-				return;
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
-				getSubsystems().clear();
-				return;
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 				getDataTypes().clear();
 				return;
@@ -1019,14 +877,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-				return systems != null && !systems.isEmpty();
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-				return informationFlows != null && !informationFlows.isEmpty();
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-				return inputSegregations != null && !inputSegregations.isEmpty();
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
-				return subsystems != null && !subsystems.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 				return dataTypes != null && !dataTypes.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
@@ -1073,44 +923,6 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return busTypes != null && !busTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == SystemsContainerA.class) {
-			switch (derivedFeatureID) {
-				case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS: return SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS;
-				case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS: return SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS;
-				case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS: return SystemsPackage.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS;
-				case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS: return SystemsPackage.SYSTEMS_CONTAINER_A__SUBSYSTEMS;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == SystemsContainerA.class) {
-			switch (baseFeatureID) {
-				case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS: return LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS;
-				case SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS: return LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS;
-				case SystemsPackage.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS: return LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS;
-				case SystemsPackage.SYSTEMS_CONTAINER_A__SUBSYSTEMS: return LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //LibraryContainerAImpl

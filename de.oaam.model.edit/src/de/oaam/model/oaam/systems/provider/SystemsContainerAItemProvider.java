@@ -7,6 +7,8 @@ import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
+import de.oaam.model.oaam.scenario.ScenarioFactory;
+import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.systems.SystemsContainerA;
 import de.oaam.model.oaam.systems.SystemsFactory;
 import de.oaam.model.oaam.systems.SystemsPackage;
@@ -21,6 +23,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -52,8 +55,31 @@ public class SystemsContainerAItemProvider extends OaamBaseElementAItemProvider 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addVariantsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Variants feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addVariantsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_VariantDependentElementA_variants_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
+				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -68,6 +94,7 @@ public class SystemsContainerAItemProvider extends OaamBaseElementAItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__SYSTEMS);
 			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS);
 			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS);
@@ -116,6 +143,7 @@ public class SystemsContainerAItemProvider extends OaamBaseElementAItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SystemsContainerA.class)) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 			case SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS:
 			case SystemsPackage.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS:
@@ -136,6 +164,11 @@ public class SystemsContainerAItemProvider extends OaamBaseElementAItemProvider 
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
+				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
 
 		newChildDescriptors.add
 			(createChildParameter

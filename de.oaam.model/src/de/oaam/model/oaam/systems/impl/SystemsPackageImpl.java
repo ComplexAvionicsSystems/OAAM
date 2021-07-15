@@ -818,13 +818,11 @@ public class SystemsPackageImpl extends EPackageImpl implements SystemsPackage {
 
 		// Add supertypes to classes
 		systemsContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		systemsContainerAEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		systemsContainerAEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		systemsEClass.getESuperTypes().add(this.getSystemsContainerA());
 		subsystemEClass.getESuperTypes().add(this.getSystemsContainerA());
-		subsystemEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
-		subsystemEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		systemEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		systemEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
-		systemEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		systemEClass.getESuperTypes().add(this.getSystemsContainerA());
 		informationFlowEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
 		informationFlowEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());

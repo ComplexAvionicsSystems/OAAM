@@ -1915,7 +1915,7 @@ public interface CommonPackage extends EPackage {
 	int SYSTEM_BELONGING_ELEMENT_A = 17;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2505,10 +2505,10 @@ public interface CommonPackage extends EPackage {
 	EClass getSystemBelongingElementA();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.common.SystemBelongingElementA#getBelongsTo <em>Belongs To</em>}'.
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.common.SystemBelongingElementA#getBelongsTo <em>Belongs To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Belongs To</em>'.
+	 * @return the meta object for the reference list '<em>Belongs To</em>'.
 	 * @see de.oaam.model.oaam.common.SystemBelongingElementA#getBelongsTo()
 	 * @see #getSystemBelongingElementA()
 	 * @generated
@@ -3005,7 +3005,7 @@ public interface CommonPackage extends EPackage {
 		EClass SYSTEM_BELONGING_ELEMENT_A = eINSTANCE.getSystemBelongingElementA();
 
 		/**
-		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

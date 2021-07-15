@@ -7,13 +7,11 @@ import de.oaam.model.oaam.common.SystemBelongingElementA;
 
 import de.oaam.model.oaam.systems.SystemsContainerA;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,14 +28,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container implements SystemBelongingElementA {
 	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBelongsTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected SystemsContainerA belongsTo;
+	protected EList<SystemsContainerA> belongsTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,37 +61,11 @@ public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemsContainerA getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
-			belongsTo = (SystemsContainerA)eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO, oldBelongsTo, belongsTo));
-			}
+	public EList<SystemsContainerA> getBelongsTo() {
+		if (belongsTo == null) {
+			belongsTo = new EObjectResolvingEList<SystemsContainerA>(SystemsContainerA.class, this, CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO);
 		}
 		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SystemsContainerA basicGetBelongsTo() {
-		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBelongsTo(SystemsContainerA newBelongsTo) {
-		SystemsContainerA oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -105,8 +77,7 @@ public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container im
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
+				return getBelongsTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,11 +87,13 @@ public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)newValue);
+				getBelongsTo().clear();
+				getBelongsTo().addAll((Collection<? extends SystemsContainerA>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,7 +108,7 @@ public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)null);
+				getBelongsTo().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -150,7 +123,7 @@ public class SystemBelongingElementAImpl extends MinimalEObjectImpl.Container im
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO:
-				return belongsTo != null;
+				return belongsTo != null && !belongsTo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

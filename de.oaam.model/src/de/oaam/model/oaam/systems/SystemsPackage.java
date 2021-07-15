@@ -144,13 +144,31 @@ public interface SystemsPackage extends EPackage {
 	int SYSTEMS_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEMS_CONTAINER_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEMS_CONTAINER_A__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__SYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int SYSTEMS_CONTAINER_A__SYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
@@ -159,7 +177,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__INFORMATION_FLOWS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int SYSTEMS_CONTAINER_A__INFORMATION_FLOWS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
@@ -168,7 +186,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
@@ -177,7 +195,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A__SUBSYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int SYSTEMS_CONTAINER_A__SUBSYSTEMS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -186,7 +204,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEMS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int SYSTEMS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -278,6 +296,24 @@ public interface SystemsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SYSTEMS__TRACE_LINK = SYSTEMS_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEMS__OPERATION_MODES = SYSTEMS_CONTAINER_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEMS__VARIANTS = SYSTEMS_CONTAINER_A__VARIANTS;
 
 	/**
 	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
@@ -416,6 +452,24 @@ public interface SystemsPackage extends EPackage {
 	int SUBSYSTEM__TRACE_LINK = SYSTEMS_CONTAINER_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSYSTEM__OPERATION_MODES = SYSTEMS_CONTAINER_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBSYSTEM__VARIANTS = SYSTEMS_CONTAINER_A__VARIANTS;
+
+	/**
 	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -452,31 +506,13 @@ public interface SystemsPackage extends EPackage {
 	int SUBSYSTEM__SUBSYSTEMS = SYSTEMS_CONTAINER_A__SUBSYSTEMS;
 
 	/**
-	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBSYSTEM__OPERATION_MODES = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBSYSTEM__VARIANTS = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Subsystem</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBSYSTEM_FEATURE_COUNT = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 2;
+	int SUBSYSTEM_FEATURE_COUNT = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Subsystem</em>' class.
@@ -504,7 +540,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
+	int SYSTEM__ID = SYSTEMS_CONTAINER_A__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -513,7 +549,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
+	int SYSTEM__NAME = SYSTEMS_CONTAINER_A__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -522,7 +558,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
+	int SYSTEM__STYLE = SYSTEMS_CONTAINER_A__STYLE;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -531,7 +567,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
+	int SYSTEM__ATTRIBUTES = SYSTEMS_CONTAINER_A__ATTRIBUTES;
 
 	/**
 	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
@@ -540,7 +576,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
+	int SYSTEM__DOCUMENTATION = SYSTEMS_CONTAINER_A__DOCUMENTATION;
 
 	/**
 	 * The feature id for the '<em><b>Modified</b></em>' attribute.
@@ -549,7 +585,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
+	int SYSTEM__MODIFIED = SYSTEMS_CONTAINER_A__MODIFIED;
 
 	/**
 	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
@@ -558,7 +594,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
+	int SYSTEM__MODIFIER = SYSTEMS_CONTAINER_A__MODIFIER;
 
 	/**
 	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
@@ -567,16 +603,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Variants</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM__VARIANTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int SYSTEM__TRACE_LINK = SYSTEMS_CONTAINER_A__TRACE_LINK;
 
 	/**
 	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
@@ -585,7 +612,52 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int SYSTEM__OPERATION_MODES = SYSTEMS_CONTAINER_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__VARIANTS = SYSTEMS_CONTAINER_A__VARIANTS;
+
+	/**
+	 * The feature id for the '<em><b>Systems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__SYSTEMS = SYSTEMS_CONTAINER_A__SYSTEMS;
+
+	/**
+	 * The feature id for the '<em><b>Information Flows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__INFORMATION_FLOWS = SYSTEMS_CONTAINER_A__INFORMATION_FLOWS;
+
+	/**
+	 * The feature id for the '<em><b>Input Segregations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__INPUT_SEGREGATIONS = SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS;
+
+	/**
+	 * The feature id for the '<em><b>Subsystems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM__SUBSYSTEMS = SYSTEMS_CONTAINER_A__SUBSYSTEMS;
 
 	/**
 	 * The feature id for the '<em><b>Provided Outputs</b></em>' containment reference list.
@@ -594,7 +666,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__PROVIDED_OUTPUTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int SYSTEM__PROVIDED_OUTPUTS = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Required Inputs</b></em>' containment reference list.
@@ -603,7 +675,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM__REQUIRED_INPUTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int SYSTEM__REQUIRED_INPUTS = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>System</em>' class.
@@ -612,7 +684,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int SYSTEM_FEATURE_COUNT = SYSTEMS_CONTAINER_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>System</em>' class.
@@ -621,7 +693,7 @@ public interface SystemsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYSTEM_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+	int SYSTEM_OPERATION_COUNT = SYSTEMS_CONTAINER_A_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.systems.impl.RequiredInformationAImpl <em>Required Information A</em>}' class.

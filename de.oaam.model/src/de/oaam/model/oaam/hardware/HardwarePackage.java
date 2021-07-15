@@ -145,7 +145,7 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -897,7 +897,7 @@ public interface HardwarePackage extends EPackage {
 	int HARDWARE__TRACE_LINK = HARDWARE_CONTAINER_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1069,7 +1069,7 @@ public interface HardwarePackage extends EPackage {
 	int SUBHARDWARE__TRACE_LINK = HARDWARE_CONTAINER_A__TRACE_LINK;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

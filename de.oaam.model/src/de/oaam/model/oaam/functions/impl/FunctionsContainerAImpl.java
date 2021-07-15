@@ -26,16 +26,12 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
 
 import de.oaam.model.oaam.systems.SystemsContainerA;
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -86,14 +82,14 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 	protected EList<OperationModeReference> operationModes;
 
 	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBelongsTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected SystemsContainerA belongsTo;
+	protected EList<SystemsContainerA> belongsTo;
 
 	/**
 	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' containment reference list.
@@ -233,37 +229,11 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemsContainerA getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
-			belongsTo = (SystemsContainerA)eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
-			}
+	public EList<SystemsContainerA> getBelongsTo() {
+		if (belongsTo == null) {
+			belongsTo = new EObjectResolvingEList<SystemsContainerA>(SystemsContainerA.class, this, FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO);
 		}
 		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SystemsContainerA basicGetBelongsTo() {
-		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBelongsTo(SystemsContainerA newBelongsTo) {
-		SystemsContainerA oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -419,8 +389,7 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__OPERATION_MODES:
 				return getOperationModes();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
+				return getBelongsTo();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASKS:
 				return getTasks();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS:
@@ -461,7 +430,8 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				getOperationModes().addAll((Collection<? extends OperationModeReference>)newValue);
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)newValue);
+				getBelongsTo().clear();
+				getBelongsTo().addAll((Collection<? extends SystemsContainerA>)newValue);
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASKS:
 				getTasks().clear();
@@ -518,7 +488,7 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 				getOperationModes().clear();
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)null);
+				getBelongsTo().clear();
 				return;
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASKS:
 				getTasks().clear();
@@ -564,7 +534,7 @@ public abstract class FunctionsContainerAImpl extends OaamBaseElementAImpl imple
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__OPERATION_MODES:
 				return operationModes != null && !operationModes.isEmpty();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__BELONGS_TO:
-				return belongsTo != null;
+				return belongsTo != null && !belongsTo.isEmpty();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASKS:
 				return tasks != null && !tasks.isEmpty();
 			case FunctionsPackage.FUNCTIONS_CONTAINER_A__TASK_LINKS:

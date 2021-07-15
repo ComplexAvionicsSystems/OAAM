@@ -89,6 +89,8 @@ public class SystemsSwitch<T> extends Switch<T> {
 				SystemsContainerA systemsContainerA = (SystemsContainerA)theEObject;
 				T result = caseSystemsContainerA(systemsContainerA);
 				if (result == null) result = caseOaamBaseElementA(systemsContainerA);
+				if (result == null) result = caseModeDependentElementA(systemsContainerA);
+				if (result == null) result = caseVariantDependentElementA(systemsContainerA);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -97,6 +99,8 @@ public class SystemsSwitch<T> extends Switch<T> {
 				T result = caseSystems(systems);
 				if (result == null) result = caseSystemsContainerA(systems);
 				if (result == null) result = caseOaamBaseElementA(systems);
+				if (result == null) result = caseModeDependentElementA(systems);
+				if (result == null) result = caseVariantDependentElementA(systems);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -104,18 +108,19 @@ public class SystemsSwitch<T> extends Switch<T> {
 				Subsystem subsystem = (Subsystem)theEObject;
 				T result = caseSubsystem(subsystem);
 				if (result == null) result = caseSystemsContainerA(subsystem);
+				if (result == null) result = caseOaamBaseElementA(subsystem);
 				if (result == null) result = caseModeDependentElementA(subsystem);
 				if (result == null) result = caseVariantDependentElementA(subsystem);
-				if (result == null) result = caseOaamBaseElementA(subsystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case SystemsPackage.SYSTEM: {
 				de.oaam.model.oaam.systems.System system = (de.oaam.model.oaam.systems.System)theEObject;
 				T result = caseSystem(system);
+				if (result == null) result = caseSystemsContainerA(system);
 				if (result == null) result = caseOaamBaseElementA(system);
-				if (result == null) result = caseVariantDependentElementA(system);
 				if (result == null) result = caseModeDependentElementA(system);
+				if (result == null) result = caseVariantDependentElementA(system);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

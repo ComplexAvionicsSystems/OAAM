@@ -1033,7 +1033,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEAttribute(getBoolean_NBits(), ecorePackage.getEInt(), "nBits", "1", 1, 1, de.oaam.model.oaam.common.Boolean.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemBelongingElementAEClass, SystemBelongingElementA.class, "SystemBelongingElementA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemBelongingElementA_BelongsTo(), theSystemsPackage.getSystemsContainerA(), null, "belongsTo", null, 0, 1, SystemBelongingElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSystemBelongingElementA_BelongsTo(), theSystemsPackage.getSystemsContainerA(), null, "belongsTo", null, 0, -1, SystemBelongingElementA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(boolOperationTypesEEEnum, BoolOperationTypesE.class, "BoolOperationTypesE");

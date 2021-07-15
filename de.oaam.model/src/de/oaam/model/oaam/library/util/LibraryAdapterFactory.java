@@ -6,8 +6,6 @@ import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.*;
-
-import de.oaam.model.oaam.systems.SystemsContainerA;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -242,10 +240,6 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
 				return createOaamBaseElementAAdapter();
-			}
-			@Override
-			public Adapter caseSystemsContainerA(SystemsContainerA object) {
-				return createSystemsContainerAAdapter();
 			}
 			@Override
 			public Adapter caseBoolA(BoolA object) {
@@ -870,20 +864,6 @@ public class LibraryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOaamBaseElementAAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.systems.SystemsContainerA <em>Container A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.systems.SystemsContainerA
-	 * @generated
-	 */
-	public Adapter createSystemsContainerAAdapter() {
 		return null;
 	}
 

@@ -16,17 +16,14 @@ import de.oaam.model.oaam.hardware.Subhardware;
 
 import de.oaam.model.oaam.systems.SystemsContainerA;
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -49,14 +46,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implements HardwareContainerA {
 	/**
-	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference.
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBelongsTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected SystemsContainerA belongsTo;
+	protected EList<SystemsContainerA> belongsTo;
 
 	/**
 	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' containment reference list.
@@ -132,37 +129,11 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemsContainerA getBelongsTo() {
-		if (belongsTo != null && belongsTo.eIsProxy()) {
-			InternalEObject oldBelongsTo = (InternalEObject)belongsTo;
-			belongsTo = (SystemsContainerA)eResolveProxy(oldBelongsTo);
-			if (belongsTo != oldBelongsTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
-			}
+	public EList<SystemsContainerA> getBelongsTo() {
+		if (belongsTo == null) {
+			belongsTo = new EObjectResolvingEList<SystemsContainerA>(SystemsContainerA.class, this, HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO);
 		}
 		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SystemsContainerA basicGetBelongsTo() {
-		return belongsTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBelongsTo(SystemsContainerA newBelongsTo) {
-		SystemsContainerA oldBelongsTo = belongsTo;
-		belongsTo = newBelongsTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO, oldBelongsTo, belongsTo));
 	}
 
 	/**
@@ -256,8 +227,7 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
+				return getBelongsTo();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				return getDevices();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
@@ -282,7 +252,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)newValue);
+				getBelongsTo().clear();
+				getBelongsTo().addAll((Collection<? extends SystemsContainerA>)newValue);
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				getDevices().clear();
@@ -317,7 +288,7 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
-				setBelongsTo((SystemsContainerA)null);
+				getBelongsTo().clear();
 				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				getDevices().clear();
@@ -347,7 +318,7 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
-				return belongsTo != null;
+				return belongsTo != null && !belongsTo.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				return devices != null && !devices.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:

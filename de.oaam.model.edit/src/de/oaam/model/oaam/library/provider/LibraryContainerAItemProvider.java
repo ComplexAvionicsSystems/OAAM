@@ -12,9 +12,6 @@ import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
-
-import de.oaam.model.oaam.systems.SystemsFactory;
-import de.oaam.model.oaam.systems.SystemsPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -96,10 +93,6 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__SYSTEMS);
-			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS);
-			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS);
-			childrenFeatures.add(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__SUBSYSTEMS);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__DATA_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES);
@@ -166,10 +159,6 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LibraryContainerA.class)) {
-			case LibraryPackage.LIBRARY_CONTAINER_A__SYSTEMS:
-			case LibraryPackage.LIBRARY_CONTAINER_A__INFORMATION_FLOWS:
-			case LibraryPackage.LIBRARY_CONTAINER_A__INPUT_SEGREGATIONS:
-			case LibraryPackage.LIBRARY_CONTAINER_A__SUBSYSTEMS:
 			case LibraryPackage.LIBRARY_CONTAINER_A__DATA_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__RESOURCE_BUNDLES:
@@ -208,26 +197,6 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__SYSTEMS,
-				 SystemsFactory.eINSTANCE.createSystem()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS,
-				 SystemsFactory.eINSTANCE.createInformationFlow()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__INPUT_SEGREGATIONS,
-				 SystemsFactory.eINSTANCE.createInputSegregation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SystemsPackage.Literals.SYSTEMS_CONTAINER_A__SUBSYSTEMS,
-				 SystemsFactory.eINSTANCE.createSubsystem()));
 
 		newChildDescriptors.add
 			(createChildParameter

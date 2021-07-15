@@ -400,7 +400,8 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SystemBelongingElementA">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//systems/SystemsContainerA">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" upperBound="-1"
+          eType="#//systems/SystemsContainerA">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Reference a (sub)system here to show this (sub)function is part of that system"/>
         </eAnnotations>
@@ -620,7 +621,7 @@
       </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LibraryContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA #//systems/SystemsContainerA">
+        eSuperTypes="#//common/OaamBaseElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A library holds the definitions of all important basic elements used in the architecture model as for instance function types, device types, or resource types."/>
       </eAnnotations>
@@ -1813,7 +1814,7 @@
       <details key="documentation" value="High-level and not executable description of systems including physical informations."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="SystemsContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" The systems model contains a high level description of the system components as well as the data and power flow without specifying the implementation."/>
       </eAnnotations>
@@ -1847,12 +1848,12 @@
         <details key="documentation" value="The root container for of the systems model."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Subsystem" eSuperTypes="#//systems/SystemsContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Subsystem" eSuperTypes="#//systems/SystemsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A subsystem can be used like folders to organize the system model"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//systems/SystemsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A system is an encapsuleted functionality that interacts with information and power"/>
       </eAnnotations>

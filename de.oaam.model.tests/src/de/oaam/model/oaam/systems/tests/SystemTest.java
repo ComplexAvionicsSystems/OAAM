@@ -2,8 +2,6 @@
  */
 package de.oaam.model.oaam.systems.tests;
 
-import de.oaam.model.oaam.common.tests.OaamBaseElementATest;
-
 import de.oaam.model.oaam.systems.SystemsFactory;
 
 import junit.textui.TestRunner;
@@ -14,7 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SystemTest extends OaamBaseElementATest {
+public class SystemTest extends SystemsContainerATest {
 
 	/**
 	 * <!-- begin-user-doc -->

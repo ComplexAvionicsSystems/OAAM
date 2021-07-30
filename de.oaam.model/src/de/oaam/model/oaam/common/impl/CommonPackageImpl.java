@@ -31,7 +31,7 @@ import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.EndianessE;
 import de.oaam.model.oaam.common.FloatingPoint;
-import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.IntegrityStateE;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
 
@@ -49,9 +49,29 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -207,7 +227,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum integretyStateEEEnum = null;
+	private EEnum integrityStateEEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -284,6 +304,16 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(registeredPackage instanceof RestrictionsPackageImpl ? registeredPackage : RestrictionsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCommonPackage.createPackageContents();
@@ -297,6 +327,11 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCommonPackage.initializePackageContents();
@@ -310,6 +345,11 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theCommonPackage.freeze();
@@ -774,8 +814,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getIntegretyStateE() {
-		return integretyStateEEEnum;
+	public EEnum getIntegrityStateE() {
+		return integrityStateEEEnum;
 	}
 
 	/**
@@ -883,7 +923,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		// Create enums
 		boolOperationTypesEEEnum = createEEnum(BOOL_OPERATION_TYPES_E);
-		integretyStateEEEnum = createEEnum(INTEGRETY_STATE_E);
+		integrityStateEEEnum = createEEnum(INTEGRITY_STATE_E);
 		endianessEEEnum = createEEnum(ENDIANESS_E);
 	}
 
@@ -1006,10 +1046,10 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		addEEnumLiteral(boolOperationTypesEEEnum, BoolOperationTypesE.OR);
 		addEEnumLiteral(boolOperationTypesEEEnum, BoolOperationTypesE.XOR);
 
-		initEEnum(integretyStateEEEnum, IntegretyStateE.class, "IntegretyStateE");
-		addEEnumLiteral(integretyStateEEEnum, IntegretyStateE.OK);
-		addEEnumLiteral(integretyStateEEEnum, IntegretyStateE.FAILED);
-		addEEnumLiteral(integretyStateEEEnum, IntegretyStateE.UNKNOWN);
+		initEEnum(integrityStateEEEnum, IntegrityStateE.class, "IntegrityStateE");
+		addEEnumLiteral(integrityStateEEEnum, IntegrityStateE.OK);
+		addEEnumLiteral(integrityStateEEEnum, IntegrityStateE.FAILED_DETECTED);
+		addEEnumLiteral(integrityStateEEEnum, IntegrityStateE.FAILED_UNDETECTED);
 
 		initEEnum(endianessEEEnum, EndianessE.class, "EndianessE");
 		addEEnumLiteral(endianessEEEnum, EndianessE.BIG);

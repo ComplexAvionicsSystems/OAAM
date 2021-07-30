@@ -2,6 +2,7 @@
  */
 package de.oaam.model.oaam.allocations;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Segment</b></em>'.
@@ -17,5 +18,4 @@ package de.oaam.model.oaam.allocations;
  * @generated
  */
 public interface Segment extends SegmentA {
-
 } // Segment

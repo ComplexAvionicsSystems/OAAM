@@ -5,6 +5,8 @@ package de.oaam.model.oaam.library;
 import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FunctionalFailureModeSet;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -42,6 +44,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getHardwareGroupTypes <em>Hardware Group Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getMessageTypes <em>Message Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getBusTypes <em>Bus Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.LibraryContainerA#getFunctionalFailureModeSets <em>Functional Failure Mode Sets</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA()
@@ -378,5 +381,20 @@ public interface LibraryContainerA extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<BusType> getBusTypes();
+
+	/**
+	 * Returns the value of the '<em><b>Functional Failure Mode Sets</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.safety.FunctionalFailureModeSet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All sets of functional failure modes of the library.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Functional Failure Mode Sets</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getLibraryContainerA_FunctionalFailureModeSets()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FunctionalFailureModeSet> getFunctionalFailureModeSets();
 
 } // LibraryContainerA

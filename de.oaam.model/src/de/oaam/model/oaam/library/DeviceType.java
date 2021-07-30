@@ -4,6 +4,8 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -22,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getIoDeclarations <em>Io Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#isIsSubdevice <em>Is Subdevice</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#isCanHaveSubdevices <em>Can Have Subdevices</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.DeviceType#getMtbf <em>Mtbf</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getWeight <em>Weight</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getCost <em>Cost</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.DeviceType#getIoGroups <em>Io Groups</em>}</li>
@@ -33,7 +34,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface DeviceType extends ResourceConsumerA, ResourceProviderA, OaamBaseElementA {
+public interface DeviceType extends ResourceConsumerA, ResourceProviderA, OaamBaseElementA, FailureProviderA {
 	/**
 	 * Returns the value of the '<em><b>Io Declarations</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.IoDeclaration}.
@@ -100,31 +101,6 @@ public interface DeviceType extends ResourceConsumerA, ResourceProviderA, OaamBa
 	 * @generated
 	 */
 	void setCanHaveSubdevices(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Mtbf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The mean time between failure in [h]
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Mtbf</em>' attribute.
-	 * @see #setMtbf(double)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getDeviceType_Mtbf()
-	 * @model required="true"
-	 * @generated
-	 */
-	double getMtbf();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.DeviceType#getMtbf <em>Mtbf</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mtbf</em>' attribute.
-	 * @see #getMtbf()
-	 * @generated
-	 */
-	void setMtbf(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Weight</b></em>' attribute.

@@ -10,6 +10,9 @@ import de.oaam.model.oaam.library.ConnectionType;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -58,6 +61,8 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
+			addCanFailPropertyDescriptor(object);
+			addFailureRatePropertyDescriptor(object);
 			addIsInformationPropertyDescriptor(object);
 			addIsPowerPropertyDescriptor(object);
 			addWireTypesPropertyDescriptor(object);
@@ -231,6 +236,50 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Can Fail feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCanFailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_canFail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_canFail_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__CAN_FAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Failure Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFailureRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_failureRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_failureRate_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__FAILURE_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -668,6 +717,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_CONSUMER_A__REQUIRED_RESOURCES);
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_CONSUMER_A__CONSUMED_GROUPS);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES);
 		}
 		return childrenFeatures;
 	}
@@ -730,6 +780,8 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			case LibraryPackage.CONNECTION_TYPE__MODIFIED:
 			case LibraryPackage.CONNECTION_TYPE__MODIFIER:
 			case LibraryPackage.CONNECTION_TYPE__TRACE_LINK:
+			case LibraryPackage.CONNECTION_TYPE__CAN_FAIL:
+			case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE:
 			case LibraryPackage.CONNECTION_TYPE__IS_INFORMATION:
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
 			case LibraryPackage.CONNECTION_TYPE__IS_WIRELESS:
@@ -749,6 +801,7 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			case LibraryPackage.CONNECTION_TYPE__REQUIRED_RESOURCES:
 			case LibraryPackage.CONNECTION_TYPE__CONSUMED_GROUPS:
 			case LibraryPackage.CONNECTION_TYPE__ATTRIBUTES:
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -795,6 +848,11 @@ public class ConnectionTypeItemProvider extends ResourceProviderAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES,
+				 SafetyFactory.eINSTANCE.createPartFailureMode()));
 	}
 
 	/**

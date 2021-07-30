@@ -4,7 +4,7 @@ package de.oaam.model.oaam.library.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.IntegrityStateE;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.common.impl.BoolAImpl;
@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getTraceLink <em>Trace Link</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getState <em>State</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getIntegrityState <em>Integrity State</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
@@ -203,24 +203,24 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 	protected String traceLink = TRACE_LINK_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * The default value of the '{@link #getIntegrityState() <em>Integrity State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getState()
+	 * @see #getIntegrityState()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final IntegretyStateE STATE_EDEFAULT = IntegretyStateE.OK;
+	protected static final IntegrityStateE INTEGRITY_STATE_EDEFAULT = IntegrityStateE.OK;
 
 	/**
-	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * The cached value of the '{@link #getIntegrityState() <em>Integrity State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getState()
+	 * @see #getIntegrityState()
 	 * @generated
 	 * @ordered
 	 */
-	protected IntegretyStateE state = STATE_EDEFAULT;
+	protected IntegrityStateE integrityState = INTEGRITY_STATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
@@ -415,8 +415,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegretyStateE getState() {
-		return state;
+	public IntegrityStateE getIntegrityState() {
+		return integrityState;
 	}
 
 	/**
@@ -424,11 +424,11 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setState(IntegretyStateE newState) {
-		IntegretyStateE oldState = state;
-		state = newState == null ? STATE_EDEFAULT : newState;
+	public void setIntegrityState(IntegrityStateE newIntegrityState) {
+		IntegrityStateE oldIntegrityState = integrityState;
+		integrityState = newIntegrityState == null ? INTEGRITY_STATE_EDEFAULT : newIntegrityState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_INPUT_STATE__STATE, oldState, state));
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE, oldIntegrityState, integrityState));
 	}
 
 	/**
@@ -507,8 +507,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 				return getModifier();
 			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
 				return getTraceLink();
-			case LibraryPackage.TASK_INPUT_STATE__STATE:
-				return getState();
+			case LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE:
+				return getIntegrityState();
 			case LibraryPackage.TASK_INPUT_STATE__INPUT:
 				if (resolve) return getInput();
 				return basicGetInput();
@@ -550,8 +550,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
 				setTraceLink((String)newValue);
 				return;
-			case LibraryPackage.TASK_INPUT_STATE__STATE:
-				setState((IntegretyStateE)newValue);
+			case LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE:
+				setIntegrityState((IntegrityStateE)newValue);
 				return;
 			case LibraryPackage.TASK_INPUT_STATE__INPUT:
 				setInput((InputDeclaration)newValue);
@@ -592,8 +592,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
-			case LibraryPackage.TASK_INPUT_STATE__STATE:
-				setState(STATE_EDEFAULT);
+			case LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE:
+				setIntegrityState(INTEGRITY_STATE_EDEFAULT);
 				return;
 			case LibraryPackage.TASK_INPUT_STATE__INPUT:
 				setInput((InputDeclaration)null);
@@ -626,8 +626,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
-			case LibraryPackage.TASK_INPUT_STATE__STATE:
-				return state != STATE_EDEFAULT;
+			case LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE:
+				return integrityState != INTEGRITY_STATE_EDEFAULT;
 			case LibraryPackage.TASK_INPUT_STATE__INPUT:
 				return input != null;
 		}
@@ -704,8 +704,8 @@ public class TaskInputStateImpl extends BoolAImpl implements TaskInputState {
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
-		result.append(", state: ");
-		result.append(state);
+		result.append(", integrityState: ");
+		result.append(integrityState);
 		result.append(')');
 		return result.toString();
 	}

@@ -14,7 +14,7 @@ import de.oaam.model.oaam.common.CommonFactory;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.EndianessE;
 import de.oaam.model.oaam.common.FloatingPoint;
-import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.IntegrityStateE;
 import de.oaam.model.oaam.common.Struct;
 
 import org.eclipse.emf.ecore.EClass;
@@ -98,8 +98,8 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 		switch (eDataType.getClassifierID()) {
 			case CommonPackage.BOOL_OPERATION_TYPES_E:
 				return createBoolOperationTypesEFromString(eDataType, initialValue);
-			case CommonPackage.INTEGRETY_STATE_E:
-				return createIntegretyStateEFromString(eDataType, initialValue);
+			case CommonPackage.INTEGRITY_STATE_E:
+				return createIntegrityStateEFromString(eDataType, initialValue);
 			case CommonPackage.ENDIANESS_E:
 				return createEndianessEFromString(eDataType, initialValue);
 			default:
@@ -117,8 +117,8 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 		switch (eDataType.getClassifierID()) {
 			case CommonPackage.BOOL_OPERATION_TYPES_E:
 				return convertBoolOperationTypesEToString(eDataType, instanceValue);
-			case CommonPackage.INTEGRETY_STATE_E:
-				return convertIntegretyStateEToString(eDataType, instanceValue);
+			case CommonPackage.INTEGRITY_STATE_E:
+				return convertIntegrityStateEToString(eDataType, instanceValue);
 			case CommonPackage.ENDIANESS_E:
 				return convertEndianessEToString(eDataType, instanceValue);
 			default:
@@ -281,8 +281,8 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegretyStateE createIntegretyStateEFromString(EDataType eDataType, String initialValue) {
-		IntegretyStateE result = IntegretyStateE.get(initialValue);
+	public IntegrityStateE createIntegrityStateEFromString(EDataType eDataType, String initialValue) {
+		IntegrityStateE result = IntegrityStateE.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -292,7 +292,7 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertIntegretyStateEToString(EDataType eDataType, Object instanceValue) {
+	public String convertIntegrityStateEToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

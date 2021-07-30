@@ -5,6 +5,8 @@ package de.oaam.model.oaam.library;
 import de.oaam.model.oaam.common.DataTypeA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FaultPropagation;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,6 +30,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.OutputDeclaration#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.OutputDeclaration#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.OutputDeclaration#getFaultPropagations <em>Fault Propagations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.OutputDeclaration#getInitialValue <em>Initial Value</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.OutputDeclaration#isIsStateful <em>Is Stateful</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getOutputDeclaration()
@@ -214,7 +218,7 @@ public interface OutputDeclaration extends OaamBaseElementA {
 
 	/**
 	 * Returns the value of the '<em><b>Fault Propagations</b></em>' containment reference list.
-	 * The list contents are of type {@link de.oaam.model.oaam.library.FaultPropagation}.
+	 * The list contents are of type {@link de.oaam.model.oaam.safety.FaultPropagation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -226,5 +230,55 @@ public interface OutputDeclaration extends OaamBaseElementA {
 	 * @generated
 	 */
 	EList<FaultPropagation> getFaultPropagations();
+
+	/**
+	 * Returns the value of the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The initial value of the output.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Initial Value</em>' attribute.
+	 * @see #setInitialValue(String)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getOutputDeclaration_InitialValue()
+	 * @model
+	 * @generated
+	 */
+	String getInitialValue();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.OutputDeclaration#getInitialValue <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Initial Value</em>' attribute.
+	 * @see #getInitialValue()
+	 * @generated
+	 */
+	void setInitialValue(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Stateful</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Defines whether this output is a stateful output.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Is Stateful</em>' attribute.
+	 * @see #setIsStateful(boolean)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getOutputDeclaration_IsStateful()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsStateful();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.OutputDeclaration#isIsStateful <em>Is Stateful</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Stateful</em>' attribute.
+	 * @see #isIsStateful()
+	 * @generated
+	 */
+	void setIsStateful(boolean value);
 
 } // OutputDeclaration

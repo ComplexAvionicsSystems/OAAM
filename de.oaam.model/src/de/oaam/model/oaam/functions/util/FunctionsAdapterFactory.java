@@ -138,6 +138,10 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 				return createTaskParameterAdapter();
 			}
 			@Override
+			public Adapter caseTaskFailure(TaskFailure object) {
+				return createTaskFailureAdapter();
+			}
+			@Override
 			public Adapter caseOaamBaseElementA(OaamBaseElementA object) {
 				return createOaamBaseElementAAdapter();
 			}
@@ -394,6 +398,20 @@ public class FunctionsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTaskParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.functions.TaskFailure <em>Task Failure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.functions.TaskFailure
+	 * @generated
+	 */
+	public Adapter createTaskFailureAdapter() {
 		return null;
 	}
 

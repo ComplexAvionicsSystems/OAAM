@@ -77,7 +77,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 			case LibraryPackage.DEVICE_TYPE_SYMMETRY: return createDeviceTypeSymmetry();
 			case LibraryPackage.IO_GROUP: return createIoGroup();
 			case LibraryPackage.ATTRIBUTE_DEFINITION: return createAttributeDefinition();
-			case LibraryPackage.FAULT_PROPAGATION: return createFaultPropagation();
 			case LibraryPackage.TASK_INPUT_STATE: return createTaskInputState();
 			case LibraryPackage.POWER_SOURCE: return createPowerSource();
 			case LibraryPackage.RESOURCE_LINK: return createResourceLink();
@@ -343,16 +342,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FaultPropagation createFaultPropagation() {
-		FaultPropagationImpl faultPropagation = new FaultPropagationImpl();
-		return faultPropagation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TaskInputState createTaskInputState() {
 		TaskInputStateImpl taskInputState = new TaskInputStateImpl();
 		return taskInputState;
@@ -443,16 +432,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Sublibrary createSublibrary() {
-		SublibraryImpl sublibrary = new SublibraryImpl();
-		return sublibrary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TaskOutputTrigger createTaskOutputTrigger() {
 		TaskOutputTriggerImpl taskOutputTrigger = new TaskOutputTriggerImpl();
 		return taskOutputTrigger;
@@ -493,16 +472,6 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Library createLibrary() {
-		LibraryImpl library = new LibraryImpl();
-		return library;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public BusType createBusType() {
 		BusTypeImpl busType = new BusTypeImpl();
 		return busType;
@@ -516,6 +485,26 @@ public class LibraryFactoryImpl extends EFactoryImpl implements LibraryFactory {
 	public MessageType createMessageType() {
 		MessageTypeImpl messageType = new MessageTypeImpl();
 		return messageType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Library createLibrary() {
+		LibraryImpl library = new LibraryImpl();
+		return library;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sublibrary createSublibrary() {
+		SublibraryImpl sublibrary = new SublibraryImpl();
+		return sublibrary;
 	}
 
 	/**

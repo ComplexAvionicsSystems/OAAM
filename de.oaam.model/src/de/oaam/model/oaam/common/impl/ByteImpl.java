@@ -5,8 +5,11 @@ package de.oaam.model.oaam.common.impl;
 import de.oaam.model.oaam.common.CommonPackage;
 
 import java.lang.Integer;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,6 +35,7 @@ public class ByteImpl extends DataTypeAImpl implements de.oaam.model.oaam.common
 	 * @ordered
 	 */
 	protected static final int NBITS_EDEFAULT = 8;
+
 	/**
 	 * The cached value of the '{@link #getNBits() <em>NBits</em>}' attribute.
 	 * <!-- begin-user-doc -->

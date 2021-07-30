@@ -34,6 +34,10 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.AreaRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestriction;
 import de.oaam.model.oaam.restrictions.ConnectionRestrinctionA;
@@ -59,6 +63,22 @@ import de.oaam.model.oaam.restrictions.TaskGroupRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskRestrictionA;
 import de.oaam.model.oaam.restrictions.TaskSymmetryRestriction;
 import de.oaam.model.oaam.restrictions.TimeDelayRestriction;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -312,6 +332,16 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		CapabilitiesPackageImpl theCapabilitiesPackage = (CapabilitiesPackageImpl)(registeredPackage instanceof CapabilitiesPackageImpl ? registeredPackage : CapabilitiesPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theRestrictionsPackage.createPackageContents();
@@ -325,6 +355,11 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		theAnatomyPackage.createPackageContents();
 		theCapabilitiesPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theRestrictionsPackage.initializePackageContents();
@@ -338,6 +373,11 @@ public class RestrictionsPackageImpl extends EPackageImpl implements Restriction
 		theAnatomyPackage.initializePackageContents();
 		theCapabilitiesPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theRestrictionsPackage.freeze();

@@ -11,6 +11,7 @@ import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 import de.oaam.model.oaam.functions.FailureCondition;
 import de.oaam.model.oaam.functions.FunctionsPackage;
 import de.oaam.model.oaam.functions.OutputIntegrityState;
+import de.oaam.model.oaam.functions.TaskFailure;
 
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
@@ -50,6 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getBooleanOperations <em>Boolean Operations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getBooleanNots <em>Boolean Nots</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getOutputIntegrityStates <em>Output Integrity States</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.FailureConditionImpl#getTaskFailures <em>Task Failures</em>}</li>
  * </ul>
  *
  * @generated
@@ -154,6 +156,16 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * @ordered
 	 */
 	protected EList<OutputIntegrityState> outputIntegrityStates;
+
+	/**
+	 * The cached value of the '{@link #getTaskFailures() <em>Task Failures</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskFailures()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskFailure> taskFailures;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -319,6 +331,18 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TaskFailure> getTaskFailures() {
+		if (taskFailures == null) {
+			taskFailures = new EObjectContainmentEList<TaskFailure>(TaskFailure.class, this, FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES);
+		}
+		return taskFailures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -330,6 +354,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return ((InternalEList<?>)getBooleanNots()).basicRemove(otherEnd, msgs);
 			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
 				return ((InternalEList<?>)getOutputIntegrityStates()).basicRemove(otherEnd, msgs);
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
+				return ((InternalEList<?>)getTaskFailures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -359,6 +385,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return getBooleanNots();
 			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
 				return getOutputIntegrityStates();
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
+				return getTaskFailures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -401,6 +429,10 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				getOutputIntegrityStates().clear();
 				getOutputIntegrityStates().addAll((Collection<? extends OutputIntegrityState>)newValue);
 				return;
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
+				getTaskFailures().clear();
+				getTaskFailures().addAll((Collection<? extends TaskFailure>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -437,6 +469,9 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
 				getOutputIntegrityStates().clear();
 				return;
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
+				getTaskFailures().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -465,6 +500,8 @@ public class FailureConditionImpl extends OaamBaseElementAImpl implements Failur
 				return booleanNots != null && !booleanNots.isEmpty();
 			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
 				return outputIntegrityStates != null && !outputIntegrityStates.isEmpty();
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
+				return taskFailures != null && !taskFailures.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

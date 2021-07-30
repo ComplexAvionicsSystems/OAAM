@@ -21,7 +21,17 @@ import de.oaam.model.oaam.hardware.HardwareFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
 
+import de.oaam.model.oaam.physical.PhysicalFactory;
+
 import de.oaam.model.oaam.restrictions.RestrictionsFactory;
+
+import de.oaam.model.oaam.safety.SafetyFactory;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsFactory;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesFactory;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsFactory;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 
@@ -329,11 +339,6 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
-				 LibraryFactory.eINSTANCE.createFaultPropagation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 LibraryFactory.eINSTANCE.createTaskInputState()));
 
 		newChildDescriptors.add
@@ -585,6 +590,11 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 FunctionsFactory.eINSTANCE.createTaskParameter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FunctionsFactory.eINSTANCE.createTaskFailure()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -885,6 +895,276 @@ public class AttributeContainmentItemProvider extends AttributeAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
 				 AllocationsFactory.eINSTANCE.createPathGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createPartFailureMode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createFailureEffect()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createFaultPropagation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createFunctionalFailureModeSet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createFunctionalFailureMode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 SafetyFactory.eINSTANCE.createRequirementFailureEffect()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createTaskInternalRequirement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createAgreement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createBelow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createAbove()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createIoSignal()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createBoolTimeout()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createAnd()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createOr()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createNot()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 TaskInternalRequirementsFactory.eINSTANCE.createContract()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createFailurePropagation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanAnd()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanOr()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanXor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanNot()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createIntegrityStateBooleanConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createFailureModeBooleanConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanFailureModeConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createIntegrityStateFailureModeConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createFailureModeIntegrityStateConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createBooleanIntegrityStateConversion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createPropagationInput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createPropagationOutput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createPropagationSource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationsFactory.eINSTANCE.createPropagationSink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeMatrix()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateMatrix()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanMatrix()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeInport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeOutport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeMatrixRow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeInportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createFailureModeOutportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateOutport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateInport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateMatrixRow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateInportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createIntegrityStateOutportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanInport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanOutport()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanMatrixRow()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanInportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 FailurePropagationMatricesFactory.eINSTANCE.createBooleanOutportEntry()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 PhysicalFactory.eINSTANCE.createSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 PhysicalFactory.eINSTANCE.createEffector()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 PhysicalFactory.eINSTANCE.createPhysicalInteraction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CommonPackage.Literals.ATTRIBUTE_CONTAINMENT__VALUE,
+				 PhysicalFactory.eINSTANCE.createSubphysicalInteraction()));
 	}
 
 	/**

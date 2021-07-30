@@ -42,7 +42,7 @@ public interface CommonPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/common";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/common";
 
 	/**
 	 * The package namespace name.
@@ -1915,14 +1915,14 @@ public interface CommonPackage extends EPackage {
 	int BOOL_OPERATION_TYPES_E = 17;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.common.IntegretyStateE <em>Integrety State E</em>}' enum.
+	 * The meta object id for the '{@link de.oaam.model.oaam.common.IntegrityStateE <em>Integrity State E</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.common.IntegretyStateE
-	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getIntegretyStateE()
+	 * @see de.oaam.model.oaam.common.IntegrityStateE
+	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getIntegrityStateE()
 	 * @generated
 	 */
-	int INTEGRETY_STATE_E = 18;
+	int INTEGRITY_STATE_E = 18;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.EndianessE <em>Endianess E</em>}' enum.
@@ -2468,14 +2468,14 @@ public interface CommonPackage extends EPackage {
 	EEnum getBoolOperationTypesE();
 
 	/**
-	 * Returns the meta object for enum '{@link de.oaam.model.oaam.common.IntegretyStateE <em>Integrety State E</em>}'.
+	 * Returns the meta object for enum '{@link de.oaam.model.oaam.common.IntegrityStateE <em>Integrity State E</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Integrety State E</em>'.
-	 * @see de.oaam.model.oaam.common.IntegretyStateE
+	 * @return the meta object for enum '<em>Integrity State E</em>'.
+	 * @see de.oaam.model.oaam.common.IntegrityStateE
 	 * @generated
 	 */
-	EEnum getIntegretyStateE();
+	EEnum getIntegrityStateE();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.common.EndianessE <em>Endianess E</em>}'.
@@ -2947,14 +2947,14 @@ public interface CommonPackage extends EPackage {
 		EEnum BOOL_OPERATION_TYPES_E = eINSTANCE.getBoolOperationTypesE();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.common.IntegretyStateE <em>Integrety State E</em>}' enum.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.common.IntegrityStateE <em>Integrity State E</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.common.IntegretyStateE
-		 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getIntegretyStateE()
+		 * @see de.oaam.model.oaam.common.IntegrityStateE
+		 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getIntegrityStateE()
 		 * @generated
 		 */
-		EEnum INTEGRETY_STATE_E = eINSTANCE.getIntegretyStateE();
+		EEnum INTEGRITY_STATE_E = eINSTANCE.getIntegrityStateE();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.EndianessE <em>Endianess E</em>}' enum.

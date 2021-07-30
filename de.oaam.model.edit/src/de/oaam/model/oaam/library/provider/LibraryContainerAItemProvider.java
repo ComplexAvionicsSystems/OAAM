@@ -13,6 +13,8 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -116,6 +118,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__MESSAGE_TYPES);
 			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES);
+			childrenFeatures.add(LibraryPackage.Literals.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS);
 		}
 		return childrenFeatures;
 	}
@@ -182,6 +185,7 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__MESSAGE_TYPES:
 			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -338,6 +342,11 @@ public class LibraryContainerAItemProvider extends OaamBaseElementAItemProvider 
 			(createChildParameter
 				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__BUS_TYPES,
 				 LibraryFactory.eINSTANCE.createBusType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS,
+				 SafetyFactory.eINSTANCE.createFunctionalFailureModeSet()));
 	}
 
 	/**

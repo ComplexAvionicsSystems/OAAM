@@ -42,7 +42,7 @@ public interface OaamPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160";
 
 	/**
 	 * The package namespace name.
@@ -233,13 +233,22 @@ public interface OaamPackage extends EPackage {
 	int ARCHITECTURE__ALLOCATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Physical Interaction</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__PHYSICAL_INTERACTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+	int ARCHITECTURE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Architecture</em>' class.
@@ -372,6 +381,17 @@ public interface OaamPackage extends EPackage {
 	EReference getArchitecture_Allocations();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.Architecture#getPhysicalInteraction <em>Physical Interaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Physical Interaction</em>'.
+	 * @see de.oaam.model.oaam.Architecture#getPhysicalInteraction()
+	 * @see #getArchitecture()
+	 * @generated
+	 */
+	EReference getArchitecture_PhysicalInteraction();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -483,6 +503,14 @@ public interface OaamPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ARCHITECTURE__ALLOCATIONS = eINSTANCE.getArchitecture_Allocations();
+
+		/**
+		 * The meta object literal for the '<em><b>Physical Interaction</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARCHITECTURE__PHYSICAL_INTERACTION = eINSTANCE.getArchitecture_PhysicalInteraction();
 
 	}
 

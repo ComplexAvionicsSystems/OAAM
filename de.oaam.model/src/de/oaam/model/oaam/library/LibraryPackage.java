@@ -44,7 +44,7 @@ public interface LibraryPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/library";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/library";
 
 	/**
 	 * The package namespace name.
@@ -490,13 +490,22 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY_CONTAINER_A__BUS_TYPES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 21;
 
 	/**
+	 * The feature id for the '<em><b>Functional Failure Mode Sets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 22;
+
+	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 22;
+	int LIBRARY_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 23;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -1260,13 +1269,31 @@ public interface LibraryPackage extends EPackage {
 	int TASK_TYPE__PARAMETER_DECLARATIONS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Task Internal Requirements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__TASK_INTERNAL_REQUIREMENTS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Failure Propagation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_TYPE__FAILURE_PROPAGATION = RESOURCE_CONSUMER_A_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>Task Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 14;
+	int TASK_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Task Type</em>' class.
@@ -1541,13 +1568,40 @@ public interface LibraryPackage extends EPackage {
 	int DEVICE_TYPE__TRACE_LINK = RESOURCE_CONSUMER_A_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Can Fail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE__CAN_FAIL = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Failure Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE__FAILURE_RATE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Part Failure Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVICE_TYPE__PART_FAILURE_MODES = RESOURCE_CONSUMER_A_FEATURE_COUNT + 14;
+
+	/**
 	 * The feature id for the '<em><b>Io Declarations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__IO_DECLARATIONS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 12;
+	int DEVICE_TYPE__IO_DECLARATIONS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Is Subdevice</b></em>' attribute.
@@ -1556,7 +1610,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__IS_SUBDEVICE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 13;
+	int DEVICE_TYPE__IS_SUBDEVICE = RESOURCE_CONSUMER_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Can Have Subdevices</b></em>' attribute.
@@ -1565,16 +1619,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__CAN_HAVE_SUBDEVICES = RESOURCE_CONSUMER_A_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Mtbf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEVICE_TYPE__MTBF = RESOURCE_CONSUMER_A_FEATURE_COUNT + 15;
+	int DEVICE_TYPE__CAN_HAVE_SUBDEVICES = RESOURCE_CONSUMER_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -1583,7 +1628,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__WEIGHT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 16;
+	int DEVICE_TYPE__WEIGHT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Cost</b></em>' attribute.
@@ -1592,7 +1637,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__COST = RESOURCE_CONSUMER_A_FEATURE_COUNT + 17;
+	int DEVICE_TYPE__COST = RESOURCE_CONSUMER_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Io Groups</b></em>' containment reference list.
@@ -1601,7 +1646,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__IO_GROUPS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 18;
+	int DEVICE_TYPE__IO_GROUPS = RESOURCE_CONSUMER_A_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Is Self Managing</b></em>' attribute.
@@ -1610,7 +1655,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE__IS_SELF_MANAGING = RESOURCE_CONSUMER_A_FEATURE_COUNT + 19;
+	int DEVICE_TYPE__IS_SELF_MANAGING = RESOURCE_CONSUMER_A_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of structural features of the '<em>Device Type</em>' class.
@@ -1619,7 +1664,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 20;
+	int DEVICE_TYPE_FEATURE_COUNT = RESOURCE_CONSUMER_A_FEATURE_COUNT + 22;
 
 	/**
 	 * The number of operations of the '<em>Device Type</em>' class.
@@ -1767,13 +1812,40 @@ public interface LibraryPackage extends EPackage {
 	int CONNECTION_TYPE__TRACE_LINK = RESOURCE_PROVIDER_A_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Can Fail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__CAN_FAIL = RESOURCE_PROVIDER_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Failure Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__FAILURE_RATE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Part Failure Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_TYPE__PART_FAILURE_MODES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 12;
+
+	/**
 	 * The feature id for the '<em><b>Is Information</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__IS_INFORMATION = RESOURCE_PROVIDER_A_FEATURE_COUNT + 10;
+	int CONNECTION_TYPE__IS_INFORMATION = RESOURCE_PROVIDER_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Is Power</b></em>' attribute.
@@ -1782,7 +1854,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__IS_POWER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 11;
+	int CONNECTION_TYPE__IS_POWER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Wire Types</b></em>' reference list.
@@ -1791,7 +1863,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__WIRE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 12;
+	int CONNECTION_TYPE__WIRE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Is Wireless</b></em>' attribute.
@@ -1800,7 +1872,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__IS_WIRELESS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 13;
+	int CONNECTION_TYPE__IS_WIRELESS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Allows Circles</b></em>' attribute.
@@ -1809,7 +1881,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__ALLOWS_CIRCLES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 14;
+	int CONNECTION_TYPE__ALLOWS_CIRCLES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>NStarting Points</b></em>' attribute.
@@ -1818,7 +1890,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__NSTARTING_POINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 15;
+	int CONNECTION_TYPE__NSTARTING_POINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Starting Point Resource Types</b></em>' reference list.
@@ -1827,7 +1899,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 16;
+	int CONNECTION_TYPE__STARTING_POINT_RESOURCE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>NEnd Points</b></em>' attribute.
@@ -1836,7 +1908,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__NEND_POINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 17;
+	int CONNECTION_TYPE__NEND_POINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>End Point Resource Types</b></em>' reference list.
@@ -1845,7 +1917,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__END_POINT_RESOURCE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 18;
+	int CONNECTION_TYPE__END_POINT_RESOURCE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>NJoints</b></em>' attribute.
@@ -1854,7 +1926,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__NJOINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 19;
+	int CONNECTION_TYPE__NJOINTS = RESOURCE_PROVIDER_A_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Max Joint Branches</b></em>' attribute.
@@ -1863,7 +1935,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__MAX_JOINT_BRANCHES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 20;
+	int CONNECTION_TYPE__MAX_JOINT_BRANCHES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Max Interface To Joint Distance</b></em>' attribute.
@@ -1872,7 +1944,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__MAX_INTERFACE_TO_JOINT_DISTANCE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 21;
+	int CONNECTION_TYPE__MAX_INTERFACE_TO_JOINT_DISTANCE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Switch Types</b></em>' reference list.
@@ -1881,7 +1953,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__SWITCH_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 22;
+	int CONNECTION_TYPE__SWITCH_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 25;
 
 	/**
 	 * The feature id for the '<em><b>Is Switched</b></em>' attribute.
@@ -1890,7 +1962,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__IS_SWITCHED = RESOURCE_PROVIDER_A_FEATURE_COUNT + 23;
+	int CONNECTION_TYPE__IS_SWITCHED = RESOURCE_PROVIDER_A_FEATURE_COUNT + 26;
 
 	/**
 	 * The feature id for the '<em><b>Direct Connections Allowed</b></em>' attribute.
@@ -1899,7 +1971,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__DIRECT_CONNECTIONS_ALLOWED = RESOURCE_PROVIDER_A_FEATURE_COUNT + 24;
+	int CONNECTION_TYPE__DIRECT_CONNECTIONS_ALLOWED = RESOURCE_PROVIDER_A_FEATURE_COUNT + 27;
 
 	/**
 	 * The feature id for the '<em><b>Max Length</b></em>' attribute.
@@ -1908,7 +1980,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__MAX_LENGTH = RESOURCE_PROVIDER_A_FEATURE_COUNT + 25;
+	int CONNECTION_TYPE__MAX_LENGTH = RESOURCE_PROVIDER_A_FEATURE_COUNT + 28;
 
 	/**
 	 * The feature id for the '<em><b>Is Unidirectional</b></em>' attribute.
@@ -1917,7 +1989,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__IS_UNIDIRECTIONAL = RESOURCE_PROVIDER_A_FEATURE_COUNT + 26;
+	int CONNECTION_TYPE__IS_UNIDIRECTIONAL = RESOURCE_PROVIDER_A_FEATURE_COUNT + 29;
 
 	/**
 	 * The feature id for the '<em><b>Requires Master</b></em>' attribute.
@@ -1926,7 +1998,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 27;
+	int CONNECTION_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 30;
 
 	/**
 	 * The feature id for the '<em><b>Message Type</b></em>' reference.
@@ -1935,7 +2007,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE__MESSAGE_TYPE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 28;
+	int CONNECTION_TYPE__MESSAGE_TYPE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 31;
 
 	/**
 	 * The number of structural features of the '<em>Connection Type</em>' class.
@@ -1944,7 +2016,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 29;
+	int CONNECTION_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 32;
 
 	/**
 	 * The number of operations of the '<em>Connection Type</em>' class.
@@ -2328,13 +2400,40 @@ public interface LibraryPackage extends EPackage {
 	int WIRE_TYPE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Can Fail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRE_TYPE__CAN_FAIL = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Failure Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRE_TYPE__FAILURE_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Part Failure Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIRE_TYPE__PART_FAILURE_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Specific Weight</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__SPECIFIC_WEIGHT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int WIRE_TYPE__SPECIFIC_WEIGHT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Specific Price</b></em>' attribute.
@@ -2343,7 +2442,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__SPECIFIC_PRICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int WIRE_TYPE__SPECIFIC_PRICE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>NConductors</b></em>' attribute.
@@ -2352,7 +2451,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__NCONDUCTORS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int WIRE_TYPE__NCONDUCTORS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Min Bending Radius</b></em>' attribute.
@@ -2361,7 +2460,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__MIN_BENDING_RADIUS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int WIRE_TYPE__MIN_BENDING_RADIUS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>NShields</b></em>' attribute.
@@ -2370,16 +2469,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE__NSHIELDS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Mtbf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIRE_TYPE__MTBF = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int WIRE_TYPE__NSHIELDS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Wire Type</em>' class.
@@ -2388,7 +2478,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WIRE_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int WIRE_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Wire Type</em>' class.
@@ -2482,13 +2572,40 @@ public interface LibraryPackage extends EPackage {
 	int IO_TYPE__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Can Fail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__CAN_FAIL = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Failure Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__FAILURE_RATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Part Failure Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IO_TYPE__PART_FAILURE_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Direction</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IO_TYPE__DIRECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int IO_TYPE__DIRECTION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Io Type</em>' class.
@@ -2497,7 +2614,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int IO_TYPE_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Io Type</em>' class.
@@ -2817,13 +2934,31 @@ public interface LibraryPackage extends EPackage {
 	int OUTPUT_DECLARATION__FAULT_PROPAGATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Initial Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_DECLARATION__INITIAL_VALUE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Is Stateful</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT_DECLARATION__IS_STATEFUL = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Output Declaration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int OUTPUT_DECLARATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Output Declaration</em>' class.
@@ -3498,151 +3633,6 @@ public interface LibraryPackage extends EPackage {
 	int ATTRIBUTE_DEFINITION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl <em>Fault Propagation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.FaultPropagationImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFaultPropagation()
-	 * @generated
-	 */
-	int FAULT_PROPAGATION = 24;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__ID = CommonPackage.OAAM_BASE_ELEMENT_A__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__NAME = CommonPackage.OAAM_BASE_ELEMENT_A__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__STYLE = CommonPackage.OAAM_BASE_ELEMENT_A__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__ATTRIBUTES = CommonPackage.OAAM_BASE_ELEMENT_A__ATTRIBUTES;
-
-	/**
-	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__DOCUMENTATION = CommonPackage.OAAM_BASE_ELEMENT_A__DOCUMENTATION;
-
-	/**
-	 * The feature id for the '<em><b>Modified</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__MODIFIED = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIED;
-
-	/**
-	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__MODIFIER = CommonPackage.OAAM_BASE_ELEMENT_A__MODIFIER;
-
-	/**
-	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
-
-	/**
-	 * The feature id for the '<em><b>Output State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__OUTPUT_STATE = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Condition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__CONDITION = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Operations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__BOOLEAN_OPERATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Boolean Nots</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__BOOLEAN_NOTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Task Input States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION__TASK_INPUT_STATES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Fault Propagation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of operations of the '<em>Fault Propagation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FAULT_PROPAGATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl <em>Task Input State</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3650,7 +3640,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputState()
 	 * @generated
 	 */
-	int TASK_INPUT_STATE = 25;
+	int TASK_INPUT_STATE = 24;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3725,13 +3715,13 @@ public interface LibraryPackage extends EPackage {
 	int TASK_INPUT_STATE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * The feature id for the '<em><b>Integrity State</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_INPUT_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
+	int TASK_INPUT_STATE__INTEGRITY_STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference.
@@ -3768,7 +3758,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getPowerSource()
 	 * @generated
 	 */
-	int POWER_SOURCE = 26;
+	int POWER_SOURCE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3868,7 +3858,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceLink()
 	 * @generated
 	 */
-	int RESOURCE_LINK = 27;
+	int RESOURCE_LINK = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3986,7 +3976,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifier()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER = 28;
+	int RESOURCE_TYPE_MODIFIER = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4095,7 +4085,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierLevel()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER_LEVEL = 29;
+	int RESOURCE_TYPE_MODIFIER_LEVEL = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4231,7 +4221,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeModifierReference()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_MODIFIER_REFERENCE = 30;
+	int RESOURCE_TYPE_MODIFIER_REFERENCE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4349,7 +4339,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskTypeDissimilarity()
 	 * @generated
 	 */
-	int TASK_TYPE_DISSIMILARITY = 31;
+	int TASK_TYPE_DISSIMILARITY = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4467,7 +4457,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getDeviceTypeDissimilarity()
 	 * @generated
 	 */
-	int DEVICE_TYPE_DISSIMILARITY = 32;
+	int DEVICE_TYPE_DISSIMILARITY = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4585,7 +4575,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getResourceTypeDissimilarity()
 	 * @generated
 	 */
-	int RESOURCE_TYPE_DISSIMILARITY = 33;
+	int RESOURCE_TYPE_DISSIMILARITY = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4687,16 +4677,6 @@ public interface LibraryPackage extends EPackage {
 	int RESOURCE_TYPE_DISSIMILARITY_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.SublibraryImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
-	 * @generated
-	 */
-	int SUBLIBRARY = 41;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl <em>Task Output Trigger</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4704,7 +4684,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskOutputTrigger()
 	 * @generated
 	 */
-	int TASK_OUTPUT_TRIGGER = 34;
+	int TASK_OUTPUT_TRIGGER = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4858,7 +4838,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskInputTrigger()
 	 * @generated
 	 */
-	int TASK_INPUT_TRIGGER = 35;
+	int TASK_INPUT_TRIGGER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4967,7 +4947,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskStateDeclaration()
 	 * @generated
 	 */
-	int TASK_STATE_DECLARATION = 36;
+	int TASK_STATE_DECLARATION = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5076,7 +5056,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getTaskParameterDeclaration()
 	 * @generated
 	 */
-	int TASK_PARAMETER_DECLARATION = 37;
+	int TASK_PARAMETER_DECLARATION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5178,16 +5158,6 @@ public interface LibraryPackage extends EPackage {
 	int TASK_PARAMETER_DECLARATION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.library.impl.LibraryImpl
-	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
-	 * @generated
-	 */
-	int LIBRARY = 40;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.BusTypeImpl <em>Bus Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5195,7 +5165,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getBusType()
 	 * @generated
 	 */
-	int BUS_TYPE = 38;
+	int BUS_TYPE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Provided Bundles</b></em>' containment reference list.
@@ -5306,22 +5276,40 @@ public interface LibraryPackage extends EPackage {
 	int BUS_TYPE__TRACE_LINK = RESOURCE_PROVIDER_A_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Can Fail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__CAN_FAIL = RESOURCE_PROVIDER_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Failure Rate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__FAILURE_RATE = RESOURCE_PROVIDER_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Part Failure Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_TYPE__PART_FAILURE_MODES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 10;
+
+	/**
 	 * The feature id for the '<em><b>Device Types</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE__DEVICE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Mtbf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS_TYPE__MTBF = RESOURCE_PROVIDER_A_FEATURE_COUNT + 9;
+	int BUS_TYPE__DEVICE_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Is Self Managing</b></em>' attribute.
@@ -5330,7 +5318,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE__IS_SELF_MANAGING = RESOURCE_PROVIDER_A_FEATURE_COUNT + 10;
+	int BUS_TYPE__IS_SELF_MANAGING = RESOURCE_PROVIDER_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Connection Types</b></em>' reference list.
@@ -5339,7 +5327,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE__CONNECTION_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 11;
+	int BUS_TYPE__CONNECTION_TYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Requires Master</b></em>' attribute.
@@ -5348,7 +5336,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 12;
+	int BUS_TYPE__REQUIRES_MASTER = RESOURCE_PROVIDER_A_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Messagetypes</b></em>' reference list.
@@ -5357,7 +5345,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE__MESSAGETYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 13;
+	int BUS_TYPE__MESSAGETYPES = RESOURCE_PROVIDER_A_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Bus Type</em>' class.
@@ -5366,7 +5354,7 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 14;
+	int BUS_TYPE_FEATURE_COUNT = RESOURCE_PROVIDER_A_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Bus Type</em>' class.
@@ -5385,7 +5373,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getMessageType()
 	 * @generated
 	 */
-	int MESSAGE_TYPE = 39;
+	int MESSAGE_TYPE = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5575,6 +5563,16 @@ public interface LibraryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_TYPE_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.LibraryImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
+	 * @generated
+	 */
+	int LIBRARY = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5847,6 +5845,15 @@ public interface LibraryPackage extends EPackage {
 	int LIBRARY__BUS_TYPES = LIBRARY_CONTAINER_A__BUS_TYPES;
 
 	/**
+	 * The feature id for the '<em><b>Functional Failure Mode Sets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__FUNCTIONAL_FAILURE_MODE_SETS = LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS;
+
+	/**
 	 * The number of structural features of the '<em>Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5863,6 +5870,16 @@ public interface LibraryPackage extends EPackage {
 	 * @ordered
 	 */
 	int LIBRARY_OPERATION_COUNT = LIBRARY_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.library.impl.SublibraryImpl
+	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
+	 * @generated
+	 */
+	int SUBLIBRARY = 40;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6135,6 +6152,15 @@ public interface LibraryPackage extends EPackage {
 	int SUBLIBRARY__BUS_TYPES = LIBRARY_CONTAINER_A__BUS_TYPES;
 
 	/**
+	 * The feature id for the '<em><b>Functional Failure Mode Sets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBLIBRARY__FUNCTIONAL_FAILURE_MODE_SETS = LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS;
+
+	/**
 	 * The number of structural features of the '<em>Sublibrary</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6160,7 +6186,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getIoDirectionE()
 	 * @generated
 	 */
-	int IO_DIRECTION_E = 42;
+	int IO_DIRECTION_E = 41;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTypesE <em>Attribute Types E</em>}' enum.
@@ -6170,7 +6196,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTypesE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TYPES_E = 43;
+	int ATTRIBUTE_TYPES_E = 42;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.library.AttributeTargetsE <em>Attribute Targets E</em>}' enum.
@@ -6180,7 +6206,7 @@ public interface LibraryPackage extends EPackage {
 	 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getAttributeTargetsE()
 	 * @generated
 	 */
-	int ATTRIBUTE_TARGETS_E = 44;
+	int ATTRIBUTE_TARGETS_E = 43;
 
 
 	/**
@@ -6543,6 +6569,17 @@ public interface LibraryPackage extends EPackage {
 	EReference getLibraryContainerA_BusTypes();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.LibraryContainerA#getFunctionalFailureModeSets <em>Functional Failure Mode Sets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Functional Failure Mode Sets</em>'.
+	 * @see de.oaam.model.oaam.library.LibraryContainerA#getFunctionalFailureModeSets()
+	 * @see #getLibraryContainerA()
+	 * @generated
+	 */
+	EReference getLibraryContainerA_FunctionalFailureModeSets();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.ResourceType <em>Resource Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6857,6 +6894,28 @@ public interface LibraryPackage extends EPackage {
 	EReference getTaskType_ParameterDeclarations();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.TaskType#getTaskInternalRequirements <em>Task Internal Requirements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Task Internal Requirements</em>'.
+	 * @see de.oaam.model.oaam.library.TaskType#getTaskInternalRequirements()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EReference getTaskType_TaskInternalRequirements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.library.TaskType#getFailurePropagation <em>Failure Propagation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Failure Propagation</em>'.
+	 * @see de.oaam.model.oaam.library.TaskType#getFailurePropagation()
+	 * @see #getTaskType()
+	 * @generated
+	 */
+	EReference getTaskType_FailurePropagation();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.SignalType <em>Signal Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6919,17 +6978,6 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDeviceType_CanHaveSubdevices();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.DeviceType#getMtbf <em>Mtbf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mtbf</em>'.
-	 * @see de.oaam.model.oaam.library.DeviceType#getMtbf()
-	 * @see #getDeviceType()
-	 * @generated
-	 */
-	EAttribute getDeviceType_Mtbf();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.DeviceType#getWeight <em>Weight</em>}'.
@@ -7302,17 +7350,6 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getWireType_NShields();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.WireType#getMtbf <em>Mtbf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mtbf</em>'.
-	 * @see de.oaam.model.oaam.library.WireType#getMtbf()
-	 * @see #getWireType()
-	 * @generated
-	 */
-	EAttribute getWireType_Mtbf();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.IoType <em>Io Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7508,6 +7545,28 @@ public interface LibraryPackage extends EPackage {
 	EReference getOutputDeclaration_FaultPropagations();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputDeclaration#getInitialValue <em>Initial Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Value</em>'.
+	 * @see de.oaam.model.oaam.library.OutputDeclaration#getInitialValue()
+	 * @see #getOutputDeclaration()
+	 * @generated
+	 */
+	EAttribute getOutputDeclaration_InitialValue();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.OutputDeclaration#isIsStateful <em>Is Stateful</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Stateful</em>'.
+	 * @see de.oaam.model.oaam.library.OutputDeclaration#isIsStateful()
+	 * @see #getOutputDeclaration()
+	 * @generated
+	 */
+	EAttribute getOutputDeclaration_IsStateful();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.IoDeclaration <em>Io Declaration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7645,71 +7704,6 @@ public interface LibraryPackage extends EPackage {
 	EAttribute getAttributeDefinition_Target();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.FaultPropagation <em>Fault Propagation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Fault Propagation</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation
-	 * @generated
-	 */
-	EClass getFaultPropagation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.FaultPropagation#getOutputState <em>Output State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Output State</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getOutputState()
-	 * @see #getFaultPropagation()
-	 * @generated
-	 */
-	EAttribute getFaultPropagation_OutputState();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.FaultPropagation#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Condition</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getCondition()
-	 * @see #getFaultPropagation()
-	 * @generated
-	 */
-	EReference getFaultPropagation_Condition();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getBooleanOperations <em>Boolean Operations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Boolean Operations</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getBooleanOperations()
-	 * @see #getFaultPropagation()
-	 * @generated
-	 */
-	EReference getFaultPropagation_BooleanOperations();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getBooleanNots <em>Boolean Nots</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Boolean Nots</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getBooleanNots()
-	 * @see #getFaultPropagation()
-	 * @generated
-	 */
-	EReference getFaultPropagation_BooleanNots();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.library.FaultPropagation#getTaskInputStates <em>Task Input States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Task Input States</em>'.
-	 * @see de.oaam.model.oaam.library.FaultPropagation#getTaskInputStates()
-	 * @see #getFaultPropagation()
-	 * @generated
-	 */
-	EReference getFaultPropagation_TaskInputStates();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskInputState <em>Task Input State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7720,15 +7714,15 @@ public interface LibraryPackage extends EPackage {
 	EClass getTaskInputState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskInputState#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.TaskInputState#getIntegrityState <em>Integrity State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see de.oaam.model.oaam.library.TaskInputState#getState()
+	 * @return the meta object for the attribute '<em>Integrity State</em>'.
+	 * @see de.oaam.model.oaam.library.TaskInputState#getIntegrityState()
 	 * @see #getTaskInputState()
 	 * @generated
 	 */
-	EAttribute getTaskInputState_State();
+	EAttribute getTaskInputState_IntegrityState();
 
 	/**
 	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.library.TaskInputState#getInput <em>Input</em>}'.
@@ -7954,16 +7948,6 @@ public interface LibraryPackage extends EPackage {
 	EReference getResourceTypeDissimilarity_ResourceTypes();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Sublibrary <em>Sublibrary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sublibrary</em>'.
-	 * @see de.oaam.model.oaam.library.Sublibrary
-	 * @generated
-	 */
-	EClass getSublibrary();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.TaskOutputTrigger <em>Task Output Trigger</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8103,16 +8087,6 @@ public interface LibraryPackage extends EPackage {
 	EReference getTaskParameterDeclaration_Type();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Library <em>Library</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Library</em>'.
-	 * @see de.oaam.model.oaam.library.Library
-	 * @generated
-	 */
-	EClass getLibrary();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.BusType <em>Bus Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8132,17 +8106,6 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getBusType_DeviceTypes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.BusType#getMtbf <em>Mtbf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mtbf</em>'.
-	 * @see de.oaam.model.oaam.library.BusType#getMtbf()
-	 * @see #getBusType()
-	 * @generated
-	 */
-	EAttribute getBusType_Mtbf();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.library.BusType#isIsSelfManaging <em>Is Self Managing</em>}'.
@@ -8252,6 +8215,26 @@ public interface LibraryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageType_TrailerDefinition();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Library <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Library</em>'.
+	 * @see de.oaam.model.oaam.library.Library
+	 * @generated
+	 */
+	EClass getLibrary();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.library.Sublibrary <em>Sublibrary</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sublibrary</em>'.
+	 * @see de.oaam.model.oaam.library.Sublibrary
+	 * @generated
+	 */
+	EClass getSublibrary();
 
 	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}'.
@@ -8579,6 +8562,14 @@ public interface LibraryPackage extends EPackage {
 		EReference LIBRARY_CONTAINER_A__BUS_TYPES = eINSTANCE.getLibraryContainerA_BusTypes();
 
 		/**
+		 * The meta object literal for the '<em><b>Functional Failure Mode Sets</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS = eINSTANCE.getLibraryContainerA_FunctionalFailureModeSets();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.ResourceTypeImpl <em>Resource Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8821,6 +8812,22 @@ public interface LibraryPackage extends EPackage {
 		EReference TASK_TYPE__PARAMETER_DECLARATIONS = eINSTANCE.getTaskType_ParameterDeclarations();
 
 		/**
+		 * The meta object literal for the '<em><b>Task Internal Requirements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE__TASK_INTERNAL_REQUIREMENTS = eINSTANCE.getTaskType_TaskInternalRequirements();
+
+		/**
+		 * The meta object literal for the '<em><b>Failure Propagation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_TYPE__FAILURE_PROPAGATION = eINSTANCE.getTaskType_FailurePropagation();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.SignalTypeImpl <em>Signal Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8871,14 +8878,6 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DEVICE_TYPE__CAN_HAVE_SUBDEVICES = eINSTANCE.getDeviceType_CanHaveSubdevices();
-
-		/**
-		 * The meta object literal for the '<em><b>Mtbf</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DEVICE_TYPE__MTBF = eINSTANCE.getDeviceType_Mtbf();
 
 		/**
 		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
@@ -9161,14 +9160,6 @@ public interface LibraryPackage extends EPackage {
 		EAttribute WIRE_TYPE__NSHIELDS = eINSTANCE.getWireType_NShields();
 
 		/**
-		 * The meta object literal for the '<em><b>Mtbf</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WIRE_TYPE__MTBF = eINSTANCE.getWireType_Mtbf();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.IoTypeImpl <em>Io Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9319,6 +9310,22 @@ public interface LibraryPackage extends EPackage {
 		EReference OUTPUT_DECLARATION__FAULT_PROPAGATIONS = eINSTANCE.getOutputDeclaration_FaultPropagations();
 
 		/**
+		 * The meta object literal for the '<em><b>Initial Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT_DECLARATION__INITIAL_VALUE = eINSTANCE.getOutputDeclaration_InitialValue();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Stateful</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OUTPUT_DECLARATION__IS_STATEFUL = eINSTANCE.getOutputDeclaration_IsStateful();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.IoDeclarationImpl <em>Io Declaration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9435,56 +9442,6 @@ public interface LibraryPackage extends EPackage {
 		EAttribute ATTRIBUTE_DEFINITION__TARGET = eINSTANCE.getAttributeDefinition_Target();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.FaultPropagationImpl <em>Fault Propagation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.FaultPropagationImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getFaultPropagation()
-		 * @generated
-		 */
-		EClass FAULT_PROPAGATION = eINSTANCE.getFaultPropagation();
-
-		/**
-		 * The meta object literal for the '<em><b>Output State</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FAULT_PROPAGATION__OUTPUT_STATE = eINSTANCE.getFaultPropagation_OutputState();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FAULT_PROPAGATION__CONDITION = eINSTANCE.getFaultPropagation_Condition();
-
-		/**
-		 * The meta object literal for the '<em><b>Boolean Operations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FAULT_PROPAGATION__BOOLEAN_OPERATIONS = eINSTANCE.getFaultPropagation_BooleanOperations();
-
-		/**
-		 * The meta object literal for the '<em><b>Boolean Nots</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FAULT_PROPAGATION__BOOLEAN_NOTS = eINSTANCE.getFaultPropagation_BooleanNots();
-
-		/**
-		 * The meta object literal for the '<em><b>Task Input States</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FAULT_PROPAGATION__TASK_INPUT_STATES = eINSTANCE.getFaultPropagation_TaskInputStates();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskInputStateImpl <em>Task Input State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9495,12 +9452,12 @@ public interface LibraryPackage extends EPackage {
 		EClass TASK_INPUT_STATE = eINSTANCE.getTaskInputState();
 
 		/**
-		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Integrity State</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TASK_INPUT_STATE__STATE = eINSTANCE.getTaskInputState_State();
+		EAttribute TASK_INPUT_STATE__INTEGRITY_STATE = eINSTANCE.getTaskInputState_IntegrityState();
 
 		/**
 		 * The meta object literal for the '<em><b>Input</b></em>' reference feature.
@@ -9687,16 +9644,6 @@ public interface LibraryPackage extends EPackage {
 		EReference RESOURCE_TYPE_DISSIMILARITY__RESOURCE_TYPES = eINSTANCE.getResourceTypeDissimilarity_ResourceTypes();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.SublibraryImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
-		 * @generated
-		 */
-		EClass SUBLIBRARY = eINSTANCE.getSublibrary();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.TaskOutputTriggerImpl <em>Task Output Trigger</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9809,16 +9756,6 @@ public interface LibraryPackage extends EPackage {
 		EReference TASK_PARAMETER_DECLARATION__TYPE = eINSTANCE.getTaskParameterDeclaration_Type();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.library.impl.LibraryImpl
-		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
-		 * @generated
-		 */
-		EClass LIBRARY = eINSTANCE.getLibrary();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.BusTypeImpl <em>Bus Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -9835,14 +9772,6 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference BUS_TYPE__DEVICE_TYPES = eINSTANCE.getBusType_DeviceTypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Mtbf</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BUS_TYPE__MTBF = eINSTANCE.getBusType_Mtbf();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Self Managing</b></em>' attribute feature.
@@ -9925,6 +9854,26 @@ public interface LibraryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_TYPE__TRAILER_DEFINITION = eINSTANCE.getMessageType_TrailerDefinition();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.LibraryImpl <em>Library</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.LibraryImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getLibrary()
+		 * @generated
+		 */
+		EClass LIBRARY = eINSTANCE.getLibrary();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.library.impl.SublibraryImpl <em>Sublibrary</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.library.impl.SublibraryImpl
+		 * @see de.oaam.model.oaam.library.impl.LibraryPackageImpl#getSublibrary()
+		 * @generated
+		 */
+		EClass SUBLIBRARY = eINSTANCE.getSublibrary();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.library.IoDirectionE <em>Io Direction E</em>}' enum.

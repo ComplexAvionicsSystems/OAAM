@@ -4,7 +4,7 @@ package de.oaam.model.oaam.functions.impl;
 
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
-import de.oaam.model.oaam.common.IntegretyStateE;
+import de.oaam.model.oaam.common.IntegrityStateE;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.common.impl.BoolAImpl;
@@ -54,7 +54,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getTraceLink <em>Trace Link</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getOperationModes <em>Operation Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getVariants <em>Variants</em>}</li>
- *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getState <em>State</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getIntegrityState <em>Integrity State</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
@@ -232,24 +232,24 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 	protected EList<Variant> variants;
 
 	/**
-	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * The default value of the '{@link #getIntegrityState() <em>Integrity State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getState()
+	 * @see #getIntegrityState()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final IntegretyStateE STATE_EDEFAULT = IntegretyStateE.OK;
+	protected static final IntegrityStateE INTEGRITY_STATE_EDEFAULT = IntegrityStateE.OK;
 
 	/**
-	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * The cached value of the '{@link #getIntegrityState() <em>Integrity State</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getState()
+	 * @see #getIntegrityState()
 	 * @generated
 	 * @ordered
 	 */
-	protected IntegretyStateE state = STATE_EDEFAULT;
+	protected IntegrityStateE integrityState = INTEGRITY_STATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getOutput() <em>Output</em>}' reference.
@@ -468,8 +468,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegretyStateE getState() {
-		return state;
+	public IntegrityStateE getIntegrityState() {
+		return integrityState;
 	}
 
 	/**
@@ -477,11 +477,11 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setState(IntegretyStateE newState) {
-		IntegretyStateE oldState = state;
-		state = newState == null ? STATE_EDEFAULT : newState;
+	public void setIntegrityState(IntegrityStateE newIntegrityState) {
+		IntegrityStateE oldIntegrityState = integrityState;
+		integrityState = newIntegrityState == null ? INTEGRITY_STATE_EDEFAULT : newIntegrityState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE, oldState, state));
+			eNotify(new ENotificationImpl(this, Notification.SET, FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE, oldIntegrityState, integrityState));
 	}
 
 	/**
@@ -566,8 +566,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 				return getOperationModes();
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__VARIANTS:
 				return getVariants();
-			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
-				return getState();
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE:
+				return getIntegrityState();
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__OUTPUT:
 				if (resolve) return getOutput();
 				return basicGetOutput();
@@ -617,8 +617,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 				getVariants().clear();
 				getVariants().addAll((Collection<? extends Variant>)newValue);
 				return;
-			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
-				setState((IntegretyStateE)newValue);
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE:
+				setIntegrityState((IntegrityStateE)newValue);
 				return;
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__OUTPUT:
 				setOutput((Output)newValue);
@@ -665,8 +665,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__VARIANTS:
 				getVariants().clear();
 				return;
-			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
-				setState(STATE_EDEFAULT);
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE:
+				setIntegrityState(INTEGRITY_STATE_EDEFAULT);
 				return;
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__OUTPUT:
 				setOutput((Output)null);
@@ -703,8 +703,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 				return operationModes != null && !operationModes.isEmpty();
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__VARIANTS:
 				return variants != null && !variants.isEmpty();
-			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
-				return state != STATE_EDEFAULT;
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE:
+				return integrityState != INTEGRITY_STATE_EDEFAULT;
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__OUTPUT:
 				return output != null;
 		}
@@ -805,8 +805,8 @@ public class OutputIntegrityStateImpl extends BoolAImpl implements OutputIntegri
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
-		result.append(", state: ");
-		result.append(state);
+		result.append(", integrityState: ");
+		result.append(integrityState);
 		result.append(')');
 		return result.toString();
 	}

@@ -29,6 +29,8 @@ import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
 
+import de.oaam.model.oaam.safety.FunctionalFailureModeSet;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -71,6 +73,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getHardwareGroupTypes <em>Hardware Group Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getMessageTypes <em>Message Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getBusTypes <em>Bus Types</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.LibraryContainerAImpl#getFunctionalFailureModeSets <em>Functional Failure Mode Sets</em>}</li>
  * </ul>
  *
  * @generated
@@ -295,6 +298,16 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * @ordered
 	 */
 	protected EList<BusType> busTypes;
+
+	/**
+	 * The cached value of the '{@link #getFunctionalFailureModeSets() <em>Functional Failure Mode Sets</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctionalFailureModeSets()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionalFailureModeSet> functionalFailureModeSets;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -584,6 +597,18 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FunctionalFailureModeSet> getFunctionalFailureModeSets() {
+		if (functionalFailureModeSets == null) {
+			functionalFailureModeSets = new EObjectContainmentEList<FunctionalFailureModeSet>(FunctionalFailureModeSet.class, this, LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS);
+		}
+		return functionalFailureModeSets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -631,6 +656,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return ((InternalEList<?>)getMessageTypes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
 				return ((InternalEList<?>)getBusTypes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
+				return ((InternalEList<?>)getFunctionalFailureModeSets()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -687,6 +714,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return getMessageTypes();
 			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
 				return getBusTypes();
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
+				return getFunctionalFailureModeSets();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -788,6 +817,10 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				getBusTypes().clear();
 				getBusTypes().addAll((Collection<? extends BusType>)newValue);
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
+				getFunctionalFailureModeSets().clear();
+				getFunctionalFailureModeSets().addAll((Collection<? extends FunctionalFailureModeSet>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -866,6 +899,9 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
 				getBusTypes().clear();
 				return;
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
+				getFunctionalFailureModeSets().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -922,6 +958,8 @@ public abstract class LibraryContainerAImpl extends OaamBaseElementAImpl impleme
 				return messageTypes != null && !messageTypes.isEmpty();
 			case LibraryPackage.LIBRARY_CONTAINER_A__BUS_TYPES:
 				return busTypes != null && !busTypes.isEmpty();
+			case LibraryPackage.LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS:
+				return functionalFailureModeSets != null && !functionalFailureModeSets.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

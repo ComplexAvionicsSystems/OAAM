@@ -48,9 +48,29 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -142,21 +162,14 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass capabilitiesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass subcapabilitiesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass messageOnBusCapabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass messageOnConnectionOrDeviceCapabilityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,7 +190,14 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass messageOnConnectionOrDeviceCapabilityEClass = null;
+	private EClass capabilitiesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass subcapabilitiesEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -247,6 +267,16 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(registeredPackage instanceof RestrictionsPackageImpl ? registeredPackage : RestrictionsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theCapabilitiesPackage.createPackageContents();
@@ -260,6 +290,11 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		theAnatomyPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theCapabilitiesPackage.initializePackageContents();
@@ -273,6 +308,11 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 		theAnatomyPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theCapabilitiesPackage.freeze();
@@ -656,24 +696,6 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCapabilities() {
-		return capabilitiesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSubcapabilities() {
-		return subcapabilitiesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMessageOnBusCapability() {
 		return messageOnBusCapabilityEClass;
 	}
@@ -694,6 +716,51 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 */
 	public EReference getMessageOnBusCapability_MessageType() {
 		return (EReference)messageOnBusCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMessageOnConnectionOrDeviceCapability() {
+		return messageOnConnectionOrDeviceCapabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_MessageType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_DeviceType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMessageOnConnectionOrDeviceCapability_ConnectionType() {
+		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime() {
+		return (EAttribute)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -755,8 +822,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMessageOnConnectionOrDeviceCapability() {
-		return messageOnConnectionOrDeviceCapabilityEClass;
+	public EClass getCapabilities() {
+		return capabilitiesEClass;
 	}
 
 	/**
@@ -764,35 +831,8 @@ public class CapabilitiesPackageImpl extends EPackageImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMessageOnConnectionOrDeviceCapability_MessageType() {
-		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMessageOnConnectionOrDeviceCapability_DeviceType() {
-		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMessageOnConnectionOrDeviceCapability_ConnectionType() {
-		return (EReference)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime() {
-		return (EAttribute)messageOnConnectionOrDeviceCapabilityEClass.getEStructuralFeatures().get(3);
+	public EClass getSubcapabilities() {
+		return subcapabilitiesEClass;
 	}
 
 	/**

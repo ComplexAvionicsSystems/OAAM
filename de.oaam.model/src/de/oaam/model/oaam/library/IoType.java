@@ -4,6 +4,8 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Io Type</b></em>'.
@@ -24,7 +26,7 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
  * @model
  * @generated
  */
-public interface IoType extends OaamBaseElementA {
+public interface IoType extends OaamBaseElementA, FailureProviderA {
 	/**
 	 * Returns the value of the '<em><b>Direction</b></em>' attribute.
 	 * The default value is <code>"NONE"</code>.

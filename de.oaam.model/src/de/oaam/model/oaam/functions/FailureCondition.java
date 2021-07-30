@@ -31,6 +31,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanOperations <em>Boolean Operations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getBooleanNots <em>Boolean Nots</em>}</li>
  *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getOutputIntegrityStates <em>Output Integrity States</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.functions.FailureCondition#getTaskFailures <em>Task Failures</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition()
@@ -159,5 +160,20 @@ public interface FailureCondition extends OaamBaseElementA, ModeDependentElement
 	 * @generated
 	 */
 	EList<OutputIntegrityState> getOutputIntegrityStates();
+
+	/**
+	 * Returns the value of the '<em><b>Task Failures</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.functions.TaskFailure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The list of all relevant task losses for this failure condition.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Task Failures</em>' containment reference list.
+	 * @see de.oaam.model.oaam.functions.FunctionsPackage#getFailureCondition_TaskFailures()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<TaskFailure> getTaskFailures();
 
 } // FailureCondition

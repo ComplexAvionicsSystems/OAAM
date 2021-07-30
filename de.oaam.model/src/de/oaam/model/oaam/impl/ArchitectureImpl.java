@@ -19,6 +19,8 @@ import de.oaam.model.oaam.hardware.Hardware;
 
 import de.oaam.model.oaam.library.Library;
 
+import de.oaam.model.oaam.physical.PhysicalInteraction;
+
 import de.oaam.model.oaam.restrictions.Restrictions;
 
 import de.oaam.model.oaam.scenario.Scenario;
@@ -57,6 +59,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getRestrictions <em>Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getAllocations <em>Allocations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.impl.ArchitectureImpl#getPhysicalInteraction <em>Physical Interaction</em>}</li>
  * </ul>
  *
  * @generated
@@ -161,6 +164,16 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 	 * @ordered
 	 */
 	protected Allocations allocations;
+
+	/**
+	 * The cached value of the '{@link #getPhysicalInteraction() <em>Physical Interaction</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPhysicalInteraction()
+	 * @generated
+	 * @ordered
+	 */
+	protected PhysicalInteraction physicalInteraction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -585,6 +598,49 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PhysicalInteraction getPhysicalInteraction() {
+		return physicalInteraction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPhysicalInteraction(PhysicalInteraction newPhysicalInteraction, NotificationChain msgs) {
+		PhysicalInteraction oldPhysicalInteraction = physicalInteraction;
+		physicalInteraction = newPhysicalInteraction;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION, oldPhysicalInteraction, newPhysicalInteraction);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPhysicalInteraction(PhysicalInteraction newPhysicalInteraction) {
+		if (newPhysicalInteraction != physicalInteraction) {
+			NotificationChain msgs = null;
+			if (physicalInteraction != null)
+				msgs = ((InternalEObject)physicalInteraction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION, null, msgs);
+			if (newPhysicalInteraction != null)
+				msgs = ((InternalEObject)newPhysicalInteraction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION, null, msgs);
+			msgs = basicSetPhysicalInteraction(newPhysicalInteraction, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION, newPhysicalInteraction, newPhysicalInteraction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -606,6 +662,8 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 				return basicSetRestrictions(null, msgs);
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				return basicSetAllocations(null, msgs);
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
+				return basicSetPhysicalInteraction(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -638,6 +696,8 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 				return getRestrictions();
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				return getAllocations();
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
+				return getPhysicalInteraction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -682,6 +742,9 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				setAllocations((Allocations)newValue);
 				return;
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
+				setPhysicalInteraction((PhysicalInteraction)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -724,6 +787,9 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				setAllocations((Allocations)null);
 				return;
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
+				setPhysicalInteraction((PhysicalInteraction)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -756,6 +822,8 @@ public class ArchitectureImpl extends OaamBaseElementAImpl implements Architectu
 				return restrictions != null;
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
 				return allocations != null;
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
+				return physicalInteraction != null;
 		}
 		return super.eIsSet(featureID);
 	}

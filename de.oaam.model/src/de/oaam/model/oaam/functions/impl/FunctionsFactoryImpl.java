@@ -71,6 +71,7 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 			case FunctionsPackage.EXTERNAL_OUTPUT_LINK: return createExternalOutputLink();
 			case FunctionsPackage.SUBFUNCTIONS: return createSubfunctions();
 			case FunctionsPackage.TASK_PARAMETER: return createTaskParameter();
+			case FunctionsPackage.TASK_FAILURE: return createTaskFailure();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -224,6 +225,16 @@ public class FunctionsFactoryImpl extends EFactoryImpl implements FunctionsFacto
 	public TaskParameter createTaskParameter() {
 		TaskParameterImpl taskParameter = new TaskParameterImpl();
 		return taskParameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskFailure createTaskFailure() {
+		TaskFailureImpl taskFailure = new TaskFailureImpl();
+		return taskFailure;
 	}
 
 	/**

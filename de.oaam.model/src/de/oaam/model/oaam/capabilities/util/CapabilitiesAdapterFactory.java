@@ -291,34 +291,6 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Capabilities <em>Capabilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.Capabilities
-	 * @generated
-	 */
-	public Adapter createCapabilitiesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
-	 * @generated
-	 */
-	public Adapter createSubcapabilitiesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability <em>Message On Bus Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -329,6 +301,20 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMessageOnBusCapabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @generated
+	 */
+	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
 		return null;
 	}
 
@@ -361,16 +347,30 @@ public class CapabilitiesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Capabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @see de.oaam.model.oaam.capabilities.Capabilities
 	 * @generated
 	 */
-	public Adapter createMessageOnConnectionOrDeviceCapabilityAdapter() {
+	public Adapter createCapabilitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
+	 * @generated
+	 */
+	public Adapter createSubcapabilitiesAdapter() {
 		return null;
 	}
 

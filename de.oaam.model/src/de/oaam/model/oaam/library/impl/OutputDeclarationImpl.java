@@ -6,10 +6,11 @@ import de.oaam.model.oaam.common.DataTypeA;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
-import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.OutputDeclaration;
 import de.oaam.model.oaam.library.TaskOutputTrigger;
+
+import de.oaam.model.oaam.safety.FaultPropagation;
 
 import java.util.Collection;
 
@@ -42,6 +43,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl#getFaultPropagations <em>Fault Propagations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl#getInitialValue <em>Initial Value</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.OutputDeclarationImpl#isIsStateful <em>Is Stateful</em>}</li>
  * </ul>
  *
  * @generated
@@ -176,6 +179,46 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * @ordered
 	 */
 	protected EList<FaultPropagation> faultPropagations;
+
+	/**
+	 * The default value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INITIAL_VALUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInitialValue() <em>Initial Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitialValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String initialValue = INITIAL_VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsStateful() <em>Is Stateful</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStateful()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_STATEFUL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsStateful() <em>Is Stateful</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsStateful()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isStateful = IS_STATEFUL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -399,6 +442,48 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getInitialValue() {
+		return initialValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitialValue(String newInitialValue) {
+		String oldInitialValue = initialValue;
+		initialValue = newInitialValue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE, oldInitialValue, initialValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsStateful() {
+		return isStateful;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsStateful(boolean newIsStateful) {
+		boolean oldIsStateful = isStateful;
+		isStateful = newIsStateful;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL, oldIsStateful, isStateful));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -435,6 +520,10 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 				return getUpperBound();
 			case LibraryPackage.OUTPUT_DECLARATION__FAULT_PROPAGATIONS:
 				return getFaultPropagations();
+			case LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE:
+				return getInitialValue();
+			case LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL:
+				return isIsStateful();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -473,6 +562,12 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 				getFaultPropagations().clear();
 				getFaultPropagations().addAll((Collection<? extends FaultPropagation>)newValue);
 				return;
+			case LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE:
+				setInitialValue((String)newValue);
+				return;
+			case LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL:
+				setIsStateful((Boolean)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -509,6 +604,12 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 			case LibraryPackage.OUTPUT_DECLARATION__FAULT_PROPAGATIONS:
 				getFaultPropagations().clear();
 				return;
+			case LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE:
+				setInitialValue(INITIAL_VALUE_EDEFAULT);
+				return;
+			case LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL:
+				setIsStateful(IS_STATEFUL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -537,6 +638,10 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 				return upperBound != UPPER_BOUND_EDEFAULT;
 			case LibraryPackage.OUTPUT_DECLARATION__FAULT_PROPAGATIONS:
 				return faultPropagations != null && !faultPropagations.isEmpty();
+			case LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE:
+				return INITIAL_VALUE_EDEFAULT == null ? initialValue != null : !INITIAL_VALUE_EDEFAULT.equals(initialValue);
+			case LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL:
+				return isStateful != IS_STATEFUL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -561,6 +666,10 @@ public class OutputDeclarationImpl extends OaamBaseElementAImpl implements Outpu
 		result.append(lowerBound);
 		result.append(", upperBound: ");
 		result.append(upperBound);
+		result.append(", initialValue: ");
+		result.append(initialValue);
+		result.append(", isStateful: ");
+		result.append(isStateful);
 		result.append(')');
 		return result.toString();
 	}

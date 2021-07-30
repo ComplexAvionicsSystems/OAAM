@@ -7,6 +7,8 @@ import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.*;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -146,6 +148,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = caseResourceConsumerA(deviceType);
 				if (result == null) result = caseResourceProviderA(deviceType);
 				if (result == null) result = caseOaamBaseElementA(deviceType);
+				if (result == null) result = caseFailureProviderA(deviceType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -155,6 +158,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				if (result == null) result = caseResourceProviderA(connectionType);
 				if (result == null) result = caseResourceConsumerA(connectionType);
 				if (result == null) result = caseOaamBaseElementA(connectionType);
+				if (result == null) result = caseFailureProviderA(connectionType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,6 +182,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				WireType wireType = (WireType)theEObject;
 				T result = caseWireType(wireType);
 				if (result == null) result = caseOaamBaseElementA(wireType);
+				if (result == null) result = caseFailureProviderA(wireType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -185,6 +190,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				IoType ioType = (IoType)theEObject;
 				T result = caseIoType(ioType);
 				if (result == null) result = caseOaamBaseElementA(ioType);
+				if (result == null) result = caseFailureProviderA(ioType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -241,13 +247,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 				AttributeDefinition attributeDefinition = (AttributeDefinition)theEObject;
 				T result = caseAttributeDefinition(attributeDefinition);
 				if (result == null) result = caseOaamBaseElementA(attributeDefinition);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case LibraryPackage.FAULT_PROPAGATION: {
-				FaultPropagation faultPropagation = (FaultPropagation)theEObject;
-				T result = caseFaultPropagation(faultPropagation);
-				if (result == null) result = caseOaamBaseElementA(faultPropagation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -350,6 +349,7 @@ public class LibrarySwitch<T> extends Switch<T> {
 				T result = caseBusType(busType);
 				if (result == null) result = caseResourceProviderA(busType);
 				if (result == null) result = caseOaamBaseElementA(busType);
+				if (result == null) result = caseFailureProviderA(busType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -743,21 +743,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Fault Propagation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Fault Propagation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFaultPropagation(FaultPropagation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Task Input State</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -893,21 +878,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sublibrary</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sublibrary</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSublibrary(Sublibrary object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Task Output Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -968,21 +938,6 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLibrary(Library object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Bus Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1013,6 +968,36 @@ public class LibrarySwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLibrary(Library object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sublibrary</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sublibrary</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSublibrary(Sublibrary object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Oaam Base Element A</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1024,6 +1009,21 @@ public class LibrarySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOaamBaseElementA(OaamBaseElementA object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Failure Provider A</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Failure Provider A</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFailureProviderA(FailureProviderA object) {
 		return null;
 	}
 

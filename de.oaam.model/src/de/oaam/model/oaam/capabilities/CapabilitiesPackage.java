@@ -43,7 +43,7 @@ public interface CapabilitiesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/capabilities";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/capabilities";
 
 	/**
 	 * The package namespace name.
@@ -1340,26 +1340,6 @@ public interface CapabilitiesPackage extends EPackage {
 	int RESOURCE_CONSUMPTION_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
-	 * @generated
-	 */
-	int CAPABILITIES = 13;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
-	 * @generated
-	 */
-	int SUBCAPABILITIES = 14;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl <em>Message On Bus Capability</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1503,26 +1483,6 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_ON_BUS_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl <em>Submessage In Message Capability</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubmessageInMessageCapability()
-	 * @generated
-	 */
-	int SUBMESSAGE_IN_MESSAGE_CAPABILITY = 11;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl <em>Signal In Message Capability</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl
-	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalInMessageCapability()
-	 * @generated
-	 */
-	int SIGNAL_IN_MESSAGE_CAPABILITY = 12;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl <em>Message On Connection Or Device Capability</em>}' class.
@@ -1688,6 +1648,16 @@ public interface CapabilitiesPackage extends EPackage {
 	int MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl <em>Submessage In Message Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubmessageInMessageCapability()
+	 * @generated
+	 */
+	int SUBMESSAGE_IN_MESSAGE_CAPABILITY = 11;
+
+	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1823,6 +1793,16 @@ public interface CapabilitiesPackage extends EPackage {
 	int SUBMESSAGE_IN_MESSAGE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl <em>Signal In Message Capability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SignalInMessageCapabilityImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSignalInMessageCapability()
+	 * @generated
+	 */
+	int SIGNAL_IN_MESSAGE_CAPABILITY = 12;
+
+	/**
 	 * The feature id for the '<em><b>Resource Consumptions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1956,6 +1936,16 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIGNAL_IN_MESSAGE_CAPABILITY_OPERATION_COUNT = CAPABILITY_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
+	 * @generated
+	 */
+	int CAPABILITIES = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2145,6 +2135,16 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAPABILITIES_OPERATION_COUNT = CAPABILITIES_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
+	 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
+	 * @generated
+	 */
+	int SUBCAPABILITIES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2797,26 +2797,6 @@ public interface CapabilitiesPackage extends EPackage {
 	EReference getResourceConsumption_Type();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Capabilities <em>Capabilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Capabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.Capabilities
-	 * @generated
-	 */
-	EClass getCapabilities();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Subcapabilities</em>'.
-	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
-	 * @generated
-	 */
-	EClass getSubcapabilities();
-
-	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.MessageOnBusCapability <em>Message On Bus Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2847,6 +2827,60 @@ public interface CapabilitiesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMessageOnBusCapability_MessageType();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message On Connection Or Device Capability</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @generated
+	 */
+	EClass getMessageOnConnectionOrDeviceCapability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType <em>Message Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Message Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_MessageType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType <em>Device Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Device Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_DeviceType();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType <em>Connection Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connection Type</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EReference getMessageOnConnectionOrDeviceCapability_ConnectionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Worst Case Transmission Time</em>'.
+	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime()
+	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @generated
+	 */
+	EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.SubmessageInMessageCapability <em>Submessage In Message Capability</em>}'.
@@ -2913,58 +2947,24 @@ public interface CapabilitiesPackage extends EPackage {
 	EReference getSignalInMessageCapability_SignalType();
 
 	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability <em>Message On Connection Or Device Capability</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Capabilities <em>Capabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Message On Connection Or Device Capability</em>'.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability
+	 * @return the meta object for class '<em>Capabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.Capabilities
 	 * @generated
 	 */
-	EClass getMessageOnConnectionOrDeviceCapability();
+	EClass getCapabilities();
 
 	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType <em>Message Type</em>}'.
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.capabilities.Subcapabilities <em>Subcapabilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Message Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getMessageType()
-	 * @see #getMessageOnConnectionOrDeviceCapability()
+	 * @return the meta object for class '<em>Subcapabilities</em>'.
+	 * @see de.oaam.model.oaam.capabilities.Subcapabilities
 	 * @generated
 	 */
-	EReference getMessageOnConnectionOrDeviceCapability_MessageType();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType <em>Device Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Device Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getDeviceType()
-	 * @see #getMessageOnConnectionOrDeviceCapability()
-	 * @generated
-	 */
-	EReference getMessageOnConnectionOrDeviceCapability_DeviceType();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType <em>Connection Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Connection Type</em>'.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getConnectionType()
-	 * @see #getMessageOnConnectionOrDeviceCapability()
-	 * @generated
-	 */
-	EReference getMessageOnConnectionOrDeviceCapability_ConnectionType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime <em>Worst Case Transmission Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Worst Case Transmission Time</em>'.
-	 * @see de.oaam.model.oaam.capabilities.MessageOnConnectionOrDeviceCapability#getWorstCaseTransmissionTime()
-	 * @see #getMessageOnConnectionOrDeviceCapability()
-	 * @generated
-	 */
-	EAttribute getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
+	EClass getSubcapabilities();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3336,26 +3336,6 @@ public interface CapabilitiesPackage extends EPackage {
 		EReference RESOURCE_CONSUMPTION__TYPE = eINSTANCE.getResourceConsumption_Type();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
-		 * @generated
-		 */
-		EClass CAPABILITIES = eINSTANCE.getCapabilities();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
-		 * @generated
-		 */
-		EClass SUBCAPABILITIES = eINSTANCE.getSubcapabilities();
-
-		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnBusCapabilityImpl <em>Message On Bus Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3380,6 +3360,48 @@ public interface CapabilitiesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MESSAGE_ON_BUS_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getMessageOnBusCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl <em>Message On Connection Or Device Capability</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnConnectionOrDeviceCapability()
+		 * @generated
+		 */
+		EClass MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY = eINSTANCE.getMessageOnConnectionOrDeviceCapability();
+
+		/**
+		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_MessageType();
+
+		/**
+		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_DeviceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_ConnectionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Worst Case Transmission Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = eINSTANCE.getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubmessageInMessageCapabilityImpl <em>Submessage In Message Capability</em>}' class.
@@ -3434,46 +3456,24 @@ public interface CapabilitiesPackage extends EPackage {
 		EReference SIGNAL_IN_MESSAGE_CAPABILITY__SIGNAL_TYPE = eINSTANCE.getSignalInMessageCapability_SignalType();
 
 		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl <em>Message On Connection Or Device Capability</em>}' class.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl <em>Capabilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.capabilities.impl.MessageOnConnectionOrDeviceCapabilityImpl
-		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getMessageOnConnectionOrDeviceCapability()
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getCapabilities()
 		 * @generated
 		 */
-		EClass MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY = eINSTANCE.getMessageOnConnectionOrDeviceCapability();
+		EClass CAPABILITIES = eINSTANCE.getCapabilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Message Type</b></em>' reference feature.
+		 * The meta object literal for the '{@link de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl <em>Subcapabilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.capabilities.impl.SubcapabilitiesImpl
+		 * @see de.oaam.model.oaam.capabilities.impl.CapabilitiesPackageImpl#getSubcapabilities()
 		 * @generated
 		 */
-		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__MESSAGE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_MessageType();
-
-		/**
-		 * The meta object literal for the '<em><b>Device Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__DEVICE_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_DeviceType();
-
-		/**
-		 * The meta object literal for the '<em><b>Connection Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__CONNECTION_TYPE = eINSTANCE.getMessageOnConnectionOrDeviceCapability_ConnectionType();
-
-		/**
-		 * The meta object literal for the '<em><b>Worst Case Transmission Time</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MESSAGE_ON_CONNECTION_OR_DEVICE_CAPABILITY__WORST_CASE_TRANSMISSION_TIME = eINSTANCE.getMessageOnConnectionOrDeviceCapability_WorstCaseTransmissionTime();
+		EClass SUBCAPABILITIES = eINSTANCE.getSubcapabilities();
 
 	}
 

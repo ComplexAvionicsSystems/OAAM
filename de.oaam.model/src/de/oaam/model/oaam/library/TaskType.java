@@ -4,6 +4,10 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagation;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirement;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -25,6 +29,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getStateDeclarations <em>State Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.TaskType#getParameterDeclarations <em>Parameter Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getTaskInternalRequirements <em>Task Internal Requirements</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.TaskType#getFailurePropagation <em>Failure Propagation</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType()
@@ -142,5 +148,46 @@ public interface TaskType extends ResourceConsumerA, OaamBaseElementA {
 	 * @generated
 	 */
 	EList<TaskParameterDeclaration> getParameterDeclarations();
+
+	/**
+	 * Returns the value of the '<em><b>Task Internal Requirements</b></em>' containment reference list.
+	 * The list contents are of type {@link de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * All internal requirements of this task type.
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Task Internal Requirements</em>' containment reference list.
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_TaskInternalRequirements()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TaskInternalRequirement> getTaskInternalRequirements();
+
+	/**
+	 * Returns the value of the '<em><b>Failure Propagation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The failure propagation of this task type.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Failure Propagation</em>' containment reference.
+	 * @see #setFailurePropagation(FailurePropagation)
+	 * @see de.oaam.model.oaam.library.LibraryPackage#getTaskType_FailurePropagation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FailurePropagation getFailurePropagation();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.library.TaskType#getFailurePropagation <em>Failure Propagation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Failure Propagation</em>' containment reference.
+	 * @see #getFailurePropagation()
+	 * @generated
+	 */
+	void setFailurePropagation(FailurePropagation value);
 
 } // TaskType

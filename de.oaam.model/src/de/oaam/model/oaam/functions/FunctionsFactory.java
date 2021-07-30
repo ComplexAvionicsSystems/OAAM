@@ -157,6 +157,15 @@ public interface FunctionsFactory extends EFactory {
 	TaskParameter createTaskParameter();
 
 	/**
+	 * Returns a new object of class '<em>Task Failure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Failure</em>'.
+	 * @generated
+	 */
+	TaskFailure createTaskFailure();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

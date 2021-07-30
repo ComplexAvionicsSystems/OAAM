@@ -6,6 +6,7 @@ import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
 
 import de.oaam.model.oaam.hardware.Bus;
 import de.oaam.model.oaam.hardware.Device;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

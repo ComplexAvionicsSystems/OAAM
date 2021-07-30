@@ -43,7 +43,7 @@ public interface ScenarioPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/scenario";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/scenario";
 
 	/**
 	 * The package namespace name.

@@ -4,6 +4,8 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link de.oaam.model.oaam.library.BusType#getDeviceTypes <em>Device Types</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.BusType#getMtbf <em>Mtbf</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.BusType#isIsSelfManaging <em>Is Self Managing</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.BusType#getConnectionTypes <em>Connection Types</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.BusType#isRequiresMaster <em>Requires Master</em>}</li>
@@ -31,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface BusType extends ResourceProviderA, OaamBaseElementA {
+public interface BusType extends ResourceProviderA, OaamBaseElementA, FailureProviderA {
 	/**
 	 * Returns the value of the '<em><b>Device Types</b></em>' reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.library.DeviceType}.
@@ -46,31 +47,6 @@ public interface BusType extends ResourceProviderA, OaamBaseElementA {
 	 * @generated
 	 */
 	EList<DeviceType> getDeviceTypes();
-
-	/**
-	 * Returns the value of the '<em><b>Mtbf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The mean time between failure in [h]
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Mtbf</em>' attribute.
-	 * @see #setMtbf(double)
-	 * @see de.oaam.model.oaam.library.LibraryPackage#getBusType_Mtbf()
-	 * @model required="true"
-	 * @generated
-	 */
-	double getMtbf();
-
-	/**
-	 * Sets the value of the '{@link de.oaam.model.oaam.library.BusType#getMtbf <em>Mtbf</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mtbf</em>' attribute.
-	 * @see #getMtbf()
-	 * @generated
-	 */
-	void setMtbf(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Self Managing</b></em>' attribute.

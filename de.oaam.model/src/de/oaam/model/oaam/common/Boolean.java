@@ -24,7 +24,6 @@ package de.oaam.model.oaam.common;
  * @generated
  */
 public interface Boolean extends DataTypeA {
-
 	/**
 	 * Returns the value of the '<em><b>NBits</b></em>' attribute.
 	 * The default value is <code>"1"</code>.
@@ -50,4 +49,5 @@ public interface Boolean extends DataTypeA {
 	 * @generated
 	 */
 	void setNBits(int value);
+
 } // Boolean

@@ -68,6 +68,8 @@
         <details key="documentation" value="A container for a allocations model (layer 9)"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalInteraction" eType="#//physical/PhysicalInteraction"
+        containment="true"/>
   </eClassifiers>
   <eSubpackages name="common" nsURI="http://www.oaam.de/oaam/model/v160/common" nsPrefix="de.oaam.model.common">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1290,7 +1292,7 @@
           <details key="documentation" value="The initial value of the output."/>
         </eAnnotations>
       </eStructuralFeatures>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStateful">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStateful" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Defines whether this output is a stateful output."/>
         </eAnnotations>
@@ -4340,12 +4342,13 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="FailureProviderA">
+    <eClassifiers xsi:type="ecore:EClass" name="FailureProviderA" abstract="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A (hardware) part for which probabilistic failures can be described."/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="canFail" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+          defaultValueLiteral="true">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="Describes whether the component can fail."/>
         </eAnnotations>
@@ -5203,16 +5206,67 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The description of physical interactions of functions."/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="PhysicalInteraction" eSuperTypes="#//common/OaamBaseElementA">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//functions/FunctionsContainerA"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalInteractionContainerA" abstract="true"
+        eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A container for a description of a physical interaction."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//functions/FunctionsContainerA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The function this physical interaction refers to."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="subphysicalInteractions"
+          eType="#//physical/SubphysicalInteraction" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="A nested description of a physical interaction."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sensors" upperBound="-1"
+          eType="#//physical/Sensor" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All sensors within the description of the physical interaction."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="effectors" upperBound="-1"
+          eType="#//physical/Effector" containment="true">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="All effectors within the description of the physical interaction."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Actuation" eSuperTypes="#//physical/PhysicalInterfaceA">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="directlyObservableBy"
-          eType="#//physical/Measurement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//physical/PhysicalInterfaceA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An element capable of measuring a physical quantity."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalledBy" upperBound="-1"
+          eType="#//functions/Output">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="References a signal which transports the physical quantity."/>
+        </eAnnotations>
+      </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="#//physical/PhysicalInterfaceA"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Effector" eSuperTypes="#//physical/PhysicalInterfaceA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An element capable of influencing a physical quantity."/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="observableBy" eType="#//physical/Sensor">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="References a signal which enables observance of the physical quantity influenced by the effector."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="signalledBy" upperBound="-1"
+          eType="#//functions/Input">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="References a signl which controls the the physical quantity."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PhysicalInterfaceA" abstract="true"
         eSuperTypes="#//common/OaamBaseElementA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="An abstract class defining an interface between system and the physical environment."/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
         <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
           <details key="documentation" value="The physical unit of the signal, e.g. s for seconds"/>
@@ -5224,7 +5278,21 @@
         </eAnnotations>
       </eStructuralFeatures>
       <eStructuralFeatures xsi:type="ecore:EReference" name="implementedBy" upperBound="-1"
-          eType="#//functions/Task"/>
+          eType="#//functions/Task">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="References a task which implements the physical interaction."/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalInteraction" eSuperTypes="#//physical/PhysicalInteractionContainerA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A description for the interaction of a function with the physical environment."/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SubphysicalInteraction" eSuperTypes="#//physical/PhysicalInteractionContainerA">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A nested description of a physical interaction."/>
+      </eAnnotations>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -202,15 +202,6 @@ public interface LibraryFactory extends EFactory {
 	AttributeDefinition createAttributeDefinition();
 
 	/**
-	 * Returns a new object of class '<em>Fault Propagation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Fault Propagation</em>'.
-	 * @generated
-	 */
-	FaultPropagation createFaultPropagation();
-
-	/**
 	 * Returns a new object of class '<em>Task Input State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -292,15 +283,6 @@ public interface LibraryFactory extends EFactory {
 	ResourceTypeDissimilarity createResourceTypeDissimilarity();
 
 	/**
-	 * Returns a new object of class '<em>Sublibrary</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sublibrary</em>'.
-	 * @generated
-	 */
-	Sublibrary createSublibrary();
-
-	/**
 	 * Returns a new object of class '<em>Task Output Trigger</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -337,15 +319,6 @@ public interface LibraryFactory extends EFactory {
 	TaskParameterDeclaration createTaskParameterDeclaration();
 
 	/**
-	 * Returns a new object of class '<em>Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Library</em>'.
-	 * @generated
-	 */
-	Library createLibrary();
-
-	/**
 	 * Returns a new object of class '<em>Bus Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +335,24 @@ public interface LibraryFactory extends EFactory {
 	 * @generated
 	 */
 	MessageType createMessageType();
+
+	/**
+	 * Returns a new object of class '<em>Library</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Library</em>'.
+	 * @generated
+	 */
+	Library createLibrary();
+
+	/**
+	 * Returns a new object of class '<em>Sublibrary</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sublibrary</em>'.
+	 * @generated
+	 */
+	Sublibrary createSublibrary();
 
 	/**
 	 * Returns the package supported by this factory.

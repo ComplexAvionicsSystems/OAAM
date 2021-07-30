@@ -417,6 +417,29 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.functions.TaskFailure} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskFailureItemProvider taskFailureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.oaam.model.oaam.functions.TaskFailure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskFailureAdapter() {
+		if (taskFailureItemProvider == null) {
+			taskFailureItemProvider = new TaskFailureItemProvider(this);
+		}
+
+		return taskFailureItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +553,7 @@ public class FunctionsItemProviderAdapterFactory extends FunctionsAdapterFactory
 		if (externalOutputLinkItemProvider != null) externalOutputLinkItemProvider.dispose();
 		if (subfunctionsItemProvider != null) subfunctionsItemProvider.dispose();
 		if (taskParameterItemProvider != null) taskParameterItemProvider.dispose();
+		if (taskFailureItemProvider != null) taskFailureItemProvider.dispose();
 	}
 
 }

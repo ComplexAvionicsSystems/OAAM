@@ -164,6 +164,66 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Schedule createSchedule() {
+		ScheduleImpl schedule = new ScheduleImpl();
+		return schedule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ScheduledTime createScheduledTime() {
+		ScheduledTimeImpl scheduledTime = new ScheduledTimeImpl();
+		return scheduledTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageSegment createMessageSegment() {
+		MessageSegmentImpl messageSegment = new MessageSegmentImpl();
+		return messageSegment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message createMessage() {
+		MessageImpl message = new MessageImpl();
+		return message;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Submessage createSubmessage() {
+		SubmessageImpl submessage = new SubmessageImpl();
+		return submessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignalToMessageAssignment createSignalToMessageAssignment() {
+		SignalToMessageAssignmentImpl signalToMessageAssignment = new SignalToMessageAssignmentImpl();
+		return signalToMessageAssignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Allocations createAllocations() {
 		AllocationsImpl allocations = new AllocationsImpl();
 		return allocations;
@@ -197,66 +257,6 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	public PathGroup createPathGroup() {
 		PathGroupImpl pathGroup = new PathGroupImpl();
 		return pathGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Schedule createSchedule() {
-		ScheduleImpl schedule = new ScheduleImpl();
-		return schedule;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScheduledTime createScheduledTime() {
-		ScheduledTimeImpl scheduledTime = new ScheduledTimeImpl();
-		return scheduledTime;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Message createMessage() {
-		MessageImpl message = new MessageImpl();
-		return message;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SignalToMessageAssignment createSignalToMessageAssignment() {
-		SignalToMessageAssignmentImpl signalToMessageAssignment = new SignalToMessageAssignmentImpl();
-		return signalToMessageAssignment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MessageSegment createMessageSegment() {
-		MessageSegmentImpl messageSegment = new MessageSegmentImpl();
-		return messageSegment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Submessage createSubmessage() {
-		SubmessageImpl submessage = new SubmessageImpl();
-		return submessage;
 	}
 
 	/**

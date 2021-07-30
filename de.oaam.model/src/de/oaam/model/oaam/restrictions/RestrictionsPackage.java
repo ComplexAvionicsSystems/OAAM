@@ -44,7 +44,7 @@ public interface RestrictionsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/restrictions";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/restrictions";
 
 	/**
 	 * The package namespace name.

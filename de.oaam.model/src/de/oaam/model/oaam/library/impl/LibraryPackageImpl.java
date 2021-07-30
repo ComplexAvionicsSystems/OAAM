@@ -40,7 +40,6 @@ import de.oaam.model.oaam.library.DeviceTypeDissimilarity;
 import de.oaam.model.oaam.library.DeviceTypeSymmetry;
 import de.oaam.model.oaam.library.DuctOpeningDeclaration;
 import de.oaam.model.oaam.library.DuctType;
-import de.oaam.model.oaam.library.FaultPropagation;
 import de.oaam.model.oaam.library.InputDeclaration;
 import de.oaam.model.oaam.library.IoDeclaration;
 import de.oaam.model.oaam.library.IoDirectionE;
@@ -78,9 +77,29 @@ import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -278,13 +297,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass faultPropagationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass taskInputStateEClass = null;
 
 	/**
@@ -348,13 +360,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sublibraryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass taskOutputTriggerEClass = null;
 
 	/**
@@ -383,13 +388,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass libraryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass busTypeEClass = null;
 
 	/**
@@ -398,6 +396,20 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	private EClass messageTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass libraryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sublibraryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -488,6 +500,16 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(registeredPackage instanceof RestrictionsPackageImpl ? registeredPackage : RestrictionsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theLibraryPackage.createPackageContents();
@@ -501,6 +523,11 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theLibraryPackage.initializePackageContents();
@@ -514,6 +541,11 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theLibraryPackage.freeze();
@@ -825,6 +857,15 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLibraryContainerA_FunctionalFailureModeSets() {
+		return (EReference)libraryContainerAEClass.getEStructuralFeatures().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getResourceType() {
 		return resourceTypeEClass;
 	}
@@ -1086,6 +1127,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTaskType_TaskInternalRequirements() {
+		return (EReference)taskTypeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskType_FailurePropagation() {
+		return (EReference)taskTypeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSignalType() {
 		return signalTypeEClass;
 	}
@@ -1140,7 +1199,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDeviceType_Mtbf() {
+	public EAttribute getDeviceType_Weight() {
 		return (EAttribute)deviceTypeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1149,7 +1208,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDeviceType_Weight() {
+	public EAttribute getDeviceType_Cost() {
 		return (EAttribute)deviceTypeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1158,17 +1217,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDeviceType_Cost() {
-		return (EAttribute)deviceTypeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDeviceType_IoGroups() {
-		return (EReference)deviceTypeEClass.getEStructuralFeatures().get(6);
+		return (EReference)deviceTypeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1177,7 +1227,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	public EAttribute getDeviceType_IsSelfManaging() {
-		return (EAttribute)deviceTypeEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)deviceTypeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1455,15 +1505,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getWireType_Mtbf() {
-		return (EAttribute)wireTypeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIoType() {
 		return ioTypeEClass;
 	}
@@ -1626,6 +1667,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getOutputDeclaration_InitialValue() {
+		return (EAttribute)outputDeclarationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOutputDeclaration_IsStateful() {
+		return (EAttribute)outputDeclarationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIoDeclaration() {
 		return ioDeclarationEClass;
 	}
@@ -1743,60 +1802,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFaultPropagation() {
-		return faultPropagationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFaultPropagation_OutputState() {
-		return (EAttribute)faultPropagationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFaultPropagation_Condition() {
-		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFaultPropagation_BooleanOperations() {
-		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFaultPropagation_BooleanNots() {
-		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFaultPropagation_TaskInputStates() {
-		return (EReference)faultPropagationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskInputState() {
 		return taskInputStateEClass;
 	}
@@ -1806,7 +1811,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTaskInputState_State() {
+	public EAttribute getTaskInputState_IntegrityState() {
 		return (EAttribute)taskInputStateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2004,15 +2009,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSublibrary() {
-		return sublibraryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskOutputTrigger() {
 		return taskOutputTriggerEClass;
 	}
@@ -2130,15 +2126,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLibrary() {
-		return libraryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBusType() {
 		return busTypeEClass;
 	}
@@ -2157,7 +2144,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBusType_Mtbf() {
+	public EAttribute getBusType_IsSelfManaging() {
 		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2166,17 +2153,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBusType_IsSelfManaging() {
-		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getBusType_ConnectionTypes() {
-		return (EReference)busTypeEClass.getEStructuralFeatures().get(3);
+		return (EReference)busTypeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2185,7 +2163,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	public EAttribute getBusType_RequiresMaster() {
-		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)busTypeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2194,7 +2172,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 * @generated
 	 */
 	public EReference getBusType_Messagetypes() {
-		return (EReference)busTypeEClass.getEStructuralFeatures().get(5);
+		return (EReference)busTypeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2249,6 +2227,24 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 	 */
 	public EReference getMessageType_TrailerDefinition() {
 		return (EReference)messageTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLibrary() {
+		return libraryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSublibrary() {
+		return sublibraryEClass;
 	}
 
 	/**
@@ -2342,6 +2338,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__HARDWARE_GROUP_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__MESSAGE_TYPES);
 		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__BUS_TYPES);
+		createEReference(libraryContainerAEClass, LIBRARY_CONTAINER_A__FUNCTIONAL_FAILURE_MODE_SETS);
 
 		resourceTypeEClass = createEClass(RESOURCE_TYPE);
 		createEAttribute(resourceTypeEClass, RESOURCE_TYPE__UNIT);
@@ -2376,6 +2373,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(taskTypeEClass, TASK_TYPE__PREFERRED_EXECUTION_RATE);
 		createEReference(taskTypeEClass, TASK_TYPE__STATE_DECLARATIONS);
 		createEReference(taskTypeEClass, TASK_TYPE__PARAMETER_DECLARATIONS);
+		createEReference(taskTypeEClass, TASK_TYPE__TASK_INTERNAL_REQUIREMENTS);
+		createEReference(taskTypeEClass, TASK_TYPE__FAILURE_PROPAGATION);
 
 		signalTypeEClass = createEClass(SIGNAL_TYPE);
 		createEReference(signalTypeEClass, SIGNAL_TYPE__TYPE);
@@ -2384,7 +2383,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEReference(deviceTypeEClass, DEVICE_TYPE__IO_DECLARATIONS);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__IS_SUBDEVICE);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__CAN_HAVE_SUBDEVICES);
-		createEAttribute(deviceTypeEClass, DEVICE_TYPE__MTBF);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__WEIGHT);
 		createEAttribute(deviceTypeEClass, DEVICE_TYPE__COST);
 		createEReference(deviceTypeEClass, DEVICE_TYPE__IO_GROUPS);
@@ -2423,7 +2421,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(wireTypeEClass, WIRE_TYPE__NCONDUCTORS);
 		createEAttribute(wireTypeEClass, WIRE_TYPE__MIN_BENDING_RADIUS);
 		createEAttribute(wireTypeEClass, WIRE_TYPE__NSHIELDS);
-		createEAttribute(wireTypeEClass, WIRE_TYPE__MTBF);
 
 		ioTypeEClass = createEClass(IO_TYPE);
 		createEAttribute(ioTypeEClass, IO_TYPE__DIRECTION);
@@ -2445,6 +2442,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(outputDeclarationEClass, OUTPUT_DECLARATION__LOWER_BOUND);
 		createEAttribute(outputDeclarationEClass, OUTPUT_DECLARATION__UPPER_BOUND);
 		createEReference(outputDeclarationEClass, OUTPUT_DECLARATION__FAULT_PROPAGATIONS);
+		createEAttribute(outputDeclarationEClass, OUTPUT_DECLARATION__INITIAL_VALUE);
+		createEAttribute(outputDeclarationEClass, OUTPUT_DECLARATION__IS_STATEFUL);
 
 		ioDeclarationEClass = createEClass(IO_DECLARATION);
 		createEReference(ioDeclarationEClass, IO_DECLARATION__RESOURCES);
@@ -2465,15 +2464,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		createEAttribute(attributeDefinitionEClass, ATTRIBUTE_DEFINITION__DATA_TYPE);
 		createEAttribute(attributeDefinitionEClass, ATTRIBUTE_DEFINITION__TARGET);
 
-		faultPropagationEClass = createEClass(FAULT_PROPAGATION);
-		createEAttribute(faultPropagationEClass, FAULT_PROPAGATION__OUTPUT_STATE);
-		createEReference(faultPropagationEClass, FAULT_PROPAGATION__CONDITION);
-		createEReference(faultPropagationEClass, FAULT_PROPAGATION__BOOLEAN_OPERATIONS);
-		createEReference(faultPropagationEClass, FAULT_PROPAGATION__BOOLEAN_NOTS);
-		createEReference(faultPropagationEClass, FAULT_PROPAGATION__TASK_INPUT_STATES);
-
 		taskInputStateEClass = createEClass(TASK_INPUT_STATE);
-		createEAttribute(taskInputStateEClass, TASK_INPUT_STATE__STATE);
+		createEAttribute(taskInputStateEClass, TASK_INPUT_STATE__INTEGRITY_STATE);
 		createEReference(taskInputStateEClass, TASK_INPUT_STATE__INPUT);
 
 		powerSourceEClass = createEClass(POWER_SOURCE);
@@ -2523,7 +2515,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		busTypeEClass = createEClass(BUS_TYPE);
 		createEReference(busTypeEClass, BUS_TYPE__DEVICE_TYPES);
-		createEAttribute(busTypeEClass, BUS_TYPE__MTBF);
 		createEAttribute(busTypeEClass, BUS_TYPE__IS_SELF_MANAGING);
 		createEReference(busTypeEClass, BUS_TYPE__CONNECTION_TYPES);
 		createEAttribute(busTypeEClass, BUS_TYPE__REQUIRES_MASTER);
@@ -2571,6 +2562,9 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		// Obtain other dependent packages
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		SafetyPackage theSafetyPackage = (SafetyPackage)EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		TaskInternalRequirementsPackage theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackage)EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		FailurePropagationsPackage theFailurePropagationsPackage = (FailurePropagationsPackage)EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2591,15 +2585,19 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		deviceTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
 		deviceTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		deviceTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		deviceTypeEClass.getESuperTypes().add(theSafetyPackage.getFailureProviderA());
 		connectionTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		connectionTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
 		connectionTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		connectionTypeEClass.getESuperTypes().add(theSafetyPackage.getFailureProviderA());
 		locationTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		locationTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ductTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		ductTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		wireTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		wireTypeEClass.getESuperTypes().add(theSafetyPackage.getFailureProviderA());
 		ioTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		ioTypeEClass.getESuperTypes().add(theSafetyPackage.getFailureProviderA());
 		inputDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		outputDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ioDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
@@ -2608,7 +2606,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		deviceTypeSymmetryEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		ioGroupEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		attributeDefinitionEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
-		faultPropagationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskInputStateEClass.getESuperTypes().add(theCommonPackage.getBoolA());
 		taskInputStateEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		powerSourceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
@@ -2627,6 +2624,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		taskParameterDeclarationEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		busTypeEClass.getESuperTypes().add(this.getResourceProviderA());
 		busTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		busTypeEClass.getESuperTypes().add(theSafetyPackage.getFailureProviderA());
 		messageTypeEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		messageTypeEClass.getESuperTypes().add(this.getResourceConsumerA());
 		messageTypeEClass.getESuperTypes().add(this.getResourceProviderA());
@@ -2670,6 +2668,7 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getLibraryContainerA_HardwareGroupTypes(), this.getBusType(), null, "hardwareGroupTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_MessageTypes(), this.getMessageType(), null, "messageTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLibraryContainerA_BusTypes(), this.getBusType(), null, "busTypes", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLibraryContainerA_FunctionalFailureModeSets(), theSafetyPackage.getFunctionalFailureModeSet(), null, "functionalFailureModeSets", null, 0, -1, LibraryContainerA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resourceTypeEClass, ResourceType.class, "ResourceType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getResourceType_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, ResourceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2704,6 +2703,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getTaskType_PreferredExecutionRate(), ecorePackage.getEFloat(), "preferredExecutionRate", "0.0", 1, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskType_StateDeclarations(), this.getTaskStateDeclaration(), null, "stateDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskType_ParameterDeclarations(), this.getTaskParameterDeclaration(), null, "parameterDeclarations", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_TaskInternalRequirements(), theTaskInternalRequirementsPackage.getTaskInternalRequirement(), null, "taskInternalRequirements", null, 0, -1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskType_FailurePropagation(), theFailurePropagationsPackage.getFailurePropagation(), null, "failurePropagation", null, 0, 1, TaskType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalTypeEClass, SignalType.class, "SignalType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSignalType_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, SignalType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2712,7 +2713,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getDeviceType_IoDeclarations(), this.getIoDeclaration(), null, "ioDeclarations", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_IsSubdevice(), ecorePackage.getEBoolean(), "isSubdevice", "false", 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_CanHaveSubdevices(), ecorePackage.getEBoolean(), "canHaveSubdevices", "false", 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDeviceType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_Weight(), ecorePackage.getEDouble(), "weight", null, 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDeviceType_Cost(), ecorePackage.getEDouble(), "cost", null, 1, 1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDeviceType_IoGroups(), this.getIoGroup(), null, "ioGroups", null, 0, -1, DeviceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2751,7 +2751,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getWireType_NConductors(), ecorePackage.getEInt(), "nConductors", "1", 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWireType_MinBendingRadius(), ecorePackage.getEDouble(), "minBendingRadius", null, 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWireType_NShields(), ecorePackage.getEInt(), "nShields", "1", 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWireType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, WireType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ioTypeEClass, IoType.class, "IoType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIoType_Direction(), this.getIoDirectionE(), "direction", "NONE", 1, 1, IoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2772,7 +2771,9 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEReference(getOutputDeclaration_Type(), theCommonPackage.getDataTypeA(), null, "type", null, 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutputDeclaration_LowerBound(), ecorePackage.getEInt(), "lowerBound", "1", 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutputDeclaration_UpperBound(), ecorePackage.getEInt(), "upperBound", "1", 1, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutputDeclaration_FaultPropagations(), this.getFaultPropagation(), null, "faultPropagations", null, 0, -1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutputDeclaration_FaultPropagations(), theSafetyPackage.getFaultPropagation(), null, "faultPropagations", null, 0, -1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOutputDeclaration_InitialValue(), ecorePackage.getEString(), "initialValue", null, 0, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOutputDeclaration_IsStateful(), ecorePackage.getEBoolean(), "isStateful", null, 0, 1, OutputDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ioDeclarationEClass, IoDeclaration.class, "IoDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIoDeclaration_Resources(), this.getResource(), null, "resources", null, 1, -1, IoDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2793,15 +2794,8 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 		initEAttribute(getAttributeDefinition_DataType(), this.getAttributeTypesE(), "dataType", null, 1, 1, AttributeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttributeDefinition_Target(), this.getAttributeTargetsE(), "target", null, 1, 1, AttributeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(faultPropagationEClass, FaultPropagation.class, "FaultPropagation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFaultPropagation_OutputState(), theCommonPackage.getIntegretyStateE(), "outputState", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFaultPropagation_Condition(), theCommonPackage.getBoolA(), null, "condition", null, 1, 1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFaultPropagation_BooleanOperations(), theCommonPackage.getBoolOperation(), null, "booleanOperations", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFaultPropagation_BooleanNots(), theCommonPackage.getBoolNot(), null, "booleanNots", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFaultPropagation_TaskInputStates(), this.getTaskInputState(), null, "taskInputStates", null, 0, -1, FaultPropagation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(taskInputStateEClass, TaskInputState.class, "TaskInputState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTaskInputState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskInputState_IntegrityState(), theCommonPackage.getIntegrityStateE(), "integrityState", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTaskInputState_Input(), this.getInputDeclaration(), null, "input", null, 1, 1, TaskInputState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(powerSourceEClass, PowerSource.class, "PowerSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2851,7 +2845,6 @@ public class LibraryPackageImpl extends EPackageImpl implements LibraryPackage {
 
 		initEClass(busTypeEClass, BusType.class, "BusType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusType_DeviceTypes(), this.getDeviceType(), null, "deviceTypes", null, 0, -1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBusType_Mtbf(), ecorePackage.getEDouble(), "mtbf", null, 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusType_IsSelfManaging(), ecorePackage.getEBoolean(), "isSelfManaging", "false", 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusType_ConnectionTypes(), this.getConnectionType(), null, "connectionTypes", null, 0, -1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getBusType_RequiresMaster(), ecorePackage.getEBoolean(), "requiresMaster", "false", 1, 1, BusType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

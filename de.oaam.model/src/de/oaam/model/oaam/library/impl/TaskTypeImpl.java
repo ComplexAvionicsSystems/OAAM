@@ -13,6 +13,10 @@ import de.oaam.model.oaam.library.TaskParameterDeclaration;
 import de.oaam.model.oaam.library.TaskStateDeclaration;
 import de.oaam.model.oaam.library.TaskType;
 
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagation;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirement;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -51,6 +55,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getPreferredExecutionRate <em>Preferred Execution Rate</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getStateDeclarations <em>State Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getParameterDeclarations <em>Parameter Declarations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getTaskInternalRequirements <em>Task Internal Requirements</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.TaskTypeImpl#getFailurePropagation <em>Failure Propagation</em>}</li>
  * </ul>
  *
  * @generated
@@ -285,6 +291,26 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * @ordered
 	 */
 	protected EList<TaskParameterDeclaration> parameterDeclarations;
+
+	/**
+	 * The cached value of the '{@link #getTaskInternalRequirements() <em>Task Internal Requirements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTaskInternalRequirements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TaskInternalRequirement> taskInternalRequirements;
+
+	/**
+	 * The cached value of the '{@link #getFailurePropagation() <em>Failure Propagation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailurePropagation()
+	 * @generated
+	 * @ordered
+	 */
+	protected FailurePropagation failurePropagation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -559,6 +585,61 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TaskInternalRequirement> getTaskInternalRequirements() {
+		if (taskInternalRequirements == null) {
+			taskInternalRequirements = new EObjectContainmentEList<TaskInternalRequirement>(TaskInternalRequirement.class, this, LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS);
+		}
+		return taskInternalRequirements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FailurePropagation getFailurePropagation() {
+		return failurePropagation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFailurePropagation(FailurePropagation newFailurePropagation, NotificationChain msgs) {
+		FailurePropagation oldFailurePropagation = failurePropagation;
+		failurePropagation = newFailurePropagation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION, oldFailurePropagation, newFailurePropagation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFailurePropagation(FailurePropagation newFailurePropagation) {
+		if (newFailurePropagation != failurePropagation) {
+			NotificationChain msgs = null;
+			if (failurePropagation != null)
+				msgs = ((InternalEObject)failurePropagation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION, null, msgs);
+			if (newFailurePropagation != null)
+				msgs = ((InternalEObject)newFailurePropagation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION, null, msgs);
+			msgs = basicSetFailurePropagation(newFailurePropagation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION, newFailurePropagation, newFailurePropagation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -572,6 +653,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return ((InternalEList<?>)getStateDeclarations()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return ((InternalEList<?>)getParameterDeclarations()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+				return ((InternalEList<?>)getTaskInternalRequirements()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
+				return basicSetFailurePropagation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -612,6 +697,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return getStateDeclarations();
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return getParameterDeclarations();
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+				return getTaskInternalRequirements();
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
+				return getFailurePropagation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -672,6 +761,13 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				getParameterDeclarations().clear();
 				getParameterDeclarations().addAll((Collection<? extends TaskParameterDeclaration>)newValue);
 				return;
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+				getTaskInternalRequirements().clear();
+				getTaskInternalRequirements().addAll((Collection<? extends TaskInternalRequirement>)newValue);
+				return;
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
+				setFailurePropagation((FailurePropagation)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -726,6 +822,12 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				getParameterDeclarations().clear();
 				return;
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+				getTaskInternalRequirements().clear();
+				return;
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
+				setFailurePropagation((FailurePropagation)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -766,6 +868,10 @@ public class TaskTypeImpl extends ResourceConsumerAImpl implements TaskType {
 				return stateDeclarations != null && !stateDeclarations.isEmpty();
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
 				return parameterDeclarations != null && !parameterDeclarations.isEmpty();
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+				return taskInternalRequirements != null && !taskInternalRequirements.isEmpty();
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
+				return failurePropagation != null;
 		}
 		return super.eIsSet(featureID);
 	}

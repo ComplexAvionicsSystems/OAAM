@@ -10,6 +10,10 @@ import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 import de.oaam.model.oaam.library.TaskType;
 
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsFactory;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsFactory;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -279,6 +283,8 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__INPUT_DECLARATIONS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__STATE_DECLARATIONS);
 			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS);
+			childrenFeatures.add(LibraryPackage.Literals.TASK_TYPE__FAILURE_PROPAGATION);
 		}
 		return childrenFeatures;
 	}
@@ -350,6 +356,8 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.TASK_TYPE__INPUT_DECLARATIONS:
 			case LibraryPackage.TASK_TYPE__STATE_DECLARATIONS:
 			case LibraryPackage.TASK_TYPE__PARAMETER_DECLARATIONS:
+			case LibraryPackage.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS:
+			case LibraryPackage.TASK_TYPE__FAILURE_PROPAGATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -406,6 +414,16 @@ public class TaskTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createChildParameter
 				(LibraryPackage.Literals.TASK_TYPE__PARAMETER_DECLARATIONS,
 				 LibraryFactory.eINSTANCE.createTaskParameterDeclaration()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.TASK_TYPE__TASK_INTERNAL_REQUIREMENTS,
+				 TaskInternalRequirementsFactory.eINSTANCE.createTaskInternalRequirement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(LibraryPackage.Literals.TASK_TYPE__FAILURE_PROPAGATION,
+				 FailurePropagationsFactory.eINSTANCE.createFailurePropagation()));
 	}
 
 }

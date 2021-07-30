@@ -5,6 +5,7 @@ package de.oaam.model.oaam.allocations.impl;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.SegmentA;
 import de.oaam.model.oaam.allocations.SignalAssignment;
+
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.functions.Signal;

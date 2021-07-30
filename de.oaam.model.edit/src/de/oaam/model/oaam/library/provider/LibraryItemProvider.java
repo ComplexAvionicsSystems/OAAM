@@ -4,8 +4,8 @@ package de.oaam.model.oaam.library.provider;
 
 
 import de.oaam.model.oaam.library.Library;
-
 import de.oaam.model.oaam.library.LibraryPackage;
+
 import java.util.Collection;
 import java.util.List;
 

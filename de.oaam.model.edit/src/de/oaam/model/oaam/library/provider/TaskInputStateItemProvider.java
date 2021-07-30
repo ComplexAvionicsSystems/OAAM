@@ -63,7 +63,7 @@ public class TaskInputStateItemProvider extends BoolAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
-			addStatePropertyDescriptor(object);
+			addIntegrityStatePropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -224,19 +224,19 @@ public class TaskInputStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the State feature.
+	 * This adds a property descriptor for the Integrity State feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatePropertyDescriptor(Object object) {
+	protected void addIntegrityStatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TaskInputState_state_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TaskInputState_state_feature", "_UI_TaskInputState_type"),
-				 LibraryPackage.Literals.TASK_INPUT_STATE__STATE,
+				 getString("_UI_TaskInputState_integrityState_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TaskInputState_integrityState_feature", "_UI_TaskInputState_type"),
+				 LibraryPackage.Literals.TASK_INPUT_STATE__INTEGRITY_STATE,
 				 true,
 				 false,
 				 false,
@@ -342,7 +342,7 @@ public class TaskInputStateItemProvider extends BoolAItemProvider {
 			case LibraryPackage.TASK_INPUT_STATE__MODIFIED:
 			case LibraryPackage.TASK_INPUT_STATE__MODIFIER:
 			case LibraryPackage.TASK_INPUT_STATE__TRACE_LINK:
-			case LibraryPackage.TASK_INPUT_STATE__STATE:
+			case LibraryPackage.TASK_INPUT_STATE__INTEGRITY_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.TASK_INPUT_STATE__ATTRIBUTES:

@@ -4,33 +4,39 @@ package de.oaam.model.oaam.allocations.impl;
 
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.Message;
-
 import de.oaam.model.oaam.allocations.PathA;
 import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.SegmentA;
 import de.oaam.model.oaam.allocations.SignalToMessageAssignment;
 import de.oaam.model.oaam.allocations.Submessage;
+
 import de.oaam.model.oaam.capabilities.MessageOnBusCapability;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
-import de.oaam.model.oaam.hardware.Bus;
 
+import de.oaam.model.oaam.hardware.Bus;
 import de.oaam.model.oaam.hardware.Device;
+
 import de.oaam.model.oaam.library.MessageType;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.OperationModeReference;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
-import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -409,6 +415,49 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PathA getPath() {
+		return path;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPath(PathA newPath, NotificationChain msgs) {
+		PathA oldPath = path;
+		path = newPath;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, oldPath, newPath);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPath(PathA newPath) {
+		if (newPath != path) {
+			NotificationChain msgs = null;
+			if (path != null)
+				msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
+			if (newPath != null)
+				msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
+			msgs = basicSetPath(newPath, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, newPath, newPath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MessageOnBusCapability getCapability() {
 		if (capability != null && capability.eIsProxy()) {
 			InternalEObject oldCapability = (InternalEObject)capability;
@@ -540,49 +589,6 @@ public class MessageImpl extends OaamBaseElementAImpl implements Message {
 		isRedundantTo = newIsRedundantTo;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__IS_REDUNDANT_TO, oldIsRedundantTo, isRedundantTo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PathA getPath() {
-		return path;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPath(PathA newPath, NotificationChain msgs) {
-		PathA oldPath = path;
-		path = newPath;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, oldPath, newPath);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPath(PathA newPath) {
-		if (newPath != path) {
-			NotificationChain msgs = null;
-			if (path != null)
-				msgs = ((InternalEObject)path).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
-			if (newPath != null)
-				msgs = ((InternalEObject)newPath).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AllocationsPackage.MESSAGE__PATH, null, msgs);
-			msgs = basicSetPath(newPath, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AllocationsPackage.MESSAGE__PATH, newPath, newPath));
 	}
 
 	/**

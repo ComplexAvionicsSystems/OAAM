@@ -4,6 +4,7 @@ package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -33,7 +34,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface AllocationsContainerA extends OaamBaseElementA {
+public interface AllocationsContainerA extends OaamBaseElementA, SystemBelongingElementA {
 	/**
 	 * Returns the value of the '<em><b>Device Assignments</b></em>' containment reference list.
 	 * The list contents are of type {@link de.oaam.model.oaam.allocations.DeviceAssignment}.

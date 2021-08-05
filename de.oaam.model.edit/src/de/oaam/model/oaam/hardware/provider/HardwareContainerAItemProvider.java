@@ -3,6 +3,7 @@
 package de.oaam.model.oaam.hardware.provider;
 
 
+import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
 
 import de.oaam.model.oaam.hardware.HardwareContainerA;
@@ -21,6 +22,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -52,8 +54,31 @@ public class HardwareContainerAItemProvider extends OaamBaseElementAItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBelongsToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Belongs To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBelongsToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_SystemBelongingElementA_belongsTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_SystemBelongingElementA_belongsTo_feature", "_UI_SystemBelongingElementA_type"),
+				 CommonPackage.Literals.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

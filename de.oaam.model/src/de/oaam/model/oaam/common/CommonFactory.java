@@ -139,6 +139,15 @@ public interface CommonFactory extends EFactory {
 	Boolean createBoolean();
 
 	/**
+	 * Returns a new object of class '<em>System Belonging Element A</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Belonging Element A</em>'.
+	 * @generated
+	 */
+	SystemBelongingElementA createSystemBelongingElementA();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

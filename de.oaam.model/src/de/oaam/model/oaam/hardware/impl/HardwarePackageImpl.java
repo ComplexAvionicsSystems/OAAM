@@ -577,6 +577,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 
 		// Add supertypes to classes
 		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		hardwareContainerAEClass.getESuperTypes().add(theCommonPackage.getSystemBelongingElementA());
 		deviceEClass.getESuperTypes().add(theLibraryPackage.getResourceProviderInstanceA());
 		deviceEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		deviceEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());

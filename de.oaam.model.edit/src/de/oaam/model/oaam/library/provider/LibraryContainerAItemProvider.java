@@ -12,7 +12,6 @@ import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
-
 import java.util.Collection;
 import java.util.List;
 

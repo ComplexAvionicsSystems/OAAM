@@ -4,6 +4,11 @@ package de.oaam.model.oaam.systems.impl;
 
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
+import de.oaam.model.oaam.scenario.ModeDependentElementA;
+import de.oaam.model.oaam.scenario.OperationModeReference;
+import de.oaam.model.oaam.scenario.ScenarioPackage;
+import de.oaam.model.oaam.scenario.Variant;
+import de.oaam.model.oaam.scenario.VariantDependentElementA;
 import de.oaam.model.oaam.systems.InformationFlow;
 import de.oaam.model.oaam.systems.InputSegregation;
 import de.oaam.model.oaam.systems.Subsystem;
@@ -20,6 +25,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -30,6 +36,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.systems.impl.SystemsContainerAImpl#getOperationModes <em>Operation Modes</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.systems.impl.SystemsContainerAImpl#getVariants <em>Variants</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.SystemsContainerAImpl#getSystems <em>Systems</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.SystemsContainerAImpl#getInformationFlows <em>Information Flows</em>}</li>
  *   <li>{@link de.oaam.model.oaam.systems.impl.SystemsContainerAImpl#getInputSegregations <em>Input Segregations</em>}</li>
@@ -39,6 +47,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl implements SystemsContainerA {
+	/**
+	 * The cached value of the '{@link #getOperationModes() <em>Operation Modes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperationModes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OperationModeReference> operationModes;
+
+	/**
+	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVariants()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Variant> variants;
+
 	/**
 	 * The cached value of the '{@link #getSystems() <em>Systems</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -103,6 +131,30 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<OperationModeReference> getOperationModes() {
+		if (operationModes == null) {
+			operationModes = new EObjectContainmentEList<OperationModeReference>(OperationModeReference.class, this, SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES);
+		}
+		return operationModes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Variant> getVariants() {
+		if (variants == null) {
+			variants = new EObjectResolvingEList<Variant>(Variant.class, this, SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS);
+		}
+		return variants;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<de.oaam.model.oaam.systems.System> getSystems() {
 		if (systems == null) {
 			systems = new EObjectContainmentEList<de.oaam.model.oaam.systems.System>(de.oaam.model.oaam.systems.System.class, this, SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS);
@@ -154,6 +206,8 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
+				return ((InternalEList<?>)getOperationModes()).basicRemove(otherEnd, msgs);
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 				return ((InternalEList<?>)getSystems()).basicRemove(otherEnd, msgs);
 			case SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS:
@@ -174,6 +228,10 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
+				return getOperationModes();
+			case SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS:
+				return getVariants();
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 				return getSystems();
 			case SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS:
@@ -195,6 +253,14 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
+				getOperationModes().clear();
+				getOperationModes().addAll((Collection<? extends OperationModeReference>)newValue);
+				return;
+			case SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS:
+				getVariants().clear();
+				getVariants().addAll((Collection<? extends Variant>)newValue);
+				return;
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 				getSystems().clear();
 				getSystems().addAll((Collection<? extends de.oaam.model.oaam.systems.System>)newValue);
@@ -223,6 +289,12 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
+				getOperationModes().clear();
+				return;
+			case SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS:
+				getVariants().clear();
+				return;
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 				getSystems().clear();
 				return;
@@ -247,6 +319,10 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES:
+				return operationModes != null && !operationModes.isEmpty();
+			case SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS:
+				return variants != null && !variants.isEmpty();
 			case SystemsPackage.SYSTEMS_CONTAINER_A__SYSTEMS:
 				return systems != null && !systems.isEmpty();
 			case SystemsPackage.SYSTEMS_CONTAINER_A__INFORMATION_FLOWS:
@@ -257,6 +333,50 @@ public abstract class SystemsContainerAImpl extends OaamBaseElementAImpl impleme
 				return subsystems != null && !subsystems.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == ModeDependentElementA.class) {
+			switch (derivedFeatureID) {
+				case SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES: return ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES;
+				default: return -1;
+			}
+		}
+		if (baseClass == VariantDependentElementA.class) {
+			switch (derivedFeatureID) {
+				case SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS: return ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == ModeDependentElementA.class) {
+			switch (baseFeatureID) {
+				case ScenarioPackage.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES: return SystemsPackage.SYSTEMS_CONTAINER_A__OPERATION_MODES;
+				default: return -1;
+			}
+		}
+		if (baseClass == VariantDependentElementA.class) {
+			switch (baseFeatureID) {
+				case ScenarioPackage.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS: return SystemsPackage.SYSTEMS_CONTAINER_A__VARIANTS;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //SystemsContainerAImpl

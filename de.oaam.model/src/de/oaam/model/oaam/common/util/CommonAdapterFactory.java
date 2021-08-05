@@ -17,6 +17,7 @@ import de.oaam.model.oaam.common.FloatingPoint;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 import de.oaam.model.oaam.common.Struct;
 
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -147,6 +148,10 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBoolean(de.oaam.model.oaam.common.Boolean object) {
 				return createBooleanAdapter();
+			}
+			@Override
+			public Adapter caseSystemBelongingElementA(SystemBelongingElementA object) {
+				return createSystemBelongingElementAAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -403,6 +408,20 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.oaam.model.oaam.common.SystemBelongingElementA <em>System Belonging Element A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.oaam.model.oaam.common.SystemBelongingElementA
+	 * @generated
+	 */
+	public Adapter createSystemBelongingElementAAdapter() {
 		return null;
 	}
 

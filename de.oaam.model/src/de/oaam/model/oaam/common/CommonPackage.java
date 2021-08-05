@@ -1905,6 +1905,43 @@ public interface CommonPackage extends EPackage {
 	int BOOLEAN_OPERATION_COUNT = DATA_TYPE_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.common.impl.SystemBelongingElementAImpl <em>System Belonging Element A</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.common.impl.SystemBelongingElementAImpl
+	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getSystemBelongingElementA()
+	 * @generated
+	 */
+	int SYSTEM_BELONGING_ELEMENT_A = 17;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO = 0;
+
+	/**
+	 * The number of structural features of the '<em>System Belonging Element A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BELONGING_ELEMENT_A_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>System Belonging Element A</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_BELONGING_ELEMENT_A_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.BoolOperationTypesE <em>Bool Operation Types E</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1912,7 +1949,7 @@ public interface CommonPackage extends EPackage {
 	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getBoolOperationTypesE()
 	 * @generated
 	 */
-	int BOOL_OPERATION_TYPES_E = 17;
+	int BOOL_OPERATION_TYPES_E = 18;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.IntegretyStateE <em>Integrety State E</em>}' enum.
@@ -1922,7 +1959,7 @@ public interface CommonPackage extends EPackage {
 	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getIntegretyStateE()
 	 * @generated
 	 */
-	int INTEGRETY_STATE_E = 18;
+	int INTEGRETY_STATE_E = 19;
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.common.EndianessE <em>Endianess E</em>}' enum.
@@ -1932,7 +1969,7 @@ public interface CommonPackage extends EPackage {
 	 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getEndianessE()
 	 * @generated
 	 */
-	int ENDIANESS_E = 19;
+	int ENDIANESS_E = 20;
 
 
 	/**
@@ -2458,6 +2495,27 @@ public interface CommonPackage extends EPackage {
 	EAttribute getBoolean_NBits();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.common.SystemBelongingElementA <em>System Belonging Element A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Belonging Element A</em>'.
+	 * @see de.oaam.model.oaam.common.SystemBelongingElementA
+	 * @generated
+	 */
+	EClass getSystemBelongingElementA();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.common.SystemBelongingElementA#getBelongsTo <em>Belongs To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Belongs To</em>'.
+	 * @see de.oaam.model.oaam.common.SystemBelongingElementA#getBelongsTo()
+	 * @see #getSystemBelongingElementA()
+	 * @generated
+	 */
+	EReference getSystemBelongingElementA_BelongsTo();
+
+	/**
 	 * Returns the meta object for enum '{@link de.oaam.model.oaam.common.BoolOperationTypesE <em>Bool Operation Types E</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2935,6 +2993,24 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOLEAN__NBITS = eINSTANCE.getBoolean_NBits();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.common.impl.SystemBelongingElementAImpl <em>System Belonging Element A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.common.impl.SystemBelongingElementAImpl
+		 * @see de.oaam.model.oaam.common.impl.CommonPackageImpl#getSystemBelongingElementA()
+		 * @generated
+		 */
+		EClass SYSTEM_BELONGING_ELEMENT_A = eINSTANCE.getSystemBelongingElementA();
+
+		/**
+		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO = eINSTANCE.getSystemBelongingElementA_BelongsTo();
 
 		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.common.BoolOperationTypesE <em>Bool Operation Types E</em>}' enum.

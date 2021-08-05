@@ -399,6 +399,14 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemBelongingElementA">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" upperBound="-1"
+          eType="#//systems/SystemsContainerA">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Reference a (sub)system here to show this (sub)function is part of that system"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="library" nsURI="http://www.oaam.de/oaam/model/v140/library"
       nsPrefix="de.oaam.model.library">
@@ -1806,7 +1814,7 @@
       <details key="documentation" value="High-level and not executable description of systems including physical informations."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="SystemsContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" The systems model contains a high level description of the system components as well as the data and power flow without specifying the implementation."/>
       </eAnnotations>
@@ -1840,12 +1848,12 @@
         <details key="documentation" value="The root container for of the systems model."/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Subsystem" eSuperTypes="#//systems/SystemsContainerA #//scenario/ModeDependentElementA #//scenario/VariantDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="Subsystem" eSuperTypes="#//systems/SystemsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A subsystem can be used like folders to organize the system model"/>
       </eAnnotations>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+    <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//systems/SystemsContainerA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="A system is an encapsuleted functionality that interacts with information and power"/>
       </eAnnotations>
@@ -2080,7 +2088,7 @@
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FunctionsContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//scenario/VariantDependentElementA #//scenario/ModeDependentElementA #//common/SystemBelongingElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="An abstract base class of an element that can hold functions and related elements."/>
       </eAnnotations>
@@ -2488,7 +2496,7 @@
       <details key="documentation" value="The hardware topology of devices and connections. "/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="HardwareContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//common/SystemBelongingElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root container of the hardware model"/>
       </eAnnotations>
@@ -3699,7 +3707,7 @@
       <details key="documentation" value="The assignment of tasks functions to hardware and hardware to anatomy."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="AllocationsContainerA" abstract="true"
-        eSuperTypes="#//common/OaamBaseElementA">
+        eSuperTypes="#//common/OaamBaseElementA #//common/SystemBelongingElementA">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The root element of the allocations model."/>
       </eAnnotations>

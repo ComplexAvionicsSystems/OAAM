@@ -6,7 +6,6 @@ import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.*;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

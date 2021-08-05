@@ -2,9 +2,6 @@
  */
 package de.oaam.model.oaam.systems;
 
-import de.oaam.model.oaam.scenario.ModeDependentElementA;
-import de.oaam.model.oaam.scenario.VariantDependentElementA;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Subsystem</b></em>'.
@@ -19,5 +16,5 @@ import de.oaam.model.oaam.scenario.VariantDependentElementA;
  * @model
  * @generated
  */
-public interface Subsystem extends SystemsContainerA, ModeDependentElementA, VariantDependentElementA {
+public interface Subsystem extends SystemsContainerA {
 } // Subsystem

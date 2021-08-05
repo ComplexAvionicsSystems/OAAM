@@ -162,13 +162,22 @@ public interface FunctionsPackage extends EPackage {
 	int FUNCTIONS_CONTAINER_A__OPERATION_MODES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONS_CONTAINER_A__BELONGS_TO = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int FUNCTIONS_CONTAINER_A__TASKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Task Links</b></em>' containment reference list.
@@ -177,7 +186,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int FUNCTIONS_CONTAINER_A__TASK_LINKS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Task Groups</b></em>' containment reference list.
@@ -186,7 +195,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int FUNCTIONS_CONTAINER_A__TASK_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Task Symmetries</b></em>' containment reference list.
@@ -195,7 +204,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int FUNCTIONS_CONTAINER_A__TASK_SYMMETRIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Task Redundancies</b></em>' containment reference list.
@@ -204,7 +213,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int FUNCTIONS_CONTAINER_A__TASK_REDUNDANCIES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Signals</b></em>' containment reference list.
@@ -213,7 +222,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int FUNCTIONS_CONTAINER_A__SIGNALS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Signal Groups</b></em>' containment reference list.
@@ -222,7 +231,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int FUNCTIONS_CONTAINER_A__SIGNAL_GROUPS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Failure Conditions</b></em>' containment reference list.
@@ -231,7 +240,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
+	int FUNCTIONS_CONTAINER_A__FAILURE_CONDITIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Subfunctions</b></em>' containment reference list.
@@ -240,7 +249,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 10;
+	int FUNCTIONS_CONTAINER_A__SUBFUNCTIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -249,7 +258,7 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 11;
+	int FUNCTIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -359,6 +368,15 @@ public interface FunctionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONS__BELONGS_TO = FUNCTIONS_CONTAINER_A__BELONGS_TO;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -2352,6 +2370,15 @@ public interface FunctionsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBFUNCTIONS__OPERATION_MODES = FUNCTIONS_CONTAINER_A__OPERATION_MODES;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBFUNCTIONS__BELONGS_TO = FUNCTIONS_CONTAINER_A__BELONGS_TO;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.

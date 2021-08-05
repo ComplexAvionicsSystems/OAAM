@@ -28,7 +28,6 @@ import de.oaam.model.oaam.library.Sublibrary;
 import de.oaam.model.oaam.library.TaskType;
 import de.oaam.model.oaam.library.TaskTypeDissimilarity;
 import de.oaam.model.oaam.library.WireType;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

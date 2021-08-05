@@ -2,6 +2,8 @@
  */
 package de.oaam.model.oaam.hardware.impl;
 
+import de.oaam.model.oaam.common.CommonPackage;
+import de.oaam.model.oaam.common.SystemBelongingElementA;
 import de.oaam.model.oaam.common.impl.OaamBaseElementAImpl;
 
 import de.oaam.model.oaam.hardware.Bus;
@@ -12,16 +14,16 @@ import de.oaam.model.oaam.hardware.HardwareContainerA;
 import de.oaam.model.oaam.hardware.HardwarePackage;
 import de.oaam.model.oaam.hardware.Subhardware;
 
+import de.oaam.model.oaam.systems.SystemsContainerA;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -32,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getBelongsTo <em>Belongs To</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getDeviceSymmetries <em>Device Symmetries</em>}</li>
  *   <li>{@link de.oaam.model.oaam.hardware.impl.HardwareContainerAImpl#getConnections <em>Connections</em>}</li>
@@ -42,6 +45,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implements HardwareContainerA {
+	/**
+	 * The cached value of the '{@link #getBelongsTo() <em>Belongs To</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBelongsTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SystemsContainerA> belongsTo;
+
 	/**
 	 * The cached value of the '{@link #getDevices() <em>Devices</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -109,6 +122,18 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	@Override
 	protected EClass eStaticClass() {
 		return HardwarePackage.Literals.HARDWARE_CONTAINER_A;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SystemsContainerA> getBelongsTo() {
+		if (belongsTo == null) {
+			belongsTo = new EObjectResolvingEList<SystemsContainerA>(SystemsContainerA.class, this, HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO);
+		}
+		return belongsTo;
 	}
 
 	/**
@@ -201,6 +226,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
+				return getBelongsTo();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				return getDevices();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
@@ -224,6 +251,10 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
+				getBelongsTo().clear();
+				getBelongsTo().addAll((Collection<? extends SystemsContainerA>)newValue);
+				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				getDevices().clear();
 				getDevices().addAll((Collection<? extends Device>)newValue);
@@ -256,6 +287,9 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
+				getBelongsTo().clear();
+				return;
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				getDevices().clear();
 				return;
@@ -283,6 +317,8 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO:
+				return belongsTo != null && !belongsTo.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICES:
 				return devices != null && !devices.isEmpty();
 			case HardwarePackage.HARDWARE_CONTAINER_A__DEVICE_SYMMETRIES:
@@ -295,6 +331,38 @@ public abstract class HardwareContainerAImpl extends OaamBaseElementAImpl implem
 				return buses != null && !buses.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == SystemBelongingElementA.class) {
+			switch (derivedFeatureID) {
+				case HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO: return CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == SystemBelongingElementA.class) {
+			switch (baseFeatureID) {
+				case CommonPackage.SYSTEM_BELONGING_ELEMENT_A__BELONGS_TO: return HardwarePackage.HARDWARE_CONTAINER_A__BELONGS_TO;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //HardwareContainerAImpl

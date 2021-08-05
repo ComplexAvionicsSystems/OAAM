@@ -1084,6 +1084,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		functionsContainerAEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		functionsContainerAEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		functionsContainerAEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		functionsContainerAEClass.getESuperTypes().add(theCommonPackage.getSystemBelongingElementA());
 		taskEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
 		taskEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		taskEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());

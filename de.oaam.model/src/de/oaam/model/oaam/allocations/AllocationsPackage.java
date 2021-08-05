@@ -145,13 +145,22 @@ public interface AllocationsPackage extends EPackage {
 	int ALLOCATIONS_CONTAINER_A__TRACE_LINK = CommonPackage.OAAM_BASE_ELEMENT_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS_CONTAINER_A__BELONGS_TO = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 0;
+	int ALLOCATIONS_CONTAINER_A__DEVICE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Subdevice Assignments</b></em>' containment reference list.
@@ -160,7 +169,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 1;
+	int ALLOCATIONS_CONTAINER_A__SUBDEVICE_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Connection Assignments</b></em>' containment reference list.
@@ -169,7 +178,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 2;
+	int ALLOCATIONS_CONTAINER_A__CONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Task Assignments</b></em>' containment reference list.
@@ -178,7 +187,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 3;
+	int ALLOCATIONS_CONTAINER_A__TASK_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Signal Assignments</b></em>' containment reference list.
@@ -187,7 +196,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 4;
+	int ALLOCATIONS_CONTAINER_A__SIGNAL_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Suballocations</b></em>' containment reference list.
@@ -196,7 +205,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 5;
+	int ALLOCATIONS_CONTAINER_A__SUBALLOCATIONS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Subconnection Assignments</b></em>' containment reference list.
@@ -205,7 +214,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 6;
+	int ALLOCATIONS_CONTAINER_A__SUBCONNECTION_ASSIGNMENTS = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Messages</b></em>' containment reference list.
@@ -214,7 +223,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A__MESSAGES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
+	int ALLOCATIONS_CONTAINER_A__MESSAGES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Container A</em>' class.
@@ -223,7 +232,7 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int ALLOCATIONS_CONTAINER_A_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Container A</em>' class.
@@ -2819,6 +2828,15 @@ public interface AllocationsPackage extends EPackage {
 	int ALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
 
 	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATIONS__BELONGS_TO = ALLOCATIONS_CONTAINER_A__BELONGS_TO;
+
+	/**
 	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2979,6 +2997,15 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBALLOCATIONS__TRACE_LINK = ALLOCATIONS_CONTAINER_A__TRACE_LINK;
+
+	/**
+	 * The feature id for the '<em><b>Belongs To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUBALLOCATIONS__BELONGS_TO = ALLOCATIONS_CONTAINER_A__BELONGS_TO;
 
 	/**
 	 * The feature id for the '<em><b>Device Assignments</b></em>' containment reference list.

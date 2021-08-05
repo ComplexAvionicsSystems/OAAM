@@ -3,13 +3,6 @@
 package de.oaam.model.oaam.systems.provider;
 
 
-import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
-
-import de.oaam.model.oaam.provider.OaamEditPlugin;
-
-import de.oaam.model.oaam.scenario.ScenarioFactory;
-import de.oaam.model.oaam.scenario.ScenarioPackage;
-
 import de.oaam.model.oaam.systems.SystemsFactory;
 import de.oaam.model.oaam.systems.SystemsPackage;
 
@@ -18,12 +11,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -33,7 +21,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SystemItemProvider extends OaamBaseElementAItemProvider {
+public class SystemItemProvider extends SystemsContainerAItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -55,31 +43,8 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVariantsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Variants feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariantsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_VariantDependentElementA_variants_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VariantDependentElementA_variants_feature", "_UI_VariantDependentElementA_type"),
-				 ScenarioPackage.Literals.VARIANT_DEPENDENT_ELEMENT_A__VARIANTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -94,7 +59,6 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES);
 			childrenFeatures.add(SystemsPackage.Literals.SYSTEM__PROVIDED_OUTPUTS);
 			childrenFeatures.add(SystemsPackage.Literals.SYSTEM__REQUIRED_INPUTS);
 		}
@@ -152,7 +116,6 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(de.oaam.model.oaam.systems.System.class)) {
-			case SystemsPackage.SYSTEM__OPERATION_MODES:
 			case SystemsPackage.SYSTEM__PROVIDED_OUTPUTS:
 			case SystemsPackage.SYSTEM__REQUIRED_INPUTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -171,11 +134,6 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ScenarioPackage.Literals.MODE_DEPENDENT_ELEMENT_A__OPERATION_MODES,
-				 ScenarioFactory.eINSTANCE.createOperationModeReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -269,17 +227,6 @@ public class SystemItemProvider extends OaamBaseElementAItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return OaamEditPlugin.INSTANCE;
 	}
 
 }

@@ -6,7 +6,6 @@ import de.oaam.model.oaam.common.BoolA;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 

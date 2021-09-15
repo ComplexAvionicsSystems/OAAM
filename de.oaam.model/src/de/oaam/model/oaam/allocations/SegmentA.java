@@ -3,12 +3,15 @@
 package de.oaam.model.oaam.allocations;
 
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
+
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -35,7 +38,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface SegmentA extends ModeDependentElementA, OaamBaseElementA, VariantDependentElementA {
-
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -125,4 +127,5 @@ public interface SegmentA extends ModeDependentElementA, OaamBaseElementA, Varia
 	 * @generated
 	 */
 	EList<Schedule> getSchedules();
+
 } // SegmentA

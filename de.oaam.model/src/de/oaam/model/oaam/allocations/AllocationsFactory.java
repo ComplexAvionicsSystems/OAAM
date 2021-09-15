@@ -94,6 +94,60 @@ public interface AllocationsFactory extends EFactory {
 	SubconnectionAssignment createSubconnectionAssignment();
 
 	/**
+	 * Returns a new object of class '<em>Schedule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Schedule</em>'.
+	 * @generated
+	 */
+	Schedule createSchedule();
+
+	/**
+	 * Returns a new object of class '<em>Scheduled Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Scheduled Time</em>'.
+	 * @generated
+	 */
+	ScheduledTime createScheduledTime();
+
+	/**
+	 * Returns a new object of class '<em>Message Segment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message Segment</em>'.
+	 * @generated
+	 */
+	MessageSegment createMessageSegment();
+
+	/**
+	 * Returns a new object of class '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message</em>'.
+	 * @generated
+	 */
+	Message createMessage();
+
+	/**
+	 * Returns a new object of class '<em>Submessage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Submessage</em>'.
+	 * @generated
+	 */
+	Submessage createSubmessage();
+
+	/**
+	 * Returns a new object of class '<em>Signal To Message Assignment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signal To Message Assignment</em>'.
+	 * @generated
+	 */
+	SignalToMessageAssignment createSignalToMessageAssignment();
+
+	/**
 	 * Returns a new object of class '<em>Allocations</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,60 +182,6 @@ public interface AllocationsFactory extends EFactory {
 	 * @generated
 	 */
 	PathGroup createPathGroup();
-
-	/**
-	 * Returns a new object of class '<em>Schedule</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schedule</em>'.
-	 * @generated
-	 */
-	Schedule createSchedule();
-
-	/**
-	 * Returns a new object of class '<em>Scheduled Time</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Scheduled Time</em>'.
-	 * @generated
-	 */
-	ScheduledTime createScheduledTime();
-
-	/**
-	 * Returns a new object of class '<em>Message</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Message</em>'.
-	 * @generated
-	 */
-	Message createMessage();
-
-	/**
-	 * Returns a new object of class '<em>Signal To Message Assignment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Signal To Message Assignment</em>'.
-	 * @generated
-	 */
-	SignalToMessageAssignment createSignalToMessageAssignment();
-
-	/**
-	 * Returns a new object of class '<em>Message Segment</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Message Segment</em>'.
-	 * @generated
-	 */
-	MessageSegment createMessageSegment();
-
-	/**
-	 * Returns a new object of class '<em>Submessage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Submessage</em>'.
-	 * @generated
-	 */
-	Submessage createSubmessage();
 
 	/**
 	 * Returns the package supported by this factory.

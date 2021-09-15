@@ -8,9 +8,12 @@ import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.Message;
 
 import de.oaam.model.oaam.common.provider.OaamBaseElementAItemProvider;
+
 import de.oaam.model.oaam.provider.OaamEditPlugin;
+
 import de.oaam.model.oaam.scenario.ScenarioFactory;
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -18,7 +21,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -155,6 +160,28 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Path feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MessageA_path_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MessageA_path_feature", "_UI_MessageA_type"),
+				 AllocationsPackage.Literals.MESSAGE_A__PATH,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Capability feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,28 +283,6 @@ public class MessageItemProvider extends OaamBaseElementAItemProvider {
 				 getString("_UI_Message_isRedundantTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Message_isRedundantTo_feature", "_UI_Message_type"),
 				 AllocationsPackage.Literals.MESSAGE__IS_REDUNDANT_TO,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MessageA_path_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MessageA_path_feature", "_UI_MessageA_type"),
-				 AllocationsPackage.Literals.MESSAGE_A__PATH,
 				 true,
 				 false,
 				 true,

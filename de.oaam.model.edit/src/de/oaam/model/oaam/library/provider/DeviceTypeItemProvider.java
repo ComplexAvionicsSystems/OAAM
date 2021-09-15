@@ -10,6 +10,9 @@ import de.oaam.model.oaam.library.DeviceType;
 import de.oaam.model.oaam.library.LibraryFactory;
 import de.oaam.model.oaam.library.LibraryPackage;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -59,9 +62,10 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
+			addCanFailPropertyDescriptor(object);
+			addFailureRatePropertyDescriptor(object);
 			addIsSubdevicePropertyDescriptor(object);
 			addCanHaveSubdevicesPropertyDescriptor(object);
-			addMtbfPropertyDescriptor(object);
 			addWeightPropertyDescriptor(object);
 			addCostPropertyDescriptor(object);
 			addIsSelfManagingPropertyDescriptor(object);
@@ -246,6 +250,50 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Can Fail feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCanFailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_canFail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_canFail_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__CAN_FAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Failure Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFailureRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_failureRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_failureRate_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__FAILURE_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Is Subdevice feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -285,28 +333,6 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mtbf feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMtbfPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DeviceType_mtbf_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DeviceType_mtbf_feature", "_UI_DeviceType_type"),
-				 LibraryPackage.Literals.DEVICE_TYPE__MTBF,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -393,6 +419,7 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_PROVIDER_A__PROVIDED_GROUPS);
 			childrenFeatures.add(LibraryPackage.Literals.RESOURCE_PROVIDER_A__RESOURCE_LINKS);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES);
 			childrenFeatures.add(LibraryPackage.Literals.DEVICE_TYPE__IO_DECLARATIONS);
 			childrenFeatures.add(LibraryPackage.Literals.DEVICE_TYPE__IO_GROUPS);
 		}
@@ -457,9 +484,10 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.DEVICE_TYPE__MODIFIED:
 			case LibraryPackage.DEVICE_TYPE__MODIFIER:
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
+			case LibraryPackage.DEVICE_TYPE__CAN_FAIL:
+			case LibraryPackage.DEVICE_TYPE__FAILURE_RATE:
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
-			case LibraryPackage.DEVICE_TYPE__MTBF:
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 			case LibraryPackage.DEVICE_TYPE__COST:
 			case LibraryPackage.DEVICE_TYPE__IS_SELF_MANAGING:
@@ -469,6 +497,7 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			case LibraryPackage.DEVICE_TYPE__PROVIDED_GROUPS:
 			case LibraryPackage.DEVICE_TYPE__RESOURCE_LINKS:
 			case LibraryPackage.DEVICE_TYPE__ATTRIBUTES:
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -522,6 +551,11 @@ public class DeviceTypeItemProvider extends ResourceConsumerAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES,
+				 SafetyFactory.eINSTANCE.createPartFailureMode()));
 
 		newChildDescriptors.add
 			(createChildParameter

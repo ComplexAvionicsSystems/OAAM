@@ -34,9 +34,29 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -134,6 +154,16 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(registeredPackage instanceof RestrictionsPackageImpl ? registeredPackage : RestrictionsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theOaamPackage.createPackageContents();
@@ -147,6 +177,11 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theOaamPackage.initializePackageContents();
@@ -160,6 +195,11 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theOaamPackage.freeze();
@@ -273,6 +313,15 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getArchitecture_PhysicalInteraction() {
+		return (EReference)architectureEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public OaamFactory getOaamFactory() {
 		return (OaamFactory)getEFactoryInstance();
 	}
@@ -307,6 +356,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		createEReference(architectureEClass, ARCHITECTURE__CAPABILITIES);
 		createEReference(architectureEClass, ARCHITECTURE__RESTRICTIONS);
 		createEReference(architectureEClass, ARCHITECTURE__ALLOCATIONS);
+		createEReference(architectureEClass, ARCHITECTURE__PHYSICAL_INTERACTION);
 	}
 
 	/**
@@ -343,6 +393,8 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		CapabilitiesPackage theCapabilitiesPackage = (CapabilitiesPackage)EPackage.Registry.INSTANCE.getEPackage(CapabilitiesPackage.eNS_URI);
 		RestrictionsPackage theRestrictionsPackage = (RestrictionsPackage)EPackage.Registry.INSTANCE.getEPackage(RestrictionsPackage.eNS_URI);
 		AllocationsPackage theAllocationsPackage = (AllocationsPackage)EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
+		SafetyPackage theSafetyPackage = (SafetyPackage)EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		PhysicalPackage thePhysicalPackage = (PhysicalPackage)EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theCommonPackage);
@@ -355,6 +407,8 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		getESubpackages().add(theCapabilitiesPackage);
 		getESubpackages().add(theRestrictionsPackage);
 		getESubpackages().add(theAllocationsPackage);
+		getESubpackages().add(theSafetyPackage);
+		getESubpackages().add(thePhysicalPackage);
 
 		// Create type parameters
 
@@ -375,6 +429,7 @@ public class OaamPackageImpl extends EPackageImpl implements OaamPackage {
 		initEReference(getArchitecture_Capabilities(), theCapabilitiesPackage.getCapabilities(), null, "capabilities", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Restrictions(), theRestrictionsPackage.getRestrictions(), null, "restrictions", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArchitecture_Allocations(), theAllocationsPackage.getAllocations(), null, "allocations", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArchitecture_PhysicalInteraction(), thePhysicalPackage.getPhysicalInteraction(), null, "physicalInteraction", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -171,6 +171,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_OPERATIONS);
 			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__BOOLEAN_NOTS);
 			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES);
+			childrenFeatures.add(FunctionsPackage.Literals.FAILURE_CONDITION__TASK_FAILURES);
 		}
 		return childrenFeatures;
 	}
@@ -234,6 +235,7 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_OPERATIONS:
 			case FunctionsPackage.FAILURE_CONDITION__BOOLEAN_NOTS:
 			case FunctionsPackage.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES:
+			case FunctionsPackage.FAILURE_CONDITION__TASK_FAILURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -270,6 +272,11 @@ public class FailureConditionItemProvider extends OaamBaseElementAItemProvider {
 			(createChildParameter
 				(FunctionsPackage.Literals.FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES,
 				 FunctionsFactory.eINSTANCE.createOutputIntegrityState()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FunctionsPackage.Literals.FAILURE_CONDITION__TASK_FAILURES,
+				 FunctionsFactory.eINSTANCE.createTaskFailure()));
 	}
 
 	/**

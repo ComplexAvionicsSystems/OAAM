@@ -16,6 +16,8 @@ import de.oaam.model.oaam.hardware.Hardware;
 
 import de.oaam.model.oaam.library.Library;
 
+import de.oaam.model.oaam.physical.PhysicalInteraction;
+
 import de.oaam.model.oaam.restrictions.Restrictions;
 
 import de.oaam.model.oaam.scenario.Scenario;
@@ -47,6 +49,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.oaam.model.oaam.Architecture#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getRestrictions <em>Restrictions</em>}</li>
  *   <li>{@link de.oaam.model.oaam.Architecture#getAllocations <em>Allocations</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.Architecture#getPhysicalInteraction <em>Physical Interaction</em>}</li>
  * </ul>
  *
  * @see de.oaam.model.oaam.OaamPackage#getArchitecture()
@@ -293,5 +296,27 @@ public interface Architecture extends OaamBaseElementA {
 	 * @generated
 	 */
 	void setAllocations(Allocations value);
+
+	/**
+	 * Returns the value of the '<em><b>Physical Interaction</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Physical Interaction</em>' containment reference.
+	 * @see #setPhysicalInteraction(PhysicalInteraction)
+	 * @see de.oaam.model.oaam.OaamPackage#getArchitecture_PhysicalInteraction()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PhysicalInteraction getPhysicalInteraction();
+
+	/**
+	 * Sets the value of the '{@link de.oaam.model.oaam.Architecture#getPhysicalInteraction <em>Physical Interaction</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Physical Interaction</em>' containment reference.
+	 * @see #getPhysicalInteraction()
+	 * @generated
+	 */
+	void setPhysicalInteraction(PhysicalInteraction value);
 
 } // Architecture

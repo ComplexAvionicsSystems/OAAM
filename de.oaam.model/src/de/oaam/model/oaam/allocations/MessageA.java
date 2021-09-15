@@ -5,6 +5,7 @@ package de.oaam.model.oaam.allocations;
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
 import de.oaam.model.oaam.library.MessageType;
+
 import de.oaam.model.oaam.scenario.ModeDependentElementA;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
 

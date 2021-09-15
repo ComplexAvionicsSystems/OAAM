@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: de.oaam.model.edit;singleton:=true
 Automatic-Module-Name: de.oaam.model.edit
-Bundle-Version: 1.5.4.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: de.oaam.model.oaam.provider.OaamEditPlugin$Implementation
 Bundle-Vendor: %providerName
@@ -16,8 +16,13 @@ Export-Package: de.oaam.model.oaam.allocations.provider,
  de.oaam.model.oaam.functions.provider,
  de.oaam.model.oaam.hardware.provider,
  de.oaam.model.oaam.library.provider,
+ de.oaam.model.oaam.physical.provider,
  de.oaam.model.oaam.provider,
  de.oaam.model.oaam.restrictions.provider,
+ de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.provider,
+ de.oaam.model.oaam.safety.failurePropagations.provider,
+ de.oaam.model.oaam.safety.provider,
+ de.oaam.model.oaam.safety.taskInternalRequirements.provider,
  de.oaam.model.oaam.scenario.provider,
  de.oaam.model.oaam.systems.provider
 Require-Bundle: org.eclipse.core.runtime,

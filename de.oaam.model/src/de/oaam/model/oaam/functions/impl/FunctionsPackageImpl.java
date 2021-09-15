@@ -34,6 +34,7 @@ import de.oaam.model.oaam.functions.Signal;
 import de.oaam.model.oaam.functions.SignalGroup;
 import de.oaam.model.oaam.functions.Subfunctions;
 import de.oaam.model.oaam.functions.Task;
+import de.oaam.model.oaam.functions.TaskFailure;
 import de.oaam.model.oaam.functions.TaskGroup;
 import de.oaam.model.oaam.functions.TaskParameter;
 import de.oaam.model.oaam.functions.TaskRedundancy;
@@ -49,9 +50,29 @@ import de.oaam.model.oaam.library.LibraryPackage;
 
 import de.oaam.model.oaam.library.impl.LibraryPackageImpl;
 
+import de.oaam.model.oaam.physical.PhysicalPackage;
+
+import de.oaam.model.oaam.physical.impl.PhysicalPackageImpl;
+
 import de.oaam.model.oaam.restrictions.RestrictionsPackage;
 
 import de.oaam.model.oaam.restrictions.impl.RestrictionsPackageImpl;
+
+import de.oaam.model.oaam.safety.SafetyPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.FailurePropagationsPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.FailurePropagationMatricesPackage;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.impl.FailurePropagationMatricesPackageImpl;
+
+import de.oaam.model.oaam.safety.failurePropagations.impl.FailurePropagationsPackageImpl;
+
+import de.oaam.model.oaam.safety.impl.SafetyPackageImpl;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.TaskInternalRequirementsPackage;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.impl.TaskInternalRequirementsPackageImpl;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 
@@ -188,6 +209,13 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	private EClass taskParameterEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskFailureEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -255,6 +283,16 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		RestrictionsPackageImpl theRestrictionsPackage = (RestrictionsPackageImpl)(registeredPackage instanceof RestrictionsPackageImpl ? registeredPackage : RestrictionsPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AllocationsPackage.eNS_URI);
 		AllocationsPackageImpl theAllocationsPackage = (AllocationsPackageImpl)(registeredPackage instanceof AllocationsPackageImpl ? registeredPackage : AllocationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		SafetyPackageImpl theSafetyPackage = (SafetyPackageImpl)(registeredPackage instanceof SafetyPackageImpl ? registeredPackage : SafetyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TaskInternalRequirementsPackage.eNS_URI);
+		TaskInternalRequirementsPackageImpl theTaskInternalRequirementsPackage = (TaskInternalRequirementsPackageImpl)(registeredPackage instanceof TaskInternalRequirementsPackageImpl ? registeredPackage : TaskInternalRequirementsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
+		FailurePropagationsPackageImpl theFailurePropagationsPackage = (FailurePropagationsPackageImpl)(registeredPackage instanceof FailurePropagationsPackageImpl ? registeredPackage : FailurePropagationsPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(FailurePropagationMatricesPackage.eNS_URI);
+		FailurePropagationMatricesPackageImpl theFailurePropagationMatricesPackage = (FailurePropagationMatricesPackageImpl)(registeredPackage instanceof FailurePropagationMatricesPackageImpl ? registeredPackage : FailurePropagationMatricesPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PhysicalPackage.eNS_URI);
+		PhysicalPackageImpl thePhysicalPackage = (PhysicalPackageImpl)(registeredPackage instanceof PhysicalPackageImpl ? registeredPackage : PhysicalPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theFunctionsPackage.createPackageContents();
@@ -268,6 +306,11 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		theCapabilitiesPackage.createPackageContents();
 		theRestrictionsPackage.createPackageContents();
 		theAllocationsPackage.createPackageContents();
+		theSafetyPackage.createPackageContents();
+		theTaskInternalRequirementsPackage.createPackageContents();
+		theFailurePropagationsPackage.createPackageContents();
+		theFailurePropagationMatricesPackage.createPackageContents();
+		thePhysicalPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theFunctionsPackage.initializePackageContents();
@@ -281,6 +324,11 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		theCapabilitiesPackage.initializePackageContents();
 		theRestrictionsPackage.initializePackageContents();
 		theAllocationsPackage.initializePackageContents();
+		theSafetyPackage.initializePackageContents();
+		theTaskInternalRequirementsPackage.initializePackageContents();
+		theFailurePropagationsPackage.initializePackageContents();
+		theFailurePropagationMatricesPackage.initializePackageContents();
+		thePhysicalPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theFunctionsPackage.freeze();
@@ -646,6 +694,15 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFailureCondition_TaskFailures() {
+		return (EReference)failureConditionEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutputIntegrityState() {
 		return outputIntegrityStateEClass;
 	}
@@ -655,7 +712,7 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOutputIntegrityState_State() {
+	public EAttribute getOutputIntegrityState_IntegrityState() {
 		return (EAttribute)outputIntegrityStateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -934,6 +991,51 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTaskFailure() {
+		return taskFailureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskFailure_Task() {
+		return (EReference)taskFailureEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTaskFailure_TaskState() {
+		return (EAttribute)taskFailureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskFailure_TaskFailureMode() {
+		return (EReference)taskFailureEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTaskFailure_FailsWith() {
+		return (EAttribute)taskFailureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FunctionsFactory getFunctionsFactory() {
 		return (FunctionsFactory)getEFactoryInstance();
 	}
@@ -1003,9 +1105,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		createEReference(failureConditionEClass, FAILURE_CONDITION__BOOLEAN_OPERATIONS);
 		createEReference(failureConditionEClass, FAILURE_CONDITION__BOOLEAN_NOTS);
 		createEReference(failureConditionEClass, FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES);
+		createEReference(failureConditionEClass, FAILURE_CONDITION__TASK_FAILURES);
 
 		outputIntegrityStateEClass = createEClass(OUTPUT_INTEGRITY_STATE);
-		createEAttribute(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__STATE);
+		createEAttribute(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE);
 		createEReference(outputIntegrityStateEClass, OUTPUT_INTEGRITY_STATE__OUTPUT);
 
 		signalEClass = createEClass(SIGNAL);
@@ -1043,6 +1146,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		taskParameterEClass = createEClass(TASK_PARAMETER);
 		createEReference(taskParameterEClass, TASK_PARAMETER__DEFINITION);
 		createEAttribute(taskParameterEClass, TASK_PARAMETER__VALUE);
+
+		taskFailureEClass = createEClass(TASK_FAILURE);
+		createEReference(taskFailureEClass, TASK_FAILURE__TASK);
+		createEAttribute(taskFailureEClass, TASK_FAILURE__TASK_STATE);
+		createEReference(taskFailureEClass, TASK_FAILURE__TASK_FAILURE_MODE);
+		createEAttribute(taskFailureEClass, TASK_FAILURE__FAILS_WITH);
 	}
 
 	/**
@@ -1074,6 +1183,8 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		LibraryPackage theLibraryPackage = (LibraryPackage)EPackage.Registry.INSTANCE.getEPackage(LibraryPackage.eNS_URI);
 		SystemsPackage theSystemsPackage = (SystemsPackage)EPackage.Registry.INSTANCE.getEPackage(SystemsPackage.eNS_URI);
 		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
+		SafetyPackage theSafetyPackage = (SafetyPackage)EPackage.Registry.INSTANCE.getEPackage(SafetyPackage.eNS_URI);
+		FailurePropagationsPackage theFailurePropagationsPackage = (FailurePropagationsPackage)EPackage.Registry.INSTANCE.getEPackage(FailurePropagationsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1124,6 +1235,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		externalOutputLinkEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 		subfunctionsEClass.getESuperTypes().add(this.getFunctionsContainerA());
 		taskParameterEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskFailureEClass.getESuperTypes().add(theCommonPackage.getBoolA());
+		taskFailureEClass.getESuperTypes().add(theCommonPackage.getOaamBaseElementA());
+		taskFailureEClass.getESuperTypes().add(theScenarioPackage.getModeDependentElementA());
+		taskFailureEClass.getESuperTypes().add(theScenarioPackage.getVariantDependentElementA());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionsEClass, Functions.class, "Functions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1172,9 +1287,10 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEReference(getFailureCondition_BooleanOperations(), theCommonPackage.getBoolOperation(), null, "booleanOperations", null, 0, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFailureCondition_BooleanNots(), theCommonPackage.getBoolNot(), null, "booleanNots", null, 0, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFailureCondition_OutputIntegrityStates(), this.getOutputIntegrityState(), null, "outputIntegrityStates", null, 1, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFailureCondition_TaskFailures(), this.getTaskFailure(), null, "taskFailures", null, 1, -1, FailureCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputIntegrityStateEClass, OutputIntegrityState.class, "OutputIntegrityState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOutputIntegrityState_State(), theCommonPackage.getIntegretyStateE(), "state", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOutputIntegrityState_IntegrityState(), theCommonPackage.getIntegrityStateE(), "integrityState", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOutputIntegrityState_Output(), this.getOutput(), null, "output", null, 1, 1, OutputIntegrityState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalEClass, Signal.class, "Signal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1212,6 +1328,12 @@ public class FunctionsPackageImpl extends EPackageImpl implements FunctionsPacka
 		initEClass(taskParameterEClass, TaskParameter.class, "TaskParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskParameter_Definition(), theLibraryPackage.getTaskParameterDeclaration(), null, "definition", null, 1, 1, TaskParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTaskParameter_Value(), ecorePackage.getEString(), "value", null, 1, 1, TaskParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(taskFailureEClass, TaskFailure.class, "TaskFailure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskFailure_Task(), this.getTask(), null, "task", null, 1, 1, TaskFailure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskFailure_TaskState(), theCommonPackage.getIntegrityStateE(), "taskState", null, 1, 1, TaskFailure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTaskFailure_TaskFailureMode(), theSafetyPackage.getFunctionalFailureMode(), null, "taskFailureMode", null, 0, 1, TaskFailure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTaskFailure_FailsWith(), theFailurePropagationsPackage.getFailurePropagationGenericTypeE(), "failsWith", "INTEGRITY_STATE", 0, 1, TaskFailure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //FunctionsPackageImpl

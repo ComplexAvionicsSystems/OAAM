@@ -149,29 +149,19 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capabilities createCapabilities() {
-		CapabilitiesImpl capabilities = new CapabilitiesImpl();
-		return capabilities;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Subcapabilities createSubcapabilities() {
-		SubcapabilitiesImpl subcapabilities = new SubcapabilitiesImpl();
-		return subcapabilities;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MessageOnBusCapability createMessageOnBusCapability() {
 		MessageOnBusCapabilityImpl messageOnBusCapability = new MessageOnBusCapabilityImpl();
 		return messageOnBusCapability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability() {
+		MessageOnConnectionOrDeviceCapabilityImpl messageOnConnectionOrDeviceCapability = new MessageOnConnectionOrDeviceCapabilityImpl();
+		return messageOnConnectionOrDeviceCapability;
 	}
 
 	/**
@@ -199,9 +189,19 @@ public class CapabilitiesFactoryImpl extends EFactoryImpl implements Capabilitie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability() {
-		MessageOnConnectionOrDeviceCapabilityImpl messageOnConnectionOrDeviceCapability = new MessageOnConnectionOrDeviceCapabilityImpl();
-		return messageOnConnectionOrDeviceCapability;
+	public Capabilities createCapabilities() {
+		CapabilitiesImpl capabilities = new CapabilitiesImpl();
+		return capabilities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Subcapabilities createSubcapabilities() {
+		SubcapabilitiesImpl subcapabilities = new SubcapabilitiesImpl();
+		return subcapabilities;
 	}
 
 	/**

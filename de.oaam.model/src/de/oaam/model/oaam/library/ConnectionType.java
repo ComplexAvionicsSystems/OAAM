@@ -4,6 +4,8 @@ package de.oaam.model.oaam.library;
 
 import de.oaam.model.oaam.common.OaamBaseElementA;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -44,7 +46,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, OaamBaseElementA {
+public interface ConnectionType extends ResourceProviderA, ResourceConsumerA, OaamBaseElementA, FailureProviderA {
 	/**
 	 * Returns the value of the '<em><b>Is Information</b></em>' attribute.
 	 * The default value is <code>"true"</code>.

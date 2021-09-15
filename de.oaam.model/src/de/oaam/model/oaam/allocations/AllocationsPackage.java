@@ -5,6 +5,7 @@ package de.oaam.model.oaam.allocations;
 import de.oaam.model.oaam.common.CommonPackage;
 
 import de.oaam.model.oaam.scenario.ScenarioPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -44,7 +45,7 @@ public interface AllocationsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/allocations";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/allocations";
 
 	/**
 	 * The package namespace name.
@@ -1558,26 +1559,6 @@ public interface AllocationsPackage extends EPackage {
 	int SUBCONNECTION_ASSIGNMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.AllocationsImpl <em>Allocations</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getAllocations()
-	 * @generated
-	 */
-	int ALLOCATIONS = 16;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SuballocationsImpl <em>Suballocations</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.SuballocationsImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSuballocations()
-	 * @generated
-	 */
-	int SUBALLOCATIONS = 17;
-
-	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.ScheduleImpl <em>Schedule</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1885,37 +1866,6 @@ public interface AllocationsPackage extends EPackage {
 	 */
 	int SCHEDULED_TIME_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
-	 * @generated
-	 */
-	int MESSAGE = 13;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
-	 * @generated
-	 */
-	int SIGNAL_TO_MESSAGE_ASSIGNMENT = 15;
-
-	/**
-	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
-	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
-	 * @generated
-	 */
-	int MESSAGE_SEGMENT = 12;
-
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -2107,6 +2057,16 @@ public interface AllocationsPackage extends EPackage {
 	int MESSAGE_A_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
+	 * @generated
+	 */
+	int MESSAGE_SEGMENT = 12;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2240,6 +2200,16 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int MESSAGE_SEGMENT_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
+	 * @generated
+	 */
+	int MESSAGE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2675,6 +2645,16 @@ public interface AllocationsPackage extends EPackage {
 	int SUBMESSAGE_OPERATION_COUNT = MESSAGE_A_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
+	 * @generated
+	 */
+	int SIGNAL_TO_MESSAGE_ASSIGNMENT = 15;
+
+	/**
 	 * The feature id for the '<em><b>Signal</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2754,6 +2734,16 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIGNAL_TO_MESSAGE_ASSIGNMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.AllocationsImpl <em>Allocations</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getAllocations()
+	 * @generated
+	 */
+	int ALLOCATIONS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2925,6 +2915,16 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.impl.SuballocationsImpl <em>Suballocations</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.allocations.impl.SuballocationsImpl
+	 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSuballocations()
+	 * @generated
+	 */
+	int SUBALLOCATIONS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3114,7 +3114,6 @@ public interface AllocationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBALLOCATIONS_OPERATION_COUNT = ALLOCATIONS_CONTAINER_A_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.allocations.PathA <em>Path A</em>}' class.
@@ -3659,6 +3658,7 @@ public interface AllocationsPackage extends EPackage {
 	 */
 	int PATH_GROUP_OPERATION_COUNT = PATH_A_OPERATION_COUNT + 0;
 
+
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.AllocationsContainerA <em>Container A</em>}'.
 	 * <!-- begin-user-doc -->
@@ -4058,6 +4058,439 @@ public interface AllocationsPackage extends EPackage {
 	EReference getSubconnectionAssignment_TargetDevice();
 
 	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Schedule <em>Schedule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Schedule</em>'.
+	 * @see de.oaam.model.oaam.allocations.Schedule
+	 * @generated
+	 */
+	EClass getSchedule();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#getRate <em>Rate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rate</em>'.
+	 * @see de.oaam.model.oaam.allocations.Schedule#getRate()
+	 * @see #getSchedule()
+	 * @generated
+	 */
+	EAttribute getSchedule_Rate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#isIsPeriodic <em>Is Periodic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Periodic</em>'.
+	 * @see de.oaam.model.oaam.allocations.Schedule#isIsPeriodic()
+	 * @see #getSchedule()
+	 * @generated
+	 */
+	EAttribute getSchedule_IsPeriodic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#getPriority <em>Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Priority</em>'.
+	 * @see de.oaam.model.oaam.allocations.Schedule#getPriority()
+	 * @see #getSchedule()
+	 * @generated
+	 */
+	EAttribute getSchedule_Priority();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.Schedule#getScheduledTimes <em>Scheduled Times</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Scheduled Times</em>'.
+	 * @see de.oaam.model.oaam.allocations.Schedule#getScheduledTimes()
+	 * @see #getSchedule()
+	 * @generated
+	 */
+	EReference getSchedule_ScheduledTimes();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.ScheduledTime <em>Scheduled Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Scheduled Time</em>'.
+	 * @see de.oaam.model.oaam.allocations.ScheduledTime
+	 * @generated
+	 */
+	EClass getScheduledTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getCycle <em>Cycle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cycle</em>'.
+	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getCycle()
+	 * @see #getScheduledTime()
+	 * @generated
+	 */
+	EAttribute getScheduledTime_Cycle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getStartTime <em>Start Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Time</em>'.
+	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getStartTime()
+	 * @see #getScheduledTime()
+	 * @generated
+	 */
+	EAttribute getScheduledTime_StartTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getDuration()
+	 * @see #getScheduledTime()
+	 * @generated
+	 */
+	EAttribute getScheduledTime_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#isRestart <em>Restart</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Restart</em>'.
+	 * @see de.oaam.model.oaam.allocations.ScheduledTime#isRestart()
+	 * @see #getScheduledTime()
+	 * @generated
+	 */
+	EAttribute getScheduledTime_Restart();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message A</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA
+	 * @generated
+	 */
+	EClass getMessageA();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSchedules <em>Schedules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSchedules()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Schedules();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSubmessages <em>Submessages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Submessages</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSubmessages()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Submessages();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signal To Message Assignments</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_SignalToMessageAssignments();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSegments <em>Segments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Segments</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getSegments()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Segments();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getType()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Persistent</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#isIsPersistent()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EAttribute getMessageA_IsPersistent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getLength()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EAttribute getMessageA_Length();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Path</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageA#getPath()
+	 * @see #getMessageA()
+	 * @generated
+	 */
+	EReference getMessageA_Path();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageSegment <em>Message Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message Segment</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment
+	 * @generated
+	 */
+	EClass getMessageSegment();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getCapability()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getDevice <em>Device</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Device</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getDevice()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Device();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getConnection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connection</em>'.
+	 * @see de.oaam.model.oaam.allocations.MessageSegment#getConnection()
+	 * @see #getMessageSegment()
+	 * @generated
+	 */
+	EReference getMessageSegment_Connection();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message
+	 * @generated
+	 */
+	EClass getMessage();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getCapability()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Capability();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getBus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bus</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getBus()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Bus();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getSourceDevices <em>Source Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Source Devices</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getSourceDevices()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_SourceDevices();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getDestinationDevices <em>Destination Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Destination Devices</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getDestinationDevices()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_DestinationDevices();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
+	 * @see de.oaam.model.oaam.allocations.Message#getIsRedundantTo()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_IsRedundantTo();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Submessage <em>Submessage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Submessage</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage
+	 * @generated
+	 */
+	EClass getSubmessage();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Submessage#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage#getCapability()
+	 * @see #getSubmessage()
+	 * @generated
+	 */
+	EReference getSubmessage_Capability();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Submessage#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see de.oaam.model.oaam.allocations.Submessage#getPosition()
+	 * @see #getSubmessage()
+	 * @generated
+	 */
+	EAttribute getSubmessage_Position();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signal To Message Assignment</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment
+	 * @generated
+	 */
+	EClass getSignalToMessageAssignment();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal <em>Signal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Signal</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Signal();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Attributes();
+
+	/**
+	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants <em>Variants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Variants</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Variants();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes <em>Operation Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operation Modes</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_OperationModes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Data Type</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_DataType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition <em>Position</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Position</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EAttribute getSignalToMessageAssignment_Position();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Capability</em>'.
+	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability()
+	 * @see #getSignalToMessageAssignment()
+	 * @generated
+	 */
+	EReference getSignalToMessageAssignment_Capability();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Allocations <em>Allocations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4259,439 +4692,6 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPathA();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Schedule <em>Schedule</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schedule</em>'.
-	 * @see de.oaam.model.oaam.allocations.Schedule
-	 * @generated
-	 */
-	EClass getSchedule();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#getRate <em>Rate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rate</em>'.
-	 * @see de.oaam.model.oaam.allocations.Schedule#getRate()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EAttribute getSchedule_Rate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#isIsPeriodic <em>Is Periodic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Periodic</em>'.
-	 * @see de.oaam.model.oaam.allocations.Schedule#isIsPeriodic()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EAttribute getSchedule_IsPeriodic();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Schedule#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Priority</em>'.
-	 * @see de.oaam.model.oaam.allocations.Schedule#getPriority()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EAttribute getSchedule_Priority();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.Schedule#getScheduledTimes <em>Scheduled Times</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scheduled Times</em>'.
-	 * @see de.oaam.model.oaam.allocations.Schedule#getScheduledTimes()
-	 * @see #getSchedule()
-	 * @generated
-	 */
-	EReference getSchedule_ScheduledTimes();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.ScheduledTime <em>Scheduled Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Scheduled Time</em>'.
-	 * @see de.oaam.model.oaam.allocations.ScheduledTime
-	 * @generated
-	 */
-	EClass getScheduledTime();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getCycle <em>Cycle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cycle</em>'.
-	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getCycle()
-	 * @see #getScheduledTime()
-	 * @generated
-	 */
-	EAttribute getScheduledTime_Cycle();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getStartTime <em>Start Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start Time</em>'.
-	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getStartTime()
-	 * @see #getScheduledTime()
-	 * @generated
-	 */
-	EAttribute getScheduledTime_StartTime();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#getDuration <em>Duration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Duration</em>'.
-	 * @see de.oaam.model.oaam.allocations.ScheduledTime#getDuration()
-	 * @see #getScheduledTime()
-	 * @generated
-	 */
-	EAttribute getScheduledTime_Duration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.ScheduledTime#isRestart <em>Restart</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Restart</em>'.
-	 * @see de.oaam.model.oaam.allocations.ScheduledTime#isRestart()
-	 * @see #getScheduledTime()
-	 * @generated
-	 */
-	EAttribute getScheduledTime_Restart();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Message <em>Message</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Message</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message
-	 * @generated
-	 */
-	EClass getMessage();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getCapability <em>Capability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Capability</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message#getCapability()
-	 * @see #getMessage()
-	 * @generated
-	 */
-	EReference getMessage_Capability();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getBus <em>Bus</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Bus</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message#getBus()
-	 * @see #getMessage()
-	 * @generated
-	 */
-	EReference getMessage_Bus();
-
-	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getSourceDevices <em>Source Devices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Source Devices</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message#getSourceDevices()
-	 * @see #getMessage()
-	 * @generated
-	 */
-	EReference getMessage_SourceDevices();
-
-	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.Message#getDestinationDevices <em>Destination Devices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Destination Devices</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message#getDestinationDevices()
-	 * @see #getMessage()
-	 * @generated
-	 */
-	EReference getMessage_DestinationDevices();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Message#getIsRedundantTo <em>Is Redundant To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Is Redundant To</em>'.
-	 * @see de.oaam.model.oaam.allocations.Message#getIsRedundantTo()
-	 * @see #getMessage()
-	 * @generated
-	 */
-	EReference getMessage_IsRedundantTo();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment <em>Signal To Message Assignment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Signal To Message Assignment</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment
-	 * @generated
-	 */
-	EClass getSignalToMessageAssignment();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal <em>Signal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signal</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getSignal()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_Signal();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getAttributes()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_Attributes();
-
-	/**
-	 * Returns the meta object for the reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants <em>Variants</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Variants</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getVariants()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_Variants();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes <em>Operation Modes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Operation Modes</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getOperationModes()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_OperationModes();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType <em>Data Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Data Type</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getDataType()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_DataType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Position</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getPosition()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EAttribute getSignalToMessageAssignment_Position();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability <em>Capability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Capability</em>'.
-	 * @see de.oaam.model.oaam.allocations.SignalToMessageAssignment#getCapability()
-	 * @see #getSignalToMessageAssignment()
-	 * @generated
-	 */
-	EReference getSignalToMessageAssignment_Capability();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageSegment <em>Message Segment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Message Segment</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageSegment
-	 * @generated
-	 */
-	EClass getMessageSegment();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getCapability <em>Capability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Capability</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageSegment#getCapability()
-	 * @see #getMessageSegment()
-	 * @generated
-	 */
-	EReference getMessageSegment_Capability();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getDevice <em>Device</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Device</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageSegment#getDevice()
-	 * @see #getMessageSegment()
-	 * @generated
-	 */
-	EReference getMessageSegment_Device();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageSegment#getConnection <em>Connection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Connection</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageSegment#getConnection()
-	 * @see #getMessageSegment()
-	 * @generated
-	 */
-	EReference getMessageSegment_Connection();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.Submessage <em>Submessage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Submessage</em>'.
-	 * @see de.oaam.model.oaam.allocations.Submessage
-	 * @generated
-	 */
-	EClass getSubmessage();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.Submessage#getCapability <em>Capability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Capability</em>'.
-	 * @see de.oaam.model.oaam.allocations.Submessage#getCapability()
-	 * @see #getSubmessage()
-	 * @generated
-	 */
-	EReference getSubmessage_Capability();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.Submessage#getPosition <em>Position</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Position</em>'.
-	 * @see de.oaam.model.oaam.allocations.Submessage#getPosition()
-	 * @see #getSubmessage()
-	 * @generated
-	 */
-	EAttribute getSubmessage_Position();
-
-	/**
-	 * Returns the meta object for class '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Message A</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA
-	 * @generated
-	 */
-	EClass getMessageA();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSchedules <em>Schedules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schedules</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getSchedules()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_Schedules();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSubmessages <em>Submessages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Submessages</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getSubmessages()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_Submessages();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments <em>Signal To Message Assignments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Signal To Message Assignments</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getSignalToMessageAssignments()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_SignalToMessageAssignments();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.allocations.MessageA#getSegments <em>Segments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Segments</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getSegments()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_Segments();
-
-	/**
-	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.allocations.MessageA#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getType()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#isIsPersistent <em>Is Persistent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Persistent</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#isIsPersistent()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EAttribute getMessageA_IsPersistent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.allocations.MessageA#getLength <em>Length</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Length</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getLength()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EAttribute getMessageA_Length();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link de.oaam.model.oaam.allocations.MessageA#getPath <em>Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Path</em>'.
-	 * @see de.oaam.model.oaam.allocations.MessageA#getPath()
-	 * @see #getMessageA()
-	 * @generated
-	 */
-	EReference getMessageA_Path();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5031,6 +5031,340 @@ public interface AllocationsPackage extends EPackage {
 		EReference SUBCONNECTION_ASSIGNMENT__TARGET_DEVICE = eINSTANCE.getSubconnectionAssignment_TargetDevice();
 
 		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.ScheduleImpl <em>Schedule</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.ScheduleImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSchedule()
+		 * @generated
+		 */
+		EClass SCHEDULE = eINSTANCE.getSchedule();
+
+		/**
+		 * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULE__RATE = eINSTANCE.getSchedule_Rate();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Periodic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULE__IS_PERIODIC = eINSTANCE.getSchedule_IsPeriodic();
+
+		/**
+		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULE__PRIORITY = eINSTANCE.getSchedule_Priority();
+
+		/**
+		 * The meta object literal for the '<em><b>Scheduled Times</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHEDULE__SCHEDULED_TIMES = eINSTANCE.getSchedule_ScheduledTimes();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.ScheduledTimeImpl <em>Scheduled Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.ScheduledTimeImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getScheduledTime()
+		 * @generated
+		 */
+		EClass SCHEDULED_TIME = eINSTANCE.getScheduledTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Cycle</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULED_TIME__CYCLE = eINSTANCE.getScheduledTime_Cycle();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULED_TIME__START_TIME = eINSTANCE.getScheduledTime_StartTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULED_TIME__DURATION = eINSTANCE.getScheduledTime_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Restart</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULED_TIME__RESTART = eINSTANCE.getScheduledTime_Restart();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.MessageA
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
+		 * @generated
+		 */
+		EClass MESSAGE_A = eINSTANCE.getMessageA();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SCHEDULES = eINSTANCE.getMessageA_Schedules();
+
+		/**
+		 * The meta object literal for the '<em><b>Submessages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SUBMESSAGES = eINSTANCE.getMessageA_Submessages();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal To Message Assignments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS = eINSTANCE.getMessageA_SignalToMessageAssignments();
+
+		/**
+		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__SEGMENTS = eINSTANCE.getMessageA_Segments();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__TYPE = eINSTANCE.getMessageA_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Persistent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_A__IS_PERSISTENT = eINSTANCE.getMessageA_IsPersistent();
+
+		/**
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE_A__LENGTH = eINSTANCE.getMessageA_Length();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_A__PATH = eINSTANCE.getMessageA_Path();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
+		 * @generated
+		 */
+		EClass MESSAGE_SEGMENT = eINSTANCE.getMessageSegment();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__CAPABILITY = eINSTANCE.getMessageSegment_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Device</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__DEVICE = eINSTANCE.getMessageSegment_Device();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE_SEGMENT__CONNECTION = eINSTANCE.getMessageSegment_Connection();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
+		 * @generated
+		 */
+		EClass MESSAGE = eINSTANCE.getMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__CAPABILITY = eINSTANCE.getMessage_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Bus</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__BUS = eINSTANCE.getMessage_Bus();
+
+		/**
+		 * The meta object literal for the '<em><b>Source Devices</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__SOURCE_DEVICES = eINSTANCE.getMessage_SourceDevices();
+
+		/**
+		 * The meta object literal for the '<em><b>Destination Devices</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__DESTINATION_DEVICES = eINSTANCE.getMessage_DestinationDevices();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__IS_REDUNDANT_TO = eINSTANCE.getMessage_IsRedundantTo();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SubmessageImpl <em>Submessage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.SubmessageImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubmessage()
+		 * @generated
+		 */
+		EClass SUBMESSAGE = eINSTANCE.getSubmessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUBMESSAGE__CAPABILITY = eINSTANCE.getSubmessage_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SUBMESSAGE__POSITION = eINSTANCE.getSubmessage_Position();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
+		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
+		 * @generated
+		 */
+		EClass SIGNAL_TO_MESSAGE_ASSIGNMENT = eINSTANCE.getSignalToMessageAssignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Signal</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__SIGNAL = eINSTANCE.getSignalToMessageAssignment_Signal();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__ATTRIBUTES = eINSTANCE.getSignalToMessageAssignment_Attributes();
+
+		/**
+		 * The meta object literal for the '<em><b>Variants</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__VARIANTS = eINSTANCE.getSignalToMessageAssignment_Variants();
+
+		/**
+		 * The meta object literal for the '<em><b>Operation Modes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__OPERATION_MODES = eINSTANCE.getSignalToMessageAssignment_OperationModes();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__DATA_TYPE = eINSTANCE.getSignalToMessageAssignment_DataType();
+
+		/**
+		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIGNAL_TO_MESSAGE_ASSIGNMENT__POSITION = eINSTANCE.getSignalToMessageAssignment_Position();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__CAPABILITY = eINSTANCE.getSignalToMessageAssignment_Capability();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.AllocationsImpl <em>Allocations</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5193,340 +5527,6 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PATH_A = eINSTANCE.getPathA();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.ScheduleImpl <em>Schedule</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.ScheduleImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSchedule()
-		 * @generated
-		 */
-		EClass SCHEDULE = eINSTANCE.getSchedule();
-
-		/**
-		 * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULE__RATE = eINSTANCE.getSchedule_Rate();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Periodic</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULE__IS_PERIODIC = eINSTANCE.getSchedule_IsPeriodic();
-
-		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULE__PRIORITY = eINSTANCE.getSchedule_Priority();
-
-		/**
-		 * The meta object literal for the '<em><b>Scheduled Times</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEDULE__SCHEDULED_TIMES = eINSTANCE.getSchedule_ScheduledTimes();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.ScheduledTimeImpl <em>Scheduled Time</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.ScheduledTimeImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getScheduledTime()
-		 * @generated
-		 */
-		EClass SCHEDULED_TIME = eINSTANCE.getScheduledTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Cycle</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULED_TIME__CYCLE = eINSTANCE.getScheduledTime_Cycle();
-
-		/**
-		 * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULED_TIME__START_TIME = eINSTANCE.getScheduledTime_StartTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULED_TIME__DURATION = eINSTANCE.getScheduledTime_Duration();
-
-		/**
-		 * The meta object literal for the '<em><b>Restart</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SCHEDULED_TIME__RESTART = eINSTANCE.getScheduledTime_Restart();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageImpl <em>Message</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.MessageImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessage()
-		 * @generated
-		 */
-		EClass MESSAGE = eINSTANCE.getMessage();
-
-		/**
-		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE__CAPABILITY = eINSTANCE.getMessage_Capability();
-
-		/**
-		 * The meta object literal for the '<em><b>Bus</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE__BUS = eINSTANCE.getMessage_Bus();
-
-		/**
-		 * The meta object literal for the '<em><b>Source Devices</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE__SOURCE_DEVICES = eINSTANCE.getMessage_SourceDevices();
-
-		/**
-		 * The meta object literal for the '<em><b>Destination Devices</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE__DESTINATION_DEVICES = eINSTANCE.getMessage_DestinationDevices();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Redundant To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE__IS_REDUNDANT_TO = eINSTANCE.getMessage_IsRedundantTo();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl <em>Signal To Message Assignment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.SignalToMessageAssignmentImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSignalToMessageAssignment()
-		 * @generated
-		 */
-		EClass SIGNAL_TO_MESSAGE_ASSIGNMENT = eINSTANCE.getSignalToMessageAssignment();
-
-		/**
-		 * The meta object literal for the '<em><b>Signal</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__SIGNAL = eINSTANCE.getSignalToMessageAssignment_Signal();
-
-		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__ATTRIBUTES = eINSTANCE.getSignalToMessageAssignment_Attributes();
-
-		/**
-		 * The meta object literal for the '<em><b>Variants</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__VARIANTS = eINSTANCE.getSignalToMessageAssignment_Variants();
-
-		/**
-		 * The meta object literal for the '<em><b>Operation Modes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__OPERATION_MODES = eINSTANCE.getSignalToMessageAssignment_OperationModes();
-
-		/**
-		 * The meta object literal for the '<em><b>Data Type</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__DATA_TYPE = eINSTANCE.getSignalToMessageAssignment_DataType();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SIGNAL_TO_MESSAGE_ASSIGNMENT__POSITION = eINSTANCE.getSignalToMessageAssignment_Position();
-
-		/**
-		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_TO_MESSAGE_ASSIGNMENT__CAPABILITY = eINSTANCE.getSignalToMessageAssignment_Capability();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.MessageSegmentImpl <em>Message Segment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.MessageSegmentImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageSegment()
-		 * @generated
-		 */
-		EClass MESSAGE_SEGMENT = eINSTANCE.getMessageSegment();
-
-		/**
-		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_SEGMENT__CAPABILITY = eINSTANCE.getMessageSegment_Capability();
-
-		/**
-		 * The meta object literal for the '<em><b>Device</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_SEGMENT__DEVICE = eINSTANCE.getMessageSegment_Device();
-
-		/**
-		 * The meta object literal for the '<em><b>Connection</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_SEGMENT__CONNECTION = eINSTANCE.getMessageSegment_Connection();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.impl.SubmessageImpl <em>Submessage</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.impl.SubmessageImpl
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getSubmessage()
-		 * @generated
-		 */
-		EClass SUBMESSAGE = eINSTANCE.getSubmessage();
-
-		/**
-		 * The meta object literal for the '<em><b>Capability</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUBMESSAGE__CAPABILITY = eINSTANCE.getSubmessage_Capability();
-
-		/**
-		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SUBMESSAGE__POSITION = eINSTANCE.getSubmessage_Position();
-
-		/**
-		 * The meta object literal for the '{@link de.oaam.model.oaam.allocations.MessageA <em>Message A</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see de.oaam.model.oaam.allocations.MessageA
-		 * @see de.oaam.model.oaam.allocations.impl.AllocationsPackageImpl#getMessageA()
-		 * @generated
-		 */
-		EClass MESSAGE_A = eINSTANCE.getMessageA();
-
-		/**
-		 * The meta object literal for the '<em><b>Schedules</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__SCHEDULES = eINSTANCE.getMessageA_Schedules();
-
-		/**
-		 * The meta object literal for the '<em><b>Submessages</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__SUBMESSAGES = eINSTANCE.getMessageA_Submessages();
-
-		/**
-		 * The meta object literal for the '<em><b>Signal To Message Assignments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__SIGNAL_TO_MESSAGE_ASSIGNMENTS = eINSTANCE.getMessageA_SignalToMessageAssignments();
-
-		/**
-		 * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__SEGMENTS = eINSTANCE.getMessageA_Segments();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__TYPE = eINSTANCE.getMessageA_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Persistent</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MESSAGE_A__IS_PERSISTENT = eINSTANCE.getMessageA_IsPersistent();
-
-		/**
-		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MESSAGE_A__LENGTH = eINSTANCE.getMessageA_Length();
-
-		/**
-		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MESSAGE_A__PATH = eINSTANCE.getMessageA_Path();
 
 	}
 

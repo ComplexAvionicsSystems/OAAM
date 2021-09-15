@@ -43,7 +43,7 @@ public interface SystemsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/systems";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/systems";
 
 	/**
 	 * The package namespace name.

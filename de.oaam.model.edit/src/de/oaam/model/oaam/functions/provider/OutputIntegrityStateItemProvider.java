@@ -67,7 +67,7 @@ public class OutputIntegrityStateItemProvider extends BoolAItemProvider {
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
 			addVariantsPropertyDescriptor(object);
-			addStatePropertyDescriptor(object);
+			addIntegrityStatePropertyDescriptor(object);
 			addOutputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -250,19 +250,19 @@ public class OutputIntegrityStateItemProvider extends BoolAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the State feature.
+	 * This adds a property descriptor for the Integrity State feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatePropertyDescriptor(Object object) {
+	protected void addIntegrityStatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OutputIntegrityState_state_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OutputIntegrityState_state_feature", "_UI_OutputIntegrityState_type"),
-				 FunctionsPackage.Literals.OUTPUT_INTEGRITY_STATE__STATE,
+				 getString("_UI_OutputIntegrityState_integrityState_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputIntegrityState_integrityState_feature", "_UI_OutputIntegrityState_type"),
+				 FunctionsPackage.Literals.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE,
 				 true,
 				 false,
 				 false,
@@ -369,7 +369,7 @@ public class OutputIntegrityStateItemProvider extends BoolAItemProvider {
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__MODIFIED:
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__MODIFIER:
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__TRACE_LINK:
-			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__STATE:
+			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case FunctionsPackage.OUTPUT_INTEGRITY_STATE__ATTRIBUTES:

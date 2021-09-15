@@ -16,6 +16,10 @@ import de.oaam.model.oaam.library.ResourceGroup;
 import de.oaam.model.oaam.library.ResourceType;
 import de.oaam.model.oaam.library.WireType;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+import de.oaam.model.oaam.safety.PartFailureMode;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -51,6 +55,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getTraceLink <em>Trace Link</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isCanFail <em>Can Fail</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getFailureRate <em>Failure Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getPartFailureModes <em>Part Failure Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsInformation <em>Is Information</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#isIsPower <em>Is Power</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.ConnectionTypeImpl#getWireTypes <em>Wire Types</em>}</li>
@@ -244,6 +251,56 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * @ordered
 	 */
 	protected String traceLink = TRACE_LINK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isCanFail() <em>Can Fail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanFail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CAN_FAIL_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isCanFail() <em>Can Fail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanFail()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean canFail = CAN_FAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFailureRate() <em>Failure Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double FAILURE_RATE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getFailureRate() <em>Failure Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected double failureRate = FAILURE_RATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPartFailureModes() <em>Part Failure Modes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartFailureModes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PartFailureMode> partFailureModes;
 
 	/**
 	 * The default value of the '{@link #isIsInformation() <em>Is Information</em>}' attribute.
@@ -782,6 +839,60 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isCanFail() {
+		return canFail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCanFail(boolean newCanFail) {
+		boolean oldCanFail = canFail;
+		canFail = newCanFail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__CAN_FAIL, oldCanFail, canFail));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getFailureRate() {
+		return failureRate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFailureRate(double newFailureRate) {
+		double oldFailureRate = failureRate;
+		failureRate = newFailureRate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.CONNECTION_TYPE__FAILURE_RATE, oldFailureRate, failureRate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PartFailureMode> getPartFailureModes() {
+		if (partFailureModes == null) {
+			partFailureModes = new EObjectContainmentEList<PartFailureMode>(PartFailureMode.class, this, LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES);
+		}
+		return partFailureModes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isIsInformation() {
 		return isInformation;
 	}
@@ -1171,6 +1282,8 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return ((InternalEList<?>)getConsumedGroups()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.CONNECTION_TYPE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
+				return ((InternalEList<?>)getPartFailureModes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1203,6 +1316,12 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return getModifier();
 			case LibraryPackage.CONNECTION_TYPE__TRACE_LINK:
 				return getTraceLink();
+			case LibraryPackage.CONNECTION_TYPE__CAN_FAIL:
+				return isCanFail();
+			case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE:
+				return getFailureRate();
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
+				return getPartFailureModes();
 			case LibraryPackage.CONNECTION_TYPE__IS_INFORMATION:
 				return isIsInformation();
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
@@ -1287,6 +1406,16 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return;
 			case LibraryPackage.CONNECTION_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__CAN_FAIL:
+				setCanFail((Boolean)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE:
+				setFailureRate((Double)newValue);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
+				getPartFailureModes().clear();
+				getPartFailureModes().addAll((Collection<? extends PartFailureMode>)newValue);
 				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_INFORMATION:
 				setIsInformation((Boolean)newValue);
@@ -1391,6 +1520,15 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 			case LibraryPackage.CONNECTION_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
+			case LibraryPackage.CONNECTION_TYPE__CAN_FAIL:
+				setCanFail(CAN_FAIL_EDEFAULT);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE:
+				setFailureRate(FAILURE_RATE_EDEFAULT);
+				return;
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
+				getPartFailureModes().clear();
+				return;
 			case LibraryPackage.CONNECTION_TYPE__IS_INFORMATION:
 				setIsInformation(IS_INFORMATION_EDEFAULT);
 				return;
@@ -1480,6 +1618,12 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.CONNECTION_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
+			case LibraryPackage.CONNECTION_TYPE__CAN_FAIL:
+				return canFail != CAN_FAIL_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE:
+				return failureRate != FAILURE_RATE_EDEFAULT;
+			case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES:
+				return partFailureModes != null && !partFailureModes.isEmpty();
 			case LibraryPackage.CONNECTION_TYPE__IS_INFORMATION:
 				return isInformation != IS_INFORMATION_EDEFAULT;
 			case LibraryPackage.CONNECTION_TYPE__IS_POWER:
@@ -1549,6 +1693,14 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				default: return -1;
 			}
 		}
+		if (baseClass == FailureProviderA.class) {
+			switch (derivedFeatureID) {
+				case LibraryPackage.CONNECTION_TYPE__CAN_FAIL: return SafetyPackage.FAILURE_PROVIDER_A__CAN_FAIL;
+				case LibraryPackage.CONNECTION_TYPE__FAILURE_RATE: return SafetyPackage.FAILURE_PROVIDER_A__FAILURE_RATE;
+				case LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES: return SafetyPackage.FAILURE_PROVIDER_A__PART_FAILURE_MODES;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -1579,6 +1731,14 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 				default: return -1;
 			}
 		}
+		if (baseClass == FailureProviderA.class) {
+			switch (baseFeatureID) {
+				case SafetyPackage.FAILURE_PROVIDER_A__CAN_FAIL: return LibraryPackage.CONNECTION_TYPE__CAN_FAIL;
+				case SafetyPackage.FAILURE_PROVIDER_A__FAILURE_RATE: return LibraryPackage.CONNECTION_TYPE__FAILURE_RATE;
+				case SafetyPackage.FAILURE_PROVIDER_A__PART_FAILURE_MODES: return LibraryPackage.CONNECTION_TYPE__PART_FAILURE_MODES;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -1606,6 +1766,10 @@ public class ConnectionTypeImpl extends ResourceProviderAImpl implements Connect
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
+		result.append(", canFail: ");
+		result.append(canFail);
+		result.append(", failureRate: ");
+		result.append(failureRate);
 		result.append(", isInformation: ");
 		result.append(isInformation);
 		result.append(", isPower: ");

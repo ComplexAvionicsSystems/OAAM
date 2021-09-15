@@ -16,6 +16,10 @@ import de.oaam.model.oaam.library.ResourceLink;
 import de.oaam.model.oaam.library.ResourceProviderA;
 import de.oaam.model.oaam.library.ResourceType;
 
+import de.oaam.model.oaam.safety.FailureProviderA;
+import de.oaam.model.oaam.safety.PartFailureMode;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.Date;
 
@@ -53,10 +57,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getModified <em>Modified</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getModifier <em>Modifier</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getTraceLink <em>Trace Link</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isCanFail <em>Can Fail</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getFailureRate <em>Failure Rate</em>}</li>
+ *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getPartFailureModes <em>Part Failure Modes</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getIoDeclarations <em>Io Declarations</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isIsSubdevice <em>Is Subdevice</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#isCanHaveSubdevices <em>Can Have Subdevices</em>}</li>
- *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getMtbf <em>Mtbf</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getCost <em>Cost</em>}</li>
  *   <li>{@link de.oaam.model.oaam.library.impl.DeviceTypeImpl#getIoGroups <em>Io Groups</em>}</li>
@@ -257,6 +263,56 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	protected String traceLink = TRACE_LINK_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isCanFail() <em>Can Fail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanFail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean CAN_FAIL_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isCanFail() <em>Can Fail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isCanFail()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean canFail = CAN_FAIL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFailureRate() <em>Failure Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double FAILURE_RATE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getFailureRate() <em>Failure Rate</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFailureRate()
+	 * @generated
+	 * @ordered
+	 */
+	protected double failureRate = FAILURE_RATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPartFailureModes() <em>Part Failure Modes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPartFailureModes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PartFailureMode> partFailureModes;
+
+	/**
 	 * The cached value of the '{@link #getIoDeclarations() <em>Io Declarations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,26 +361,6 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * @ordered
 	 */
 	protected boolean canHaveSubdevices = CAN_HAVE_SUBDEVICES_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMtbf() <em>Mtbf</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMtbf()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double MTBF_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getMtbf() <em>Mtbf</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMtbf()
-	 * @generated
-	 * @ordered
-	 */
-	protected double mtbf = MTBF_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
@@ -627,6 +663,60 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isCanFail() {
+		return canFail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCanFail(boolean newCanFail) {
+		boolean oldCanFail = canFail;
+		canFail = newCanFail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.DEVICE_TYPE__CAN_FAIL, oldCanFail, canFail));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getFailureRate() {
+		return failureRate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFailureRate(double newFailureRate) {
+		double oldFailureRate = failureRate;
+		failureRate = newFailureRate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.DEVICE_TYPE__FAILURE_RATE, oldFailureRate, failureRate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PartFailureMode> getPartFailureModes() {
+		if (partFailureModes == null) {
+			partFailureModes = new EObjectContainmentEList<PartFailureMode>(PartFailureMode.class, this, LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES);
+		}
+		return partFailureModes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<IoDeclaration> getIoDeclarations() {
 		if (ioDeclarations == null) {
 			ioDeclarations = new EObjectContainmentEList<IoDeclaration>(IoDeclaration.class, this, LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS);
@@ -674,27 +764,6 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 		canHaveSubdevices = newCanHaveSubdevices;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES, oldCanHaveSubdevices, canHaveSubdevices));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getMtbf() {
-		return mtbf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMtbf(double newMtbf) {
-		double oldMtbf = mtbf;
-		mtbf = newMtbf;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, LibraryPackage.DEVICE_TYPE__MTBF, oldMtbf, mtbf));
 	}
 
 	/**
@@ -788,6 +857,8 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return ((InternalEList<?>)getResourceLinks()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.DEVICE_TYPE__ATTRIBUTES:
 				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
+				return ((InternalEList<?>)getPartFailureModes()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 				return ((InternalEList<?>)getIoDeclarations()).basicRemove(otherEnd, msgs);
 			case LibraryPackage.DEVICE_TYPE__IO_GROUPS:
@@ -828,14 +899,18 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return getModifier();
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				return getTraceLink();
+			case LibraryPackage.DEVICE_TYPE__CAN_FAIL:
+				return isCanFail();
+			case LibraryPackage.DEVICE_TYPE__FAILURE_RATE:
+				return getFailureRate();
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
+				return getPartFailureModes();
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 				return getIoDeclarations();
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				return isIsSubdevice();
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
 				return isCanHaveSubdevices();
-			case LibraryPackage.DEVICE_TYPE__MTBF:
-				return getMtbf();
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 				return getWeight();
 			case LibraryPackage.DEVICE_TYPE__COST:
@@ -898,6 +973,16 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				setTraceLink((String)newValue);
 				return;
+			case LibraryPackage.DEVICE_TYPE__CAN_FAIL:
+				setCanFail((Boolean)newValue);
+				return;
+			case LibraryPackage.DEVICE_TYPE__FAILURE_RATE:
+				setFailureRate((Double)newValue);
+				return;
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
+				getPartFailureModes().clear();
+				getPartFailureModes().addAll((Collection<? extends PartFailureMode>)newValue);
+				return;
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 				getIoDeclarations().clear();
 				getIoDeclarations().addAll((Collection<? extends IoDeclaration>)newValue);
@@ -907,9 +992,6 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return;
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
 				setCanHaveSubdevices((Boolean)newValue);
-				return;
-			case LibraryPackage.DEVICE_TYPE__MTBF:
-				setMtbf((Double)newValue);
 				return;
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 				setWeight((Double)newValue);
@@ -972,6 +1054,15 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				setTraceLink(TRACE_LINK_EDEFAULT);
 				return;
+			case LibraryPackage.DEVICE_TYPE__CAN_FAIL:
+				setCanFail(CAN_FAIL_EDEFAULT);
+				return;
+			case LibraryPackage.DEVICE_TYPE__FAILURE_RATE:
+				setFailureRate(FAILURE_RATE_EDEFAULT);
+				return;
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
+				getPartFailureModes().clear();
+				return;
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 				getIoDeclarations().clear();
 				return;
@@ -980,9 +1071,6 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return;
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
 				setCanHaveSubdevices(CAN_HAVE_SUBDEVICES_EDEFAULT);
-				return;
-			case LibraryPackage.DEVICE_TYPE__MTBF:
-				setMtbf(MTBF_EDEFAULT);
 				return;
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 				setWeight(WEIGHT_EDEFAULT);
@@ -1032,14 +1120,18 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				return MODIFIER_EDEFAULT == null ? modifier != null : !MODIFIER_EDEFAULT.equals(modifier);
 			case LibraryPackage.DEVICE_TYPE__TRACE_LINK:
 				return TRACE_LINK_EDEFAULT == null ? traceLink != null : !TRACE_LINK_EDEFAULT.equals(traceLink);
+			case LibraryPackage.DEVICE_TYPE__CAN_FAIL:
+				return canFail != CAN_FAIL_EDEFAULT;
+			case LibraryPackage.DEVICE_TYPE__FAILURE_RATE:
+				return failureRate != FAILURE_RATE_EDEFAULT;
+			case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES:
+				return partFailureModes != null && !partFailureModes.isEmpty();
 			case LibraryPackage.DEVICE_TYPE__IO_DECLARATIONS:
 				return ioDeclarations != null && !ioDeclarations.isEmpty();
 			case LibraryPackage.DEVICE_TYPE__IS_SUBDEVICE:
 				return isSubdevice != IS_SUBDEVICE_EDEFAULT;
 			case LibraryPackage.DEVICE_TYPE__CAN_HAVE_SUBDEVICES:
 				return canHaveSubdevices != CAN_HAVE_SUBDEVICES_EDEFAULT;
-			case LibraryPackage.DEVICE_TYPE__MTBF:
-				return mtbf != MTBF_EDEFAULT;
 			case LibraryPackage.DEVICE_TYPE__WEIGHT:
 				return weight != WEIGHT_EDEFAULT;
 			case LibraryPackage.DEVICE_TYPE__COST:
@@ -1081,6 +1173,14 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
+		if (baseClass == FailureProviderA.class) {
+			switch (derivedFeatureID) {
+				case LibraryPackage.DEVICE_TYPE__CAN_FAIL: return SafetyPackage.FAILURE_PROVIDER_A__CAN_FAIL;
+				case LibraryPackage.DEVICE_TYPE__FAILURE_RATE: return SafetyPackage.FAILURE_PROVIDER_A__FAILURE_RATE;
+				case LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES: return SafetyPackage.FAILURE_PROVIDER_A__PART_FAILURE_MODES;
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -1113,6 +1213,14 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 				default: return -1;
 			}
 		}
+		if (baseClass == FailureProviderA.class) {
+			switch (baseFeatureID) {
+				case SafetyPackage.FAILURE_PROVIDER_A__CAN_FAIL: return LibraryPackage.DEVICE_TYPE__CAN_FAIL;
+				case SafetyPackage.FAILURE_PROVIDER_A__FAILURE_RATE: return LibraryPackage.DEVICE_TYPE__FAILURE_RATE;
+				case SafetyPackage.FAILURE_PROVIDER_A__PART_FAILURE_MODES: return LibraryPackage.DEVICE_TYPE__PART_FAILURE_MODES;
+				default: return -1;
+			}
+		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -1140,12 +1248,14 @@ public class DeviceTypeImpl extends ResourceConsumerAImpl implements DeviceType 
 		result.append(modifier);
 		result.append(", traceLink: ");
 		result.append(traceLink);
+		result.append(", canFail: ");
+		result.append(canFail);
+		result.append(", failureRate: ");
+		result.append(failureRate);
 		result.append(", isSubdevice: ");
 		result.append(isSubdevice);
 		result.append(", canHaveSubdevices: ");
 		result.append(canHaveSubdevices);
-		result.append(", mtbf: ");
-		result.append(mtbf);
 		result.append(", weight: ");
 		result.append(weight);
 		result.append(", cost: ");

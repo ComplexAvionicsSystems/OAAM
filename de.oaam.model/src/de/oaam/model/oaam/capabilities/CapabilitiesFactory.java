@@ -85,24 +85,6 @@ public interface CapabilitiesFactory extends EFactory {
 	ResourceConsumption createResourceConsumption();
 
 	/**
-	 * Returns a new object of class '<em>Capabilities</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Capabilities</em>'.
-	 * @generated
-	 */
-	Capabilities createCapabilities();
-
-	/**
-	 * Returns a new object of class '<em>Subcapabilities</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Subcapabilities</em>'.
-	 * @generated
-	 */
-	Subcapabilities createSubcapabilities();
-
-	/**
 	 * Returns a new object of class '<em>Message On Bus Capability</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +92,15 @@ public interface CapabilitiesFactory extends EFactory {
 	 * @generated
 	 */
 	MessageOnBusCapability createMessageOnBusCapability();
+
+	/**
+	 * Returns a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * @generated
+	 */
+	MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability();
 
 	/**
 	 * Returns a new object of class '<em>Submessage In Message Capability</em>'.
@@ -130,13 +121,22 @@ public interface CapabilitiesFactory extends EFactory {
 	SignalInMessageCapability createSignalInMessageCapability();
 
 	/**
-	 * Returns a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * Returns a new object of class '<em>Capabilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Message On Connection Or Device Capability</em>'.
+	 * @return a new object of class '<em>Capabilities</em>'.
 	 * @generated
 	 */
-	MessageOnConnectionOrDeviceCapability createMessageOnConnectionOrDeviceCapability();
+	Capabilities createCapabilities();
+
+	/**
+	 * Returns a new object of class '<em>Subcapabilities</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Subcapabilities</em>'.
+	 * @generated
+	 */
+	Subcapabilities createSubcapabilities();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -532,29 +532,6 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.FaultPropagation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FaultPropagationItemProvider faultPropagationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link de.oaam.model.oaam.library.FaultPropagation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFaultPropagationAdapter() {
-		if (faultPropagationItemProvider == null) {
-			faultPropagationItemProvider = new FaultPropagationItemProvider(this);
-		}
-
-		return faultPropagationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link de.oaam.model.oaam.library.TaskInputState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1064,7 +1041,6 @@ public class LibraryItemProviderAdapterFactory extends LibraryAdapterFactory imp
 		if (deviceTypeSymmetryItemProvider != null) deviceTypeSymmetryItemProvider.dispose();
 		if (ioGroupItemProvider != null) ioGroupItemProvider.dispose();
 		if (attributeDefinitionItemProvider != null) attributeDefinitionItemProvider.dispose();
-		if (faultPropagationItemProvider != null) faultPropagationItemProvider.dispose();
 		if (taskInputStateItemProvider != null) taskInputStateItemProvider.dispose();
 		if (powerSourceItemProvider != null) powerSourceItemProvider.dispose();
 		if (resourceLinkItemProvider != null) resourceLinkItemProvider.dispose();

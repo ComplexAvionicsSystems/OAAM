@@ -5,24 +5,35 @@ package de.oaam.model.oaam.allocations.impl;
 import de.oaam.model.oaam.allocations.AllocationsPackage;
 import de.oaam.model.oaam.allocations.Schedule;
 import de.oaam.model.oaam.allocations.Segment;
+
 import de.oaam.model.oaam.capabilities.SignalOnConnectionOrDeviceCapability;
+
 import de.oaam.model.oaam.common.AttributeA;
 import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.common.OaamBaseElementA;
+
 import de.oaam.model.oaam.hardware.Connection;
 import de.oaam.model.oaam.hardware.Device;
+
 import de.oaam.model.oaam.scenario.ScenarioPackage;
 import de.oaam.model.oaam.scenario.Variant;
 import de.oaam.model.oaam.scenario.VariantDependentElementA;
+
 import de.oaam.model.oaam.scenario.impl.ModeDependentElementAImpl;
+
 import java.util.Collection;
 import java.util.Date;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -62,6 +73,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,6 +83,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,6 +93,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,6 +103,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -98,6 +113,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String STYLE_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -107,6 +123,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String style = STYLE_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -116,6 +133,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected EList<AttributeA> attributes;
+
 	/**
 	 * The default value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -125,6 +143,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String DOCUMENTATION_EDEFAULT = "";
+
 	/**
 	 * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -134,6 +153,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String documentation = DOCUMENTATION_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getModified() <em>Modified</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +163,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final Date MODIFIED_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getModified() <em>Modified</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -152,6 +173,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected Date modified = MODIFIED_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -161,6 +183,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String MODIFIER_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getModifier() <em>Modifier</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -170,6 +193,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String modifier = MODIFIER_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getTraceLink() <em>Trace Link</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -179,6 +203,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected static final String TRACE_LINK_EDEFAULT = "";
+
 	/**
 	 * The cached value of the '{@link #getTraceLink() <em>Trace Link</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -188,6 +213,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected String traceLink = TRACE_LINK_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getVariants() <em>Variants</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -197,6 +223,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected EList<Variant> variants;
+
 	/**
 	 * The cached value of the '{@link #getCapability() <em>Capability</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -206,6 +233,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected SignalOnConnectionOrDeviceCapability capability;
+
 	/**
 	 * The cached value of the '{@link #getDevice() <em>Device</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -215,6 +243,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected Device device;
+
 	/**
 	 * The cached value of the '{@link #getConnection() <em>Connection</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -224,6 +253,7 @@ public class SegmentImpl extends ModeDependentElementAImpl implements Segment {
 	 * @ordered
 	 */
 	protected Connection connection;
+
 	/**
 	 * The cached value of the '{@link #getSchedules() <em>Schedules</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

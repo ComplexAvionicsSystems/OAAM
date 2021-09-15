@@ -161,11 +161,21 @@ import de.oaam.model.oaam.hardware.provider.HardwareItemProviderAdapterFactory;
 
 import de.oaam.model.oaam.library.provider.LibraryItemProviderAdapterFactory;
 
+import de.oaam.model.oaam.physical.provider.PhysicalItemProviderAdapterFactory;
+
 import de.oaam.model.oaam.presentation.OaamEditorPlugin;
 
 import de.oaam.model.oaam.provider.OaamItemProviderAdapterFactory;
 
 import de.oaam.model.oaam.restrictions.provider.RestrictionsItemProviderAdapterFactory;
+
+import de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.provider.FailurePropagationMatricesItemProviderAdapterFactory;
+
+import de.oaam.model.oaam.safety.failurePropagations.provider.FailurePropagationsItemProviderAdapterFactory;
+
+import de.oaam.model.oaam.safety.provider.SafetyItemProviderAdapterFactory;
+
+import de.oaam.model.oaam.safety.taskInternalRequirements.provider.TaskInternalRequirementsItemProviderAdapterFactory;
 
 import de.oaam.model.oaam.scenario.provider.ScenarioItemProviderAdapterFactory;
 
@@ -673,6 +683,11 @@ public class SystemsEditor
 		adapterFactory.addAdapterFactory(new CapabilitiesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new RestrictionsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new AllocationsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new SafetyItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new TaskInternalRequirementsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new FailurePropagationsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new FailurePropagationMatricesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new PhysicalItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

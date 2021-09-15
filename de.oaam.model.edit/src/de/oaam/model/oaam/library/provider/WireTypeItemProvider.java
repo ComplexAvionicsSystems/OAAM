@@ -10,6 +10,9 @@ import de.oaam.model.oaam.library.WireType;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -17,6 +20,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -51,14 +56,59 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addCanFailPropertyDescriptor(object);
+			addFailureRatePropertyDescriptor(object);
 			addSpecificWeightPropertyDescriptor(object);
 			addSpecificPricePropertyDescriptor(object);
 			addNConductorsPropertyDescriptor(object);
 			addMinBendingRadiusPropertyDescriptor(object);
 			addNShieldsPropertyDescriptor(object);
-			addMtbfPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Can Fail feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCanFailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_canFail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_canFail_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__CAN_FAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Failure Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFailureRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_failureRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_failureRate_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__FAILURE_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -172,25 +222,33 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Mtbf feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMtbfPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WireType_mtbf_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WireType_mtbf_feature", "_UI_WireType_type"),
-				 LibraryPackage.Literals.WIRE_TYPE__MTBF,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -231,13 +289,17 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WireType.class)) {
+			case LibraryPackage.WIRE_TYPE__CAN_FAIL:
+			case LibraryPackage.WIRE_TYPE__FAILURE_RATE:
 			case LibraryPackage.WIRE_TYPE__SPECIFIC_WEIGHT:
 			case LibraryPackage.WIRE_TYPE__SPECIFIC_PRICE:
 			case LibraryPackage.WIRE_TYPE__NCONDUCTORS:
 			case LibraryPackage.WIRE_TYPE__MIN_BENDING_RADIUS:
 			case LibraryPackage.WIRE_TYPE__NSHIELDS:
-			case LibraryPackage.WIRE_TYPE__MTBF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case LibraryPackage.WIRE_TYPE__PART_FAILURE_MODES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -253,6 +315,11 @@ public class WireTypeItemProvider extends OaamBaseElementAItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES,
+				 SafetyFactory.eINSTANCE.createPartFailureMode()));
 	}
 
 	/**

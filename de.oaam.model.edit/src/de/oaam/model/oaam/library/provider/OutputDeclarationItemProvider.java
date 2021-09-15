@@ -11,6 +11,8 @@ import de.oaam.model.oaam.library.OutputDeclaration;
 
 import de.oaam.model.oaam.provider.OaamEditPlugin;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -60,6 +62,8 @@ public class OutputDeclarationItemProvider extends OaamBaseElementAItemProvider 
 			addTypePropertyDescriptor(object);
 			addLowerBoundPropertyDescriptor(object);
 			addUpperBoundPropertyDescriptor(object);
+			addInitialValuePropertyDescriptor(object);
+			addIsStatefulPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -197,6 +201,50 @@ public class OutputDeclarationItemProvider extends OaamBaseElementAItemProvider 
 	}
 
 	/**
+	 * This adds a property descriptor for the Initial Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInitialValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OutputDeclaration_initialValue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputDeclaration_initialValue_feature", "_UI_OutputDeclaration_type"),
+				 LibraryPackage.Literals.OUTPUT_DECLARATION__INITIAL_VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Stateful feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsStatefulPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OutputDeclaration_isStateful_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OutputDeclaration_isStateful_feature", "_UI_OutputDeclaration_type"),
+				 LibraryPackage.Literals.OUTPUT_DECLARATION__IS_STATEFUL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -270,6 +318,8 @@ public class OutputDeclarationItemProvider extends OaamBaseElementAItemProvider 
 			case LibraryPackage.OUTPUT_DECLARATION__RANGE:
 			case LibraryPackage.OUTPUT_DECLARATION__LOWER_BOUND:
 			case LibraryPackage.OUTPUT_DECLARATION__UPPER_BOUND:
+			case LibraryPackage.OUTPUT_DECLARATION__INITIAL_VALUE:
+			case LibraryPackage.OUTPUT_DECLARATION__IS_STATEFUL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.OUTPUT_DECLARATION__TRIGGER:
@@ -299,7 +349,7 @@ public class OutputDeclarationItemProvider extends OaamBaseElementAItemProvider 
 		newChildDescriptors.add
 			(createChildParameter
 				(LibraryPackage.Literals.OUTPUT_DECLARATION__FAULT_PROPAGATIONS,
-				 LibraryFactory.eINSTANCE.createFaultPropagation()));
+				 SafetyFactory.eINSTANCE.createFaultPropagation()));
 	}
 
 	/**

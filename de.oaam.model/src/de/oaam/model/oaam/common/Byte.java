@@ -24,7 +24,6 @@ package de.oaam.model.oaam.common;
  * @generated
  */
 public interface Byte extends DataTypeA {
-
 	/**
 	 * Returns the value of the '<em><b>NBits</b></em>' attribute.
 	 * The default value is <code>"8"</code>.
@@ -50,4 +49,5 @@ public interface Byte extends DataTypeA {
 	 * @generated
 	 */
 	void setNBits(int value);
+
 } // Byte

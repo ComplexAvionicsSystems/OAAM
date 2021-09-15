@@ -20,6 +20,8 @@ import de.oaam.model.oaam.hardware.HardwareFactory;
 
 import de.oaam.model.oaam.library.LibraryFactory;
 
+import de.oaam.model.oaam.physical.PhysicalFactory;
+
 import de.oaam.model.oaam.restrictions.RestrictionsFactory;
 
 import de.oaam.model.oaam.scenario.ScenarioFactory;
@@ -116,6 +118,7 @@ public class ArchitectureItemProvider extends OaamBaseElementAItemProvider {
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__CAPABILITIES);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__RESTRICTIONS);
 			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__ALLOCATIONS);
+			childrenFeatures.add(OaamPackage.Literals.ARCHITECTURE__PHYSICAL_INTERACTION);
 		}
 		return childrenFeatures;
 	}
@@ -180,6 +183,7 @@ public class ArchitectureItemProvider extends OaamBaseElementAItemProvider {
 			case OaamPackage.ARCHITECTURE__CAPABILITIES:
 			case OaamPackage.ARCHITECTURE__RESTRICTIONS:
 			case OaamPackage.ARCHITECTURE__ALLOCATIONS:
+			case OaamPackage.ARCHITECTURE__PHYSICAL_INTERACTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -241,6 +245,11 @@ public class ArchitectureItemProvider extends OaamBaseElementAItemProvider {
 			(createChildParameter
 				(OaamPackage.Literals.ARCHITECTURE__ALLOCATIONS,
 				 AllocationsFactory.eINSTANCE.createAllocations()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(OaamPackage.Literals.ARCHITECTURE__PHYSICAL_INTERACTION,
+				 PhysicalFactory.eINSTANCE.createPhysicalInteraction()));
 	}
 
 	/**

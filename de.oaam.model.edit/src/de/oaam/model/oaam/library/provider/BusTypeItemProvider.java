@@ -9,6 +9,9 @@ import de.oaam.model.oaam.common.CommonPackage;
 import de.oaam.model.oaam.library.BusType;
 import de.oaam.model.oaam.library.LibraryPackage;
 
+import de.oaam.model.oaam.safety.SafetyFactory;
+import de.oaam.model.oaam.safety.SafetyPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -57,8 +60,9 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 			addModifiedPropertyDescriptor(object);
 			addModifierPropertyDescriptor(object);
 			addTraceLinkPropertyDescriptor(object);
+			addCanFailPropertyDescriptor(object);
+			addFailureRatePropertyDescriptor(object);
 			addDeviceTypesPropertyDescriptor(object);
-			addMtbfPropertyDescriptor(object);
 			addIsSelfManagingPropertyDescriptor(object);
 			addConnectionTypesPropertyDescriptor(object);
 			addRequiresMasterPropertyDescriptor(object);
@@ -222,6 +226,50 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Can Fail feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCanFailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_canFail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_canFail_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__CAN_FAIL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Failure Rate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFailureRatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FailureProviderA_failureRate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FailureProviderA_failureRate_feature", "_UI_FailureProviderA_type"),
+				 SafetyPackage.Literals.FAILURE_PROVIDER_A__FAILURE_RATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Device Types feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,28 +287,6 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mtbf feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMtbfPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_BusType_mtbf_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BusType_mtbf_feature", "_UI_BusType_type"),
-				 LibraryPackage.Literals.BUS_TYPE__MTBF,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -366,6 +392,7 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES);
+			childrenFeatures.add(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES);
 		}
 		return childrenFeatures;
 	}
@@ -428,12 +455,14 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 			case LibraryPackage.BUS_TYPE__MODIFIED:
 			case LibraryPackage.BUS_TYPE__MODIFIER:
 			case LibraryPackage.BUS_TYPE__TRACE_LINK:
-			case LibraryPackage.BUS_TYPE__MTBF:
+			case LibraryPackage.BUS_TYPE__CAN_FAIL:
+			case LibraryPackage.BUS_TYPE__FAILURE_RATE:
 			case LibraryPackage.BUS_TYPE__IS_SELF_MANAGING:
 			case LibraryPackage.BUS_TYPE__REQUIRES_MASTER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case LibraryPackage.BUS_TYPE__ATTRIBUTES:
+			case LibraryPackage.BUS_TYPE__PART_FAILURE_MODES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -470,6 +499,11 @@ public class BusTypeItemProvider extends ResourceProviderAItemProvider {
 			(createChildParameter
 				(CommonPackage.Literals.OAAM_BASE_ELEMENT_A__ATTRIBUTES,
 				 CommonFactory.eINSTANCE.createAttributeReference()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(SafetyPackage.Literals.FAILURE_PROVIDER_A__PART_FAILURE_MODES,
+				 SafetyFactory.eINSTANCE.createPartFailureMode()));
 	}
 
 }

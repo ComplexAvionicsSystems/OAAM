@@ -170,4 +170,144 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.safety.presentation.SafetyModelWizardID"
+            name="%_UI_SafetyModelWizard_label"
+            class="de.oaam.model.oaam.safety.presentation.SafetyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SafetyModelFile.gif">
+         <description>%_UI_SafetyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.safety.presentation.SafetyEditorID"
+            name="%_UI_SafetyEditor_label"
+            icon="icons/full/obj16/SafetyModelFile.gif"
+            extensions="safety"
+            class="de.oaam.model.oaam.safety.presentation.SafetyEditor"
+            contributorClass="de.oaam.model.oaam.safety.presentation.SafetyActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.safety.taskInternalRequirements.presentation.TaskInternalRequirementsModelWizardID"
+            name="%_UI_TaskInternalRequirementsModelWizard_label"
+            class="de.oaam.model.oaam.safety.taskInternalRequirements.presentation.TaskInternalRequirementsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TaskInternalRequirementsModelFile.gif">
+         <description>%_UI_TaskInternalRequirementsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.safety.taskInternalRequirements.presentation.TaskInternalRequirementsEditorID"
+            name="%_UI_TaskInternalRequirementsEditor_label"
+            icon="icons/full/obj16/TaskInternalRequirementsModelFile.gif"
+            extensions="taskinternalrequirements"
+            class="de.oaam.model.oaam.safety.taskInternalRequirements.presentation.TaskInternalRequirementsEditor"
+            contributorClass="de.oaam.model.oaam.safety.taskInternalRequirements.presentation.TaskInternalRequirementsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.safety.failurePropagations.presentation.FailurePropagationsModelWizardID"
+            name="%_UI_FailurePropagationsModelWizard_label"
+            class="de.oaam.model.oaam.safety.failurePropagations.presentation.FailurePropagationsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FailurePropagationsModelFile.gif">
+         <description>%_UI_FailurePropagationsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.safety.failurePropagations.presentation.FailurePropagationsEditorID"
+            name="%_UI_FailurePropagationsEditor_label"
+            icon="icons/full/obj16/FailurePropagationsModelFile.gif"
+            extensions="failurepropagations"
+            class="de.oaam.model.oaam.safety.failurePropagations.presentation.FailurePropagationsEditor"
+            contributorClass="de.oaam.model.oaam.safety.failurePropagations.presentation.FailurePropagationsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.presentation.FailurePropagationMatricesModelWizardID"
+            name="%_UI_FailurePropagationMatricesModelWizard_label"
+            class="de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.presentation.FailurePropagationMatricesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FailurePropagationMatricesModelFile.gif">
+         <description>%_UI_FailurePropagationMatricesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.presentation.FailurePropagationMatricesEditorID"
+            name="%_UI_FailurePropagationMatricesEditor_label"
+            icon="icons/full/obj16/FailurePropagationMatricesModelFile.gif"
+            extensions="failurepropagationmatrices"
+            class="de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.presentation.FailurePropagationMatricesEditor"
+            contributorClass="de.oaam.model.oaam.safety.failurePropagations.failurePropagationMatrices.presentation.FailurePropagationMatricesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated oaam -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.oaam.model.oaam.physical.presentation.PhysicalModelWizardID"
+            name="%_UI_PhysicalModelWizard_label"
+            class="de.oaam.model.oaam.physical.presentation.PhysicalModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PhysicalModelFile.gif">
+         <description>%_UI_PhysicalModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated oaam -->
+      <editor
+            id="de.oaam.model.oaam.physical.presentation.PhysicalEditorID"
+            name="%_UI_PhysicalEditor_label"
+            icon="icons/full/obj16/PhysicalModelFile.gif"
+            extensions="physical"
+            class="de.oaam.model.oaam.physical.presentation.PhysicalEditor"
+            contributorClass="de.oaam.model.oaam.physical.presentation.PhysicalActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

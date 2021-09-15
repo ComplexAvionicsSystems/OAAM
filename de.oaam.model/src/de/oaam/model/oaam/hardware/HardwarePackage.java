@@ -44,7 +44,7 @@ public interface HardwarePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/hardware";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/hardware";
 
 	/**
 	 * The package namespace name.
@@ -1157,7 +1157,6 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int SUBHARDWARE_OPERATION_COUNT = HARDWARE_CONTAINER_A_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link de.oaam.model.oaam.hardware.impl.BusImpl <em>Bus</em>}' class.

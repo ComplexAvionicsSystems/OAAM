@@ -43,7 +43,7 @@ public interface FunctionsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/functions";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/functions";
 
 	/**
 	 * The package namespace name.
@@ -1366,13 +1366,22 @@ public interface FunctionsPackage extends EPackage {
 	int FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Task Failures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FAILURE_CONDITION__TASK_FAILURES = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Failure Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 8;
+	int FAILURE_CONDITION_FEATURE_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Failure Condition</em>' class.
@@ -1484,13 +1493,13 @@ public interface FunctionsPackage extends EPackage {
 	int OUTPUT_INTEGRITY_STATE__VARIANTS = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * The feature id for the '<em><b>Integrity State</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_INTEGRITY_STATE__STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
+	int OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -2615,6 +2624,160 @@ public interface FunctionsPackage extends EPackage {
 	 */
 	int TASK_PARAMETER_OPERATION_COUNT = CommonPackage.OAAM_BASE_ELEMENT_A_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link de.oaam.model.oaam.functions.impl.TaskFailureImpl <em>Task Failure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.oaam.model.oaam.functions.impl.TaskFailureImpl
+	 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskFailure()
+	 * @generated
+	 */
+	int TASK_FAILURE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__ID = CommonPackage.BOOL_A_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__NAME = CommonPackage.BOOL_A_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__STYLE = CommonPackage.BOOL_A_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__ATTRIBUTES = CommonPackage.BOOL_A_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Documentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__DOCUMENTATION = CommonPackage.BOOL_A_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Modified</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__MODIFIED = CommonPackage.BOOL_A_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Modifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__MODIFIER = CommonPackage.BOOL_A_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Trace Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__TRACE_LINK = CommonPackage.BOOL_A_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Operation Modes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__OPERATION_MODES = CommonPackage.BOOL_A_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Variants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__VARIANTS = CommonPackage.BOOL_A_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Task</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__TASK = CommonPackage.BOOL_A_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Task State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__TASK_STATE = CommonPackage.BOOL_A_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Task Failure Mode</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__TASK_FAILURE_MODE = CommonPackage.BOOL_A_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Fails With</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE__FAILS_WITH = CommonPackage.BOOL_A_FEATURE_COUNT + 13;
+
+	/**
+	 * The number of structural features of the '<em>Task Failure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE_FEATURE_COUNT = CommonPackage.BOOL_A_FEATURE_COUNT + 14;
+
+	/**
+	 * The number of operations of the '<em>Task Failure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_FAILURE_OPERATION_COUNT = CommonPackage.BOOL_A_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.Functions <em>Functions</em>}'.
@@ -3038,6 +3201,17 @@ public interface FunctionsPackage extends EPackage {
 	EReference getFailureCondition_OutputIntegrityStates();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link de.oaam.model.oaam.functions.FailureCondition#getTaskFailures <em>Task Failures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Task Failures</em>'.
+	 * @see de.oaam.model.oaam.functions.FailureCondition#getTaskFailures()
+	 * @see #getFailureCondition()
+	 * @generated
+	 */
+	EReference getFailureCondition_TaskFailures();
+
+	/**
 	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.OutputIntegrityState <em>Output Integrity State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3048,15 +3222,15 @@ public interface FunctionsPackage extends EPackage {
 	EClass getOutputIntegrityState();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.OutputIntegrityState#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.OutputIntegrityState#getIntegrityState <em>Integrity State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see de.oaam.model.oaam.functions.OutputIntegrityState#getState()
+	 * @return the meta object for the attribute '<em>Integrity State</em>'.
+	 * @see de.oaam.model.oaam.functions.OutputIntegrityState#getIntegrityState()
 	 * @see #getOutputIntegrityState()
 	 * @generated
 	 */
-	EAttribute getOutputIntegrityState_State();
+	EAttribute getOutputIntegrityState_IntegrityState();
 
 	/**
 	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.OutputIntegrityState#getOutput <em>Output</em>}'.
@@ -3380,6 +3554,60 @@ public interface FunctionsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTaskParameter_Value();
+
+	/**
+	 * Returns the meta object for class '{@link de.oaam.model.oaam.functions.TaskFailure <em>Task Failure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Failure</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskFailure
+	 * @generated
+	 */
+	EClass getTaskFailure();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.TaskFailure#getTask <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskFailure#getTask()
+	 * @see #getTaskFailure()
+	 * @generated
+	 */
+	EReference getTaskFailure_Task();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.TaskFailure#getTaskState <em>Task State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Task State</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskFailure#getTaskState()
+	 * @see #getTaskFailure()
+	 * @generated
+	 */
+	EAttribute getTaskFailure_TaskState();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.oaam.model.oaam.functions.TaskFailure#getTaskFailureMode <em>Task Failure Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task Failure Mode</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskFailure#getTaskFailureMode()
+	 * @see #getTaskFailure()
+	 * @generated
+	 */
+	EReference getTaskFailure_TaskFailureMode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.oaam.model.oaam.functions.TaskFailure#getFailsWith <em>Fails With</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Fails With</em>'.
+	 * @see de.oaam.model.oaam.functions.TaskFailure#getFailsWith()
+	 * @see #getTaskFailure()
+	 * @generated
+	 */
+	EAttribute getTaskFailure_FailsWith();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3733,6 +3961,14 @@ public interface FunctionsPackage extends EPackage {
 		EReference FAILURE_CONDITION__OUTPUT_INTEGRITY_STATES = eINSTANCE.getFailureCondition_OutputIntegrityStates();
 
 		/**
+		 * The meta object literal for the '<em><b>Task Failures</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FAILURE_CONDITION__TASK_FAILURES = eINSTANCE.getFailureCondition_TaskFailures();
+
+		/**
 		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.OutputIntegrityStateImpl <em>Output Integrity State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3743,12 +3979,12 @@ public interface FunctionsPackage extends EPackage {
 		EClass OUTPUT_INTEGRITY_STATE = eINSTANCE.getOutputIntegrityState();
 
 		/**
-		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Integrity State</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OUTPUT_INTEGRITY_STATE__STATE = eINSTANCE.getOutputIntegrityState_State();
+		EAttribute OUTPUT_INTEGRITY_STATE__INTEGRITY_STATE = eINSTANCE.getOutputIntegrityState_IntegrityState();
 
 		/**
 		 * The meta object literal for the '<em><b>Output</b></em>' reference feature.
@@ -4003,6 +4239,48 @@ public interface FunctionsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TASK_PARAMETER__VALUE = eINSTANCE.getTaskParameter_Value();
+
+		/**
+		 * The meta object literal for the '{@link de.oaam.model.oaam.functions.impl.TaskFailureImpl <em>Task Failure</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.oaam.model.oaam.functions.impl.TaskFailureImpl
+		 * @see de.oaam.model.oaam.functions.impl.FunctionsPackageImpl#getTaskFailure()
+		 * @generated
+		 */
+		EClass TASK_FAILURE = eINSTANCE.getTaskFailure();
+
+		/**
+		 * The meta object literal for the '<em><b>Task</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_FAILURE__TASK = eINSTANCE.getTaskFailure_Task();
+
+		/**
+		 * The meta object literal for the '<em><b>Task State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_FAILURE__TASK_STATE = eINSTANCE.getTaskFailure_TaskState();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Failure Mode</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_FAILURE__TASK_FAILURE_MODE = eINSTANCE.getTaskFailure_TaskFailureMode();
+
+		/**
+		 * The meta object literal for the '<em><b>Fails With</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TASK_FAILURE__FAILS_WITH = eINSTANCE.getTaskFailure_FailsWith();
 
 	}
 

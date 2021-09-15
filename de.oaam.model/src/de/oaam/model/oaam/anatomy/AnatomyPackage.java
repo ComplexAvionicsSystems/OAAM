@@ -45,7 +45,7 @@ public interface AnatomyPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.oaam.de/oaam/model/v140/anatomy";
+	String eNS_URI = "http://www.oaam.de/oaam/model/v160/anatomy";
 
 	/**
 	 * The package namespace name.
